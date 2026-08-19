@@ -1,0 +1,43 @@
+# 빌드 및 배포 결과물
+/build/
+/atmosphere/
+/dist/
+/release/
+/output/
+
+# 정품 게임에서 사용자가 직접 추출해야 하는 파일
+/original/
+/MainFont_nx_0.g1t
+*.rdc
+*.nsp
+*.xci
+*.nca
+*.g1t.orig
+
+# 자동 생성 보고서와 로컬 캡처/시험 자료
+/data/final_mod_report.json
+/captures/
+*vertex_buffer*.bin
+*.log
+*.tmp
+*.bak
+
+# Python 캐시 및 가상 환경
+__pycache__/
+*.pyc
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+.venv/
+venv/
+
+# 편집기 및 운영체제 파일
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+desktop.ini
