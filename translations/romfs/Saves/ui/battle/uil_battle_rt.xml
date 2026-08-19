@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE root SYSTEM "file://st01/project/acps3/_Programmer/ui/uil.dtd">
+<root>
+	<!-- スタイルの読み込み -->
+	<command load_style="Saves/ui/gen_styles/uis_gen_battle.xml"/>
+	<command load_style="Saves/ui/gen_styles/uis_gen_window.xml"/>
+	<!-- アニメーションの読み込み -->
+	<command load_anim="Saves/ui/battle/uia_battle.xml"/>
+	<node name="main" pos="1088,125">
+		<image pos="-33,-35" name="face_cas" style="gen_battle04_chara01"/>
+		<image pos="-33,-35" name="face_ion" style="gen_battle04_chara02"/>
+		<image pos="71,29" style="gen_battle04_chara_defense_bg02"/>
+		<image pos="125,70" rot="0,0,-95" name="hp1" style="gen_battle04_chara_gauge04"/>
+		<image pos="115,99" rot="0,0,-75" name="hp2" style="gen_battle04_chara_gauge03"/>
+		<image pos="97,116" rot="0,0,-50" name="hp3" style="gen_battle04_chara_gauge02"/>
+		<image pos="68,126" rot="0,0,-25" name="hp4" style="gen_battle04_chara_gauge01"/>
+		<anim_ctrl name="rt_hp1_move" play="false" loop="false" viewer_key_assign="1">
+			<bind_node node="hp1" anim="rt_hp_move" reverse="false"/>
+		</anim_ctrl>
+		<anim_ctrl name="rt_hp2_move" play="false" loop="false" viewer_key_assign="2">
+			<bind_node node="hp2" anim="rt_hp_move" reverse="false"/>
+		</anim_ctrl>
+		<anim_ctrl name="rt_hp3_move" play="false" loop="false" viewer_key_assign="3">
+			<bind_node node="hp3" anim="rt_hp_move" reverse="false"/>
+		</anim_ctrl>
+		<anim_ctrl name="rt_hp4_move" play="false" loop="false" viewer_key_assign="4">
+			<bind_node node="hp4" anim="rt_hp_move" reverse="false"/>
+		</anim_ctrl>
+		<image pos="0,0" style="gen_battle04_chara_defense_bg"/>
+		<node name="balloon" pos="-13,49" visible="false" viewer_visible="true">
+			<image pos="-6,30" style="gen_battle04_charamesse_pointer"/>
+			<image pos="-192,0" name="window" size_wh="192,20" style="gen_window03_npcmsg"/>
+			<text pos="-25,25" name="message" font_size="20" text="적의 턴이야" align="right"/>
+		</node>
+	</node>
+	<anim_ctrl name="balloon_normal" play="false" loop="false" speed="1.0" start_visible="true" end_visible="false">
+		<bind_node node="balloon" anim="balloon_normal" reverse="false"/>
+	</anim_ctrl>
+	<anim_ctrl name="balloon_ki" play="false" loop="false" speed="1.0" start_visible="true" end_visible="false">
+		<bind_node node="balloon" anim="balloon_ki" reverse="false"/>
+	</anim_ctrl>
+	<anim_ctrl name="balloon_do" play="false" loop="false" speed="1.0" start_visible="true" end_visible="false">
+		<bind_node node="balloon" anim="balloon_do" reverse="false"/>
+	</anim_ctrl>
+	<anim_ctrl name="balloon_ai" play="false" loop="false" speed="1.0" start_visible="true" end_visible="false">
+		<bind_node node="balloon" anim="balloon_ai" reverse="false"/>
+	</anim_ctrl>
+</root>

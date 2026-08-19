@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE root SYSTEM "file://st01/project/acps3/_Programmer/ui/uil.dtd">
+<root>
+	<!-- スタイルの読み込み -->
+	<command load_style="Saves/ui/gen_styles/uis_gen_common.xml"/>
+	<command load_style="Saves/ui/gen_styles/uis_gen_window.xml"/>
+	<command load_style="Saves/ui/gen_styles/uis_gen_battle.xml"/>
+	<!--
+    <image style="ui_bg_sample" color="255,255,255,255" />
+    -->
+	<node name="shop_selectnum" pos="440,182">
+		<!-- 下地画像 -->
+		<image style="gen_window02_04_off" pos="-6,-12" size_wh="412,294"/>
+		<!-- タイトル -->
+		<node pos="12,10">
+			<image style="gen_common01_win_acce02_bg" size_wh="378,20"/>
+			<image style="gen_common01_win_acce02_01" pos="0,20" size_w="378"/>
+			<text font_size="14" text="결제 금액" pos="168,6"/>
+			<image style="gen_window03_bg02" pos="0,28" size_wh="378,28"/>
+			<text name="select_num_title" font_size="20" text="구매 수량" pos="65,32"/>
+		</node>
+		<!-- 選択数 -->
+		<node pos="12,60">
+			<!-- 数値 -->
+			<node pos="0,17">
+				<image name="num_on_imege" style="gen_window03_linecsr02_on" pos="106,0"/>
+				<image name="num_over_imege" style="gen_window03_linecsr02_over" pos="106,0" visible="false"/>
+				<text name="select_num_text" align="right" font="NUMBER01_26PX" font_size="26" text="99" pos="180,11"/>
+				<text name="limit_num_text" align="left" font="NUMBER01_26PX" font_size="26" text="99" pos="200,11"/>
+				<text align="center" font="NUMBER01_26PX" font_size="26" text="/" pos="190,11"/>
+			</node>
+			<!-- 矢印 -->
+			<node name="arrow_node" pos="0,4">
+				<image name="left_arrow" style="gen_common01_arrow_l" pos="58,0" flick_time="0.2"/>
+				<image name="right_arrow" style="gen_common01_arrow_r" pos="273,0" flick_time="0.2"/>
+			</node>
+		</node>
+		<!-- 合計金額 -->
+		<node pos="12,120">
+			<image style="gen_window03_bg02" size_wh="378,28"/>
+			<text text="합계" font_size="20" pos="65,4"/>
+			<text name="total_price_text" text="9" align="right" font="NUMBER01_22PX" word_space="1.8" pos="267,42"/>
+			<image style="gen_battle06_money_ct" pos="271,28"/>
+		</node>
+		<!-- 結果の所持金 -->
+		<node pos="12,180">
+			<image style="gen_window03_bg02" size_wh="378,28"/>
+			<text text="잔액" font_size="20" pos="65,4"/>
+			<text name="balance_text" text="-00000009" align="right" font="NUMBER01_22PX" word_space="1.8" pos="267,42"/>
+			<image style="gen_battle06_money_ct" pos="271,28"/>
+		</node>
+	</node>
+	<anim_ctrl name="fade_in" play="false" start_visible="true">
+		<bind_node node="shop_selectnum" anim="anm_common_fade_in" speed="1.0"/>
+	</anim_ctrl>
+	<anim_ctrl name="fade_out" play="false" end_visible="false">
+		<bind_node node="shop_selectnum" anim="anm_common_fade_in" speed="1.0" reverse="true"/>
+	</anim_ctrl>
+</root>

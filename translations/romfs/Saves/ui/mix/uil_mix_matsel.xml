@@ -1,0 +1,105 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE root SYSTEM "file://st01/project/acps3/_Programmer/ui/uil.dtd">
+<root>
+	<!-- スタイルの読み込み -->
+	<command load_style="Saves/ui/uia_common.xml"/>
+	<command load_style="Saves/ui/gen_styles/uis_gen_common.xml"/>
+	<command load_style="Saves/ui/gen_styles/uis_gen_window.xml"/>
+	<command load_style="Saves/ui/gen_styles/uis_gen_mix.xml"/>
+	<node load="Saves/ui/uil_template.xml"/>
+	<!-- アイテムウィンドウのテンプレート -->
+	<node name="template_item_window" visible="false" viewer_visible="true">
+		<node name="fadeAnimWin">
+			<node visible="false" viewer_visible="true" name="inactive_parts_group">
+				<image size_wh="302,380" style="gen_window02_04_off"/>
+			</node>
+			<node visible="true" name="active_parts_group">
+				<image size_wh="302,380" style="gen_window02_04_on"/>
+				<image visible="false" viewer_visible="true" name="high_light_target" size_wh="307,380" style="gen_window02_04_highlight"/>
+				<anim_ctrl play="true" loop="true">
+					<bind_node node="high_light_target" anim="anm_common_blink"/>
+				</anim_ctrl>
+			</node>
+			<!-- 材料画像 -->
+			<image pos="23,65" style="gen_nummber_item_bg01">
+				<!-- アイテム画像の代用 -->
+				<command load_style="Saves/ui/etc/uis_item_list.xml"/>
+				<image name="item_image" style="style_item_list" image_no="1" pos="10,0,0" scale="0.9,0.9,0.9" />
+			</image>
+			<!--材料名-->
+			<image pos="27,20" size_w="255" style="gen_common01_name_bg01"/>
+			<text pos="153,33" name="mat_name" text="아이우에오아이우에오" font_size="18" align="center"/>
+			<!--所持数と使用個数-->
+			<node pos="10,305" name="num_sel_under">
+				<image name="text_source_bg" pos="8,-2" size_wh="267,24" style="gen_window03_bg02"/>
+				<text pos="32,3" name="now_have_num_fix_head" text="보유 수량" font_size="18" align="left"/>
+				<text pos="229,2" name="now_have_num_fix_tail" text="개" font_size="18" align="left"/>
+				<text pos="220,8" name="now_have_num" text="99" font_size="20" align="right" copy="NUMBER01_24PX"/>
+				<image name="text_source_bg2" pos="8,26" size_wh="267,24" style="gen_window03_bg02"/>
+				<text pos="32,30" text="소비 개수" font_size="18" align="left"/>
+				<text pos="229,29" text="개" font_size="18" align="left"/>
+				<text pos="220,36" name="now_sel_num" text="99" font_size="20" align="right" copy="NUMBER01_24PX"/>
+			</node>
+		</node>
+		<anim_ctrl name="card_fade_in" play="false" start_visible="true">
+			<bind_node node="fadeAnimWin" anim="anm_common_fade_in" speed="1.0"/>
+		</anim_ctrl>
+		<anim_ctrl name="card_fade_out" play="false" end_visible="false">
+			<bind_node node="fadeAnimWin" anim="anm_common_fade_in" speed="1.0" reverse="true"/>
+		</anim_ctrl>
+	</node>
+	<!-- 画面中央上の見出し -->
+	<!--<image pos="300,27" style="gen_mix_item_bg01" >-->
+	<image name="recipe_title_" pos="450,27" size_w="450" style="gen_common04_header_bg">
+		<text pos="225,25" name="recipe_top_title" text="아이우에오아이우에오의 조합" align="center"/>
+		<!--<text pos="306, 25, 0" name="recipe_top_title" text="아이우에오아이우에오" align="right"/>
+    <text pos="310, 25, 0" name="recipe_top_title_fix" text="의 조합" align="left"/>-->
+		<!--フェード-->
+		<anim_ctrl name="mix_title_fadeIn" play="false" start_visible="true">
+			<bind_node node="recipe_title_" anim="anm_common_fade_in" speed="1.0"/>
+		</anim_ctrl>
+		<anim_ctrl name="mix_title_fadeOut" play="false" end_visible="false">
+			<bind_node node="recipe_title_" anim="anm_common_fade_in" speed="1.0" reverse="true"/>
+		</anim_ctrl>
+	</image>
+	<!-- アイテムウィンドウ 4枚-->
+	<node name="card_line" pos="0,200">
+		<node name="mat1" pos="40,0" clone_child_tree="template_item_window"/>
+		<node name="mat2" pos="340,0" clone_child_tree="template_item_window"/>
+		<node name="mat3" pos="640,0" clone_child_tree="template_item_window"/>
+		<node name="mat4" pos="940,0" clone_child_tree="template_item_window"/>
+	</node>
+	<!-- 作成個数選択ウィンドウ -->
+	<image pos="42,85" name="make_num_count" size_wh="390,110" style="gen_window02_04_off">
+		<image name="header" pos="18,22" size_w="355" style="gen_common01_win_acce02_bg">
+			<image name="border01" pos="0,20" size_w="357" style="gen_common01_win_acce02_01"/>
+			<text name="text_header" pos="159,6" text="개수 선택" font_size="14"/>
+		</image>
+		<image pos="120,62" name="cur_selFocus_off" visible="false" style="gen_window03_linecsr02_over"/>
+		<image pos="120,62" name="cur_selFocus" style="gen_window03_linecsr02_on"/>
+		<anim_ctrl play="true" loop="true">
+			<bind_node node="cur_selFocus" anim="anm_common_cursor_blink"/>
+		</anim_ctrl>
+		<!--矢印-->
+		<image pos="104,45" name="make_arrow_l" style="gen_common01_arrow_l" flick_time="0.2"/>
+		<image pos="263,45" name="make_arrow_r" style="gen_common01_arrow_r" flick_time="0.2"/>
+		<!--<text pos="275,63" text="개" font_size="24" align="left" />-->
+		<!--個数選択-->
+		<text pos="195,72" name="make_num" text="99" font_size="24" align="right" copy="NUMBER01_24PX"/>
+		<text pos="212,72" name="_slash" text="/" font_size="24" align="right" copy="NUMBER01_24PX"/>
+		<text pos="255,72" name="max_make" text="45" font_size="24" align="right" copy="NUMBER01_24PX"/>
+		<!--フェード-->
+		<anim_ctrl name="make_num_count_fadeIn" play="false" start_visible="true">
+			<bind_node node="make_num_count" anim="anm_common_fade_in" speed="1.0"/>
+		</anim_ctrl>
+		<anim_ctrl name="make_num_count_fadeOut" play="false" end_visible="false">
+			<bind_node node="make_num_count" anim="anm_common_fade_in" speed="1.0" reverse="true"/>
+		</anim_ctrl>
+	</image>
+	<!--現在所有している数。非表示にしておく-->
+	<!--<image pos="55, 590" name="have_item_num" size_wh="190, 100" visible="true" style="gen_mix_name_bg01">-->
+	<image pos="430,100" name="have_item_num" size_wh="120,145" visible="false" style="gen_mix_name_bg01">
+		<text pos="15,15" text="보유 개수" font_size="24" align="left"/>
+		<text pos="100,63" name="make_num" text="99" font_size="24" align="right"/>
+	</image>
+</root>

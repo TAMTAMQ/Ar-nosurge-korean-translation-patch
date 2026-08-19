@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE root SYSTEM "file://st01/project/acps3/_Programmer/ui/uil.dtd">
+<root pos="232,370" visible="true">
+	<command load_style="Saves/ui/gen_styles/uis_gen_common.xml"/>
+	<command load_style="Saves/ui/gen_styles/uis_gen_window.xml"/>
+	<command load_style="Saves/ui/message_window/uis_message_window.xml"/>
+	<command load_anim="Saves/ui/message_window/uia_message_window.xml"/>
+	<!--パネルの両左右下の土台-->
+	<node name="base" visible="false" viewer_visible="true">
+		<!--パネル-->
+		<image name="panel" pos="24,-66.667" size_wh="746.667,226.667" style="gen_common02_messagewindow_bg01">
+			<!--メッセージ-->
+			<text name="msg_text" pos="78,40.333" drop_shadow="false" limit_width="616" font_size="28" text="아이우에오카키쿠케코아이우에오카키쿠케코\n아이우에오카키쿠케코아이우에오카키쿠케코\n아이우에오카키쿠케코아이우에오카"/>
+			<!--名前表示欄-->
+			<node name="name_base" pos="16,-18">
+				<image name="name_base_img" pos="0,-13.333" scale="1.7,1.7,0" style="gen_common02_acce02"/>
+				<text name="name_text" pos="15,7" drop_shadow="false" font_size="25.333" text="캐스캐스"/>
+			</node>
+			<!--名前表示欄の左で光ってる輪-->
+			<image name="light" pos="-3,-35.333" style="gen_common02_acce03"/>
+			<node pos="12,-0.667">
+				<node name="light_base">
+					<image pos="-32,-32" style="gen_common02_acce04"/>
+				</node>
+				<anim_ctrl play="true" loop="true">
+					<bind_node node="light_base" anim="anm_common_rotateZ360" speed="0.03"/>
+				</anim_ctrl>
+			</node>
+			<!--イコライザー右側-->
+			<node name="eq_r" pos="546.667,210.667" scale="-1,-1,1" color="255,255,255,64">
+				<image name="eq_0" pos="0,0" image_no="0" style="style_msgwin_voiceline"/>
+				<image name="eq_1" pos="5,0" image_no="0" style="style_msgwin_voiceline"/>
+				<image name="eq_2" pos="10,0" image_no="0" style="style_msgwin_voiceline"/>
+				<image name="eq_3" pos="15,0" image_no="0" style="style_msgwin_voiceline"/>
+			</node>
+			<!--イコライザー左側-->
+			<node name="eq_l" pos="199,210.667" scale="1,-1,1" color="255,255,255,64">
+				<image name="eq_0" pos="0,0" image_no="0" style="style_msgwin_voiceline"/>
+				<image name="eq_1" pos="5,0" image_no="0" style="style_msgwin_voiceline"/>
+				<image name="eq_2" pos="10,0" image_no="0" style="style_msgwin_voiceline"/>
+				<image name="eq_3" pos="15,0" image_no="0" style="style_msgwin_voiceline"/>
+			</node>
+			<!--イコライザー ボイス再生中演出-->
+			<anim_ctrl name="eq_play" play="false" loop="true" speed="0.6">
+				<bind_node node="eq_r/eq_0" anim="anm_msgwin_eq0"/>
+				<bind_node node="eq_r/eq_1" anim="anm_msgwin_eq1"/>
+				<bind_node node="eq_r/eq_2" anim="anm_msgwin_eq2"/>
+				<bind_node node="eq_r/eq_3" anim="anm_msgwin_eq3"/>
+				<bind_node node="eq_l/eq_0" anim="anm_msgwin_eq0"/>
+				<bind_node node="eq_l/eq_1" anim="anm_msgwin_eq1"/>
+				<bind_node node="eq_l/eq_2" anim="anm_msgwin_eq2"/>
+				<bind_node node="eq_l/eq_3" anim="anm_msgwin_eq3"/>
+			</anim_ctrl>
+			<!--イコライザー ボイス停止演出-->
+			<anim_ctrl name="eq_stop" play="false" loop="false" speed="1.5">
+				<bind_node node="eq_r/eq_0" delay="0.0" anim="anm_msgwin_eq_down"/>
+				<bind_node node="eq_r/eq_1" delay="0.1" anim="anm_msgwin_eq_down"/>
+				<bind_node node="eq_r/eq_2" delay="-0.1" anim="anm_msgwin_eq_down"/>
+				<bind_node node="eq_r/eq_3" delay="0.2" anim="anm_msgwin_eq_down"/>
+				<bind_node node="eq_l/eq_0" delay="0.0" anim="anm_msgwin_eq_down"/>
+				<bind_node node="eq_l/eq_1" delay="0.1" anim="anm_msgwin_eq_down"/>
+				<bind_node node="eq_l/eq_2" delay="-0.1" anim="anm_msgwin_eq_down"/>
+				<bind_node node="eq_l/eq_3" delay="0.2" anim="anm_msgwin_eq_down"/>
+			</anim_ctrl>
+			<anim_ctrl play="true" loop="true">
+				<bind_node node="light" anim="anm_msgwin_light_blink" speed="0.2"/>
+			</anim_ctrl>
+			<!--各種アイコン-->
+			<node name="prompt_icon" pos_ratio_x="1" pos_ratio_y="1" pos="-60,-106.667" load="Saves/ui/common/uil_prompt.xml"/>
+		</image>
+		<!--土台に当るパーツ-->
+		<image pos="0,105" style="gen_common02_acce01"/>
+		<image pos="793.667,105" scale="-1,1,1" style="gen_common02_acce01"/>
+	</node>
+	<!--入場演出-->
+	<anim_ctrl name="anim_enter" start_visible="true" play="true" loop="false" reverse="false" speed="2.0">
+		<bind_node node="base" anim="anm_msgwin_base_pull_up"/>
+		<bind_node delay="0.2" node="panel" anim="anm_msgwin_panel_pull_up"/>
+		<bind_node delay="0.4" node="msg_text" anim="anm_msgwin_fade_in" speed="1.5"/>
+	</anim_ctrl>
+</root>

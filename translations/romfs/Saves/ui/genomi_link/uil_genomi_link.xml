@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE root SYSTEM "file://st01/project/acps3/_Programmer/ui/uil.dtd">
+<root>
+	<!-- スタイルの読み込み -->
+	<command load_style="Saves/ui/gen_styles/uis_gen_common.xml"/>
+	<!--テンプレートを読み込む-->
+	<node load="Saves/ui/uil_template.xml"/>
+	<node load="Saves/ui/uil_line_format.xml"/>
+	<node pos="145,154" visible="true">
+		<menu name="new_items" style="style_menu_column1"/>
+		<text text="전송된 아이템" pos="155,13.333" align="center" font_size="18.667"/>
+		<command target_node="new_items/__uimenu_window" set_image_no="1"/>
+	</node>
+	<node pos="470,70" name="item_info_pos">
+		<!--
+		<image name="left_window_base" style="etc_window02_04" image_no="1" size_wh="365, 345"/>
+-->
+	</node>
+</root>

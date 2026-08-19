@@ -1,0 +1,93 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE root SYSTEM "file://st01/project/acps3/_Programmer/ui/uil.dtd">
+<root>
+	<!-- スタイルの読み込み -->
+	<command load_style="Saves/ui/uis_common.xml"/>
+	<command load_style="Saves/ui/gen_styles/uis_gen_common.xml"/>
+	<command load_style="Saves/ui/gen_styles/uis_gen_window.xml"/>
+	<command load_style="Saves/ui/gen_styles/uis_gen_mainmenu.xml"/>
+	<command load_style="Saves/ui/gen_styles/uis_gen_battle.xml"/>
+	<command load_style="Saves/ui/gen_styles/uis_gen_system.xml"/>
+	<command load_style="Saves/ui/main_menu/uis_main_menu.xml"/>
+	<command load_anim="Saves/ui/main_menu/uia_main_menu.xml"/>
+	<command load_anim="Saves/ui/_menu_templates/uia_mt_common.xml"/>
+	<command load_style="Saves/ui/etc/uis_etc_window.xml"/>
+	<!--テンプレートを読み込む-->
+	<node load="Saves/ui/uil_template.xml"/>
+	<node name="cursor_template" visible="false">
+		<node name="label_on">
+			<image name="cursor_active" pos="25,-1,-10" image_no="0" style="gen_window03_linecsr02_on" size_wh="189,32"/>
+			<image name="linecsricon" pos="10,-2" image_no="2" style="gen_window03_linecsricon"/>
+		</node>
+		<!-- 明滅アニメーション -->
+		<anim_ctrl play="true" loop="true">
+			<bind_node node="cursor_active" anim="anm_common_cursor_blink"/>
+		</anim_ctrl>
+	</node>
+	<image style="ui_bg_sample" color="255,128,128,160" visible="false" viewer_visible="true"/>
+	<node name="system_menu" rot="0,0,0">
+		<image name="window" style="etc_window02_04" image_no="1" size_wh="703,347" pos="280,144,0">
+			<!--ラベル-->
+			<node name="label" pos="11,-3,0">
+				<image style="gen_common01_win_acce02_bg" size_w="305" pos="7,23,0" size_wh="669,23">
+					<text name="caption" text="설정" font_size="14" align="center" pos="0,7" pos_ratio_x="0.5"/>
+					<image style="gen_common01_win_acce02_01" pos="2,21,0" parent_size_copy_w="true" size_wh="-10,11"/>
+				</image>
+			</node>
+			<!--灰色区切り-->
+			<node>
+				<node name="black_sheet" pos="20,50,0">
+					<image style="white_image" size_wh="202,38" color="0,0,0,64">
+						<image style="white_image" size_wh="462,38" pos="204,0,0"/>
+					</image>
+				</node>
+				<node clone_child_tree="black_sheet" pos="20,90,0"/>
+				<node clone_child_tree="black_sheet" pos="20,130,0"/>
+				<node clone_child_tree="black_sheet" pos="20,170,0"/>
+				<node clone_child_tree="black_sheet" pos="20,210,0"/>
+				<image style="white_image" size_wh="666,37" color="0,0,0,64" pos="20,250,0"/>
+				<image style="white_image" size_wh="666,37" color="0,0,0,64" pos="20,289,0"/>
+			</node>
+			<!--ゲージ-->
+			<node name="gauge0" pos="330,57,0">
+				<image style="gen_system01_gauge_bg"/>
+				<image name="image_gauge" style="gen_system01_gauge" pos="0,0,0" scale="1,1,1"/>
+				<image style="gen_system01_gauge_divisions"/>
+			</node>
+			<node name="gauge1" pos="330,100,0" clone_child_tree="gauge0"/>
+			<node name="gauge2" pos="330,140,0" clone_child_tree="gauge0"/>
+			<node name="gauge3" pos="330,180,0" clone_child_tree="gauge0"/>
+			<image name="normal" style="gen_system01_normal" pos="272,213,0" image_no="0"/>
+			<image name="hard" style="gen_system01_hard" pos="392,213,0" image_no="1"/>
+			<image name="veteran" style="gen_system01_veteran" pos="519,213,0" image_no="0"/>
+			<!--カーソル-->
+			<node name="cursor_group0" pos="18,53,0">
+				<node clone_child_tree="cursor_template" pos="-7,0,0"/>
+				<node name="arrows">
+					<image pos="224,0,0" style="gen_system01_arrow_l"/>
+					<image pos="629,-1,0" style="gen_system01_arrow_r"/>
+				</node>
+				<anim_ctrl play="true" loop="true">
+					<bind_node node="arrows" anim="anm_common_cursor_blink"/>
+				</anim_ctrl>
+			</node>
+			<node name="cursor_group1" pos="18,93,0" clone_child_tree="cursor_group0"/>
+			<node name="cursor_group2" pos="18,133,0" clone_child_tree="cursor_group0"/>
+			<node name="cursor_group3" pos="18,173,0" clone_child_tree="cursor_group0"/>
+			<node name="cursor_group4" pos="18,214,0" clone_child_tree="cursor_group0"/>
+			<node name="cursor_group5" pos="256,253,0" clone_child_tree="cursor_template"/>
+			<node name="cursor_group6" pos="256,292,0" clone_child_tree="cursor_template"/>
+			<!--見出し-->
+			<text text="음성" font_size="20" pos="89,58,0"/>
+			<text text="BGM" font_size="20" pos="89,98,0"/>
+			<text text="효과음" font_size="20" pos="89,138,0"/>
+			<text text="동영상" font_size="20" pos="89,178,0"/>
+			<text text="난이도" font_size="20" pos="89,219,0"/>
+			<text text="기본값" font_size="20" pos="314,258,0"/>
+			<text text="결정" font_size="20" pos="336,297,0"/>
+		</image>
+	</node>
+	<anim_ctrl name="get_in" play="true">
+		<bind_node start_visible="true" node="system_menu" anim="anm_common_fade_in"/>
+	</anim_ctrl>
+</root>

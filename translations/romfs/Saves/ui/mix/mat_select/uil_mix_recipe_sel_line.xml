@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE root SYSTEM "file://st01/project/acps3/_Programmer/ui/uil.dtd">
+<root>
+	<!-- レシピ選択ウィンドウ機構_ -->
+	<node name="line_item">
+		<text name="recipe_name" text="아이템 아이템 아이" font_color="90,40,26,255" align="left" font_size="22"/>
+		<text name="num" text="99" pos="295,0" font_color="90,40,26,255" align="right" font_size="22"/>
+	</node>
+</root>

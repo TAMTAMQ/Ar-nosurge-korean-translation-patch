@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE root SYSTEM "file://st01/project/acps3/_Programmer/ui/uil.dtd">
+<root>
+	<!-- スタイルの読み込み -->
+	<command load_style="Saves/ui/uis_common.xml"/>
+	<command load_style="Saves/ui/gen_styles/uis_gen_common.xml"/>
+	<command load_style="Saves/ui/gen_styles/uis_gen_window.xml"/>
+	<command load_style="Saves/ui/gen_styles/uis_gen_mainmenu.xml"/>
+	<command load_style="Saves/ui/main_menu/uis_main_menu.xml"/>
+	<command load_anim="Saves/ui/main_menu/uia_main_menu.xml"/>
+	<!--テンプレートを読み込む-->
+	<node load="Saves/ui/uil_template.xml"/>
+	<node load="Saves/ui/uil_line_format.xml"/>
+	<node pos="30,100">
+		<menu name="dbg_menu" style="style_menu_column3"/>
+		<!--アイテム名-->
+		<text text="업적명" font_size="16" pos="134,16"/>
+		<!--所持-->
+		<text text="상태" font_size="16" pos="303,16" color="118,162,160,255"/>
+		<!--価格-->
+		<text text="수치" font_size="16" pos="385,16" color="118,162,160,255"/>
+	</node>
+	<text name="text_help" align="left" font_size="22" text="&lt;IM06&gt;로 전체 갱신" pos="20,20"/>
+	<node name="dbg_selecter" pos="440,185">
+		<!-- 下地画像 -->
+		<image style="etc_window02_06" size_wh="395,330"/>
+		<text name="text_title" align="center" font_size="22" text="000:TITLE_ABCD" pos="200,20"/>
+		<!-- タイトル -->
+		<text align="center" font_size="22" text="Status" pos="200,80"/>
+		<!-- 選択数 -->
+		<node pos="116,105">
+			<image name="cur_status" style="gen_window03_linecsr02_on"/>
+			<text name="text_status" align="center" text="6789" pos="84,3"/>
+			<image name="left_arrow" style="gen_common01_arrow_l" flick_time="0.2" pos="-36,-16"/>
+			<image name="right_arrow" style="gen_common01_arrow_r" flick_time="0.2" pos="164,-16"/>
+		</node>
+		<!-- タイトル -->
+		<text name="text_vlabel" align="center" font_size="22" text="Value(***.**%)" pos="200,170"/>
+		<!-- 選択数 -->
+		<node pos="116,195">
+			<image name="cur_value" style="gen_window03_linecsr02_on"/>
+			<text name="text_value" align="center" font="NUMBER01_26PX" font_size="26" text="9999" pos="84,11"/>
+			<image name="left_arrow" style="gen_common01_arrow_l" flick_time="0.2" pos="-36,-16"/>
+			<image name="right_arrow" style="gen_common01_arrow_r" flick_time="0.2" pos="164,-16"/>
+		</node>
+		<!-- 選択数 -->
+		<node pos="116,270">
+			<image name="cur_ok" style="gen_window03_linecsr02_on"/>
+			<text align="center" font_size="22" text="OK" pos="84,4"/>
+		</node>
+	</node>
+</root>

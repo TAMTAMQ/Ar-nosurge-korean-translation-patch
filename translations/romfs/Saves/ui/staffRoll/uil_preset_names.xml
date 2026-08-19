@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE root SYSTEM "file://st01/project/acps3/_Programmer/ui/uil.dtd">
+<root>
+	<node visible="false">
+		<text name="preset_name_00" text="미나미 유키치"/>
+		<text name="preset_name_01" text="손가침"/>		
+	</node>
+</root>

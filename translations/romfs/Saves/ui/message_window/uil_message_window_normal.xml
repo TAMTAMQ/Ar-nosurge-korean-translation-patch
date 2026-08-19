@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE root SYSTEM "file://st01/project/acps3/_Programmer/ui/uil.dtd">
+<root pos="325,370" visible="true">
+	<command load_style="Saves/ui/gen_styles/uis_gen_common.xml"/>
+	<command load_style="Saves/ui/gen_styles/uis_gen_window.xml"/>
+	<command load_style="Saves/ui/message_window/uis_message_window.xml"/>
+	<command load_anim="Saves/ui/message_window/uia_message_window.xml"/>
+	<!--パネル-->
+	<image name="panel" pos="0,0" size_wh="450,90" style="gen_window03_npcmsg">
+		<!--メッセージ-->
+		<text name="msg_text" pos="5,25" pos_ratio_x="0.05" drop_shadow="false" line_char_length="20" font_size="20" text="아이우에오카키쿠케코사사먹고있을때가아냐피부로걷기아르노사쥬세르노사쥬파괴신공용어「」【】・?!123ab"/>
+		<!--名前表示欄-->
+		<image name="name_base" pos="16,-14" style="gen_common02_acce02">
+			<text name="name_text" pos="15,11" drop_shadow="false" font_size="16" text="캐스캐스"/>
+		</image>
+		<!--名前表示欄の左で光ってる輪-->
+		<image name="light" pos="-3,-34" style="gen_common02_acce03"/>
+		<node pos="12,2">
+			<node name="light_base">
+				<image pos="-32,-32" style="gen_common02_acce04"/>
+			</node>
+			<anim_ctrl play="true" loop="true">
+				<bind_node node="light_base" anim="anm_common_rotateZ360" speed="0.03"/>
+			</anim_ctrl>
+		</node>
+		<anim_ctrl play="true" loop="true">
+			<bind_node node="light" anim="anm_msgwin_light_blink" speed="0.2"/>
+		</anim_ctrl>
+		<!--各種アイコン-->
+		<node name="prompt_icon" pos_ratio_x="1" pos_ratio_y="1" pos="-50,-50" load="Saves/ui/common/uil_prompt.xml"/>
+	</image>
+	<!--入場演出-->
+	<anim_ctrl name="anim_enter" start_visible="true" play="true" loop="false" reverse="false">
+		<bind_node node="panel" anim="anm_common_fade_in" speed="5.0"/>
+	</anim_ctrl>
+</root>

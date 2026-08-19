@@ -1,0 +1,230 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE root SYSTEM "file://st01/project/acps3/_Programmer/ui/uil.dtd">
+<root>
+	<!-- スタイルの読み込み -->
+	<command load_style="Saves/ui/gen_styles/uis_gen_battle.xml"/>
+	<command load_style="Saves/ui/gen_styles/uis_gen_window.xml"/>
+	<command load_style="Saves/ui/gen_styles/uis_gen_common.xml"/>
+	<command load_style="Saves/ui/gen_styles/uis_gen_mainmenu.xml"/>
+	<command load_style="Saves/ui/etc/uis_big_chara.xml"/>
+	<!-- アニメーションの読み込み -->
+	<command load_anim="Saves/ui/battle/uia_battle.xml"/>
+	<!--テンプレートを読み込む-->
+	<node load="Saves/ui/uil_template.xml"/>
+	<node load="Saves/ui/uil_line_format.xml"/>
+	<node name="main" pos="0,0">
+		<!--基本部分-->
+		<node name="base" pos="0,0" visible="true">
+			<node name="base_l">
+				<image pos="512,725.333" scale="-1,-1" style="gen_battle05_totaldamage_bg"/>
+				<image pos="35,29" style="gen_battle06_result_text"/>
+			</node>
+			<node name="base_r">
+				<image pos="768,0" style="gen_battle05_totaldamage_bg" visible="true"/>
+			</node>
+		</node>
+		<!--EXPゲット-->
+		<node name="exp" visible="true">
+			<image pos="1045,58" style="gen_battle06_totalsucre"/>
+			<node pos="1125,197" name="g_rank_be">
+				<image pos="-112,-112" name="rank_be" style="gen_battle06_rank"/>
+			</node>
+			<node pos="1125,197" name="g_rank_af">
+				<image pos="-112,-112" name="rank_af" style="gen_battle06_rank"/>
+			</node>
+			<!--キャラ-->
+			<node name="chara_f" pos="36,68">
+				<image size_wh="390,145" style="gen_window01_01">
+					<image name="chara" pos="116,21" style="gen_battle08_resultchara"/>
+					<image name="lv" pos="156,23" style="gen_battle06_lvup_text"/>
+					<image pos="27,24" style="gen_menu01_status_lv"/>
+					<text name="text_chara_lv" pos="109,38.667" text="09" align="right" copy="NUMBER01_20PX"/>
+					<image pos="27,58" style="gen_menu01_status_exp"/>
+					<text name="text_chara_exp" pos="170,74.667" text="99" align="right" copy="NUMBER01_20PX"/>
+					<image pos="27,89" style="gen_menu01_status_nextexp"/>
+					<text name="text_chara_expnext" pos="170,106.667" text="9999" align="right" copy="NUMBER01_20PX"/>
+				</image>
+			</node>
+			<node name="chara_b" pos="36,189" clone_child_tree="chara_f"/>
+			<!-- リザルトウインドウ -->
+			<image name="result_win" pos="45,332" size_wh="370,330" style="gen_window02_05" visible="true">
+				<node pos="0,0">
+					<image pos="10,13" size_w="350" style="gen_common01_win_acce02_bg"/>
+					<image pos="12,33" size_w="350" style="gen_common01_win_acce02_01"/>
+					<image pos="116,16" style="gen_common01_window_acce01"/>
+					<image pos="253,16" style="gen_common01_window_acce01"/>
+					<text pos="176,18" text="획득" font_size="14"/>
+				</node>
+				<image pos="10,37" size_wh="350,24" style="gen_window03_bg02"/>
+				<image pos="10,37" style="gen_battle06_exp_text"/>
+				<text name="text_exp" pos="40,80" text="99999999" font="NUMBER01_26PX" font_size="22"/>
+				<image pos="10,101" size_wh="350,24" style="gen_window03_bg02"/>
+				<image pos="10,101" style="gen_battle06_divepoint_text"/>
+				<image pos="188,138" style="gen_battle06_divepoint_dp"/>
+				<text name="text_dp" pos="40,144" text="99999999" font="NUMBER01_26PX" font_size="22"/>
+				<image pos="10,163" size_wh="350,24" style="gen_window03_bg02"/>
+				<image pos="10,163" style="gen_battle06_money_text"/>
+				<image pos="186,196" style="gen_battle06_money_ct"/>
+				<text name="text_money" pos="40,204" text="99999999" font="NUMBER01_26PX" font_size="22"/>
+				<node pos="0,216">
+					<image pos="10,13" size_w="350" style="gen_common01_win_acce02_bg"/>
+					<image pos="12,33" size_w="350" style="gen_common01_win_acce02_01"/>
+					<image pos="116,16" style="gen_common01_window_acce01"/>
+					<image pos="253,16" style="gen_common01_window_acce01"/>
+					<text pos="134,18" text="토탈 보너스" font_size="14"/>
+				</node>
+				<image pos="7,250" style="gen_battle06_totalbonus_text"/>
+				<node name="total_bonus" pos="290,303" visible="true">
+					<text name="text_total_bonus" pos="-50,-11" text="*00.00" font="BATTLE_BONUS" font_size="22" word_space="-4"/>
+				</node>
+			</image>
+			<!-- トータル -->
+			<node name="burst_max_group" visible="false">
+				<image pos="922,324" style="gen_battle06_burstcharge_text"/>
+				<node name="newrecord" visible="false">
+					<image pos="1101,322" style="gen_battle06_newrecord_light"/>
+					<image pos="1104,322" style="gen_battle06_newrecord_text"/>
+				</node>
+				<text name="text_burst_max" pos="1196,362" text="999999/999999" align="right" word_space="-3" font="RESULT_BURST"/>
+				<image pos="1196,372" style="gen_battle01_burst_percent"/>
+			</node>
+			<node name="wave_max_group" visible="false">
+				<image pos="889,436" style="gen_battle05_wavechain_letter"/>
+				<text name="text_wave_max" pos="1115,406" font="BATTLE_TOTALWAVECHAIN" text="99" word_space="-22"/>
+			</node>
+			<node name="enemy_max_group" visible="false">
+				<image pos="828,531" style="gen_battle05_totalenemy_letter"/>
+				<text name="text_enemy_max" pos="1060,506" font="BATTLE_TOTALENEMY" text="999" word_space="-22"/>
+			</node>
+			<node name="damage_max_group" visible="false">
+				<image pos="667,626" style="gen_battle05_totaldamage_letter"/>
+				<text name="text_damage_max" pos="918,596" font="BATTLE_TOTALDAMAGE" text="999999" word_space="-22"/>
+			</node>
+		</node>
+		<!-- レベルアップ -->
+		<node name="levelup" visible="true">
+			<node name="param_diff_template" visible="false">
+				<text name="down" text="-99" pos="340,13" word_space="-5" font="E_DOWN" align="right"/>
+				<text name="up" text="+99" pos="340,13" word_space="-5" font="E_UP" align="right"/>
+			</node>
+			<node name="param_gauge_template" visible="false">
+				<node>
+					<text name="label" pos="17,6" align="left" text="내구도" drop_shadow="false" font_size="20">
+						<text name="value" pos="190,8" drop_shadow="false" align="right" text="9009" copy="NUMBER01_20PX"/>
+						<image pos="195,5" style="gen_menu01_hpgauge01_bg">
+							<image name="value_gauge" style="gen_menu01_hpgauge01"/>
+						</image>
+					</text>
+					<node name="param_diff" clone_child_tree="param_diff_template"/>
+				</node>
+			</node>
+			<node name="page01_man" visible="false" viewer_visible="false">
+				<image name="big_chara" pos="580,0" style="style_big_chara"/>
+				<image name="status" pos="284,134" size_wh="365,355" style="gen_window01_02" color="255,255,255,255">
+					<image pos="40,7" size_w="288" style="gen_common01_name_bg01">
+						<text name="name" pos_ratio_x="0.5" pos="0,13" text="캐스티 리아노이트" font_size="18" align="center"/>
+					</image>
+					<node name="label" pos="7,50">
+						<image style="gen_common01_win_acce02_bg" size_w="350"/>
+						<image style="gen_common01_win_acce02_01" pos="0,22" size_w="354"/>
+						<image style="gen_common01_window_acce01" pos="104,4"/>
+						<image style="gen_common01_window_acce01" pos="241,4"/>
+						<text name="page_title" text="스테이터스" font_size="13" align="center" pos="177,7"/>
+					</node>
+					<!--LV-->
+					<image pos="20,85" style="gen_menu01_status_lv">
+						<text name="lv" pos="56,14" text="09" copy="NUMBER01_20PX"/>
+					</image>
+					<!--EXP-->
+					<image pos="20,117" style="gen_menu01_status_exp">
+						<text name="exp" pos="56,14" text="009009" copy="NUMBER01_20PX"/>
+					</image>
+					<!--NEXT Exp-->
+					<image pos="20,149" style="gen_menu01_status_nextexp">
+						<text name="next_exp" pos="56,14" text="009009" copy="NUMBER01_20PX"/>
+					</image>
+					<node name="param0" pos="8,185" clone_child_tree="param_gauge_template"/>
+					<node name="param1" pos="8,219" clone_child_tree="param_gauge_template"/>
+					<node name="param2" pos="8,253" clone_child_tree="param_gauge_template"/>
+					<node name="param3" pos="8,287" clone_child_tree="param_gauge_template"/>
+					<node name="param4" pos="8,321" clone_child_tree="param_gauge_template"/>
+					<command target_node="param0/label" set_text="AP"/>
+					<command target_node="param1/label" set_text="공격력"/>
+					<command target_node="param2/label" set_text="방어력"/>
+					<command target_node="param3/label" set_text="버스트 보정"/>
+				</image>
+				<image name="skill_get" pos="284,495" size_wh="365,140" style="gen_window01_02" color="255,255,255,255">
+					<node name="label" pos="7,8">
+						<image style="gen_common01_win_acce02_bg" size_w="350"/>
+						<image style="gen_common01_win_acce02_01" pos="0,22" size_w="354"/>
+						<image style="gen_common01_window_acce01" pos="104,4"/>
+						<image style="gen_common01_window_acce01" pos="241,4"/>
+						<text name="page_title" text="획득 스킬" font_size="13" align="center" pos="177,7"/>
+					</node>
+					<text pos="185,68" name="skill_name" text="사시스세소" align="center" font_size="22" drop_shadow="false"/>
+				</image>
+			</node>
+			<node name="page01_woman" visible="false" viewer_visible="false" clone_child_tree="page01_man"/>
+			<command target_node="page01_woman/status/param0/label" set_text="HP"/>
+			<command target_node="page01_woman/status/param1/label" set_text="방어력"/>
+			<command target_node="page01_woman/status/param2/label" set_text="위력 보정"/>
+			<command target_node="page01_woman/status/param3/label" set_text="충전 속도"/>
+			<command target_node="page01_woman/status/param4/label" set_text="배리어 재생량"/>
+		</node>
+		<!-- アイテムドロップ -->
+		<node pos="380,168" name="drop" visible="false">
+			<menu name="menu" style="style_menu_column2_noscroll" disp_scroll_bar="false"/>
+			<text text="아이템명" pos="150,12" align="center" font_size="18"/>
+			<text text="개수" pos="320,12" align="center" font_size="18" color="118,162,160,255"/>
+		</node>
+	</node>
+	<!-- トータルアニメ -->
+	<anim_ctrl name="result_base_enter" play="false" loop="false" start_visible="true" viewer_key_assign="0">
+		<bind_node node="base_r" anim="common_r_in" speed="3.0"/>
+		<bind_node node="base_l" anim="common_l_in" speed="3.0"/>
+		<bind_node node="chara_f" anim="common_l_in" speed="3.0"/>
+		<bind_node node="chara_b" anim="common_l_in" speed="3.0"/>
+		<bind_node node="result_win" anim="common_l_in" speed="3.0"/>
+		<bind_node node="exp" anim="common_dummy"/>
+	</anim_ctrl>
+	<anim_ctrl name="result_total_enter0" play="false" loop="false" start_visible="true" viewer_key_assign="3">
+		<bind_node node="burst_max_group" anim="common_r_in" speed="3.0" delay="0.0"/>
+		<bind_node node="total_bonus" anim="result_bonus_up" speed="1.0" delay="0.0"/>
+	</anim_ctrl>
+	<anim_ctrl name="result_total_enter1" play="false" loop="false" start_visible="true" viewer_key_assign="3">
+		<bind_node node="wave_max_group" anim="common_r_in" speed="3.0" delay="0.0"/>
+		<bind_node node="total_bonus" anim="result_bonus_up" speed="1.0" delay="0.0"/>
+	</anim_ctrl>
+	<anim_ctrl name="result_total_enter2" play="false" loop="false" start_visible="true" viewer_key_assign="3">
+		<bind_node node="enemy_max_group" anim="common_r_in" speed="3.0" delay="0.0"/>
+		<bind_node node="total_bonus" anim="result_bonus_up" speed="1.0" delay="0.0"/>
+	</anim_ctrl>
+	<anim_ctrl name="result_total_enter3" play="false" loop="false" start_visible="true" viewer_key_assign="3">
+		<bind_node node="damage_max_group" anim="common_r_in" speed="3.0" delay="0.0"/>
+		<bind_node node="total_bonus" anim="result_bonus_up" speed="1.0" delay="0.0"/>
+	</anim_ctrl>
+	<anim_ctrl name="result_rank_up" play="false" loop="false" viewer_key_assign="4">
+		<bind_node node="g_rank_af" anim="result_rank_up_af" speed="4.0" delay="0.0"/>
+		<bind_node node="g_rank_be" anim="result_rank_up_be" speed="4.0" delay="0.0"/>
+	</anim_ctrl>
+	<anim_ctrl name="result_exp_exit" play="false" loop="false" viewer_key_assign="5">
+		<bind_node node="exp" anim="common_fade_out" speed="2.0" delay="0.0"/>
+	</anim_ctrl>
+	<anim_ctrl name="result_levelup_f_exit" play="false" loop="false" end_visible="false" viewer_key_assign="6">
+		<bind_node node="page01_man" anim="common_fade_out" speed="2.0" delay="0.0"/>
+	</anim_ctrl>
+	<anim_ctrl name="result_levelup_b_exit" play="false" loop="false" end_visible="false" viewer_key_assign="7">
+		<bind_node node="page01_woman" anim="common_fade_out" speed="2.0" delay="0.0"/>
+	</anim_ctrl>
+	<anim_ctrl name="result_levelup_f_enter" play="false" loop="false" start_visible="true" viewer_key_assign="8">
+		<bind_node node="page01_man" anim="common_fade_in" speed="2.0" delay="0.0"/>
+	</anim_ctrl>
+	<anim_ctrl name="result_levelup_b_enter" play="false" loop="false" start_visible="true" viewer_key_assign="9">
+		<bind_node node="page01_woman" anim="common_fade_in" speed="2.0" delay="0.0"/>
+	</anim_ctrl>
+	<anim_ctrl name="result_drop_enter" play="false" loop="false" viewer_key_assign="1">
+		<bind_node node="page01_man" anim="common_fade_out" speed="2.0" delay="0.0"/>
+		<bind_node node="page01_woman" anim="common_fade_out" speed="2.0" delay="0.0"/>
+		<bind_node node="drop" anim="common_fade_in" speed="2.0" delay="0.0" start_visible="true"/>
+	</anim_ctrl>
+</root>

@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE root SYSTEM "file://st01/project/acps3/_Programmer/ui/uil.dtd">
+<root>
+	<!-- スタイルの読み込み -->
+	<command load_style="Saves/ui/gen_styles/uis_gen_mainmenu.xml"/>
+	<text text="「그을음」과 「초」®아이우에오미나미치&lt;IM26&gt;아이우에오&lt;IM27&gt;아이우에오" pos="332,229,0"/>
+	<text text="「그을음」과 「초」®아이우에오미나미치&lt;IM28&gt;아이우에오&lt;IM29&gt;아이우에오" pos="332,329,0"/>
+</root>

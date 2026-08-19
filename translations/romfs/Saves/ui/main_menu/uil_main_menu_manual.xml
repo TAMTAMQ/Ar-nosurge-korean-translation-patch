@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<root>
+	<!--***↓お決まり関連(必ず一番上に置いておく) ***-->
+	<node name="usuals" visible="false" viewer_visible="true">
+		<command load_anim="Saves/ui/uia_common.xml"/>
+		<!--↓テンプレート(文字色やカスタムフォント)の読み込み-->
+		<node load="Saves/ui_CMN/uil_template.xml" name="font_template"/>
+	</node>
+	<!-- スタイルの読み込み -->
+	<command load_style="Saves/ui/gen_styles/uis_gen_window.xml"/>
+	<command load_style="Saves/ui/gen_styles/uis_gen_mainmenu.xml"/>
+	<!--***↓指示書画像(Data/Win32/ui_bg/ui_bg_sample_g1t) ***-->
+	<image name="sample_bg" style="ui_bg_sample" size_wh="1280, 720" visible="false" viewer_visible="true"/>
+	<!--***↓クローン元パーツを入れておく場所 ***-->
+	<node name="clone_targets" visible="false" viewer_visible="false"/>
+	<!--***↓画面パーツの配置場所 ***-->
+	<node name="top" pos="0.00, 0.00, 0.00">
+		<!--***↓BG参照用-->
+		<image name="bg" style="white_image" pos="-0.00, -0.00, -0.00" size_wh="1280,720" color="0,0,0,128"/>
+		<node name="balloon" pos="-0, 200, -0" rot="-0.00, -0.00, -0.00" scale="1.00, 1.00, 1.00">
+			<image name="image" style="gen_window02_04_on" pos="240.00, -0.00, 0.00" size_wh="800.00, 280.00, 0.00"/>
+			<text name="msg_text" pos="650.00,40" pos_ratio_x="0.5" line_char_length="25" font_size="20" align="center" line_space="8" text="아래 링크에서 플레이 방법과 조작 방법을 확인할 수 있습니다. 스마트폰이나 PC 등으로 이용해 주세요."/>
+			<text name="url" pos="650, 225, -0" font="MainFont00" font_size="20.00" align="center" text="https://www.gamecity.ne.jp/manual/arnosurge/jp/"/>
+		</node>
+		<node name="qr" pos="7, 10, -0" rot="-0.00, -0.00, -0.00" scale="1.00, 1.00, 1.00" viewer_visible="false">
+			<image name="qr_code" style="gen_menu08_qr" pos="585.00, 298.00, 0.00"/>
+		</node>
+		<anim_ctrl name="anim_fade_in" viewer_key_assign="0">
+			<bind_node node="." anim="anm_common_fade_in"/>
+		</anim_ctrl>
+	</node>
+</root>

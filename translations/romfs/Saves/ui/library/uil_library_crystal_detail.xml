@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE root SYSTEM "file://st01/project/acps3/_Programmer/ui/uil.dtd">
+<root>
+	<!-- スタイルの読み込み -->
+	<command load_style="Saves/ui/gen_styles/uis_gen_common.xml"/>
+	<command load_style="Saves/ui/gen_styles/uis_gen_window.xml"/>
+	<command load_style="Saves/ui/gen_styles/uis_gen_mix.xml"/>
+	<command load_style="Saves/ui/etc/uis_etc_window.xml"/>
+	<command load_style="Saves/ui/etc/uis_crystal_map_list.xml"/>
+	<node pos="1200,0" rot="0,5,0">
+		<node pos="-1200,0">
+			<node name="info_window" pos="537,125">
+				<!-- 下地画像 -->
+				<image name="base_window" style="etc_window02_04" size_wh="665,507">
+					<image style="gen_common01_win_acce02_bg" parent_size_copy_w="true" size_copy_w_offset="-31" pos="18,21">
+						<image style="gen_common01_win_acce02_01" pos="0,22" parent_size_copy_w="true"/>
+						<node pos_ratio_x="0.5" pos="0,4">
+							<image style="gen_common01_window_acce01" pos="-135,0"/>
+							<image style="gen_common01_window_acce01" pos="123,0"/>
+							<!-- ページタイトルテキスト -->
+							<text text="획득 장소" font_size="14" align="center" pos="0,3"/>
+						</node>
+					</image>
+					<image name="image_map" style="style_crystal_map_list" pos="19,51,0"/>
+				</image>
+			</node>
+		</node>
+	</node>
+	<anim_ctrl name="get_in" start_visible="true">
+		<bind_node node="info_window" speed="2.0" anim="anm_common_fade_in"/>
+	</anim_ctrl>
+	<image name="ui_bg_sample" style="ui_bg_sample" color="255,128,128,1"/>
+</root>

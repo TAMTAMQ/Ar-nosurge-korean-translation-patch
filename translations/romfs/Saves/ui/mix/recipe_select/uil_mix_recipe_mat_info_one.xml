@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<root>
+	<!-- スタイルの読み込み -->
+	<command load_style="Saves/ui/uis_common.xml"/>
+	<command load_style="Saves/ui/mix/uis_mix.xml"/>
+	<!-- レシピ選択時の必要材料画面 -->
+	<node pos="20,0">
+		<text pos="0,0" name="name" font_size="32" text="재료 1" align="left" color="10,10,10,255"/>
+		<text pos="300,0" name="_fix_num" font_size="32" text="×" align="left" color="10,10,10,255"/>
+		<text pos="332,0" name="num" font_size="32" text="99" align="left" color="10,10,10,255"/>
+	</node>
+</root>

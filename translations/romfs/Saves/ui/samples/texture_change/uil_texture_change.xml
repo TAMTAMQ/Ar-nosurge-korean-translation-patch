@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE root SYSTEM "file://st01/project/acps3/_Programmer/ui/uil.dtd">
+<root>
+	<command load_style="Saves/ui/samples/texture_change/uis_texture_change.xml"/>
+	<image pos="0,0" color="64,64,64,255" size_wh="1280,725.333" style="white_image"/>
+	<image name="test_image" pos="500,255" style="image256x256"/>
+	<text text="○버튼을 누르면 이미지를 폰트 텍스처로 전환" drop_shadow="true"/>
+</root>

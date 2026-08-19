@@ -7,6 +7,7 @@
 
 # 정품 게임에서 사용자가 직접 추출해야 하는 파일
 /original/
+/originalText/
 /MainFont_nx_0.g1t
 *.rdc
 *.nsp
@@ -16,6 +17,7 @@
 
 # 자동 생성 보고서와 로컬 캡처/시험 자료
 /data/final_mod_report.json
+/translation_review_remaining.txt
 /captures/
 *vertex_buffer*.bin
 *.log

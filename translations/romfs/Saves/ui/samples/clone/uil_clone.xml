@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE root SYSTEM "file://st01/project/acps3/_Programmer/ui/uil.dtd">
+<!-- 
+    clone_treeとclone_child_treeのサンプルです。    
+-->
+<root>
+	<!-- スタイルの読み込み -->
+	<command load_style="Saves/ui/uis_common.xml"/>
+	<text color="255,255,192,255" pos="100,80" text="기초 계층 구조"/>
+	<node pos="100,100">
+		<text pos="20,10" name="text_1st" text="text_1st">
+			<text pos="20,25" text="text_2nd">
+				<text pos="20,25" text="text_3rd"/>
+			</text>
+			<text pos="20,90" text="text_4th">
+				<text pos="20,25" text="text_5th"/>
+			</text>
+		</text>
+	</node>
+	<!-- clone_tree -->
+	<text color="192,255,255,255" pos="100,330" text="text_1st을 clone_tree한 것"/>
+	<node pos="100,350" clone_tree="text_1st"/>
+	<!-- clone_child_tree -->
+	<text color="192,255,255,255" pos="500,330" text="text_1st을 clone_child_tree한 것"/>
+	<node pos="500,350" clone_child_tree="text_1st"/>
+</root>

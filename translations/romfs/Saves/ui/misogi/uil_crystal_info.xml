@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE root SYSTEM "file://st01/project/acps3/_Programmer/ui/uil.dtd">
+<root>
+	<!-- スタイルの読み込み -->
+	<command load_style="Saves/ui/gen_styles/uis_gen_window.xml"/>
+	<command load_style="Saves/ui/gen_styles/uis_gen_common.xml"/>
+	<command load_style="Saves/ui/gen_styles/uis_gen_bath.xml"/>
+	<command load_style="Saves/ui/etc/uis_etc_window.xml"/>
+	<!--
+  <image style="ui_bg_sample" color="255,255,255,255" />
+  -->
+	<!-- メニュー本体 -->
+	<image name="crystal_info" pos="40,461" size_wh="410,218" style="etc_window02_05" visible="true">
+		<node pos="-14,23">
+			<image name="header" pos="23,-8" size_w="395" style="gen_common01_win_acce02_bg"/>
+			<image name="border01" pos="25,10" size_w="395" style="gen_common01_win_acce02_01"/>
+			<image name="acc01" pos="146,-6" style="gen_common01_window_acce01"/>
+			<image name="acc02" pos="282,-6" style="gen_common01_window_acce01"/>
+			<text name="text_header" pos="191,-3" text="결정 상세" font_size="14"/>
+			<image name="image_icon" pos="55,25" style="gen_bath02_crystalicon"/>
+			<image pos="100,20" style="gen_common01_name_bg01">
+				<text name="text_name" pos="20,10" text="아이우에오카키쿠케코" align="left" font_size="22"/>
+			</image>
+			<node pos="30,70">
+				<image name="text_source_bg" pos="-7,-2" size_wh="392,24" style="gen_window03_bg02"/>
+				<image name="text_summary_bg" pos="-7,30" size_wh="392,48" style="gen_window03_bg02"/>
+				<!-- <image name="text_summary_bg" pos="-7,62"  size_wh="392,24" style="gen_window03_bg02" /> -->
+				<image name="text_effect_bg" pos="-7,86" size_wh="392,24" style="gen_window03_bg02"/>
+				<text text="상념원" pos="0,0" align="left" font_size="20">
+					<text name="text_source" pos="80,0" text="아이우에오카키쿠케코사시스세소" align="left" font_size="20"/>
+				</text>
+				<text text="개요" pos="0,32" align="left" font_size="20">
+					<text name="text_summary" pos="80,0" text="아이우에오카키쿠케코사시스세소" align="left" font_size="20" line_space="4"/>
+				</text>
+				<text text="효과" pos="0,88" align="left" font_size="20">
+					<text name="text_effect" pos="80,0" text="아이우에오카키쿠케코사시스세소" align="left" font_size="20"/>
+				</text>
+			</node>
+		</node>
+		<node name="effect_desc" pos="400,-10.667" visble="false" viewer_visibule="true">
+			<!-- 下地画像 頭悪いけど2重にして裏の透けを減らす -->
+			<image name="base_window" style="gen_window01_01" size_wh="293.333,237.333"/>
+			<image name="base_window2" style="gen_window01_01" size_wh="293.333,237.333"/>
+			<!-- 用語名 -->
+			<node name="item_name" pos="-16,20">
+				<image style="gen_common01_name_bg01" size_wh="224,41" pos="53.333,1.333,0"/>
+				<text name="name_text" text="아이우에오카키쿠케코" align="center" font_size="18.667" pos="163,17,0"/>
+			</node>
+			<!-- 共通背景画像 -->
+			<node name="bg_line" pos="20,60">
+				<image style="gen_window03_bg02" pos="0,0" size_wh="257.333,29.333"/>
+				<image style="gen_window03_bg02" pos="0,31" size_wh="257.333,29.333"/>
+				<image style="gen_window03_bg02" pos="0,62" size_wh="257.333,29.333"/>
+				<image style="gen_window03_bg02" pos="0,93" size_wh="257.333,29.333"/>
+				<image style="gen_window03_bg02" pos="0,124" size_wh="257.333,29.333"/>
+				<!--
+                <image style="gen_window03_bg02" pos="0.00,116.25" size_wh="193,22" />
+                <image style="gen_window03_bg02" pos="0.00,139.50" size_wh="193,22" />
+                <image style="gen_window03_bg02" pos="0.00,162.75" size_wh="193,22" />
+                <image style="gen_window03_bg02" pos="0.00,186.00" size_wh="193,22" />
+                <image style="gen_window03_bg02" pos="0.00,209.25" size_wh="193,22" />
+                <image style="gen_window03_bg02" pos="0.00,232.50" size_wh="193,22" />
+                <image style="gen_window03_bg02" pos="0.00,255.75" size_wh="193,22" />
+                -->
+			</node>
+			<node name="page2">
+				<!-- テキスト -->
+				<text name="message" text="１２３４５６７８９０１２３４５６７８１２３４５６７８９０１２３４５６７８페이지 2" font_size="20" line_char_length="12" line_space="13" pos="25,66.667,0"/>
+			</node>
+		</node>
+	</image>
+	<!-- フェードアニメーション -->
+	<anim_ctrl name="fade_in" play="false" loop="false">
+		<bind_node node="crystal_info" anim="anm_common_fade_in"/>
+	</anim_ctrl>
+	<anim_ctrl name="fade_out" play="false" loop="false">
+		<bind_node node="crystal_info" anim="anm_common_fade_in" reverse="true"/>
+	</anim_ctrl>
+</root>

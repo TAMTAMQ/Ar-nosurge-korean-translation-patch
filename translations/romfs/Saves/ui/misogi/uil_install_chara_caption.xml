@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE root SYSTEM "file://st01/project/acps3/_Programmer/ui/uil.dtd">
+<root>
+	<!-- スタイルの読み込み -->
+	<command load_style="Saves/ui/gen_styles/uis_gen_common.xml"/>
+	<command load_style="Saves/ui/gen_styles/uis_gen_field.xml"/>
+	<!--
+  <image style="ui_bg_sample" color="128,128,128,255" />
+  -->
+	<node name="msg_chara_caption" pos="640,17">
+		<image name="msg_chara_caption_bg" pos="-128,0" size_w="256" style="gen_field03_explanation"/>
+		<text name="msg_chara_caption_text" pos="0,17" align="center" font_size="20" line_char_length="20" line_space="5" text="아"/>
+	</node>
+	<!-- フェードアニメーション -->
+	<anim_ctrl name="fade_in" play="false" loop="false">
+		<bind_node node="msg_chara_caption" anim="anm_common_fade_in"/>
+	</anim_ctrl>
+	<anim_ctrl name="fade_out" play="false" loop="false">
+		<bind_node node="msg_chara_caption" anim="anm_common_fade_in" reverse="true"/>
+	</anim_ctrl>
+</root>

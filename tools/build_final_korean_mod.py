@@ -15,12 +15,16 @@ import shutil
 import numpy as np
 from PIL import Image, ImageDraw, ImageFont
 
+from text_layout import strip_wrap_boundary_breaks
+
 
 ROOT = Path(__file__).resolve().parents[1]
 DIST = None
 ORIGINAL_FONT = None
 MAPPING_JSON = ROOT / "data" / "char_to_cell_renderdoc.json"
 PROBE_JSON = ROOT / "data" / "probe_chars_full.json"
+PROTECTED_JSON = ROOT / "data" / "protected_ui_chars.json"
+STABLE_MAPPING_JSON = ROOT / "data" / "final_mod_report.json"
 OUT = ROOT / "build" / "mod"
 REPORT = ROOT / "build" / "final_mod_report.json"
 FONT_PATH = ROOT / "fonts" / "Pretendard-Bold.otf"
@@ -30,6 +34,38 @@ PITCH, ORIGIN_Y, CELL_W, CELL_H = 26, 2, 23, 26
 COLS, ROWS = 79, 39
 G1T_HEADER = 56
 INSET_L, INSET_R, INSET_T, INSET_B = 2, 2, 2, 2
+RECORD_HEADER = 32
+
+
+def rebuild_ebm_with_layout(data, path):
+    """EBM 메타데이터를 보존하며 각 UTF-8 레코드의 CR 경계를 정리한다."""
+    if len(data) < 4:
+        raise RuntimeError(f"EBM too short: {path}")
+    count = int.from_bytes(data[:4], "little")
+    pos = 4
+    output = bytearray(data[:4])
+    removed = 0
+    for index in range(count):
+        if pos + RECORD_HEADER + 4 > len(data):
+            raise RuntimeError(f"EBM header truncated: {path}:{index}")
+        header = data[pos:pos + RECORD_HEADER]
+        length = int.from_bytes(data[pos + RECORD_HEADER:pos + RECORD_HEADER + 4], "little")
+        start = pos + RECORD_HEADER + 4
+        end = start + length
+        payload = data[start:end]
+        if end > len(data) or not payload.endswith(b"\x00"):
+            raise RuntimeError(f"EBM text framing error: {path}:{index}")
+        text = payload[:-1].decode("utf-8")
+        laid_out = strip_wrap_boundary_breaks(text)
+        removed += text.count("<CR>") - laid_out.count("<CR>")
+        encoded = laid_out.encode("utf-8") + b"\x00"
+        output += header
+        output += len(encoded).to_bytes(4, "little")
+        output += encoded
+        pos = end
+    if pos != len(data):
+        raise RuntimeError(f"EBM trailing bytes: {path}:{len(data) - pos}")
+    return bytes(output), removed
 
 
 def decode_bc4(payload):
@@ -71,7 +107,7 @@ def render_glyph(ch, width, height):
     return np.asarray(image.resize((width, height), Image.Resampling.LANCZOS))
 
 
-def choose_maps(hangul):
+def choose_maps(hangul, protected, stable_mapping):
     capture = json.loads(MAPPING_JSON.read_text(encoding="utf-8"))
     captured = capture["mapping"]
     metrics = {}
@@ -91,13 +127,20 @@ def choose_maps(hangul):
         if (len(chars) == 1 and metrics[chars[0]]["uvWidth"] >= 24 and
             metrics[chars[0]]["uvHeight"] >= 24)
     }
-    candidates = sorted(unique_chars,
+    candidates = sorted((ch for ch in unique_chars if ch not in protected),
                         key=lambda ch: (frequency.get(ch, 10**9), ord(ch)))
-    if len(candidates) < len(hangul):
-        raise RuntimeError(f"safe cells {len(candidates)} < Hangul {len(hangul)}")
-
-    standins = candidates[:len(hangul)]
-    hangul_to_standin = dict(zip(hangul, standins))
+    hangul_to_standin = {
+        ch: stable_mapping[ch] for ch in hangul if ch in stable_mapping
+    }
+    reserved = set(stable_mapping.values())
+    available = [ch for ch in candidates if ch not in reserved]
+    new_hangul = [ch for ch in hangul if ch not in hangul_to_standin]
+    if len(available) < len(new_hangul):
+        raise RuntimeError(f"safe new cells {len(available)} < new Hangul {len(new_hangul)}")
+    hangul_to_standin.update(zip(new_hangul, available))
+    invalid = {ko: ja for ko, ja in hangul_to_standin.items() if ja not in unique_chars}
+    if invalid:
+        raise RuntimeError(f"stable mapping contains unavailable cells: {invalid}")
     hangul_to_cell = {h: unique_chars[s] for h, s in hangul_to_standin.items()}
     hangul_to_rect = {h: metrics[s] for h, s in hangul_to_standin.items()}
     return hangul_to_standin, hangul_to_cell, hangul_to_rect, by_cell
@@ -144,7 +187,7 @@ def patch_font(hangul_to_rect, destination):
 
 
 def main():
-    global DIST, ORIGINAL_FONT, MAPPING_JSON, PROBE_JSON, OUT, REPORT, FONT_PATH
+    global DIST, ORIGINAL_FONT, MAPPING_JSON, PROBE_JSON, PROTECTED_JSON, STABLE_MAPPING_JSON, OUT, REPORT, FONT_PATH
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--translated-mod", required=True, type=Path,
                         help="번역된 romfs/Event/event가 들어 있는 모드 루트")
@@ -152,6 +195,10 @@ def main():
                         help="본인 게임에서 추출한 원본 MainFont_nx_0.g1t")
     parser.add_argument("--mapping", type=Path, default=MAPPING_JSON)
     parser.add_argument("--probe", type=Path, default=PROBE_JSON)
+    parser.add_argument("--protected", type=Path, default=PROTECTED_JSON,
+                        help="한글 대체 문자로 사용하지 않을 UI 문자 JSON")
+    parser.add_argument("--stable-mapping", type=Path, default=STABLE_MAPPING_JSON,
+                        help="기존 검증된 한글→대체 문자 배정을 고정할 보고서")
     parser.add_argument("--output", type=Path, default=OUT)
     parser.add_argument("--report", type=Path, default=REPORT)
     parser.add_argument("--font", type=Path, default=FONT_PATH)
@@ -159,7 +206,8 @@ def main():
                         help="폰트 매핑에 포함할 추가 UTF-8 텍스트/XML 폴더")
     args = parser.parse_args()
     DIST, ORIGINAL_FONT = args.translated_mod, args.original_font
-    MAPPING_JSON, PROBE_JSON = args.mapping, args.probe
+    MAPPING_JSON, PROBE_JSON, PROTECTED_JSON = args.mapping, args.probe, args.protected
+    STABLE_MAPPING_JSON = args.stable_mapping
     OUT, REPORT, FONT_PATH = args.output, args.report, args.font
     REPORT.parent.mkdir(parents=True, exist_ok=True)
     ebm_files = sorted(DIST.rglob("*.ebm"))
@@ -174,15 +222,29 @@ def main():
     counts = Counter(ch for ch in corpus if "\uac00" <= ch <= "\ud7a3")
     # Stable, human-readable ordering; frequency does not affect correctness.
     hangul = sorted(counts)
-    hangul_to_standin, hangul_to_cell, hangul_to_rect, by_cell = choose_maps(hangul)
+    protected = set()
+    if PROTECTED_JSON and PROTECTED_JSON.exists():
+        protected = set(json.loads(PROTECTED_JSON.read_text(encoding="utf-8"))["characters"])
+    stable_mapping = {}
+    if STABLE_MAPPING_JSON and STABLE_MAPPING_JSON.exists():
+        stable_mapping = json.loads(STABLE_MAPPING_JSON.read_text(encoding="utf-8"))["hangul_to_standin"]
+    # 이미 배포된 글리프는 현재 corpus에서 잠시 사라져도 아틀라스에 계속
+    # 유지한다. 일부 시스템 UI는 같은 대체문자를 별도 경로로 참조하므로
+    # 기존 셀 하나라도 원래 일본어 글리프로 되돌리면 문자가 깨질 수 있다.
+    font_hangul = sorted(set(hangul) | set(stable_mapping))
+    hangul_to_standin, hangul_to_cell, hangul_to_rect, by_cell = choose_maps(
+        font_hangul, protected, stable_mapping
+    )
 
     if OUT.exists():
         shutil.rmtree(OUT)
     event_out = OUT / "romfs" / "Event" / "event"
     replaced_total = 0
+    removed_wrap_breaks = 0
     for src in ebm_files:
         rel = src.relative_to(DIST / "romfs" / "Event" / "event")
-        data = src.read_bytes()
+        data, removed = rebuild_ebm_with_layout(src.read_bytes(), src)
+        removed_wrap_breaks += removed
         for ko, ja in hangul_to_standin.items():
             old, new = ko.encode("utf-8"), ja.encode("utf-8")
             n = data.count(old)
@@ -203,13 +265,18 @@ def main():
     report = {
         "source_ebm_files": len(ebm_files),
         "unique_hangul": len(hangul),
+        "font_hangul": len(font_hangul),
         "hangul_occurrences_replaced": replaced_total,
         "remaining_hangul": remaining_hangul,
         "captured_characters": sum(len(v) for v in by_cell.values()),
         "unique_candidate_cells": sum(len(v) == 1 for v in by_cell.values()),
         "shared_cells_excluded": sum(len(v) > 1 for v in by_cell.values()),
+        "protected_characters_excluded": len(protected),
+        "stable_mapping_assignments": sum(ch in stable_mapping for ch in font_hangul),
+        "new_mapping_assignments": sum(ch not in stable_mapping for ch in font_hangul),
         "wide_unique_candidate_cells": len({x["cell"] for x in hangul_to_rect.values()}),
         "font_alpha_blocks_rewritten": touched_blocks,
+        "wrap_boundary_cr_removed": removed_wrap_breaks,
         "hangul_to_standin": hangul_to_standin,
         "hangul_to_cell": hangul_to_cell,
     }

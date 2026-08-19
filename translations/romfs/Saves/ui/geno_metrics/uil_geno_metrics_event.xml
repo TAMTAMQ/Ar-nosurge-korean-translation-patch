@@ -1,0 +1,110 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE root SYSTEM "file://st01/project/acps3/_Programmer/ui/uil.dtd">
+<root>
+	<!-- スタイルの読み込み -->
+	<command load_style="Saves/ui/gen_styles/uis_gen_common.xml"/>
+	<command load_style="Saves/ui/gen_styles/uis_gen_window.xml"/>
+	<command load_style="Saves/ui/gen_styles/uis_gen_bios.xml"/>
+	<command load_style="Saves/ui/gen_styles/uis_gen_mainmenu.xml"/>
+	<command load_anim="Saves/ui/geno_metrics/uia_geno_metrics.xml"/>
+	<node load="Saves/ui/uil_template.xml"/>
+	<!--<image style="ui_bg_sample" color="255,125,125,255" />-->
+	<node>
+		<!--タイトル-->
+		<!--<text pos="0,8" name="sel_item" text="사과와 꿀링" font_size="22" align="left" />-->
+		<!--必要DP-->
+		<!--
+    <text pos="420,16" name="need_pt" text="9999" font_size="22" align="right" copy="NUMBER01_24PX" />
+    <image pos="420,10" style="gen_bios01_dp02"/>-->
+	</node>
+	<!--左上ウィンドウ-->
+	<image name="ev_genomap" pos="28,3" style="gen_bios03_analysis_bg">
+		<!--キャラアイコン.-->
+		<image name="rtIcon" pos="0,0" style="gen_common05_charaicon" pos_ratio="0.46,0.35">
+			<node rot="0,0,0" name="arrow" pos="20,20">
+				<image pos="-13,-35" name="chara_icon" style="gen_bios01_analysis_pointer"/>
+			</node>
+		</image>
+		<!--キャラアイコン2.-->
+		<image name="charaIcon" pos="0,0" style="gen_common05_charaicon" pos_ratio="0.46,0.35">
+			<node rot="0,0,0" name="arrow" pos="20,20">
+				<image pos="-13,-35" name="chara_icon" style="gen_bios01_analysis_pointer"/>
+			</node>
+		</image>
+	</image>
+	<!--DP表示物(簡易版)-->
+	<image name="dp_window01" pos="1003,35,0" size_h="60" size_w="230" style="gen_window03_07">
+		<text name="dp_num" pos="170,28" text="999999" font_size="24" color="255, 255, 255, 255" align="right" copy="NUMBER01_24PX"/>
+		<!--増減アニメーション用数値-->
+		<text name="dp_num_anime" pos="162,56,0" text="-9999" drop_shadow="true" font_size="24" color="221, 82, 82, 255" align="right" copy="NUMBER01_24PX" viewer_visible="true" visible="false"/>
+		<image name="dp_draw" pos="177,25" style="gen_bios01_dp01"/>
+		<image pos="0,30" name="dp_check_OK" style="gen_bios04_clear" visible="false" color="255,255,255,255"/>
+		<image pos="0,5" name="dp_check_OK_2" style="gen_bios04_clear" visible="false" color="255,255,255,255"/>
+		<image pos="0,-30" name="dp_check_NG" style="gen_bios04_crash" visible="false" color="255,255,255,255"/>
+	</image>
+	<!--_________________________アニメーション説定___________________________________________-->
+	<anim_ctrl name="dp_check_OK_anim" play="false" loop="false" start_visible="true" end_visible="false">
+		<bind_node node="dp_check_OK" anim="anm_dp_check_ok"/>
+		<bind_node node="dp_check_OK_2" anim="anm_dp_check_ok_up"/>
+	</anim_ctrl>
+	<anim_ctrl name="dp_check_NG_anim" play="false" loop="false" start_visible="true" end_visible="false">
+		<bind_node node="dp_check_NG" anim="anm_dp_check_ng"/>
+	</anim_ctrl>
+	<anim_ctrl name="dp_up_down_num" play="false" loop="false" start_visible="true" end_visible="false">
+		<bind_node node="dp_num_anime" anim="anm_dp_updown"/>
+	</anim_ctrl>
+	<!--中央移動用-->
+	<anim_ctrl name="dp_window_move_center" play="false" loop="false">
+		<bind_node node="dp_window01" anim="anm_dp_win_center"/>
+	</anim_ctrl>
+	<anim_ctrl name="dp_window_move_default" play="false" loop="false">
+		<bind_node node="dp_window01" anim="anm_dp_win_default"/>
+	</anim_ctrl>
+	<!--<anim_ctrl name="anim_patternLeft" play="false" loop="false">
+    <bind_node node ="ev_genomap" anim="anm_move_main_1_l"/>
+    <bind_node node ="ev_genomap2" anim="anm_move_main_1_r"/>
+  </anim_ctrl>-->
+	<!-- ■■■■■■■■■■■■■■■■■■■■■■■■■ -->
+	<!-- コマンドメニューのテンプレートDP選択肢用 -->
+	<!-- ■■■■■■■■■■■■■■■■■■■■■■■■■ -->
+	<node name="menu_parts" viewer_visible="true" visible="false">
+		<image size_w="550" style="gen_window03_choice01"/>
+		<!-- 選択時表示 -->
+		<node name="select_node" visible="false" viewer_visible="true">
+			<image name="on_image" style="gen_window03_linecsr01_over" size_w="530" pos="1,3" visible="false"/>
+			<image name="over_image" style="gen_window03_linecsr01_on" size_w="530" pos="1,3" visible="true"/>
+			<node name="roll" pos="10,8">
+				<image style="gen_window03_anime_roll" pos="-32,-32"/>
+			</node>
+			<anim_ctrl name="roll_anim" loop="true" play="true">
+				<bind_node node="roll" anim="anm_common_rotate"/>
+			</anim_ctrl>
+			<!-- 明滅アニメーション -->
+			<anim_ctrl play="true" loop="true">
+				<bind_node node="over_image" anim="anm_common_cursor_blink"/>
+			</anim_ctrl>
+		</node>
+		<text name="menu_text" text="사과와 꿀890" font_size="20" align="left" pos="30,12" drop_shadow="true"/>
+		<text name="menu_need_dp" text="99" font_size="24" align="right" pos="475,16" drop_shadow="true" copy="NUMBER01_24PX"/>
+		<image name="need_dp_draw" pos="482,12" style="gen_bios01_dp01"/>
+		<!--DP選択肢開始用in-->
+		<anim_ctrl name="DP_balloon_select_in_" play="false" start_visible="true">
+			<bind_node node="menu_parts" anim="anm_dp_select_in"/>
+		</anim_ctrl>
+		<anim_ctrl name="DP_balloon_select_in_2" play="false" start_visible="true">
+			<bind_node node="menu_parts" anim="anm_dp_select_in_re"/>
+		</anim_ctrl>
+	</node>
+	<!-- 表示部 -->
+	<node name="command_menu" pos="50,130"/>
+	<anim_ctrl name="fade_anime" play="false">
+		<bind_node node="command_menu" anim="anm_common_fade_in" speed="5.0"/>
+	</anim_ctrl>
+	<!--フェードイン,アウト-->
+	<anim_ctrl name="fadeIn_charawin" play="false" start_visible="true">
+		<bind_node node="ev_genomap" anim="anm_common_fade_in" speed="0.5"/>
+	</anim_ctrl>
+	<anim_ctrl name="fadeOut_charawin" play="false" end_visible="false">
+		<bind_node node="ev_genomap" anim="anm_common_fade_in" reverse="true" speed="0.5"/>
+	</anim_ctrl>
+</root>

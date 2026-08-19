@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE root SYSTEM "file://st01/project/acps3/_Programmer/ui/uil.dtd">
+<root proj_to_near="500">
+	<!-- スタイルの読み込み -->
+	<command load_style="Saves/ui/uis_common.xml"/>
+	<command load_style="Saves/ui/gen_styles/uis_gen_common.xml"/>
+	<command load_style="Saves/ui/gen_styles/uis_gen_window.xml"/>
+	<command load_style="Saves/ui/gen_styles/uis_gen_mainmenu.xml"/>
+	<command load_style="Saves/ui/main_menu/uis_main_menu.xml"/>
+	<command load_anim="Saves/ui/main_menu/uia_main_menu.xml"/>
+	<!--テンプレートを読み込む-->
+	<node load="Saves/ui/uil_template.xml"/>
+	<node>
+		<!-- TOP -->
+		<node name="win_top" visible="true" load="Saves/ui/main_menu/uil_main_menu_top.xml"/>
+		<!--右側のパーティステータス-->
+		<node name="pivot1" pos="1200,0" rot="0,3,0" scale="1,1,1" visible="true">
+			<node name="pivot2" pos="-1200,0" visible="true">
+				<node name="couple_window" visible="false" viewer_visible="true" pos="-4,67,0">
+					<!--キャラのステータスウィンドウ左-->
+					<node name="chara_info_a" pos="362,29,0">
+						<image style="gen_menu04_chara_window">
+							<node name="param_group" pos="5,20">
+								<image name="talk_icon" pos="323,25,0" visible="false" viewer_visible="true" style="gen_menu01_talkicon01"/>
+								<image name="face_image" pos="12,3,0" style="gen_menu01_character" image_no="0"/>
+								<text name="name" pos="155,28,0" text="캐스티 리아노이트" font_size="22" align="center"/>
+								<!--LV-->
+								<text name="lv" pos="74,102.667,0" text="09" copy="NUMBER01_20PX"/>
+								<!--EXP-->
+								<text name="exp" pos="82,138.667,0" text="009009" copy="NUMBER01_20PX"/>
+								<!--NEXT Exp-->
+								<text name="next_exp" pos="82,170.667,0" text="009009" copy="NUMBER01_20PX"/>
+								<!--ATまたはAP-->
+								<text name="ap" pos="74,212,0" text="009009" copy="NUMBER01_20PX"/>
+								<image name="ap_gauge_bg" pos="40,223,0" style="gen_menu01_hpgauge01_bg"/>
+								<image name="ap_gauge" pos="41,224,0" style="gen_menu01_hpgauge01"/>
+							</node>
+						</image>
+					</node>
+					<!--キャラのステータスウィンドウ右-->
+					<node name="chara_info_b" clone_child_tree="chara_info_a" pos="790,29,0"/>
+					<anim_ctrl name="get_in" play="false">
+						<bind_node start_visible="true" node="couple_window" anim="anm_common_fade_in"/>
+					</anim_ctrl>
+				</node>
+			</node>
+		</node>
+		<node pos="-25,65">
+			<node pos="70,-56" rot="0,-5,0" name="win_item"/>
+			<node pos="0,-27" rot="0,0,0" name="item_info" scale="0.92,0.92"/>
+		</node>
+	</node>
+</root>

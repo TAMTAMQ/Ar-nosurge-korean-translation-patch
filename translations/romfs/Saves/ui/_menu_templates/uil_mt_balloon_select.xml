@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE root SYSTEM "file://st01/project/acps3/_Programmer/ui/uil.dtd">
+<root>
+	<!-- スタイルの読み込み -->
+	<command load_style="Saves/ui/uis_common.xml"/>
+	<command load_style="Saves/ui/gen_styles/uis_gen_common.xml"/>
+	<command load_style="Saves/ui/gen_styles/uis_gen_window.xml"/>
+	<command load_style="Saves/ui/_menu_templates/uis_mt_common.xml"/>
+	<command load_style="Saves/ui/etc/uis_etc_window.xml"/>
+	<!-- アニメーションの読み込み -->
+	<command load_anim="Saves/ui/_menu_templates/uia_mt_common.xml"/>
+	<!-- メニューの雛形(menu_top) -->
+	<node name="__uimenu_top">
+		<!-- 下地ウィンドウ -->
+		<image name="__uimenu_window" size_wh="350,60" style="etc_window01_05">
+			<!--スクロールバー-->
+			<node name="__uimenu_scroll_bar" pos_ratio="1,0" pos="-33,5">
+				<!-- 下地 -->
+				<image name="__uimenu_scroll_bar_base" size_h="58" style="gen_window01_03_scr_under"/>
+				<node pos="3,26">
+					<!-- つまみ (posはUIMenuが制御する。size_whは下地を占めるサイズにすること) -->
+					<image name="__uimenu_scroll_bar_knob" color="255,255,255,255" size_wh="10,4" style="gen_window01_03_scr_on"/>
+				</node>
+			</node>
+			<!-- メニュー項目 -->
+			<node name="__uimenu_body" pos="5,11">
+				<!-- メニューカーソル -->
+				<node name="__uimenu_cursor">
+					<image name="__uimenu_cursor_inactive" pos="20,0" parent_size_copy_w="true" size_copy_w_offset="-40" image_no="0" style="gen_window03_linecsr02_over"/>
+					<image name="__uimenu_cursor_active" pos="20,0" parent_size_copy_w="true" size_copy_w_offset="-40" image_no="0" style="gen_window03_linecsr02_on"/>
+					<image name="linecsricon" pos="10,1" image_no="2" style="gen_window03_linecsricon"/>
+					<!-- 明滅アニメーション -->
+					<anim_ctrl play="true" loop="true">
+						<bind_node node="__uimenu_cursor_active" anim="anm_common_cursor_blink"/>
+					</anim_ctrl>
+					<anim_ctrl name="on_move" play="false" loop="false">
+						<bind_node node="linecsricon" anim="anm_menu_cursor_move"/>
+					</anim_ctrl>
+				</node>
+				<node visible="false">
+					<!-- 項目の雛形 行が増えるたびにこれがmenu_item_listの下に複製されていく -->
+					<node name="__uimenu_item_template">
+						<node pos="20,-5" name="__uimenu_item_entry"/>
+						<!-- この下に項目が追加される -->
+					</node>
+					<!-- MenuクラスでaddText()を呼んだときに挿入するノード-->
+					<node name="__uimenu_def_add_item">
+						<!--黒の下地-->
+						<image name="black_bg" pos="-43,-4" parent_size_copy_w="true" size_copy_w_offset="-24" size_h="33" style="gen_window03_bg02"/>
+						<text name="__uimenu_def_add_item_text" drop_shadow="false" text="아이우에오카키쿠케코사시스" align="left" font_size="22"/>
+					</node>
+				</node>
+				<!-- メニュー項目リスト -->
+				<node pos="30,10" name="__uimenu_item_list"/>
+			</node>
+		</image>
+		<!-- フェードアニメーション -->
+		<anim_ctrl name="__uimenu_fade_in" play="false" loop="false">
+			<bind_node node="__uimenu_top" anim="anm_menu_fade_in"/>
+		</anim_ctrl>
+		<anim_ctrl name="__uimenu_fade_out" play="false" loop="false">
+			<bind_node node="__uimenu_top" anim="anm_menu_fade_out"/>
+		</anim_ctrl>
+	</node>
+</root>

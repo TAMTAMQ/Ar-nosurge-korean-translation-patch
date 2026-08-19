@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE root SYSTEM "file://st01/project/acps3/_Programmer/ui/uil.dtd">
+<root proj_to_near="500">
+	<!-- スタイルの読み込み -->
+	<command load_style="Saves/ui/uis_common.xml"/>
+	<text name="test" pos="700,200,0" rot="0,0,0" scale="1, 1, 1" text="3D 모델 아래에 표시 중" font_size="24" align="left"/>
+	<image size_wh="1280,725.333" visible="false" style="white_image" color="64,64,64,128"/>
+	<model color="128,128,128,255" name="test_model" pos="590,650,0" scale="10.0, -10.0, -1" chara_tag="CHARA_ACPS3_UI_BG_FAN"/>
+	<model color="255,255,255,255" name="test_model_earth" pos="640,360" rot="90,180,180" scale="2,2,2" chara_tag="CHARA_ACPS3_MENU_UI">
+		<model_node node_name="Dummy001">
+			<text parent_rot_cancel="false" name="test" pos="0,0,0" rot="-90,0,0" scale="1, 1, 1" text="모델 노드에 매달려 있음" font_size="24" align="left"/>
+		</model_node>
+	</model>
+	<anim_ctrl play="true" loop="false">
+		<bind_model model="test_model" motion_no="0" speed="1" reverse="false"/>
+	</anim_ctrl>
+	<anim_ctrl play="true" loop="true">
+		<bind_node node="test_model_earth" anim="anm_common_rotateY360" speed="0.25"/>
+	</anim_ctrl>
+</root>

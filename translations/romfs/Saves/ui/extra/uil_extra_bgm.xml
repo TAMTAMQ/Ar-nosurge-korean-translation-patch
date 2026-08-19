@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE root SYSTEM "file://st01/project/acps3/_Programmer/ui/uil.dtd">
+<root>
+	<command load_style="Saves/ui/gen_styles/uis_gen_common.xml"/>
+	<command load_anim="Saves/ui/uia_common.xml"/>
+	<!--
+  <image style="ui_bg_sample" color="255,255,255,255" />
+-->
+	<node load="Saves/ui/uil_line_format.xml"/>
+	<node name="extra_bgm_list_all" pos="157,123,0">
+		<menu name="extra_bgm_list" style="style_menu_column1" size_w="535"/>
+		<text name="extra_bgm_list_title" text="곡명" font_size="18.667" align="center" pos="261,15"/>
+	</node>
+	<node name="extra_bgm_info_all">
+		<image name="extra_bgm_window" pos="755,114" size_wh="455,460" style="gen_window01_01"/>
+		<image name="extra_bgm_header01" pos="772,133" size_w="425" style="gen_common01_win_acce02_bg"/>
+		<image name="extra_bgm_header02" pos="772,231" size_w="425" style="gen_common01_win_acce02_bg"/>
+		<image name="extra_bgm_border01" pos="772,154" size_w="425" style="gen_common01_win_acce02_01"/>
+		<image name="extra_bgm_border02" pos="772,251" size_w="425" style="gen_common01_win_acce02_01"/>
+		<image name="extra_bgm_acc01" pos="925,135" style="gen_common01_window_acce01"/>
+		<image name="extra_bgm_acc02" pos="1044,135" style="gen_common01_window_acce01"/>
+		<image name="extra_bgm_acc03" pos="925,234" style="gen_common01_window_acce01"/>
+		<image name="extra_bgm_acc04" pos="1044,234" style="gen_common01_window_acce01"/>
+		<image name="extra_bgm_border01" pos="772,154" size_w="425" style="gen_common01_win_acce02_01"/>
+		<image name="extra_bgm_name_bg" pos="775,174" size_w="420" style="gen_common01_name_bg01"/>
+		<image name="extra_bgm_text_bg01" pos="775,259" size_w="420" style="gen_window03_bg02"/>
+		<image name="extra_bgm_text_bg02" pos="775,291" size_w="420" style="gen_window03_bg02"/>
+		<image name="extra_bgm_text_bg03" pos="775,323" size_w="420" style="gen_window03_bg02"/>
+		<image name="extra_bgm_text_bg04" pos="775,355" size_w="420" style="gen_window03_bg02"/>
+		<image name="extra_bgm_text_bg05" pos="775,387" size_w="420" style="gen_window03_bg02"/>
+		<image name="extra_bgm_text_bg06" pos="775,419" size_w="420" style="gen_window03_bg02"/>
+		<image name="extra_bgm_text_bg07" pos="775,451" size_w="420" style="gen_window03_bg02"/>
+		<image name="extra_bgm_text_bg08" pos="775,483" size_w="420" style="gen_window03_bg02"/>
+		<image name="extra_bgm_text_bg09" pos="775,515" size_w="420" style="gen_window03_bg02"/>
+		<text name="extra_bgm_title01" text="타이틀" font_size="14" align="center" pos="992,138"/>
+		<text name="extra_bgm_title02" text="작곡가 코멘트" font_size="14" align="center" pos="992,237"/>
+		<text name="extra_bgm_name" text="Class::AR_NOSURGE#RE:Incarnation;" font_size="18" align="center" pos="984,187"/>
+		<text name="extra_bgm_text" text="아이템명 아이우에오카키쿠케코" font_size="20" align="left" pos="839,265" line_space="14"/>
+	</node>
+	<anim_ctrl name="extra_bgm_ac_fade_in" loop="false" reverse="false">
+		<bind_node node="extra_bgm_list_all" anim="anm_common_fade_in"/>
+		<bind_node node="extra_bgm_info_all" anim="anm_common_fade_in"/>
+	</anim_ctrl>
+	<anim_ctrl name="extra_bgm_ac_fade_out" loop="false" reverse="true">
+		<bind_node node="extra_bgm_list_all" anim="anm_common_fade_in"/>
+		<bind_node node="extra_bgm_info_all" anim="anm_common_fade_in"/>
+	</anim_ctrl>
+</root>

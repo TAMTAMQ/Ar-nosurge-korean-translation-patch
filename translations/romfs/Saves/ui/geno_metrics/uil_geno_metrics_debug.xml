@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE root SYSTEM "file://st01/project/acps3/_Programmer/ui/uil.dtd">
+<root>
+	<!-- スタイルの読み込み -->
+	<command load_style="Saves/ui/gen_styles/uis_gen_window.xml"/>
+	<command load_style="Saves/ui/gen_styles/uis_gen_common.xml"/>
+	<command load_style="Saves/ui/gen_styles/uis_gen_bath.xml"/>
+	<command load_style="Saves/ui/etc/uis_etc_window.xml"/>
+	<!-- メニュー本体 -->
+	<image name="debug_info" pos="717,100" size_wh="560,450" style="etc_window02_05" visible="true">
+		<node pos="-14,23">
+			<image pos="100,20" style="gen_common01_name_bg01">
+				<text name="debug_title" pos="20,10" text="아이우에오카키쿠케코" align="left" font_size="22"/>
+			</image>
+			<node pos="30,70">
+				<text name="debug_title0" text="디버그용 아이우" pos="0,0" align="left" font_size="20">
+					<image name="debug_focus" pos="204,1" style="gen_common01_window_acce01"/>
+					<text name="debug_param" pos="220,0" text="아이우에오카키쿠케코사시스세소" align="left" font_size="20"/>
+				</text>
+				<text name="debug_title1" text="디버그용 아이우" pos="0,30" align="left" font_size="20">
+					<image name="debug_focus" pos="204,1" style="gen_common01_window_acce01"/>
+					<text name="debug_param" pos="220,0" text="아이우에오카키쿠케코사시스세소" align="left" font_size="20"/>
+				</text>
+				<text name="debug_title2" text="디버그용 아이우" pos="0,60" align="left" font_size="20">
+					<image name="debug_focus" pos="204,1" style="gen_common01_window_acce01"/>
+					<text name="debug_param" pos="220,0" text="아이우에오카키쿠케코사시스세소" align="left" font_size="20"/>
+				</text>
+				<text name="debug_title3" text="디버그용 아이우" pos="0,90" align="left" font_size="20">
+					<image name="debug_focus" pos="204,1" style="gen_common01_window_acce01"/>
+					<text name="debug_param" pos="220,0" text="아이우에오카키쿠케코사시스세소" align="left" font_size="20"/>
+				</text>
+				<text name="debug_title4" text="디버그용 아이우" pos="0,120" align="left" font_size="20">
+					<image name="debug_focus" pos="204,1" style="gen_common01_window_acce01"/>
+					<text name="debug_param" pos="220,0" text="아이우에오카키쿠케코사시스세소" align="left" font_size="20"/>
+				</text>
+				<text name="debug_title5" text="디버그용 아이우" pos="0,150" align="left" font_size="20">
+					<image name="debug_focus" pos="204,1" style="gen_common01_window_acce01"/>
+					<text name="debug_param" pos="220,0" text="아이우에오카키쿠케코사시스세소" align="left" font_size="20"/>
+				</text>
+				<text name="debug_title6" text="디버그용 아이우" pos="0,180" align="left" font_size="20">
+					<image name="debug_focus" pos="204,1" style="gen_common01_window_acce01"/>
+					<text name="debug_param" pos="220,0" text="아이우에오카키쿠케코사시스세소" align="left" font_size="20"/>
+				</text>
+				<text name="debug_title7" text="디버그용 아이우" pos="0,210" align="left" font_size="20">
+					<image name="debug_focus" pos="204,1" style="gen_common01_window_acce01"/>
+					<text name="debug_param" pos="220,0" text="아이우에오카키쿠케코사시스세소" align="left" font_size="20"/>
+				</text>
+				<text name="debug_title8" text="디버그용 아이우" pos="0,240" align="left" font_size="20">
+					<image name="debug_focus" pos="204,1" style="gen_common01_window_acce01"/>
+					<text name="debug_param" pos="220,0" text="아이우에오카키쿠케코사시스세소" align="left" font_size="20"/>
+				</text>
+				<text name="debug_title9" text="디버그용 아이우" pos="0,270" align="left" font_size="20">
+					<image name="debug_focus" pos="204,1" style="gen_common01_window_acce01"/>
+					<text name="debug_param" pos="220,0" text="아이우에오카키쿠케코사시스세소" align="left" font_size="20"/>
+				</text>
+			</node>
+		</node>
+	</image>
+</root>

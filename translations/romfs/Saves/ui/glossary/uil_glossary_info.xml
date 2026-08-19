@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<!DOCTYPE root SYSTEM "file://st01/project/acps3/_Programmer/ui/uil.dtd">
+<root>
+    <!-- スタイルの読み込み -->
+    <command load_style="Saves/ui/gen_styles/uis_gen_common.xml" />
+    <command load_style="Saves/ui/gen_styles/uis_gen_window.xml" />
+    <command load_style="Saves/ui/gen_styles/uis_gen_mix.xml" />
+    <command load_style="Saves/ui/etc/uis_etc_window.xml" />
+    <!--
+    <image style="ui_bg_sample" color="255,255,255,255" />
+    -->
+    <node name="glossary_info" pos="794.00,126.00">
+        <!-- 用語画像 -->
+        <command load_style="Saves/ui/etc/uis_glossary.xml" />
+        <!-- 下地画像 -->
+        <image name="base_window" style="gen_window01_01" size_wh="407.00,455.00" />
+        <!-- 用語名 -->
+        <node name="item_neme" pos="43.00,21.00">
+            <image style="gen_common01_name_bg01" size_w="380.00" size_wh="341.00,41.00" pos="-3.00,3.00,0.00" />
+            <text name="name_text" text="아스트로사이트 모듈레이터 바이러스" align="center" font_size="16.00" pos="164.00,20.00,0.00" />
+        </node>
+        <!-- 共通背景画像 -->
+        <node name="bg_line" pos="20.00,60.00">
+            <image style="gen_window03_bg02" pos="0.00,217.00" size_wh="370.00,30.00" />
+            <image style="gen_window03_bg02" pos="0.00,248.00" size_wh="370.00,30.00" />
+            <image style="gen_window03_bg02" pos="0.00,279.00" size_wh="370.00,30.00" />
+            <image style="gen_window03_bg02" pos="0.00,310.00" size_wh="370.00,30.00" />
+            <image style="gen_window03_bg02" pos="0.00,341.00" size_wh="370.00,30.00" />
+        </node>
+        <node name="page1">
+            <!-- 画像 -->
+            <node pos="50.00,68.00">
+                <!-- 背景
+              <image style="gen_nummber_item_bg01" />
+              -->
+                <image name="item_image" style="style_glossary" image_no="0" pos="-26.00,0.00,0.00" />
+            </node>
+            <!-- テキスト -->
+            <text name="page_message1" text="１２３４５６７８９０１２３４５６７８１２３４５６７８９０１２３４５６７８페이지１&lt;CR&gt;페이지１&lt;CR&gt;페이지１" font_size="20.00" line_char_length="18" line_space="12.7" pos="25.00,286.66,0.00" />
+            <!-- 切り替え表示 -->
+            <node name="page_tab1" pos="394.00,480.00">
+                <image style="gen_window04_page01" pos="-82.00,-44.00,0.00" />
+                <text name="page_tab_text1" font="NUMBER01_18PX" text="1/2" font_size="18.00" pos="-25.00,-31.00,0.00" align="right" />
+            </node>
+        </node>
+        <node name="page2">
+            <!-- 背景画像 -->
+            <node name="bg_line" pos="20.00,60.00">
+                <image style="gen_window03_bg02" pos="0.00,0.00" size_wh="370.00,30.00" />
+                <image style="gen_window03_bg02" pos="0.00,31.00" size_wh="370.00,30.00" />
+                <image style="gen_window03_bg02" pos="0.00,62.00" size_wh="370.00,30.00" />
+                <image style="gen_window03_bg02" pos="0.00,93.00" size_wh="370.00,30.00" />
+                <image style="gen_window03_bg02" pos="0.00,124.00" size_wh="370.00,30.00" />
+                <image style="gen_window03_bg02" pos="0.00,155.00" size_wh="370.00,30.00" />
+                <image style="gen_window03_bg02" pos="0.00,186.00" size_wh="370.00,30.00" />
+            </node>
+            <!-- テキスト -->
+            <text name="page_message2" text="123456789012345678123456789012345678페이지2페이지" font_size="20.00" line_char_length="18" line_space="12.7" pos="25.00,69.33,0.00" />
+            <!-- 切り替え表示 -->
+            <node name="page_tab2" pos="394.00,480.00">
+                <image style="gen_window04_page01" pos="-82.00,-44.00,0.00" />
+                <text name="page_tab_text2" font="NUMBER01_18PX" text="2/2" font_size="18.00" pos="-25.00,-31.00,0.00" align="right" />
+            </node>
+        </node>
+    </node>
+</root>

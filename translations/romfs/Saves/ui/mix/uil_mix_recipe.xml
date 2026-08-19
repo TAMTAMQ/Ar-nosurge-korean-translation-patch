@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE root SYSTEM "file://st01/project/acps3/_Programmer/ui/uil.dtd">
+<root>
+	<!-- スタイルの読み込み -->
+	<command load_style="Saves/ui/gen_styles/uis_gen_common.xml"/>
+	<command load_style="Saves/ui/gen_styles/uis_gen_window.xml"/>
+	<command load_style="Saves/ui/gen_styles/uis_gen_mix.xml"/>
+	<command load_style="Saves/ui/etc/uis_etc_window.xml"/>
+	<node load="Saves/ui/uil_template.xml"/>
+	<!-- 画面左のメニュー項目テンプレ. -->
+	<node name="line_item" visible="false">
+		<text pos="0,0" name="recipe_name" text="포이즌 로키 독독" font_size="22" align="left"/>
+		<text pos="278,8" name="num" text="99" font_size="22" align="right" copy="NUMBER01_22PX"/>
+	</node>
+	<!-- 画面左のメニュー -->
+	<menu name="recipe_list" pos="70,105" disp_lines="8" size_w="365" style="style_menu_column2" visible="false" viewer_visible="true"/>
+	<!--アイテム名-->
+	<text name="__recipe_list_item" text="아이템명" font_size="14" pos="184,122" visible="false" viewer_visible="true"/>
+	<!--所持-->
+	<text text="소지" name="__recipe_list_num" font_size="14" pos="369,122" color="118,162,160,255" visible="false" viewer_visible="true"/>
+	<node name="right_menu" pos="1200,0,0" rot="0,5,0">
+		<node pos="-1200,0,0">
+			<!-- レシピ項目のテンプレート -->
+			<node name="recipe_item_template" visible="false">
+				<image name="text_source_bg" pos="-41,-58" size_wh="380,24" style="gen_window03_bg02"/>
+				<text name="name" pos="-25,-53,0" text="아이우에오카키쿠케코" font_size="18" align="left"/>
+				<text name="num" pos="303,-47,0" text="99" font_size="20" align="right" copy="NUMBER01_20PX"/>
+				<text name="_fixslash" pos="260,-47,0" text="/" font_size="20" align="right" copy="NUMBER01_20PX"/>
+				<text name="havenum" pos="234,-47,0" text="99" font_size="20" align="right" copy="NUMBER01_20PX"/>
+			</node>
+			<image name="recipe_mat" pos="13,467" size_wh="415,185" style="gen_window02_04_off">
+				<node pos="-7,30" name="h1">
+					<image name="header" pos="23,-8" size_w="385" style="gen_common01_win_acce02_bg"/>
+					<image name="border01" pos="25,10" size_w="385" style="gen_common01_win_acce02_01"/>
+					<text name="text_header" pos="115,-3,0" text="레시피" font_size="14"/>
+					<text name="text_header" pos="267,-4,0" text="보유 수량 / 소비 개수" color="118,162,160,255" font_size="14"/>
+					<image pos="238,-11,0" size_h="145" style="gen_common01_win_acce03"/>
+					<image pos="95,-7,0" style="gen_common01_window_acce01"/>
+					<image pos="168,-7,0" style="gen_common01_window_acce01"/>
+					<image pos="252,-6,0" style="gen_common01_window_acce01"/>
+					<image pos="383,-6,0" style="gen_common01_window_acce01"/>
+					<!--アイテム名-->
+					<!--
+          <text text="레시피" font_size="14" pos="74,-33" />
+          -->
+					<!--所持-->
+					<!--
+          <text text="필요 개수" font_size="14" pos="235,-61" color="118,162,160,255" />-->
+				</node>
+				<node pos="60,110">
+					<node name="mat1" pos="0,0" clone_child_tree="recipe_item_template"/>
+					<node name="mat2" pos="0,28" clone_child_tree="recipe_item_template"/>
+					<node name="mat3" pos="0,56" clone_child_tree="recipe_item_template"/>
+					<node name="mat4" pos="0,84" clone_child_tree="recipe_item_template"/>
+				</node>
+			</image>
+		</node>
+	</node>
+	<anim_ctrl name="fade_in" play="false" start_visible="true">
+		<bind_node node="recipe_item_template" anim="anm_common_fade_in" speed="1.0"/>
+	</anim_ctrl>
+	<anim_ctrl name="fade_out" play="false" end_visible="false">
+		<bind_node node="recipe_item_template" anim="anm_common_fade_in" speed="1.0" reverse="true"/>
+	</anim_ctrl>
+	<anim_ctrl play="false" speed="1.0">
+		<bind_node node="recipe_list" anim="anm_common_rotate_y90_minus" reverse="true"/>
+		<bind_node node="recipe_list" anim="anm_common_fade_in" reverse="false"/>
+		<bind_node node="right_menu" anim="anm_common_rotate_y90_plus" reverse="true"/>
+		<bind_node node="right_menu" anim="anm_common_fade_in" reverse="false"/>
+	</anim_ctrl>
+	<!-- 全体フェード -->
+	<anim_ctrl name="recipe_list_fade_in" play="false" start_visible="true">
+		<bind_node node="recipe_list" anim="anm_common_fade_in" speed="1.0"/>
+		<bind_node node="__recipe_list_item" anim="anm_common_fade_in" speed="1.0"/>
+		<bind_node node="__recipe_list_num" anim="anm_common_fade_in" speed="1.0"/>
+		<bind_node node="right_menu" anim="anm_common_fade_in" speed="1.0"/>
+	</anim_ctrl>
+	<anim_ctrl name="recipe_list_fade_out" play="false" end_visible="false">
+		<bind_node node="recipe_list" anim="anm_common_fade_in" speed="1.0" reverse="true"/>
+		<bind_node node="__recipe_list_item" anim="anm_common_fade_in" speed="1.0" reverse="true"/>
+		<bind_node node="__recipe_list_num" anim="anm_common_fade_in" speed="1.0" reverse="true"/>
+		<bind_node node="right_menu" anim="anm_common_fade_in" speed="1.0" reverse="true"/>
+	</anim_ctrl>
+</root>

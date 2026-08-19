@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE root SYSTEM "file://st01/project/acps3/_Programmer/ui/uil.dtd">
+<root>
+	<!-- スタイルの読み込み -->
+	<command load_style="Saves/ui/gen_styles/uis_gen_common.xml"/>
+	<command load_style="Saves/ui/gen_styles/uis_gen_window.xml"/>
+	<command load_style="Saves/ui/gen_styles/uis_gen_mix.xml"/>
+	<command load_style="Saves/ui/etc/uis_etc_window.xml"/>
+	<node load="Saves/ui/uil_line_format.xml"/>
+	<node name="extra_mix_list_all" pos="70,105,0">
+		<menu name="extra_mix_list" style="style_menu_column1" size_w="365" disp_lines="8"/>
+		<text name="extra_mix_list_title" text="아이템명" font_size="18.667" align="center" pos="183,16"/>
+	</node>
+	<node name="right_menu" pos="1200,0,0" rot="0,5,0">
+		<node pos="-1200,0,0">
+			<!-- レシピ項目のテンプレート -->
+			<node name="recipe_item_template" visible="false">
+				<image name="text_source_bg" pos="-41,-58" size_wh="380,24" style="gen_window03_bg02"/>
+				<text name="name" pos="0,-55" text="아이우에오카키쿠케코" font_size="18" align="left"/>
+				<text name="num" pos="290,-55" text="99" font_size="18" align="right" copy="NUMBER01_20PX"/>
+			</node>
+			<image name="recipe_mat" pos="13,467" size_wh="415,185" style="gen_window02_04_off">
+				<node pos="-7,30" name="h1">
+					<image name="header" pos="23,-8" size_w="385" style="gen_common01_win_acce02_bg"/>
+					<image name="border01" pos="25,10" size_w="385" style="gen_common01_win_acce02_01"/>
+					<text name="text_header" pos="134,-3" text="레시피" font_size="16"/>
+					<text name="text_header" pos="316,-3" text="필요 개수" color="118,162,160,255" font_size="16"/>
+					<image pos="288,-8" size_h="145" style="gen_common01_win_acce03"/>
+					<image name="acc01" pos="98,-6" style="gen_common01_window_acce01"/>
+					<image name="acc02" pos="200,-6" style="gen_common01_window_acce01"/>
+				</node>
+				<node pos="60,110">
+					<node name="mat1" pos="0,0" clone_child_tree="recipe_item_template"/>
+					<node name="mat2" pos="0,28" clone_child_tree="recipe_item_template"/>
+					<node name="mat3" pos="0,56" clone_child_tree="recipe_item_template"/>
+					<node name="mat4" pos="0,84" clone_child_tree="recipe_item_template"/>
+				</node>
+			</image>
+		</node>
+	</node>
+	<anim_ctrl name="extra_mix_ac_fade_in" play="false" speed="1.0">
+		<bind_node node="extra_mix_list_all" anim="anm_common_fade_in" reverse="false"/>
+		<bind_node node="right_menu" anim="anm_common_fade_in" reverse="false"/>
+	</anim_ctrl>
+	<anim_ctrl name="extra_mix_ac_fade_out" play="false" speed="1.0">
+		<bind_node node="extra_mix_list_all" anim="anm_common_fade_in" reverse="true"/>
+		<bind_node node="right_menu" anim="anm_common_fade_in" reverse="true"/>
+	</anim_ctrl>
+</root>

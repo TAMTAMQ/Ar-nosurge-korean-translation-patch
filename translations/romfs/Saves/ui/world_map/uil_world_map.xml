@@ -1,0 +1,124 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE root SYSTEM "file://st01/project/acps3/_Programmer/ui/uil.dtd">
+<root>
+	<!-- スタイルの読み込み -->
+	<command load_style="Saves/ui/gen_styles/uis_gen_worldtown.xml"/>
+	<command load_style="Saves/ui/gen_styles/uis_gen_wt_image.xml"/>
+	<command load_style="Saves/ui/etc/uis_world_text.xml"/>
+	<command load_anim="Saves/ui/world_map/uia_world_map.xml"/>
+	<!--
+    <image style="ui_bg_sample" color="255,255,255,255" visible="false"/>
+    -->
+	<node name="world_map">
+		<!-- 中央・ポインタ -->
+		<node name="pointer">
+			<!-- 選択ポインタ -->
+			<node name="place_cursor" pos="640,360" visible="false" viewer_visible="true">
+				<node name="place_circle">
+					<image style="gen_wt09_pointer01" pos="-31,-31"/>
+				</node>
+				<image style="gen_wt09_pointer02" pos="-27,-55"/>
+			</node>
+			<anim_ctrl play="true" loop="true">
+				<bind_node node="place_circle" anim="place_circle_rotate" speed="1.0"/>
+			</anim_ctrl>
+			<node name="select" pos="485,560,0" visible="false" viewer_visible="true">
+				<node name="current_pointer">
+					<image style="gen_wt01_name_sbg01"/>
+					<text name="pointer_name" text="아이우에오카키쿠케코" font_size="18" align="center" pos="155,8"/>
+					<image name="icon" style="gen_wt01_name_sbg_icon" pos="0,-28"/>
+				</node>
+				<node name="next_up">
+					<image name="arrow" style="gen_wt01_arrow01" pos="175,-44" rot="0,0,90" flick_time="0.2"/>
+					<image name="next_area" style="gen_wt09_planeticon01" pos="121,-108,0"/>
+				</node>
+				<node name="next_left">
+					<image name="arrow" style="gen_wt01_arrow01" pos="-44,-5" flick_time="0.2"/>
+					<image name="next_area" style="gen_wt09_planeticon01" pos="-99,-15,0"/>
+				</node>
+				<node name="next_down">
+					<image name="arrow" style="gen_wt01_arrow02" pos="175,28" rot="0,0,90" flick_time="0.2"/>
+					<image name="next_area" style="gen_wt09_planeticon01" pos="121,80,0"/>
+				</node>
+				<node name="next_right">
+					<image name="arrow" style="gen_wt01_arrow02" pos="302,-5" flick_time="0.2"/>
+					<image name="next_area" style="gen_wt09_planeticon01" pos="341,-15,0"/>
+				</node>
+			</node>
+			<anim_ctrl name="get_in" play="false" start_visible="true">
+				<bind_node node="place_cursor" anim="place_cursor_in" speed="1.0"/>
+				<bind_node node="select" anim="anm_common_fade_in" speed="1.0"/>
+			</anim_ctrl>
+			<anim_ctrl name="get_out" play="false" end_visible="false">
+				<bind_node node="place_cursor" anim="place_cursor_in" speed="1.0" reverse="true"/>
+				<bind_node node="select" anim="anm_common_fade_in" speed="1.0" reverse="true"/>
+			</anim_ctrl>
+		</node>
+		<!-- 左右・選択ポインタの説明 -->
+		<node name="description">
+			<!-- 左側 -->
+			<node name="left">
+				<image style="gen_wt06_monitor" pos="-6,20"/>
+				<node name="left_monitor" visible="false" viewer_visible="true">
+					<node name="world_overview" pos="50,32">
+						<node name="inside" load="Saves/ui/world_map/uil_world_overview_inside.xml" visible="false"/>
+						<node name="outside" load="Saves/ui/world_map/uil_world_overview_outside.xml" visible="false" viewer_visible="true"/>
+						<node name="rciela" load="Saves/ui/world_map/uil_world_overview_rciela.xml" visible="false"/>
+						<node name="arciel" load="Saves/ui/world_map/uil_world_overview_arciel.xml" visible="false"/>
+						<node name="player_pointer">
+							<image style="gen_wt01_pointer" pos="2,0"/>
+						</node>
+					</node>
+				</node>
+				<image style="gen_wt01_os_line02" pos="55,42"/>
+				<image style="gen_wt06_monitorlight" pos="20,255"/>
+				<image style="gen_wt06_monitor_bg"/>
+			</node>
+			<!-- 右側 -->
+			<node name="right" pos="896,0">
+				<image style="gen_wt06_monitor" pos="392,20" scale="-1.0,1.0"/>
+				<node name="right_monitor" visible="false" viewer_visible="true">
+					<node name="bind_blink">
+						<image name="pointer_name_image" style="gen_wt07_worldname01" image_no="1" pos="46,59"/>
+						<image name="area_name_image" style="gen_wt08_planetname01" image_no="0" pos="36,164"/>
+						<image style="gen_wt06_englishtext" pos="12,220"/>
+						<image name="area_name_eng" style="gen_wt06_peace" image_no="0" pos="94,224"/>
+						<image name="pointer_name_eng" style="gen_wt06_position" image_no="1" pos="144,251"/>
+						<image style="gen_wt01_worldname_line" pos="33,151"/>
+						<node name="town_icon" pos="12,294">
+							<image style="gen_wt01_name_mbg_townicon"/>
+							<image style="gen_wt01_name_mbg_townicon" scale="-1.0,1.0" pos="309,0"/>
+						</node>
+						<image style="gen_wt01_textwindow" pos="6,333" size_wh="324,272"/>
+						<image name="description_text" style="style_world_text" image_no="1" pos="18.667,342"/>
+					</node>
+				</node>
+				<image style="gen_wt01_os_rogo" pos="270,609"/>
+				<image style="gen_wt01_os_line" pos="33,639"/>
+				<image style="gen_wt06_monitorlight" pos="364,255" scale="-1.0,1.0"/>
+				<image style="gen_wt06_monitor_bg" pos="384,0" scale="-1.0,1.0"/>
+			</node>
+			<!-- アニメーション -->
+			<anim_ctrl name="slide_in" play="true" start_visible="true">
+				<bind_node node="left" anim="left_slide_in" speed="1.0"/>
+				<bind_node node="right" anim="right_slide_in" speed="1.0"/>
+			</anim_ctrl>
+			<anim_ctrl name="left_monitor_on" play="false" start_visible="true">
+				<bind_node node="left_monitor" anim="monitor_on" speed="1.0"/>
+			</anim_ctrl>
+			<anim_ctrl name="left_monitor_off" play="false" end_visible="false" reverse="true">
+				<bind_node node="left_monitor" anim="monitor_on" speed="1.0"/>
+			</anim_ctrl>
+			<anim_ctrl name="right_monitor_on" play="false" start_visible="true">
+				<bind_node node="right_monitor" anim="monitor_on" speed="1.0"/>
+			</anim_ctrl>
+			<anim_ctrl name="right_monitor_off" play="false" end_visible="false" reverse="true">
+				<bind_node node="right_monitor" anim="monitor_on" speed="1.0"/>
+			</anim_ctrl>
+			<anim_ctrl name="blink" play="true" loop="true">
+				<bind_node node="world_overview" anim="blink" speed="1.0"/>
+				<bind_node node="bind_blink" anim="blink" speed="1.0"/>
+			</anim_ctrl>
+		</node>
+	</node>
+</root>

@@ -1,0 +1,345 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+    <command load_style="Saves/ui/staffRoll/uis_staffRoll_E.xml" />
+    <command load_anim="Saves/ui/staffRoll/uia_staffRoll_E.xml" />
+    <node load="Saves/ui/staffRoll/uil_preset_names.xml"/>
+	<image name="img_back_E" style="img_back_E" pos=" 0, 0" size_wh="1280, 720" color="0,0,0,255"/>
+	<node name="alpha_0_E" color="255,255,255,255"><image name="img_0_E" style="img_0_E" pos=" 0, 0"/></node>
+	<node name="alpha_1_E" color="255,255,255,255"><image name="img_1_E" style="img_1_E" pos=" 0, 0"/></node>
+	<node name="alpha_2_E" color="255,255,255,255"><image name="img_2_E" style="img_2_E" pos=" 0, 0"/></node>
+	<node name="alpha_3_E" color="255,255,255,255"><image name="img_3_E" style="img_3_E" pos=" 0, 0"/></node>
+	<node name="alpha_4_E" color="255,255,255,255"><image name="img_4_E" style="img_4_E" pos=" 0, 0"/></node>
+    <node name="roll_E" pos="0,0">
+		<text text="ＣＡＳＴ" pos=" 520, 0" font_size="24" screen_clip="true" />
+		<text text="유키 네이" pos=" 640, 60" font_size="18" screen_clip="true" />
+		<text text="가쿠마 아이" pos=" 920, 60" font_size="20" screen_clip="true" />
+		<text text="유키 아야" pos=" 640, 104" font_size="18" screen_clip="true" />
+		<text text="사카이 카나코" pos=" 920, 104" font_size="20" screen_clip="true" />
+		<text text="유키 칸나" pos=" 640, 148" font_size="18" screen_clip="true" />
+		<text text="오치 하바" pos=" 920, 148" font_size="20" screen_clip="true" />
+		<text text="세오 레오(시로타카)" pos=" 640, 192" font_size="18" screen_clip="true" />
+		<text text="아라가미 타루스케" pos=" 920, 192" font_size="20" screen_clip="true" />
+		<text text="세오 사유리" pos=" 640, 236" font_size="18" screen_clip="true" />
+		<text text="시무라 유미" pos=" 920, 236" font_size="20" screen_clip="true" />
+		<text text="오구라 사요" pos=" 640, 280" font_size="18" screen_clip="true" />
+		<text text="미나세 이노리" pos=" 920, 280" font_size="20" screen_clip="true" />
+		<text text="미즈노 마키" pos=" 640, 324" font_size="18" screen_clip="true" />
+		<text text="토죠 히사코" pos=" 920, 324" font_size="20" screen_clip="true" />
+		<text text="정적 카논" pos=" 640, 368" font_size="18" screen_clip="true" />
+		<text text="이노우에 나나" pos=" 920, 368" font_size="20" screen_clip="true" />
+		<text text="피코" pos=" 640, 412" font_size="18" screen_clip="true" />
+		<text text="카네코 마유미" pos=" 920, 412" font_size="20" screen_clip="true" />
+		<text text="캐릭터 디자인" pos=" 520, 516" font_size="24" screen_clip="true" />
+		<text text="ntny" pos=" 920, 556" font_size="20" screen_clip="true" />
+		<text text="패키지 일러스트" pos=" 520, 620" font_size="24" screen_clip="true" />
+		<text text="후부키" pos=" 920, 660" font_size="20" screen_clip="true" />
+		<text text="Arnosurge DX Staff" pos=" 520, 724" font_size="24" screen_clip="true" />
+		<text text="기획 섹션" pos=" 520, 784" font_size="24" screen_clip="true" />
+		<text text="아카모토 켄이치" pos=" 920, 824" font_size="20" screen_clip="true" />
+		<text text="우메다 마사타케" pos=" 920, 848" font_size="20" screen_clip="true" />
+		<text text="무라오카 다케야" pos=" 920, 892" font_size="20" screen_clip="true" />
+		<text text="카토 슈타" pos=" 920, 916" font_size="20" screen_clip="true" />
+		<text text="마츠오카 다이키" pos=" 920, 940" font_size="20" screen_clip="true" />
+		<text text="다나카 도시아키" pos=" 920, 964" font_size="20" screen_clip="true" />
+		<text text="혼다 히로키" pos=" 920, 988" font_size="20" screen_clip="true" />
+		<text text="프로그래머 섹션" pos=" 520, 1052" font_size="24" screen_clip="true" />
+		<text text="타카야마 마사토시" pos=" 920, 1092" font_size="20" screen_clip="true" />
+		<text text="카네자와 유스케" pos=" 920, 1116" font_size="20" screen_clip="true" />
+		<text text="야마노구치 미사오" pos=" 920, 1140" font_size="20" screen_clip="true" />
+		<text text="오타 나오아키" pos=" 920, 1184" font_size="20" screen_clip="true" />
+		<text text="나니와 료" pos=" 920, 1208" font_size="20" screen_clip="true" />
+		<text text="우스다 아토무" pos=" 920, 1232" font_size="20" screen_clip="true" />
+		<text text="카츠라야 고우" pos=" 920, 1256" font_size="20" screen_clip="true" />
+		<text text="사토 카즈야" pos=" 920, 1280" font_size="20" screen_clip="true" />
+		<text text="야마사키 코헤이" pos=" 920, 1304" font_size="20" screen_clip="true" />
+		<text text="야마시타 마코토" pos=" 920, 1328" font_size="20" screen_clip="true" />
+		<text text="디자이너 섹션" pos=" 520, 1392" font_size="24" screen_clip="true" />
+		<text text="CG 디렉터" pos=" 640, 1432" font_size="18" screen_clip="true" />
+		<text text="이와세 토모유키" pos=" 920, 1432" font_size="20" screen_clip="true" />
+		<text text="캐릭터 모델" pos=" 640, 1476" font_size="18" screen_clip="true" />
+		<text text="스즈키 야스히로" pos=" 920, 1476" font_size="20" screen_clip="true" />
+		<text text="하야사키 나나미" pos=" 920, 1500" font_size="20" screen_clip="true" />
+		<text text="배경 모델" pos=" 640, 1544" font_size="18" screen_clip="true" />
+		<text text="이이마 리에" pos=" 920, 1544" font_size="20" screen_clip="true" />
+		<text text="인터페이스 디자인" pos=" 640, 1588" font_size="18" screen_clip="true" />
+		<text text="바바 히로미" pos=" 920, 1588" font_size="20" screen_clip="true" />
+		<text text="Tan Choun Wee" pos=" 920, 1612" font_size="20" screen_clip="true" />
+		<text text="Chantel Tan Yuan Lin" pos=" 920, 1636" font_size="20" screen_clip="true" />
+		<text text="Jasmin Tan" pos=" 920, 1660" font_size="20" screen_clip="true" />
+		<text text="Foo Danyu" pos=" 920, 1684" font_size="20" screen_clip="true" />
+		<text text="영상 편집" pos=" 640, 1728" font_size="18" screen_clip="true" />
+		<text text="아리마 신사쿠" pos=" 920, 1728" font_size="20" screen_clip="true" />
+		<text text="사이토 야스노부" pos=" 920, 1752" font_size="20" screen_clip="true" />
+		<text text="CG 제작 관리" pos=" 640, 1796" font_size="18" screen_clip="true" />
+		<text text="에가와 야스오" pos=" 920, 1796" font_size="20" screen_clip="true" />
+		<text text="사운드 섹션" pos=" 520, 1860" font_size="24" screen_clip="true" />
+		<text text="사운드 디렉터" pos=" 640, 1900" font_size="18" screen_clip="true" />
+		<text text="다카하시 히로아키" pos=" 920, 1900" font_size="20" screen_clip="true" />
+		<text text="천진광영특고마소프트 유한공사" pos=" 520, 1964" font_size="24" screen_clip="true" />
+		<text text="디벨롭먼트 매니저" pos=" 640, 2004" font_size="18" screen_clip="true" />
+		<text text="안 야에" pos=" 920, 2004" font_size="20" screen_clip="true" />
+		<text text="진 하오" pos=" 920, 2028" font_size="20" screen_clip="true" />
+		<text text="프로그래머" pos=" 640, 2072" font_size="18" screen_clip="true" />
+		<text text="가케 가이" pos=" 920, 2072" font_size="20" screen_clip="true" />
+		<text text="진영비" pos=" 920, 2096" font_size="20" screen_clip="true" />
+		<text text="왕 이와" pos=" 920, 2120" font_size="20" screen_clip="true" />
+		<text text="손가?" pos=" 920, 2144" font_size="20" screen_clip="true" />
+		<text text="테이 세이슈" pos=" 920, 2168" font_size="20" screen_clip="true" />
+		<text text="류유양" pos=" 920, 2192" font_size="20" screen_clip="true" />
+		<text text="장호" pos=" 920, 2216" font_size="20" screen_clip="true" />
+		<text text="디자이너" pos=" 640, 2260" font_size="18" screen_clip="true" />
+		<text text="다 유키사토" pos=" 920, 2260" font_size="20" screen_clip="true" />
+		<text text="홍보" pos=" 520, 2324" font_size="24" screen_clip="true" />
+		<text text="PR 마케팅" pos=" 640, 2364" font_size="18" screen_clip="true" />
+		<text text="요시카와 마사토" pos=" 920, 2364" font_size="20" screen_clip="true" />
+		<text text="미즈카미 사리" pos=" 920, 2388" font_size="20" screen_clip="true" />
+		<text text="소프트웨어 매뉴얼" pos=" 520, 2452" font_size="24" screen_clip="true" />
+		<text text="카토 마사히로" pos=" 920, 2492" font_size="20" screen_clip="true" />
+		<text text="츠지 마키토" pos=" 920, 2516" font_size="20" screen_clip="true" />
+		<text text="QA 스태프" pos=" 520, 2580" font_size="24" screen_clip="true" />
+		<text text="하세가와 시게루" pos=" 920, 2620" font_size="20" screen_clip="true" />
+		<text text="협력" pos=" 520, 2684" font_size="24" screen_clip="true" />
+		<text text="주식회사 극단 히마와리" pos=" 640, 2724" font_size="18" screen_clip="true" />
+		<text text="주식회사 스튜디오 마우스" pos=" 640, 2748" font_size="18" screen_clip="true" />
+		<text text="주식회사 반다이 남코 게임즈" pos=" 640, 2772" font_size="18" screen_clip="true" />
+		<text text="주식회사 포네 컴퍼니" pos=" 640, 2796" font_size="18" screen_clip="true" />
+		<text text="천진천장동영상과기유한공사" pos=" 640, 2820" font_size="18" screen_clip="true" />
+		<text text="베이징 광영 특고마 소프트웨어 유한공사" pos=" 640, 2844" font_size="18" screen_clip="true" />
+		<text text="&lt;CO&gt; 2006 코에이 테크모 게임스" pos=" 640, 2868" font_size="18" screen_clip="true" />
+		<text text="&lt;CO&gt; 2006 BANDAI NAMCO Games Inc.　" pos=" 640, 2892" font_size="18" screen_clip="true" />
+		<text text="&lt;CO&gt; 2007 코에이 테크모 게임스" pos=" 640, 2916" font_size="18" screen_clip="true" />
+		<text text="&lt;CO&gt; 2007 BANDAI NAMCO Games Inc.　" pos=" 640, 2940" font_size="18" screen_clip="true" />
+		<text text="&lt;CO&gt; 2010 코에이 테크모 게임스" pos=" 640, 2964" font_size="18" screen_clip="true" />
+		<text text="&lt;CO&gt; 2010 BANDAI NAMCO Games Inc.　" pos=" 640, 2988" font_size="18" screen_clip="true" />
+		<text text="Xorshift RNGs" pos=" 640, 3012" font_size="18" screen_clip="true" />
+		<text text="  Copyright &lt;CO&gt; 2003 George Marsaglia." pos=" 640, 3036" font_size="18" screen_clip="true" />
+		<text text="천진천장동영상과기유한공사" pos=" 640, 3060" font_size="18" screen_clip="true" />
+		<text text="폰트웍스 주식회사" pos=" 640, 3084" font_size="18" screen_clip="true" />
+		<text text="KOEI TECMO SINGAPORE Pte. Ltd." pos=" 640, 3108" font_size="18" screen_clip="true" />
+		<text text="Arnosurge Staff" pos=" 640, 3132" font_size="18" screen_clip="true" />
+		<text text="Arnosurge PLUS Staff" pos=" 640, 3156" font_size="18" screen_clip="true" />
+		<text text="시마법 디자인" pos=" 520, 3220" font_size="24" screen_clip="true" />
+		<text text="JohnHathway" pos=" 920, 3260" font_size="20" screen_clip="true" />
+		<text text="shirakaba" pos=" 920, 3284" font_size="20" screen_clip="true" />
+		<text text="Yocky" pos=" 920, 3308" font_size="20" screen_clip="true" />
+		<text text="마타요시" pos=" 920, 3332" font_size="20" screen_clip="true" />
+		<text text="타카야마 토시아키" pos=" 920, 3356" font_size="20" screen_clip="true" />
+		<text text="이즈미 포스카" pos=" 920, 3380" font_size="20" screen_clip="true" />
+		<text text="나기라" pos=" 920, 3404" font_size="20" screen_clip="true" />
+		<text text="휴가 유지" pos=" 920, 3428" font_size="20" screen_clip="true" />
+		<text text="시시쿠" pos=" 920, 3452" font_size="20" screen_clip="true" />
+		<text text="몬스터 디자인" pos=" 520, 3516" font_size="24" screen_clip="true" />
+		<text text="카네코 신야" pos=" 920, 3556" font_size="20" screen_clip="true" />
+		<text text="스사가네" pos=" 920, 3580" font_size="20" screen_clip="true" />
+		<text text="월드 디자인" pos=" 520, 3644" font_size="24" screen_clip="true" />
+		<text text="마츠모토 히데유키" pos=" 920, 3684" font_size="20" screen_clip="true" />
+		<text text="도쿄환상" pos=" 920, 3708" font_size="20" screen_clip="true" />
+		<text text="츠치야 아키라" pos=" 920, 3732" font_size="20" screen_clip="true" />
+		<text text="시나리오 · 각본" pos=" 520, 3796" font_size="24" screen_clip="true" />
+		<text text="메인 시나리오 파트" pos=" 600, 3836" font_size="20" screen_clip="true" />
+		<text text="플롯 어드바이저" pos=" 640, 3891" font_size="18" screen_clip="true" />
+		<text text="노야 료스케" pos=" 920, 3891" font_size="20" screen_clip="true" />
+		<text text="하나노 주)" pos=" 920, 3915" font_size="20" screen_clip="true" />
+		<text text="각본" pos=" 640, 3939" font_size="18" screen_clip="true" />
+		<text text="하나노 주)" pos=" 920, 3939" font_size="20" screen_clip="true" />
+		<text text="제노메트릭스 파트" pos=" 600, 3983" font_size="20" screen_clip="true" />
+		<text text="각본" pos=" 640, 4018" font_size="18" screen_clip="true" />
+		<text text="아베 사야카" pos=" 920, 4018" font_size="20" screen_clip="true" />
+		<text text="필드 대화 파트" pos=" 600, 4062" font_size="20" screen_clip="true" />
+		<text text="각본" pos=" 640, 4097" font_size="18" screen_clip="true" />
+		<text text="오오타케 야스시" pos=" 920, 4097" font_size="20" screen_clip="true" />
+		<text text="하나노 주)" pos=" 920, 4121" font_size="20" screen_clip="true" />
+		<text text="NPC 대화" pos=" 600, 4165" font_size="20" screen_clip="true" />
+		<text text="오오타케 야스시" pos=" 920, 4165" font_size="20" screen_clip="true" />
+		<text text="디자이너 섹션" pos=" 520, 4240" font_size="24" screen_clip="true" />
+		<text text="시마법 무비 소재" pos=" 640, 4300" font_size="18" screen_clip="true" />
+		<text text="세리자와 에노노" pos=" 920, 4300" font_size="20" screen_clip="true" />
+		<text text="3D 캐릭터 모델링" pos=" 520, 4364" font_size="24" screen_clip="true" />
+		<text text="주식회사 FlightUNIT" pos=" 600, 4404" font_size="20" screen_clip="true" />
+		<text text="리드 모델링" pos=" 640, 4439" font_size="18" screen_clip="true" />
+		<text text="쿠와타 야스히로" pos=" 920, 4439" font_size="20" screen_clip="true" />
+		<text text="모델링" pos=" 640, 4463" font_size="18" screen_clip="true" />
+		<text text="엔토 유우" pos=" 920, 4463" font_size="20" screen_clip="true" />
+		<text text="이마이 마이코" pos=" 920, 4487" font_size="20" screen_clip="true" />
+		<text text="누마이 노조미" pos=" 920, 4511" font_size="20" screen_clip="true" />
+		<text text="해적집" pos=" 920, 4535" font_size="20" screen_clip="true" />
+		<text text="카와마츠 요시노리" pos=" 920, 4559" font_size="20" screen_clip="true" />
+		<text text="야마×2" pos=" 920, 4583" font_size="20" screen_clip="true" />
+		<text text="리드 모션" pos=" 640, 4607" font_size="18" screen_clip="true" />
+		<text text="도이" pos=" 920, 4607" font_size="20" screen_clip="true" />
+		<text text="모션" pos=" 640, 4631" font_size="18" screen_clip="true" />
+		<text text="소에다 코이치로" pos=" 920, 4631" font_size="20" screen_clip="true" />
+		<text text="야토 메구미" pos=" 920, 4655" font_size="20" screen_clip="true" />
+		<text text="셰이더 툴 개발" pos=" 640, 4679" font_size="18" screen_clip="true" />
+		<text text="란도" pos=" 920, 4679" font_size="20" screen_clip="true" />
+		<text text="SIGE" pos=" 920, 4703" font_size="20" screen_clip="true" />
+		<text text="셋업" pos=" 640, 4727" font_size="18" screen_clip="true" />
+		<text text="오오츠보 슌스케" pos=" 920, 4727" font_size="20" screen_clip="true" />
+		<text text="나가사카 아리사" pos=" 920, 4751" font_size="20" screen_clip="true" />
+		<text text="매니지먼트" pos=" 640, 4775" font_size="18" screen_clip="true" />
+		<text text="마츠모토 히로유키" pos=" 920, 4775" font_size="20" screen_clip="true" />
+		<text text="3D 몬스터 모델링" pos=" 520, 4839" font_size="24" screen_clip="true" />
+		<text text="천진제애스 디지털 테크놀로지" pos=" 640, 4879" font_size="18" screen_clip="true" />
+		<text text="베탑 재팬 주식회사" pos=" 640, 4903" font_size="18" screen_clip="true" />
+		<text text="3D 월드 모델링" pos=" 520, 4967" font_size="24" screen_clip="true" />
+		<text text="천진제애스 디지털 테크놀로지" pos=" 640, 5007" font_size="18" screen_clip="true" />
+		<text text="베탑 재팬 주식회사" pos=" 640, 5031" font_size="18" screen_clip="true" />
+		<text text="세계관 일러스트 &amp; 정신 세계 배경 일러스트" pos=" 520, 5095" font_size="24" screen_clip="true" />
+		<text text="세리자와 에노노" pos=" 920, 5135" font_size="20" screen_clip="true" />
+		<text text="주식회사 레드 엔터테인먼트" pos=" 600, 5159" font_size="20" screen_clip="true" />
+		<text text="아트 디렉터" pos=" 640, 5194" font_size="18" screen_clip="true" />
+		<text text="코마츠 야스히로" pos=" 920, 5218" font_size="20" screen_clip="true" />
+		<text text="제작 진행" pos=" 640, 5242" font_size="18" screen_clip="true" />
+		<text text="오오시마 유우" pos=" 920, 5266" font_size="20" screen_clip="true" />
+		<text text="이마이즈미 요코" pos=" 920, 5290" font_size="20" screen_clip="true" />
+		<text text="도쿄환상" pos=" 600, 5314" font_size="20" screen_clip="true" />
+		<text text="주식회사 에이트비트 로켓" pos=" 600, 5349" font_size="20" screen_clip="true" />
+		<text text="나라이 마사유키" pos=" 920, 5384" font_size="20" screen_clip="true" />
+		<text text="코조노이 미도리" pos=" 920, 5408" font_size="20" screen_clip="true" />
+		<text text="우에하라 신이치" pos=" 920, 5432" font_size="20" screen_clip="true" />
+		<text text="키리야마 나리요" pos=" 920, 5456" font_size="20" screen_clip="true" />
+		<text text="이나 준코" pos=" 920, 5480" font_size="20" screen_clip="true" />
+		<text text="스에히로 유이치" pos=" 920, 5504" font_size="20" screen_clip="true" />
+		<text text="오타 키요미" pos=" 920, 5528" font_size="20" screen_clip="true" />
+		<text text="애니메이션 무비" pos=" 520, 5552" font_size="24" screen_clip="true" />
+		<text text="주식회사 포인트 픽처스" pos=" 600, 5592" font_size="20" screen_clip="true" />
+		<text text="OP 애니메이션 연출" pos=" 640, 5647" font_size="18" screen_clip="true" />
+		<text text="이토 카나코" pos=" 920, 5671" font_size="20" screen_clip="true" />
+		<text text="시퀀스 애니메이션 연출" pos=" 640, 5715" font_size="18" screen_clip="true" />
+		<text text="이마이 유키코" pos=" 920, 5739" font_size="20" screen_clip="true" />
+		<text text="작화감독" pos=" 640, 5783" font_size="18" screen_clip="true" />
+		<text text="최부경" pos=" 920, 5807" font_size="20" screen_clip="true" />
+		<text text="작화감독 보조·원화" pos=" 640, 5851" font_size="18" screen_clip="true" />
+		<text text="오카모토 마유미" pos=" 920, 5875" font_size="20" screen_clip="true" />
+		<text text="다케하시 미츠야스" pos=" 920, 5899" font_size="20" screen_clip="true" />
+		<text text="히가시데 후토" pos=" 920, 5923" font_size="20" screen_clip="true" />
+		<text text="장영선" pos=" 920, 5947" font_size="20" screen_clip="true" />
+		<text text="영상·마무리" pos=" 640, 5991" font_size="18" screen_clip="true" />
+		<text text="DAEJIN ANIMATION" pos=" 920, 6015" font_size="20" screen_clip="true" />
+		<text text="F.A.I. 인터내셔널" pos=" 920, 6039" font_size="20" screen_clip="true" />
+		<text text="색채 설계/특수 효과" pos=" 640, 6083" font_size="18" screen_clip="true" />
+		<text text="카츠노 히로시" pos=" 920, 6107" font_size="20" screen_clip="true" />
+		<text text="CG 감독" pos=" 640, 6151" font_size="18" screen_clip="true" />
+		<text text="아베 사야카" pos=" 920, 6175" font_size="20" screen_clip="true" />
+		<text text="3DCG" pos=" 640, 6219" font_size="18" screen_clip="true" />
+		<text text="카토 키미노리" pos=" 920, 6243" font_size="20" screen_clip="true" />
+		<text text="오츠카 타케오" pos=" 920, 6267" font_size="20" screen_clip="true" />
+		<text text="아트 디렉터" pos=" 640, 6311" font_size="18" screen_clip="true" />
+		<text text="타야마 오사무" pos=" 920, 6335" font_size="20" screen_clip="true" />
+		<text text="배경" pos=" 640, 6379" font_size="18" screen_clip="true" />
+		<text text="미야시타 세이토" pos=" 920, 6403" font_size="20" screen_clip="true" />
+		<text text="주식회사 이마지넷" pos=" 920, 6427" font_size="20" screen_clip="true" />
+		<text text="촬영 감독" pos=" 640, 6471" font_size="18" screen_clip="true" />
+		<text text="채백륜" pos=" 920, 6495" font_size="20" screen_clip="true" />
+		<text text="촬영" pos=" 640, 6539" font_size="18" screen_clip="true" />
+		<text text="무라사와 하루미" pos=" 920, 6563" font_size="20" screen_clip="true" />
+		<text text="장호" pos=" 920, 6587" font_size="20" screen_clip="true" />
+		<text text="제작 진행 관리" pos=" 640, 6631" font_size="18" screen_clip="true" />
+		<text text="와타나베 아키히사" pos=" 920, 6655" font_size="20" screen_clip="true" />
+		<text text="애니메이션 프로듀서" pos=" 640, 6699" font_size="18" screen_clip="true" />
+		<text text="미야하라 유키" pos=" 920, 6723" font_size="20" screen_clip="true" />
+		<text text="3D 무비" pos=" 520, 6807" font_size="24" screen_clip="true" />
+		<text text="주식회사 랜드크 스튜디오" pos=" 600, 6847" font_size="20" screen_clip="true" />
+		<text text="프로듀서" pos=" 640, 6902" font_size="18" screen_clip="true" />
+		<text text="와타나베 켄지" pos=" 920, 6926" font_size="20" screen_clip="true" />
+		<text text="디렉터" pos=" 640, 6970" font_size="18" screen_clip="true" />
+		<text text="이소베 가네시" pos=" 920, 6994" font_size="20" screen_clip="true" />
+		<text text="무비 디자이너" pos=" 640, 7038" font_size="18" screen_clip="true" />
+		<text text="키무라 아키히코" pos=" 920, 7062" font_size="20" screen_clip="true" />
+		<text text="마에카와 토모노리" pos=" 920, 7086" font_size="20" screen_clip="true" />
+		<text text="이나미 케이스케" pos=" 920, 7110" font_size="20" screen_clip="true" />
+		<text text="배경음악" pos=" 520, 7194" font_size="24" screen_clip="true" />
+		<text text="작곡가" pos=" 640, 7234" font_size="18" screen_clip="true" />
+		<text text="시모츠키 하루카" pos=" 920, 7278" font_size="20" screen_clip="true" />
+		<text text="어쿠스틱 기타" pos=" 640, 7322" font_size="18" screen_clip="true" />
+		<text text="Dani" pos=" 920, 7322" font_size="20" screen_clip="true" />
+		<text text="일렉트릭 기타" pos=" 640, 7346" font_size="18" screen_clip="true" />
+		<text text="Dani" pos=" 920, 7346" font_size="20" screen_clip="true" />
+		<text text="부주키" pos=" 640, 7370" font_size="18" screen_clip="true" />
+		<text text="Dani" pos=" 920, 7370" font_size="20" screen_clip="true" />
+		<text text="베이스" pos=" 640, 7394" font_size="18" screen_clip="true" />
+		<text text="Dani" pos=" 920, 7394" font_size="20" screen_clip="true" />
+		<text text="바이올린" pos=" 640, 7418" font_size="18" screen_clip="true" />
+		<text text="츠보이 아키히사" pos=" 920, 7418" font_size="20" screen_clip="true" />
+		<text text="일렉트릭 기타" pos=" 640, 7442" font_size="18" screen_clip="true" />
+		<text text="히라마츠 토시노리" pos=" 920, 7442" font_size="20" screen_clip="true" />
+		<text text="코러스" pos=" 640, 7466" font_size="18" screen_clip="true" />
+		<text text="야나기 아사미" pos=" 920, 7466" font_size="20" screen_clip="true" />
+		<text text="음향" pos=" 520, 7550" font_size="24" screen_clip="true" />
+		<text text="음향 감독" pos=" 640, 7590" font_size="18" screen_clip="true" />
+		<text text="노야 료스케" pos=" 920, 7590" font_size="20" screen_clip="true" />
+		<text text="녹음 조정" pos=" 640, 7634" font_size="18" screen_clip="true" />
+		<text text="아베 야스유키" pos=" 920, 7634" font_size="20" screen_clip="true" />
+		<text text="녹음 보조" pos=" 640, 7678" font_size="18" screen_clip="true" />
+		<text copy="preset_name_00" pos=" 920, 7678" font_size="20" screen_clip="true" />
+		<text text="무라야마 카이토" pos=" 920, 7702" font_size="20" screen_clip="true" />
+		<text text="음향 제작" pos=" 640, 7746" font_size="18" screen_clip="true" />
+		<text text="STUDIO MAUSU" pos=" 920, 7746" font_size="20" screen_clip="true" />
+		<text text="디버그" pos=" 520, 7830" font_size="24" screen_clip="true" />
+		<text text="폴 투 윈 주식회사" pos=" 600, 7870" font_size="20" screen_clip="true" />
+		<text text="미타무라 사토시" pos=" 920, 7905" font_size="20" screen_clip="true" />
+		<text text="우에스기 켄고" pos=" 920, 7929" font_size="20" screen_clip="true" />
+		<text text="스미요시 유키무네" pos=" 920, 7953" font_size="20" screen_clip="true" />
+		<text text="다카하시 토모히로" pos=" 920, 7977" font_size="20" screen_clip="true" />
+		<text text="사카 지가쿠" pos=" 520, 8081" font_size="24" screen_clip="true" />
+		<text text="음악 제작 협력" pos=" 600, 8121" font_size="20" screen_clip="true" />
+		<text text="주식회사 프론티어 워크스" pos=" 920, 8156" font_size="20" screen_clip="true" />
+		<text text="요시카와 아키라" pos=" 920, 8180" font_size="20" screen_clip="true" />
+		<text text="코야나기 유타카" pos=" 920, 8204" font_size="20" screen_clip="true" />
+		<text text="미즈노 다이스케" pos=" 520, 8288" font_size="24" screen_clip="true" />
+		<text text="프로모션 &amp; 세일즈" pos=" 640, 8348" font_size="18" screen_clip="true" />
+		<text text="로고 디자인" pos=" 920, 8348" font_size="20" screen_clip="true" />
+		<text text="ntny" pos=" 920, 8372" font_size="20" screen_clip="true" />
+		<text text="협력" pos=" 520, 8416" font_size="24" screen_clip="true" />
+		<text text="주식회사 에이트비트 로켓" pos=" 640, 8456" font_size="18" screen_clip="true" />
+		<text text="주식회사 에이트비트 로켓" pos=" 640, 8480" font_size="18" screen_clip="true" />
+		<text text="주식회사 크래프트스케이프" pos=" 640, 8504" font_size="18" screen_clip="true" />
+		<text text="주식회사 코단샤" pos=" 640, 8528" font_size="18" screen_clip="true" />
+		<text text="주식회사 스튜디오 마우스" pos=" 640, 8552" font_size="18" screen_clip="true" />
+		<text text="주식회사 스튜디오 마우스" pos=" 640, 8576" font_size="18" screen_clip="true" />
+		<text text="주식회사 반다이 남코 게임즈" pos=" 640, 8600" font_size="18" screen_clip="true" />
+		<text text="주식회사 반다이 남코 게임즈" pos=" 640, 8624" font_size="18" screen_clip="true" />
+		<text text="음악 제작 협력" pos=" 640, 8648" font_size="18" screen_clip="true" />
+		<text text="주식회사 프론티어 워크스" pos=" 640, 8672" font_size="18" screen_clip="true" />
+		<text text="주식회사 랜드크 스튜디오" pos=" 640, 8696" font_size="18" screen_clip="true" />
+		<text text="주식회사 랜드크 스튜디오" pos=" 640, 8720" font_size="18" screen_clip="true" />
+		<text text="천진제애스 디지털 테크놀로지" pos=" 640, 8744" font_size="18" screen_clip="true" />
+		<text text="폴 투 윈 주식회사" pos=" 640, 8768" font_size="18" screen_clip="true" />
+		<text text="베탑 재팬 주식회사" pos=" 640, 8792" font_size="18" screen_clip="true" />
+		<text text="디렉터" pos=" 520, 8876" font_size="24" screen_clip="true" />
+		<text text="디렉터" pos=" 920, 8916" font_size="20" screen_clip="true" />
+		<text text="타카노 마사후미" pos=" 520, 8980" font_size="24" screen_clip="true" />
+		<text text="개발 프로듀서" pos=" 920, 9020" font_size="20" screen_clip="true" />
+		<text text="호소이 준조" pos=" 520, 9084" font_size="24" screen_clip="true" />
+		<text text="츠치야 아키라" pos=" 920, 9124" font_size="20" screen_clip="true" />
+		<text text="츠치야 아키라" pos=" 520, 9188" font_size="24" screen_clip="true" />
+		<text text="총괄 프로듀서" pos=" 920, 9228" font_size="20" screen_clip="true" />
+		<text text="코이누마 히사시" pos=" 600, 9492" font_size="20" screen_clip="true" />
+		<text text="제작" pos=" 640, 9522" font_size="26" screen_clip="true" />
+	</node>
+
+
+	<anim_ctrl loop="false" play="true" delay="0.0" reverse="false">
+		<bind_node node="roll_E" anim="roll_scroll_E" delay="0.0" speed="1.0" reverse="false" />
+	</anim_ctrl>
+
+	<anim_ctrl loop="false" play="true" delay="0.0" reverse="false">
+		<bind_node node="alpha_0_E" anim="fade_0_E" delay=" 4.77" speed="1.0" reverse="false" />
+	</anim_ctrl>
+
+	<anim_ctrl loop="false" play="true" delay="0.0" reverse="false">
+		<bind_node node="alpha_1_E" anim="fade_1_E" delay=" 23.02" speed="1.0" reverse="false" />
+	</anim_ctrl>
+
+	<anim_ctrl loop="false" play="true" delay="0.0" reverse="false">
+		<bind_node node="alpha_2_E" anim="fade_2_E" delay=" 42.93" speed="1.0" reverse="false" />
+	</anim_ctrl>
+
+	<anim_ctrl loop="false" play="true" delay="0.0" reverse="false">
+		<bind_node node="alpha_3_E" anim="fade_3_E" delay=" 60.97" speed="1.0" reverse="false" />
+	</anim_ctrl>
+
+	<anim_ctrl loop="false" play="true" delay="0.0" reverse="false">
+		<bind_node node="alpha_4_E" anim="fade_4_E" delay=" 75.28" speed="1.0" reverse="false" />
+	</anim_ctrl>
+</root>

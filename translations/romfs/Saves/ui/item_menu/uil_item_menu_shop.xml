@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE root SYSTEM "file://st01/project/acps3/_Programmer/ui/uil.dtd">
+<root pos="40,150">
+	<command load_style="Saves/ui/gen_styles/uis_gen_common.xml"/>
+	<command load_style="Saves/ui/gen_styles/uis_gen_window.xml"/>
+	<node load="Saves/ui/uil_line_format.xml"/>
+	<node name="top" visible="false" viewer_visible="true">
+		<!--メニュー項目の雛形-->
+		<node visible="false">
+			<node name="line_template" clone_child_tree="line_format_menu_column3"/>
+		</node>
+		<!--MENU-->
+		<menu name="item_menu" style="style_menu_column3"/>
+		<!--アイテム名-->
+		<text text="아이템명" font_size="14" pos="114,16"/>
+		<!--所持-->
+		<text text="소지" font_size="14" pos="305,16" color="118,162,160,255"/>
+		<!--価格-->
+		<text text="가격" font_size="14" pos="385,16" color="118,162,160,255"/>
+		<!-- タブ -->
+		<node name="tab" pos="2,-24" load="Saves/ui/item_menu/uil_item_menu_tab.xml"/>
+	</node>
+	<anim_ctrl name="get_in" start_visible="true">
+		<bind_node node="top" speed="1.0" anim="anm_common_fade_in"/>
+	</anim_ctrl>
+	<anim_ctrl name="get_out" end_visible="false">
+		<bind_node node="top" speed="1.0" anim="anm_common_fade_in" reverse="true"/>
+	</anim_ctrl>
+</root>

@@ -1,0 +1,146 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE root SYSTEM "file://st01/project/acps3/_Programmer/ui/uil.dtd">
+<root>
+	<!-- スタイルの読み込み -->
+	<command load_style="Saves/ui/gen_styles/uis_gen_battle.xml"/>
+	<command load_style="Saves/ui/gen_styles/uis_gen_common.xml"/>
+	<command load_style="Saves/ui/gen_styles/uis_gen_window.xml"/>
+	<command load_style="Saves/ui/gen_styles/uis_gen_mainmenu.xml"/>
+	<command load_style="Saves/ui/gen_styles/uis_gen_mix.xml"/>
+	<command load_style="Saves/ui/gen_styles/uis_gen_bios.xml"/>
+	<!-- アニメーションの読み込み -->
+	<command load_anim="Saves/ui/battle/uia_battle.xml"/>
+	<node name="card_temp" pos="0,0,0" visible="false">
+		<node name="card_ura" pos="0,0,0">
+			<image pos="121,-256,0" style="gen_battle14_songcard_off" rot="0,180,0"/>
+		</node>
+		<node name="card_omote" pos="0,0,0">
+			<node pos="-128,-256,0">
+				<image name="card_image" pos="0,0,0" style="gen_battle14_songcard"/>
+				<node scale="0.8, 0.8, 0.8">
+					<!-- アイテム画像の代用 -->
+					<command load_style="Saves/ui/etc/uis_song_list.xml"/>
+					<!-- 詩名 -->
+					<node name="song_name" pos="17,12,0">
+						<image style="gen_common01_name_bg01" size_w="284"/>
+						<text name="song_name_text" text="포이즌 로키 독독" align="center" font_size="20" pos="138,12"/>
+					</node>
+					<!-- 画像 -->
+					<node pos="29,61,0">
+						<!-- 背景 -->
+						<image style="gen_nummber_item_bg01"/>
+						<image name="song_image" style="style_song_list" image_no="0" pos="10,0"/>
+					</node>
+					<!-- 詩詳細情報 -->
+					<node name="song_detail_info" pos="10,310">
+						<image style="gen_common01_win_acce02_bg" pos="0,0" scale="0.924,1.0,1.0"/>
+						<image style="gen_common01_win_acce02_01" pos="0,22" size_w="294"/>
+						<image style="gen_common01_window_acce01" pos="69,4"/>
+						<image style="gen_common01_window_acce01" pos="207,4"/>
+						<!-- ページタイトルテキスト -->
+						<text name="page_title" text="효과" font_size="14" align="center" pos="144,7"/>
+						<text name="song_act_text" text="포이즌 로키 독독" align="center" font_size="20" pos="142,32"/>
+					</node>
+					<node name="song_detail_info" pos="10,370">
+						<image style="gen_common01_win_acce02_bg" pos="0,0" scale="0.924,1.0,1.0"/>
+						<image style="gen_common01_win_acce02_01" pos="0,22" size_w="294"/>
+						<image style="gen_common01_window_acce01" pos="69,4"/>
+						<image style="gen_common01_window_acce01" pos="207,4"/>
+						<!-- ページタイトルテキスト -->
+						<text name="page_title" text="위력" font_size="14" align="center" pos="144,7"/>
+						<image name="p0" style="gen_menu04_song_power" pos="7,23,0"/>
+						<image name="p1" style="gen_menu04_song_power" pos="62,23,0"/>
+						<image name="p2" style="gen_menu04_song_power" pos="119,23,0"/>
+						<image name="p3" style="gen_menu04_song_power" pos="175,23,0"/>
+						<image name="p4" style="gen_menu04_song_power" pos="231,23,0"/>
+					</node>
+					<node name="song_detail_info" pos="10,440">
+						<image style="gen_common01_win_acce02_bg" pos="0,0" scale="0.924,1.0,1.0"/>
+						<image style="gen_common01_win_acce02_01" pos="0,22" size_w="294"/>
+						<image style="gen_common01_window_acce01" pos="69,4"/>
+						<image style="gen_common01_window_acce01" pos="207,4"/>
+						<!-- ページタイトルテキスト -->
+						<text name="page_title" text="사용" font_size="14" align="center" pos="144,7"/>
+						<text name="song_charge_text" text="사용 가능" align="center" font_size="20" pos="142,32"/>
+					</node>
+				</node>
+			</node>
+		</node>
+		<anim_ctrl name="song_select_rot" play="false" speed="1.0" viewer_key_assign="3">
+			<bind_node node="card_omote" anim="song_select_card_rot_omote"/>
+			<bind_node node="card_ura" anim="song_select_card_rot_ura"/>
+		</anim_ctrl>
+	</node>
+	<node name="main" pos="0,0" visible="false">
+		<image pos="55,30,0" style="gen_battle14_songcard_select"/>
+		<image pos="448,560,0" style="gen_common01_bigarrow_l" visible="false"/>
+		<image pos="768,560,0" style="gen_common01_bigarrow_r" visible="false"/>
+		<text name="text_money" pos="594,617,0" text="2/10" font="NUMBER01_26PX" font_size="26" visible="false"/>
+		<!--カード-->
+		<node name="card0" clone_child_tree="card_temp"/>
+		<node name="card1" clone_child_tree="card_temp"/>
+		<node name="card2" clone_child_tree="card_temp"/>
+		<node name="card3" clone_child_tree="card_temp"/>
+		<node name="card4" clone_child_tree="card_temp"/>
+		<node name="card5" clone_child_tree="card_temp"/>
+		<node name="card6" clone_child_tree="card_temp"/>
+		<node name="card7" clone_child_tree="card_temp"/>
+		<node name="card8" clone_child_tree="card_temp"/>
+		<node name="card9" clone_child_tree="card_temp"/>
+		<!--詩詳細情報-->
+		<image name="burst_window" pos="830,65,0" style="gen_window02_05" image_no="1" size_wh="348,400">
+			<node name="label" pos="18,15">
+				<image style="gen_common01_win_acce02_bg" size_w="313">
+					<image style="gen_common01_win_acce02_01" pos="0,22" parent_size_copy_w="true" size_copy_w_offset="5"/>
+					<text text="영창 경향" font_size="13" align="center" pos_ratio_x="0.5" pos="0,7"/>
+				</image>
+				<image style="gen_common01_window_acce01" pos="84,4"/>
+				<image style="gen_common01_window_acce01" pos="216,4"/>
+			</node>
+			<!--詠唱傾向-->
+			<image name="burst_bg" pos="-3,10" style="gen_menu04_song_trend_bg">
+				<node name="chara_node" pos="100,50">
+					<image name="chara_icon" image_no="0" pos="-20,-20" style="gen_bios02_healingicon"/>
+				</node>
+				<node name="chara_node2" pos="100,50">
+					<image name="chara_icon" image_no="0" pos="-20,-20" style="gen_common05_charaicon"/>
+				</node>
+			</image>
+			<node name="label" pos="18,190">
+				<image style="gen_common01_win_acce02_bg" size_w="313">
+					<image style="gen_common01_win_acce02_01" pos="0,22" parent_size_copy_w="true" size_copy_w_offset="5"/>
+					<text text="성격 경향" font_size="13" align="center" pos_ratio_x="0.5" pos="0,7"/>
+				</image>
+				<image style="gen_common01_window_acce01" pos="84,4"/>
+				<image style="gen_common01_window_acce01" pos="216,4"/>
+			</node>
+			<node pos="17,230" name="sm">
+				<image style="gen_window03_bg02" pos="0,0" size_wh="313,37"/>
+				<text name="type_text" pos="8,10,0" text="S 경향:" font_size="18"/>
+				<text name="effect_text" pos="89,10,0" text="あいうえおかきくけこ" font_size="18"/>
+				<image name="song_power0" pos="12,30" style="gen_menu04_song_power"/>
+				<image name="song_power1" pos="70,30" style="gen_menu04_song_power"/>
+				<image name="song_power2" pos="128,30" style="gen_menu04_song_power"/>
+				<image name="song_power3" pos="186,30" style="gen_menu04_song_power"/>
+				<image name="song_power4" pos="244,30" style="gen_menu04_song_power"/>
+			</node>
+			<node pos="17,310" name="io">
+				<image style="gen_window03_bg02" pos="0,0" size_wh="313,37"/>
+				<text name="type_text" pos="8,10,0" text="I 경향:" font_size="18"/>
+				<text name="effect_text" pos="89,10,0" text="あいうえおかきくけこ" font_size="18"/>
+				<image name="song_power0" pos="12,30" style="gen_menu04_song_power"/>
+				<image name="song_power1" pos="70,30" style="gen_menu04_song_power"/>
+				<image name="song_power2" pos="128,30" style="gen_menu04_song_power"/>
+				<image name="song_power3" pos="186,30" style="gen_menu04_song_power"/>
+				<image name="song_power4" pos="244,30" style="gen_menu04_song_power"/>
+			</node>
+		</image>
+		<!-- アニメーション -->
+		<anim_ctrl name="enter" play="false" speed="4.0" start_visible="true" viewer_key_assign="0">
+			<bind_node node="main" anim="common_fade_in"/>
+		</anim_ctrl>
+		<anim_ctrl name="exit" play="false" speed="4.0" end_visible="false" viewer_key_assign="1">
+			<bind_node node="main" anim="common_fade_out"/>
+		</anim_ctrl>
+	</node>
+</root>

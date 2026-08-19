@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE root SYSTEM "file://st01/project/acps3/_Programmer/ui/uil.dtd">
+<root>
+	<!-- スタイルの読み込み -->
+	<command load_style="Saves/ui/gen_styles/uis_gen_common.xml"/>
+	<command load_style="Saves/ui/gen_styles/uis_gen_field.xml"/>
+	<!--
+  <image style="ui_bg_sample" color="128,128,128,255" />
+  -->
+	<node pos="640,138">
+		<image name="fm_map_change_bg" pos="-82,0" style="gen_field03_explanation"/>
+		<text name="fm_map_change_text" pos="0,18.667" align="center" font_size="20" line_char_length="20" line_space="5" text="아"/>
+	</node>
+</root>

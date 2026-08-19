@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE root SYSTEM "file://st01/project/acps3/_Programmer/ui/uil.dtd">
+<root>
+	<command load_style="Saves/ui/gen_styles/uis_gen_common.xml"/>
+	<command load_style="Saves/ui/gen_styles/uis_gen_bios.xml"/>
+	<text pos="600,100" text="회전축 조정 샘플" align="center"/>
+	<!--中心点の丸-->
+	<image pos="584,284" style="gen_common01_new02"/>
+	<!--中心位置-->
+	<node name="arrow" pos="600,300">
+		<!--矢印画像-->
+		<image pos="-13,-150" style="gen_bios01_analysis_pointer"/>
+	</node>
+	<!--回転アニメーション-->
+	<anim_ctrl play="true" loop="true" speed="0.5">
+		<bind_node node="arrow" anim="anm_common_rotate"/>
+	</anim_ctrl>
+</root>

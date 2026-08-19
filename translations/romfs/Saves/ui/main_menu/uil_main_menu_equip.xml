@@ -1,0 +1,375 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<!DOCTYPE root SYSTEM "file://st01/project/acps3/_Programmer/ui/uil.dtd">
+<root>
+    <!-- スタイルの読み込み -->
+    <command load_style="Saves/ui/uis_common.xml" />
+    <command load_style="Saves/ui/gen_styles/uis_gen_common.xml" />
+    <command load_style="Saves/ui/gen_styles/uis_gen_window.xml" />
+    <command load_style="Saves/ui/gen_styles/uis_gen_mainmenu.xml" />
+    <command load_style="Saves/ui/gen_styles/uis_gen_battle.xml" />
+    <command load_style="Saves/ui/main_menu/uis_main_menu.xml" />
+    <command load_style="Saves/ui/samples/image_list/uis_image_list.xml" />
+    <command load_style="Saves/ui/etc/uis_etc_window.xml" />
+    <command load_style="Saves/ui/gen_styles/uis_gen_bath.xml" />
+    <command load_anim="Saves/ui/main_menu/uia_main_menu.xml" />
+    <!--テンプレートを読み込む-->
+    <node load="Saves/ui/uil_template.xml" />
+    <!--トップメニュー-->
+    <node name="menu_top" visible="false" viewer_visible="false" rot="0,-5,0" pos="-1.95,-1.00,0.00">
+        <node name="item01" pos="104.35,128.70">
+            <image size_w="321.75" style="gen_window03_homechoice">
+                <node name="cursor">
+                    <image name="label_on" pos="1.00,1.95" size_w="312.00" style="gen_window03_linecsr01_on" />
+                    <image name="label_over" pos="1.00,1.95" size_w="312.00" style="gen_window03_linecsr01_over" visible="false" />
+                    <node name="roll" pos="7.80,6.80">
+                        <image pos="-31.20,-31.20" style="gen_window03_anime_roll" />
+                    </node>
+                    <anim_ctrl play="true" loop="true">
+                        <bind_node node="roll" anim="anm_common_rotateZ360" />
+                    </anim_ctrl>
+                    <!-- 明滅アニメーション -->
+                    <anim_ctrl play="true" loop="true">
+                        <bind_node node="label_on" anim="anm_common_cursor_blink" />
+                    </anim_ctrl>
+                </node>
+                <text name="caption" pos="26.35,10" text="무기 강화(캐소드)" font_size="16.50" drop_shadow="false" />
+            </image>
+        </node>
+        <node name="item02" pos="120.00,173.55" clone_child_tree="item01" />
+        <command target_node="item02/caption" set_text="시마법 강화(TxBIOS)" />
+        <node name="item03" pos="135.55,218.40" clone_child_tree="item01" />
+        <command target_node="item03/caption" set_text="방어 강화(RNA) ???" />
+        <node name="item04" pos="151.15,263.25" clone_child_tree="item01" />
+        <command target_node="item04/caption" set_text="방어 강화(RNA) ???" />
+        <node name="item05" pos="166.75,308.10" clone_child_tree="item01" />
+        <command target_node="item05/caption" set_text="의상 변경 ???" />
+        <node name="item06" pos="182.35,352.95" clone_child_tree="item01" />
+        <command target_node="item06/caption" set_text="의상 변경 ???" />
+    </node>
+    <!--カソードメニュー-->
+    <node name="menu_cathode" visible="false" viewer_visible="false" pos="1.00,20.50,0.00">
+        <node name="group00" pos="104.35,108.20" rot="0,-5,0">
+            <node name="cathode_item_template" visible="false">
+                <image size_w="316.90" style="gen_window03_homechoice">
+                    <node name="cursor">
+                        <image name="label_on" pos="1.00,1.95" size_w="312.00" style="gen_window03_linecsr01_on" />
+                        <image name="label_over" pos="1.00,1.95" size_w="312.00" style="gen_window03_linecsr01_over" visible="false" />
+                        <node name="roll" pos="7.80,6.80">
+                            <image pos="-31.20,-31.20" style="gen_window03_anime_roll" />
+                        </node>
+                        <anim_ctrl play="true" loop="true">
+                            <bind_node node="roll" anim="anm_common_rotateZ360" />
+                        </anim_ctrl>
+                        <!-- 明滅アニメーション -->
+                        <anim_ctrl play="true" loop="true">
+                            <bind_node node="label_on" anim="anm_common_cursor_blink" />
+                        </anim_ctrl>
+                    </node>
+                    <image name="button_icon" pos="25.35,4.95" style="gen_menu01_buttonicon"  scale="0.9,0.9,0.9"/>
+                    <text name="caption" pos="55.55,10.85" text="캐소드" font_size="16.50" drop_shadow="false" />
+                </image>
+            </node>
+            <command target_node="cathode_item_template/button_icon" set_image_no="3" />
+            <node name="cathode_circle_00" pos="0.00,0.00" clone_child_tree="cathode_item_template" />
+            <node name="cathode_circle_01" pos="9.75,34.15" clone_child_tree="cathode_item_template" />
+            <node name="cathode_circle_02" pos="19.50,68.25" clone_child_tree="cathode_item_template" />
+            <command target_node="cathode_item_template/button_icon" set_image_no="0" />
+            <node name="cathode_triangle_00" pos="0.00,121.85" clone_child_tree="cathode_item_template" />
+            <node name="cathode_triangle_01" pos="9.75,156.00" clone_child_tree="cathode_item_template" />
+            <node name="cathode_triangle_02" pos="19.50,190.15" clone_child_tree="cathode_item_template" />
+            <command target_node="cathode_item_template/button_icon" set_image_no="1" />
+            <node name="cathode_square_00" pos="0.00,243.75" clone_child_tree="cathode_item_template" />
+            <node name="cathode_square_01" pos="9.75,277.85" clone_child_tree="cathode_item_template" />
+            <node name="cathode_square_02" pos="19.50,312.00" clone_child_tree="cathode_item_template" />
+            <command target_node="cathode_item_template/button_icon" set_image_no="2" />
+            <node name="cathode_cross_00" pos="0.00,365.65" clone_child_tree="cathode_item_template" />
+            <node name="cathode_cross_01" pos="9.75,399.7" clone_child_tree="cathode_item_template" />
+            <node name="cathode_cross_02" pos="19.50,433.85" clone_child_tree="cathode_item_template" />
+        </node>
+    </node>
+    <!--TxBIOSメニュー-->
+    <node name="menu_txbios" visible="false" viewer_visible="false" pos="1.00,20.50,0.00">
+        <node name="group00" pos="104.30,108.20" rot="0,-5,0">
+            <node name="bios_item_template" visible="false">
+                <image size_w="316.90" style="gen_window03_homechoice">
+                    <node name="cursor">
+                        <image name="label_on" pos="0.975,1.95" size_w="312.00" style="gen_window03_linecsr01_on" />
+                        <image name="label_over" pos="0.975,1.95" size_w="312.00" style="gen_window03_linecsr01_over" visible="false" />
+                        <node name="roll" pos="7.80,6.80">
+                            <image pos="-31.20,-31.20" style="gen_window03_anime_roll" />
+                        </node>
+                        <anim_ctrl play="true" loop="true">
+                            <bind_node node="roll" anim="anm_common_rotateZ360" />
+                        </anim_ctrl>
+                        <!-- 明滅アニメーション -->
+                        <anim_ctrl play="true" loop="true">
+                            <bind_node node="label_on" anim="anm_common_cursor_blink" />
+                        </anim_ctrl>
+                    </node>
+                    <image name="button_icon" pos="25.35,3.90" style="gen_menu01_e_lvicon" />
+                    <text name="caption" pos="68.25,10.85" text="TxBIOS" font_size="16.50" drop_shadow="false" />
+                </image>
+            </node>
+            <command target_node="bios_item_template/button_icon" set_image_no="0" />
+            <node name="txbios_circle_00" pos="0.00,0.00" clone_child_tree="bios_item_template" />
+            <node name="txbios_circle_01" pos="9.75,34.15" clone_child_tree="bios_item_template" />
+            <node name="txbios_circle_02" pos="19.50,68.25" clone_child_tree="bios_item_template" />
+            <command target_node="bios_item_template/button_icon" set_image_no="1" />
+            <node name="txbios_triangle_00" pos="0.00,121.85" clone_child_tree="bios_item_template" />
+            <node name="txbios_triangle_01" pos="9.75,156.00" clone_child_tree="bios_item_template" />
+            <node name="txbios_triangle_02" pos="19.50,190.15" clone_child_tree="bios_item_template" />
+            <command target_node="bios_item_template/button_icon" set_image_no="2" />
+            <node name="txbios_square_00" pos="0.00,243.75" clone_child_tree="bios_item_template" />
+            <node name="txbios_square_01" pos="9.75,277.85" clone_child_tree="bios_item_template" />
+            <node name="txbios_square_02" pos="19.50,312.00" clone_child_tree="bios_item_template" />
+            <command target_node="bios_item_template/button_icon" set_image_no="3" />
+            <node name="txbios_cross_00" pos="0.00,365.65" clone_child_tree="bios_item_template" />
+            <node name="txbios_cross_01" pos="9.75,399.75" clone_child_tree="bios_item_template" />
+            <node name="txbios_cross_02" pos="19.50,433.85" clone_child_tree="bios_item_template" />
+        </node>
+    </node>
+    <!--RNAメニュー-->
+    <node name="menu_rna" visible="false" viewer_visible="false" pos="1.00,20.50,0.00">
+        <node name="group00" pos="104.30,108.20" rot="0,-5,0">
+            <node name="rnd_item_template" visible="false">
+                <image size_w="316.85" style="gen_window03_homechoice">
+                    <node name="cursor">
+                        <image name="label_on" pos="0.975,1.95" size_w="312.00" style="gen_window03_linecsr01_on" />
+                        <image name="label_over" pos="0.975,1.95" size_w="312.00" style="gen_window03_linecsr01_over" visible="false" />
+                        <node name="roll" pos="7.80,6.80">
+                            <image pos="-31.20,-31.20" style="gen_window03_anime_roll" />
+                        </node>
+                        <anim_ctrl play="true" loop="true">
+                            <bind_node node="roll" anim="anm_common_rotateZ360" />
+                        </anim_ctrl>
+                        <!-- 明滅アニメーション -->
+                        <anim_ctrl play="true" loop="true">
+                            <bind_node node="label_on" anim="anm_common_cursor_blink" />
+                        </anim_ctrl>
+                    </node>
+                    <text name="caption" pos="29.25,10.85" text="가소도 아이우에오카" font_size="16.50" drop_shadow="false" />
+                </image>
+            </node>
+            <node name="rna00" pos="0.00,0.00" clone_child_tree="rnd_item_template" />
+            <node name="rna01" pos="0.00,39.00" clone_child_tree="rnd_item_template" />
+            <node name="rna02" pos="0.00,78.00" clone_child_tree="rnd_item_template" />
+            <node name="rna03" pos="0.00,117.00" clone_child_tree="rnd_item_template" />
+        </node>
+    </node>
+    <!--衣装メニュー-->
+    <node name="menu_costume" pos="103.35,126.75,0.00" rot="0,-5,0" visible="false" viewer_visible="true">
+        <node visible="false">
+            <node name="line_format_menu_costume">
+                <image name="equip_icon" pos="236.60,-5.85" style="gen_common01_installicon" />
+                <text pos="0.00,0.00" name="item_text01" text="아이템명 가나다라" font_size="16.50" />
+            </node>
+        </node>
+        <menu name="menu_costume_inner" size_w="345.80" style="style_menu_column1_costume" disp_scroll_bar="true" disp_lines="10">
+            <node clone_tree="line_format_menu_costume" />
+        </menu>
+        <command target_node="menu_costume_inner/__uimenu_window" set_image_no="1" />
+        <text pos="171.75,15.00" text="의상명" font_size="14" align="center" />
+    </node>
+    <node name="pivot1" pos="1170.00,0.00" rot="0,5,0">
+        <node name="pivot2" pos="-1170.00,0.00">
+            <!--付与効果一覧-->
+            <node name="effect_window" visible="false" viewer_visible="false">
+                <image pos="780.00,78.0" size_wh="356.85,516.75" style="gen_window01_02">
+                    <node name="companion0" pos="219.35,-3.90">
+                        <image name="face_image" pos="-112.15,10.75" style="gen_menu02_equipchara" />
+                        <image pos="-205.75,12.65" style="gen_common01_name_bg01" size_w="224.25">
+                            <text name="name" text="캐스" align="center" font_size="15.00" pos="113.1,11.70" />
+                        </image>
+                    </node>
+                    <image style="gen_menu01_status_lv" pos="13.65,52.65">
+                        <text name="lv" pos="50.70,12.65" text="09" copy="NUMBER01_20PX" />
+                    </image>
+                    <image style="gen_window03_bg02" pos="6.00,106.25" size_wh="341.25,76.05" />
+                    <node name="label" pos="6.80,81.75">
+                        <image style="gen_common01_win_acce02_bg" size_w="341.25" />
+                        <image style="gen_common01_win_acce02_01" pos="0.00,21.45" size_w="345.15" />
+                        <image style="gen_common01_window_acce01" pos="101.40,3.90" />
+                        <image style="gen_common01_window_acce01" pos="235.00,3.90" />
+                        <text name="page_title" text="부여 효과 목록" font_size="9.75" align="center" pos="172.55,6.80" />
+                    </node>
+                    <text pos="32.15,141.40" text="[     ] 부여 효과" align="left" font_size="18.00" drop_shadow="false">
+                        <image name="button_icon_cathode" pos="9.5,-5.50" style="gen_menu01_buttonicon" />
+                        <image name="button_icon_TxBIOS" pos="4.75,-4.00" style="gen_menu01_e_lvicon" scale="0.9,0.9,0.9"/>
+                    </text>
+                    <node name="eff_name_list" pos="32.15,124.80">
+                        <text pos="0.00,61.40" text="가나다순" align="left" font_size="15.00" drop_shadow="false" />
+                        <text pos="0.00,88.40" text="가나다순" align="left" font_size="15.00" drop_shadow="false" />
+                        <text pos="0.00,115.40" text="가나다순" align="left" font_size="15.00" drop_shadow="false" />
+                        <text pos="0.00,142.40" text="가나다순" align="left" font_size="15.00" drop_shadow="false" />
+                        <text pos="0.00,169.40" text="가나다순" align="left" font_size="15.00" drop_shadow="false" />
+                        <text pos="0.00,196.40" text="가나다순" align="left" font_size="15.00" drop_shadow="false" />
+                        <text pos="0.00,223.40" text="가나다순" align="left" font_size="15.00" drop_shadow="false" />
+                        <text pos="0.00,250.40" text="가나다순" align="left" font_size="15.00" drop_shadow="false" />
+                        <text pos="0.00,277.40" text="가나다순" align="left" font_size="15.00" drop_shadow="false" />
+                        <text pos="0.00,304.40" text="가나다순" align="left" font_size="15.00" drop_shadow="false" />
+                        <text pos="0.00,331.40" text="가나다순" align="left" font_size="15.00" drop_shadow="false" />
+                        <text pos="0.00,385.40" text="가나다순" align="left" font_size="15.00" drop_shadow="false" />
+                    </node>
+                    <node pos="0.00,124.80">
+                        <image style="gen_window03_bg02" pos="7.80,58.50" size_wh="341.25,26.35" />
+                        <image style="gen_window03_bg02" pos="7.80,85.50" size_wh="341.25,26.35" />
+                        <image style="gen_window03_bg02" pos="7.80,112.50" size_wh="341.25,26.35" />
+                        <image style="gen_window03_bg02" pos="7.80,139.50" size_wh="341.25,26.35" />
+                        <image style="gen_window03_bg02" pos="7.80,166.50" size_wh="341.25,26.35" />
+                        <image style="gen_window03_bg02" pos="7.80,193.50" size_wh="341.25,26.35" />
+                        <image style="gen_window03_bg02" pos="7.80,220.50" size_wh="341.25,26.35" />
+                        <image style="gen_window03_bg02" pos="7.80,247.50" size_wh="341.25,26.35" />
+                        <image style="gen_window03_bg02" pos="7.80,274.50" size_wh="341.25,26.35" />
+                        <image style="gen_window03_bg02" pos="7.80,301.50" size_wh="341.25,26.35" />
+                        <image style="gen_window03_bg02" pos="7.80,328.50" size_wh="341.25,26.35" />
+                        <image style="gen_window03_bg02" pos="7.80,355.50" size_wh="341.25,26.35" />
+                    </node>
+                </image>
+            </node>
+            <node name="param_diff_template" visible="false">
+                <text name="down" text="-99" pos="331.50,12.65" word_space="-5" font="E_DOWN" align="right" />
+                <text name="up" text="+99" pos="331.50,12.65" word_space="-5" font="E_UP" align="right" />
+            </node>
+            <node name="param_gauge_template" visible="false">
+                <node>
+                    <text name="label" pos="16.55,5.85" align="left" text="내구도" drop_shadow="false" font_size="15.00">
+                        <text name="value" pos="185.25,7.80" drop_shadow="false" align="right" text="9009" copy="NUMBER01_20PX" />
+                        <image pos="190.15,4.85" style="gen_menu01_hpgauge01_bg">
+                            <image name="value_gauge" style="gen_menu01_hpgauge01" />
+                        </image>
+                    </text>
+                    <node name="param_diff" clone_child_tree="param_diff_template" />
+                </node>
+            </node>
+            <!--男性用ステータス-->
+            <node name="status_man" visible="false" viewer_visible="false" pos="780.00,78.00">
+                <image name="status_base" size_wh="356.85,516.75" style="gen_window01_02">
+                    <node name="companion0" pos="219.35,-3.90">
+                        <image name="face_image" pos="-112.15,10.75" style="gen_menu02_equipchara" />
+                        <image pos="-205.75,12.65" style="gen_common01_name_bg01" size_w="224.25">
+                            <text name="name" text="캐스" align="center" font_size="15.00" pos="113.10,11.70" />
+                        </image>
+                    </node>
+                    <image style="gen_menu01_status_lv" pos="13.65,52.65">
+                        <text name="lv" pos="50.70,12.65" text="09" copy="NUMBER01_20PX" />
+                    </image>
+                    <image style="gen_window03_bg02" pos="7.80,105.65" size_wh="341.25,32.15" />
+                    <node name="label" pos="6.85,106.25">
+                        <image style="gen_common01_win_acce02_bg" size_w="262.50" />
+                        <image style="gen_common01_win_acce02_01" pos="0.00,21.45" size_w="345.15" />
+                        <image style="gen_common01_window_acce01" pos="101.40,3.90" />
+                        <image style="gen_common01_window_acce01" pos="235.00,3.90" />
+                        <text name="page_title" text="영향 정보" font_size="9.75" align="center" pos="172.55,10.75" />
+                    </node>
+                    <node pos="0.00,105.00">
+                        <image style="gen_window03_bg02" pos="7.80,0.00" size_wh="341.25,33.15" />
+                        <image style="gen_window03_bg02" pos="7.80,34.40" size_wh="341.25,33.15" />
+                        <image style="gen_window03_bg02" pos="7.80,68.80" size_wh="341.25,33.15" />
+                        <image style="gen_window03_bg02" pos="7.80,103.20" size_wh="341.25,33.15" />
+                        <image style="gen_window03_bg02" pos="7.80,137.60" size_wh="341.25,33.15" />
+                        <image style="gen_window03_bg02" pos="7.80,172.00" size_wh="341.25,33.15" />
+                        <image style="gen_window03_bg02" pos="7.80,206.40" size_wh="341.25,33.15" />
+                        <image style="gen_window03_bg02" pos="7.80,240.80" size_wh="341.25,33.15" />
+                        <image style="gen_window03_bg02" pos="7.80,275.20" size_wh="341.25,33.15" />
+                        <image style="gen_window03_bg02" pos="7.80,309.60" size_wh="341.25,33.15" />
+                        <image style="gen_window03_bg02" pos="7.80,344.00" size_wh="341.25,33.15" />
+                    </node>
+                </image>
+                <node pos="0.00,0.00,0.00">
+                    <node name="action_point" pos="0.00,136.50" clone_child_tree="param_gauge_template" />
+                    <node name="attack" pos="0.00,170.65" clone_child_tree="param_gauge_template" />
+                    <node name="def" pos="0.00,204.75" clone_child_tree="param_gauge_template" />
+                    <node name="burst" pos="0.00,238.85" clone_child_tree="param_gauge_template" />
+                    <command target_node="action_point/label" set_text="행동 턴 수" />
+                    <command target_node="attack/label" set_text="공격력" />
+                    <command target_node="def/label" set_text="방어력" />
+                    <command target_node="burst/label" set_text="버스트 보정" />
+                </node>
+            </node>
+            <!--女性用ステータス-->
+            <node name="status_woman" visible="false" viewer_visible="false" pos="780.00,78.00">
+                <node clone_tree="status_base" />
+                <node>
+                    <node name="hp" pos="0.00,136.50" clone_child_tree="param_gauge_template" />
+                    <node name="def" pos="0.00,170.60" clone_child_tree="param_gauge_template" />
+                    <node name="power_offset" pos="0.00,204.75" clone_child_tree="param_gauge_template" />
+                    <node name="reload" pos="0.00,238.85" clone_child_tree="param_gauge_template" />
+                    <node name="recharge" pos="0.00,273.00" clone_child_tree="param_gauge_template" />
+                    <command target_node="hp/label" set_text="내구도" />
+                    <command target_node="def/label" set_text="방어력" />
+                    <command target_node="power_offset/label" set_text="위력 보정" />
+                    <command target_node="reload/label" set_text="충전 속도" />
+                    <command target_node="recharge/label" set_text="배리어 재생량" />
+                </node>
+            </node>
+            <!--衣装情報-->
+            <node name="info_costume" pos="429.00,109.00,0.00" visible="false" viewer_visible="true">
+                <!-- 下地画像 -->
+                <image name="base_window" style="etc_window02_04" image_no="1" size_wh="717.50,450.50" />
+                <image pos="17.55,21.45" style="gen_common01_win_acce02_bg" size_w="684.50" />
+                <image pos="17.55,43.00" style="gen_common01_win_acce02_01" size_w="686.00" />
+                <image style="gen_common01_window_acce01" pos="227.15,26.30" />
+                <image style="gen_common01_window_acce01" pos="484.00,26.30" />
+                <!-- ページタイトルテキスト -->
+                <text name="costume_name" text="설명" font_size="14" align="center" pos="360.75,27" />
+                <image pos="19.50,49.75" style="gen_common03_image_bg">
+                    <image name="image_delta" pos="20.50,6.80" style="gen_menu08_image01" />
+                    <image name="image_casty" pos="20.50,6.80" style="gen_menu08_image02" />
+                    <image name="image_avatar" pos="20.50,6.80" style="gen_menu08_image03" />
+                    <image name="image_ion" pos="20.50,6.80,0.00" style="gen_menu08_image04" />
+                </image>
+                <!-- ページ背景画像 -->
+                <node pos="372.25,53.50">
+                    <image name="bg02_org" style="gen_window03_bg02" size_wh="327.50,30.25" />
+                    <image style="gen_window03_bg02" pos="0.00,33.00" copy="bg02_org" />
+                    <image style="gen_window03_bg02" pos="0.00,64.00" copy="bg02_org" />
+                    <image style="gen_window03_bg02" pos="0.00,95.00" copy="bg02_org" />
+                    <image style="gen_window03_bg02" pos="0.00,126.00" copy="bg02_org" />
+                    <image style="gen_window03_bg02" pos="0.00,157.00" copy="bg02_org" />
+                    <image style="gen_window03_bg02" pos="0.00,188.00" copy="bg02_org" />
+                    <image style="gen_window03_bg02" pos="0.00,219.00" copy="bg02_org" />
+                    <image style="gen_window03_bg02" pos="0.00,250.00" copy="bg02_org" />
+                    <image style="gen_window03_bg02" pos="0.00,281.00" copy="bg02_org" />
+                    <image style="gen_window03_bg02" pos="0.00,312.00" copy="bg02_org" />
+                    <image style="gen_window03_bg02" pos="0.00,343.00" copy="bg02_org" />
+                    <text name="costume_explain" pos="19.50,9.75" text="아이우에오카키쿠케코사시스세소타치츠테토아이우에오카키쿠케코사시스세소타치츠테토아이우에오카키쿠케코사시스세소토&lt;CR&gt;" drop_shadow="false" limit_width="300" font_size="19.00" line_space="14.2" />
+                </node>
+            </node>
+        </node>
+    </node>
+    <node name="arrows" visible="false" viewer_visible="false">
+        <image pos="37.50,228.75,0.00" flick_time="0.2" style="gen_common01_bigarrow_l" />
+        <image pos="1130,228.75,0.00" flick_time="0.2" style="gen_common01_bigarrow_r" />
+    </node>
+    <anim_ctrl name="get_in_menu_top" viewer_key_assign="2" start_visible="true">
+        <bind_node node="menu_top" anim="anm_common_fade_in" />
+    </anim_ctrl>
+    <anim_ctrl name="get_in_arrows" viewer_key_assign="2" start_visible="true">
+        <bind_node node="arrows" anim="anm_common_fade_in" />
+    </anim_ctrl>
+    <anim_ctrl name="get_in_menu_cathode" viewer_key_assign="3" start_visible="true">
+        <bind_node node="menu_cathode" anim="anm_common_fade_in" />
+    </anim_ctrl>
+    <anim_ctrl name="get_in_menu_txbios" viewer_key_assign="3" start_visible="true">
+        <bind_node node="menu_txbios" anim="anm_common_fade_in" />
+    </anim_ctrl>
+    <anim_ctrl name="get_in_menu_rna" viewer_key_assign="7" start_visible="true">
+        <bind_node node="menu_rna" anim="anm_common_fade_in" />
+    </anim_ctrl>
+    <anim_ctrl name="get_in_menu_costume" viewer_key_assign="8" start_visible="true">
+        <bind_node node="menu_costume" anim="anm_mainmenu_fade_in" />
+    </anim_ctrl>
+    <anim_ctrl name="get_in_effect_window" viewer_key_assign="4" start_visible="true">
+        <bind_node node="effect_window" anim="anm_common_fade_in" />
+    </anim_ctrl>
+    <anim_ctrl name="get_in_status_man" viewer_key_assign="5" start_visible="true">
+        <bind_node node="status_man" anim="anm_common_fade_in" />
+    </anim_ctrl>
+    <anim_ctrl name="get_in_status_woman" viewer_key_assign="6" start_visible="true">
+        <bind_node node="status_woman" anim="anm_common_fade_in" />
+    </anim_ctrl>
+    <anim_ctrl name="get_in_info_costume" viewer_key_assign="8" start_visible="true">
+        <bind_node node="info_costume" anim="anm_mainmenu_fade_in" />
+    </anim_ctrl>
+    <image style="ui_bg_sample" color="255,128,128,96" visible="false" viewer_visible="false" />
+</root>

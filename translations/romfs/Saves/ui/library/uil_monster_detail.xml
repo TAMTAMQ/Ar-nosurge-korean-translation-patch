@@ -1,0 +1,139 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE root SYSTEM "file://st01/project/acps3/_Programmer/ui/uil.dtd">
+<root>
+	<!-- スタイルの読み込み -->
+	<command load_style="Saves/ui/gen_styles/uis_gen_common.xml"/>
+	<command load_style="Saves/ui/gen_styles/uis_gen_window.xml"/>
+	<command load_style="Saves/ui/gen_styles/uis_gen_mix.xml"/>
+	<command load_style="Saves/ui/etc/uis_etc_window.xml"/>
+	<command load_style="Saves/ui/etc/uis_monster_list.xml"/>
+	<node load="Saves/ui/uil_template.xml"/>
+	<image style="ui_bg_sample" visible="false" viewer_visible="true"/>
+	<node pos="1200,0" rot="0,5,0">
+		<node name="right_window_group" pos="-1200,0">
+			<node name="monster_info" pos="465,65,0">
+				<!-- 下地画像 -->
+				<image name="base_window" style="etc_window02_04" size_wh="344,561" image_no="1">
+					<!-- アイテム名 -->
+					<node name="item_neme" pos="33,24">
+						<image style="gen_common01_name_bg01" size_w="284"/>
+						<text name="text_title" text="포이즌 로키 독독" align="center" font_size="20" pos="138,12"/>
+					</node>
+					<!-- 画像 -->
+					<node pos="29,55">
+						<!-- 背景 -->
+						<image style="gen_nummber_item_bg01" pos="20,17,0" size_wh="248,234">
+							<!-- 画像 -->
+							<image name="image_monster" style="style_monster_list" image_no="0" pos="5,3,0" size_wh="238,221"/>
+						</image>
+					</node>
+					<!-- 詳細情報 -->
+					<node name="monster_detail_info" pos="18,20">
+						<image style="gen_common01_win_acce02_bg" parent_size_copy_w="true" size_copy_w_offset="-31" pos="0,287,0">
+							<image style="gen_common01_win_acce02_01" pos="0,22" parent_size_copy_w="true"/>
+							<node pos_ratio_x="0.5" pos="0,4">
+								<image style="gen_common01_window_acce01" pos="-75,0"/>
+								<image style="gen_common01_window_acce01" pos="63,0"/>
+								<!-- ページタイトルテキスト -->
+								<text text="몬스터 설명" font_size="14" align="center" pos="0,3"/>
+							</node>
+						</image>
+						<!-- ページ背景画像 -->
+						<node pos="0,315">
+							<image style="gen_window03_bg02" pos="0,1" size_wh="310,26" name="wnd_bg_black1"/>
+							<image style="gen_window03_bg02" pos="0,30" copy="wnd_bg_black1"/>
+							<image style="gen_window03_bg02" pos="0,60" copy="wnd_bg_black1"/>
+							<image style="gen_window03_bg02" pos="0,88" copy="wnd_bg_black1"/>
+							<image style="gen_window03_bg02" pos="0,117" copy="wnd_bg_black1"/>
+							<image style="gen_window03_bg02" pos="0,146" copy="wnd_bg_black1"/>
+							<image style="gen_window03_bg02" pos="0,175" copy="wnd_bg_black1"/>
+							<node name="page_note" pos="-10,0">
+								<text limit_width="360" name="text_note" text="아이우에오카키쿠케코사시스세소타치츠테토나니누네노하히후헤호마미무메모야유요라리루레로와오응안이우이어가기구계기좌지촌세" line_char_length="15" font_size="18" pos="23,7.667,0" line_space="14.2" word_space="1.45"/>
+							</node>
+							<node name="page_status">
+								<text limit_width="320" text="" font_size="21" pos="8,3" line_space="9.8"/>
+							</node>
+						</node>
+						<!-- ページ本体ぶら下げ用ノード -->
+						<node name="info_page_list" pos="0,30"/>
+					</node>
+				</image>
+				<!-- 右側 -->
+				<!-- 下地画像 -->
+				<image name="base_window" style="etc_window02_04" size_wh="389,561" pos="327,0,0" image_no="1">
+					<image style="gen_common01_win_acce02_bg" parent_size_copy_w="true" size_copy_w_offset="-31" pos="17,20,0">
+						<image style="gen_common01_win_acce02_01" pos="0,22" parent_size_copy_w="true"/>
+						<node pos_ratio_x="0.5" pos="0,4">
+							<image style="gen_common01_window_acce01" pos="-75,0"/>
+							<image style="gen_common01_window_acce01" pos="63,0"/>
+							<!-- ページタイトルテキスト -->
+							<text text="파라미터" font_size="14" align="center" pos="0,3"/>
+						</node>
+					</image>
+					<node pos="19,50">
+						<image style="gen_window03_bg02" size_wh="354,40" name="wnd_bg_black2">
+							<text text="HP" pos="15,6"/>
+							<text name="text_param_hp" text="999" copy="NUMBER01_24PX" pos="335,16" align="right"/>
+						</image>
+						<image pos="0,42" copy="wnd_bg_black2">
+							<text text="공격력" pos="15,6"/>
+							<text name="text_param_atk" text="999" copy="text_param_hp"/>
+						</image>
+						<image pos="0,84" copy="wnd_bg_black2">
+							<text text="방어력" pos="15,6"/>
+							<text name="text_param_def" text="999" copy="text_param_hp"/>
+						</image>
+						<image pos="0,126" copy="wnd_bg_black2">
+							<text text="브레이크" pos="15,6"/>
+							<text name="text_param_break" text="999" copy="text_param_hp"/>
+						</image>
+						<image pos="0,168" copy="wnd_bg_black2">
+							<text text="공격 횟수" pos="15,6"/>
+							<text name="text_param_atknum" text="999" copy="text_param_hp"/>
+						</image>
+						<image pos="0,210" copy="wnd_bg_black2">
+							<text text="경험치" pos="15,6"/>
+							<text name="text_param_exp" text="999" copy="text_param_hp"/>
+						</image>
+						<image pos="0,252" copy="wnd_bg_black2">
+							<text text="소지금" pos="15,6"/>
+							<text name="text_param_ct" text="999" copy="text_param_hp"/>
+						</image>
+					</node>
+					<image style="gen_common01_win_acce02_bg" parent_size_copy_w="true" size_copy_w_offset="-31" pos="17,345,0">
+						<image style="gen_common01_win_acce02_01" pos="0,22" parent_size_copy_w="true"/>
+						<node pos_ratio_x="0.5" pos="0,4">
+							<image style="gen_common01_window_acce01" pos="-75,0"/>
+							<image style="gen_common01_window_acce01" pos="63,0"/>
+							<!-- ページタイトルテキスト -->
+							<text text="드롭 아이템" font_size="14" align="center" pos="2,3"/>
+						</node>
+					</image>
+					<node pos="19,373">
+						<image style="gen_window03_bg02" size_wh="354,40" name="wnd_bg_black2">
+							<text name="text_drop0" pos="177,6" align="center"/>
+						</image>
+					</node>
+					<node pos="19,416">
+						<image style="gen_window03_bg02" size_wh="354,40" name="wnd_bg_black2">
+							<text name="text_drop1" pos="177,6" align="center"/>
+						</image>
+					</node>
+					<node pos="19,459">
+						<image style="gen_window03_bg02" size_wh="354,40" name="wnd_bg_black2">
+							<text name="text_drop2" pos="177,6" align="center"/>
+						</image>
+					</node>
+					<node pos="19,502">
+						<image style="gen_window03_bg02" size_wh="354,40" name="wnd_bg_black2">
+							<text name="text_drop3" pos="177,6" align="center"/>
+						</image>
+					</node>
+				</image>
+			</node>
+		</node>
+	</node>
+	<anim_ctrl name="get_in" start_visible="true">
+		<bind_node node="monster_info" speed="2.0" anim="anm_common_fade_in"/>
+	</anim_ctrl>
+</root>

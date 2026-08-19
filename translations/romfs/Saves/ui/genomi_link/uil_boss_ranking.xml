@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE root SYSTEM "file://st01/project/acps3/_Programmer/ui/uil.dtd">
+<root>
+	<!-- スタイルの読み込み -->
+	<command load_style="Saves/ui/gen_styles/uis_gen_common.xml"/>
+	<command load_style="Saves/ui/gen_styles/uis_gen_window.xml"/>
+	<command load_style="Saves/ui/gen_styles/uis_gen_mix.xml"/>
+	<command load_style="Saves/ui/etc/uis_etc_window.xml"/>
+	<command load_style="Saves/ui/gen_styles/uis_gen_network.xml"/>
+	<command load_style="Saves/ui/uis_common.xml"/>
+	<image style="ui_bg_sample" visible="false"/>
+	<node name="rank_data">
+		<text name="rank" font="NUMBER01_26PX" word_space="1" align="right" text="01" pos_ratio_x="1" pos="115,0" drop_shadow="false" color="70,145,140,255"/>
+		<text name="name" text="WWWWWWWWWWWWWWWW" pos="138,-5,0" font_size="16"/>
+		<text name="point" text="23,456,789,012" pos="605,-7,0" font_size="20" align="right"/>
+		<text name="pt" text="pt" pos="607,-7,0" font_size="20" align="left"/>
+	</node>
+	<node pos="0,100,0" visible="true">
+		<image style="gen_network01_bg" size_h="525" color="255,255,255,180"/>
+		<text name="name" text="■모태상관에 입힌 데미지 랭킹" pos="138,10,0" font_size="18.667"/>
+		<!-- 左 -->
+		<node name="rank_data01" pos="42,49,0" clone_tree="rank_data"/>
+		<node name="rank_data02" pos="42,97,0" clone_tree="rank_data"/>
+		<node name="rank_data03" pos="42,145,0" clone_tree="rank_data"/>
+		<node name="rank_data04" pos="42,193,0" clone_tree="rank_data"/>
+		<node name="rank_data05" pos="42,241,0" clone_tree="rank_data"/>
+		<node name="rank_data06" pos="42,289,0" clone_tree="rank_data"/>
+		<node name="rank_data07" pos="42,337,0" clone_tree="rank_data"/>
+		<node name="rank_data08" pos="42,385,0" clone_tree="rank_data"/>
+		<node name="rank_data09" pos="42,433,0" clone_tree="rank_data"/>
+		<node name="rank_data10" pos="42,481,0" clone_tree="rank_data"/>
+		<!-- 右上 -->
+		<node pos="700,51">
+			<!-- 下地画像 -->
+			<image name="base_window" style="gen_window01_01" size_wh="457,300"/>
+			<!-- 用語名 -->
+			<node name="item_neme" pos="43,21">
+				<image style="gen_common01_name_bg01" size_wh="391,41" pos="-3,3,0"/>
+				<text name="name_text" text="모태상관 정보" align="center" font_size="18.667" pos="188,17,0"/>
+			</node>
+			<node name="page2">
+				<!-- 背景画像 -->
+				<node name="bg_line" pos="20,91">
+					<image style="gen_window03_bg02" pos="0,0" size_wh="420,30"/>
+					<image style="gen_window03_bg02" pos="0,31" size_wh="420,30"/>
+					<image style="gen_window03_bg02" pos="0,62" size_wh="420,30"/>
+					<image style="gen_window03_bg02" pos="0,93" size_wh="420,30"/>
+					<image style="gen_window03_bg02" pos="0,124" size_wh="420,30"/>
+					<image style="gen_window03_bg02" pos="0,155" size_wh="420,30"/>
+				</node>
+				<!-- テキスト -->
+				<node pos="30,98.667,0">
+					<text font_size="20" pos="0,0,0" text="모태상관의 현재 HP"/>
+					<text font_size="20" pos="400,0,0" text="123456789012" align="right" name="text_boss_hp"/>
+				</node>
+				<node pos="30,129.667,0">
+					<text font_size="20" pos="0,0,0" text="당신이 입힌 데미지"/>
+					<text font_size="20" pos="400,0,0" text="123456789012" align="right" name="text_damage"/>
+				</node>
+				<node pos="30,160.667,0">
+					<text font_size="20" pos="0,0,0" text="데미지 순위"/>
+					<text font_size="20" pos="400,0,0" text="123456789012" align="right" name="text_damage_rank"/>
+				</node>
+				<node pos="30,191.667,0">
+					<text font_size="20" pos="0,0,0" text="전투 횟수"/>
+					<text font_size="20" pos="400,0,0" text="123456789012" align="right" name="text_num"/>
+				</node>
+				<node pos="30,222.667,0">
+					<text font_size="20" pos="0,0,0" text="횟수 순위"/>
+					<text font_size="20" pos="400,0,0" text="123456789012" align="right" name="text_num_rank"/>
+				</node>
+				<node pos="30,253.667,0">
+					<text font_size="20" pos="0,0,0" text="지난 전투 일시"/>
+					<text font_size="20" pos="400,0,0" text="12/31 12:34" align="right" name="text_time"/>
+				</node>
+			</node>
+		</node>
+	</node>
+	<command target_node="rank_data" set_visible="false"/>
+</root>

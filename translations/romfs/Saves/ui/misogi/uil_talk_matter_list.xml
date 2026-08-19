@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE root SYSTEM "file://st01/project/acps3/_Programmer/ui/uil.dtd">
+<root>
+	<!-- スタイルの読み込み -->
+	<command load_style="Saves/ui/etc/uis_item_list.xml"/>
+	<command load_style="Saves/ui/gen_styles/uis_gen_common.xml"/>
+	<!--
+  <image style="ui_bg_sample" color="128,128,128,255" />
+  -->
+	<!-- 項目のテンプレート -->
+	<node visible="false">
+		<node name="menu_item_template" pos="0,0">
+			<text name="item_text" text="가나다순" align="left" font_size="22"/>
+			<node name="item_new" visible="false">
+				<image name="item_new01" pos="-38.667,-11" flick_time="0.2" style="gen_common01_new01"/>
+			</node>
+		</node>
+	</node>
+	<!-- メニュー本体 -->
+	<!--
+  <menu style="default_menu" name="menu" pos="60,90" disp_lines="9" size_w="450" disp_scroll_bar="true"/>
+  -->
+	<node name="menu_all">
+		<menu style="style_menu_column1" name="menu" pos="60,90" disp_lines="9" size_w="450" disp_scroll_bar="true"/>
+		<text text="대화 내용" pos="284,107" align="center" font_size="14"/>
+	</node>
+	<!-- フェードアニメーション -->
+	<anim_ctrl name="fade_in" play="false" loop="false">
+		<bind_node node="menu_all" anim="anm_common_fade_in"/>
+	</anim_ctrl>
+	<anim_ctrl name="fade_out" play="false" loop="false">
+		<bind_node node="menu_all" anim="anm_common_fade_in" reverse="true"/>
+	</anim_ctrl>
+</root>

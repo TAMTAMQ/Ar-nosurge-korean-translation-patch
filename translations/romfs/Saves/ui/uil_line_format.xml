@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE root SYSTEM "file://st01/project/acps3/_Programmer/ui/uil.dtd">
+<!--
+	汎用メニューの定型行を定義している
+-->
+<root>
+	<node visible="false">
+		<!--
+			style_menu_column1用の行フォーマット
+		-->
+		<node name="line_format_menu_column1">
+			<!--NEW-->
+			<image name="new" pos="-10,-12" style="gen_common01_new01">
+				<!--NEW文字の左側の光-->
+				<image name="new_light" pos="-21,-7" style="gen_common01_new02"/>
+				<anim_ctrl play="true" loop="true">
+					<bind_node node="new_light" anim="anm_common_cursor_blink"/>
+				</anim_ctrl>
+			</image>
+			<text name="item_text01" text="아이템명 아이우에오" font_size="22"/>
+		</node>
+		<!--
+			style_menu_column2用の行フォーマット
+		-->
+		<node name="line_format_menu_column2" clone_child_tree="line_format_menu_column1">
+			<text name="item_text02" font="NUMBER01_22PX" font_size="22" align="right" text="99" pos_ratio_x="1" pos="-62,10" drop_shadow="false"/>
+		</node>
+		<!--
+			style_menu_column3用の行フォーマット
+		-->
+		<node name="line_format_menu_column3" clone_child_tree="line_format_menu_column1">
+			<text name="item_text02" font="NUMBER01_22PX" font_size="22" align="right" text="99" pos_ratio_x="1" pos="-165,10" drop_shadow="false"/>
+			<text name="item_text03" font="NUMBER01_22PX" word_space="1" align="right" text="99999" pos_ratio_x="1" pos="-55,10" drop_shadow="false"/>
+		</node>
+	</node>
+</root>

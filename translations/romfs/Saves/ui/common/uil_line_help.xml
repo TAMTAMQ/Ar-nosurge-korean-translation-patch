@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE root SYSTEM "file://st01/project/acps3/_Programmer/ui/uil.dtd">
+<root>
+	<!-- スタイルの読み込み -->
+	<command load_style="Saves/ui/gen_styles/uis_gen_common.xml"/>
+	<!-- ヘルプ -->
+	<image name="root" pos="536,626" size_wh="714,45" style="gen_common01_help">
+		<text pos="14,18.667" name="line_help_text" text="０１２３４５６７８９아이우에오카키쿠케코사시스세소타치츠테토나니누네노하히후" font_size="18" align="left"/>
+		<!-- フェードアニメーション -->
+		<anim_ctrl name="fade_in" play="false" loop="false">
+			<bind_node node="root" anim="anm_common_fade_in"/>
+		</anim_ctrl>
+		<anim_ctrl name="fade_out" play="false" loop="false">
+			<bind_node node="root" anim="anm_common_fade_in" reverse="true"/>
+		</anim_ctrl>
+	</image>
+</root>

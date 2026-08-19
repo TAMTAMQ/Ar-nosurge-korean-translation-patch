@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE root SYSTEM "file://st01/project/acps3/_Programmer/ui/uil.dtd">
+<root>
+	<!-- スタイルの読み込み -->
+	<command load_style="Saves/ui/gen_styles/uis_gen_common.xml"/>
+	<command load_style="Saves/ui/gen_styles/uis_gen_window.xml"/>
+	<command load_style="Saves/ui/gen_styles/uis_gen_bios.xml"/>
+	<command load_style="Saves/ui/gen_styles/uis_gen_mainmenu.xml"/>
+	<command load_style="Saves/ui/etc/uis_etc_window.xml"/>
+	<!--<image pos="0,300" style="ui_bg_sample"  color="255,255,255,155" />-->
+	<node load="Saves/ui/uil_template.xml"/>
+	<!--DP表示物-->
+	<!--<image name="dp_window02" pos="32,592" size_h="90" size_w="250" style="gen_window03_07">
+		<image pos="10,10" style="gen_bios01_dlv02"/>
+		<text pos="85,18" name="dlv_num" text="9" font_size="24" align="left" copy="NUMBER01_24PX"/>
+		<text pos="180,50" name="dp_num" text="999999" font_size="24" color="221, 100, 22, 255" align="right" copy="NUMBER01_24PX"/>
+		<image pos="187,47" style="gen_bios01_dp01"/>
+	</image>-->
+	<!-- _________________________________________________________ -->
+	<!-- 項目テンプレ. -->
+	<node name="line_item" visible="false" viewer_visible="true">
+		<image pos="-47,10,0" size_h="39" style="gen_window03_bg02" size_wh="735,44"/>
+		<!--タイトル-->
+		<text pos="40,23" name="sel_item" text="아이우에오아이우에오" font_size="22" align="left"/>
+		<!--ロック階層レベル-->
+		<text pos="380,32,0" name="lock_num" text="9" font_size="22" align="right" copy="NUMBER01_24PX"/>
+		<image pos="307,24,0" style="gen_bios01_dlv02"/>
+		<!--必要DP-->
+		<text pos="502,31,0" name="need_pt" text="999999" font_size="22" align="right" copy="NUMBER01_24PX"/>
+		<image pos="502,28,0" style="gen_bios01_dp01"/>
+		<image pos="536,10,0" name="healingicon" style="gen_bios01_songicon"/>
+		<image pos="589,10,0" name="bios_icon" style="gen_bios01_pictureicon"/>
+		<image pos="636,8,0" name="gemIcon" style="gen_bios01_gemicon"/>
+		<image pos="-3,13,0" name="star_check" style="gen_bios01_choiceicon"/>
+		<image visible="false" pos="5,17" name="lock_icon" style="gen_common01_lock"/>
+	</node>
+	<!--リスト（選択肢）-->
+	<node name="name_box" pos="0,0,0">
+		<!--DP表示物-->
+		<!--<image name="dp_window_right" pos="743, 137, 0" size_h="90" size_w="250" style="gen_window03_07">
+			<image pos="10, 9, 0" style="gen_bios01_dlv02"/>
+			<text pos="85, 17, 0" name="dlv_num" text="9" font_size="24" align="left" copy="NUMBER01_24PX"/>
+			<text pos="188, 63, 0" name="dp_num" text="999999" font_size="24" color="255, 255, 255, 255" align="right" copy="NUMBER01_24PX"/>
+			<image pos="193, 61, 0" style="gen_bios01_dp01"/>
+			<image pos="6, 30, 0" style="gen_bios03_dlv_line" size_wh="241, 11"/>
+			<image pos="6, 31, 0" style="gen_bios08_divepoint_text"/>
+		</image>-->
+		<menu name="sel_evlist" style="geno_menu" pos="284,228,0" size_w="757" visible="true" disp_scroll_bar="false" item_height="45" disp_lines="3">
+			<node clone_child_tree="line_item"/>
+			<node clone_child_tree="line_item"/>
+			<node clone_child_tree="line_item"/>
+		</menu>
+		<text name="text_header" pos="473,244,0" text="에피소드" font_size="14" align="center"/>
+		<text name="text_header" pos="688,244,0" color="118,162,160,255" text="필요 DLv" font_size="14" align="center"/>
+		<text name="text_header" pos="802,244,0" color="118,162,160,255" text="필요 다이브 포인트" font_size="14" align="center"/>
+		<text name="text_header" pos="952,244,0" color="118,162,160,255" text="보상" font_size="14" align="center"/>
+	</node>
+	<!-- _________________________________________________________ -->
+	<!--<image style="ui_bg_sample"  color="255,255,255,55" />-->
+</root>

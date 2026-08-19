@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE root SYSTEM "file://st01/project/acps3/_Programmer/ui/uil.dtd">
+<root>
+	<!-- スタイルの読み込み -->
+	<command load_style="Saves/ui/gen_styles/uis_gen_window.xml"/>
+	<command load_style="Saves/ui/gen_styles/uis_gen_common.xml"/>
+	<command load_style="Saves/ui/gen_styles/uis_gen_field.xml"/>
+	<command load_anim="Saves/ui/fieldmap/uia_fm_common.xml"/>
+	<command load_anim="Saves/ui/samples/size_animation/uia_size_animation.xml"/>
+	<!--
+  <image style="ui_bg_sample" color="128,128,128,255" />
+  -->
+	<!-- ツイートウインドウ -->
+	<node name="fm_tweet_frame" visible="false">
+		<node name="fm_tweet_bg" pos="994,660">
+			<image pos="-550,-115" size_wh="558,113" style="gen_window03_npcmsg">
+				<!-- ツイートのテキスト -->
+				<text name="fm_tweet_text" pos="60,17" align="left" font_size="20" line_char_length="20" line_space="5" text="１２３４５６７８９０１２３４５６７８９０아이우에오카키쿠케코사시스세소타치츠테토아이우에오카키쿠케코사시스세소타치츠테토"/>
+				<image name="fm_tweet_btn" pos="508,61" style="gen_field01_button"/>
+			</image>
+		</node>
+		<!-- ツイートキャラ名の下地 -->
+		<image name="fm_tweet_name_bg" pos="445,530" style="gen_common02_acce02" visible="true">
+			<!-- ツイートキャラ名ウインドウのアイコンの下地 -->
+			<image name="fm_tweet_icon_bg" pos="-31,-14" style="gen_common02_acce04" visible="true">
+				<!-- ツイートキャラ名ウインドウのアイコン -->
+				<image name="fm_tweet_icon" pos="17,-4" style="gen_common02_acce03" visible="true"/>
+			</image>
+			<!-- ツイートキャラ名 -->
+			<text name="fm_tweet_name" pos="82,11" align="center" font_size="16" visible="true" text="캐스캐스캐스"/>
+		</image>
+		<!-- フェードアニメーション -->
+		<anim_ctrl name="fm_anim_tweet_in" loop="false">
+			<bind_node node="fm_tweet_bg" anim="fm_anim_tweet_frame_in"/>
+			<bind_node node="fm_tweet_name_bg" anim="fm_anim_tweet_name_in" delay="0.15"/>
+			<bind_node node="fm_tweet_text" anim="fm_anim_tweet_text_in" delay="0.15"/>
+			<bind_node node="fm_tweet_btn" anim="fm_anim_tweet_text_in" delay="0.15"/>
+		</anim_ctrl>
+		<anim_ctrl name="fm_anim_tweet_out" loop="false">
+			<bind_node node="fm_tweet_bg" anim="fm_anim_tweet_frame_in" reverse="true"/>
+			<bind_node node="fm_tweet_name_bg" anim="fm_anim_tweet_name_out"/>
+			<bind_node node="fm_tweet_text" anim="fm_anim_tweet_text_out"/>
+			<bind_node node="fm_tweet_btn" anim="fm_anim_tweet_text_out"/>
+		</anim_ctrl>
+		<anim_ctrl name="fm_anim_tweet_fade_in" loop="false">
+			<bind_node node="fm_tweet_frame" anim="fm_anim_tweet_fade_in"/>
+		</anim_ctrl>
+		<anim_ctrl name="fm_anim_tweet_fade_out" loop="false">
+			<bind_node node="fm_tweet_frame" anim="fm_anim_tweet_fade_in" reverse="true"/>
+		</anim_ctrl>
+	</node>
+</root>

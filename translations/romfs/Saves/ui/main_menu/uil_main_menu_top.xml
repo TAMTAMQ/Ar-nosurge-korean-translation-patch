@@ -1,0 +1,183 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE root SYSTEM "file://st01/project/acps3/_Programmer/ui/uil.dtd">
+<root>
+	<!-- スタイルの読み込み -->
+	<command load_style="Saves/ui/uis_common.xml"/>
+	<command load_style="Saves/ui/gen_styles/uis_gen_common.xml"/>
+	<command load_style="Saves/ui/gen_styles/uis_gen_window.xml"/>
+	<command load_style="Saves/ui/gen_styles/uis_gen_mainmenu.xml"/>
+	<command load_style="Saves/ui/main_menu/uis_main_menu.xml"/>
+	<command load_anim="Saves/ui/main_menu/uia_main_menu.xml"/>
+	<!--テンプレートを読み込む-->
+	<node load="Saves/ui/uil_template.xml"/>
+	<!--TITLE-->
+	<image name="top_title" pos="456,82,0" style="gen_menu04_accessory03"/>
+	<!--左側のメニュー類-->
+	<node name="left_window" pos="31,74,0" visible="false" rot="0,-10,0" viewer_visible="true">
+		<image pos="63,351" color="255,255,255,255" style="gen_menu04_choice_bg_area"/>
+		<image style="gen_menu04_bg_selecthead">
+			<node visible="false">
+				<node name="command_template">
+					<node name="base_on_blink">
+						<image name="base_on" visible="false" image_no="1" pos="0,0" style="gen_menu04_choice01">
+							<image name="acce_on" pos="193,25,0" image_no="1" style="gen_menu03_e_title"/>
+						</image>
+					</node>
+					<image name="base_off" visible="true" image_no="0" pos="0,0,0" style="gen_menu04_choice01">
+						<image name="acce_off" pos="193,25,0" image_no="0" style="gen_menu03_e_title"/>
+					</image>
+					<node pos="-17,-8,0">
+						<node name="roller" pos="32,31">
+							<image name="roller_image" pos="-32,-31" style="gen_menu04_choicerolling01"/>
+						</node>
+					</node>
+					<image name="roller_label" pos="8,20,0" image_no="0" style="gen_menu03_minititle"/>
+					<image name="label_off" pos="35,9,0" image_no="0" style="gen_menu03_title_off" visible="false"/>
+					<image name="label_on" pos="35,9,0" image_no="0" style="gen_menu03_title_on"/>
+					<anim_ctrl play="true" loop="true">
+						<bind_node node="base_on_blink" anim="anm_common_cursor_blink"/>
+					</anim_ctrl>
+					<anim_ctrl name="on_select" play="false" loop="false">
+						<bind_node node="roller" anim="anm_mainmenu_rotate_z180_plus" speed="2"/>
+						<bind_node node="roller_image" anim="anm_mainmenu_roller_image_select" speed="2"/>
+						<bind_node start_visible="true" node="base_on" anim="anm_mainmenu_cursor_on"/>
+						<bind_node end_visible="false" node="base_off" anim="anm_mainmenu_base_off"/>
+					</anim_ctrl>
+					<anim_ctrl name="on_unselect">
+						<bind_node node="roller" anim="anm_mainmenu_rotate_z180_minus" speed="2" reverse="true"/>
+						<bind_node node="roller_image" anim="anm_mainmenu_roller_image_unselect" speed="2"/>
+						<bind_node end_visible="false" node="base_on" anim="anm_mainmenu_cursor_off"/>
+						<bind_node start_visible="true" node="base_off" anim="anm_mainmenu_alpha_on"/>
+					</anim_ctrl>
+				</node>
+			</node>
+			<node name="command_menu">
+				<!--ITEM-->
+				<node name="item" pos="65,16,0" clone_child_tree="command_template"/>
+				<command target_node="item/label_off" set_image_no="0"/>
+				<command target_node="item/label_on" set_image_no="0"/>
+				<command target_node="item/roller_label" set_image_no="0"/>
+				<command target_node="item/acce_on" set_pos="193,25,0"/>
+				<command target_node="item/acce_off" set_pos="193,25,0"/>
+				<!--EQUIPMENT-->
+				<node name="equipment" pos="65,60,0" clone_child_tree="command_template"/>
+				<command target_node="equipment/label_off" set_image_no="1"/>
+				<command target_node="equipment/label_on" set_image_no="1"/>
+				<command target_node="equipment/roller_label" set_image_no="1"/>
+				<command target_node="equipment/acce_on" set_pos="188,25,0"/>
+				<command target_node="equipment/acce_off" set_pos="188,25,0"/>
+				<!--STATUS-->
+				<node name="status" pos="65,104,0" clone_child_tree="command_template"/>
+				<command target_node="status/label_off" set_image_no="2"/>
+				<command target_node="status/label_on" set_image_no="2"/>
+				<command target_node="status/roller_label" set_image_no="2"/>
+				<command target_node="status/acce_on" set_pos="181,25,0"/>
+				<command target_node="status/acce_off" set_pos="181,25,0"/>
+				<!--GLOSSARY-->
+				<node name="glossary" pos="65,148,0" clone_child_tree="command_template"/>
+				<command target_node="glossary/label_off" set_image_no="3"/>
+				<command target_node="glossary/label_on" set_image_no="3"/>
+				<command target_node="glossary/roller_label" set_image_no="3"/>
+				<command target_node="glossary/acce_on" set_pos="146,25,0"/>
+				<command target_node="glossary/acce_off" set_pos="146,25,0"/>
+				<!--STORY OUTLINE-->
+				<node name="story_outline" pos="65,192,0" clone_child_tree="command_template"/>
+				<command target_node="story_outline/label_off" set_image_no="4"/>
+				<command target_node="story_outline/label_on" set_image_no="4"/>
+				<command target_node="story_outline/roller_label" set_image_no="4"/>
+				<command target_node="story_outline/acce_on" set_pos="178,25,0"/>
+				<command target_node="story_outline/acce_off" set_pos="178,25,0"/>
+				<!--SYSTEM-->
+				<node name="system" pos="65,236" clone_child_tree="command_template"/>
+				<command target_node="system/label_off" set_image_no="5"/>
+				<command target_node="system/label_on" set_image_no="5"/>
+				<command target_node="system/roller_label" set_image_no="5"/>
+				<command target_node="system/acce_on" set_pos="180,25,0"/>
+				<command target_node="system/acce_off" set_pos="180,25,0"/>
+			</node>
+			<!--DIVEPOINT-->
+			<text name="dive_point" pos="247,415,0" text="00000009" align="right" copy="NUMBER01_24PX"/>
+			<!--MONEY-->
+			<text name="money" pos="247,471,0" text="00000009" align="right" copy="NUMBER01_24PX"/>
+			<!--TOTAL TIME-->
+			<!--HOUR-->
+			<text name="hour" pos="193,508,0" text="000" copy="NUMBER01_20PX"/>
+			<!--MINUTE-->
+			<text name="minute" pos="250,508,0" text="00" copy="NUMBER01_20PX"/>
+		</image>
+		<image name="menu04_accessory04" pos="287,-5,0" style="gen_menu04_accessory04"/>
+	</node>
+	<!--右側のパーティステータス-->
+	<node name="companion_window" visible="false" viewer_visible="true">
+		<!-- COMPANIONS -->
+		<node name="pivot1" pos="1200,0" rot="0,5,0" visible="true">
+			<node name="pivot2" pos="-1200,0" visible="true">
+				<image name="menu04_accessory02" pos="319,380,0" style="gen_menu04_accessory02" size_wh="917,14"/>
+				<image name="menu04_accessory05" pos="1198,76,0" style="gen_menu04_accessory05"/>
+				<node pos="613,408,0">
+					<image name="face_window" pos="14,4,0" style="gen_menu04_companions_window"/>
+					<image name="face_window" pos="159,4,0" style="gen_menu04_companions_window"/>
+					<image name="face_window" pos="302,4,0" style="gen_menu04_companions_window"/>
+					<image name="face_window" pos="446,4,0" style="gen_menu04_companions_window"/>
+				</node>
+				<node name="companion_list" pos="613,411,0">
+					<node name="companion0" pos="12,3">
+						<node name="on">
+							<image name="label" style="gen_menu04_companions_text" pos="-2,-25,0"/>
+							<image name="face_image" pos="8,3,0" style="gen_menu02_subcharacter"/>
+							<text name="name" pos="72,171,0" text="캐스" align="center" font_size="13"/>
+						</node>
+						<node name="off" visible="false">
+							<image name="face_image_off" pos="9,5,0" style="gen_menu02_subcharacter_off"/>
+						</node>
+					</node>
+					<node name="companion1" pos="158,3,0" clone_child_tree="companion0"/>
+					<node name="companion2" pos="302,3,0" clone_child_tree="companion0"/>
+					<node name="companion3" pos="446,3,0" clone_child_tree="companion0"/>
+				</node>
+			</node>
+		</node>
+		<node name="zapping_info" pos="362,359,0">
+			<node name="episode_marker_normal" visible="false">
+				<node name="blinker">
+					<node name="color_group" color="157,235,254,255">
+						<image name="base_line" style="gen_menu06_ep_bg01" alpha_blend="ave"/>
+						<image name="ep_bgacce" style="gen_menu01_ep_bgacce" alpha_blend="ave" pos="-27,39,0"/>
+					</node>
+					<anim_ctrl play="true" loop="true">
+						<bind_node node="blinker" anim="anm_mainmenu_blink2"/>
+					</anim_ctrl>
+				</node>
+				<image name="eptext" style="gen_menu01_eptext" pos="6,54,0"/>
+				<image name="ep_bglight" style="gen_menu01_ep_bglight" pos="-39,33,0" alpha_blend="add"/>
+				<node name="episode_notice">
+					<image name="message_bg" style="gen_menu01_ep_textbg" pos="-16,121,0"/>
+					<image name="message_bg_add" style="gen_menu01_ep_textbg" pos="-16,121,0" visible="false" alpha_blend="add"/>
+					<text name="message" text="현재 시공간 진행은 정상적으로 이루어지고 있습니다. 자유롭게 세계를 이동하며 에피소드를 진행할 수 있습니다." font_size="16" line_char_length="15" pos="9,148,0"/>
+					<image name="message_new_image" style="gen_common01_new01" pos="-20,114.333,0" scale="1.5,1.5,0" visible="false" viewer_visible="true"/>
+				</node>
+			</node>
+			<node name="episode_marker_reach" visible="false" clone_child_tree="episode_marker_normal"/>
+			<command target_node="episode_marker_reach/color_group" set_color="255,234,0"/>
+			<command target_node="episode_marker_reach/message_bg" set_color="255,234,0" set_image_no="1"/>
+			<command target_node="episode_marker_reach/message" set_pos="9,148,0"/>
+			<command target_node="episode_marker_reach/ep_bglight" set_color="255,255,255,160"/>
+			<command target_node="episode_marker_reach/eptext" set_image_no="1"/>
+			<command target_node="episode_marker_reach/message" set_text="다른 채널과의 시공간 충돌 지점에 도달하여, 에피소드 진행을 대기 중입니다."/>
+			<node name="episode_marker_lock" visible="false" viewer_visible="true" clone_child_tree="episode_marker_normal"/>
+			<command target_node="episode_marker_lock/color_group" set_color="255,0,0,255"/>
+			<command target_node="episode_marker_lock/message_bg" set_color="255,192,192,255" set_image_no="2"/>
+			<command target_node="episode_marker_lock/ep_bglight" set_color="255,192,192,255"/>
+			<command target_node="episode_marker_lock/message" set_pos="9,148,0"/>
+			<command target_node="episode_marker_lock/eptext" set_image_no="2"/>
+			<command target_node="episode_marker_lock/message" set_text="시공간 정합성 유지를 위해, &lt;CR&gt;이 채널의 에피소드 진행이 잠겨 있습니다. &lt;CR&gt;잠금을 해제하려면 다른 채널의 &lt;CR&gt;에피소드를 진행해 주세요."/>
+		</node>
+	</node>
+	<anim_ctrl name="get_in" play="false">
+		<bind_node start_visible="true" node="left_window" anim="anm_common_fade_in"/>
+		<bind_node start_visible="true" node="companion_window" anim="anm_common_fade_in"/>
+		<bind_node start_visible="true" node="top_title" anim="anm_common_fade_in"/>
+		<bind_node start_visible="true" node="TOP/zapping_window" anim="anm_common_fade_in"/>
+	</anim_ctrl>
+	<image style="ui_bg_sample" color="255,255,255,0" visible="false" viewer_visible="true"/>
+</root>

@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE root SYSTEM "file://st01/project/acps3/_Programmer/ui/uil.dtd">
+<root>
+	<!-- スタイルの読み込み -->
+	<command load_style="Saves/ui/gen_styles/uis_gen_common.xml"/>
+	<!--テンプレートを読み込む-->
+	<node load="Saves/ui/uil_template.xml"/>
+	<node load="Saves/ui/uil_line_format.xml"/>
+	<text pos="640,50" align="center" text="범용 메뉴 샘플(스크롤바 없음)" font_size="26"/>
+	<text pos="100,150" text="style_menu_column1" font_size="18"/>
+	<node pos="50,168">
+		<menu name="test_menu" style="style_menu_column1_noscroll" disp_scroll_bar="false">
+			<node clone_tree="line_format_menu_column1"/>
+			<node clone_tree="line_format_menu_column1"/>
+			<node clone_tree="line_format_menu_column1"/>
+			<node clone_tree="line_format_menu_column1"/>
+		</menu>
+		<text text="아이템명" pos="150,12" align="center" font_size="18"/>
+	</node>
+	<text pos="460,150" text="style_menu_column2" font_size="18"/>
+	<node pos="380,168">
+		<menu name="test_menu" style="style_menu_column2_noscroll" disp_scroll_bar="false">
+			<node clone_tree="line_format_menu_column2"/>
+			<node clone_tree="line_format_menu_column2"/>
+			<node clone_tree="line_format_menu_column2"/>
+			<node clone_tree="line_format_menu_column2"/>
+		</menu>
+		<text text="아이템명" pos="150,12" align="center" font_size="18"/>
+		<text text="개수" pos="320,12" align="center" font_size="18" color="118,162,160,255"/>
+	</node>
+	<text pos="880,150" text="style_menu_column3" font_size="18"/>
+	<node pos="780,168">
+		<menu name="test_menu" style="style_menu_column3_noscroll" disp_scroll_bar="false">
+			<node clone_tree="line_format_menu_column3"/>
+			<node clone_tree="line_format_menu_column3"/>
+			<node clone_tree="line_format_menu_column3"/>
+			<node clone_tree="line_format_menu_column3"/>
+		</menu>
+		<text text="아이템명" pos="150,12" align="center" font_size="18"/>
+		<text text="개수" pos="320,12" align="center" font_size="18" color="118,162,160,255"/>
+		<text text="가격" pos="400,12" align="center" font_size="18" color="118,162,160,255"/>
+	</node>
+</root>

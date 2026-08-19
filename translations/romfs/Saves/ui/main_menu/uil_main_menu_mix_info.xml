@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE root SYSTEM "file://st01/project/acps3/_Programmer/ui/uil.dtd">
+<root>
+	<!-- スタイルの読み込み -->
+	<command load_style="Saves/ui/uis_common.xml"/>
+	<command load_style="Saves/ui/gen_styles/uis_gen_common.xml"/>
+	<command load_style="Saves/ui/gen_styles/uis_gen_window.xml"/>
+	<command load_style="Saves/ui/gen_styles/uis_gen_mainmenu.xml"/>
+	<command load_style="Saves/ui/gen_styles/uis_gen_battle.xml"/>
+	<command load_style="Saves/ui/main_menu/uis_main_menu.xml"/>
+	<command load_style="Saves/ui/samples/image_list/uis_image_list.xml"/>
+	<command load_style="Saves/ui/etc/uis_etc_window.xml"/>
+	<command load_style="Saves/ui/gen_styles/uis_gen_bath.xml"/>
+	<command load_anim="Saves/ui/main_menu/uia_main_menu.xml"/>
+	<!--テンプレートを読み込む-->
+	<node load="Saves/ui/uil_template.xml"/>
+	<image style="ui_bg_sample" color="255,128,128,96" visible="false" viewer_visible="true"/>
+	<node name="pivot1" pos="1200,0" rot="0,5,0">
+		<node name="pivot2" pos="-1200,0">
+			<node name="mix_info_window" visible="false" viewer_visible="true">
+				<image pos="800,81,0" size_wh="364,530" style="gen_window01_02">
+					<node name="shop_label" pos="7,6,0">
+						<image style="gen_common01_win_acce02_bg" size_w="350" pos="0,1,0"/>
+						<image style="gen_common01_win_acce02_01" pos="0,22" size_w="354"/>
+						<image style="gen_common01_window_acce01" pos="97,4,0"/>
+						<image style="gen_common01_window_acce01" pos="245,4,0"/>
+						<text name="caption" text="조합 상점" font_size="13" align="center" pos="177,8,0"/>
+					</node>
+					<image style="gen_window03_bg02" pos="8,36,0" size_wh="348,32"/>
+					<text name="shop_name" pos="178,42,0" text="노에리아 연구소" align="center" font_size="20" drop_shadow="false"/>
+					<image name="shop_npc" style="gen_menu02_shopnpc" pos="100,68,0"/>
+					<image style="gen_window03_bg02" pos="8,163,0" size_wh="348,41"/>
+					<node name="category_label" clone_child_tree="shop_label" pos="7,134,0"/>
+					<command target_node="category_label/caption" set_text="조합점이 있는 맵"/>
+					<image style="gen_window03_bg02" pos="8,230,0" size_wh="348,41"/>
+					<text name="unknown_name" text="캐스" align="center" font_size="20" pos="184,238,0"/>
+					<text name="map_name" pos="189,172,0" text="맵 이름" align="center" font_size="20"/>
+					<node name="recipe_label" clone_child_tree="shop_label" pos="7,200,0"/>
+					<command target_node="recipe_label/caption" set_text="미확정명"/>
+					<node name="mat_label" clone_child_tree="shop_label" pos="7,268,0"/>
+					<command target_node="mat_label/caption" set_text="필요 소재"/>
+					<node name="mat_list" pos="71,301,0">
+						<node name="mat00" pos="177,0,0">
+							<image name="base_name" style="white_image" pos="-238,-2,0" size_wh="345,28" color="0,0,0,80"/>
+							<image name="base_own" pos="-238,28,0" copy="base_name" parent_size_copy_w="false" size_wh="249,25"/>
+							<image name="base_own_num" pos="13,28,0" copy="base_name" parent_size_copy_w="false" size_wh="94,24"/>
+							<node name="params">
+								<text name="mat_name" pos="0,2,0" text="아이우에오카키쿠케코" align="right" font_size="20"/>
+								<text pos="0,30,0" text="보유 수량" align="right" font_size="20" color="121,165,163,255"/>
+								<text pos="34,2,0" text="×" align="right" font_size="20"/>
+								<text name="needs_num" pos="80,10,0" text="255" align="right" copy="NUMBER01_20PX"/>
+								<text name="own_num" pos="80,38,0" text="256" align="right" copy="NUMBER01_20PX"/>
+							</node>
+						</node>
+						<node name="mat01" pos="177,56,0" clone_child_tree="mat00"/>
+						<node name="mat02" pos="177,112,0" clone_child_tree="mat00"/>
+						<node name="mat03" pos="177,168,0" clone_child_tree="mat00"/>
+					</node>
+				</image>
+			</node>
+		</node>
+	</node>
+	<anim_ctrl name="get_in" viewer_key_assign="3" start_visible="true">
+		<bind_node node="mix_info_window" anim="anm_common_fade_in"/>
+	</anim_ctrl>
+</root>

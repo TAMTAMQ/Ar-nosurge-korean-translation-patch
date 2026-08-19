@@ -1,4 +1,4 @@
-# 아르노서지 DX 한국어 번역 패치
+# 아르노사쥬/아르노서지 DX 한국어 번역 패치
 
 > 🙏 이 패치는 **AI 번역 기반이라 발생할 수 있는 오역이나 어색한 표현을 크게 개의치 않고 플레이하실 수 있는 분들을 위한 비공식 팬 패치**입니다.
 
@@ -57,7 +57,7 @@ atmosphere/contents/01003CF0128DE000/romfs/Saves/systemMessage/...
 
 ### 2-2. Ryujinx
 
-1. 게임 목록에서 아르노서지를 우클릭하고 모드 폴더를 엽니다.
+1. 게임 목록에서 아르노사쥬/아르노서지를 우클릭하고 모드 폴더를 엽니다.
 2. `korean_final` 같은 임의의 폴더를 하나 만듭니다.
 3. 그 안에 저장소의 `atmosphere/contents/01003CF0128DE000/romfs` 폴더를 복사합니다.
 
@@ -73,6 +73,7 @@ mods/contents/01003cf0128de000/korean_final/romfs/...
 |---|---:|---|
 | 이벤트 대사 EBM | 2,239개 | 한국어 번역 및 한자 대체 코드 적용 |
 | 시스템 메시지 XML | 2개, 472개 항목 | 한국어 번역 및 한자 대체 코드 적용 |
+| 시마법 선택 UI XML | 2개 | 고정 항목 한국어 번역 및 동적 일본어 글자 보호 |
 | 고유 한글 음절 | 1,372자 | 게임 폰트 아틀라스에 추가 |
 | 한글 출현 수 | 987,758회 | 전부 대체 코드로 변환 |
 | 메인 폰트 | 1개 | `MainFont_nx_0.g1t` 알파 블록 수정 |
@@ -82,9 +83,9 @@ mods/contents/01003cf0128de000/korean_final/romfs/...
 ### 아직 번역되지 않았거나 확인이 필요한 부분
 
 - 화자명(예: `デルタ`)은 이벤트 대사와 별도 리소스라 일본어로 남아 있습니다.
-- 이번에 반영한 시스템 안내·일부 메뉴 설명·상점 대사 외의 아이템명, UI 및 이미지로 그려진 일본어는 아직 번역되지 않은 부분이 있습니다.
+- 이번에 반영한 시스템 안내·시마법 선택 화면·일부 메뉴 설명·상점 대사 외의 아이템명, UI 및 이미지로 그려진 일본어는 아직 번역되지 않은 부분이 있습니다.
 - 전체 플레이 검수가 완료된 상태는 아니므로 후반부에서 새로운 미번역·폰트 충돌이 발견될 수 있습니다.
-- 희귀 한자 영역을 한글에 빌려 쓰므로, 해당 한자가 별도 UI에서 사용되는 장면이 있다면 그 UI가 한글 음절로 보일 가능성이 있습니다.
+- 희귀 한자 영역을 한글에 빌려 씁니다. 확인된 시마법 선택 화면의 동적 일본어 문자는 보호 목록에서 제외했지만, 아직 확인하지 못한 UI에서 충돌이 발견될 수 있습니다.
 
 ## 4. 한글 폰트 처리 방식
 
@@ -111,6 +112,7 @@ mods/contents/01003cf0128de000/korean_final/romfs/...
 
 - `translations/romfs/Event/event/**/*.ebm`: 한국어 이벤트 대사 EBM 2,239개
 - `translations/romfs/Saves/systemMessage/*.xml`: 한국어 시스템 메시지 XML 2개
+- `translations/romfs/Saves/ui/**/*.xml`: 한국어 UI XML
 
 `atmosphere/` 아래 파일은 게임에서 한글 폰트를 표시하기 위해 한글이 대체 한자로 변환된 설치용 결과물이므로 번역 수정에는 사용하지 마세요. 번역은 `translations/romfs`에서 고친 뒤 아래 통합 빌드 명령으로 설치용 파일을 다시 생성합니다. `<CR>`, `<IMxx>`, `<RG>` 등의 제어문자는 위치까지 유지해야 합니다.
 
@@ -132,8 +134,8 @@ python translate_all.py `
 `translate_all.py`는 다음 작업을 순서대로 한 번에 처리합니다.
 
 1. `translations/romfs/Event/event`의 한국어 EBM 변환
-2. EBM과 시스템 메시지에 사용된 모든 한글 음절의 폰트 생성
-3. `translations/romfs/Saves/systemMessage`의 한국어 XML 변환
+2. EBM과 Saves XML에 사용된 모든 한글 음절의 폰트 생성
+3. `translations/romfs/Saves` 아래 시스템 메시지와 UI XML 변환
 4. `atmosphere/contents/01003CF0128DE000/`에 설치 가능한 결과물 출력
 
 원본 폰트를 `original/romfs/Data/NX/Font/MainFont_nx_0.g1t`에 두면 `--original-font` 옵션 없이 `python translate_all.py`만 실행해도 됩니다. 한글↔대체 한자↔셀 대응표와 통계는 `build/final_mod_report.json`에 기록됩니다. `atmosphere/`와 `build/`는 생성 결과물이므로 Git에 포함되지 않습니다.
@@ -150,6 +152,7 @@ python translate_all.py `
 
 - `translations/romfs/Event/event/**/*.ebm`
 - `translations/romfs/Saves/systemMessage/*.xml`
+- `translations/romfs/Saves/ui/**/*.xml`
 - 정품 게임에서 추출한 원본 `MainFont_nx_0.g1t`
 
 ```powershell
@@ -190,24 +193,45 @@ python tools/build_final_korean_mod.py `
 
 `--output` 경로는 빌드할 때 먼저 삭제한 뒤 다시 생성되므로 번역 원본 폴더를 지정하면 안 됩니다. 시스템 메시지도 함께 배포할 때는 개별 실행보다 `translate_all.py` 사용을 권장합니다.
 
-#### `tools/build_system_message.py` — 시스템 메시지 XML만 생성
+#### `tools/build_system_message.py` — Saves XML만 생성
 
-사람이 읽을 수 있는 한국어 XML을 현재 폰트 매핑에 맞는 게임용 대체 문자 XML로 변환합니다.
+사람이 읽을 수 있는 한국어 시스템 메시지·UI XML을 현재 폰트 매핑에 맞는 게임용 대체 문자 XML로 재귀 변환합니다. 시스템 XML의 `Text`와 UI XML의 `text` 속성을 모두 처리합니다.
+
+게임의 텍스트 창은 표시 문자 20개마다 자체적으로 자동 줄바꿈합니다. `<CR>` 바로 앞 구간이 이미 20자 이상이면 자동 줄바꿈과 강제 줄바꿈이 겹칠 수 있습니다. 빌드 도구는 사쿠라대전4 한국어 패치와 같은 방식으로 해당 `<CR>`만 설치용 결과에서 제거하고 게임의 자동 줄바꿈에 맡깁니다. 이 규칙은 모든 이벤트 대사 EBM과 Saves XML의 `Text`·`text` 속성에 공통 적용되며 `translations/`의 편집용 파일은 변경하지 않습니다. 공백과 문장부호도 각각 한 칸이며 `<IMxx>` 같은 표시 제어 코드는 한 칸으로 계산합니다.
+
+텍스트 창에는 최대 3줄만 표시되므로 한국어 번역문은 제어 코드를 제외하고 최대 60표시칸이어야 합니다. `tools/shorten_three_lines.py`는 60칸을 넘는 EBM·XML 번역문을 로컬 OpenAI 호환 모델로 축약하고, 60칸 이하 및 비-CR 제어문자 보존을 통과한 결과만 `translations/`에 반영합니다. `<#RRGGBB>` 색상 코드는 0칸, `<IMxx>` 같은 표시 요소는 1칸으로 계산합니다.
 
 ```powershell
 python tools/build_system_message.py `
-  --input "translations\romfs\Saves\systemMessage" `
+  --input "translations\romfs\Saves" `
   --mapping "build\final_mod_report.json" `
   --output "atmosphere\contents\01003CF0128DE000\romfs\Saves\systemMessage"
 ```
 
 | 옵션 | 기본값 | 설명 |
 |---|---|---|
-| `--input` | `translations/romfs/Saves/systemMessage` | 편집 가능한 UTF-8 한국어 XML 폴더 |
+| `--input` | `translations/romfs/Saves` | 편집 가능한 UTF-8 한국어 XML 루트 |
 | `--mapping` | `build/final_mod_report.json` | 한글→대체 문자 매핑 보고서 |
 | `--output` | Atmosphère의 `Saves/systemMessage` | 변환된 게임용 XML 출력 폴더 |
 
-번역에 기존 매핑에 없는 한글 음절을 새로 사용했다면 이 도구만 실행하지 말고 `translate_all.py`를 실행하세요. 통합 도구가 EBM과 XML을 함께 조사해 필요한 글리프를 다시 만들기 때문입니다. `<CR>` 같은 제어문자는 원문과 같은 위치에 유지해야 합니다.
+##### `SysInfo.xml` 인코딩 주의사항
+
+편집용 `translations/romfs/Saves/systemMessage/SysInfo.xml`은 다른 번역 파일과 마찬가지로 UTF-8로 관리합니다. 다만 게임에 설치하는 `SysInfo.xml`은 반드시 원본과 같은 **Shift-JIS**로 생성해야 합니다. 이 파일을 읽는 HELP 문구 경로는 XML 선언보다 Shift-JIS 바이트 처리를 우선하는 것으로 보입니다. 설치용 파일을 UTF-8로 만들면 `매뉴얼을 표시합니다` 같은 문장이 `□ + 한자`가 섞인 모지바케로 출력됩니다. 메뉴 항목 등 다른 한국어가 정상인데 화면 아래 HELP 설명만 깨질 때 가장 먼저 이 문제를 확인하세요.
+
+`tools/build_system_message.py`는 파일명이 `SysInfo.xml`일 때만 자동으로 Shift-JIS로 출력하고, `SysMess.xml`과 UI XML은 UTF-8로 출력합니다. 따라서 생성된 `atmosphere/` 파일을 직접 UTF-8로 다시 저장하지 말고 항상 `translate_all.py`로 재생성하세요. PowerShell에서는 다음 명령으로 설치용 파일의 선언을 확인할 수 있습니다.
+
+```powershell
+Get-Content "atmosphere\contents\01003CF0128DE000\romfs\Saves\systemMessage\SysInfo.xml" -TotalCount 1
+```
+
+정상 결과에는 `encoding='shift_jis'`가 표시되어야 합니다. 문제가 재발하면 다음 순서로 확인합니다.
+
+1. `translate_all.py`로 전체 패치를 다시 빌드합니다.
+2. 생성된 `SysInfo.xml` 첫 줄이 `shift_jis`인지 확인합니다.
+3. 생성 파일과 실제 SD 카드 또는 Ryujinx 모드 폴더의 파일 해시를 비교합니다.
+4. 게임과 Ryujinx를 완전히 종료한 상태에서 새 파일을 덮어쓴 뒤 다시 실행합니다.
+
+번역에 기존 매핑에 없는 한글 음절을 새로 사용했다면 이 도구만 실행하지 말고 `translate_all.py`를 실행하세요. 통합 도구가 EBM과 XML을 함께 조사해 필요한 글리프를 다시 만들기 때문입니다. `<IMxx>`, `<RG>` 같은 제어문자는 원문 위치를 유지해야 합니다. `<CR>`도 편집용 번역에는 보존하되, 위의 20자 자동 줄바꿈 조건에 해당하면 EBM과 XML의 설치용 결과에서만 제거됩니다.
 
 #### `tools/decode_renderdoc_font_draw.py` — RenderDoc 폰트 UV 해독
 
@@ -247,6 +271,7 @@ python tools/decode_renderdoc_font_draw.py `
 - **중복 방지**: 동일 폰트 셀을 공유하는 30개 셀은 후보에서 전부 제외했습니다.
 - **실제 UV 배치**: 폭·높이가 모두 24픽셀 이상인 고유 영역만 사용했습니다.
 - **텍스트 치환**: 완성형 한글과 CJK 한자는 UTF-8에서 모두 3바이트이므로 파일 크기를 유지하며 치환할 수 있습니다.
+- **시스템 HELP 인코딩**: 편집 원본은 UTF-8로 유지하되, 설치용 `SysInfo.xml`만 원본 로더에 맞춰 Shift-JIS로 생성합니다.
 - **전수 검증**: 패치 EBM을 역치환해 번역 원본과 바이트 단위로 비교했습니다.
 
 ## 7. 저장소 구성
@@ -256,13 +281,15 @@ python tools/decode_renderdoc_font_draw.py `
 | `atmosphere/` | 설치 가능한 LayeredFS 패치 |
 | `translations/romfs/Event/event/` | 수정 가능한 한국어 이벤트 대사 EBM 2,239개 |
 | `translations/romfs/Saves/systemMessage/` | 수정 가능한 한국어 시스템 메시지 XML |
+| `translations/romfs/Saves/ui/` | 수정 가능한 한국어 UI XML |
 | `data/char_to_cell_renderdoc.json` | 일본어 문자별 셀·UV 사각형 |
 | `data/probe_chars_full.json` | 탐침 문자 목록과 원문 출현 빈도 |
+| `data/protected_ui_chars.json` | 한글 대체 대상으로 사용하지 않을 동적 UI 문자 목록 |
 | `docs/FONT_MAPPING.md` | 폰트 분석 기술 문서 |
 | `fonts/Pretendard-Bold.otf` | 한글 글리프 생성에 사용하는 Pretendard Bold |
 | `tools/build_final_korean_mod.py` | 최종 EBM·폰트 생성기 |
 | `tools/build_system_message.py` | 한국어 XML을 설치용 대체 문자 XML로 변환 |
-| `translate_all.py` | EBM·폰트·시스템 메시지를 한 번에 생성하는 통합 실행 파일 |
+| `translate_all.py` | EBM·폰트·시스템 메시지·UI를 한 번에 생성하는 통합 실행 파일 |
 | `tools/decode_renderdoc_font_draw.py` | RenderDoc 정점 버퍼 해독기 |
 
 저장소에 포함되지 않는 항목:

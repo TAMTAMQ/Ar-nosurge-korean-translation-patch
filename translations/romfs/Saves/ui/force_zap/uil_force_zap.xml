@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE root SYSTEM "file://st01/project/acps3/_Programmer/ui/uil.dtd">
+<root proj_to_near="500">
+	<command load_anim="Saves/ui/force_zap/uia_force_zap.xml"/>
+	<!--ノイズ等-->
+	<node name="noise_power" visible="true"/>
+	<node name="line_alpha" visible="true"/>
+	<node name="screen_alpha" visible="true"/>
+	<node name="se_volume"/>
+	<!--メッセージ-->
+	<node name="message">
+		<image name="bg" style="white_image" pos="0,248,0" size_wh="1280,200" color="0,0,0,128"/>
+		<text name="head" drop_shadow="true" text="CAUTION" align="center" font_size="26" pos="649,272,0" color="255,255,0,255"/>
+		<node name="body">
+			<text visible="true" name="delta" drop_shadow="true" align="center" font_size="20" pos="653,321,0" line_space="5" text="&lt;#ff4632&gt;델타&lt;#ffffff&gt;의 인물 추적 디바이스 응답이 끊겼습니다.&lt;CR&gt;추적 대상을 &lt;#ffc000&gt;아셰스&lt;#ffffff&gt;로 전환합니다.&lt;CR&gt;&lt;CR&gt;잠시 기다려 주십시오"/>
+			<text visible="false" name="avatar" drop_shadow="true" align="center" font_size="20" pos="653,321,0" line_space="5" text="&lt;#ffc000&gt;아셰스&lt;#ffffff&gt;의 인물 추적 디바이스 응답이 끊겼습니다.&lt;CR&gt;추적 대상을 &lt;#ff4632&gt;델타&lt;#ffffff&gt;로 전환합니다.&lt;CR&gt;&lt;CR&gt;잠시 기다려 주십시오"/>
+		</node>
+	</node>
+	<anim_ctrl name="ac_screen" play="true" loop="false">
+		<bind_node node="noise_power" anim="anm_noise_power" speed="1.5"/>
+		<bind_node node="noise_power" anim="anm_noise_power_color"/>
+		<bind_node node="line_alpha" anim="anm_line_alpha" speed="1.5"/>
+	</anim_ctrl>
+	<anim_ctrl name="ac_fade_out" play="true" loop="false" speed="1.4">
+		<bind_node node="message/bg" anim="anm_message_head"/>
+		<bind_node node="message/head" anim="anm_message_head"/>
+		<bind_node node="message/body" anim="anm_message_body"/>
+		<bind_node node="screen_alpha" anim="anm_fade_out" delay="8.5"/>
+		<bind_node node="se_volume" anim="anm_se_volume"/>
+	</anim_ctrl>
+</root>

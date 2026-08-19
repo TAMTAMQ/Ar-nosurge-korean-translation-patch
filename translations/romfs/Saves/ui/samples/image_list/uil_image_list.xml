@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE root SYSTEM "file://st01/project/acps3/_Programmer/ui/uil.dtd">
+<root>
+	<command load_style="Saves/ui/uis_common.xml"/>
+	<command load_style="Saves/ui/samples/image_list/uis_image_list.xml"/>
+	<command load_anim="Saves/ui/samples/image_list/uia_image_list.xml"/>
+	<!-- モンスターの絵 -->
+	<text pos="200,200" text="flick_time를 사용한 전환 애니메이션">
+		<image pos="100,30" name="image_monster" image_no="4" flick_time="0.5" style="style_image_list_monster" color="255,255,255,255"/>
+	</text>
+	<text pos="600,300" text="anim_ctrl을 사용한 전환 애니메이션">
+		<image pos="100,30" name="image_monster2" style="style_image_list_monster" color="255,255,255,255"/>
+		<anim_ctrl play="true" loop="true">
+			<bind_node node="image_monster2" anim="anm_image_list"/>
+		</anim_ctrl>
+	</text>
+</root>

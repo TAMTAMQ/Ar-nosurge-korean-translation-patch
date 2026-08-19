@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE root SYSTEM "file://st01/project/acps3/_Programmer/ui/uil.dtd">
+<root>
+	<!-- スタイルの読み込み -->
+	<command load_style="Saves/ui/gen_styles/uis_gen_common.xml"/>
+	<command load_style="Saves/ui/gen_styles/uis_gen_window.xml"/>
+	<command load_style="Saves/ui/gen_styles/uis_gen_mix.xml"/>
+	<command load_style="Saves/ui/etc/uis_etc_window.xml"/>
+	<!--
+    <image style="ui_bg_sample" color="255,255,255,255" />
+    -->
+	<node name="item_info">
+		<!-- pos="515,55" -->
+		<!-- アイテム画像の代用 -->
+		<command load_style="Saves/ui/etc/uis_item_list.xml"/>
+		<!-- 下地画像 -->
+		<image name="base_window" style="etc_window02_04" size_wh="340,560"/>
+		<!-- アイテム名 -->
+		<node name="item_neme" pos="33,24">
+			<image style="gen_common01_name_bg01" size_w="284"/>
+			<text name="item_name_text" text="포이즌 로키 독독" align="center" font_size="20" pos="138,13.333"/>
+		</node>
+		<!-- アイテム画像 -->
+		<node pos="44,70">
+			<!-- 背景 -->
+			<image style="gen_nummber_item_bg01"/>
+			<!-- アイテム画像 -->
+			<image name="item_image" style="style_item_list" image_no="0" pos="8, -2, 0" scale="0.93,0.93,0.93"/>
+			<!-- 使用タイプ -->
+			<image name="battle_icon" style="gen_common01_iteminfo_bicon" pos="134,208" image_no="1"/>
+			<image name="event_icon" style="gen_common01_iteminfo_eicon" pos="184,208"/>
+		</node>
+		<!-- アイテム詳細情報 -->
+		<node name="item_detail_info" pos="18,310">
+			<image style="gen_common01_win_acce02_bg" size_w="305"/>
+			<image style="gen_common01_win_acce02_01" pos="0,22" size_w="308"/>
+			<image style="gen_common01_window_acce01" pos="70.667,4"/>
+			<image style="gen_common01_window_acce01" pos="225.333,4"/>
+			<!-- ページタイトルテキスト -->
+			<text name="page_title" text="아이템 스테이터스" font_size="16" align="center" pos="154,7"/>
+			<!-- ページ背景画像 -->
+			<node pos="0,28">
+				<image style="gen_window03_bg02" size_wh="305,28"/>
+				<image style="gen_window03_bg02" pos="0,29" size_wh="305,28"/>
+				<image style="gen_window03_bg02" pos="0,58" size_wh="305,28"/>
+				<image style="gen_window03_bg02" pos="0,87" size_wh="305,28"/>
+				<image style="gen_window03_bg02" pos="0,116" size_wh="305,28"/>
+				<image style="gen_window03_bg02" pos="0,145" size_wh="305,28"/>
+				<image style="gen_window03_bg02" pos="0,174" size_wh="305,28"/>
+			</node>
+			<!-- ページ本体ぶら下げ用ノード -->
+			<node name="info_page_list" pos="0,30">
+				<!--
+                <node load="Saves/ui/item_info/uil_item_info_page_itemtext.xml" visible="false" />
+                <node load="Saves/ui/item_info/uil_item_info_page_category_recipe.xml" visible="false" />
+                <node load="Saves/ui/item_info/uil_item_info_page_rna.xml" visible="true" />
+                -->
+			</node>
+		</node>
+		<!-- 切り替え表示 -->
+		<node name="page_tab" pos="250,546">
+			<image style="gen_window04_page01"/>
+			<text name="page_tab_text" text="1/3" font="NUMBER01_18PX" pos="68,12,0" align="right"/>
+		</node>
+	</node>
+	<anim_ctrl name="fade_in" play="false" start_visible="true">
+		<bind_node node="item_info" anim="anm_common_fade_in" speed="1.0"/>
+	</anim_ctrl>
+	<anim_ctrl name="fade_out" play="false" end_visible="false">
+		<bind_node node="item_info" anim="anm_common_fade_in" speed="1.0" reverse="true"/>
+	</anim_ctrl>
+</root>

@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE root SYSTEM "file://st01/project/acps3/_Programmer/ui/uil.dtd">
+<root>
+	<!-- スタイルの読み込み -->
+	<command load_style="Saves/ui/gen_styles/uis_gen_battle.xml"/>
+	<command load_style="Saves/ui/gen_styles/uis_gen_mainmenu.xml"/>
+	<command load_style="Saves/ui/gen_styles/uis_gen_common.xml"/>
+	<command load_style="Saves/ui/gen_styles/uis_gen_window.xml"/>
+	<!-- アニメーションの読み込み -->
+	<command load_anim="Saves/ui/battle/uia_battle.xml"/>
+	<command load_anim="Saves/ui/main_menu/uia_main_menu.xml"/>
+	<!--テンプレートを読み込む-->
+	<node load="Saves/ui/uil_template.xml"/>
+	<node load="Saves/ui/uil_line_format.xml"/>
+	<node name="main">
+		<node name="back" visible="false">
+			<image style="white_image" size_wh="1280,725.333" color="0,0,0,128" pos="0,0,0"/>
+		</node>
+		<node name="menu" visible="false">
+			<image style="gen_battle11_commandbg" pos="0,280,0" size_w="1280"/>
+			<!-- メニューカーソル -->
+			<node name="__uimenu_cursor" pos="510,290,0">
+				<image name="__uimenu_cursor_active" pos="10,0" size_w="250" image_no="0" style="gen_window03_linecsr02_on"/>
+				<image name="linecsricon" pos="4,0" image_no="2" style="gen_window03_linecsricon"/>
+				<!-- 明滅アニメーション -->
+				<anim_ctrl play="true" loop="true">
+					<bind_node node="__uimenu_cursor_active" anim="common_blink"/>
+				</anim_ctrl>
+			</node>
+			<node visible="true">
+				<text name="menu0" text="시마법 발동" font_size="26" pos="640,290,0" align="center"/>
+				<text name="menu1" text="아이템" font_size="26" pos="640,328,0" align="center"/>
+				<text name="menu2" text="친구 기술" font_size="26" pos="640,366,0" align="center"/>
+				<text name="menu3" text="도망치기" font_size="26" pos="640,404,0" align="center"/>
+			</node>
+		</node>
+	</node>
+	<anim_ctrl name="enter_menu" play="false" speed="4.0" start_visible="true" viewer_key_assign="0">
+		<bind_node node="menu" anim="common_fade_in"/>
+	</anim_ctrl>
+	<anim_ctrl name="exit_menu" play="false" speed="4.0" end_visible="false" viewer_key_assign="1">
+		<bind_node node="menu" anim="common_fade_out"/>
+	</anim_ctrl>
+	<anim_ctrl name="enter_back" play="false" speed="4.0" start_visible="true" viewer_key_assign="0">
+		<bind_node node="back" anim="common_fade_in"/>
+	</anim_ctrl>
+	<anim_ctrl name="exit_back" play="false" speed="4.0" end_visible="false" viewer_key_assign="1">
+		<bind_node node="back" anim="common_fade_out"/>
+	</anim_ctrl>
+</root>

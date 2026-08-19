@@ -1,0 +1,119 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE root SYSTEM "file://st01/project/acps3/_Programmer/ui/uil.dtd">
+<root>
+	<command load_style="Saves/ui/gen_styles/uis_gen_common.xml"/>
+	<command load_style="Saves/ui/gen_styles/uis_gen_field.xml"/>
+	<command load_anim="Saves/ui/fieldmap/uia_fm_common.xml"/>
+	<!-- 
+  <image style="ui_bg_sample" color="128,128,128,128" />
+   -->
+	<node name="encount_bonus_template" visible="false">
+		<text name="encount_bonus_name" pos="18,9" text="ITEM" font_size="14" align="left" color="178,178,178,255"/>
+		<text name="encount_bonus_need" pos="104,9" text="10" font_size="14" align="right" color="178,178,178,255"/>
+		<image name="encount_bonus_highlight" pos="0,0" style="gen_field03_wavebonus_highlight" visible="false"/>
+		<anim_ctrl name="anim_ctrl_encount_bonus_hightlight_blink" play="true" loop="true" speed="1.0">
+			<bind_node node="encount_bonus_highlight" anim="anim_encount_bonus_hightlight_blink" reverse="false"/>
+		</anim_ctrl>
+	</node>
+	<!-- エンカウント表示 -->
+	<image name="encount_bg" pos="0,0" style="gen_field03_wave_bg" visible="true">
+		<text name="encount_place" pos="260,32" text="아이우에오카키쿠케코사시스세소" font_size="20" align="center" visible="true"/>
+		<text name="encount_num" pos="456,52" color="192,192,192,255" text="555" alpha_blend="add" align="center" word_space="-5" font="FIELD_WAVE"/>
+		<text name="encount_max" pos="462,84" color="192,192,192,255" text="50%" alpha_blend="add" align="center" font_size="10"/>
+		<node pos="76,55">
+			<image name="encount_piece_00" pos="1,5" style="gen_field03_wave_gauge01" visible="true"/>
+			<image name="encount_piece_01" pos="17,5" style="gen_field03_wave_gauge02" visible="true"/>
+			<image name="encount_piece_02" pos="34,5" style="gen_field03_wave_gauge02" visible="true"/>
+			<image name="encount_piece_03" pos="51,5" style="gen_field03_wave_gauge02" visible="true"/>
+			<image name="encount_piece_04" pos="68,5" style="gen_field03_wave_gauge02" visible="true"/>
+			<image name="encount_piece_05" pos="85,5" style="gen_field03_wave_gauge02" visible="true"/>
+			<image name="encount_piece_06" pos="102,5" style="gen_field03_wave_gauge02" visible="true"/>
+			<image name="encount_piece_07" pos="119,5" style="gen_field03_wave_gauge02" visible="true"/>
+			<image name="encount_piece_08" pos="136,5" style="gen_field03_wave_gauge02" visible="true"/>
+			<image name="encount_piece_09" pos="153,5" style="gen_field03_wave_gauge02" visible="true"/>
+			<image name="encount_piece_10" pos="170,5" style="gen_field03_wave_gauge02" visible="true"/>
+			<image name="encount_piece_11" pos="187,5" style="gen_field03_wave_gauge02" visible="true"/>
+			<image name="encount_piece_12" pos="204,5" style="gen_field03_wave_gauge02" visible="true"/>
+			<image name="encount_piece_13" pos="221,5" style="gen_field03_wave_gauge02" visible="true"/>
+			<image name="encount_piece_14" pos="238,5" style="gen_field03_wave_gauge02" visible="true"/>
+			<image name="encount_piece_15" pos="255,5" style="gen_field03_wave_gauge02" visible="true"/>
+			<image name="encount_piece_16" pos="272,5" style="gen_field03_wave_gauge02" visible="true"/>
+			<image name="encount_piece_17" pos="289,5" style="gen_field03_wave_gauge02" visible="true"/>
+			<image name="encount_piece_18" pos="306,5" style="gen_field03_wave_gauge02" visible="true"/>
+			<image name="encount_piece_19" pos="323,5" style="gen_field03_wave_gauge03" visible="true"/>
+		</node>
+		<image name="encount_gauge" pos="76,55" style="gen_field03_wave_gauge_light" visible="true"/>
+		<node name="encount_bonus_00" pos="71,101" clone_child_tree="encount_bonus_template"/>
+		<node name="encount_bonus_01" pos="191,101" clone_child_tree="encount_bonus_template"/>
+		<node name="encount_bonus_02" pos="311,101" clone_child_tree="encount_bonus_template"/>
+	</image>
+	<!-- ゲージ伸縮(左へ伸びる) -->
+	<anim_ctrl name="anim_ctrl_shrink_left" play="false" loop="false" speed="1.0">
+		<bind_node node="encount_gauge" anim="anim_shrink_left" reverse="false"/>
+	</anim_ctrl>
+	<!-- ゲージの欠片非表示 -->
+	<anim_ctrl name="anim_ctrl_piece_00_out" play="false" loop="false" speed="1.0">
+		<bind_node node="encount_piece_00" anim="anim_scale_x_zero" reverse="false"/>
+	</anim_ctrl>
+	<anim_ctrl name="anim_ctrl_piece_01_out" play="false" loop="false" speed="1.0">
+		<bind_node node="encount_piece_01" anim="anim_scale_x_zero" reverse="false"/>
+	</anim_ctrl>
+	<anim_ctrl name="anim_ctrl_piece_02_out" play="false" loop="false" speed="1.0">
+		<bind_node node="encount_piece_02" anim="anim_scale_x_zero" reverse="false"/>
+	</anim_ctrl>
+	<anim_ctrl name="anim_ctrl_piece_03_out" play="false" loop="false" speed="1.0">
+		<bind_node node="encount_piece_03" anim="anim_scale_x_zero" reverse="false"/>
+	</anim_ctrl>
+	<anim_ctrl name="anim_ctrl_piece_04_out" play="false" loop="false" speed="1.0">
+		<bind_node node="encount_piece_04" anim="anim_scale_x_zero" reverse="false"/>
+	</anim_ctrl>
+	<anim_ctrl name="anim_ctrl_piece_05_out" play="false" loop="false" speed="1.0">
+		<bind_node node="encount_piece_05" anim="anim_scale_x_zero" reverse="false"/>
+	</anim_ctrl>
+	<anim_ctrl name="anim_ctrl_piece_06_out" play="false" loop="false" speed="1.0">
+		<bind_node node="encount_piece_06" anim="anim_scale_x_zero" reverse="false"/>
+	</anim_ctrl>
+	<anim_ctrl name="anim_ctrl_piece_07_out" play="false" loop="false" speed="1.0">
+		<bind_node node="encount_piece_07" anim="anim_scale_x_zero" reverse="false"/>
+	</anim_ctrl>
+	<anim_ctrl name="anim_ctrl_piece_08_out" play="false" loop="false" speed="1.0">
+		<bind_node node="encount_piece_08" anim="anim_scale_x_zero" reverse="false"/>
+	</anim_ctrl>
+	<anim_ctrl name="anim_ctrl_piece_09_out" play="false" loop="false" speed="1.0">
+		<bind_node node="encount_piece_09" anim="anim_scale_x_zero" reverse="false"/>
+	</anim_ctrl>
+	<anim_ctrl name="anim_ctrl_piece_10_out" play="false" loop="false" speed="1.0">
+		<bind_node node="encount_piece_10" anim="anim_scale_x_zero" reverse="false"/>
+	</anim_ctrl>
+	<anim_ctrl name="anim_ctrl_piece_11_out" play="false" loop="false" speed="1.0">
+		<bind_node node="encount_piece_11" anim="anim_scale_x_zero" reverse="false"/>
+	</anim_ctrl>
+	<anim_ctrl name="anim_ctrl_piece_12_out" play="false" loop="false" speed="1.0">
+		<bind_node node="encount_piece_12" anim="anim_scale_x_zero" reverse="false"/>
+	</anim_ctrl>
+	<anim_ctrl name="anim_ctrl_piece_13_out" play="false" loop="false" speed="1.0">
+		<bind_node node="encount_piece_13" anim="anim_scale_x_zero" reverse="false"/>
+	</anim_ctrl>
+	<anim_ctrl name="anim_ctrl_piece_14_out" play="false" loop="false" speed="1.0">
+		<bind_node node="encount_piece_14" anim="anim_scale_x_zero" reverse="false"/>
+	</anim_ctrl>
+	<anim_ctrl name="anim_ctrl_piece_15_out" play="false" loop="false" speed="1.0">
+		<bind_node node="encount_piece_15" anim="anim_scale_x_zero" reverse="false"/>
+	</anim_ctrl>
+	<anim_ctrl name="anim_ctrl_piece_16_out" play="false" loop="false" speed="1.0">
+		<bind_node node="encount_piece_16" anim="anim_scale_x_zero" reverse="false"/>
+	</anim_ctrl>
+	<anim_ctrl name="anim_ctrl_piece_17_out" play="false" loop="false" speed="1.0">
+		<bind_node node="encount_piece_17" anim="anim_scale_x_zero" reverse="false"/>
+	</anim_ctrl>
+	<anim_ctrl name="anim_ctrl_piece_18_out" play="false" loop="false" speed="1.0">
+		<bind_node node="encount_piece_18" anim="anim_scale_x_zero" reverse="false"/>
+	</anim_ctrl>
+	<anim_ctrl name="anim_ctrl_piece_19_out" play="false" loop="false" speed="1.0">
+		<bind_node node="encount_piece_19" anim="anim_scale_x_zero" reverse="false"/>
+	</anim_ctrl>
+	<!-- フェードイン -->
+	<anim_ctrl name="anim_ctrl_fade_in" play="false" loop="false" speed="1.0">
+		<bind_node node="encount_bg" anim="anim_encount_fade_in" reverse="false"/>
+	</anim_ctrl>
+</root>

@@ -1,0 +1,91 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE root SYSTEM "file://st01/project/acps3/_Programmer/ui/uil.dtd">
+<root>
+	<!-- スタイルの読み込み -->
+	<command load_style="Saves/ui/uis_common.xml"/>
+	<command load_style="Saves/ui/gen_styles/uis_gen_common.xml"/>
+	<command load_style="Saves/ui/gen_styles/uis_gen_window.xml"/>
+	<command load_style="Saves/ui/gen_styles/uis_gen_mainmenu.xml"/>
+	<command load_style="Saves/ui/gen_styles/uis_gen_mix.xml"/>
+	<command load_style="Saves/ui/gen_styles/uis_gen_battle.xml"/>
+	<command load_style="Saves/ui/main_menu/uis_main_menu.xml"/>
+	<command load_style="Saves/ui/etc/uis_big_chara.xml"/>
+	<command load_style="Saves/ui/etc/uis_friend_list.xml"/>
+	<command load_style="Saves/ui/etc/uis_etc_window.xml"/>
+	<command load_style="Saves/ui/gen_styles/uis_gen_bath.xml"/>
+	<command load_anim="Saves/ui/main_menu/uia_main_menu.xml"/>
+	<!--テンプレートを読み込む-->
+	<node load="Saves/ui/uil_template.xml"/>
+	<node load="Saves/ui/uil_line_format.xml"/>
+	<!-- メニュー -->
+	<node pos="100,125">
+		<menu name="ui_menu" style="style_menu_column1"/>
+		<text name="menu_title" text="친구 기술" font_size="16" align="center" pos="150,15"/>
+		<command target_node="ui_menu/__uimenu_window" set_image_no="1"/>
+	</node>
+	<!-- 情報WINDOW -->
+	<node name="page" visible="true" viewer_visible="true">
+		<node pos="122,120,0" rot="0,-5,0" visible="false">
+			<menu name="skill_menu" style="style_menu_column1" disp_scroll_bar="true" size_w="337" disp_lines="8"/>
+			<command target_node="skill_menu/__uimenu_window" set_image_no="1"/>
+			<text name="page_title" text="친구 기술명" font_size="16" align="center" pos="168,17,0"/>
+		</node>
+		<node name="pivot1" pos="1200,0" rot="0,5,0">
+			<node name="pivot2" pos="-1200,0">
+				<image name="big_chara" pos="580,0" style="style_big_chara"/>
+				<image name="param_window" pos="505,104,0" size_wh="366,500" style="gen_window01_02">
+					<node name="skill_name" pos="47,8">
+						<image style="gen_common01_name_bg01" size_w="282">
+							<text name="skill_name_text" text="포이즌 로키 독독" align="center" font_size="20" pos_ratio_x="0.5" pos="0,12"/>
+						</image>
+					</node>
+					<image name="image_skill" style="style_friend_list" pos="25,64"/>
+					<node name="label" pos="7,259">
+						<node>
+							<image style="gen_common01_win_acce02_bg" size_w="350"/>
+							<image style="gen_common01_win_acce02_01" pos="0,22" size_w="354"/>
+							<image style="gen_common01_window_acce01" pos="104,4"/>
+							<image style="gen_common01_window_acce01" pos="241,4"/>
+							<text name="page_title" text="친구 이름" font_size="16" align="center" pos="177,7"/>
+						</node>
+						<node pos="1,30">
+							<image pos="0,0" size_wh="350,28" style="gen_window03_bg02"/>
+							<text name="text_charaname" pos="172,6" drop_shadow="false" line_char_length="15" align="center" font_size="18" line_space="14" text="가나다순"/>
+						</node>
+					</node>
+					<node name="label" pos="7,316">
+						<node>
+							<image style="gen_common01_win_acce02_bg" size_w="350"/>
+							<image style="gen_common01_win_acce02_01" pos="0,22" size_w="354"/>
+							<image style="gen_common01_window_acce01" pos="104,4"/>
+							<image style="gen_common01_window_acce01" pos="241,4"/>
+							<text name="page_title" text="효과" font_size="16" align="center" pos="177,7"/>
+						</node>
+						<node pos="1,30">
+							<image pos="0,0" size_wh="350,28" style="gen_window03_bg02"/>
+							<text name="text_text1" pos="172,6" drop_shadow="false" line_char_length="15" align="center" font_size="18" line_space="14" text="아이우에오카키쿠케코사시스세소"/>
+						</node>
+					</node>
+					<node name="label" pos="7,373">
+						<node>
+							<image style="gen_common01_win_acce02_bg" size_w="350"/>
+							<image style="gen_common01_win_acce02_01" pos="0,22" size_w="354"/>
+							<image style="gen_common01_window_acce01" pos="104,4"/>
+							<image style="gen_common01_window_acce01" pos="241,4"/>
+							<text name="page_title" text="설명" font_size="16" align="center" pos="177,7"/>
+						</node>
+						<node pos="1,30">
+							<image pos="0,0" size_wh="350,28" style="gen_window03_bg02"/>
+							<image pos="0,29" size_wh="350,28" style="gen_window03_bg02"/>
+							<image pos="0,58" size_wh="350,28" style="gen_window03_bg02"/>
+							<text name="text_text2" pos="40,8" drop_shadow="false" line_char_length="15" font_size="18" line_space="14" text="아이우에오카키쿠케코사시스세소타치츠테토아이우에오카키쿠케코사시스세소타치츠테토아이우에오"/>
+						</node>
+					</node>
+				</image>
+			</node>
+		</node>
+	</node>
+	<anim_ctrl name="get_in" start_visible="true">
+		<bind_node node="page" speed="2.0" anim="anm_common_fade_in"/>
+	</anim_ctrl>
+</root>

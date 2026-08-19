@@ -1,0 +1,86 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE root SYSTEM "file://st01/project/acps3/_Programmer/ui/uil.dtd">
+<root camera_fov="30" proj_to_near="1" proj_to_far="10000">
+	<!-- スタイルの読み込み -->
+	<command load_style="Saves/ui/uis_common.xml"/>
+	<text pos="628,38,0" font_size="24" align="center" text="레이아웃 편집 화면 조작 설명" color="128,255,128,255"/>
+	<node name="top" pos="340,97,0">
+		<node pos="0,0">
+			<text pos="0,0,0" font_size="20" text="레이아웃 편집 종료"/>
+			<text pos="270,0,0" font_size="20" text="&lt;IM02&gt;"/>
+			<text pos="420,0,0" font_size="20" text="X"/>
+		</node>
+		<node pos="0,30">
+			<text pos="0,0,0" font_size="20" text="화면 정보 표시/숨기기"/>
+			<text pos="270,0,0" font_size="20" text="&lt;IM00&gt;"/>
+			<text pos="420,0,0" font_size="20" text="I"/>
+		</node>
+		<node pos="0,60">
+			<text pos="0,0,0" font_size="20" text="그리드 표시/숨기기"/>
+			<text pos="270,0,0" font_size="20" text="&lt;IM06&gt;"/>
+			<text pos="420,0,0" font_size="20" text="G"/>
+		</node>
+		<node pos="0,90">
+			<text pos="0,0,0" font_size="20" text="선택 노드 표시/숨기기"/>
+			<text pos="270,0,0" font_size="20" text="&lt;IM04&gt; + &lt;IM12&gt;"/>
+			<text pos="420,0,0" font_size="20" text="H"/>
+		</node>
+		<node pos="0,120">
+			<text pos="0,0,0" font_size="20" text="XML 다시 읽기"/>
+			<text pos="270,0,0" font_size="20" text="&lt;IM04&gt; + &lt;IM16&gt;"/>
+			<text pos="420,0,0" font_size="20" text="R"/>
+		</node>
+		<node pos="0,150">
+			<text pos="0,0,0" font_size="20" text="선택 노드 전환"/>
+			<text pos="270,0,0" font_size="20" text="&lt;IM04&gt; + &lt;IM14&gt;&lt;IM18&gt;"/>
+			<text pos="420,0,0" font_size="20" text="N, B"/>
+		</node>
+		<node pos="0,180">
+			<text pos="0,0,0" font_size="20" text="선택 노드 이동"/>
+			<text pos="270,0,0" font_size="20" text="&lt;IM04&gt; + &lt;IM10&gt;"/>
+			<text pos="420,0,0" font_size="20" text="shift + ↑↓←→"/>
+		</node>
+		<node pos="0,210">
+			<text pos="0,0,0" font_size="20" text="XML 덤프 출력"/>
+			<text pos="270,0,0" font_size="20" text="&lt;IM04&gt; + &lt;IM19&gt;"/>
+			<text pos="420,0,0" font_size="20" text="D"/>
+		</node>
+		<node pos="0,240">
+			<text pos="0,0,0" font_size="20" text="도움말 화면 열기"/>
+			<text pos="270,0,0" font_size="20" text="&lt;IM19&gt;"/>
+			<text pos="420,0,0" font_size="20" text="P"/>
+		</node>
+	</node>
+	<node name="top_win32_only" pos="340,417,0">
+		<text pos="-39,-28,0" font_size="20" text="다음은 Windows 버전 전용" color="0,128,255,255"/>
+		<node pos="0,0">
+			<text pos="0,0,0" font_size="20" text="노드 선택"/>
+			<text pos="420,0,0" font_size="20" text="왼쪽 클릭"/>
+		</node>
+		<node pos="0,30">
+			<text pos="0,0,0" font_size="20" text="노드 이동"/>
+			<text pos="420,0,0" font_size="20" text="Shift + 왼쪽 드래그"/>
+		</node>
+		<node pos="0,60">
+			<text pos="0,0,0" font_size="20" text="이미지 크기 변경"/>
+			<text pos="420,0,0" font_size="20" text="shift + ctrl + 왼쪽 드래그&lt;CR&gt;shift + ctrl + ↑↓←→"/>
+		</node>
+		<node pos="0,110">
+			<text pos="0,0,0" font_size="20" text="XML 저장"/>
+			<text pos="420,0,0" font_size="20" text="ctrl + S"/>
+		</node>
+		<node pos="0,140">
+			<text pos="0,0,0" font_size="20" text="되돌리기(undo)"/>
+			<text pos="420,0,0" font_size="20" text="ctrl + Z"/>
+		</node>
+		<node pos="0,170">
+			<text pos="0,0,0" font_size="20" text="다시 실행(redo)"/>
+			<text pos="420,0,0" font_size="20" text="ctrl + Y"/>
+		</node>
+		<node pos="0,200">
+			<text pos="0,0,0" font_size="20" text="XML 파일 열기"/>
+			<text pos="270,0,0" font_size="20" text="&lt;IM20&gt;"/>
+			<text pos="420,0,0" font_size="20" text="O"/>
+		</node>
+	</node>
+</root>

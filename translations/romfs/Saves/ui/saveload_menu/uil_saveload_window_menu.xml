@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<root>
+	<!--***↓お決まり関連(必ず一番上に置いておく) ***-->
+	<node name="usuals" visible="false" viewer_visible="false">
+		<!--↓テンプレート(文字色やカスタムフォント)の読み込み-->
+		<node load="Saves/ui/uil_template.xml" name="font_template"/>
+	</node>
+	<command load_anim="Saves/ui/saveload_menu/uia_saveload.xml"/>
+	<!-- スタイルの読み込み -->
+	<command load_style="Saves/ui/gen_styles/uis_gen_window.xml"/>
+	<command load_style="Saves/ui/gen_styles/uis_gen_saveload_menu.xml"/>
+	<command load_style="Saves/ui/gen_styles/uis_gen_mainmenu.xml"/>
+	<command load_style="Saves/ui/gen_styles/uis_gen_field.xml"/>
+	<command load_style="Saves/ui/gen_styles/uis_gen_battle.xml"/>
+	<command load_style="Saves/ui/gen_styles/uis_gen_worldtown.xml"/>
+	<command load_style="Saves/ui/gen_styles/uis_gen_common.xml"/>
+	<!--***↓指示書画像(Data/Win32/ui_bg/ui_bg_sample_g1t) ***-->
+	<image name="sample_bg" style="ui_bg_sample" size_wh="1280, 720" visible="false" viewer_visible="false"/>
+	<!--***↓クローン元パーツを入れておく場所 ***-->
+	<node name="clone_targets" viewer_visible="false" visible="false">
+		<node name="data" pos="-0.00, -0.00, -0.00" rot="-0.00, -0.00, -0.00" scale="1.00, 1.00, 1.00" visible="false" viewer_visible="true">
+			<image name="bg" style="gen_DX_acps3_saveload_frame" viewer_visible="false"/>
+			<image name="hilight" pos="-0.00, -0.00, -0.00" rot="-0.00, -0.00, -0.00" scale="1.00, 1.00, 1.00" style="gen_DX_acps3_saveload_frame_gold" image_no="1" visible="true">
+				<!-- 明滅アニメーション -->
+				<anim_ctrl loop="true" play="true" name="none">
+					<bind_node node="hilight" anim="anm_common_cursor_blink"/>
+				</anim_ctrl>
+			</image>
+			<node name="overwrite" pos="197.00, 53.00, -0.00" rot="-0.00, -0.00, -0.00" scale="1.00, 1.00, 1.00" viewer_visible="false" visible="false">
+				<image name="image" style="gen_DX_saveload_Data" rot="-0.00, -0.00, -0.00" scale="1.00, 1.00, 1.00" pos="-184.00, -44.00, -0.00"/>
+				<text name="data" rot="-0.00, -0.00, -0.00" scale="1.00, 1.00, 1.00" pos="249.00, 28.00, -0.00" text="2019/06/17 00:00:00" word_space="1.00" align="right" font_size="18.00" copy="TEXTCOLOR_BROWN"/>
+				<text text="Game Data 002" name="text_file" pos="-27.00, -30.00, -0.00" rot="-0.00, -0.00, -0.00" scale="1.00, 1.00, 1.00" align="left" word_space="1.00" line_char_length="20" line_space="8.00" font="" font_size="18.00" copy="TEXTCOLOR_BROWN"/>
+				<text text="【샤를로트】제1장" name="text_story" pos="-20.00, -4.00, -0.00" rot="-0.00, -0.00, -0.00" scale="1.00, 1.00, 1.00" copy="TEXTCOLOR_BROWN" word_space="1.00" font_size="20.00" align="left"/>
+			</node>
+			<node name="new" pos="197.00, 53.00, -0.00" rot="-0.00, -0.00, -0.00" scale="1.00, 1.00, 1.00" visible="false" viewer_visible="true">
+				<image name="image_1" style="gen_DX_saveload_Data" rot="-0.00, -0.00, -0.00" scale="1.00, 1.00, 1.00" pos="-184.00, -44.00, -0.00"/>
+				<text name="data_1" rot="-0.00, -0.00, -0.00" scale="1.00, 1.00, 1.00" pos="249.00, 28.00, -0.00" text="2019/06/17 00:00:00" word_space="1.00" align="right" font_size="18.00" copy="TEXTCOLOR_BROWN"/>
+				<text text="Game Data 002" name="text_file_1" pos="-27.00, -30.00, -0.00" rot="-0.00, -0.00, -0.00" scale="1.00, 1.00, 1.00" align="left" word_space="1.00" line_char_length="20" line_space="8.00" font="" font_size="18.00" copy="TEXTCOLOR_BROWN"/>
+				<text text="Phase 0 이온 &amp; 아바타" name="text_story_1" pos="-20.00, -4.00, -0.00" rot="-0.00, -0.00, -0.00" scale="1.00, 1.00, 1.00" copy="TEXTCOLOR_BROWN" word_space="1.00" font_size="20.00" align="left"/>
+			</node>
+		</node>
+	</node>
+	<!--***↓画面パーツの配置場所 ***-->
+	<node name="top" scale="1.00, 1.00, 1.00">
+		<anim_ctrl name="anim_fade_in" viewer_key_assign="0">
+			<bind_node anim="anim_get_in_top" node="top"/>
+		</anim_ctrl>
+		<!-- 画面タイトル -->
+		<node name="title" pos="640,30">
+			<image name="msg_chara_caption_bg" pos="-128,0" size_w="256" style="gen_field03_explanation"/>
+			<text name="msg_chara_caption_text" pos="0,5" align="center" font_size="32" line_char_length="20" line_space="5" text="저장"/>
+		</node>
+		<!-- セーブリスト -->
+		<node name="list" pos="103, 126, 0" rot="-0.00, -0.00, -0.00" scale="1.00, 1.00, 1.00" viewer_visible="false">
+			<image name="bg_list" pos="700, -66, 0" style="gen_menu06_light" rot="0.00, -180.00, 0.00" color="255,255,255,255" alpha_blend="add" size_w="820"/>
+			<node copy="data" clone_child_tree="data" name="data01" pos="0.00, 0.00, 0.00" rot="0.00, -0.00, 0.00" scale="1.00, 1.00, 1.00"/>
+			<node copy="data" clone_child_tree="data" name="data02" pos="0.00, 130.00, 0.00" rot="0.00, -0.00, 0.00" scale="1.00, 1.00, 1.00"/>
+			<node copy="data" clone_child_tree="data" name="data03" pos="0.00, 260.00, 0.00" rot="0.00, -0.00, 0.00" scale="1.00, 1.00, 1.00"/>
+			<node copy="data" clone_child_tree="data" name="data04" pos="0.00, 390.00, 0.00" rot="0.00, -0.00, 0.00" scale="1.00, 1.00, 1.00"/>
+		</node>
+		<node name="scrollbar" pos="613, 119, 0" rot="-0.00, -0.00, -0.00" scale="1.00, 1.00, 1.00" visible="false" viewer_visible="true">
+			<scroll_bar name="scroll_bar" pos="-23, 0, 0" rot="-0.00, -0.00, -0.00" scale="1.00, 1.00, 1.00" style="common_scroll_bar_20th_default" size_h="534.00" visible="false" viewer_visible="true"/>
+		</node>
+		<!-- 詳細情報 -->
+		<node name="info" pos="650, 129, 0" rot="-0.00, +5.00, -0.00" scale="1.00, 1.00, 1.00" viewer_visible="true">
+			<image name="bg" style="gen_window01_01" rot="-0.00, -0.00, -0.00" scale="1.00, 1.00, 1.00" size_wh="545.00, 580.00, 0.00" viewer_visible="false" pos="0.00, -35.00, 0.00"/>
+			<node name="info_detail" pos="0, 32, 0">
+				<!--***↓プレイ時間 ***-->
+				<node name="playtime" rot="-0.00, -0.00, -0.00" scale="1.00, 1.00, 1.00" pos="38.00, -0.00, 0.00">
+					<image name="frame" style="gen_wt01_worldname_line" color="180.00, 255.00, 220.00, 125.00" pos="-8.00, -0.00, -0.00" size_w="492.00"/>
+					<text name="text_0" rot="-0.00, -0.00, -0.00" scale="1.00, 1.00, 1.00" align="right" text="00:00:00" font_size="22.00" copy="TEXTCOLOR_BROWN" pos="466.00, -20.00, -0.00" word_space="1.00"/>
+					<text name="name_0" rot="-0.00, -0.00, -0.00" scale="1.00, 1.00, 1.00" align="left" pos="25.00, -21.00, -0.00" text="플레이 시간" font_size="23.00" copy="TEXTCOLOR_BROWN"/>
+				</node>
+				<!--***↓操作パーティー ***-->
+				<node name="player" rot="-0.00, -0.00, -0.00" scale="1.00, 1.00, 1.00" pos="38, 40, -0">
+					<image name="frame" style="gen_wt01_worldname_line" color="180.00, 255.00, 220.00, 125.00" pos="-8.00, 0.00, -0.00" size_w="492.00"/>
+					<text name="name_4" rot="-0.00, -0.00, -0.00" scale="1.00, 1.00, 1.00" align="left" pos="25.00, -21.00, 0.00" text="조작 파티" font_size="22.00" copy="TEXTCOLOR_BROWN"/>
+					<text name="text_4" rot="-0.00, -0.00, -0.00" scale="1.00, 1.00, 1.00" align="right" text="더미 메시지" font_size="21.00" copy="TEXTCOLOR_BROWN" pos="466.00, -20.00, 0.00"/>
+				</node>
+				<!--***↓Lv ***-->
+				<node name="level" rot="-0.00, -0.00, -0.00" scale="1.00, 1.00, 1.00" viewer_visible="false" pos="38.00, 80.00, 0.00">
+					<image name="frame" style="gen_wt01_worldname_line" color="180.00, 255.00, 220.00, 125.00" pos="-8.00, -0.00, -0.00" size_w="492.00"/>
+					<text name="name_1" rot="-0.00, -0.00, -0.00" scale="1.00, 1.00, 1.00" text="Lv" pos="25.00, -21.00, 0.00" font_size="22.00" align="left" copy="TEXTCOLOR_BROWN"/>
+					<text name="text_1" rot="-0.00, -0.00, -0.00" scale="1.00, 1.00, 1.00" align="right" text="99" copy="TEXTCOLOR_BROWN" pos="466.00, -20.00, 0.00" font_size="21.00"/>
+				</node>
+				<!--***↓現在置 ***-->
+				<node name="mix_level" rot="-0.00, -0.00, -0.00" scale="1.00, 1.00, 1.00" pos="38.00, 120.00, 0.00">
+					<image name="frame" style="gen_wt01_worldname_line" color="180.00, 255.00, 220.00, 125.00" pos="-8.00, 0.00, -0.00" size_w="492.00"/>
+					<text name="name_2" rot="-0.00, -0.00, -0.00" scale="1.00, 1.00, 1.00" align="left" pos="25.00, -21.00, 0.00" text="현재 위치" font_size="22.00" copy="TEXTCOLOR_BROWN"/>
+					<text name="text_2" rot="-0.00, -0.00, -0.00" scale="1.00, 1.00, 1.00" align="right" text="더미 메시지" font_size="21.00" copy="TEXTCOLOR_BROWN" pos="466.00, -20.00, 0.00"/>
+				</node>
+				<!--***↓ヒストリー ***-->
+				<node name="history" rot="-0.00, -0.00, -0.00" scale="1.00, 1.00, 1.00" viewer_visible="false" pos="38.00, 160.00, 0.00">
+					<image name="frame" style="gen_wt01_worldname_line" color="180.00, 255.00, 220.00, 125.00" pos="-8.00, -0.00, -0.00" size_w="492.00"/>
+					<text name="name" rot="-0.00, -0.00, -0.00" scale="1.00, 1.00, 1.00" text="히스토리" pos="25.00, -21.00, 0.00" font_size="22.00" align="left" copy="TEXTCOLOR_BROWN"/>
+					<text name="text" rot="-0.00, -0.00, -0.00" scale="0.85, 1.00, 1.00" align="right" text="０１２３４５６７８９０１２３４５６７" copy="TEXTCOLOR_BROWN" pos="466.00, -20.00, 0.00" font_size="21.00"/>
+				</node>
+				<!--***↓所持金 ***-->
+				<node name="money" rot="-0.00, -0.00, -0.00" scale="1.00, 1.00, 1.00" viewer_visible="false" pos="38.00, 200.00, 0.00">
+					<image name="frame" style="gen_wt01_worldname_line" color="180.00, 255.00, 220.00, 125.00" pos="-8.00, -0.00, -0.00" size_w="492.00"/>
+					<text name="text" rot="-0.00, -0.00, -0.00" scale="1.00, 1.00, 1.00" align="right" text="999999999 CT" copy="TEXTCOLOR_BROWN" pos="466.00, -20.00, 0.00" font_size="21.00"/>
+					<image name="icon_ct" pos="10, -22, 0" style="gen_battle06_money_text"/>
+				</node>
+				<!--***↓ダイブポイント ***-->
+				<node name="dive" rot="-0.00, -0.00, -0.00" scale="1.00, 1.00, 1.00" viewer_visible="false" pos="38.00, 240.00, 0.00">
+					<image name="frame" style="gen_wt01_worldname_line" color="180.00, 255.00, 220.00, 125.00" pos="-8.00, -0.00, -0.00" size_w="492.00"/>
+					<text name="text" rot="-0.00, -0.00, -0.00" scale="1.00, 1.00, 1.00" align="right" text="999999999 DP" copy="TEXTCOLOR_BROWN" pos="466.00, -20.00, 0.00" font_size="21.00"/>
+					<image name="icon_dp" pos="10, -22, 0" style="gen_battle06_divepoint_text"/>
+				</node>
+				<!--***↓キャラクター ***-->
+				<node name="party" rot="-0.00, -0.00, -0.00" scale="1.00, 1.00, 1.00" viewer_visible="false" pos="38.00, 280.00, 0.00">
+					<text text="캐릭터" name="text_3" font_size="22.00" copy="TEXTCOLOR_BROWN" pos="17.00, -21.00, 0.00"/>
+					<node name="chara_set" pos="-0.00, 10.00, 0.00">
+						<node name="chara_0" pos="-0.00, -0.00, 0.00">
+							<image name="frame" style="gen_wt01_worldname_line" color="180.00, 255.00, 220.00, 125.00" pos="-8.00, 28.00, -0.00" size_w="492.00"/>
+							<text name="lv_value" rot="-0.00, -0.00, -0.00" scale="1.00, 1.00, 1.00" align="left" text="99" copy="TEXTCOLOR_BROWN" pos="433, 6, -0" font_size="21.00"/>
+							<text name="lv" rot="-0.00, -0.00, -0.00" scale="1.00, 1.00, 1.00" text="Lv :" pos="421.00, 6.00, -0.00" font_size="21.00" align="right" word_space="-1.00" copy="TEXTCOLOR_BROWN"/>
+							<text name="name" rot="-0.00, -0.00, -0.00" scale="1.00, 1.00, 1.00" text="샤를로테" pos="35.00, 6.00, -0.00" font_size="21.00" align="left" word_space="-1.00" copy="TEXTCOLOR_BROWN"/>
+							<image name="chara_icon" image_no="0" pos="35,-5" style="gen_common05_charaicon" visible="false"/>
+						</node>
+						<node name="chara_1" clone_tree="chara_0" pos="0.00, 45.00, 0.00"/>
+						<node name="chara_2" clone_tree="chara_0" pos="0.00, 90.00, 0.00"/>
+						<node name="chara_3" clone_tree="chara_0" pos="0.00, 135.00, 0.00"/>
+					</node>
+				</node>
+			</node>
+		</node>
+		<node name="new" pos="364.00, 104.00, 0.00" rot="-0.00, -0.00, -0.00" scale="1.00, 1.00, 1.00" visible="false" viewer_visible="false">
+			<node copy="data" clone_child_tree="data" name="data01_1" pos="0.00, 174.00, 0.00" rot="-0.00, -0.00, -0.00" scale="1.00, 1.00, 1.00" viewer_visible="true"/>
+		</node>
+		<node name="overwrite" pos="364.00, 104.00, 0.00" rot="-0.00, -0.00, -0.00" scale="1.00, 1.00, 1.00" visible="false" viewer_visible="false">
+			<node copy="data" clone_child_tree="data" name="data01_1" pos="0, 77, 0" rot="-0.00, -0.00, -0.00" scale="1.00, 1.00, 1.00" viewer_visible="true"/>
+			<image name="itemcursor" pos="204, 246, 0" scale="0.80, 1.10, 1.00" style="gen_common01_arrow_l" rot="-0.00, -0.00, -90.01" image_no="0" viewer_visible="false"/>
+			<node copy="data" clone_child_tree="data" name="data01_2" pos="0, 254, 0" rot="-0.00, -0.00, -0.00" scale="1.00, 1.00, 1.00"/>
+		</node>
+	</node>
+</root>

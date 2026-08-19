@@ -1,0 +1,167 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE root SYSTEM "file://st01/project/acps3/_Programmer/ui/uil.dtd">
+<root>
+	<!-- スタイルの読み込み -->
+	<command load_style="Saves/ui/uis_common.xml"/>
+	<command load_style="Saves/ui/gen_styles/uis_gen_common.xml"/>
+	<command load_style="Saves/ui/gen_styles/uis_gen_window.xml"/>
+	<command load_style="Saves/ui/gen_styles/uis_gen_mainmenu.xml"/>
+	<command load_style="Saves/ui/gen_styles/uis_gen_battle.xml"/>
+	<command load_style="Saves/ui/main_menu/uis_main_menu.xml"/>
+	<command load_style="Saves/ui/samples/image_list/uis_image_list.xml"/>
+	<command load_style="Saves/ui/etc/uis_big_chara.xml"/>
+	<command load_style="Saves/ui/etc/uis_etc_window.xml"/>
+	<command load_style="Saves/ui/gen_styles/uis_gen_bath.xml"/>
+	<command load_anim="Saves/ui/main_menu/uia_main_menu.xml"/>
+	<image style="ui_bg_sample" color="128,128,128,128" visible="false" viewer_visible="true"/>
+	<!--テンプレートを読み込む-->
+	<node load="Saves/ui/uil_template.xml"/>
+	<node load="Saves/ui/uil_line_format.xml"/>
+	<image name="big_chara" pos="-158,-29,0" style="style_big_chara"/>
+	<node name="param_gauge_template" visible="false">
+		<image pos="0,0" size_wh="350,33" style="gen_window03_bg02">
+			<text pos="17,8" name="label" align="left" text="공격력" drop_shadow="false" font_size="20">
+				<text name="value" pos="180,8" drop_shadow="false" align="right" text="123" copy="NUMBER01_20PX"/>
+				<image pos="187,5" style="gen_menu01_hpgauge01_bg">
+					<image name="value_gauge" style="gen_menu01_hpgauge01"/>
+				</image>
+			</text>
+		</image>
+	</node>
+	<node name="page01_man" visible="false" viewer_visible="true">
+		<node name="pivot1" pos="1200" rot="0,5,0">
+			<node name="pivot2" pos="-1200" scale="0.98,0.98">
+				<image name="status" pos="429,125,0" size_wh="365,450" style="gen_window01_02" color="255,255,255,255">
+					<image pos="40,7" size_w="288" style="gen_common01_name_bg01">
+						<text name="name" pos_ratio_x="0.5" pos="0,13" text="캐스티 리아노이트" font_size="18" align="center"/>
+					</image>
+					<node name="label" pos="7,50">
+						<image style="gen_common01_win_acce02_bg" size_w="350"/>
+						<image style="gen_common01_win_acce02_01" pos="0,22" size_w="354"/>
+						<image style="gen_common01_window_acce01" pos="104,4"/>
+						<image style="gen_common01_window_acce01" pos="241,4"/>
+						<text name="page_title" text="스테이터스" font_size="13" align="center" pos="177,7"/>
+					</node>
+					<!--LV-->
+					<image pos="20,85" style="gen_menu01_status_lv">
+						<text name="lv" pos="56,16" text="09" copy="NUMBER01_20PX"/>
+					</image>
+					<!--EXP-->
+					<image pos="20,117" style="gen_menu01_status_exp">
+						<text name="exp" pos="56,16" text="009009" copy="NUMBER01_20PX"/>
+					</image>
+					<!--NEXT Exp-->
+					<image pos="20,149" style="gen_menu01_status_nextexp">
+						<text name="next_exp" pos="56,16" text="009009" copy="NUMBER01_20PX"/>
+					</image>
+					<node name="param0" pos="8,185" clone_child_tree="param_gauge_template"/>
+					<node name="param1" pos="8,219" clone_child_tree="param_gauge_template"/>
+					<node name="param2" pos="8,253" clone_child_tree="param_gauge_template"/>
+					<node name="param3" pos="8,287" clone_child_tree="param_gauge_template"/>
+					<node name="param4" pos="8,321" clone_child_tree="param_gauge_template"/>
+					<node name="label" pos="7,354">
+						<image style="gen_common01_win_acce02_bg" size_w="350"/>
+						<image style="gen_common01_win_acce02_01" pos="0,22" size_w="354"/>
+						<image style="gen_common01_window_acce01" pos="104,4"/>
+						<image style="gen_common01_window_acce01" pos="241,4"/>
+						<text name="page_title" text="의상" font_size="13" align="center" pos="177,7"/>
+					</node>
+					<text pos="185,398" name="costume_name" text="사시스세소" align="center" font_size="22" drop_shadow="false"/>
+					<command target_node="param0/label" set_text="AP"/>
+					<command target_node="param1/label" set_text="공격력"/>
+					<command target_node="param2/label" set_text="방어력"/>
+					<command target_node="param3/label" set_text="버스트 보정"/>
+				</image>
+				<image name="profile" pos="799,126,0" rot="0,0,0" size_wh="385,450" style="gen_window01_02">
+					<node name="label" pos="6,5">
+						<image style="gen_common01_win_acce02_bg" size_w="370">
+							<image style="gen_common01_win_acce02_01" pos="0,22" parent_size_copy_w="true" size_copy_w_offset="5"/>
+							<text text="캐릭터 설명" font_size="13" align="center" pos_ratio_x="0.5" pos="10,7"/>
+						</image>
+						<image style="gen_common01_window_acce01" pos="122,4"/>
+						<image style="gen_common01_window_acce01" pos="261,4"/>
+					</node>
+					<node pos="-12,-60">
+						<image pos="20,95" size_wh="370,33" style="gen_window03_bg02"/>
+						<image pos="20,129" size_wh="370,33" style="gen_window03_bg02"/>
+						<image pos="20,163" size_wh="370,33" style="gen_window03_bg02"/>
+						<image pos="20,197" size_wh="370,33" style="gen_window03_bg02"/>
+						<image pos="20,231" size_wh="370,33" style="gen_window03_bg02"/>
+						<image pos="20,265" size_wh="370,33" style="gen_window03_bg02"/>
+						<image pos="20,299" size_wh="370,33" style="gen_window03_bg02"/>
+						<image pos="20,333" size_wh="370,33" style="gen_window03_bg02"/>
+						<image pos="20,367" size_wh="370,33" style="gen_window03_bg02"/>
+						<image pos="20,401" size_wh="370,33" style="gen_window03_bg02"/>
+						<image pos="20,435" size_wh="370,33" style="gen_window03_bg02"/>
+						<image pos="20,469" size_wh="370,33" style="gen_window03_bg02"/>
+						<text name="profile_explain" pos="60,101" text="아이우에오가 반복됩니다." drop_shadow="false" line_char_length="15" font_size="20" line_space="16.0"/>
+					</node>
+				</image>
+			</node>
+		</node>
+	</node>
+	<node name="page01_woman" visible="false" viewer_visible="false" clone_child_tree="page01_man"/>
+	<command target_node="page01_woman/status/param0/label" set_text="HP"/>
+	<command target_node="page01_woman/status/param1/label" set_text="방어력"/>
+	<command target_node="page01_woman/status/param2/label" set_text="위력 보정"/>
+	<command target_node="page01_woman/status/param3/label" set_text="충전 속도"/>
+	<command target_node="page01_woman/status/param4/label" set_text="배리어 재생량"/>
+	<!--装備結晶-->
+	<node name="crystal_info_template" visible="false" viewer_visible="true">
+		<image name="window_bg_off" pos="-5,-3,0" image_no="1" scale="1,0.8,1" size_wh="424,94" style="etc_window02_04" visible="true"/>
+		<image name="point_icon_bg" pos="12,14,0" style="gen_bath02_bodyparts__bg"/>
+		<image name="point_icon" pos="15,13,0" style="gen_bath02_bodyparts" image_no="0"/>
+		<image name="crystal_bg" pos="76,17,0" size_wh="325,33" style="gen_window03_bg02"/>
+		<image name="crystal_icon" pos="80,17,0" style="gen_bath02_crystalicon" image_no="0"/>
+		<text name="crystal_name" pos="118,23,0" text="아이우에오카키쿠케코" align="left" font_size="20"/>
+		<text name="crystal_text" pos="80,54,0" text="아이우에오카키쿠케코사시스세소" align="left" font_size="20"/>
+		<image name="window_highlight" pos="0,0" size_wh="424,97" scale="1,0.8,1" style="gen_window02_04_highlight" visible="false" viewer_visible="false"/>
+		<anim_ctrl name="blink_icon" loop="true">
+			<bind_node node="point_icon" anim="anm_common_blink"/>
+		</anim_ctrl>
+	</node>
+	<node name="page02_man_crystal" visible="false" viewer_visible="true">
+		<node name="pivot1" pos="1200" rot="0,5,0">
+			<node name="pivot2" pos="-1200">
+				<node pos="575,118,0">
+					<node name="point00" pos="0,0" clone_child_tree="crystal_info_template"/>
+					<node name="point01" pos="0,80,0" clone_child_tree="crystal_info_template"/>
+					<node name="point02" pos="0,160,0" clone_child_tree="crystal_info_template"/>
+					<node name="point03" pos="0,240" clone_child_tree="crystal_info_template"/>
+					<node name="point04" pos="0,320" clone_child_tree="crystal_info_template"/>
+				</node>
+			</node>
+		</node>
+	</node>
+	<node name="page02_woman_crystal" visible="false" clone_child_tree="page02_man_crystal"/>
+	<node name="arrows">
+		<image pos="50,305,0" flick_time="0.2" style="gen_common01_bigarrow_l"/>
+		<image pos="1165,305,0" flick_time="0.2" style="gen_common01_bigarrow_r"/>
+	</node>
+	<anim_ctrl name="get_in_arrows" play="false">
+		<bind_node start_visible="true" node="arrows" anim="anm_common_fade_in"/>
+	</anim_ctrl>
+	<anim_ctrl name="get_in_page01_man" play="false">
+		<bind_node start_visible="true" node="page01_man" anim="anm_common_fade_in"/>
+	</anim_ctrl>
+	<anim_ctrl name="get_in_page01_woman" play="false">
+		<bind_node start_visible="true" node="page01_woman" anim="anm_common_fade_in"/>
+	</anim_ctrl>
+	<anim_ctrl name="get_in_page02_man_crystal" play="false">
+		<bind_node start_visible="true" node="page02_man_crystal" anim="anm_common_fade_in"/>
+	</anim_ctrl>
+	<anim_ctrl name="get_in_page02_woman_crystal" play="false">
+		<bind_node start_visible="true" node="page02_woman_crystal" anim="anm_common_fade_in"/>
+	</anim_ctrl>
+	<anim_ctrl name="get_in_big_chara" play="false">
+		<bind_node start_visible="true" node="big_chara" anim="anm_common_fade_in"/>
+	</anim_ctrl>
+	<anim_ctrl name="get_out_all" viewer_key_assign="1" start_visible="true" reverse="true">
+		<bind_node node="page01_man" anim="anm_common_fade_in"/>
+		<bind_node node="page01_woman" anim="anm_common_fade_in"/>
+		<bind_node node="page02_man_crystal" anim="anm_common_fade_in"/>
+		<bind_node node="page02_woman_crystal" anim="anm_common_fade_in"/>
+		<bind_node node="big_chara" anim="anm_common_fade_in"/>
+		<bind_node node="arrows" anim="anm_common_fade_in"/>
+	</anim_ctrl>
+</root>

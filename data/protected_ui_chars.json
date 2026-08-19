@@ -1,0 +1,4 @@
+{
+  "characters": "",
+  "reason": "UI strings are translated through XML and the 1.0.1 executable patch; keep the original stand-in ordering stable."
+}

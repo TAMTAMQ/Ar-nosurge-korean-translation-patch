@@ -1,0 +1,105 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE root SYSTEM "file://st01/project/acps3/_Programmer/ui/uil.dtd">
+<root>
+	<!-- スタイルの読み込み -->
+	<command load_style="Saves/ui/uis_common.xml"/>
+	<command load_style="Saves/ui/gen_styles/uis_gen_common.xml"/>
+	<command load_style="Saves/ui/gen_styles/uis_gen_window.xml"/>
+	<command load_style="Saves/ui/gen_styles/uis_gen_mainmenu.xml"/>
+	<command load_style="Saves/ui/gen_styles/uis_gen_battle.xml"/>
+	<command load_style="Saves/ui/main_menu/uis_main_menu.xml"/>
+	<command load_style="Saves/ui/etc/uis_big_chara.xml"/>
+	<command load_style="Saves/ui/etc/uis_etc_window.xml"/>
+	<command load_style="Saves/ui/gen_styles/uis_gen_bath.xml"/>
+	<command load_anim="Saves/ui/main_menu/uia_main_menu.xml"/>
+	<!--テンプレートを読み込む-->
+	<node load="Saves/ui/uil_template.xml"/>
+	<node load="Saves/ui/uil_line_format.xml"/>
+	<image style="ui_bg_sample" color="128,128,128,128" visible="false" viewer_visible="true"/>
+	<node name="param_gauge_template" visible="false">
+		<image pos="0,0" size_wh="350,33" style="gen_window03_bg02">
+			<text pos="17,6" name="label" align="left" text="공격력" drop_shadow="false" font_size="20">
+				<text name="value" pos="180,8" drop_shadow="false" align="right" text="123" copy="NUMBER01_20PX"/>
+				<image pos="187,5" style="gen_menu01_hpgauge01_bg">
+					<image name="value_gauge" style="gen_menu01_hpgauge01"/>
+				</image>
+			</text>
+		</image>
+	</node>
+	<node name="page01_man_skill" visible="false" viewer_visible="true">
+		<!--スキルメニュー-->
+		<node pos="122,160,0" rot="0,-5,0">
+			<menu name="skill_menu" style="style_menu_column1" disp_scroll_bar="true" size_w="337" disp_lines="10"/>
+			<command target_node="skill_menu/__uimenu_window" set_image_no="1"/>
+			<text name="page_title" text="스킬명" font_size="13" align="center" pos="168,17,0"/>
+		</node>
+		<node name="pivot1" pos="1200,0" rot="0,5,0">
+			<node name="pivot2" pos="-1200,0">
+				<image name="big_chara" pos="580,0" style="style_big_chara"/>
+				<image name="param_window" pos="475,102,0" size_wh="365,510" style="gen_window01_02">
+					<node name="skill_name" pos="47,8">
+						<image style="gen_common01_name_bg01" size_w="282">
+							<text name="skill_name_text" text="포이즌 로키 독독" align="center" font_size="20" pos_ratio_x="0.5" pos="0,12"/>
+						</image>
+					</node>
+					<node name="label" pos="7,50">
+						<image style="gen_common01_win_acce02_bg" size_w="350"/>
+						<image style="gen_common01_win_acce02_01" pos="0,22" size_w="354"/>
+						<image style="gen_common01_window_acce01" pos="104,4"/>
+						<image style="gen_common01_window_acce01" pos="241,4"/>
+						<text name="page_title" text="커맨드 조작" font_size="13" align="center" pos="177,7"/>
+					</node>
+					<node pos="0,30">
+						<image pos="8,50" size_wh="350,31" style="gen_window03_bg02"/>
+						<text text="커맨드" font_size="20" pos="25,57" drop_shadow="false"/>
+						<image name="button_image" pos="236,49" style="gen_battle02_buttonicon"/>
+						<node name="r1_button">
+							<text text="+" pos="276,49" font="NUMBER01_22"/>
+							<text text="&lt;IM16&gt;" pos="298,53"/>
+						</node>
+					</node>
+					<node name="label" pos="7,111">
+						<image style="gen_common01_win_acce02_bg" size_w="350"/>
+						<image style="gen_common01_win_acce02_01" pos="0,22" size_w="354"/>
+						<image style="gen_common01_window_acce01" pos="104,4"/>
+						<image style="gen_common01_window_acce01" pos="241,4"/>
+						<text name="page_title" text="스테이터스" font_size="13" align="center" pos="177,7"/>
+					</node>
+					<node name="param_damage" clone_child_tree="param_gauge_template" pos="8,141"/>
+					<command target_node="param_damage/label" set_text="데미지"/>
+					<node name="param_break" clone_child_tree="param_gauge_template" pos="8,174"/>
+					<command target_node="param_break/label" set_text="브레이크 수치"/>
+					<node name="param_rebirth" clone_child_tree="param_gauge_template" pos="8,207"/>
+					<command target_node="param_rebirth/label" set_text="사용 횟수"/>
+					<node name="param_recovery" clone_child_tree="param_gauge_template" pos="8,240" visible="false"/>
+					<command target_node="param_recovery/label" set_text="회복량"/>
+					<node name="label" pos="7,272">
+						<image style="gen_common01_win_acce02_bg" size_w="350"/>
+						<image style="gen_common01_win_acce02_01" pos="0,22" size_w="354"/>
+						<image style="gen_common01_window_acce01" pos="104,4"/>
+						<image style="gen_common01_window_acce01" pos="241,4"/>
+						<text name="page_title" text="설명" font_size="13" align="center" pos="177,7"/>
+					</node>
+					<node pos="8,302">
+						<image pos="0,0" size_wh="350,28" style="gen_window03_bg02"/>
+						<image pos="0,29" size_wh="350,28" style="gen_window03_bg02"/>
+						<image pos="0,58" size_wh="350,28" style="gen_window03_bg02"/>
+						<image pos="0,87" size_wh="350,28" style="gen_window03_bg02"/>
+						<image pos="0,116" size_wh="350,28" style="gen_window03_bg02"/>
+						<image pos="0,145" size_wh="350,28" style="gen_window03_bg02"/>
+						<image pos="0,174" size_wh="350,28" style="gen_window03_bg02"/>
+					</node>
+					<text name="comment" pos="47,308" drop_shadow="false" line_char_length="15" font_size="18" line_space="14" text="아이우에오카키쿠케코사시스세소타치츠테토아이우에오카키쿠케코사시스세소타치츠테토아이우에오카키쿠케코사시스세소타치츠테토"/>
+				</image>
+			</node>
+		</node>
+	</node>
+	<anim_ctrl name="get_in_page01_man_skill" play="false">
+		<bind_node start_visible="true" node="page01_man_skill" anim="anm_common_fade_in"/>
+		<bind_node start_visible="true" node="big_chara" anim="anm_common_fade_in"/>
+	</anim_ctrl>
+	<anim_ctrl name="get_out_all" viewer_key_assign="1" start_visible="true" reverse="true">
+		<bind_node node="page01_man_skill" anim="anm_common_fade_in"/>
+		<bind_node node="big_chara" anim="anm_common_fade_in"/>
+	</anim_ctrl>
+</root>

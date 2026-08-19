@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE root SYSTEM "file://st01/project/acps3/_Programmer/ui/uil.dtd">
+<root>
+	<command load_style="Saves/ui/gen_styles/uis_gen_common.xml"/>
+	<command load_anim="Saves/ui/uia_common.xml"/>
+	<!--
+  <image style="ui_bg_sample" color="255,255,255,255" />
+-->
+	<node load="Saves/ui/uil_line_format.xml"/>
+	<node name="extra_common_list_all" pos="80,125,0">
+		<menu name="extra_common_list" style="style_menu_column1" size_w="410.667"/>
+		<text name="extra_common_list_title" text="타이틀" font_size="18.667" align="center" pos="197.333,15"/>
+	</node>
+	<anim_ctrl name="extra_common_ac_fade_in" loop="false" reverse="false">
+		<bind_node node="extra_common_list_all" anim="anm_common_fade_in"/>
+	</anim_ctrl>
+	<anim_ctrl name="extra_common_ac_fade_out" loop="false" reverse="true">
+		<bind_node node="extra_common_list_all" anim="anm_common_fade_in"/>
+	</anim_ctrl>
+</root>

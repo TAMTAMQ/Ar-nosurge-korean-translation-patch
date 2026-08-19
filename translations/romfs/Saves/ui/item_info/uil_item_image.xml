@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE root SYSTEM "file://st01/project/acps3/_Programmer/ui/uil.dtd">
+<root>
+	<command load_style="Saves/ui/gen_styles/uis_gen_common.xml"/>
+	<command load_style="Saves/ui/gen_styles/uis_gen_window.xml"/>
+	<command load_style="Saves/ui/gen_styles/uis_gen_mix.xml"/>
+	<command load_style="Saves/ui/etc/uis_item_list.xml"/>
+	<command load_anim="Saves/ui/fieldmap/uia_fm_common.xml"/>
+	<!--
+  <image style="ui_bg_sample" color="128,128,128,128" />
+  -->
+	<!--  -->
+	<node name="item_image_all">
+		<image name="item_bg" style="gen_window01_01" pos="492,136" size_wh="300,310" visible="true"/>
+		<image name="item_frame" style="gen_nummber_item_bg01" pos="518,190" size_wh="250,230" visible="true"/>
+		<image name="item_image" style="style_item_list" pos="528, 190, 0" scale="0.90,0.90,0.90" visible="true"/>
+		<node pos="508,156">
+			<image style="gen_common01_win_acce04_bg" size_w="268"/>
+			<image style="gen_common01_win_acce02_01" pos="2,22" size_w="268"/>
+			<image style="gen_common01_window_acce01" pos="60,4"/>
+			<image style="gen_common01_window_acce01" pos="202,4"/>
+			<text name="" text="아이템" font_size="16" align="center" pos="136,7"/>
+		</node>
+	</node>
+	<!--  -->
+	<anim_ctrl name="item_image_fade_in" play="false" loop="false" speed="1.0">
+		<bind_node node="item_image_all" anim="anm_common_fade_in" reverse="false"/>
+	</anim_ctrl>
+	<!--  -->
+	<anim_ctrl name="item_image_fade_out" play="false" loop="false" speed="1.0">
+		<bind_node node="item_image_all" anim="anm_common_fade_in" reverse="true"/>
+	</anim_ctrl>
+</root>

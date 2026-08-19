@@ -1,0 +1,94 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE root SYSTEM "file://st01/project/acps3/_Programmer/ui/uil.dtd">
+<root>
+	<!-- スタイルの読み込み -->
+	<command load_style="Saves/ui/gen_styles/uis_gen_common.xml"/>
+	<command load_style="Saves/ui/gen_styles/uis_gen_window.xml"/>
+	<command load_style="Saves/ui/gen_styles/uis_gen_mainmenu.xml"/>
+	<command load_style="Saves/ui/gen_styles/uis_gen_battle.xml"/>
+	<command load_style="Saves/ui/main_menu/uis_main_menu.xml"/>
+	<command load_style="Saves/ui/etc/uis_etc_window.xml"/>
+	<!--テンプレートを読み込む-->
+	<node load="Saves/ui/uil_template.xml"/>
+	<node load="Saves/ui/uil_line_format.xml"/>// template
+    <node visible="false">
+		<image style="gen_window03_linecsr02_over" name="cursor_over_base" size_wh="256,32" visible="false">
+			<image name="c0" style="gen_common01_digitselect_bg" pos="166,-8,0"/>
+			<image name="c1" style="gen_common01_digitselect_bg" pos="148,-8,0"/>
+			<image name="c2" style="gen_common01_digitselect_bg" pos="129,-8,0"/>
+			<image name="c3" style="gen_common01_digitselect_bg" pos="111,-8,0"/>
+			<image style="gen_common01_arrow_l" pos="-7,-10,0" size_wh="31,44"/>
+			<image style="gen_common01_arrow_r" pos="225,-10,0" size_wh="31,44"/>
+		</image>
+		<image style="gen_window03_linecsr02_on" name="cursor_on_base" size_wh="256,32"/>
+	</node>
+	<!--左ウィンドウ-->
+	<node pos="145,154,0" name="left_window">
+		<image name="left_window_base" style="etc_window02_04" image_no="1" size_wh="365,345">
+			<node name="label" pos="18,23">
+				<image style="gen_common01_win_acce02_bg" size_w="313" size_wh="324,19">
+					<image style="gen_common01_win_acce02_01" pos="0,22" parent_size_copy_w="true" size_copy_w_offset="5"/>
+					<text text="GP 분배" font_size="18.667" align="center" pos_ratio_x="0.5" pos="0,3,0"/>
+				</image>
+			</node>
+			<node name="result" pos="79,56,0">
+				<text text="남은 수치" font_size="16" align="center"/>
+				<text name="text_total_bonus" pos="173,10,0" align="right" text="99999999" font="BATTLE_BONUS" font_size="22" word_space="-3"/>
+				<image style="gen_common01_gp_text" pos="177,9,0"/>
+			</node>
+			<node name="exp" pos="66,84,0">
+				<node name="cursor_exp" pos="0,29,0">
+					<image name="cursor_over" copy="cursor_over_base" clone_child_tree="cursor_over_base"/>
+					<image name="cursor_on" copy="cursor_on_base"/>
+				</node>
+				<image style="gen_window03_bg02" pos="-47,4,0" size_wh="330,24"/>
+				<image style="gen_battle06_exp_text"/>
+				<node pos="126,8,0">
+					<image style="gen_common01_gp_rate"/>
+					<text pos="55,7,0" name="text_exp_rate" text="1000" align="left" font="GP_RATE" word_space="-8"/>
+				</node>
+				<text pos="188,41,0" name="text_exp" text="0000" font_size="22" align="right" copy="NUMBER01_24PX" word_space="1"/>
+				<image pos="67,38,0" style="gen_common01_geno_text01"/>
+				<image pos="194,38,0" style="gen_common01_geno_text02"/>
+			</node>
+			<node pos="66,146,0">
+				<node name="cursor_dp" pos="0,29,0">
+					<image name="cursor_over" copy="cursor_over_base" clone_child_tree="cursor_over_base"/>
+					<image name="cursor_on" copy="cursor_on_base"/>
+				</node>
+				<image style="gen_window03_bg02" pos="-47,4,0" size_wh="330,24"/>
+				<image style="gen_battle06_divepoint_text"/>
+				<node pos="126,8,0">
+					<image style="gen_common01_gp_rate"/>
+					<text pos="55,7,0" name="text_dp_rate" text="0.001" align="left" font="GP_RATE" word_space="-8"/>
+				</node>
+				<text pos="188,41,0" name="text_dp" text="0000" font_size="22" align="right" copy="NUMBER01_24PX" word_space="1"/>
+				<image pos="67,38,0" style="gen_common01_geno_text01"/>
+				<image pos="194,38,0" style="gen_common01_geno_text02"/>
+			</node>
+			<node pos="66,207,0">
+				<node name="cursor_money" pos="0,29,0">
+					<image name="cursor_over" copy="cursor_over_base" clone_child_tree="cursor_over_base"/>
+					<image name="cursor_on" copy="cursor_on_base"/>
+				</node>
+				<image style="gen_window03_bg02" pos="-47,4,0" size_wh="330,24"/>
+				<image style="gen_battle06_money_text"/>
+				<node pos="126,8,0">
+					<image style="gen_common01_gp_rate"/>
+					<text pos="55,7,0" name="text_ct_rate" text="0.15" align="left" font="GP_RATE" word_space="-8"/>
+				</node>
+				<text pos="187,41,0" name="text_money" text="0000" font_size="22" align="right" copy="NUMBER01_24PX" word_space="1"/>
+				<image pos="67,38,0" style="gen_common01_geno_text01"/>
+				<image pos="194,38,0" style="gen_common01_geno_text02"/>
+			</node>
+		</image>
+		<node pos="0,284,0">
+			<node name="cursor_exec" pos="66,-4,0">
+				<image style="gen_window03_linecsr02_over" name="exec_cursor_over" size_wh="256,32" visible="false"/>
+				<image style="gen_window03_linecsr02_on" name="exec_cursor_on" size_wh="256,32"/>
+			</node>
+			<text pos="187,2.667,0" text="결정" font_size="22" align="center" pos_ratio_x="0.5"/>
+		</node>
+	</node>
+	<image style="ui_bg_sample" color="255,255,255,0"/>
+</root>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<root>
+	<!--***↓お決まり関連(必ず一番上に置いておく) ***-->
+	<node name="usuals" visible="false" viewer_visible="false">
+		<!--↓テンプレート(文字色やカスタムフォント)の読み込み-->
+		<node load="Saves/ui/uil_template.xml" name="font_template"/>
+	</node>
+	<command load_style="Saves/ui/gen_styles/uis_gen_common.xml"/>
+	<command load_style="Saves/ui/gen_styles/uis_gen_window.xml"/>
+	<command load_style="Saves/ui/message_window/uis_message_window.xml"/>
+	<command load_anim="Saves/ui/message_window/uia_message_window.xml"/>
+	<!--*** ↓アニメーション-->
+	<command load_anim="Saves/ui/saveload_menu/uia_saveload_progress.xml"/>
+	<!--***↓指示書画像(Data/Win32/ui_bg/ui_bg_sample_g1t) ***-->
+	<!--***↓クローン元パーツを入れておく場所 ***-->
+	<node name="clone_targets" viewer_visible="false" visible="false"/>
+	<!--***↓画面パーツの配置場所 ***-->
+	<node name="top">
+		<node name="base" pos="275.00, 121.00, -0.00" rot="-0.00, -0.00, -0.00" scale="1.00, 1.00, 1.00">
+			<!--パネル-->
+			<image name="panel" pos="40.00, 150.00, 0.00" style="gen_window03_npcmsg" size_wh="640.00, 156.00, 0.00">
+				<!--メッセージ-->
+				<text name="msg_text" pos="320.00, 60.00, 0.00" drop_shadow="false" line_char_length="22" font_size="28.00" line_space="6.00" text="더미 메시지" rot="-0.00, -0.00, -0.00" scale="1.00, 1.00, 1.00" word_space="-0.50" align="center" copy="TEXTCOLOR_BROWN"/>
+			</image>
+			<!--プロンプト-->
+			<node name="prompt_icon" pos_ratio_x="1.00" pos_ratio_y="1.00" rot="-0.00, -0.00, -0.00" scale="1.00, 1.00, 1.00" pos="627.00, 250.00, 0.00" load="Saves/ui/common/uil_prompt.xml"/>
+			<anim_ctrl name="anim_enter" start_visible="true" play="true" loop="false" reverse="false" speed="1.00" viewer_key_assign="0">
+				<bind_node node="base" anim="anm_common_fade_in"/>
+			</anim_ctrl>
+		</node>
+	</node>
+</root>

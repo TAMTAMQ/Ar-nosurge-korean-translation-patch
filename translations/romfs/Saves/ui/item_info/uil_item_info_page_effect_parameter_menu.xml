@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE root SYSTEM "file://st01/project/acps3/_Programmer/ui/uil.dtd">
+<root>
+	<!-- スタイルの読み込み -->
+	<command load_style="Saves/ui/gen_styles/uis_gen_common.xml"/>
+	<command load_style="Saves/ui/gen_styles/uis_gen_common.xml"/>
+	<command load_style="Saves/ui/gen_styles/uis_gen_mainmenu.xml"/>
+	<!--テンプレートを読み込む-->
+	<node load="Saves/ui/uil_template.xml"/>
+	<node name="effect_parameter" pos="0,0" visible="false" viewer_visible="true">
+		<text name="title" font_size="18" pos="6.667,5.333" text="【효과】"/>
+		<node visible="false">
+			<node name="line_format_menu_item_effect">
+				<text pos="0,1.333" name="item_text01" text="아이템명 가나다라" font_size="21.333"/>
+			</node>
+		</node>
+		<menu name="menu_item_effect_innner" pos="0,24" size_w="333.333" style="style_menu_column1_nobg" disp_scroll_bar="false" disp_lines="3" item_height="29">
+			<node clone_tree="line_format_menu_item_effect"/>
+			<node clone_tree="line_format_menu_item_effect"/>
+			<node clone_tree="line_format_menu_item_effect"/>
+		</menu>
+		<node name="effect_desc" pos="280,-53.333" visble="false" viewer_visibule="true">
+			<!-- 下地画像 頭悪いけど2重にして裏の透けを減らす -->
+			<image name="base_window" style="gen_window01_01" size_wh="293.333,237.333"/>
+			<image name="base_window2" style="gen_window01_01" size_wh="293.333,237.333"/>
+			<!-- 用語名 -->
+			<node name="item_name" pos="-16,20">
+				<image style="gen_common01_name_bg01" size_wh="224,41" pos="53.333,1.333,0"/>
+				<text name="name_text" text="아이우에오카키쿠케코" align="center" font_size="18.667" pos="163,17,0"/>
+			</node>
+			<!-- 共通背景画像 -->
+			<node name="bg_line" pos="20,60">
+				<image style="gen_window03_bg02" pos="0,0" size_wh="257.333,29.333"/>
+				<image style="gen_window03_bg02" pos="0,31" size_wh="257.333,29.333"/>
+				<image style="gen_window03_bg02" pos="0,62" size_wh="257.333,29.333"/>
+				<image style="gen_window03_bg02" pos="0,93" size_wh="257.333,29.333"/>
+				<image style="gen_window03_bg02" pos="0,124" size_wh="257.333,29.333"/>
+				<!--
+                <image style="gen_window03_bg02" pos="0.00,116.25" size_wh="193,22" />
+                <image style="gen_window03_bg02" pos="0.00,139.50" size_wh="193,22" />
+                <image style="gen_window03_bg02" pos="0.00,162.75" size_wh="193,22" />
+                <image style="gen_window03_bg02" pos="0.00,186.00" size_wh="193,22" />
+                <image style="gen_window03_bg02" pos="0.00,209.25" size_wh="193,22" />
+                <image style="gen_window03_bg02" pos="0.00,232.50" size_wh="193,22" />
+                <image style="gen_window03_bg02" pos="0.00,255.75" size_wh="193,22" />
+                -->
+			</node>
+			<node name="page2">
+				<!-- テキスト -->
+				<text name="message" text="１２３４５６７８９０１２３４５６７８１２３４５６７８９０１２３４５６７８페이지 2" font_size="20" line_char_length="12" line_space="13" pos="25,66.667,0"/>
+			</node>
+		</node>
+	</node>
+</root>

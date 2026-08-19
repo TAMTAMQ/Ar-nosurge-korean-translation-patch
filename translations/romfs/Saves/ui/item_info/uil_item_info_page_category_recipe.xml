@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE root SYSTEM "file://st01/project/acps3/_Programmer/ui/uil.dtd">
+<root>
+	<!-- スタイルの読み込み -->
+	<command load_style="Saves/ui/gen_styles/uis_gen_common.xml"/>
+	<node name="category_recipe" pos="7,3">
+		<image style="gen_window03_bg02" size_wh="305,28" pos="-7,-5"/>
+		<text font_size="18" pos="0,2.667" text="【카테고리】"/>
+		<text name="category" pos="10,31.667" font_size="18" text="카테고리명"/>
+		<node name="recipe_info" pos="0,58">
+			<image style="gen_window03_bg02" size_wh="305,28" pos="-7,-5"/>
+			<text font_size="18" pos="0,2.667" text="【조합 상점】"/>
+			<text name="shop" pos="10,31.667" font_size="18" text="상점명"/>
+			<image style="gen_window03_bg02" size_wh="305,28" pos="-7,53"/>
+			<text pos="0,60.667" font_size="18" text="【레시피 카드】"/>
+			<text name="recipe_card" pos="10,89.667" font_size="18" text="레시피 카드명"/>
+		</node>
+	</node>
+</root>

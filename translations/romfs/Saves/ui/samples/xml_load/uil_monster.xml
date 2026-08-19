@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE root SYSTEM "file://st01/project/acps3/_Programmer/ui/uil.dtd">
+<root>
+	<!-- スタイルの読み込み -->
+	<command load_style="Saves/ui/uis_common.xml"/>
+	<command load_style="Saves/ui/samples/xml_load/uis_load.xml"/>
+	<!-- アニメーションの読み込み -->
+	<command load_anim="Saves/ui/samples/xml_load/uia_load.xml"/>
+	<!-- モンスターの絵 -->
+	<image name="image_monster" style="style_image_monster" pos="0,0" color="255,255,255,255"/>
+	<node pos="50,150" scale="100,10" color="255,128,192,255">
+		<image name="image_gaugeA" style="style_image_white"/>
+	</node>
+	<text name="text_anim" pos="35,170" font_size="18" text="오른쪽에서 왼쪽으로 차는 게이지" align="left" font_color="255,220,0,255"/>
+	<!-- 明滅アニメーション -->
+	<anim_ctrl play="true" loop="true" speed="1.0">
+		<bind_node node="text_anim" anim="anm_test_blink"/>
+	</anim_ctrl>
+	<!-- ゲージ伸縮(右へ伸びる) -->
+	<anim_ctrl play="true" loop="true" speed="0.3">
+		<bind_node node="image_gaugeA" anim="anm_test_scale" reverse="false"/>
+	</anim_ctrl>
+</root>

@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE root SYSTEM "file://st01/project/acps3/_Programmer/ui/uil.dtd">
+<root>
+	<!-- スタイルの読み込み -->
+	<command load_style="Saves/ui/gen_styles/uis_gen_common.xml"/>
+	<command load_style="Saves/ui/gen_styles/uis_gen_window.xml"/>
+	<command load_style="Saves/ui/gen_styles/uis_gen_mix.xml"/>
+	<!-- アイテムウィンドウのテンプレート -->
+	<node name="template_item_window" visible="false">
+		<node visible="false" name="inactive_parts_group">
+			<image size_wh="300,300" style="gen_window02_04_off"/>
+		</node>
+		<node visible="true" name="active_parts_group">
+			<image size_wh="300,300" style="gen_window02_04_on"/>
+			<image name="high_light" size_wh="305,300" style="gen_window02_04_highlight"/>
+			<anim_ctrl play="true" loop="true">
+				<bind_node node="high_light" anim="anm_common_blink"/>
+			</anim_ctrl>
+		</node>
+		<image pos="60,75" color="255,255,255,64" style="gen_nummber_item_bg01"/>
+		<image pos="20,30" size_w="270" style="gen_common01_name_bg01"/>
+		<text pos="153,38" text="포이즌 로키 독독" font_size="24" align="center"/>
+		<image pos="10,310" style="gen_mix_name_bg01">
+			<text pos="210,15" text="개" font_size="24" align="left"/>
+		</image>
+	</node>
+	<node name="base_panel">
+		<!-- 画面中央上の見出し -->
+		<image pos="300,37" style="gen_mix_item_bg01">
+			<text pos="335,21" text="포이즌 로키 독독의 조합" align="center"/>
+		</image>
+		<!-- アイテムウィンドウ 4枚-->
+		<node name="item1" pos="40,120" clone_child_tree="template_item_window"/>
+		<node name="item2" pos="340,120" clone_child_tree="template_item_window"/>
+		<node name="item3" pos="640,120" clone_child_tree="template_item_window"/>
+		<node name="item4" pos="940,120" clone_child_tree="template_item_window"/>
+		<!-- 作成個数選択ウィンドウ -->
+		<image pos="95,510" size_wh="390,145" style="gen_mix_name_bg01">
+			<image pos="115,45" style="gen_common01_arrow_l" flick_time="0.2"/>
+			<image pos="310,45" style="gen_common01_arrow_r" flick_time="0.2"/>
+			<text pos="15,20" text="생성 개수 선택" font_size="24" align="left"/>
+			<text pos="275,65" text="개" font_size="24" align="left"/>
+		</image>
+		<!-- ラインヘルプ -->
+		<image pos="486,630" size_w="715" style="gen_common01_help">
+			<text pos="25,12" text="현재 보유 중인 아이템을 표시합니다." font_size="18" align="left"/>
+		</image>
+	</node>
+</root>

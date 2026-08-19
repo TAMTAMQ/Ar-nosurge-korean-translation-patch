@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE root SYSTEM "file://st01/project/acps3/_Programmer/ui/uil.dtd">
+<root>
+	<!-- スタイルの読み込み -->
+	<command load_style="Saves/ui/uis_common.xml"/>
+	<command load_style="Saves/ui/mix/uis_mix.xml"/>
+	<!-- レシピ選択ウィンドウ機構 -->
+	<node name="make_num" pos="50,50">
+		<image pos="0,0" style="style_image_white" scale="250,75" color="255,255,255,155"/>
+		<text pos="10,5" name="_fix_make_num" text="제작 개수" font_color="90,40,26,255" align="left" font_size="24"/>
+		<!--<text name="num" text="99" pos="50,30" font_color="90,40,26,255" align="right" font_size="22" />-->
+		<!-- 矢印用 -->
+		<image pos="70,40" style="style_image_white" scale="22,22" color="255,255,255,155"/>
+		<image pos="170,40" style="style_image_white" scale="22,22" color="255,255,255,155"/>
+		<!-- 要求個数 -->
+		<text name="needNum" text="99" pos="122,40" font_color="90,40,26,255" align="right" font_size="22"/>
+		<text name="_fix_slash_" text="/" pos="122,40" font_color="90,40,26,255" align="left" font_size="22"/>
+		<!-- 所有個数 -->
+		<text name="haveNum" text="99" pos="144,40" font_color="90,40,26,255" align="left" font_size="22"/>
+	</node>
+</root>

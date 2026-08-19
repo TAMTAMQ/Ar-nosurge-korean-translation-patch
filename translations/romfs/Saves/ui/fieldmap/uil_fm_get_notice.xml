@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE root SYSTEM "file://st01/project/acps3/_Programmer/ui/uil.dtd">
+<root>
+	<command load_style="Saves/ui/gen_styles/uis_gen_common.xml"/>
+	<command load_style="Saves/ui/gen_styles/uis_gen_window.xml"/>
+	<command load_style="Saves/ui/gen_styles/uis_gen_mix.xml"/>
+	<command load_style="Saves/ui/etc/uis_item_list.xml"/>
+	<command load_anim="Saves/ui/fieldmap/uia_fm_common.xml"/>
+	<!--
+  <image style="ui_bg_sample" color="128,128,128,128" />
+  -->
+	<!--  -->
+	<node name="fm_get_notice">
+		<image name="fm_get_notice_bg" style="gen_window01_01" pos="492,123" size_wh="294,360" visible="true"/>
+		<image name="fm_get_notice_name_bg" style="gen_common01_name_bg01" pos="508,148" size_wh="269,42"/>
+		<text name="fm_get_notice_name_text" pos="640,160" text="포이즌로키독독키 독독" font_size="20" align="center"/>
+		<image name="fm_get_notice_item_bg" style="gen_nummber_item_bg01" pos="516,190" size_wh="250,230"/>
+		<image name="fm_get_notice_item" style="style_item_list" pos="526,188" visible="true" scale="0.9,0.9,0.9"/>
+		<text name="fm_get_notice_item_text0" pos="537,432" text="획득 개수" font_size="22"/>
+		<text name="fm_get_notice_item_text1" pos="684,432" text="99" font_size="22" align="center"/>
+		<text name="fm_get_notice_item_text2" pos="731,432" text="개" font_size="22"/>
+	</node>
+	<!--  -->
+	<anim_ctrl name="fm_ac_fade_in" play="false" loop="false" speed="1.0">
+		<bind_node node="fm_get_notice" anim="fm_anim_get_notice_fade_in" reverse="false"/>
+	</anim_ctrl>
+	<!--  -->
+	<anim_ctrl name="fm_ac_fade_out" play="false" loop="false" speed="1.0">
+		<bind_node node="fm_get_notice" anim="fm_anim_get_notice_fade_in" reverse="true"/>
+	</anim_ctrl>
+</root>

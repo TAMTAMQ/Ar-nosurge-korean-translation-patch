@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE root SYSTEM "file://st01/project/acps3/_Programmer/ui/uil.dtd">
+<root pos="338,40" visible="true">
+	<command load_style="Saves/ui/uis_common.xml"/>
+	<command load_style="Saves/ui/gen_styles/uis_gen_common.xml"/>
+	<command load_style="Saves/ui/gen_styles/uis_gen_window.xml"/>
+	<command load_anim="Saves/ui/_menu_templates/uia_mt_common.xml"/>
+	<node load="Saves/ui/uil_template.xml"/>
+	<node visible="false">
+		<!--メニュー項目の雛形-->
+		<node name="msg_template" pos="0,0">
+			<image name="win2" pos="-10,-19" size_wh="499,156" style="gen_window01_01"/>
+			<image name="hl2" visible="false" size_wh="505,157" pos="-10,-20" style="gen_window02_04_highlight"/>
+			<anim_ctrl name="on_active" speed="3.0">
+				<bind_node node="hl2" anim="anm_menu_fade_in" start_visible="true"/>
+			</anim_ctrl>
+			<anim_ctrl name="on_inactive" speed="30.0">
+				<bind_node node="hl2" anim="anm_menu_fade_out" end_visible="false"/>
+			</anim_ctrl>
+			<!--名前表示欄-->
+			<image name="name_base" pos="16,-16" style="gen_common02_acce02">
+				<text name="name_text" pos="15,11" drop_shadow="false" font_size="16" text="캐스캐스캐"/>
+			</image>
+			<!--名前表示欄の左で光ってる輪-->
+			<image name="light" pos="-3,-34" style="gen_common02_acce03"/>
+			<node pos="12,2">
+				<node name="light_base">
+					<image pos="-32,-32" style="gen_common02_acce04"/>
+				</node>
+				<anim_ctrl play="true" loop="true">
+					<bind_node node="light_base" anim="anm_common_rotateZ360" speed="0.03"/>
+				</anim_ctrl>
+			</node>
+			<text name="msg_text" pos="40,25" drop_shadow="false" line_char_length="20" font_size="20" text="아이우에오카키쿠케코사사먹고있을때가아냐파피부로걷기, 아르노사쥬세르노사쥬파괴신공용어「」【】・?!123abcdef"/>
+		</node>
+	</node>
+	<!--メッセージログ-->
+	<menu name="msg_log" style="message_log_menu" disp_lines="3"/>
+	<!--選択項目のインデックスを表示するテキスト-->
+	<text pos="400,600" name="text_result" text="" align="left" font_size="22"/>
+</root>

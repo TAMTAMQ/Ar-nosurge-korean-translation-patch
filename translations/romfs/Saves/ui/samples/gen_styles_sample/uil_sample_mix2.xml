@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE root SYSTEM "file://st01/project/acps3/_Programmer/ui/uil.dtd">
+<root camera_fov="30" proj_to_near="1000" proj_to_far="7000">
+	<!-- スタイルの読み込み -->
+	<command load_style="Saves/ui/gen_styles/uis_gen_common.xml"/>
+	<command load_style="Saves/ui/gen_styles/uis_gen_window.xml"/>
+	<command load_style="Saves/ui/gen_styles/uis_gen_mix.xml"/>
+	<command load_style="Saves/ui/etc/uis_etc_window.xml"/>
+	<node name="base_panel">
+		<!-- 画面左のメニュー -->
+		<menu name="left_menu" rot="0,-5,0" pos="70,140,0" size_w="365">
+			<node>
+				<text pos="0,0" text="포이즌 로키 독독" font_size="22" align="left"/>
+				<text pos="300,0" text="99" font_size="22" align="right"/>
+			</node>
+			<node>
+				<text pos="0,0" text="포이즌 로키 독독" font_size="22" align="left"/>
+				<text pos="300,0" text="99" font_size="22" align="right"/>
+			</node>
+			<node>
+				<text pos="0,0" text="포이즌 로키 독독" font_size="22" align="left"/>
+				<text pos="300,0" text="99" font_size="22" align="right"/>
+			</node>
+			<node>
+				<text pos="0,0" text="포이즌 로키 독독" font_size="22" align="left"/>
+				<text pos="300,0" text="99" font_size="22" align="right"/>
+			</node>
+		</menu>
+		<node name="right_windows" pos="1200,0,0" rot="0,5,0">
+			<node pos="-1200,0,0">
+				<!-- 調合アイテムウィンドウ -->
+				<image name="item_wnd" pos="452,53" size_wh="374,300" style="gen_window02_04_off">
+					<image pos="90,70" color="255,255,255,64" style="gen_nummber_item_bg01"/>
+					<image pos="60,30" size_w="265" style="gen_common01_name_bg01"/>
+					<text pos="190,40" text="포이즌 로키 독독" font_size="24" align="center"/>
+					<text pos="190,250" text="LV 99" font_size="24" align="center"/>
+				</image>
+				<!-- レシピ項目のテンプレート -->
+				<node name="recipe_item_template" visible="false">
+					<text pos="20,0" text="포이즌 로키 독독" drop_shadow="false" font_size="22" align="left"/>
+					<text pos="330,0" text="×99" font_size="22" align="right"/>
+				</node>
+				<!-- レシピ -->
+				<image pos="840,50" size_wh="380,240" style="etc_window02_05">
+					<image pos="15,10,0" style="gen_common03_window_info01">
+						<text pos="85,12" text="RECIPE" font_size="12" align="center"/>
+						<node pos="0,0,-10">
+							<node pos="0,40" clone_child_tree="recipe_item_template"/>
+							<node pos="0,75" clone_child_tree="recipe_item_template"/>
+							<node pos="0,110" clone_child_tree="recipe_item_template"/>
+							<node pos="0,145" clone_child_tree="recipe_item_template"/>
+						</node>
+					</image>
+				</image>
+				<!-- アイテム ステータス -->
+				<image pos="452,370" size_wh="380,250" style="etc_window02_05">
+					<image pos="15,10" style="gen_common03_window_info01">
+						<text pos="85,12" text="ITEM STATUS" font_size="12" align="center"/>
+						<text pos="10,30" text="무언가 들어있음. 현재 불명." font_size="18" align="left"/>
+					</image>
+				</image>
+				<!-- ラインヘルプ -->
+				<image pos="486,630" size_w="715" style="gen_common01_help">
+					<text pos="25,12" text="현재 보유 중인 아이템을 표시합니다." font_size="18" align="left"/>
+				</image>
+			</node>
+		</node>
+		<anim_ctrl play="true" speed="1.0">
+			<bind_node node="left_menu" anim="anm_common_rotate_y90_minus" reverse="true"/>
+			<bind_node node="left_menu" anim="anm_common_fade_in" reverse="false"/>
+			<bind_node node="right_windows" anim="anm_common_rotate_y90_plus" reverse="true"/>
+			<bind_node node="right_windows" anim="anm_common_fade_in" reverse="false"/>
+		</anim_ctrl>
+	</node>
+</root>

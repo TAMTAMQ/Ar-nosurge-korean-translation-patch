@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE root SYSTEM "file://st01/project/acps3/_Programmer/ui/uil.dtd">
+<root>
+	<!-- スタイルの読み込み -->
+	<command load_style="Saves/ui/uis_common.xml"/>
+	<command load_style="Saves/ui/mix/uis_mix.xml"/>
+	<!-- 材料カードを選択する -->
+	<node pos="0,0">
+		<image pos="0,0" style="style_image_white" scale="250,250" color="255,255,255,155"/>
+		<image pos="0,270" name="num_under" style="style_image_white" scale="250,50" color="255,255,255,155"/>
+		<text name="mat_name" pos="125,10" text="아이템 아이템 아이" font_color="90,40,26,255" align="center" font_size="16"/>
+		<!-- 要求個数 -->
+		<text name="needNum" text="99" pos="122,285" font_color="90,40,26,255" align="right" font_size="22"/>
+		<text name="_fix_slash_" text="/" pos="122,285" font_color="90,40,26,255" align="left" font_size="22"/>
+		<!-- 所有個数 -->
+		<text name="haveNum" text="99" pos="144,285" font_color="90,40,26,255" align="left" font_size="22"/>
+	</node>
+</root>

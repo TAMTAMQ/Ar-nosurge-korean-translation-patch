@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE root SYSTEM "file://st01/project/acps3/_Programmer/ui/uil.dtd">
+<root>
+	<!-- スタイルの読み込み -->
+	<command load_style="Saves/ui/gen_styles/uis_gen_common.xml"/>
+	<command load_style="Saves/ui/gen_styles/uis_gen_window.xml"/>
+	<command load_style="Saves/ui/gen_styles/uis_gen_mainmenu.xml"/>
+	<command load_style="Saves/ui/etc/uis_etc_window.xml"/>
+	<command load_anim="Saves/ui/saveload_menu/uia_saveload_menu.xml"/>
+	<!--テンプレートを読み込む-->
+	<node load="Saves/ui/uil_template.xml"/>
+	<node name="item_template" visible="false">
+		<image name="label_back" size_w="225" style="gen_window03_choice01">
+			<node name="cursor">
+				<image name="label_on" pos="1,2" size_w="220" style="gen_window03_linecsr01_on"/>
+				<image name="label_over" pos="1,2" size_w="220" style="gen_window03_linecsr01_over" visible="false"/>
+				<node name="roll" pos="8,7">
+					<image pos="-32,-32" style="gen_window03_anime_roll"/>
+				</node>
+				<anim_ctrl play="true" loop="true">
+					<bind_node node="roll" anim="anm_common_rotateZ360"/>
+				</anim_ctrl>
+				<!-- 明滅アニメーション -->
+				<anim_ctrl play="true" loop="true">
+					<bind_node node="label_on" anim="anm_common_cursor_blink"/>
+				</anim_ctrl>
+			</node>
+			<text name="caption" pos="30,7.333" text="가소도 아이우에오카" font_size="22" drop_shadow="false"/>
+		</image>
+	</node>
+	<node name="menu_top" pos="55,130" visible="true"/>
+	<!--22,44-->
+	<anim_ctrl name="get_in" play="true" viewer_key_assign="6" start_visible="true">
+		<bind_node node="menu_top" anim="anm_saveload_menu_get_in"/>
+	</anim_ctrl>
+</root>

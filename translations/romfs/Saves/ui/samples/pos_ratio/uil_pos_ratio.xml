@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE root SYSTEM "file://st01/project/acps3/_Programmer/ui/uil.dtd">
+<root>
+	<!-- スタイルの読み込み -->
+	<command load_style="Saves/ui/uis_common.xml"/>
+	<command load_style="Saves/ui/gen_styles/uis_gen_common.xml"/>
+	<command load_style="Saves/ui/gen_styles/uis_gen_window.xml"/>
+	<!--テンプレートを読み込む-->
+	<node load="Saves/ui/uil_template.xml"/>
+	<text pos="120,50" text="부모 창 크기에 맞춰 조절되는 기능 샘플"/>
+	<text pos="120,180" line_space="5" text="부모 크기에 따라 자식 위치 연동"/>
+	<image pos="100,230" size_wh="385,360" style="gen_window01_01">
+		<text pos_ratio="0.5, 1.0" pos="0,-50" text="우측 하단 정렬" align="center"/>
+	</image>
+	<text pos="720,180" line_space="5" text="부모 크기에 자식 크기 연동\n부모의 크기를 자식에게 적용"/>
+	<image pos="700,230" size_wh="480,260" style="gen_window01_01">
+		<image pos="50,50" parent_size_copy_w="true" parent_size_copy_h="true" size_copy_w_offset="-100" size_copy_h_offset="-100" style="gen_window01_01"/>
+	</image>
+</root>

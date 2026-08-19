@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE root SYSTEM "file://st01/project/acps3/_Programmer/ui/uil.dtd">
+<root>
+	<!-- スタイルの読み込み -->
+	<command load_style="Saves/ui/uia_common.xml"/>
+	<command load_style="Saves/ui/gen_styles/uis_gen_common.xml"/>
+	<command load_style="Saves/ui/gen_styles/uis_gen_window.xml"/>
+	<command load_style="Saves/ui/gen_styles/uis_gen_mix.xml"/>
+	<node load="Saves/ui/uil_template.xml"/>
+	<!-- アイテムウィンドウのテンプレート -->
+	<node name="item_window" pos="487,130" visible="false" viewer_visible="true">
+		<node visible="false" viewer_visible="true" name="inactive_parts_group">
+			<image size_wh="302,360" style="gen_window02_04_off"/>
+		</node>
+		<image size_wh="302,360" style="gen_window02_04_on"/>
+		<!-- 画像 -->
+		<image pos="23,65" style="gen_nummber_item_bg01">
+			<!-- アイテム画像の代用 -->
+			<command load_style="Saves/ui/etc/uis_item_list.xml"/>
+			<image name="item_image" style="style_item_list" image_no="1" pos="12,0,0" scale="0.9,0.9,0.9"/>
+		</image>
+		<!--アイテム名-->
+		<image pos="27,20" size_w="255" style="gen_common01_name_bg01"/>
+		<text pos="153,33" name="mat_name" text="아이우에오아이우에오" font_size="18" align="center"/>
+		<!--所持数と使用個数-->
+		<node pos="10,310" name="num_sel_under">
+			<image name="text_source_bg" pos="8,-2" size_wh="267,24" style="gen_window03_bg02"/>
+			<text pos="32,3" text="제작 개수" font_size="18" align="left"/>
+			<text pos="229,2" text="개" font_size="18" align="left"/>
+			<text pos="220,8" name="now_make_num" text="99" font_size="20" align="right" copy="NUMBER01_24PX"/>
+			<!--<image name="text_source_bg2" pos="8,26"  size_wh="267,24" style="gen_window03_bg02"/>
+      <text pos="32,30" text="제작 개수" font_size="18" align="left" />
+      <text pos="229,29" text="개" font_size="18" align="left" />
+      <text pos="220,36" name="now_sel_num" text="99" font_size="20" align="right" copy="NUMBER01_24PX" />-->
+		</node>
+	</node>
+	<!-- 画面中央上の見出し -->
+	<!--
+	-->
+	<!--<image pos="300,27" style="gen_mix_item_bg01" >-->
+	<!--
+  <image pos="450,27" size_w="450" style="gen_common04_header_bg" >
+		<text pos="225,25" name="recipe_top_title" text="아이우에오아이우에오의 조합" align="center" />
+	</image>-->
+</root>

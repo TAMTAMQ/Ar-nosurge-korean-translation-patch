@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE root SYSTEM "file://st01/project/acps3/_Programmer/ui/uil.dtd">
+<root>
+	<command load_style="Saves/ui/uis_common.xml"/>
+	<command load_anim="Saves/ui/samples/viewer_key_assign/uia_viewer_key_assign.xml"/>
+	<node pos="600,100">
+		<text pos="0,0" name="text0" color="255,128,128,255" font_size="24" text="숫자 키 0으로 회전" align="center"/>
+		<text pos="0,100" name="text1" color="128,255,128,255" font_size="24" text="숫자 키 1로 회전" align="center"/>
+		<text pos="0,200" name="text2" color="255,128,255,255" font_size="24" text="숫자 키 2로 회전" align="center"/>
+		<text pos="0,300" name="text3" color="255,255,128,255" font_size="24" text="숫자 키 3으로 회전" align="center"/>
+		<text pos="125,389,0" name="text4" color="128,128,255,255" font_size="24" text="숫자 키 4로 회전" align="center"/>
+		<text pos="0,500" name="text5" color="128,128,128,255" font_size="24" text="숫자 키 5로 회전" align="center"/>
+	</node>
+	<anim_ctrl viewer_key_assign="0">
+		<bind_node node="text0" anim="anm_vka_rotate"/>
+	</anim_ctrl>
+	<anim_ctrl viewer_key_assign="1">
+		<bind_node node="text1" anim="anm_vka_rotate"/>
+	</anim_ctrl>
+	<anim_ctrl viewer_key_assign="2">
+		<bind_node node="text2" anim="anm_vka_rotate"/>
+	</anim_ctrl>
+	<anim_ctrl viewer_key_assign="3">
+		<bind_node node="text3" anim="anm_vka_rotate"/>
+	</anim_ctrl>
+	<anim_ctrl viewer_key_assign="4">
+		<bind_node node="text4" anim="anm_vka_rotate"/>
+	</anim_ctrl>
+	<anim_ctrl viewer_key_assign="5">
+		<bind_node node="text5" anim="anm_vka_rotate"/>
+	</anim_ctrl>
+</root>

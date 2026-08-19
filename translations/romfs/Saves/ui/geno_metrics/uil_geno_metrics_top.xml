@@ -1,0 +1,188 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE root SYSTEM "file://st01/project/acps3/_Programmer/ui/uil.dtd">
+<!-- ジェノメトリクス最初の部分 -->
+<root>
+	<!-- スタイルの読み込み -->
+	<command load_style="Saves/ui/gen_styles/uis_gen_common.xml"/>
+	<command load_style="Saves/ui/gen_styles/uis_gen_window.xml"/>
+	<command load_style="Saves/ui/gen_styles/uis_gen_bios.xml"/>
+	<command load_style="Saves/ui/gen_styles/uis_gen_mainmenu.xml"/>
+	<command load_style="Saves/ui/gen_styles/uis_gen_bath.xml"/>
+	<command load_style="Saves/ui/etc/uis_etc_window.xml"/>
+	<command load_anim="Saves/ui/geno_metrics/uia_geno_metrics.xml"/>
+	<command load_anim="Saves/ui/uia_common.xml"/>
+	<!--項目選択-->
+	<!--<image style="gen_window03_choice01">
+    <image pos="2,3" style="gen_window03_linecsr01_on" />
+    <text pos="30,7" text="가나다순" font_size="22" align="left" />
+  </image>-->
+	<!--ジェノマップ本体 ____________________________________________________-->
+	<!-- 下地 -->
+	<node pos="0,30,500" name="bg_elem">
+		<node name="zoom_target" pos="0,0,0">
+			<image name="geno_map" rot="0,0,0" pos="0,0,0" style="gen_bios06_bigbg01" visible="false" viewer_visible="true">
+				<node name="map_box">
+					<image name="map_chip" rot="0,0,0" pos="-512,0,0" style="gen_bios06_bigbg01" visible="true" viewer_visible="true"/>
+				</node>
+				<node pos="240,220">
+					<image name="map_under_x" size_h="1000" size_w="20" rot="0,0,-90" style="gen_bios03_charaline"/>
+					<image name="map_under_y" size_h="1000" size_w="20" style="gen_bios03_charaline"/>
+				</node>
+				<!--キャラクター-->
+				<!--たてよこ棒-->
+				<node name="chara_set_pole" visible="false" pos_ratio="0.5, 0.5" pos="0,0">
+					<node name="line_x">
+						<image name="line_off" pos="-255,-36" rot="0,0,-90" style="gen_bios03_map_line" image_no="1" color="255,255,255,128"/>
+						<image name="line_on" pos="-255,-36" rot="0,0,-90" style="gen_bios03_map_line" image_no="0" visible="false"/>
+					</node>
+					<node name="line_y">
+						<image name="line_off_y" pos="-17,-255" rot="0,0,0" style="gen_bios03_map_line" image_no="1" color="255,255,255,128"/>
+						<image name="line_on_y" pos="-17,-255" rot="0,0,0" style="gen_bios03_map_line" image_no="0" visible="false"/>
+					</node>
+					<anim_ctrl name="line_focus_blink" play="true" loop="false">
+						<bind_node node="line_on" anim="anm_gmap_blink"/>
+						<bind_node node="line_on_y" anim="anm_gmap_blink"/>
+					</anim_ctrl>
+				</node>
+				<node pos="0,0" name="chara_set" visible="false" viewer_visible="true" pos_ratio="0.5, 0.5">
+					<!--主人公へ結ぶライン-->
+					<node pos="-55,-92" name="chara_box">
+						<node pos="53,45" name="charaline_pi">
+							<image pos="-8,0" name="chara_line_bg" style="gen_bios03_charaline" visible="false"/>
+							<image pos="-8,0" name="chara_line" style="gen_bios03_charaline" visible="false"/>
+						</node>
+						<image pos="0,0" name="chara_image" rot="2,0,0" style="gen_bios08_mapchara"/>
+						<image pos="-17,-18" name="chara_frame_bg" rot="2,0,0" style="gen_bios03_charaframe"/>
+						<image pos="-17,-18" name="chara_frame" rot="2,0,0" style="gen_bios03_charaframe"/>
+					</node>
+					<anim_ctrl name="chara_focus_blink" play="true" loop="false">
+						<bind_node node="chara_line" anim="anm_gmap_blink"/>
+						<bind_node node="chara_frame" anim="anm_gmap_blink"/>
+						<bind_node node="chara_image" anim="anm_gmap_rotup"/>
+						<bind_node node="chara_frame_bg" anim="anm_gmap_rotup"/>
+						<bind_node node="chara_frame" anim="anm_gmap_rotup"/>
+					</anim_ctrl>
+				</node>
+				<!--中心-->
+				<image name="center_point" style="gen_bios03_minichara_dot" size_wh="70,70" pos="-30,-90" pos_ratio="0.5, 0.5" visible="false"/>
+			</image>
+		</node>
+	</node>
+	<!--アニメーション-->
+	<!--<anim_ctrl name="chara_focus_blink" play="true" loop="true">
+    <bind_node node ="chara_set" anim="anm_gmap_blink"/>
+  </anim_ctrl>-->
+	<!--__________________________________________________________________-->
+	<!--カメライメージ-->
+	<image name="genomap_front_camera" style="gen_bios07_camerabg" visible="false" viewer_visible="true"/>
+	<!--<image style="ui_bg_sample"  color="255,255,255,255" />-->
+	<!-- キャラクターウィンドウ(ジェノマップ情報) -->
+	<image name="chara_plate" pos="835,421,0" size_h="215" size_w="430" style="etc_window02_05" color="255,255,255,255" visible="false" viewer_visible="true">
+		<!--名前-->
+		<image size_w="135" pos="283,175" style="gen_common01_subname_bg">
+			<text name="chara_name" pos="68,2" text="네로" font_size="17.333" align="center"/>
+		</image>
+		<!--星-->
+		<image pos="21,49" style="gen_window03_bg02"/>
+		<text pos="26,54.667" text="세계 수 :" font_size="22" align="left"/>
+		<image name="star_off_00" pos="131,45" style="gen_bios01_star_off"/>
+		<image name="star_off_01" pos="167,45" style="gen_bios01_star_off"/>
+		<image name="star_off_02" pos="203,45" style="gen_bios01_star_off"/>
+		<image name="star_off_03" pos="242,45" style="gen_bios01_star_off"/>
+		<image name="star00" pos="131,45" style="gen_bios01_star_on"/>
+		<image name="star01" pos="167,45" style="gen_bios01_star_on"/>
+		<image name="star02" pos="203,45" style="gen_bios01_star_on"/>
+		<image name="star03" pos="242,45" style="gen_bios01_star_on"/>
+		<image name="compIcon" pos="238,47" style="gen_bios01_comp"/>
+		<!--キャラクター-->
+		<image name="chara" pos="285,41" style="gen_bios10_mapchara"/>
+		<!--２つの表示文字.-->
+		<image pos="21,82" style="gen_window03_bg02"/>
+		<image pos="21,115" style="gen_window03_bg02"/>
+		<text name="ex_title00" pos="26,88" text="아이우에오카키쿠케코" font_size="22" align="left"/>
+		<text name="ex_title01" pos="26,121.333" text="아이우에오카키쿠케코" font_size="22" align="left"/>
+		<!--小さいアイコン.-->
+		<image pos="21,148" size_w="256" size_h="43" style="gen_window03_bg02"/>
+		<text pos="26,159" text="시마법 :" font_size="22" align="left"/>
+		<!--<image name="sub_chara00" pos="29,151" style="gen_bios02_healingicon"/>
+		<image name="sub_chara01" pos="74,151" style="gen_bios02_healingicon"/>
+		<image name="sub_chara02" pos="119,151" style="gen_bios02_healingicon"/>
+		<image name="sub_chara03" pos="164,151" style="gen_bios02_healingicon"/>-->
+		<image name="sub_chara00" pos="136,149" style="gen_bios02_healingicon"/>
+		<image name="sub_chara01" pos="181,149" style="gen_bios02_healingicon"/>
+		<image name="sub_chara02" pos="226,149" style="gen_bios02_healingicon"/>
+		<image name="sub_chara03" pos="271,149" style="gen_bios02_healingicon"/>
+		<!--<image name="sub_chara04" pos="209,151" style="gen_bios02_healingicon" />-->
+		<!--見出し-->
+		<node pos="-14,23" name="__win_title">
+			<image name="header" pos="23,-11" size_w="412" style="gen_common01_win_acce02_bg"/>
+			<image name="border01" pos="25,10" size_w="412" style="gen_common01_win_acce02_01"/>
+			<image name="acc01" pos="156,-7" style="gen_common01_window_acce01"/>
+			<image name="acc02" pos="306,-7" style="gen_common01_window_acce01"/>
+			<text name="text_header" pos="237.333,-4,0" text="캐릭터 정보" align="center" font_size="16"/>
+		</node>
+	</image>
+	<anim_ctrl name="fade_in_chara_plate" play="false" start_visible="true">
+		<bind_node node="chara_plate" anim="anm_common_fade_in" speed="1.0"/>
+	</anim_ctrl>
+	<anim_ctrl name="fade_out_chara_plate" play="false" end_visible="false">
+		<bind_node node="chara_plate" anim="anm_common_fade_in" speed="1.0" reverse="true"/>
+	</anim_ctrl>
+	<!--バイオス屋入り口のお金表示 -->
+	<node name="money_window" pos="306,74" visible="false" viewer_visible="true">
+		<!-- 下地画像 -->
+		<image style="gen_window03_07" size_w="230"/>
+		<image style="gen_bios08_money_text" pos="3,-1"/>
+		<!-- テキスト -->
+		<text name="money_text" pos="183,36" align="right" font="NUMBER01_22PX" word_space="1.8" text="99999999"/>
+		<!-- font_color="255,120,0" -->
+		<image style="gen_bios08_money_ct" pos="186,23"/>
+	</node>
+	<anim_ctrl name="fade_in" play="false" start_visible="true">
+		<bind_node node="money_window" anim="anm_common_fade_in" speed="1.0"/>
+	</anim_ctrl>
+	<anim_ctrl name="fade_out" play="false" end_visible="false">
+		<bind_node node="money_window" anim="anm_common_fade_in" speed="1.0" reverse="true"/>
+	</anim_ctrl>
+	<!--**********************************************************-->
+	<!--ジェノメトリカ結晶のウィンドウ.-->
+	<image name="crystal_info" pos="445,200" size_wh="410,227" style="etc_window02_05" viewer_visible="true" visible="false">
+		<node pos="-14,23">
+			<image name="header" pos="23,-8" size_w="395" style="gen_common01_win_acce02_bg"/>
+			<image name="border01" pos="25,10" size_w="395" style="gen_common01_win_acce02_01"/>
+			<image name="acc01" pos="146,-6" style="gen_common01_window_acce01"/>
+			<image name="acc02" pos="282,-6" style="gen_common01_window_acce01"/>
+			<text name="text_header" pos="186.667,-3" text="결정 상세" font_size="16"/>
+			<image name="image_icon" pos="55,25" style="gen_bath02_crystalicon"/>
+			<image pos="100,20" style="gen_common01_name_bg01">
+				<text name="text_name" pos="20,12" text="아이우에오카키쿠케코" align="left" font_size="22"/>
+			</image>
+			<node pos="30,70">
+				<image name="text_source_bg" pos="-7,-2" size_wh="392,24" style="gen_window03_bg02"/>
+				<image name="text_summary_bg" pos="-7,30" size_wh="392,48" style="gen_window03_bg02"/>
+				<image name="text_effect_bg" pos="-7,94" size_wh="392,24" style="gen_window03_bg02"/>
+				<text text="상념원" pos="0,2.667" align="left" font_size="20">
+					<text name="text_source" pos="80,0" text="아이우에오카키쿠케코사시스세소" align="left" font_size="20"/>
+				</text>
+				<text text="개요" pos="0,34.667" align="left" font_size="20">
+					<text name="text_summary" pos="80,0" text="아이우에오카키쿠케코사시스세소" align="left" font_size="20" line_space="4"/>
+				</text>
+				<text text="효과" pos="0,98.667" align="left" font_size="20">
+					<text name="text_effect" pos="80,0" text="아이우에오카키쿠케코사시스세소" align="left" font_size="20"/>
+				</text>
+			</node>
+		</node>
+	</image>
+	<!-- フェードアニメーション -->
+	<anim_ctrl name="fade_in_crystal" play="false" loop="false" start_visible="true">
+		<bind_node node="crystal_info" anim="anm_common_fade_in"/>
+	</anim_ctrl>
+	<anim_ctrl name="fade_out_crystal" play="false" loop="false" end_visible="false">
+		<bind_node node="crystal_info" anim="anm_common_fade_in" reverse="true"/>
+	</anim_ctrl>
+	<!-- ラインヘルプ -->
+	<!--
+	<image pos="486,630" size_w="715" style="gen_common01_help">
+		<text pos="25,12" text="현재 보유 중인 아이템을 표시합니다." font_size="18" align="left" />
+	</image>-->
+</root>

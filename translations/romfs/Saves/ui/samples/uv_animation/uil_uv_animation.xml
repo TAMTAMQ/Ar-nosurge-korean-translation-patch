@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE root SYSTEM "file://st01/project/acps3/_Programmer/ui/uil.dtd">
+<root>
+	<command load_style="Saves/ui/samples/uv_animation/uis_uv_animation.xml"/>
+	<command load_anim="Saves/ui/samples/uv_animation/uia_uv_animation.xml"/>
+	<image name="test_image" pos="300,0" style="style_image_monster000"/>
+	<text text="일정한 보간" pos="300,200"/>
+	<image name="test_image2" pos="300,300" style="style_image_monster000"/>
+	<text text="선형 보간" pos="300,500"/>
+	<anim_ctrl play="true" loop="true">
+		<bind_node node="test_image" anim="anm_image_offset"/>
+		<bind_node node="test_image2" anim="anm_image_offset2"/>
+	</anim_ctrl>
+</root>

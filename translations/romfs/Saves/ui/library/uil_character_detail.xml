@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE root SYSTEM "file://st01/project/acps3/_Programmer/ui/uil.dtd">
+<root>
+	<!-- スタイルの読み込み -->
+	<command load_style="Saves/ui/gen_styles/uis_gen_common.xml"/>
+	<command load_style="Saves/ui/gen_styles/uis_gen_window.xml"/>
+	<command load_style="Saves/ui/gen_styles/uis_gen_mix.xml"/>
+	<command load_style="Saves/ui/etc/uis_etc_window.xml"/>
+	<!-- アイテム画像の代用 -->
+	<command load_style="Saves/ui/etc/uis_small_chara.xml"/>
+	<node pos="1200,0" rot="0,5,0">
+		<node pos="-1200,0">
+			<node name="character_info" pos="476,152">
+				<!-- 下地画像 -->
+				<image name="base_window" style="etc_window02_04" size_wh="732,470" image_no="1">
+					<!-- Character画像 -->
+					<node pos="29,55">
+						<!-- 背景 -->
+						<image style="gen_common03_image_bg" pos="-8,-9,0">
+							<!-- Character画像(別の画像で代用中) -->
+							<image name="image_character" style="style_small_chara" image_no="0" pos="5,5,0"/>
+						</image>
+					</node>
+					<node name="character_detail_info" pos="18,20">
+						<image style="gen_common01_win_acce02_bg" parent_size_copy_w="true" size_copy_w_offset="-31">
+							<image style="gen_common01_win_acce02_01" pos="0,22" parent_size_copy_w="true"/>
+							<node pos_ratio_x="0.5" pos="-10,4">
+								<image style="gen_common01_window_acce01" pos="-130,1"/>
+								<image style="gen_common01_window_acce01" pos="137,1"/>
+								<text text="캐릭터 설명" font_size="14" align="center" pos="5,3"/>
+							</node>
+						</image>
+						<node>
+							<image style="gen_common01_name_bg01" pos="369,26" size_wh="335,29">
+								<text name="text_title" text="Character" font_size="20" align="center" pos="166,9"/>
+							</image>
+						</node>
+						<!-- ページ背景画像 -->
+						<node pos="365,42">
+							<image style="gen_window03_bg02" pos="0,30" size_wh="330,25"/>
+							<image style="gen_window03_bg02" pos="0,58" size_wh="330,25"/>
+							<image style="gen_window03_bg02" pos="0,87" size_wh="330,25"/>
+							<image style="gen_window03_bg02" pos="0,116" size_wh="330,25"/>
+							<image style="gen_window03_bg02" pos="0,145" size_wh="330,25"/>
+							<image style="gen_window03_bg02" pos="0,175" size_wh="330,25"/>
+							<image style="gen_window03_bg02" pos="0,204" size_wh="330,25"/>
+							<image style="gen_window03_bg02" pos="0,233" size_wh="330,25"/>
+							<image style="gen_window03_bg02" pos="0,262" size_wh="330,25"/>
+							<image style="gen_window03_bg02" pos="0,291" size_wh="330,25"/>
+							<image style="gen_window03_bg02" pos="0,320" size_wh="330,25"/>
+							<image style="gen_window03_bg02" pos="0,349" size_wh="330,25"/>
+							<node name="page_note">
+								<text limit_width="426.66" name="text_note" text="아이우에오카키쿠케코사시스세소타치츠테토나니누네노하히후헤호마미무메모야유요라리루레로와온안이우이오가이쿠케이코사지춘세" line_char_length="15" font_size="20" pos="8,34.667" line_space="10.4"/>
+							</node>
+						</node>
+						<!-- ページ本体ぶら下げ用ノード -->
+						<node name="info_page_list" pos="0,30"/>
+					</node>
+				</image>
+			</node>
+		</node>
+	</node>
+	<image name="ui_bg_sample" style="ui_bg_sample" color="255,128,128,110" visible="false" viewer_visible="true"/>
+	<anim_ctrl name="get_in" start_visible="true">
+		<bind_node node="character_info" speed="2.0" anim="anm_common_fade_in"/>
+	</anim_ctrl>
+</root>

@@ -1,0 +1,91 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE root SYSTEM "file://st01/project/acps3/_Programmer/ui/uil.dtd">
+<root>
+	<!-- スタイルの読み込み -->
+	<command load_style="Saves/ui/uis_common.xml"/>
+	<command load_style="Saves/ui/gen_styles/uis_gen_common.xml"/>
+	<command load_style="Saves/ui/gen_styles/uis_gen_window.xml"/>
+	<command load_style="Saves/ui/_menu_templates/uis_mt_common.xml"/>
+	<command load_style="Saves/ui/etc/uis_etc_window.xml"/>
+	<!-- アニメーションの読み込み -->
+	<command load_anim="Saves/ui/_menu_templates/uia_mt_common.xml"/>
+	<!--<image pos="-345,-120" style="ui_bg_sample"  color="255,255,255,155" />-->
+	<!-- メニューの雛形(menu_top) -->
+	<node name="__uimenu_top">
+		<!-- 下地ウィンドウ -->
+		<image name="__uimenu_window" size_wh="757,96" style="etc_window02_06">
+			<!--見出し下地-->
+			<image name="acce02_bg" pos="10,9" parent_size_copy_w="true" size_copy_w_offset="-20" style="gen_common01_win_acce02_bg"/>
+			<!--見出し横線-->
+			<image name="acce02_01" pos="10,31" parent_size_copy_w="true" size_copy_w_offset="-170" style="gen_common01_win_acce02_01"/>
+			<image name="acce02_02" pos_ratio_x="1.0" pos="-162,31" size_w="157" style="gen_common01_win_acce02_02"/>
+			<!--スクロールバー-->
+			<!--
+		    <node name="__uimenu_scroll_bar" pos_ratio="1,0" pos="-33, 25" >
+				  -->
+			<!-- 下地 -->
+			<!--
+				  <image name="__uimenu_scroll_bar_base" size_h="78" style="gen_window01_03_scr_under" />
+				  <node pos="3, 26" >
+					  -->
+			<!-- つまみ (posはUIMenuが制御する。size_whは下地を占めるサイズにすること) -->
+			<!--
+					  <image name="__uimenu_scroll_bar_knob" color="255,255,255,255" size_wh="10,24" style="gen_window01_03_scr_on" />
+				  </node>
+		    </node>-->
+			<!--スクロールバー-->
+			<node name="__uimenu_scroll_bar" pos_ratio="1,0" pos="-24,19">
+				<image name="scr_acce" pos="-2,-9" style="gen_common01_scr_acce"/>
+				<!-- 下地 -->
+				<image name="__uimenu_scroll_bar_base" size_h="81" style="gen_window01_03_scr_under"/>
+				<node pos="3,26">
+					<!-- つまみ (posはUIMenuが制御する。size_whは下地を占めるサイズにすること) -->
+					<image name="__uimenu_scroll_bar_knob" size_wh="10,27" style="gen_window01_03_scr_on"/>
+				</node>
+			</node>
+			<!-- メニュー項目 -->
+			<node name="__uimenu_body" pos="13,30">
+				<!-- メニューカーソル -->
+				<node name="__uimenu_cursor">
+					<image name="__uimenu_cursor_inactive" pos="30,10,-10" scale="1,1.6,1" parent_size_copy_w="true" size_copy_w_offset="-70" image_no="0" style="gen_window03_linecsr02_over"/>
+					<image name="__uimenu_cursor_active" pos="30,10,-10" scale="1,1.6,1" parent_size_copy_w="true" size_copy_w_offset="-70" image_no="0" style="gen_window03_linecsr02_on"/>
+					<image name="linecsricon" pos="10,18" image_no="2" style="gen_window03_linecsricon"/>
+					<!-- 明滅アニメーション -->
+					<anim_ctrl play="true" loop="true">
+						<bind_node node="__uimenu_cursor_active" anim="anm_common_cursor_blink"/>
+					</anim_ctrl>
+					<anim_ctrl name="on_move" play="false" loop="false">
+						<bind_node node="linecsricon" anim="anm_menu_cursor_move"/>
+					</anim_ctrl>
+				</node>
+				<node visible="false">
+					<!-- 項目の雛形 行が増えるたびにこれがmenu_item_listの下に複製されていく -->
+					<node name="__uimenu_item_template">
+						<node pos="20,-5" name="__uimenu_item_entry"/>
+						<!-- この下に項目が追加される -->
+					</node>
+					<!-- MenuクラスでaddText()を呼んだときに挿入するテキストノード-->
+					<node name="__uimenu_def_add_item">
+						<text name="__uimenu_def_add_item_text" drop_shadow="false" text="아이우에오카키쿠케코사시스" align="left" font_size="22"/>
+					</node>
+					<node name="__uimenu_def_add_base_item">
+						<image pos="-1,0" parent_size_copy_w="true" size_copy_w_offset="-10" size_h="39" style="gen_window03_bg02"/>
+					</node>
+				</node>
+				<!-- メニュー項目リスト -->
+				<node pos="25,5" name="__uimenu_item_list"/>
+			</node>
+			<!--縦線-->
+			<image name="vert_line1" parent_size_copy_h="true" size_copy_h_offset="-20" pos_ratio_x="1.0" pos="-400,11" size_h="424" style="gen_common01_win_acce03"/>
+			<image name="vert_line2" parent_size_copy_h="true" size_copy_h_offset="-20" pos_ratio_x="1.0" pos="-313,11" size_h="424" style="gen_common01_win_acce03"/>
+			<image name="vert_line3" parent_size_copy_h="true" size_copy_h_offset="-20" pos_ratio_x="1.0" pos="-167,11" size_h="424" style="gen_common01_win_acce03"/>
+		</image>
+		<!-- フェードアニメーション -->
+		<anim_ctrl name="__uimenu_fade_in" play="false" loop="false">
+			<bind_node node="__uimenu_top" anim="anm_menu_fade_in"/>
+		</anim_ctrl>
+		<anim_ctrl name="__uimenu_fade_out" play="false" loop="false">
+			<bind_node node="__uimenu_top" anim="anm_menu_fade_out"/>
+		</anim_ctrl>
+	</node>
+</root>

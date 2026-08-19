@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE root SYSTEM "file://st01/project/acps3/_Programmer/ui/uil.dtd">
+<root>
+	<!-- スタイルの読み込み -->
+	<command load_style="Saves/ui/gen_styles/uis_gen_common.xml"/>
+	<command load_style="Saves/ui/gen_styles/uis_gen_window.xml"/>
+	<command load_style="Saves/ui/gen_styles/uis_gen_mix.xml"/>
+	<command load_style="Saves/ui/etc/uis_etc_window.xml"/>
+	<!--
+    <image style="ui_bg_sample" color="255,255,255,255" />
+    -->
+	<node name="glossary_info" pos="400,176">
+		<!-- 下地画像 -->
+		<image name="base_window" style="gen_window01_01" size_wh="457,300"/>
+		<!-- 用語名 -->
+		<node name="item_neme" pos="43,21">
+			<image style="gen_common01_name_bg01" size_wh="391,41" pos="-3,3,0"/>
+			<text name="name_text" text="모태상관 정보" align="center" font_size="18.667" pos="188,17,0"/>
+		</node>
+		<node name="page2">
+			<!-- 背景画像 -->
+			<node name="bg_line" pos="20,91">
+				<image style="gen_window03_bg02" pos="0,0" size_wh="420,30"/>
+				<image style="gen_window03_bg02" pos="0,31" size_wh="420,30"/>
+				<image style="gen_window03_bg02" pos="0,62" size_wh="420,30"/>
+				<image style="gen_window03_bg02" pos="0,93" size_wh="420,30"/>
+				<image style="gen_window03_bg02" pos="0,124" size_wh="420,30"/>
+				<image style="gen_window03_bg02" pos="0,155" size_wh="420,30"/>
+			</node>
+			<!-- テキスト -->
+			<node pos="30,98.667,0">
+				<text font_size="20" pos="0,0,0" text="모태상관의 현재 HP"/>
+				<text font_size="20" pos="400,0,0" text="123456789012" align="right" name="text_boss_hp"/>
+			</node>
+			<node pos="30,129.667,0">
+				<text font_size="20" pos="0,0,0" text="당신이 입힌 데미지"/>
+				<text font_size="20" pos="400,0,0" text="123456789012" align="right" name="text_damage"/>
+			</node>
+			<node pos="30,160.667,0">
+				<text font_size="20" pos="0,0,0" text="당신이 입힌 데미지 순위"/>
+				<text font_size="20" pos="375,0,0" text="123456789012" align="right" name="text_damage_rank"/>
+				<text font_size="20" pos="380,0,0" text="위"/>
+			</node>
+			<node pos="30,191.667,0">
+				<text font_size="20" pos="0,0,0" text="당신이 싸운 횟수"/>
+				<text font_size="20" pos="375,0,0" text="123456789012" align="right" name="text_num"/>
+				<text font_size="20" pos="380,0,0" text="회"/>
+			</node>
+			<node pos="30,222.667,0">
+				<text font_size="20" pos="0,0,0" text="당신의 전투 횟수 순위"/>
+				<text font_size="20" pos="375,0,0" text="123456789012" align="right" name="text_num_rank"/>
+				<text font_size="20" pos="380,0,0" text="위"/>
+			</node>
+			<node pos="30,253.667,0">
+				<text font_size="20" pos="0,0,0" text="지난 전투 일시"/>
+				<text font_size="20" pos="400,0,0" text="12/31 12:34" align="right" name="text_time"/>
+			</node>
+		</node>
+	</node>
+</root>

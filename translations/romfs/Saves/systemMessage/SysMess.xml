@@ -1,343 +1,343 @@
-<?xml version='1.0' encoding='utf-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
 <Root>
-	<SysMess CharaTag="CHARA_NONE" NameTag="NAME_NONE" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SYSTEM" VoiceNo="-1" Text="로드한 세이브 데이터에 필요&lt;CR&gt;한DLC가 설치되어 있지 않습니다&lt;CR&gt;.로드를 취소했습니다." />
-	<SysMess CharaTag="CHARA_NONE" NameTag="NAME_NONE" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SYSTEM" VoiceNo="-1" Text="로드한 세이브 데이터가 변조되어있기 &lt;CR&gt;때문에 로드를 취소했습니다." />
-	<SysMess CharaTag="CHARA_NONE" NameTag="NAME_NONE" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SYSTEM" VoiceNo="-1" Text="이 아이템의 조합 이벤트를 보시겠습니까?" />
-	<SysMess CharaTag="CHARA_NONE" NameTag="NAME_NONE" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SYSTEM" VoiceNo="-1" Text="의상을 변경하시겠습니까?" />
-	<SysMess CharaTag="CHARA_NONE" NameTag="NAME_NONE" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SYSTEM" VoiceNo="-1" Text="현재 일부 의상 변경 디바이&lt;CR&gt;스가응답하지 않아, 대상 &lt;CR&gt;의상을변경할 수 없습니다." />
-	<SysMess CharaTag="CHARA_NONE" NameTag="NAME_NONE" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SYSTEM" VoiceNo="-1" Text="인물 추적 디바이스가 응답하지 &lt;CR&gt;않아,재핑을 실행할 수 없습니다." />
-	<SysMess CharaTag="CHARA_NONE" NameTag="NAME_NONE" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SYSTEM" VoiceNo="-1" Text="저장되지 않은 항목이 있습니다.&lt;CR&gt;종료하시겠습니까?" />
-	<SysMess CharaTag="CHARA_NONE" NameTag="NAME_NONE" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SYSTEM" VoiceNo="-1" Text="휴식 시 임시 시스템 메시지(REST_MESSAGE)" />
-	<SysMess CharaTag="CHARA_NONE" NameTag="NAME_NONE" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SYSTEM" VoiceNo="-1" Text="델타 측으로 재핑하시겠습니까?" />
-	<SysMess CharaTag="CHARA_NONE" NameTag="NAME_NONE" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SYSTEM" VoiceNo="-1" Text="아셰스 측으로 재핑하시겠습니까?" />
-	<SysMess CharaTag="CHARA_NONE" NameTag="NAME_NONE" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SYSTEM" VoiceNo="-1" Text="정신 세계를 이탈하여 현실 세계로 귀환&lt;CR&gt;합니다.계속하시겠습니까?" />
-	<SysMess CharaTag="CHARA_KANON" NameTag="NAME_KANON" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="어서 오세요." />
-	<SysMess CharaTag="CHARA_NAY" NameTag="NAME_NAY" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="안녕!오늘은 뭘&lt;CR&gt; 할 거야?" />
-	<SysMess CharaTag="CHARA_SARLY" NameTag="NAME_SARLY" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="아, 왔어?오늘은 &lt;CR&gt;어떻게 할래? 뭐 좀 만들까?" />
-	<SysMess CharaTag="CHARA_TATTORIA" NameTag="NAME_TATTORIA" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="어서 와!오늘&lt;CR&gt;도 좋은 약이 잔뜩 있다고!" />
-	<SysMess CharaTag="CHARA_KANON" NameTag="NAME_KANON" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="얼마 전 신상품이 입고되었습니&lt;CR&gt;다.전보다 훨씬 알차게 준비했&lt;CR&gt;으니,꼭 둘러보고 가세요." />
-	<SysMess CharaTag="CHARA_NAY" NameTag="NAME_NAY" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="아, 맞다. 몇 가지 상품을&lt;CR&gt;새로 취급하기로 했어." />
-	<SysMess CharaTag="CHARA_SARLY" NameTag="NAME_SARLY" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="아, 그리고 상품 라인업이늘어&lt;CR&gt;났어. 필요하면 말해줘." />
-	<SysMess CharaTag="CHARA_TATTORIA" NameTag="NAME_TATTORIA" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="아, 참! 상품을 몇 개 늘렸거든.관심&lt;CR&gt; 있으면 구경하고 가라고!" />
-	<SysMess CharaTag="CHARA_KANON" NameTag="NAME_KANON" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="어서 오세요, 둘러보세요." />
-	<SysMess CharaTag="CHARA_NAY" NameTag="NAME_NAY" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="응응, 마음껏 사라고!" />
-	<SysMess CharaTag="CHARA_SARLY" NameTag="NAME_SARLY" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="좋고말고.&lt;CR&gt;편하게 구경하다 가게나." />
-	<SysMess CharaTag="CHARA_TATTORIA" NameTag="NAME_TATTORIA" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="어서 오&lt;CR&gt;세요!오늘은 뭘 사줄 거야?" />
-	<SysMess CharaTag="CHARA_KANON" NameTag="NAME_KANON" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="몇 개가 필요하신가요?" />
-	<SysMess CharaTag="CHARA_NAY" NameTag="NAME_NAY" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="자자, 몇 개?" />
-	<SysMess CharaTag="CHARA_SARLY" NameTag="NAME_SARLY" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="그렇군.그&lt;CR&gt;래서, 몇 개를 원하는 거지?" />
-	<SysMess CharaTag="CHARA_TATTORIA" NameTag="NAME_TATTORIA" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="오케이!그&lt;CR&gt;럼 필요한 개수를 말해줘." />
-	<SysMess CharaTag="CHARA_KANON" NameTag="NAME_KANON" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="아무래도 돈이 부족한 모양이군요……." />
-	<SysMess CharaTag="CHARA_NAY" NameTag="NAME_NAY" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="어라.너,&lt;CR&gt; 돈이 모자라잖아!" />
-	<SysMess CharaTag="CHARA_SARLY" NameTag="NAME_SARLY" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="흠, 아무래도 자금이 부족한 것&lt;CR&gt; 같네.역시 손해 볼 수는 없지." />
-	<SysMess CharaTag="CHARA_TATTORIA" NameTag="NAME_TATTORIA" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="아차…… 돈이 모자라잖아.아쉽&lt;CR&gt;네!" />
-	<SysMess CharaTag="CHARA_KANON" NameTag="NAME_KANON" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="무엇을 팔아줄 건가요?" />
-	<SysMess CharaTag="CHARA_NAY" NameTag="NAME_NAY" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="오늘은 뭘 팔 거야?재미&lt;CR&gt;있는 물건이면 좋겠는데." />
-	<SysMess CharaTag="CHARA_SARLY" NameTag="NAME_SARLY" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="뭔가 흥미로운 걸 들여온 모양이군&lt;CR&gt;?꼭 보고 싶어." />
-	<SysMess CharaTag="CHARA_TATTORIA" NameTag="NAME_TATTORIA" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="아, 좋아.&lt;CR&gt;뭘 팔 거야?" />
-	<SysMess CharaTag="CHARA_KANON" NameTag="NAME_KANON" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="그럼, 개수를 물어보겠습니다." />
-	<SysMess CharaTag="CHARA_NAY" NameTag="NAME_NAY" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="흐음, 이거 말&lt;CR&gt;이지.그래서? 몇 개 줄 거야?" />
-	<SysMess CharaTag="CHARA_SARLY" NameTag="NAME_SARLY" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="꽤 괜찮은 물건이네&lt;CR&gt;.몇 개나 팔고 싶은 거지?" />
-	<SysMess CharaTag="CHARA_TATTORIA" NameTag="NAME_TATTORIA" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="헤에, 이거 말&lt;CR&gt;이야?얼마에 팔아줄 거야?" />
-	<SysMess CharaTag="CHARA_KANON" NameTag="NAME_KANON" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="아무것도 가지고 있지 않은 것 같습니다만……." />
-	<SysMess CharaTag="CHARA_NAY" NameTag="NAME_NAY" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="어라, 너 아무것도 안 갖고 있잖아!" />
-	<SysMess CharaTag="CHARA_SARLY" NameTag="NAME_SARLY" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="……팔 만한 게 있긴 한 거야?" />
-	<SysMess CharaTag="CHARA_TATTORIA" NameTag="NAME_TATTORIA" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="하아? 아무것도 없는데.&lt;CR&gt;공기를 살 수는 없다고." />
-	<SysMess CharaTag="CHARA_KANON" NameTag="NAME_KANON" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="이것으로 되겠습니까?" />
-	<SysMess CharaTag="CHARA_NAY" NameTag="NAME_NAY" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="이걸로 된 거지?" />
-	<SysMess CharaTag="CHARA_SARLY" NameTag="NAME_SARLY" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="이걸로 괜찮은 거지?" />
-	<SysMess CharaTag="CHARA_TATTORIA" NameTag="NAME_TATTORIA" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="정말로 이걸로 오케이야?" />
-	<SysMess CharaTag="CHARA_KANON" NameTag="NAME_KANON" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="감사합니다." />
-	<SysMess CharaTag="CHARA_NAY" NameTag="NAME_NAY" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="수고했어!" />
-	<SysMess CharaTag="CHARA_SARLY" NameTag="NAME_SARLY" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="고마워." />
-	<SysMess CharaTag="CHARA_TATTORIA" NameTag="NAME_TATTORIA" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="정말 고마워!" />
-	<SysMess CharaTag="CHARA_KANON" NameTag="NAME_KANON" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="또 오세요." />
-	<SysMess CharaTag="CHARA_NAY" NameTag="NAME_NAY" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="그럼 또 보자~" />
-	<SysMess CharaTag="CHARA_SARLY" NameTag="NAME_SARLY" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="다시 필요해지면,언&lt;CR&gt;제든 들러줘." />
-	<SysMess CharaTag="CHARA_TATTORIA" NameTag="NAME_TATTORIA" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="고맙구먼.또 &lt;CR&gt;와 줘." />
-	<SysMess CharaTag="CHARA_NONE" NameTag="NAME_NONE" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SYSTEM" VoiceNo="-1" Text="아무도 없는 것 같다……" />
-	<SysMess CharaTag="CHARA_TATTORIA" NameTag="NAME_TATTORIA" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="오오오오오!&lt;CR&gt;그 암호를 알고 있다니,이쪽 메&lt;CR&gt;뉴를 이용할 수밖에 없겠는걸!" />
-	<SysMess CharaTag="CHARA_CASTY" NameTag="NAME_ZAKKAYA" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="어서 와!" />
-	<SysMess CharaTag="CHARA_CASTY" NameTag="NAME_ZAKKAYA" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="어서 오세요" />
-	<SysMess CharaTag="CHARA_CASTY" NameTag="NAME_ZAKKAYA" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="환영합니다!" />
-	<SysMess CharaTag="CHARA_CASTY" NameTag="NAME_ZAKKAYA" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="어서 와~" />
-	<SysMess CharaTag="CHARA_CASTY" NameTag="NAME_ZAKKAYA" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="어서 오세요!" />
-	<SysMess CharaTag="CHARA_CASTY" NameTag="NAME_ZAKKAYA" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="용건은 무엇인가요?" />
-	<SysMess CharaTag="CHARA_CASTY" NameTag="NAME_ZAKKAYA" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="어서 오세요, 이방인님" />
-	<SysMess CharaTag="CHARA_CASTY" NameTag="NAME_ZAKKAYA" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="어서 오세요" />
-	<SysMess CharaTag="CHARA_CASTY" NameTag="NAME_ZAKKAYA" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="신상품이 추가되었습니다" />
-	<SysMess CharaTag="CHARA_CASTY" NameTag="NAME_ZAKKAYA" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="신상품이 추가되었습니다" />
-	<SysMess CharaTag="CHARA_CASTY" NameTag="NAME_ZAKKAYA" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="신상품이 추가되었습니다" />
-	<SysMess CharaTag="CHARA_CASTY" NameTag="NAME_ZAKKAYA" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="신상품이 추가되었습니다" />
-	<SysMess CharaTag="CHARA_CASTY" NameTag="NAME_ZAKKAYA" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="신상품이 추가되었습니다" />
-	<SysMess CharaTag="CHARA_CASTY" NameTag="NAME_ZAKKAYA" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="신상품이 추가되었습니다" />
-	<SysMess CharaTag="CHARA_CASTY" NameTag="NAME_ZAKKAYA" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="신상품이 추가되었습니다" />
-	<SysMess CharaTag="CHARA_CASTY" NameTag="NAME_ZAKKAYA" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="신상품이 추가되었습니다" />
-	<SysMess CharaTag="CHARA_CASTY" NameTag="NAME_ZAKKAYA" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="뭘 사줄 거야?" />
-	<SysMess CharaTag="CHARA_CASTY" NameTag="NAME_ZAKKAYA" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="무엇을 구매하시겠습니까?" />
-	<SysMess CharaTag="CHARA_CASTY" NameTag="NAME_ZAKKAYA" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="상품을 골라 주세요" />
-	<SysMess CharaTag="CHARA_CASTY" NameTag="NAME_ZAKKAYA" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="뭘 살 거니?" />
-	<SysMess CharaTag="CHARA_CASTY" NameTag="NAME_ZAKKAYA" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="무엇을 사 줄 거예요?" />
-	<SysMess CharaTag="CHARA_CASTY" NameTag="NAME_ZAKKAYA" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="구매할 물건을 선택해 주세요" />
-	<SysMess CharaTag="CHARA_CASTY" NameTag="NAME_ZAKKAYA" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="구매하시는군&lt;CR&gt;요?여기 상품입니다" />
-	<SysMess CharaTag="CHARA_CASTY" NameTag="NAME_ZAKKAYA" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="무엇을 살 건가요?" />
-	<SysMess CharaTag="CHARA_CASTY" NameTag="NAME_ZAKKAYA" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="몇 개를 살 건가요?" />
-	<SysMess CharaTag="CHARA_CASTY" NameTag="NAME_ZAKKAYA" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="몇 개를 살 건가요?" />
-	<SysMess CharaTag="CHARA_CASTY" NameTag="NAME_ZAKKAYA" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="몇 개를 살 건가요?" />
-	<SysMess CharaTag="CHARA_CASTY" NameTag="NAME_ZAKKAYA" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="몇 개를 살 건가요?" />
-	<SysMess CharaTag="CHARA_CASTY" NameTag="NAME_ZAKKAYA" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="몇 개를 살 건가요?" />
-	<SysMess CharaTag="CHARA_CASTY" NameTag="NAME_ZAKKAYA" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="몇 개를 살 건가요?" />
-	<SysMess CharaTag="CHARA_CASTY" NameTag="NAME_ZAKKAYA" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="몇 개를 살 건가요?" />
-	<SysMess CharaTag="CHARA_CASTY" NameTag="NAME_ZAKKAYA" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="몇 개를 살 건가요?" />
-	<SysMess CharaTag="CHARA_CASTY" NameTag="NAME_ZAKKAYA" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="손님, 돈이 부족해..." />
-	<SysMess CharaTag="CHARA_CASTY" NameTag="NAME_ZAKKAYA" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="죄송합니다, 금액이 부족한 것 같습니다" />
-	<SysMess CharaTag="CHARA_CASTY" NameTag="NAME_ZAKKAYA" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="그것을 구매하시려면소지금&lt;CR&gt;이 조금 부족한 것 같네요" />
-	<SysMess CharaTag="CHARA_CASTY" NameTag="NAME_ZAKKAYA" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="돈이 모자라면 못 팔아" />
-	<SysMess CharaTag="CHARA_CASTY" NameTag="NAME_ZAKKAYA" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="죄송합니다.돈&lt;CR&gt;이 부족한 것 같아요." />
-	<SysMess CharaTag="CHARA_CASTY" NameTag="NAME_ZAKKAYA" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="소지금이 부족합니다" />
-	<SysMess CharaTag="CHARA_CASTY" NameTag="NAME_ZAKKAYA" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="금액이 부족합니다" />
-	<SysMess CharaTag="CHARA_CASTY" NameTag="NAME_ZAKKAYA" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="돈이 부족합니다" />
-	<SysMess CharaTag="CHARA_CASTY" NameTag="NAME_ZAKKAYA" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="뭘 팔아줄 거야?" />
-	<SysMess CharaTag="CHARA_CASTY" NameTag="NAME_ZAKKAYA" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="무엇을 판매하시겠습니까?" />
-	<SysMess CharaTag="CHARA_CASTY" NameTag="NAME_ZAKKAYA" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="무엇을 판매하시겠습니까?" />
-	<SysMess CharaTag="CHARA_CASTY" NameTag="NAME_ZAKKAYA" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="무엇을 팔 거니?" />
-	<SysMess CharaTag="CHARA_CASTY" NameTag="NAME_ZAKKAYA" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="무엇을 팔아줄래?" />
-	<SysMess CharaTag="CHARA_CASTY" NameTag="NAME_ZAKKAYA" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="판매할 아이템을 선택해 주세요" />
-	<SysMess CharaTag="CHARA_CASTY" NameTag="NAME_ZAKKAYA" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="무언가 팔아주실 건가요?" />
-	<SysMess CharaTag="CHARA_CASTY" NameTag="NAME_ZAKKAYA" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="무엇을 팔까요?" />
-	<SysMess CharaTag="CHARA_CASTY" NameTag="NAME_ZAKKAYA" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="몇 개를 팔까요?" />
-	<SysMess CharaTag="CHARA_CASTY" NameTag="NAME_ZAKKAYA" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="몇 개를 팔까요?" />
-	<SysMess CharaTag="CHARA_CASTY" NameTag="NAME_ZAKKAYA" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="몇 개를 팔까요?" />
-	<SysMess CharaTag="CHARA_CASTY" NameTag="NAME_ZAKKAYA" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="몇 개를 팔까요?" />
-	<SysMess CharaTag="CHARA_CASTY" NameTag="NAME_ZAKKAYA" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="몇 개를 팔까요?" />
-	<SysMess CharaTag="CHARA_CASTY" NameTag="NAME_ZAKKAYA" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="몇 개를 팔까요?" />
-	<SysMess CharaTag="CHARA_CASTY" NameTag="NAME_ZAKKAYA" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="몇 개를 팔까요?" />
-	<SysMess CharaTag="CHARA_CASTY" NameTag="NAME_ZAKKAYA" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="몇 개를 팔까요?" />
-	<SysMess CharaTag="CHARA_CASTY" NameTag="NAME_ZAKKAYA" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="손님, 팔 만한 게하나도&lt;CR&gt; 없잖아" />
-	<SysMess CharaTag="CHARA_CASTY" NameTag="NAME_ZAKKAYA" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="실례지만, 팔 만한 물건은가&lt;CR&gt;지고 계시지 않은 것 같네요" />
-	<SysMess CharaTag="CHARA_CASTY" NameTag="NAME_ZAKKAYA" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="가지고 계신 것 중에는, 팔 만&lt;CR&gt;한 것이없는 것 같습니다" />
-	<SysMess CharaTag="CHARA_CASTY" NameTag="NAME_ZAKKAYA" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="뭐야, 팔 만한 게&lt;CR&gt;하나도 없잖아..." />
-	<SysMess CharaTag="CHARA_CASTY" NameTag="NAME_ZAKKAYA" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="팔 만한 게 없는데요?" />
-	<SysMess CharaTag="CHARA_CASTY" NameTag="NAME_ZAKKAYA" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="매각할 만한 &lt;CR&gt;물건을가지고 계시지 않은 것 같습니다만..." />
-	<SysMess CharaTag="CHARA_CASTY" NameTag="NAME_ZAKKAYA" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="제가 매입할 수 있는 건없는&lt;CR&gt; 것 같네요, 죄송합니다" />
-	<SysMess CharaTag="CHARA_CASTY" NameTag="NAME_ZAKKAYA" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="팔 물건이 없습니다" />
-	<SysMess CharaTag="CHARA_CASTY" NameTag="NAME_ZAKKAYA" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="이걸로 됐나?" />
-	<SysMess CharaTag="CHARA_CASTY" NameTag="NAME_ZAKKAYA" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="이상으로 괜찮습니까?" />
-	<SysMess CharaTag="CHARA_CASTY" NameTag="NAME_ZAKKAYA" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="이것으로 되겠습니까?" />
-	<SysMess CharaTag="CHARA_CASTY" NameTag="NAME_ZAKKAYA" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="이걸로 된 걸까?" />
-	<SysMess CharaTag="CHARA_CASTY" NameTag="NAME_ZAKKAYA" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="이걸로 되는 건가요?" />
-	<SysMess CharaTag="CHARA_CASTY" NameTag="NAME_ZAKKAYA" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="됐습니다" />
-	<SysMess CharaTag="CHARA_CASTY" NameTag="NAME_ZAKKAYA" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="괜찮은 거죠?" />
-	<SysMess CharaTag="CHARA_CASTY" NameTag="NAME_ZAKKAYA" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="이걸로 됐습니까?" />
-	<SysMess CharaTag="CHARA_CASTY" NameTag="NAME_ZAKKAYA" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="매번 감사합니다!" />
-	<SysMess CharaTag="CHARA_CASTY" NameTag="NAME_ZAKKAYA" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="감사했습니다" />
-	<SysMess CharaTag="CHARA_CASTY" NameTag="NAME_ZAKKAYA" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="고맙습니다" />
-	<SysMess CharaTag="CHARA_CASTY" NameTag="NAME_ZAKKAYA" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="잘 부탁드려요♪" />
-	<SysMess CharaTag="CHARA_CASTY" NameTag="NAME_ZAKKAYA" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="감사합니다♪" />
-	<SysMess CharaTag="CHARA_CASTY" NameTag="NAME_ZAKKAYA" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="알겠습니다" />
-	<SysMess CharaTag="CHARA_CASTY" NameTag="NAME_ZAKKAYA" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="고마워, 좋은 거래였어" />
-	<SysMess CharaTag="CHARA_CASTY" NameTag="NAME_ZAKKAYA" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="고맙습니다" />
-	<SysMess CharaTag="CHARA_CASTY" NameTag="NAME_ZAKKAYA" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="또 오세요!" />
-	<SysMess CharaTag="CHARA_CASTY" NameTag="NAME_ZAKKAYA" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="다시 들러 주세요" />
-	<SysMess CharaTag="CHARA_CASTY" NameTag="NAME_ZAKKAYA" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="언제든 환영이에요" />
-	<SysMess CharaTag="CHARA_CASTY" NameTag="NAME_ZAKKAYA" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="자, 언제든 어서 오세요" />
-	<SysMess CharaTag="CHARA_CASTY" NameTag="NAME_ZAKKAYA" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="또 놀러 와요~!" />
-	<SysMess CharaTag="CHARA_CASTY" NameTag="NAME_ZAKKAYA" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="다음 방문을 기다리고 있겠습니다" />
-	<SysMess CharaTag="CHARA_CASTY" NameTag="NAME_ZAKKAYA" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="언제든 들러 주세요" />
-	<SysMess CharaTag="CHARA_CASTY" NameTag="NAME_ZAKKAYA" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="다시 또 오세요" />
-	<SysMess CharaTag="CHARA_KANON" NameTag="NAME_KANON" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="알겠습니다.그&lt;CR&gt;럼 제작 준비를 하죠." />
-	<SysMess CharaTag="CHARA_NAY" NameTag="NAME_NAY" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="오케이!오&lt;CR&gt;늘도 열심히 만들어 보자." />
-	<SysMess CharaTag="CHARA_SARLY" NameTag="NAME_SARLY" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="좋아.그럼&lt;CR&gt;, 뭘 만들지 말해 봐." />
-	<SysMess CharaTag="CHARA_TATTORIA" NameTag="NAME_TATTORIA" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="좋았어!오&lt;CR&gt;늘은 뭘 빡세게 해볼까?" />
-	<SysMess CharaTag="CHARA_KANON" NameTag="NAME_KANON" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="무엇을 만듭니까? K" />
-	<SysMess CharaTag="CHARA_NAY" NameTag="NAME_NAY" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="무엇을 만듭니까? N" />
-	<SysMess CharaTag="CHARA_SARLY" NameTag="NAME_SARLY" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="무엇을 만듭니까? S" />
-	<SysMess CharaTag="CHARA_TATTORIA" NameTag="NAME_TATTORIA" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="무엇을 만듭니까? T" />
-	<SysMess CharaTag="CHARA_KANON" NameTag="NAME_KANON" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="아이템이 부족합니다.재료&lt;CR&gt;를 만들면 조합할 수 있습니다 K" />
-	<SysMess CharaTag="CHARA_NAY" NameTag="NAME_NAY" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="아이템이 부족합니다.재료&lt;CR&gt;를 만들면 조합할 수 있습니다 N" />
-	<SysMess CharaTag="CHARA_SARLY" NameTag="NAME_SARLY" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="아이템이 부족합니다.재료&lt;CR&gt;를 만들면 조합할 수 있습니다Ｓ" />
-	<SysMess CharaTag="CHARA_TATTORIA" NameTag="NAME_TATTORIA" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="아이템이 부족합니다.재료&lt;CR&gt;를 만들면 조합할 수 있습니다Ｔ" />
-	<SysMess CharaTag="CHARA_KANON" NameTag="NAME_KANON" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="아이템이 부족합니다.만들&lt;CR&gt; 수 없습니다Ｋ" />
-	<SysMess CharaTag="CHARA_NAY" NameTag="NAME_NAY" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="아이템이 부족합니다.만들&lt;CR&gt; 수 없습니다Ｎ" />
-	<SysMess CharaTag="CHARA_SARLY" NameTag="NAME_SARLY" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="아이템이 부족합니다.만들&lt;CR&gt; 수 없습니다Ｓ" />
-	<SysMess CharaTag="CHARA_TATTORIA" NameTag="NAME_TATTORIA" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="아이템이 부족합니다.만들&lt;CR&gt; 수 없습니다Ｔ" />
-	<SysMess CharaTag="CHARA_KANON" NameTag="NAME_KANON" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="몇 개 만드시겠습니까?Ｋ" />
-	<SysMess CharaTag="CHARA_NAY" NameTag="NAME_NAY" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="몇 개 만드시겠습니까?Ｎ" />
-	<SysMess CharaTag="CHARA_SARLY" NameTag="NAME_SARLY" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="몇 개 만드시겠습니까?Ｓ" />
-	<SysMess CharaTag="CHARA_TATTORIA" NameTag="NAME_TATTORIA" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="몇 개 만드시겠습니까?Ｔ" />
-	<SysMess CharaTag="CHARA_KANON" NameTag="NAME_KANON" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="이대로 진행할까요?Ｋ" />
-	<SysMess CharaTag="CHARA_NAY" NameTag="NAME_NAY" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="이대로 진행할까요?Ｎ" />
-	<SysMess CharaTag="CHARA_SARLY" NameTag="NAME_SARLY" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="이대로 진행할까요?Ｓ" />
-	<SysMess CharaTag="CHARA_TATTORIA" NameTag="NAME_TATTORIA" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="이대로 진행할까요?Ｔ" />
-	<SysMess CharaTag="CHARA_KANON" NameTag="NAME_KANON" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="그럼 시작하겠습니다Ｋ" />
-	<SysMess CharaTag="CHARA_NAY" NameTag="NAME_NAY" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="그럼 시작하겠습니다Ｎ" />
-	<SysMess CharaTag="CHARA_SARLY" NameTag="NAME_SARLY" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="그럼 시작하겠습니다Ｓ" />
-	<SysMess CharaTag="CHARA_TATTORIA" NameTag="NAME_TATTORIA" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="그럼 시작하겠습니다Ｔ" />
-	<SysMess CharaTag="CHARA_KANON" NameTag="NAME_KANON" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="완성됐어요K" />
-	<SysMess CharaTag="CHARA_NAY" NameTag="NAME_NAY" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="완성됐어요N" />
-	<SysMess CharaTag="CHARA_SARLY" NameTag="NAME_SARLY" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="완성됐어요S" />
-	<SysMess CharaTag="CHARA_TATTORIA" NameTag="NAME_TATTORIA" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="완성됐어요T" />
-	<SysMess CharaTag="CHARA_KANON" NameTag="NAME_KANON" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="이름은 어떻게 할까요K" />
-	<SysMess CharaTag="CHARA_NAY" NameTag="NAME_NAY" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="이름은 어떻게 할까요N" />
-	<SysMess CharaTag="CHARA_SARLY" NameTag="NAME_SARLY" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="이름은 어떻게 할까요S" />
-	<SysMess CharaTag="CHARA_TATTORIA" NameTag="NAME_TATTORIA" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="이름은 어떻게 할까요T" />
-	<SysMess CharaTag="CHARA_CASTY" NameTag="NAME_CASTY" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="어서 오세요펠리&lt;CR&gt;온의 바이오스 가게입니다" />
-	<SysMess CharaTag="CHARA_CASTY" NameTag="NAME_CASTY" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="어서 오세요퀀타&lt;CR&gt;브의 바이오스 가게입니다" />
-	<SysMess CharaTag="CHARA_CASTY" NameTag="NAME_CASTY" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="어서 오세요호노&lt;CR&gt;카노의 바이오스 가게입니다" />
-	<SysMess CharaTag="CHARA_CASTY" NameTag="NAME_CASTY" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="어서 오세요천령&lt;CR&gt;사의 바이오스 가게입니다" />
-	<SysMess CharaTag="CHARA_CASTY" NameTag="NAME_CASTY" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="어서 오세요쿠르&lt;CR&gt;트페나의 바이오스 가게입니다" />
-	<SysMess CharaTag="CHARA_CASTY" NameTag="NAME_CASTY" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="원형입니다, 괜찮으신가요?" />
-	<SysMess CharaTag="CHARA_CASTY" NameTag="NAME_CASTY" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="원형입니다, 괜찮으신가요?" />
-	<SysMess CharaTag="CHARA_CASTY" NameTag="NAME_CASTY" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="원형입니다, 괜찮으신가요?" />
-	<SysMess CharaTag="CHARA_CASTY" NameTag="NAME_CASTY" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="원형입니다, 괜찮으신가요?" />
-	<SysMess CharaTag="CHARA_CASTY" NameTag="NAME_CASTY" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="원형입니다, 괜찮으신가요?" />
-	<SysMess CharaTag="CHARA_CASTY" NameTag="NAME_CASTY" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="다이브를 시작합니다 1" />
-	<SysMess CharaTag="CHARA_CASTY" NameTag="NAME_CASTY" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="다이브를 시작합니다 2" />
-	<SysMess CharaTag="CHARA_CASTY" NameTag="NAME_CASTY" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="다이브를 시작합니다 3" />
-	<SysMess CharaTag="CHARA_CASTY" NameTag="NAME_CASTY" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="다이브를 시작합니다 4" />
-	<SysMess CharaTag="CHARA_CASTY" NameTag="NAME_CASTY" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="다이브를 시작합니다 5" />
-	<SysMess CharaTag="CHARA_CASTY" NameTag="NAME_CASTY" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="돈이 없으면 다이브할 수 없어요 1" />
-	<SysMess CharaTag="CHARA_CASTY" NameTag="NAME_CASTY" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="돈이 없으면 다이브할 수 없어요 2" />
-	<SysMess CharaTag="CHARA_CASTY" NameTag="NAME_CASTY" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="돈이 없으면 다이브할 수 없어요 3" />
-	<SysMess CharaTag="CHARA_CASTY" NameTag="NAME_CASTY" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="돈이 없으면 다이브할 수 없어요 4" />
-	<SysMess CharaTag="CHARA_CASTY" NameTag="NAME_CASTY" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="돈이 없으면 다이브할 수 없어요 5" />
-	<SysMess CharaTag="CHARA_CASTY" NameTag="NAME_CASTY" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="쫓겨나 버렸네요. 조심하세요 1" />
-	<SysMess CharaTag="CHARA_CASTY" NameTag="NAME_CASTY" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="쫓겨나 버렸네요. 조심하세요 2" />
-	<SysMess CharaTag="CHARA_CASTY" NameTag="NAME_CASTY" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="쫓겨나 버렸네요. 조심하세요 3" />
-	<SysMess CharaTag="CHARA_CASTY" NameTag="NAME_CASTY" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="쫓겨나 버렸네요. 조심하세요 4" />
-	<SysMess CharaTag="CHARA_CASTY" NameTag="NAME_CASTY" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="쫓겨나 버렸네요. 조심하세요 5" />
-	<SysMess CharaTag="CHARA_CASTY" NameTag="NAME_CASTY" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="수고하셨습니다. 즐거우셨나요? 1" />
-	<SysMess CharaTag="CHARA_CASTY" NameTag="NAME_CASTY" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="수고하셨습니다. 즐거우셨나요? 2" />
-	<SysMess CharaTag="CHARA_CASTY" NameTag="NAME_CASTY" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="수고하셨습니다. 즐거우셨나요? 3" />
-	<SysMess CharaTag="CHARA_CASTY" NameTag="NAME_CASTY" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="수고하셨습니다. 즐거우셨나요? 4" />
-	<SysMess CharaTag="CHARA_CASTY" NameTag="NAME_CASTY" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="수고하셨습니다. 즐거우셨나요? 5" />
-	<SysMess CharaTag="CHARA_CASTY" NameTag="NAME_CASTY" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="수고하셨습니다. 결정의 원소를 얻&lt;CR&gt;었기에 결정으로 만들어 두었습니다 1" />
-	<SysMess CharaTag="CHARA_CASTY" NameTag="NAME_CASTY" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="수고하셨습니다. 결정의 원소를 얻&lt;CR&gt;었기에 결정으로 만들어 두었습니다 2" />
-	<SysMess CharaTag="CHARA_CASTY" NameTag="NAME_CASTY" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="수고하셨습니다. 결정의 원소를 얻&lt;CR&gt;었기에결정으로 만들어 두었습니다 3" />
-	<SysMess CharaTag="CHARA_CASTY" NameTag="NAME_CASTY" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="수고하셨습니다. 결정의 원소를 얻&lt;CR&gt;었기에결정으로 만들어 두었습니다 4" />
-	<SysMess CharaTag="CHARA_CASTY" NameTag="NAME_CASTY" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="수고하셨습니다. 결정의 원소를 얻&lt;CR&gt;었기에결정으로 만들어 두었습니다 5" />
-	<SysMess CharaTag="CHARA_CASTY" NameTag="NAME_CASTY" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="언제든 다시 오세요 1" />
-	<SysMess CharaTag="CHARA_CASTY" NameTag="NAME_CASTY" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="언제든 다시 오세요 2" />
-	<SysMess CharaTag="CHARA_CASTY" NameTag="NAME_CASTY" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="언제든 다시 오세요 3" />
-	<SysMess CharaTag="CHARA_CASTY" NameTag="NAME_CASTY" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="언제든 다시 오세요 4" />
-	<SysMess CharaTag="CHARA_CASTY" NameTag="NAME_CASTY" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="언제든 다시 오세요 5" />
-	<SysMess CharaTag="CHARA_CASTY" NameTag="NAME_CASTY" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="다이브할 수 있는 아이가 늘어났어요 1" />
-	<SysMess CharaTag="CHARA_CASTY" NameTag="NAME_CASTY" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="다이브할 수 있는 아이가 늘어났어요 2" />
-	<SysMess CharaTag="CHARA_CASTY" NameTag="NAME_CASTY" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="다이브할 수 있는 아이가 늘어났어요 3" />
-	<SysMess CharaTag="CHARA_CASTY" NameTag="NAME_CASTY" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="다이브할 수 있는 아이가 늘어났어요 4" />
-	<SysMess CharaTag="CHARA_CASTY" NameTag="NAME_CASTY" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="다이브할 수 있는 아이가 늘어났어요 5" />
-	<SysMess CharaTag="CHARA_NONE" NameTag="NAME_NONE" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SYSTEM" VoiceNo="-1" Text="미소기를 하시겠습니까?" />
-	<SysMess CharaTag="CHARA_NONE" NameTag="NAME_NONE" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SYSTEM" VoiceNo="-1" Text="누구와 미소기를 하시겠습니까?" />
-	<SysMess CharaTag="CHARA_NONE" NameTag="NAME_NONE" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SYSTEM" VoiceNo="-1" Text="의상을 선택해 주세요." />
-	<SysMess CharaTag="CHARA_ION" NameTag="NAME_ION" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="그럼 들어갈까요" />
-	<SysMess CharaTag="CHARA_CASTY" NameTag="NAME_CASTY" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="그럼 들어갈까요" />
-	<SysMess CharaTag="CHARA_ION" NameTag="NAME_ION" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="슬슬 나갑시다" />
-	<SysMess CharaTag="CHARA_CASTY" NameTag="NAME_CASTY" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="슬슬 나갑시다" />
-	<SysMess CharaTag="CHARA_NONE" NameTag="NAME_NONE" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SYSTEM" VoiceNo="-1" Text="이 결정을 삽입하시겠습니까?" />
-	<SysMess CharaTag="CHARA_ION" NameTag="NAME_ION" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="결정 삽입 반응: 머리" />
-	<SysMess CharaTag="CHARA_CASTY" NameTag="NAME_CASTY" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="결정 삽입 반응: 머리" />
-	<SysMess CharaTag="CHARA_DELTA" NameTag="NAME_DELTA" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="결정 삽입 반응: 머리" />
-	<SysMess CharaTag="CHARA_AVATAR" NameTag="NAME_AVATAR" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="결정 삽입 반응: 머리" />
-	<SysMess CharaTag="CHARA_ION" NameTag="NAME_ION" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="결정 삽입 반응: 가슴" />
-	<SysMess CharaTag="CHARA_CASTY" NameTag="NAME_CASTY" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="결정 삽입 반응: 가슴" />
-	<SysMess CharaTag="CHARA_DELTA" NameTag="NAME_DELTA" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="결정 삽입 반응: 가슴" />
-	<SysMess CharaTag="CHARA_AVATAR" NameTag="NAME_AVATAR" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="결정 삽입 반응: 가슴" />
-	<SysMess CharaTag="CHARA_ION" NameTag="NAME_ION" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="결정 삽입 반응: 양팔" />
-	<SysMess CharaTag="CHARA_CASTY" NameTag="NAME_CASTY" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="결정 삽입 반응: 양팔" />
-	<SysMess CharaTag="CHARA_DELTA" NameTag="NAME_DELTA" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="결정 삽입 반응: 양팔" />
-	<SysMess CharaTag="CHARA_AVATAR" NameTag="NAME_AVATAR" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="결정 삽입 반응: 양팔" />
-	<SysMess CharaTag="CHARA_ION" NameTag="NAME_ION" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="결정 삽입 반응: 복부" />
-	<SysMess CharaTag="CHARA_CASTY" NameTag="NAME_CASTY" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="결정 삽입 반응: 복부" />
-	<SysMess CharaTag="CHARA_DELTA" NameTag="NAME_DELTA" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="결정 삽입 반응: 복부" />
-	<SysMess CharaTag="CHARA_AVATAR" NameTag="NAME_AVATAR" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="결정 삽입 반응: 복부" />
-	<SysMess CharaTag="CHARA_ION" NameTag="NAME_ION" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="결정 삽입 반응: 양다리" />
-	<SysMess CharaTag="CHARA_CASTY" NameTag="NAME_CASTY" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="결정 삽입 반응: 양다리" />
-	<SysMess CharaTag="CHARA_DELTA" NameTag="NAME_DELTA" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="결정 삽입 반응: 양다리" />
-	<SysMess CharaTag="CHARA_AVATAR" NameTag="NAME_AVATAR" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="결정 삽입 반응: 양다리" />
-	<SysMess CharaTag="CHARA_NONE" NameTag="NAME_NONE" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SYSTEM" VoiceNo="-1" Text="미소기에서는 제노메트리카 결정을 몸에 &lt;CR&gt;넣어,신체 기능을 강화할 수 있습니다." />
-	<SysMess CharaTag="CHARA_NONE" NameTag="NAME_NONE" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SYSTEM" VoiceNo="-1" Text="『세간 이야기하기』를 통해 특정 주제&lt;CR&gt;에 대해이야기를 나눔으로써, 파트너&lt;CR&gt; 간의 신뢰를깊게 만들 수 있습니다." />
-	<SysMess CharaTag="CHARA_NONE" NameTag="NAME_NONE" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SYSTEM" VoiceNo="-1" Text="신뢰가 깊어짐에 따라 새로운 부위에&lt;CR&gt; 결정을받아들일 수 있게 되므로, &lt;CR&gt;적극적으로히로인과 대화를 나누도록 합시다." />
-	<SysMess CharaTag="CHARA_NONE" NameTag="NAME_NONE" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SYSTEM" VoiceNo="-1" Text="여기서는 미소기를 선택해 봅시다." />
-	<SysMess CharaTag="CHARA_NONE" NameTag="NAME_NONE" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SYSTEM" VoiceNo="-1" Text="결정을 받아들일 파트너를 선택합니다.&lt;CR&gt;여기서는 히로인을 선택해 봅시다." />
-	<SysMess CharaTag="CHARA_NONE" NameTag="NAME_NONE" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SYSTEM" VoiceNo="-1" Text="결정을 설치할 부위를 선택합니다." />
-	<SysMess CharaTag="CHARA_NONE" NameTag="NAME_NONE" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SYSTEM" VoiceNo="-1" Text="받아들일 결정을 선택합니다." />
-	<SysMess CharaTag="CHARA_NONE" NameTag="NAME_NONE" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SYSTEM" VoiceNo="-1" Text="결정은 제노메트리카로, 설치하는부위&lt;CR&gt;는 세간 이야기로, 파트너 간의신&lt;CR&gt;뢰를 깊게 함으로써 늘릴 수 있습니다." />
-	<SysMess CharaTag="CHARA_NONE" NameTag="NAME_NONE" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SYSTEM" VoiceNo="-1" Text="새로운 결정을 입수했다&lt;CR&gt;면,이번에 선택하지 않은 파트&lt;CR&gt;너에게도결정을 받아들여 봅시다." />
-	<SysMess CharaTag="CHARA_DELTA" NameTag="NAME_DELTA" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="딱히 할 말은 없군……." />
-	<SysMess CharaTag="CHARA_CASTY" NameTag="NAME_CASTY" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="……그렇네." />
-	<SysMess CharaTag="CHARA_DELTA" NameTag="NAME_DELTA" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="딱히 할 말은 없군……." />
-	<SysMess CharaTag="CHARA_KANON" NameTag="NAME_KANON" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="……그렇네요." />
-	<SysMess CharaTag="CHARA_DELTA" NameTag="NAME_DELTA" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="딱히 할 말은 없군……." />
-	<SysMess CharaTag="CHARA_NAY" NameTag="NAME_NAY" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="……그렇네—." />
-	<SysMess CharaTag="CHARA_DELTA" NameTag="NAME_DELTA" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="딱히 할 말은 없군……." />
-	<SysMess CharaTag="CHARA_SARLY" NameTag="NAME_SARLY" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="……그렇네." />
-	<SysMess CharaTag="CHARA_DELTA" NameTag="NAME_DELTA" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="딱히 할 말은 없군……." />
-	<SysMess CharaTag="CHARA_NERO" NameTag="NAME_NERO" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="그러게." />
-	<SysMess CharaTag="CHARA_DELTA" NameTag="NAME_DELTA" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="딱히 할 말은 없군……." />
-	<SysMess CharaTag="CHARA_SYURERIA" NameTag="NAME_SYURERIA" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="그렇군요……" />
-	<SysMess CharaTag="CHARA_ION" NameTag="NAME_ION" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="딱히 할 말이 없네……." />
-	<SysMess CharaTag="CHARA_KANON" NameTag="NAME_KANON" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="딱히 할 말은 없네요……." />
-	<SysMess CharaTag="CHARA_NAY" NameTag="NAME_NAY" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="딱히 할 말은 없네—……." />
-	<SysMess CharaTag="CHARA_SARLY" NameTag="NAME_SARLY" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="딱히 이야기할 건 없을 것 같아." />
-	<SysMess CharaTag="CHARA_NERO" NameTag="NAME_NERO" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="지금은 딱히 화젯거리가 없어." />
-	<SysMess CharaTag="CHARA_SYURERIA" NameTag="NAME_SYURERIA" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="음—…….&lt;CR&gt;지금은 별로, 하고 싶은 말은 없네요." />
-	<SysMess CharaTag="CHARA_NONE" NameTag="NAME_NONE" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SYSTEM" VoiceNo="-1" Text="시간적 정합성을 유지&lt;CR&gt;하기위해 에피소드를 &lt;CR&gt;대기중입니다" />
-	<SysMess CharaTag="CHARA_NONE" NameTag="NAME_NONE" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SYSTEM" VoiceNo="-1" Text="채널 전환 불가" />
-	<SysMess CharaTag="CHARA_NONE" NameTag="NAME_NONE" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SYSTEM" VoiceNo="-1" Text="채널 전환 가능" />
-	<SysMess CharaTag="CHARA_NONE" NameTag="NAME_NONE" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SYSTEM" VoiceNo="-1" Text="&lt;CR&gt;　클래스 아르노사쥬에 오신 것을&lt;CR&gt; 환영합니다" />
-	<SysMess CharaTag="CHARA_NONE" NameTag="NAME_NONE" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SYSTEM" VoiceNo="-1" Text="이 시스템은 PlayStationV&lt;RG&gt;ita 소프트&lt;CR&gt;웨어셸 노 사쥬와의 아이템 정보 등&lt;CR&gt;의세카이 링크를 지원합니다" />
-	<SysMess CharaTag="CHARA_NONE" NameTag="NAME_NONE" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SYSTEM" VoiceNo="-1" Text="링크를 수행하려면 PlayStation&lt;RG&gt;3을&lt;CR&gt;네트워크에 접속하여, 링크하기&lt;CR&gt;를선택해 주세요" />
-	<SysMess CharaTag="CHARA_NONE" NameTag="NAME_NONE" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SYSTEM" VoiceNo="-1" Text="세카이 링크는 플레이 중에도&lt;CR&gt;제노미링크 메뉴에서언제든지&lt;CR&gt; 수행할 수 있습니다" />
-	<SysMess CharaTag="CHARA_NONE" NameTag="NAME_NONE" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SYSTEM" VoiceNo="-1" Text="네트워크에 접속되어 있습니다" />
-	<SysMess CharaTag="CHARA_NONE" NameTag="NAME_NONE" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SYSTEM" VoiceNo="-1" Text="셸 노 사쥬와의 세카이 링크를확&lt;CR&gt;립했습니다. 아이템 정보, 시나리&lt;CR&gt;오진행 정보가 링크되었습니다" />
-	<SysMess CharaTag="CHARA_NONE" NameTag="NAME_NONE" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SYSTEM" VoiceNo="-1" Text="네트워크에 접속할 수 없습니다.다&lt;CR&gt;시 한번 링크를 시도하시겠습니까?" />
-	<SysMess CharaTag="CHARA_NONE" NameTag="NAME_NONE" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SYSTEM" VoiceNo="-1" Text="그럼, 7차원을 넘은 세계의 여&lt;CR&gt;행을즐겁게 만끽해 주세요" />
-	<SysMess CharaTag="CHARA_NONE" NameTag="NAME_NONE" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SYSTEM" Text="PlayStation&lt;RG&gt; Store에서 구매한 아이템을 받을 수 있습니다" />
-	<SysMess CharaTag="CHARA_NONE" NameTag="NAME_NONE" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SYSTEM" VoiceNo="-1" Text="다른 세카이에서 얻은 GP를 전투 보너스로 변환한다&lt;CR&gt;뉴!EXP, DP, CT에 할당한 수치만큼, 전투 시 받는 포인트가 2배가 된&lt;CR&gt;다뉴!엄청나다뉴!!" />
-	<SysMess CharaTag="CHARA_NONE" NameTag="NAME_NONE" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SYSTEM" VoiceNo="-1" Text="Ar nosurge DX에서 만든 아이템을 받는&lt;CR&gt;다냥!전송되는 아이템은 각 1개씩이다냥!" />
-	<SysMess CharaTag="CHARA_NONE" NameTag="NAME_NONE" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SYSTEM" Text="가스트가 제공하는 사쥬 콘체르토 관련 콘텐츠로부터 데이터를 수신합니다." />
-	<SysMess CharaTag="CHARA_NONE" NameTag="NAME_NONE" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SYSTEM" Text="Ar nosurge의 게임 진행 상황을 가스트 서버로 전송합니다. 전송 전에 시스템 데이터 저장을 수행합니다." />
-	<SysMess CharaTag="CHARA_NONE" NameTag="NAME_NONE" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SYSTEM" Text="PlayStation&lt;RG&gt;Vita 소프트웨어, 쉘 노 사쥬에서 만든 아이템을 Ar nosurge로 전송합니다. 전송할 수 있는 것은 각종 아이템 각 1개뿐입니다." />
-	<SysMess CharaTag="CHARA_NONE" NameTag="NAME_NONE" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SYSTEM" Text="PlayStation&lt;RG&gt;Vita 소프트웨어, 쉘 노 사쥬의 게임 진행 상황을 확인할 수 있습니다." />
-	<SysMess CharaTag="CHARA_NONE" NameTag="NAME_NONE" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SYSTEM" VoiceNo="-1" Text="전투에서 이탈합니다&lt;CR&gt;.계속하시겠습니까?" />
-	<SysMess CharaTag="CHARA_NONE" NameTag="NAME_NONE" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SYSTEM" VoiceNo="-1" Text="전투 흐름을 확인하시겠습니까?" />
-	<SysMess CharaTag="CHARA_NONE" NameTag="NAME_NONE" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SYSTEM" VoiceNo="-1" Text="「전투」 도움말은 메뉴의 도감에서 확&lt;CR&gt;인할 수 있습니다. 모르는 것이 있다&lt;CR&gt;면 확인해 보세요." />
-	<SysMess CharaTag="CHARA_NONE" NameTag="NAME_NONE" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SYSTEM" VoiceNo="-1" Text="전투가 시작되면, 우선 영창할 시마법&lt;CR&gt;을 &lt;IM00&gt;으로 결정합니다. 사용할 수 있는 시&lt;IM08&gt;마법이 늘어났을 때는 로 선택합니다." />
-	<SysMess CharaTag="CHARA_NONE" NameTag="NAME_NONE" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SYSTEM" VoiceNo="-1" Text="시마법 영창 후, 바로 행동 턴이 시&lt;CR&gt;작됩니다. 전열을 조작하여 적을 공격합시다." />
-	<SysMess CharaTag="CHARA_NONE" NameTag="NAME_NONE" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SYSTEM" VoiceNo="-1" Text="&lt;IM09&gt;으로 공격 대상을&lt;IM04&gt;&lt;IM32&gt;&lt;IM06&gt; 선택하고, 으로 액션을 수행합니다. 대응하는 스킬은 레벨이 오르면 늘어납니다." />
-	<SysMess CharaTag="CHARA_NONE" NameTag="NAME_NONE" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SYSTEM" VoiceNo="-1" Text="행동 턴에 실행할 수 있는 액션 횟수는&lt;CR&gt;정해져 있으니 기억해 두세요." />
-	<SysMess CharaTag="CHARA_NONE" NameTag="NAME_NONE" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SYSTEM" VoiceNo="-1" Text="또한, 체인 수는 적을 연속해서 공&lt;CR&gt;격함으로써늘려 나갈 수 있습니다." />
-	<SysMess CharaTag="CHARA_NONE" NameTag="NAME_NONE" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SYSTEM" VoiceNo="-1" Text="체인 수 표시의 체인 게이지가사라&lt;CR&gt;지기 전에 다음 적을 공격하면,체&lt;CR&gt;인이 이어집니다." />
-	<SysMess CharaTag="CHARA_NONE" NameTag="NAME_NONE" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SYSTEM" VoiceNo="-1" Text="타이밍에 맞춰 적을 공격하여, 체인 &lt;CR&gt;수를늘려 나갑시다!" />
-	<SysMess CharaTag="CHARA_NONE" NameTag="NAME_NONE" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SYSTEM" VoiceNo="-1" Text="행동 턴이 끝나면 적이 공격해 올 수&lt;CR&gt; 있습니다. 적은 히로인을 공격하므로,&lt;CR&gt;전열이 가드하게 됩니다." />
-	<SysMess CharaTag="CHARA_NONE" NameTag="NAME_NONE" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SYSTEM" VoiceNo="-1" Text="가드 중에&lt;IM21&gt;는 으로 실드를 전개할 수&lt;CR&gt; 있습니다. 실드 전개 중에는 히로인&lt;CR&gt;이 받는 데미지가 크게 줄어듭니다." />
-	<SysMess CharaTag="CHARA_NONE" NameTag="NAME_NONE" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SYSTEM" VoiceNo="-1" Text="타이밍에 맞춰&lt;IM21&gt; 을 눌러 지켜줍시다.&lt;CR&gt;또한, 행동 중에 사용할 수 있는 실&lt;CR&gt;드 횟수에는 제한이 있으니 주의하세요." />
-	<SysMess CharaTag="CHARA_NONE" NameTag="NAME_NONE" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SYSTEM" VoiceNo="-1" Text="적의 공격으로 히로인의 배리어 내구도&lt;CR&gt;가 일정 수준 이하로 떨어지면, 배리&lt;CR&gt;어가 파괴됩니다" />
-	<SysMess CharaTag="CHARA_NONE" NameTag="NAME_NONE" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SYSTEM" VoiceNo="-1" Text="배리어는 4단계이며, 모든 배리어가 &lt;CR&gt;파괴되면 게임 오버가 되므로 배리어의&lt;CR&gt; 상태를 잘확인하세요" />
-	<SysMess CharaTag="CHARA_NONE" NameTag="NAME_NONE" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SYSTEM" VoiceNo="-1" Text="행동 턴의 액션에 따라 히로인과의 싱&lt;CR&gt;크로율이 일정 수준 이상 쌓이면, 하&lt;CR&gt;모닉스 레벨이 올라갑니다" />
-	<SysMess CharaTag="CHARA_NONE" NameTag="NAME_NONE" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SYSTEM" VoiceNo="-1" Text="하모닉스 레벨이 올라가면 시마법을 발&lt;CR&gt;동할 수 있게 되거나, 상승 속도가 &lt;CR&gt;빨라지는 등 다양한 이점이 발생합니다" />
-	<SysMess CharaTag="CHARA_NONE" NameTag="NAME_NONE" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SYSTEM" VoiceNo="-1" Text="공격 체인 수가 올라갈수록 게이지도 &lt;CR&gt;더 빨리 차오르므로, 타이밍에 맞춰 &lt;CR&gt;액션을 성공시켜 봅시다" />
-	<SysMess CharaTag="CHARA_NONE" NameTag="NAME_NONE" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SYSTEM" VoiceNo="-1" Text="시마법 차지량이 충분히 모였습니다.이&lt;CR&gt; 상태에서 시마법을 발동하면 적을 전&lt;CR&gt;멸시킬 수 있습니다" />
-	<SysMess CharaTag="CHARA_NONE" NameTag="NAME_NONE" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SYSTEM" VoiceNo="-1" Text="시마법 발동 시 처치 가능한 적의 W&lt;CR&gt;AVE에색이 표시되므로, 이를 시마법&lt;CR&gt; 발동의 기준으로 삼으십시오" />
-	<SysMess CharaTag="CHARA_NONE" NameTag="NAME_NONE" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SYSTEM" VoiceNo="-1" Text="단, 특수한 전투를 제외하고는 1회 &lt;CR&gt;전투당 행동할 수 있는 횟수에 제한이&lt;CR&gt; 있어, 자동으로 전투가 종료되니 주의하십시오" />
-	<SysMess CharaTag="CHARA_NONE" NameTag="NAME_NONE" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SYSTEM" VoiceNo="-1" Text="시마법은 커맨드 메뉴에서 선택합니다.&lt;CR&gt;&lt;IM19&gt;을 눌러 '시발동'을 선택해 주세요" />
-	<SysMess CharaTag="CHARA_NONE" NameTag="NAME_NONE" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SYSTEM" VoiceNo="-1" Text="전투를 유리하게 이끄는 방법을 확인하시겠습니까?" />
-	<SysMess CharaTag="CHARA_NONE" NameTag="NAME_NONE" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SYSTEM" VoiceNo="-1" Text="「전투」 도움말은 메뉴의 도감에서 확&lt;CR&gt;인할 수 있습니다. 모르는 것이 있다&lt;CR&gt;면 확인해 보세요." />
-	<SysMess CharaTag="CHARA_NONE" NameTag="NAME_NONE" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SYSTEM" VoiceNo="-1" Text="전투 중에는 공격하는 적의 행동을 무&lt;CR&gt;효화하거나 약화시키는 것이 가능합니다" />
-	<SysMess CharaTag="CHARA_NONE" NameTag="NAME_NONE" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SYSTEM" VoiceNo="-1" Text="같은 적에게 액션을 반복하여 적을 브&lt;CR&gt;레이크시키세요. 브레이크된 적은 다음&lt;CR&gt; 턴에 공격하지 않습니다" />
-	<SysMess CharaTag="CHARA_NONE" NameTag="NAME_NONE" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SYSTEM" VoiceNo="-1" Text="어떤 액션으로든 적을 브레이크시킬 수&lt;CR&gt; 있습니다만,&lt;IM32&gt;  액션이 특히 효과가&lt;CR&gt; 강하므로 적극 활용하십시오" />
-	<SysMess CharaTag="CHARA_NONE" NameTag="NAME_NONE" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SYSTEM" VoiceNo="-1" Text="적의 종류에 따라 브레이크 난이도가 &lt;CR&gt;다릅니다. 또한 일부 적은 브레이크를&lt;CR&gt; 당해도 공격을 완전히 무효화하지 못하는 경우도 있습니다" />
-	<SysMess CharaTag="CHARA_NONE" NameTag="NAME_NONE" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SYSTEM" VoiceNo="-1" Text="적의 행동 예측이나 남은 HP를 확인&lt;CR&gt;하며, 최적의 행동을 선택해 전투를 유리하게 이끌어 가십시오" />
-	<SysMess CharaTag="CHARA_NONE" NameTag="NAME_NONE" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SYSTEM" VoiceNo="-1" Text="시마법 차지량은 행동 턴의 행동에 따&lt;CR&gt;라 보너스가 가산됩니다. 보너스는 브&lt;CR&gt;레이크나 체인 수에 의해 발생합니다" />
-	<SysMess CharaTag="CHARA_NONE" NameTag="NAME_NONE" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SYSTEM" VoiceNo="-1" Text="그중에서도 큰 보너스를 얻는 방법은,&lt;CR&gt; 행동 예측이 발생한 적을 모두 브레&lt;CR&gt;이크시켰을 때 발생하는 보너스입니다" />
-	<SysMess CharaTag="CHARA_NONE" NameTag="NAME_NONE" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SYSTEM" VoiceNo="-1" Text="이 보너스는 행동 턴이 줄어들지 않을&lt;CR&gt; 뿐만 아니라, 남은 액션이 많을수록&lt;CR&gt; 시마법의 차지량을 올립니다" />
-	<SysMess CharaTag="CHARA_NONE" NameTag="NAME_NONE" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SYSTEM" VoiceNo="-1" Text="적은 횟수로 행동 전의 적을 브레이크&lt;CR&gt;시킴으로써, 결과적으로 적을 빠르게 &lt;CR&gt;쓰러뜨리는 것이 가능해집니다" />
-	<SysMess CharaTag="CHARA_NONE" NameTag="NAME_NONE" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SYSTEM" VoiceNo="-1" Text="그 외에도 다양한 행동에 보너스가 발&lt;CR&gt;생합니다.자신에게 맞는 보너스를 찾아&lt;CR&gt;내어,적을 시원하게 격파해 나갑시다." />
-	<SysMess CharaTag="CHARA_NONE" NameTag="NAME_NONE" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SYSTEM" VoiceNo="-1" Text="하모닉스 레벨이 2 이상이 되면, 히&lt;CR&gt;로인이 지원을 해줍니다." />
-	<SysMess CharaTag="CHARA_NONE" NameTag="NAME_NONE" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SYSTEM" VoiceNo="-1" Text="히로인의 지원을 받으면 적을 더욱 쉽&lt;CR&gt;게 격파할 수 있을 뿐 아니라, 브레&lt;CR&gt;이크도 더 쉽게발생시키는 등의 효과가 있습니다" />
-	<SysMess CharaTag="CHARA_NONE" NameTag="NAME_NONE" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SYSTEM" VoiceNo="-1" Text="히로인의 지원은 액션 체인 수에따라 &lt;CR&gt;발생합니다. 많은 지원을 받고 싶다면&lt;CR&gt; 체인 수를 높여보세요." />
-	<SysMess CharaTag="CHARA_NONE" NameTag="NAME_NONE" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SYSTEM" VoiceNo="-1" Text="적을 격파하기 위해 보너스를 발생시켜&lt;CR&gt;, 시마법의 차지량을 모으는 것이 전&lt;CR&gt;투를 유리하게이끌기 위한 핵심입니다." />
-	<SysMess CharaTag="CHARA_NONE" NameTag="NAME_NONE" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SYSTEM" VoiceNo="-1" Text="전투를 반복하며 적에 따른 유리한 전&lt;CR&gt;투 방식을 찾아내십시오." />
-	<SysMess CharaTag="CHARA_NONE" NameTag="NAME_NONE" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SYSTEM" VoiceNo="-1" Text="또한, 전투 도움말은 메뉴의 「도감」&lt;CR&gt;에서 확인할 수 있습니다. 모르는 &lt;CR&gt;것이 있다면 확인해 보세요." />
-	<SysMess CharaTag="CHARA_NONE" NameTag="NAME_NONE" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SYSTEM" VoiceNo="-1" Text="타이틀로 돌아갑니다. 계속하시겠습니까?" />
+	<SysMess CharaTag="CHARA_NONE" NameTag="NAME_NONE" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SYSTEM" VoiceNo="-1" Text="로드한 세이브 데이터에 필요한 &lt;CR&gt;DLC가 설치되어 있지 않습니다. &lt;CR&gt;로드를 취소했습니다."/>
+	<SysMess CharaTag="CHARA_NONE" NameTag="NAME_NONE" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SYSTEM" VoiceNo="-1" Text="로드한 세이브 데이터가 변조되었기 &lt;CR&gt; 때문에, 로드를 취소했습니다."/>
+	<SysMess CharaTag="CHARA_NONE" NameTag="NAME_NONE" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SYSTEM" VoiceNo="-1" Text="이 아이템의 조합 이벤트를 보시겠습니까?"/>
+	<SysMess CharaTag="CHARA_NONE" NameTag="NAME_NONE" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SYSTEM" VoiceNo="-1" Text="의상을 변경하시겠습니까?"/>
+	<SysMess CharaTag="CHARA_NONE" NameTag="NAME_NONE" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SYSTEM" VoiceNo="-1" Text="현재 일부 의상 변경 디바이스가 &lt;CR&gt; 응답하지 않아, 대상 의상을 &lt;CR&gt; 변경할 수 없습니다."/>
+	<SysMess CharaTag="CHARA_NONE" NameTag="NAME_NONE" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SYSTEM" VoiceNo="-1" Text="인물 추적 디바이스가 응답하지 않아, &lt;CR&gt;재핑을 실행할 수 없습니다."/>
+	<SysMess CharaTag="CHARA_NONE" NameTag="NAME_NONE" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SYSTEM" VoiceNo="-1" Text="저장되지 않은 항목이 있습니다. &lt;CR&gt;종료하시겠습니까?"/>
+	<SysMess CharaTag="CHARA_NONE" NameTag="NAME_NONE" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SYSTEM" VoiceNo="-1" Text="휴식 시 임시 시스템 메시지(REST_MESSAGE)"/>
+	<SysMess CharaTag="CHARA_NONE" NameTag="NAME_NONE" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SYSTEM" VoiceNo="-1" Text="델타 측으로 재핑하시겠습니까?"/>
+	<SysMess CharaTag="CHARA_NONE" NameTag="NAME_NONE" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SYSTEM" VoiceNo="-1" Text="아셰스 측으로 전환하시겠습니까?"/>
+	<SysMess CharaTag="CHARA_NONE" NameTag="NAME_NONE" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SYSTEM" VoiceNo="-1" Text="정신 세계를 벗어나 현실 세계로 귀환합니다. &lt;CR&gt;계속하시겠습니까?"/>
+	<SysMess CharaTag="CHARA_KANON" NameTag="NAME_KANON" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="어서 오세요."/>
+	<SysMess CharaTag="CHARA_NAY" NameTag="NAME_NAY" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="어서 와. &lt;CR&gt; 오늘은 뭐 할 거야?"/>
+	<SysMess CharaTag="CHARA_SARLY" NameTag="NAME_SARLY" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="아, 어서 와. &lt;CR&gt;오늘은 어떻게 할 거야? 뭐 좀 만들래?"/>
+	<SysMess CharaTag="CHARA_TATTORIA" NameTag="NAME_TATTORIA" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="어서 와! &lt;CR&gt; 오늘도 좋은 약이 있어!"/>
+	<SysMess CharaTag="CHARA_KANON" NameTag="NAME_KANON" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="얼마 전 신상품이 입고되었습니다. &lt;CR&gt;지금까지보다 더욱 알차게 준비했으니, &lt;CR&gt;꼭 둘러보시기 바랍니다."/>
+	<SysMess CharaTag="CHARA_NAY" NameTag="NAME_NAY" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="아, 맞다. 몇 가지 상품을&lt;CR&gt;새로 취급하기로 했거든."/>
+	<SysMess CharaTag="CHARA_SARLY" NameTag="NAME_SARLY" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="아, 그리고 상품 라인업이 &lt;CR&gt;늘어났어. 필요하면 말해줘."/>
+	<SysMess CharaTag="CHARA_TATTORIA" NameTag="NAME_TATTORIA" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="아, 그리고 말이야, 상품을 몇 가지 더 늘렸어. &lt;CR&gt; 관심 있으면 구경하고 가."/>
+	<SysMess CharaTag="CHARA_KANON" NameTag="NAME_KANON" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="편하게 둘러보세요."/>
+	<SysMess CharaTag="CHARA_NAY" NameTag="NAME_NAY" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="응응, 마음껏 사!"/>
+	<SysMess CharaTag="CHARA_SARLY" NameTag="NAME_SARLY" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="좋아. &lt;CR&gt;편하게 둘러보고 가게나."/>
+	<SysMess CharaTag="CHARA_TATTORIA" NameTag="NAME_TATTORIA" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="반가워! &lt;CR&gt;오늘은 무엇을 사줄 거야?"/>
+	<SysMess CharaTag="CHARA_KANON" NameTag="NAME_KANON" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="몇 개가 필요하십니까?"/>
+	<SysMess CharaTag="CHARA_NAY" NameTag="NAME_NAY" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="자자, 몇 개?"/>
+	<SysMess CharaTag="CHARA_SARLY" NameTag="NAME_SARLY" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="그렇군. &lt;CR&gt;그래서, 몇 개나 갖고 싶은 거야?"/>
+	<SysMess CharaTag="CHARA_TATTORIA" NameTag="NAME_TATTORIA" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="오케이! &lt;CR&gt;그럼 필요한 개수를 말해줘."/>
+	<SysMess CharaTag="CHARA_KANON" NameTag="NAME_KANON" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="아무래도 돈이 부족한 것 같네요……."/>
+	<SysMess CharaTag="CHARA_NAY" NameTag="NAME_NAY" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="어라? &lt;CR&gt;이봐, 돈이 부족하잖아!"/>
+	<SysMess CharaTag="CHARA_SARLY" NameTag="NAME_SARLY" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="흠, 아무래도 자금이 부족한 모양이네. &lt;CR&gt;역시 질 수는 없지."/>
+	<SysMess CharaTag="CHARA_TATTORIA" NameTag="NAME_TATTORIA" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="아차…… 돈이 부족하잖아. &lt;CR&gt;아쉽다!"/>
+	<SysMess CharaTag="CHARA_KANON" NameTag="NAME_KANON" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="무엇을 파는 걸까요?"/>
+	<SysMess CharaTag="CHARA_NAY" NameTag="NAME_NAY" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="오늘은 뭘 팔 거야? &lt;CR&gt; 재미있는 물건이면 좋겠네."/>
+	<SysMess CharaTag="CHARA_SARLY" NameTag="NAME_SARLY" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="뭔가 흥미로운 물건이라도 가져온 건가? &lt;CR&gt; 꼭 구경하고 싶네."/>
+	<SysMess CharaTag="CHARA_TATTORIA" NameTag="NAME_TATTORIA" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="아, 좋아. &lt;CR&gt;무엇을 팔 거야?"/>
+	<SysMess CharaTag="CHARA_KANON" NameTag="NAME_KANON" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="그럼, 수량을 확인하겠습니다."/>
+	<SysMess CharaTag="CHARA_NAY" NameTag="NAME_NAY" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="흐음, 이거 말이야? &lt;CR&gt;로? 몇 개나 줄 건데?"/>
+	<SysMess CharaTag="CHARA_SARLY" NameTag="NAME_SARLY" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="꽤 괜찮은 물건인걸. &lt;CR&gt;몇 개나 팔 생각이지?"/>
+	<SysMess CharaTag="CHARA_TATTORIA" NameTag="NAME_TATTORIA" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="헤에, 이거 말이야? &lt;CR&gt;몇 개나 팔아줄 거야?"/>
+	<SysMess CharaTag="CHARA_KANON" NameTag="NAME_KANON" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="아무것도 없는 것 같습니다만……."/>
+	<SysMess CharaTag="CHARA_NAY" NameTag="NAME_NAY" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="어라, 너 아무것도 없잖아!"/>
+	<SysMess CharaTag="CHARA_SARLY" NameTag="NAME_SARLY" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="……팔 만한 게 있기는 해?"/>
+	<SysMess CharaTag="CHARA_TATTORIA" NameTag="NAME_TATTORIA" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="하아? 가진 것도 없고.&lt;CR&gt;공기를 돈 주고 사지는 않아."/>
+	<SysMess CharaTag="CHARA_KANON" NameTag="NAME_KANON" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="이대로 진행할까요?"/>
+	<SysMess CharaTag="CHARA_NAY" NameTag="NAME_NAY" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="이걸로 된 거야?"/>
+	<SysMess CharaTag="CHARA_SARLY" NameTag="NAME_SARLY" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="이걸로 된 거지?"/>
+	<SysMess CharaTag="CHARA_TATTORIA" NameTag="NAME_TATTORIA" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="정말 이걸로 괜찮아?"/>
+	<SysMess CharaTag="CHARA_KANON" NameTag="NAME_KANON" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="감사합니다."/>
+	<SysMess CharaTag="CHARA_NAY" NameTag="NAME_NAY" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="반가워요!"/>
+	<SysMess CharaTag="CHARA_SARLY" NameTag="NAME_SARLY" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="고마워."/>
+	<SysMess CharaTag="CHARA_TATTORIA" NameTag="NAME_TATTORIA" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="항상 감사합니다!"/>
+	<SysMess CharaTag="CHARA_KANON" NameTag="NAME_KANON" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="또 방문해 주세요."/>
+	<SysMess CharaTag="CHARA_NAY" NameTag="NAME_NAY" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="그럼 다음에 봐."/>
+	<SysMess CharaTag="CHARA_SARLY" NameTag="NAME_SARLY" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="다시 필요해지면, &lt;CR&gt;언제든 들러줘."/>
+	<SysMess CharaTag="CHARA_TATTORIA" NameTag="NAME_TATTORIA" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="고마워. &lt;CR&gt;또 놀러 와."/>
+	<SysMess CharaTag="CHARA_NONE" NameTag="NAME_NONE" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SYSTEM" VoiceNo="-1" Text="아무도 없는 것 같다……"/>
+	<SysMess CharaTag="CHARA_TATTORIA" NameTag="NAME_TATTORIA" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="오오오오오! &lt;CR&gt;그 암호를 알고 있다니, &lt;CR&gt;이쪽 메뉴를 이용할 수밖에 없겠는걸!"/>
+	<SysMess CharaTag="CHARA_CASTY" NameTag="NAME_ZAKKAYA" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="어서 와!"/>
+	<SysMess CharaTag="CHARA_CASTY" NameTag="NAME_ZAKKAYA" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="어서 오세요"/>
+	<SysMess CharaTag="CHARA_CASTY" NameTag="NAME_ZAKKAYA" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="환영합니다!"/>
+	<SysMess CharaTag="CHARA_CASTY" NameTag="NAME_ZAKKAYA" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="어서 오세요!"/>
+	<SysMess CharaTag="CHARA_CASTY" NameTag="NAME_ZAKKAYA" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="어서 오세요!"/>
+	<SysMess CharaTag="CHARA_CASTY" NameTag="NAME_ZAKKAYA" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="용건이 무엇입니까?"/>
+	<SysMess CharaTag="CHARA_CASTY" NameTag="NAME_ZAKKAYA" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="어서 오세요, 이방인여"/>
+	<SysMess CharaTag="CHARA_CASTY" NameTag="NAME_ZAKKAYA" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="어서 오세요"/>
+	<SysMess CharaTag="CHARA_CASTY" NameTag="NAME_ZAKKAYA" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="신상품이 추가되었습니다"/>
+	<SysMess CharaTag="CHARA_CASTY" NameTag="NAME_ZAKKAYA" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="신상품이 추가되었습니다"/>
+	<SysMess CharaTag="CHARA_CASTY" NameTag="NAME_ZAKKAYA" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="신상품이 추가되었습니다"/>
+	<SysMess CharaTag="CHARA_CASTY" NameTag="NAME_ZAKKAYA" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="신상품이 추가되었습니다"/>
+	<SysMess CharaTag="CHARA_CASTY" NameTag="NAME_ZAKKAYA" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="신상품이 추가되었습니다"/>
+	<SysMess CharaTag="CHARA_CASTY" NameTag="NAME_ZAKKAYA" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="신상품이 추가되었습니다"/>
+	<SysMess CharaTag="CHARA_CASTY" NameTag="NAME_ZAKKAYA" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="신상품이 추가되었습니다"/>
+	<SysMess CharaTag="CHARA_CASTY" NameTag="NAME_ZAKKAYA" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="신상품이 추가되었습니다"/>
+	<SysMess CharaTag="CHARA_CASTY" NameTag="NAME_ZAKKAYA" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="뭘 사줄 거야?"/>
+	<SysMess CharaTag="CHARA_CASTY" NameTag="NAME_ZAKKAYA" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="무엇을 구매하시겠습니까?"/>
+	<SysMess CharaTag="CHARA_CASTY" NameTag="NAME_ZAKKAYA" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="상품을 선택해 주세요"/>
+	<SysMess CharaTag="CHARA_CASTY" NameTag="NAME_ZAKKAYA" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="무엇을 살 거니?"/>
+	<SysMess CharaTag="CHARA_CASTY" NameTag="NAME_ZAKKAYA" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="무엇을 사 주실 건가요?"/>
+	<SysMess CharaTag="CHARA_CASTY" NameTag="NAME_ZAKKAYA" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="구매할 물건을 선택해 주세요"/>
+	<SysMess CharaTag="CHARA_CASTY" NameTag="NAME_ZAKKAYA" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="구매하시겠습니까? &lt;CR&gt; 여기 상품입니다"/>
+	<SysMess CharaTag="CHARA_CASTY" NameTag="NAME_ZAKKAYA" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="무엇을 구매하시겠습니까?"/>
+	<SysMess CharaTag="CHARA_CASTY" NameTag="NAME_ZAKKAYA" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="몇 개 구매하시겠습니까?"/>
+	<SysMess CharaTag="CHARA_CASTY" NameTag="NAME_ZAKKAYA" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="몇 개 구매하시겠습니까?"/>
+	<SysMess CharaTag="CHARA_CASTY" NameTag="NAME_ZAKKAYA" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="몇 개 구매하시겠습니까?"/>
+	<SysMess CharaTag="CHARA_CASTY" NameTag="NAME_ZAKKAYA" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="몇 개 구매하시겠습니까?"/>
+	<SysMess CharaTag="CHARA_CASTY" NameTag="NAME_ZAKKAYA" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="몇 개 구매하시겠습니까?"/>
+	<SysMess CharaTag="CHARA_CASTY" NameTag="NAME_ZAKKAYA" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="몇 개 구매하시겠습니까?"/>
+	<SysMess CharaTag="CHARA_CASTY" NameTag="NAME_ZAKKAYA" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="몇 개 구매하시겠습니까?"/>
+	<SysMess CharaTag="CHARA_CASTY" NameTag="NAME_ZAKKAYA" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="몇 개 구매하시겠습니까?"/>
+	<SysMess CharaTag="CHARA_CASTY" NameTag="NAME_ZAKKAYA" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="손님, 돈이 부족해요..."/>
+	<SysMess CharaTag="CHARA_CASTY" NameTag="NAME_ZAKKAYA" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="죄송합니다, 잔액이 부족한 것 같습니다"/>
+	<SysMess CharaTag="CHARA_CASTY" NameTag="NAME_ZAKKAYA" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="그것을 구매하시려면 &lt;CR&gt;소지금이 조금 부족한 것 같습니다."/>
+	<SysMess CharaTag="CHARA_CASTY" NameTag="NAME_ZAKKAYA" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="돈이 부족하면 팔 수 없어"/>
+	<SysMess CharaTag="CHARA_CASTY" NameTag="NAME_ZAKKAYA" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="저기, 죄송합니다. &lt;CR&gt;돈이 부족한 것 같아요."/>
+	<SysMess CharaTag="CHARA_CASTY" NameTag="NAME_ZAKKAYA" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="소지금이 부족합니다"/>
+	<SysMess CharaTag="CHARA_CASTY" NameTag="NAME_ZAKKAYA" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="금액이 부족합니다"/>
+	<SysMess CharaTag="CHARA_CASTY" NameTag="NAME_ZAKKAYA" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="돈이 부족합니다"/>
+	<SysMess CharaTag="CHARA_CASTY" NameTag="NAME_ZAKKAYA" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="무엇을 팔아줄 거니?"/>
+	<SysMess CharaTag="CHARA_CASTY" NameTag="NAME_ZAKKAYA" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="무엇을 판매하시겠습니까?"/>
+	<SysMess CharaTag="CHARA_CASTY" NameTag="NAME_ZAKKAYA" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="무엇을 판매하시겠습니까?"/>
+	<SysMess CharaTag="CHARA_CASTY" NameTag="NAME_ZAKKAYA" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="뭘 파는 걸까?"/>
+	<SysMess CharaTag="CHARA_CASTY" NameTag="NAME_ZAKKAYA" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="무엇을 파시겠습니까?"/>
+	<SysMess CharaTag="CHARA_CASTY" NameTag="NAME_ZAKKAYA" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="판매할 아이템을 선택해 주세요"/>
+	<SysMess CharaTag="CHARA_CASTY" NameTag="NAME_ZAKKAYA" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="무엇을 판매하시겠습니까?"/>
+	<SysMess CharaTag="CHARA_CASTY" NameTag="NAME_ZAKKAYA" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="무엇을 파시겠습니까?"/>
+	<SysMess CharaTag="CHARA_CASTY" NameTag="NAME_ZAKKAYA" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="몇 개를 파시겠습니까?"/>
+	<SysMess CharaTag="CHARA_CASTY" NameTag="NAME_ZAKKAYA" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="몇 개를 파시겠습니까?"/>
+	<SysMess CharaTag="CHARA_CASTY" NameTag="NAME_ZAKKAYA" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="몇 개를 파시겠습니까?"/>
+	<SysMess CharaTag="CHARA_CASTY" NameTag="NAME_ZAKKAYA" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="몇 개를 파시겠습니까?"/>
+	<SysMess CharaTag="CHARA_CASTY" NameTag="NAME_ZAKKAYA" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="몇 개를 파시겠습니까?"/>
+	<SysMess CharaTag="CHARA_CASTY" NameTag="NAME_ZAKKAYA" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="몇 개를 파시겠습니까?"/>
+	<SysMess CharaTag="CHARA_CASTY" NameTag="NAME_ZAKKAYA" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="몇 개를 파시겠습니까?"/>
+	<SysMess CharaTag="CHARA_CASTY" NameTag="NAME_ZAKKAYA" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="몇 개를 파시겠습니까?"/>
+	<SysMess CharaTag="CHARA_CASTY" NameTag="NAME_ZAKKAYA" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="손님, 팔 만한 물건이&lt;CR&gt; 하나도 없잖아"/>
+	<SysMess CharaTag="CHARA_CASTY" NameTag="NAME_ZAKKAYA" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="실례지만, 팔 만한 물건은 &lt;CR&gt;가지고 계시지 않은 모양이군요"/>
+	<SysMess CharaTag="CHARA_CASTY" NameTag="NAME_ZAKKAYA" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="보유하신 아이템 중에는 팔 만한 것이 &lt;CR&gt;없어 보입니다"/>
+	<SysMess CharaTag="CHARA_CASTY" NameTag="NAME_ZAKKAYA" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="뭐야, 팔 만한 게&lt;CR&gt;하나도 없잖아..."/>
+	<SysMess CharaTag="CHARA_CASTY" NameTag="NAME_ZAKKAYA" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="팔 만한 게 없는데요?"/>
+	<SysMess CharaTag="CHARA_CASTY" NameTag="NAME_ZAKKAYA" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="매각할 만한 물건을 &lt;CR&gt;가지고 있지 않은 것 같습니다만..."/>
+	<SysMess CharaTag="CHARA_CASTY" NameTag="NAME_ZAKKAYA" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="제가 매입할 수 있는 물건은 &lt;CR&gt; 없는 것 같습니다. 죄송합니다."/>
+	<SysMess CharaTag="CHARA_CASTY" NameTag="NAME_ZAKKAYA" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="팔 물건이 없습니다"/>
+	<SysMess CharaTag="CHARA_CASTY" NameTag="NAME_ZAKKAYA" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="이걸로 된 건가?"/>
+	<SysMess CharaTag="CHARA_CASTY" NameTag="NAME_ZAKKAYA" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="이대로 진행할까요?"/>
+	<SysMess CharaTag="CHARA_CASTY" NameTag="NAME_ZAKKAYA" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="이대로 진행할까요?"/>
+	<SysMess CharaTag="CHARA_CASTY" NameTag="NAME_ZAKKAYA" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="이걸로 됐을까?"/>
+	<SysMess CharaTag="CHARA_CASTY" NameTag="NAME_ZAKKAYA" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="이걸로 된 건가요?"/>
+	<SysMess CharaTag="CHARA_CASTY" NameTag="NAME_ZAKKAYA" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="계속하시겠습니까?"/>
+	<SysMess CharaTag="CHARA_CASTY" NameTag="NAME_ZAKKAYA" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="정말 괜찮겠습니까?"/>
+	<SysMess CharaTag="CHARA_CASTY" NameTag="NAME_ZAKKAYA" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="이대로 하면 될까요?"/>
+	<SysMess CharaTag="CHARA_CASTY" NameTag="NAME_ZAKKAYA" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="어서 오세요!"/>
+	<SysMess CharaTag="CHARA_CASTY" NameTag="NAME_ZAKKAYA" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="감사합니다"/>
+	<SysMess CharaTag="CHARA_CASTY" NameTag="NAME_ZAKKAYA" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="감사합니다"/>
+	<SysMess CharaTag="CHARA_CASTY" NameTag="NAME_ZAKKAYA" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="반가워요♪"/>
+	<SysMess CharaTag="CHARA_CASTY" NameTag="NAME_ZAKKAYA" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="감사합니다♪"/>
+	<SysMess CharaTag="CHARA_CASTY" NameTag="NAME_ZAKKAYA" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="확인했습니다"/>
+	<SysMess CharaTag="CHARA_CASTY" NameTag="NAME_ZAKKAYA" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="고마워, 좋은 거래였어"/>
+	<SysMess CharaTag="CHARA_CASTY" NameTag="NAME_ZAKKAYA" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="감사합니다"/>
+	<SysMess CharaTag="CHARA_CASTY" NameTag="NAME_ZAKKAYA" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="또 이용해 주세요!"/>
+	<SysMess CharaTag="CHARA_CASTY" NameTag="NAME_ZAKKAYA" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="또 방문해 주세요"/>
+	<SysMess CharaTag="CHARA_CASTY" NameTag="NAME_ZAKKAYA" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="언제든 오세요"/>
+	<SysMess CharaTag="CHARA_CASTY" NameTag="NAME_ZAKKAYA" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="언제든 다시 찾아주세요"/>
+	<SysMess CharaTag="CHARA_CASTY" NameTag="NAME_ZAKKAYA" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="또 놀러 오세요!"/>
+	<SysMess CharaTag="CHARA_CASTY" NameTag="NAME_ZAKKAYA" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="다시 뵙기를 기다리겠습니다"/>
+	<SysMess CharaTag="CHARA_CASTY" NameTag="NAME_ZAKKAYA" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="언제든 들러 주세요"/>
+	<SysMess CharaTag="CHARA_CASTY" NameTag="NAME_ZAKKAYA" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="또 이용해 주세요"/>
+	<SysMess CharaTag="CHARA_KANON" NameTag="NAME_KANON" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="알겠습니다. &lt;CR&gt;그럼 제작 준비를 하죠."/>
+	<SysMess CharaTag="CHARA_NAY" NameTag="NAME_NAY" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="오케이! &lt;CR&gt;오늘도 열심히 만들어 보자."/>
+	<SysMess CharaTag="CHARA_SARLY" NameTag="NAME_SARLY" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="좋아. &lt;CR&gt; 그럼, 무엇을 만들지 알려줘."/>
+	<SysMess CharaTag="CHARA_TATTORIA" NameTag="NAME_TATTORIA" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="좋았어! &lt;CR&gt;오늘은 뭘 제대로 달려볼까?"/>
+	<SysMess CharaTag="CHARA_KANON" NameTag="NAME_KANON" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="무엇을 만드시겠습니까? K"/>
+	<SysMess CharaTag="CHARA_NAY" NameTag="NAME_NAY" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="무엇을 만드시겠습니까? N"/>
+	<SysMess CharaTag="CHARA_SARLY" NameTag="NAME_SARLY" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="무엇을 만드시겠습니까? S"/>
+	<SysMess CharaTag="CHARA_TATTORIA" NameTag="NAME_TATTORIA" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="무엇을 만드시겠습니까? T"/>
+	<SysMess CharaTag="CHARA_KANON" NameTag="NAME_KANON" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="아이템이 부족합니다. &lt;CR&gt;재료를 만들면 조합할 수 있습니다."/>
+	<SysMess CharaTag="CHARA_NAY" NameTag="NAME_NAY" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="아이템이 부족합니다. &lt;CR&gt;재료를 만들면 조합할 수 있습니다."/>
+	<SysMess CharaTag="CHARA_SARLY" NameTag="NAME_SARLY" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="아이템이 부족합니다. &lt;CR&gt;재료를 만들면 조합할 수 있습니다 Ｓ"/>
+	<SysMess CharaTag="CHARA_TATTORIA" NameTag="NAME_TATTORIA" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="아이템이 부족합니다. &lt;CR&gt;재료를 만들면 조합할 수 있습니다 Ｔ"/>
+	<SysMess CharaTag="CHARA_KANON" NameTag="NAME_KANON" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="아이템이 부족합니다. &lt;CR&gt;제작할 수 없습니다."/>
+	<SysMess CharaTag="CHARA_NAY" NameTag="NAME_NAY" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="아이템이 부족합니다. &lt;CR&gt;제작할 수 없습니다."/>
+	<SysMess CharaTag="CHARA_SARLY" NameTag="NAME_SARLY" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="아이템이 부족합니다. &lt;CR&gt;제작할 수 없습니다."/>
+	<SysMess CharaTag="CHARA_TATTORIA" NameTag="NAME_TATTORIA" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="아이템이 부족합니다. &lt;CR&gt;제작할 수 없습니다 Ｔ"/>
+	<SysMess CharaTag="CHARA_KANON" NameTag="NAME_KANON" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="몇 개 만드시겠습니까? Ｋ"/>
+	<SysMess CharaTag="CHARA_NAY" NameTag="NAME_NAY" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="몇 개 만드시겠습니까? Ｎ"/>
+	<SysMess CharaTag="CHARA_SARLY" NameTag="NAME_SARLY" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="몇 개 만드시겠습니까? Ｓ"/>
+	<SysMess CharaTag="CHARA_TATTORIA" NameTag="NAME_TATTORIA" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="몇 개 만드시겠습니까? Ｔ"/>
+	<SysMess CharaTag="CHARA_KANON" NameTag="NAME_KANON" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="이대로 할까요? Ｋ"/>
+	<SysMess CharaTag="CHARA_NAY" NameTag="NAME_NAY" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="이대로 할까요? N"/>
+	<SysMess CharaTag="CHARA_SARLY" NameTag="NAME_SARLY" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="이대로 할까요? Ｓ"/>
+	<SysMess CharaTag="CHARA_TATTORIA" NameTag="NAME_TATTORIA" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="이대로 할까요? Ｔ"/>
+	<SysMess CharaTag="CHARA_KANON" NameTag="NAME_KANON" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="그럼 시작하겠습니다 Ｋ"/>
+	<SysMess CharaTag="CHARA_NAY" NameTag="NAME_NAY" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="그럼 시작하겠습니다 Ｎ"/>
+	<SysMess CharaTag="CHARA_SARLY" NameTag="NAME_SARLY" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="그럼 시작하겠습니다 S"/>
+	<SysMess CharaTag="CHARA_TATTORIA" NameTag="NAME_TATTORIA" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="그럼 시작하겠습니다Ｔ"/>
+	<SysMess CharaTag="CHARA_KANON" NameTag="NAME_KANON" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="완성되었습니다 K"/>
+	<SysMess CharaTag="CHARA_NAY" NameTag="NAME_NAY" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="완성되었습니다N"/>
+	<SysMess CharaTag="CHARA_SARLY" NameTag="NAME_SARLY" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="완성되었습니다 S"/>
+	<SysMess CharaTag="CHARA_TATTORIA" NameTag="NAME_TATTORIA" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="완성되었습니다T"/>
+	<SysMess CharaTag="CHARA_KANON" NameTag="NAME_KANON" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="이름은 무엇으로 할까요? K"/>
+	<SysMess CharaTag="CHARA_NAY" NameTag="NAME_NAY" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="이름은 무엇으로 할까요?N"/>
+	<SysMess CharaTag="CHARA_SARLY" NameTag="NAME_SARLY" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="이름은 무엇으로 할까요? S"/>
+	<SysMess CharaTag="CHARA_TATTORIA" NameTag="NAME_TATTORIA" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="이름은 무엇으로 할까요? T"/>
+	<SysMess CharaTag="CHARA_CASTY" NameTag="NAME_CASTY" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="어서 오세요&lt;CR&gt;페리온의 TxBIOS 매장입니다"/>
+	<SysMess CharaTag="CHARA_CASTY" NameTag="NAME_CASTY" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="어서 오세요&lt;CR&gt;퀀타브 TxBIOS 매장입니다"/>
+	<SysMess CharaTag="CHARA_CASTY" NameTag="NAME_CASTY" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="어서 오세요&lt;CR&gt;호노카노의 TxBIOS 상점입니다"/>
+	<SysMess CharaTag="CHARA_CASTY" NameTag="NAME_CASTY" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="어서 오세요&lt;CR&gt;천령 사라의 TxBIOS 상점입니다"/>
+	<SysMess CharaTag="CHARA_CASTY" NameTag="NAME_CASTY" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="어서 오세요&lt;CR&gt;쿠르트페나의 TxBIOS 매장입니다"/>
+	<SysMess CharaTag="CHARA_CASTY" NameTag="NAME_CASTY" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="원입니다. 계속하시겠습니까?"/>
+	<SysMess CharaTag="CHARA_CASTY" NameTag="NAME_CASTY" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="원입니다. 계속하시겠습니까?"/>
+	<SysMess CharaTag="CHARA_CASTY" NameTag="NAME_CASTY" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="원입니다. 계속하시겠습니까?"/>
+	<SysMess CharaTag="CHARA_CASTY" NameTag="NAME_CASTY" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="원입니다. 계속하시겠습니까?"/>
+	<SysMess CharaTag="CHARA_CASTY" NameTag="NAME_CASTY" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="원입니다. 계속하시겠습니까?"/>
+	<SysMess CharaTag="CHARA_CASTY" NameTag="NAME_CASTY" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="다이브를 시작합니다 1"/>
+	<SysMess CharaTag="CHARA_CASTY" NameTag="NAME_CASTY" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="다이브를 시작합니다 2"/>
+	<SysMess CharaTag="CHARA_CASTY" NameTag="NAME_CASTY" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="다이브를 시작합니다 3"/>
+	<SysMess CharaTag="CHARA_CASTY" NameTag="NAME_CASTY" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="다이브를 시작합니다 4"/>
+	<SysMess CharaTag="CHARA_CASTY" NameTag="NAME_CASTY" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="다이브를 시작합니다 5"/>
+	<SysMess CharaTag="CHARA_CASTY" NameTag="NAME_CASTY" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="돈이 없으면 다이브할 수 없어 1"/>
+	<SysMess CharaTag="CHARA_CASTY" NameTag="NAME_CASTY" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="돈이 없으면 다이브할 수 없어 2"/>
+	<SysMess CharaTag="CHARA_CASTY" NameTag="NAME_CASTY" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="돈이 없으면 다이브할 수 없어 3"/>
+	<SysMess CharaTag="CHARA_CASTY" NameTag="NAME_CASTY" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="돈이 없으면 다이브할 수 없어 4"/>
+	<SysMess CharaTag="CHARA_CASTY" NameTag="NAME_CASTY" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="돈이 없으면 다이브할 수 없어 5"/>
+	<SysMess CharaTag="CHARA_CASTY" NameTag="NAME_CASTY" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="쫓겨나 버렸네요. 조심하세요 1"/>
+	<SysMess CharaTag="CHARA_CASTY" NameTag="NAME_CASTY" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="쫓겨나 버렸네요. 조심하세요 2"/>
+	<SysMess CharaTag="CHARA_CASTY" NameTag="NAME_CASTY" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="쫓겨나 버렸네요. 조심하세요 3"/>
+	<SysMess CharaTag="CHARA_CASTY" NameTag="NAME_CASTY" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="쫓겨나 버렸네요. 조심하세요 4"/>
+	<SysMess CharaTag="CHARA_CASTY" NameTag="NAME_CASTY" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="쫓겨나 버렸네요. 조심하세요 5"/>
+	<SysMess CharaTag="CHARA_CASTY" NameTag="NAME_CASTY" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="수고하셨습니다. 즐거운 시간이었나요? 1"/>
+	<SysMess CharaTag="CHARA_CASTY" NameTag="NAME_CASTY" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="수고하셨습니다. 즐거운 시간이었나요? 2"/>
+	<SysMess CharaTag="CHARA_CASTY" NameTag="NAME_CASTY" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="수고하셨습니다. 즐거운 시간이었죠? 3"/>
+	<SysMess CharaTag="CHARA_CASTY" NameTag="NAME_CASTY" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="수고하셨습니다. 즐거운 시간이었죠? 4"/>
+	<SysMess CharaTag="CHARA_CASTY" NameTag="NAME_CASTY" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="수고하셨습니다. 즐거운 시간이었죠? 5"/>
+	<SysMess CharaTag="CHARA_CASTY" NameTag="NAME_CASTY" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="수고하셨습니다. 결정의 원소를 얻었으므로 &lt;CR&gt;결정으로 만들어 두었습니다 1"/>
+	<SysMess CharaTag="CHARA_CASTY" NameTag="NAME_CASTY" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="수고하셨습니다. 결정의 원소를 얻었으므로&lt;CR&gt;결정으로 만들어 두었습니다 2"/>
+	<SysMess CharaTag="CHARA_CASTY" NameTag="NAME_CASTY" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="수고하셨습니다. 결정의 원소를 얻었으므로 &lt;CR&gt;결정으로 만들어 두었습니다 3"/>
+	<SysMess CharaTag="CHARA_CASTY" NameTag="NAME_CASTY" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="수고하셨습니다. 결정의 원소를 얻었으므로 &lt;CR&gt;결정으로 만들어 두었습니다 4"/>
+	<SysMess CharaTag="CHARA_CASTY" NameTag="NAME_CASTY" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="수고하셨습니다. 결정의 원소를 얻었으므로 &lt;CR&gt;결정으로 만들어 두었습니다 5"/>
+	<SysMess CharaTag="CHARA_CASTY" NameTag="NAME_CASTY" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="다시 찾아주세요 1"/>
+	<SysMess CharaTag="CHARA_CASTY" NameTag="NAME_CASTY" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="다시 찾아주세요 2"/>
+	<SysMess CharaTag="CHARA_CASTY" NameTag="NAME_CASTY" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="다시 찾아주세요 3"/>
+	<SysMess CharaTag="CHARA_CASTY" NameTag="NAME_CASTY" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="다시 찾아주세요 4"/>
+	<SysMess CharaTag="CHARA_CASTY" NameTag="NAME_CASTY" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="다시 찾아주세요 5"/>
+	<SysMess CharaTag="CHARA_CASTY" NameTag="NAME_CASTY" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="다이브할 수 있는 캐릭터가 늘어났습니다 1"/>
+	<SysMess CharaTag="CHARA_CASTY" NameTag="NAME_CASTY" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="다이브할 수 있는 캐릭터가 늘어났습니다 2"/>
+	<SysMess CharaTag="CHARA_CASTY" NameTag="NAME_CASTY" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="다이브할 수 있는 아이가 늘어났습니다 3"/>
+	<SysMess CharaTag="CHARA_CASTY" NameTag="NAME_CASTY" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="다이브할 수 있는 아이가 늘어났어요 4"/>
+	<SysMess CharaTag="CHARA_CASTY" NameTag="NAME_CASTY" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="다이브할 수 있는 아이가 늘어났습니다 5"/>
+	<SysMess CharaTag="CHARA_NONE" NameTag="NAME_NONE" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SYSTEM" VoiceNo="-1" Text="정화하시겠습니까?"/>
+	<SysMess CharaTag="CHARA_NONE" NameTag="NAME_NONE" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SYSTEM" VoiceNo="-1" Text="누구와 정화 의식을 하시겠습니까?"/>
+	<SysMess CharaTag="CHARA_NONE" NameTag="NAME_NONE" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SYSTEM" VoiceNo="-1" Text="의상을 선택해 주세요."/>
+	<SysMess CharaTag="CHARA_ION" NameTag="NAME_ION" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="그럼 들어갈까요"/>
+	<SysMess CharaTag="CHARA_CASTY" NameTag="NAME_CASTY" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="그럼 들어갈까요"/>
+	<SysMess CharaTag="CHARA_ION" NameTag="NAME_ION" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="이제 슬슬 나가볼까요"/>
+	<SysMess CharaTag="CHARA_CASTY" NameTag="NAME_CASTY" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="이제 슬슬 나가볼까요"/>
+	<SysMess CharaTag="CHARA_NONE" NameTag="NAME_NONE" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SYSTEM" VoiceNo="-1" Text="이 결정을 삽입하시겠습니까?"/>
+	<SysMess CharaTag="CHARA_ION" NameTag="NAME_ION" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="결정 삽입 반응: 머리"/>
+	<SysMess CharaTag="CHARA_CASTY" NameTag="NAME_CASTY" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="결정 삽입 반응: 머리"/>
+	<SysMess CharaTag="CHARA_DELTA" NameTag="NAME_DELTA" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="결정 삽입 반응: 머리"/>
+	<SysMess CharaTag="CHARA_AVATAR" NameTag="NAME_AVATAR" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="결정 삽입 반응: 머리"/>
+	<SysMess CharaTag="CHARA_ION" NameTag="NAME_ION" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="결정 삽입 반응: 가슴"/>
+	<SysMess CharaTag="CHARA_CASTY" NameTag="NAME_CASTY" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="결정 삽입 반응: 가슴"/>
+	<SysMess CharaTag="CHARA_DELTA" NameTag="NAME_DELTA" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="결정 삽입 반응: 가슴"/>
+	<SysMess CharaTag="CHARA_AVATAR" NameTag="NAME_AVATAR" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="결정 삽입 반응: 가슴"/>
+	<SysMess CharaTag="CHARA_ION" NameTag="NAME_ION" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="결정 삽입 반응: 양팔"/>
+	<SysMess CharaTag="CHARA_CASTY" NameTag="NAME_CASTY" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="결정 삽입 반응: 양팔"/>
+	<SysMess CharaTag="CHARA_DELTA" NameTag="NAME_DELTA" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="결정 삽입 반응: 양팔"/>
+	<SysMess CharaTag="CHARA_AVATAR" NameTag="NAME_AVATAR" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="결정 삽입 반응: 양팔"/>
+	<SysMess CharaTag="CHARA_ION" NameTag="NAME_ION" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="결정 삽입 반응: 복부"/>
+	<SysMess CharaTag="CHARA_CASTY" NameTag="NAME_CASTY" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="결정 삽입 반응: 복부"/>
+	<SysMess CharaTag="CHARA_DELTA" NameTag="NAME_DELTA" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="결정 삽입 반응: 복부"/>
+	<SysMess CharaTag="CHARA_AVATAR" NameTag="NAME_AVATAR" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="결정 삽입 반응: 복부"/>
+	<SysMess CharaTag="CHARA_ION" NameTag="NAME_ION" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="결정 삽입 반응: 양다리"/>
+	<SysMess CharaTag="CHARA_CASTY" NameTag="NAME_CASTY" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="결정 삽입 반응: 양다리"/>
+	<SysMess CharaTag="CHARA_DELTA" NameTag="NAME_DELTA" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="결정 삽입 반응: 양다리"/>
+	<SysMess CharaTag="CHARA_AVATAR" NameTag="NAME_AVATAR" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="결정 삽입 반응: 양다리"/>
+	<SysMess CharaTag="CHARA_NONE" NameTag="NAME_NONE" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SYSTEM" VoiceNo="-1" Text="미소기에서는 제노메트릭스 결정을 몸에 넣어, &lt;CR&gt; 신체 기능을 강화할 수 있습니다."/>
+	<SysMess CharaTag="CHARA_NONE" NameTag="NAME_NONE" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SYSTEM" VoiceNo="-1" Text="『세간 이야기하기』에서 특정 주제에 대해 &lt;CR&gt;이야기를 나누면, 파트너 사이의 신뢰를 &lt;CR&gt;쌓을 수 있습니다."/>
+	<SysMess CharaTag="CHARA_NONE" NameTag="NAME_NONE" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SYSTEM" VoiceNo="-1" Text="신뢰가 깊어지면 결정을 흡수하니 히로인과 대화합시다."/>
+	<SysMess CharaTag="CHARA_NONE" NameTag="NAME_NONE" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SYSTEM" VoiceNo="-1" Text="여기서 정화를 선택해 봅시다."/>
+	<SysMess CharaTag="CHARA_NONE" NameTag="NAME_NONE" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SYSTEM" VoiceNo="-1" Text="결정을 받아들일 파트너를 선택합니다. &lt;CR&gt;여기서는 히로인을 선택해 봅시다."/>
+	<SysMess CharaTag="CHARA_NONE" NameTag="NAME_NONE" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SYSTEM" VoiceNo="-1" Text="결정을 설치할 부위를 선택합니다."/>
+	<SysMess CharaTag="CHARA_NONE" NameTag="NAME_NONE" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SYSTEM" VoiceNo="-1" Text="흡수할 결정을 선택합니다."/>
+	<SysMess CharaTag="CHARA_NONE" NameTag="NAME_NONE" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SYSTEM" VoiceNo="-1" Text="결정은 제노메트릭스로, 설치할 부위는 &lt;CR&gt;세간 이야기로, 파트너 사이의 &lt;CR&gt;신뢰를 쌓음으로써 늘릴 수 있습니다."/>
+	<SysMess CharaTag="CHARA_NONE" NameTag="NAME_NONE" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SYSTEM" VoiceNo="-1" Text="새로운 결정을 입수했다면, &lt;CR&gt;이번에 선택하지 않은 파트너에게도 &lt;CR&gt;결정을 넣어 보세요."/>
+	<SysMess CharaTag="CHARA_DELTA" NameTag="NAME_DELTA" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="딱히 할 말은 없군……."/>
+	<SysMess CharaTag="CHARA_CASTY" NameTag="NAME_CASTY" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="……그렇네."/>
+	<SysMess CharaTag="CHARA_DELTA" NameTag="NAME_DELTA" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="딱히 할 말은 없군……."/>
+	<SysMess CharaTag="CHARA_KANON" NameTag="NAME_KANON" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="……그렇네요."/>
+	<SysMess CharaTag="CHARA_DELTA" NameTag="NAME_DELTA" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="딱히 할 말은 없군……."/>
+	<SysMess CharaTag="CHARA_NAY" NameTag="NAME_NAY" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="……그렇네."/>
+	<SysMess CharaTag="CHARA_DELTA" NameTag="NAME_DELTA" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="딱히 할 말은 없군……."/>
+	<SysMess CharaTag="CHARA_SARLY" NameTag="NAME_SARLY" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="……그렇네."/>
+	<SysMess CharaTag="CHARA_DELTA" NameTag="NAME_DELTA" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="딱히 할 말은 없군……."/>
+	<SysMess CharaTag="CHARA_NERO" NameTag="NAME_NERO" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="그러게."/>
+	<SysMess CharaTag="CHARA_DELTA" NameTag="NAME_DELTA" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="딱히 할 말은 없군……."/>
+	<SysMess CharaTag="CHARA_SYURERIA" NameTag="NAME_SYURERIA" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="그렇군요……."/>
+	<SysMess CharaTag="CHARA_ION" NameTag="NAME_ION" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="딱히 할 말은 없네……."/>
+	<SysMess CharaTag="CHARA_KANON" NameTag="NAME_KANON" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="딱히 할 말은 없네요……."/>
+	<SysMess CharaTag="CHARA_NAY" NameTag="NAME_NAY" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="딱히 할 말은 없네—……."/>
+	<SysMess CharaTag="CHARA_SARLY" NameTag="NAME_SARLY" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="딱히 할 말은 없어."/>
+	<SysMess CharaTag="CHARA_NERO" NameTag="NAME_NERO" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="지금은 딱히 할 말 없어."/>
+	<SysMess CharaTag="CHARA_SYURERIA" NameTag="NAME_SYURERIA" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SBUC" VoiceNo="-1" Text="음—…….&lt;CR&gt;지금은 딱히 드릴 말씀이 없네요."/>
+	<SysMess CharaTag="CHARA_NONE" NameTag="NAME_NONE" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SYSTEM" VoiceNo="-1" Text="시간적 정합성을 유지하기&lt;CR&gt;위해 에피소드를 대기&lt;CR&gt;중입니다"/>
+	<SysMess CharaTag="CHARA_NONE" NameTag="NAME_NONE" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SYSTEM" VoiceNo="-1" Text="채널 전환 불가"/>
+	<SysMess CharaTag="CHARA_NONE" NameTag="NAME_NONE" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SYSTEM" VoiceNo="-1" Text="채널 전환 가능"/>
+	<SysMess CharaTag="CHARA_NONE" NameTag="NAME_NONE" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SYSTEM" VoiceNo="-1" Text="&lt;CR&gt; 클래스 아르노사쥬에 오신 것을 환영합니다 &lt;CR&gt;"/>
+	<SysMess CharaTag="CHARA_NONE" NameTag="NAME_NONE" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SYSTEM" VoiceNo="-1" Text="이 시스템은 PlayStation&lt;RG&gt;Vita 소프트웨어와 아이템 정보 등을 연동합니다"/>
+	<SysMess CharaTag="CHARA_NONE" NameTag="NAME_NONE" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SYSTEM" VoiceNo="-1" Text="링크를 하려면 PlayStation&lt;RG&gt;3을&lt;CR&gt;네트워크에 연결한 뒤, 링크하기&lt;CR&gt;를 선택해 주세요"/>
+	<SysMess CharaTag="CHARA_NONE" NameTag="NAME_NONE" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SYSTEM" VoiceNo="-1" Text="세카이 링크는 플레이 중에도 &lt;CR&gt;제노메트릭스 메뉴에서 &lt;CR&gt;언제든지 수행할 수 있습니다"/>
+	<SysMess CharaTag="CHARA_NONE" NameTag="NAME_NONE" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SYSTEM" VoiceNo="-1" Text="네트워크에 접속 중입니다"/>
+	<SysMess CharaTag="CHARA_NONE" NameTag="NAME_NONE" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SYSTEM" VoiceNo="-1" Text="아르노사쥬와의 세카이 링크를 &lt;CR&gt;확립했습니다. 아이템 정보, 시나리오 &lt;CR&gt; 진행 정보가 링크되었습니다"/>
+	<SysMess CharaTag="CHARA_NONE" NameTag="NAME_NONE" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SYSTEM" VoiceNo="-1" Text="네트워크에 연결할 수 없습니다. &lt;CR&gt;다시 한 번 연결을 시도하시겠습니까?"/>
+	<SysMess CharaTag="CHARA_NONE" NameTag="NAME_NONE" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SYSTEM" VoiceNo="-1" Text="그럼, 7차원을 넘어선 세계로의 여행을 &lt;CR&gt;편안하게 즐겨 주십시오"/>
+	<SysMess CharaTag="CHARA_NONE" NameTag="NAME_NONE" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SYSTEM" Text="PlayStation&lt;RG&gt; Store에서 구매한 아이템을 받을 수 있습니다"/>
+	<SysMess CharaTag="CHARA_NONE" NameTag="NAME_NONE" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SYSTEM" VoiceNo="-1" Text="다른 세계의 GP를 전투 보너스로 변환한다뉴! EXP, DP, CT 수치만큼 포인트가 2배가 된다뉴!"/>
+	<SysMess CharaTag="CHARA_NONE" NameTag="NAME_NONE" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SYSTEM" VoiceNo="-1" Text="아르노사쥬 DX에서 만든 아이템을 받는다냥! &lt;CR&gt;전송되는 아이템은 각 1개씩이다냥!"/>
+	<SysMess CharaTag="CHARA_NONE" NameTag="NAME_NONE" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SYSTEM" Text="가스트에서 제공하는 사쥬 콘체르토 관련 콘텐츠로부터 데이터를 수신합니다"/>
+	<SysMess CharaTag="CHARA_NONE" NameTag="NAME_NONE" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SYSTEM" Text="아르노사쥬의 게임 진행 상황을 가스트 서버로 전송합니다. 전송 전에 시스템 데이터를 저장합니다."/>
+	<SysMess CharaTag="CHARA_NONE" NameTag="NAME_NONE" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SYSTEM" Text="PlayStation&lt;RG&gt;Vita판 세르노사쥬 아이템을 아르노사쥬로 전송합니다. 아이템별 1개만 가능합니다."/>
+	<SysMess CharaTag="CHARA_NONE" NameTag="NAME_NONE" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SYSTEM" Text="PlayStation&lt;RG&gt;Vita 소프트웨어 &#x27;아르노사쥬&#x27;의 게임 진행 상황을 확인할 수 있습니다."/>
+	<SysMess CharaTag="CHARA_NONE" NameTag="NAME_NONE" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SYSTEM" VoiceNo="-1" Text="전투에서 이탈합니다. &lt;CR&gt;계속하시겠습니까?"/>
+	<SysMess CharaTag="CHARA_NONE" NameTag="NAME_NONE" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SYSTEM" VoiceNo="-1" Text="전투 흐름을 확인하시겠습니까?"/>
+	<SysMess CharaTag="CHARA_NONE" NameTag="NAME_NONE" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SYSTEM" VoiceNo="-1" Text="「전투」 도움말은 메뉴의 도감에서 &lt;CR&gt;확인할 수 있습니다. 모르는 것이 있&lt;CR&gt;다면 확인해 보세요."/>
+	<SysMess CharaTag="CHARA_NONE" NameTag="NAME_NONE" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SYSTEM" VoiceNo="-1" Text="전투 시작 시 영창할 시마법을 &lt;IM00&gt;으로 결정합니다. 늘어난 시마법은 &lt;IM08&gt;로 선택하세요."/>
+	<SysMess CharaTag="CHARA_NONE" NameTag="NAME_NONE" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SYSTEM" VoiceNo="-1" Text="시마법 영창 후, 즉시 행동 턴이 시작&lt;CR&gt;됩니다. 전열을 조작해 적을 공격하세요."/>
+	<SysMess CharaTag="CHARA_NONE" NameTag="NAME_NONE" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SYSTEM" VoiceNo="-1" Text="&lt;IM09&gt;으로 공격 대상을 선택하고, &lt;IM04&gt;&lt;IM32&gt;&lt;IM06&gt;로 액션을 수행합니다. 대응하는 스킬은 레벨이 오르면 늘어납니다."/>
+	<SysMess CharaTag="CHARA_NONE" NameTag="NAME_NONE" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SYSTEM" VoiceNo="-1" Text="행동 턴에 수행 가능한 액션 횟수는 &lt;CR&gt;정해져 있으니 기억해 두세요."/>
+	<SysMess CharaTag="CHARA_NONE" NameTag="NAME_NONE" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SYSTEM" VoiceNo="-1" Text="또한, 체인 수는 적을 연속해서 공격하는 &lt;CR&gt; 방식으로 늘릴 수 있습니다."/>
+	<SysMess CharaTag="CHARA_NONE" NameTag="NAME_NONE" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SYSTEM" VoiceNo="-1" Text="체인 수 표시에 있는 체인 게이지가 &lt;CR&gt;사라지기 전까지 다음 적을 공격하면, &lt;CR&gt;체인이 계속 이어집니다."/>
+	<SysMess CharaTag="CHARA_NONE" NameTag="NAME_NONE" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SYSTEM" VoiceNo="-1" Text="적절한 타이밍에 적을 공격해, 체인 수를 &lt;CR&gt; 늘려 나갑시다!"/>
+	<SysMess CharaTag="CHARA_NONE" NameTag="NAME_NONE" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SYSTEM" VoiceNo="-1" Text="행동 턴이 끝나면 적이 공격해 올 수&lt;CR&gt; 있습니다. 적은 히로인을 공격하므로,&lt;CR&gt;전열이 방어하게 됩니다."/>
+	<SysMess CharaTag="CHARA_NONE" NameTag="NAME_NONE" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SYSTEM" VoiceNo="-1" Text="가드 중에는 &lt;IM21&gt;으로 실드를 전개하여 히로인이 받는 데미지를 크게 줄일 수 있습니다."/>
+	<SysMess CharaTag="CHARA_NONE" NameTag="NAME_NONE" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SYSTEM" VoiceNo="-1" Text="타이밍 맞춰 &lt;IM21&gt;을 눌러 보호하세요. 실드 횟수에는 제한이 있습니다."/>
+	<SysMess CharaTag="CHARA_NONE" NameTag="NAME_NONE" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SYSTEM" VoiceNo="-1" Text="적의 공격으로 히로인의 배리어 내구도&lt;CR&gt;가 일정 수준 이하로 떨어지면, 배리&lt;CR&gt;어가 파괴됩니다"/>
+	<SysMess CharaTag="CHARA_NONE" NameTag="NAME_NONE" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SYSTEM" VoiceNo="-1" Text="배리어는 4단계로 구성되어 있으며, 모든 배리어가 &lt;CR&gt;파괴되면 게임 오버가 되므로&lt;CR&gt; 배리어 상태에 주의하십시오."/>
+	<SysMess CharaTag="CHARA_NONE" NameTag="NAME_NONE" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SYSTEM" VoiceNo="-1" Text="행동 턴의 액션에 따라 히로인 &lt;CR&gt;과의 싱크로율이 일정 수준 이상 쌓이면, 하모&lt;CR&gt;닉스 레벨이 올라갑니다"/>
+	<SysMess CharaTag="CHARA_NONE" NameTag="NAME_NONE" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SYSTEM" VoiceNo="-1" Text="하모닉스 레벨이 올라가면 시마법을 발&lt;CR&gt;동할 수 있게 되거나, 상승 속도가 &lt;CR&gt;빨라지는 등 다양한 혜택이 생깁니다"/>
+	<SysMess CharaTag="CHARA_NONE" NameTag="NAME_NONE" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SYSTEM" VoiceNo="-1" Text="공격 체인 수가 올라갈수록 게이지도 &lt;CR&gt;차오르기 쉬워지므로, 타이밍에 맞춰 &lt;CR&gt;액션을 성공시켜 봅시다"/>
+	<SysMess CharaTag="CHARA_NONE" NameTag="NAME_NONE" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SYSTEM" VoiceNo="-1" Text="시마법의 차지량이 충분히 모였습니다. &lt;CR&gt;이 상태에서 시마법을 발동하면 적을 전&lt;CR&gt;멸시키는 것이 가능합니다"/>
+	<SysMess CharaTag="CHARA_NONE" NameTag="NAME_NONE" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SYSTEM" VoiceNo="-1" Text="시마법 발동 시 처치 가능한 적의 WAVE&lt;CR&gt;에 색이 표시되므로, 이를 시마법을 발동할 기준&lt;CR&gt;으로 삼으십시오"/>
+	<SysMess CharaTag="CHARA_NONE" NameTag="NAME_NONE" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SYSTEM" VoiceNo="-1" Text="특수 전투 외엔 행동 횟수에 제한이 있으며, 자동 종료되니 주의하십시오."/>
+	<SysMess CharaTag="CHARA_NONE" NameTag="NAME_NONE" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SYSTEM" VoiceNo="-1" Text="시마법은 커맨드 메뉴에서 선택합니다. &lt;CR&gt;&lt;IM19&gt;을 눌러 &#x27;시발동&#x27;을 선택해 주세요"/>
+	<SysMess CharaTag="CHARA_NONE" NameTag="NAME_NONE" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SYSTEM" VoiceNo="-1" Text="전투의 유리한 공략법을 확인하시겠습니까?"/>
+	<SysMess CharaTag="CHARA_NONE" NameTag="NAME_NONE" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SYSTEM" VoiceNo="-1" Text="「전투」 도움말은 메뉴의 도감에서 &lt;CR&gt;확인할 수 있습니다. 모르는 것이 있&lt;CR&gt;다면 확인해 보세요."/>
+	<SysMess CharaTag="CHARA_NONE" NameTag="NAME_NONE" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SYSTEM" VoiceNo="-1" Text="전투 중에는 공격해 오는 적의 행동을 무효화하&lt;CR&gt;거나, 약화시킬 수 있습니다"/>
+	<SysMess CharaTag="CHARA_NONE" NameTag="NAME_NONE" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SYSTEM" VoiceNo="-1" Text="같은 적에게 액션을 반복하여 적을 &lt;CR&gt;브레이크시키세요. 브레이크된 적은 다음 &lt;CR&gt;턴에 공격하지 않습니다"/>
+	<SysMess CharaTag="CHARA_NONE" NameTag="NAME_NONE" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SYSTEM" VoiceNo="-1" Text="어떤 액션으로든 적을 브레이크시킬 수&lt;CR&gt; 있지만, &lt;IM32&gt; 액션이 특히 효과가 &lt;CR&gt; 강력하므로 적극 활용해 주십시오"/>
+	<SysMess CharaTag="CHARA_NONE" NameTag="NAME_NONE" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SYSTEM" VoiceNo="-1" Text="적에 따라 브레이크 난이도가 다르며, 일부 적은 공격을 무효화 못 합니다."/>
+	<SysMess CharaTag="CHARA_NONE" NameTag="NAME_NONE" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SYSTEM" VoiceNo="-1" Text="적의 행동 예측과 남은 HP를 확인하며, 최적의 &lt;CR&gt;행동을 선택하여 전투를 유리하게 이끌어 가십시오"/>
+	<SysMess CharaTag="CHARA_NONE" NameTag="NAME_NONE" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SYSTEM" VoiceNo="-1" Text="시마법 차지량은 행동 턴의 행동 시 &lt;CR&gt;보너스가 가산됩니다. 보너스는 &lt;CR&gt;브레이크나 체인 수에 따라 발생합니다"/>
+	<SysMess CharaTag="CHARA_NONE" NameTag="NAME_NONE" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SYSTEM" VoiceNo="-1" Text="그중에서도 큰 보너스가 되는 것은, &lt;CR&gt;행동 예측이 발생한 적을 모두 브레이크시켰을 때 &lt;CR&gt;발생하는 보너스입니다"/>
+	<SysMess CharaTag="CHARA_NONE" NameTag="NAME_NONE" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SYSTEM" VoiceNo="-1" Text="이 보너스는 행동 턴이 줄어들지 않을&lt;CR&gt; 뿐만 아니라, 남은 액션이 많을수록&lt;CR&gt; 시마법의 차지량이 상승합니다"/>
+	<SysMess CharaTag="CHARA_NONE" NameTag="NAME_NONE" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SYSTEM" VoiceNo="-1" Text="적은 횟수로 행동 전의 적을 브레이크&lt;CR&gt;시키면, 결과적으로 적을 빠르게 &lt;CR&gt;처치할 수 있습니다"/>
+	<SysMess CharaTag="CHARA_NONE" NameTag="NAME_NONE" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SYSTEM" VoiceNo="-1" Text="다양한 행동 보너스를 활용해 자신만의 스타일로 적을 격파하십시오."/>
+	<SysMess CharaTag="CHARA_NONE" NameTag="NAME_NONE" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SYSTEM" VoiceNo="-1" Text="하모닉스 레벨이 2 이상이 되면, 히&lt;CR&gt;로인이 지원해 줍니다."/>
+	<SysMess CharaTag="CHARA_NONE" NameTag="NAME_NONE" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SYSTEM" VoiceNo="-1" Text="히로인의 지원으로 적을 빠르게 격파하고 브레이크를 유도합니다."/>
+	<SysMess CharaTag="CHARA_NONE" NameTag="NAME_NONE" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SYSTEM" VoiceNo="-1" Text="히로인의 지원은 액션 체인 수에 따라 &lt;CR&gt;발생합니다. 많은 지원을 받고 싶을 때&lt;CR&gt;는 체인 수를 높여보세요."/>
+	<SysMess CharaTag="CHARA_NONE" NameTag="NAME_NONE" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SYSTEM" VoiceNo="-1" Text="적을 격파하기 위해 보너스를 발생시켜 시&lt;CR&gt;마법의 차지량을 모으는 것이 전투를 유리&lt;CR&gt;하게 이끄는 데 중요합니다"/>
+	<SysMess CharaTag="CHARA_NONE" NameTag="NAME_NONE" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SYSTEM" VoiceNo="-1" Text="전투를 반복하며 적에 따라 유리한 전투 &lt;CR&gt;방식을 찾아내시기 바랍니다."/>
+	<SysMess CharaTag="CHARA_NONE" NameTag="NAME_NONE" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SYSTEM" VoiceNo="-1" Text="또한, 전투 도움말은 메뉴의 「도감」&lt;CR&gt;에서 확인할 수 있습니다. 모르는 &lt;CR&gt; 것이 있다면 확인해 보세요."/>
+	<SysMess CharaTag="CHARA_NONE" NameTag="NAME_NONE" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SYSTEM" VoiceNo="-1" Text="타이틀로 돌아갑니다. 계속하시겠습니까?"/>
 </Root>

@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE root SYSTEM "file://st01/project/acps3/_Programmer/ui/uil.dtd">
+<root>
+	<!-- スタイルの読み込み -->
+	<command load_style="Saves/ui/gen_styles/uis_gen_common.xml"/>
+	<node name="item_text">
+		<text name="text" pos="17,6.667" font_size="18" line_space="13.8" line_char_length="15" text="가나다라마바사아자차카타파하가나다라마바사아자차카타파하가나다라마바사아자차카타파하"/>
+	</node>
+</root>
