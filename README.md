@@ -1,0 +1,1 @@
+# Ar-nosurge-korean-translation-patch
