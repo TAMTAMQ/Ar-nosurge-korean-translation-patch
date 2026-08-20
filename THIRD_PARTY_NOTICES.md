@@ -14,6 +14,16 @@
 - 저장소에 포함된 `Pretendard-Bold.otf`는 원래 글꼴 이름을 변경하지 않은 원본 글꼴 파일입니다.
 - 다른 글꼴로 재빌드하는 사용자는 해당 글꼴의 사용·수정·배포 조건을 직접 확인해야 합니다.
 
+## 60FPS 프레임 해제 패치
+
+프레임 제한이 걸리는 지점(`0x3D07CC` 부근)은 DeathChaos25의 비공식 영문 패치
+[ArNosurgeDeluxeSwitchEngPatch](https://github.com/DeathChaos25/ArNosurgeDeluxeSwitchEngPatch)에서
+확인했습니다. 해당 프로젝트는 Skyline 플러그인으로 같은 지점을 후킹합니다.
+
+이 저장소에는 해당 프로젝트의 코드나 바이너리를 포함하지 않습니다.
+`tools/build_fps_unlock_patch.py`가 생성하는 IPS는 게임 명령어 1바이트를 바꾸는
+독립적인 패치이며, 영문 UI 치환 등 다른 기능은 포함하지 않습니다.
+
 ## RenderDoc
 
 RenderDoc은 폰트 UV 분석 과정에서만 사용했습니다. RenderDoc 실행 파일, 라이브러리 및 캡처 파일은 이 저장소에 포함되지 않습니다. `data/char_to_cell_renderdoc.json`은 캡처에서 프로젝트가 추출한 수치형 분석 결과입니다.

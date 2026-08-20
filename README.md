@@ -55,6 +55,7 @@ atmosphere/contents/01003CF0128DE000/romfs/Event/event/...
 atmosphere/contents/01003CF0128DE000/romfs/Data/NX/Font/MainFont_nx_0.g1t
 atmosphere/contents/01003CF0128DE000/romfs/Saves/systemMessage/...
 atmosphere/exefs_patches/ArNosurgeKoreanUI/28F3C3965CEB60AC18A23E2B2C0C4BEEE3C81D8B.ips
+atmosphere/exefs_patches/ArNosurgeFpsUnlock/28F3C3965CEB60AC18A23E2B2C0C4BEEE3C81D8B.ips  # 선택
 ```
 
 ### 2-2. Ryujinx
@@ -70,6 +71,39 @@ mods/contents/01003cf0128de000/korean_final/exefs/28F3C3965CEB60AC18A23E2B2C0C4B
 ```
 
 기존 대사·폰트 시험 모드가 함께 활성화되어 있으면 충돌할 수 있으므로 다른 모드는 비활성화해 주세요.
+
+### 2-3. 60FPS 프레임 제한 해제 (선택)
+
+원래 30FPS로 고정된 프레임 제한을 해제합니다. 한국어 패치와 **독립된 별도 패치**이므로
+원하지 않으면 넣지 않아도 되고, 넣은 뒤 마음에 들지 않으면 해당 폴더만 지우면 됩니다.
+
+Atmosphère는 `atmosphere` 폴더를 SD 카드에 복사할 때 함께 적용됩니다.
+
+Ryujinx에서는 한국어 패치와 **별개의 모드 폴더**로 만듭니다.
+
+1. 모드 폴더에 `fps_unlock` 같은 임의의 폴더를 하나 더 만듭니다.
+2. 그 안 `exefs/`에 `atmosphere/exefs_patches/ArNosurgeFpsUnlock/`의 IPS를 복사합니다.
+
+```text
+mods/contents/01003cf0128de000/korean_final/...   # 한국어 패치
+mods/contents/01003cf0128de000/fps_unlock/exefs/28F3C3965CEB60AC18A23E2B2C0C4BEEE3C81D8B.ips
+```
+
+동작 방식은 다음과 같습니다. 게임은 프레임 대기 값을 레지스터로 넘겨 호출하는데,
+
+```text
+0x3D07CC   mov  w1, w21     ; 대기 프레임 수
+0x3D07D0   blr  x8          ; 프레임 대기 호출
+```
+
+이 중 `mov w1, w21` 을 `mov w1, wzr`(0) 로 바꿔 대기를 없앱니다. 실제 변경은 **1바이트**이며
+IPS 파일 전체가 14바이트입니다.
+
+이 패치는 빌드 ID로 대상을 확인하므로 게임 버전이 다르면 자동으로 무시됩니다. 따라서
+버전이 맞지 않아도 게임이 손상되거나 튕기지 않습니다.
+
+> 프레임 해제는 게임 속도·물리·연출이 30FPS 기준으로 맞춰진 부분에 영향을 줄 수 있습니다.
+> 이상이 느껴지면 `fps_unlock` 폴더만 제거하세요.
 
 ## 3. 패치 내용
 
@@ -296,11 +330,67 @@ python tools/decode_renderdoc_font_draw.py `
 
 ### 번역 수정 시 주의사항
 
-- 반드시 `translations/romfs` 아래 파일을 수정하고 `atmosphere/`의 생성 결과물은 직접 고치지 마세요.
+- EBM·XML은 반드시 `translations/romfs` 아래 파일을 수정하고 `atmosphere/`의 생성 결과물은 직접 고치지 마세요.
+- 실행 파일 문자열은 `translations/exefs/main_1.0.1.csv`에서 수정하세요.
 - EBM의 바이너리 구조, 레코드 수, 32바이트 메타데이터와 NUL 종료 형식을 보존해야 합니다.
 - XML에서는 `Text` 외의 속성과 `<CR>`, `<IMxx>`, `<RG>` 같은 제어문자의 표기·순서·위치를 유지하세요.
 - 새 한글 음절을 사용한 뒤에는 `translate_all.py`로 폰트까지 다시 생성하세요.
 - 빌드가 끝나면 `atmosphere/contents/01003CF0128DE000`을 SD 카드 또는 Ryujinx 모드 폴더에 복사합니다.
+
+### `main` 번역 수정 인수인계
+
+GitHub Issue로 접수된 `main` 메뉴·지명·인명 등의 번역을 다음 작업자가 수정할 때는 아래 절차를 따릅니다.
+
+1. 수정 전에 `translations/exefs/main_1.0.1.csv`를 백업합니다.
+2. Issue의 일본어 원문을 CSV의 `original` 열에서 검색합니다.
+3. 해당 행의 `translation`만 수정하고 `memory_address`, `rodata_offset`, `capacity_bytes`, `classification`, `original`은 바꾸지 않습니다.
+4. 번역문의 UTF-8 바이트 수가 `capacity_bytes` 이하여야 합니다.
+5. 초과하면 먼저 띄어쓰기를 제거하고, 그래도 길면 조사·주어·종결어미 또는 단어를 축약합니다.
+6. `<CR>`, `<IMxx>`, printf 형식 등 제어문자는 원문과 철자·개수·순서가 같아야 합니다.
+7. 사람이 최종 확인한 행은 `status`를 `needs_review`로 두고 `notes`에 수정 이유를 기록합니다.
+8. `translate_all.py`로 폰트·ROMFS·IPS를 모두 다시 생성합니다.
+9. `build/main_1.0.1_patch_report.json`에서 `skipped_records`가 0인지 확인한 뒤 게임에 적용합니다.
+
+PowerShell에서 특정 번역문의 UTF-8 바이트 수를 확인하는 예시는 다음과 같습니다.
+
+```powershell
+$text = "수정한번역문"
+[Text.Encoding]::UTF8.GetByteCount($text)
+```
+
+여러 초과 문장을 일괄 정리할 때는 현재 CSV를 반드시 백업한 뒤 다음 도구를 사용합니다.
+
+```powershell
+# 1. 공백 제거 후, 남은 초과 문장을 로컬 OpenAI 호환 모델로 축약
+python tools/compact_main_translations.py
+
+# 2. 사람이 검수한 수동 축약표를 적용하고 바이트·일본어·제어문자 검증
+python tools/apply_main_compaction_overrides.py
+
+# 3. 전체 폰트·ROMFS·IPS 재생성
+python translate_all.py --original-font "D:\game\extracted\romfs\Data\NX\Font\MainFont_nx_0.g1t"
+```
+
+자동 축약으로 해결되지 않은 항목은 `translations/exefs/main_1.0.1_manual_compaction.json`에 `index: 번역문` 형식으로 추가합니다. `tools/apply_main_compaction_overrides.py`는 다음 조건을 하나라도 위반하면 CSV를 수정하지 않고 중단합니다.
+
+- UTF-8 번역 바이트 수가 슬롯 용량을 초과함
+- 번역문에 일본어가 남아 있음
+- 원문의 제어문자와 번역문의 제어문자 개수·순서가 다름
+- 축약표의 index가 CSV에 없음
+
+`tools/build_main_text_patch.py`도 용량을 다시 확인하며, 초과하거나 폰트 매핑에 없는 한글이 있는 문장은 IPS에서 제외하고 `build/main_1.0.1_patch_report.json`에 이유를 기록합니다. 정상 배포 조건은 `patched_records`가 번역 대상 수와 일치하고 `skipped_records`가 0인 상태입니다.
+
+#### 포인터 재배치 관련 주의
+
+길이 제한을 피하려고 번역문을 `main`의 0영역으로 옮기고 포인터 또는 AArch64 `ADRP+ADD`를 수정하는 시험을 진행한 적이 있습니다. 775개 문자열과 2,097개 참조의 기계 검증은 통과했지만, 일부 0영역이 실제 더미가 아니라 시스템 전환용 테이블이어서 시스템 메뉴에서 메인 메뉴로 돌아갈 때 게임이 멈췄습니다.
+
+따라서 현재 배포판에서는 다음 파일을 분석·연구 목적으로만 사용하고 결과물을 배포 IPS에 합치지 않습니다.
+
+- `tools/analyze_main_references.py`
+- `tools/build_pointer_relocation_patch.py`
+- `tools/validate_pointer_patch.py`
+
+포인터 재배치를 다시 연구하려면 임의의 연속 0바이트를 빈 공간으로 간주하지 말고, 해당 영역이 어떤 경로에서도 참조되지 않는다는 사실을 먼저 확인해야 합니다. 반드시 기존 IPS와 번역 CSV, Ryujinx 모드 폴더를 백업하고 별도 시험본으로 검증하세요. 최소 확인 항목은 게임 시작, 세이브·로드, 시스템 메뉴 진입, **시스템 메뉴에서 메인 메뉴로 복귀**, 전투 진입·종료입니다.
 
 ## 6. 개발 내역
 
@@ -333,6 +423,7 @@ python tools/decode_renderdoc_font_draw.py `
 | `tools/build_final_korean_mod.py` | 최종 EBM·폰트 생성기 |
 | `tools/build_system_message.py` | 한국어 XML을 설치용 대체 문자 XML로 변환 |
 | `tools/build_main_text_patch.py` | `main_1.0.1.csv`를 검증하고 고정 길이 IPS 생성 |
+| `tools/build_fps_unlock_patch.py` | 30FPS 제한 해제 IPS 생성(한국어 패치와 무관하게 단독 사용 가능) |
 | `tools/compact_main_translations.py` | 초과 문장의 공백 제거 및 로컬 모델 단어 축약 |
 | `tools/apply_main_compaction_overrides.py` | 검수된 수동 축약표 적용 및 바이트·제어문자 검증 |
 | `translate_all.py` | EBM·폰트·시스템 메시지·UI를 한 번에 생성하는 통합 실행 파일 |
