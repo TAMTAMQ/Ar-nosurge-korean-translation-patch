@@ -10,7 +10,8 @@ Nintendo Switch판 『Ar nosurge: Ode to an Unborn Star DX』(アルノサージ
 
 - 이벤트 대사 파일 2,239개를 번역합니다.
 - 시스템·메뉴·상점 대사 XML 2개(472개 항목)를 번역합니다.
-- 고유 한글 음절 1,372자를 게임 내장 폰트 아틀라스에 새로 매핑했습니다.
+- 업데이트 1.0.1 `main` 실행 파일에서 추출한 일본어 문자열 6,665개를 번역합니다.
+- 고유 한글 음절 1,412자를 게임 내장 폰트 아틀라스에 매핑했습니다.
 - 원본 NSP/XCI를 수정하지 않고 Atmosphère/Ryujinx의 LayeredFS 모드로 적용합니다.
 - 폰트 매핑 추출, 번역문 치환, 폰트 생성 과정을 Python 소스로 공개합니다.
 
@@ -53,6 +54,7 @@ Nintendo Switch판 『Ar nosurge: Ode to an Unborn Star DX』(アルノサージ
 atmosphere/contents/01003CF0128DE000/romfs/Event/event/...
 atmosphere/contents/01003CF0128DE000/romfs/Data/NX/Font/MainFont_nx_0.g1t
 atmosphere/contents/01003CF0128DE000/romfs/Saves/systemMessage/...
+atmosphere/exefs_patches/ArNosurgeKoreanUI/28F3C3965CEB60AC18A23E2B2C0C4BEEE3C81D8B.ips
 ```
 
 ### 2-2. Ryujinx
@@ -60,9 +62,11 @@ atmosphere/contents/01003CF0128DE000/romfs/Saves/systemMessage/...
 1. 게임 목록에서 아르노사쥬/아르노서지를 우클릭하고 모드 폴더를 엽니다.
 2. `korean_final` 같은 임의의 폴더를 하나 만듭니다.
 3. 그 안에 저장소의 `atmosphere/contents/01003CF0128DE000/romfs` 폴더를 복사합니다.
+4. `atmosphere/exefs_patches/ArNosurgeKoreanUI/28F3C3965CEB60AC18A23E2B2C0C4BEEE3C81D8B.ips`를 `korean_final/exefs/` 아래에 복사합니다.
 
 ```text
 mods/contents/01003cf0128de000/korean_final/romfs/...
+mods/contents/01003cf0128de000/korean_final/exefs/28F3C3965CEB60AC18A23E2B2C0C4BEEE3C81D8B.ips
 ```
 
 기존 대사·폰트 시험 모드가 함께 활성화되어 있으면 충돌할 수 있으므로 다른 모드는 비활성화해 주세요.
@@ -74,18 +78,50 @@ mods/contents/01003cf0128de000/korean_final/romfs/...
 | 이벤트 대사 EBM | 2,239개 | 한국어 번역 및 한자 대체 코드 적용 |
 | 시스템 메시지 XML | 2개, 472개 항목 | 한국어 번역 및 한자 대체 코드 적용 |
 | 시마법 선택 UI XML | 2개 | 고정 항목 한국어 번역 및 동적 일본어 글자 보호 |
-| 고유 한글 음절 | 1,372자 | 게임 폰트 아틀라스에 추가 |
+| 업데이트 1.0.1 `main` 문자열 | 6,665개 | 고정 길이 IPS 번역, 길이 초과 0건 |
+| 고유 한글 음절 | 1,412자 | 게임 폰트 아틀라스에 추가 |
 | 한글 출현 수 | 987,758회 | 전부 대체 코드로 변환 |
 | 메인 폰트 | 1개 | `MainFont_nx_0.g1t` 알파 블록 수정 |
 | EBM 구조 검증 | 2,239개 | 오류 0건 |
 | 역변환 검증 | 2,239개 | 원 번역본과 불일치 0건 |
 
+### `main` 문자열의 띄어쓰기 제거와 축약
+
+메뉴명·지명·인명·내부 안내 문구 중 일부는 EBM이나 XML이 아니라 업데이트 1.0.1의 `main` 실행 파일 안에 NUL 종료 UTF-8 문자열로 들어 있습니다. 이 문자열은 원문 바로 뒤에 다른 문자열이나 데이터가 이어지는 **고정 크기 슬롯**이므로, 번역문이 원문 공간보다 길면 다음 데이터를 침범해 게임이 멈추거나 종료될 수 있습니다.
+
+한국어와 일본어의 완성형 문자는 UTF-8에서 대체로 3바이트지만 한국어 번역에는 띄어쓰기와 조사가 추가됩니다. 이 때문에 의미상 더 짧아 보이는 한국어도 원래 슬롯을 몇 바이트 초과할 수 있습니다. `main` 번역은 다음 순서로 슬롯 크기를 맞췄습니다.
+
+1. 자연스러운 번역문을 먼저 작성합니다.
+2. 슬롯을 초과한 문장은 띄어쓰기를 제거합니다.
+3. 그래도 초과하면 조사·주어·종결어미를 생략하고 짧은 동의어를 사용합니다.
+4. 지명·인명·기술명은 식별 가능한 범위에서 줄이고, 내부 식별자는 짧은 표기로 바꿉니다.
+5. 단어 중간을 바이트 단위로 자르지 않으며, `<CR>`, `<IMxx>` 같은 제어문자는 원문 개수와 순서를 유지합니다.
+
+따라서 일부 `main` 문구는 일반적인 한국어 표기와 달리 띄어쓰기가 없거나 `시마법:아메노신권`, `린마선스기노역`처럼 축약되어 표시됩니다. 이는 번역 누락이 아니라 **실행 파일의 인접 데이터 손상을 피하기 위한 의도적인 제약**입니다.
+
+초기 조사에서는 긴 번역문을 별도의 빈 영역에 넣고 포인터를 바꾸는 방식도 시험했습니다. 포인터와 AArch64 참조 자체는 수정할 수 있었지만, 실행 파일의 0영역 일부가 실제 더미가 아니라 시스템 전환 시 사용하는 테이블이어서 시스템 메뉴에서 메인 메뉴로 돌아갈 때 게임이 멈췄습니다. 현재 배포본은 이 포인터 재배치 방식을 전혀 사용하지 않으며, 모든 `main` 번역문이 원래 슬롯 이내인지 빌드 시 검사합니다. 현재 결과는 **6,665개 적용, 길이 초과 0개, 제외 0개**입니다.
+
 ### 아직 번역되지 않았거나 확인이 필요한 부분
 
-- 화자명(예: `デルタ`)은 이벤트 대사와 별도 리소스라 일본어로 남아 있습니다.
 - 이번에 반영한 시스템 안내·시마법 선택 화면·일부 메뉴 설명·상점 대사 외의 아이템명, UI 및 이미지로 그려진 일본어는 아직 번역되지 않은 부분이 있습니다.
 - 전체 플레이 검수가 완료된 상태는 아니므로 후반부에서 새로운 미번역·폰트 충돌이 발견될 수 있습니다.
 - 희귀 한자 영역을 한글에 빌려 씁니다. 확인된 시마법 선택 화면의 동적 일본어 문자는 보호 목록에서 제외했지만, 아직 확인하지 못한 UI에서 충돌이 발견될 수 있습니다.
+
+### 문제 제보
+
+오역, 어색한 축약, 미번역 일본어, 글자 깨짐, 화면 멈춤이나 게임 종료 등 패치 사용 중 발견한 문제는 **GitHub의 [Issues 탭](../../issues)에 등록해 주세요.** README 댓글이나 커밋 메시지보다 Issues에 남겨야 문제별 진행 상황과 수정 이력을 관리할 수 있습니다.
+
+가능하면 다음 정보를 함께 적어 주세요.
+
+- 문제가 발생한 장면과 진행 상황
+- 화면에 표시된 문구 또는 일본어 원문
+- 스크린샷
+- 사용 환경(Atmosphère 또는 Ryujinx)
+- 게임 업데이트 1.0.1 설치 여부
+- 동일한 방법으로 문제가 다시 발생하는지 여부
+- 문제가 발생하기 직전의 세이브 파일(가능하면 ZIP으로 압축)
+
+게임이 멈추거나 종료되는 문제는 직전에 선택한 메뉴와 재현 순서를 단계별로 적고, 같은 상황을 재현할 수 있는 세이브 파일을 함께 첨부해 주세요. 세이브에 사용자명·계정 정보 등 공개하면 안 되는 정보가 포함되어 있지 않은지 먼저 확인하세요. NSP/XCI/NCA, 타이틀 키, 펌웨어 등 정품 게임 데이터는 첨부하지 마세요.
 
 ## 4. 한글 폰트 처리 방식
 
@@ -97,7 +133,7 @@ mods/contents/01003cf0128de000/korean_final/romfs/...
 2. RenderDoc 캡처의 폰트 draw call 정점 버퍼에서 문자별 UV 좌표를 추출했습니다.
 3. 기존에 화면으로 확인한 12개 문자와 대조해 매핑이 모두 일치하는지 검증했습니다.
 4. 같은 셀을 공유하는 문자와 실제 UV 폭·높이가 24픽셀 미만인 문자를 제외했습니다.
-5. 번역문에 남지 않은 희귀 한자 1,372개와 한글 음절 1,372자를 1:1로 연결했습니다.
+5. 번역문에 남지 않은 희귀 한자 1,412개와 한글 음절 1,412자를 1:1로 연결했습니다.
 6. 번역문의 한글은 대응 한자로 바꾸고, 그 한자가 가리키는 실제 UV 사각형에 한글 글리프를 그렸습니다.
 
 초기에는 26픽셀 고정 격자에 글자를 그렸지만 실제 문자별 UV 좌상단이 최대 약 ±13픽셀 이동해 획이 잘렸습니다. 최종판은 고정 격자가 아니라 **각 문자의 실제 UV 사각형**에 그립니다.
@@ -113,8 +149,10 @@ mods/contents/01003cf0128de000/korean_final/romfs/...
 - `translations/romfs/Event/event/**/*.ebm`: 한국어 이벤트 대사 EBM 2,239개
 - `translations/romfs/Saves/systemMessage/*.xml`: 한국어 시스템 메시지 XML 2개
 - `translations/romfs/Saves/ui/**/*.xml`: 한국어 UI XML
+- `translations/exefs/main_1.0.1.csv`: 업데이트 1.0.1 `main` 문자열의 원문·번역·주소·슬롯 크기
+- `translations/exefs/main_1.0.1_manual_compaction.json`: 자동 축약으로 해결되지 않은 문구의 검수된 수동 축약표
 
-`atmosphere/` 아래 파일은 게임에서 한글 폰트를 표시하기 위해 한글이 대체 한자로 변환된 설치용 결과물이므로 번역 수정에는 사용하지 마세요. 번역은 `translations/romfs`에서 고친 뒤 아래 통합 빌드 명령으로 설치용 파일을 다시 생성합니다. `<CR>`, `<IMxx>`, `<RG>` 등의 제어문자는 위치까지 유지해야 합니다.
+`atmosphere/` 아래 파일은 게임에서 한글 폰트를 표시하기 위해 한글이 대체 한자로 변환된 설치용 결과물이므로 번역 수정에는 사용하지 마세요. EBM·XML 번역은 `translations/romfs`, 실행 파일 문자열은 `translations/exefs`에서 고친 뒤 아래 통합 빌드 명령으로 설치용 파일을 다시 생성합니다. `<CR>`, `<IMxx>`, `<RG>` 등의 제어문자는 위치까지 유지해야 합니다.
 
 ### 요구 사항
 
@@ -134,9 +172,10 @@ python translate_all.py `
 `translate_all.py`는 다음 작업을 순서대로 한 번에 처리합니다.
 
 1. `translations/romfs/Event/event`의 한국어 EBM 변환
-2. EBM과 Saves XML에 사용된 모든 한글 음절의 폰트 생성
+2. EBM, Saves XML과 `main` 번역에 사용된 모든 한글 음절의 폰트 생성
 3. `translations/romfs/Saves` 아래 시스템 메시지와 UI XML 변환
-4. `atmosphere/contents/01003CF0128DE000/`에 설치 가능한 결과물 출력
+4. 업데이트 1.0.1 `main` 문자열 IPS 생성
+5. `atmosphere/contents/01003CF0128DE000/`과 `atmosphere/exefs_patches/`에 설치 가능한 결과물 출력
 
 원본 폰트를 `original/romfs/Data/NX/Font/MainFont_nx_0.g1t`에 두면 `--original-font` 옵션 없이 `python translate_all.py`만 실행해도 됩니다. 한글↔대체 한자↔셀 대응표와 통계는 `build/final_mod_report.json`에 기록됩니다. `atmosphere/`와 `build/`는 생성 결과물이므로 Git에 포함되지 않습니다.
 
@@ -153,6 +192,7 @@ python translate_all.py `
 - `translations/romfs/Event/event/**/*.ebm`
 - `translations/romfs/Saves/systemMessage/*.xml`
 - `translations/romfs/Saves/ui/**/*.xml`
+- `translations/exefs/main_1.0.1.csv`
 - 정품 게임에서 추출한 원본 `MainFont_nx_0.g1t`
 
 ```powershell
@@ -271,6 +311,7 @@ python tools/decode_renderdoc_font_draw.py `
 - **중복 방지**: 동일 폰트 셀을 공유하는 30개 셀은 후보에서 전부 제외했습니다.
 - **실제 UV 배치**: 폭·높이가 모두 24픽셀 이상인 고유 영역만 사용했습니다.
 - **텍스트 치환**: 완성형 한글과 CJK 한자는 UTF-8에서 모두 3바이트이므로 파일 크기를 유지하며 치환할 수 있습니다.
+- **실행 파일 문자열**: 번역문을 원래 슬롯 안에만 기록하고, 초과 문장은 공백 제거 후 의미 보존 축약을 적용합니다. 포인터 재배치나 임의 0영역 사용은 하지 않습니다.
 - **시스템 HELP 인코딩**: 편집 원본은 UTF-8로 유지하되, 설치용 `SysInfo.xml`만 원본 로더에 맞춰 Shift-JIS로 생성합니다.
 - **전수 검증**: 패치 EBM을 역치환해 번역 원본과 바이트 단위로 비교했습니다.
 
@@ -282,6 +323,8 @@ python tools/decode_renderdoc_font_draw.py `
 | `translations/romfs/Event/event/` | 수정 가능한 한국어 이벤트 대사 EBM 2,239개 |
 | `translations/romfs/Saves/systemMessage/` | 수정 가능한 한국어 시스템 메시지 XML |
 | `translations/romfs/Saves/ui/` | 수정 가능한 한국어 UI XML |
+| `translations/exefs/main_1.0.1.csv` | 업데이트 1.0.1 실행 파일 문자열의 원문·번역·주소·슬롯 크기 |
+| `translations/exefs/main_1.0.1_manual_compaction.json` | 슬롯 제한 때문에 직접 검수한 축약 번역표 |
 | `data/char_to_cell_renderdoc.json` | 일본어 문자별 셀·UV 사각형 |
 | `data/probe_chars_full.json` | 탐침 문자 목록과 원문 출현 빈도 |
 | `data/protected_ui_chars.json` | 한글 대체 대상으로 사용하지 않을 동적 UI 문자 목록 |
@@ -289,6 +332,9 @@ python tools/decode_renderdoc_font_draw.py `
 | `fonts/Pretendard-Bold.otf` | 한글 글리프 생성에 사용하는 Pretendard Bold |
 | `tools/build_final_korean_mod.py` | 최종 EBM·폰트 생성기 |
 | `tools/build_system_message.py` | 한국어 XML을 설치용 대체 문자 XML로 변환 |
+| `tools/build_main_text_patch.py` | `main_1.0.1.csv`를 검증하고 고정 길이 IPS 생성 |
+| `tools/compact_main_translations.py` | 초과 문장의 공백 제거 및 로컬 모델 단어 축약 |
+| `tools/apply_main_compaction_overrides.py` | 검수된 수동 축약표 적용 및 바이트·제어문자 검증 |
 | `translate_all.py` | EBM·폰트·시스템 메시지·UI를 한 번에 생성하는 통합 실행 파일 |
 | `tools/decode_renderdoc_font_draw.py` | RenderDoc 정점 버퍼 해독기 |
 

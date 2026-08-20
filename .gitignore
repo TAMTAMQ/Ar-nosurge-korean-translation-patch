@@ -4,6 +4,7 @@
 /dist/
 /release/
 /output/
+/backups/
 
 # 정품 게임에서 사용자가 직접 추출해야 하는 파일
 /original/

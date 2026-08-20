@@ -63,7 +63,7 @@ def main():
         sys.executable, str(ROOT / "tools" / "build_final_korean_mod.py"),
         "--translated-mod", str(TRANSLATIONS),
         "--original-font", str(original_font),
-        "--extra-text-dir", str(SAVES_TRANSLATIONS),
+        "--extra-text-dir", str(TRANSLATIONS),
         "--output", str(ATMOSPHERE),
         "--report", str(BUILD_REPORT),
     ])
@@ -78,7 +78,8 @@ def main():
 
     print("\n=== 3/3 업데이트 1.0.1 동적 UI 패치 생성 ===")
     run([
-        sys.executable, str(ROOT / "tools" / "build_exefs_ui_patch.py"),
+        sys.executable, str(ROOT / "tools" / "build_main_text_patch.py"),
+        "--translations", str(TRANSLATIONS / "exefs" / "main_1.0.1.csv"),
         "--mapping", str(BUILD_REPORT),
         "--output", str(ROOT / "atmosphere"),
     ])
