@@ -17,7 +17,10 @@
 
 import argparse
 import struct
+import sys
 from pathlib import Path
+
+sys.path.insert(0, str(Path(__file__).resolve().parent))
 
 
 BUILD_ID = "28F3C3965CEB60AC18A23E2B2C0C4BEEE3C81D8B"
@@ -30,7 +33,9 @@ PATCHED = struct.pack("<I", 0x2A1F03E1)    # mov w1, wzr
 
 def verify(main_path: Path) -> None:
     """사용자가 추출한 main에서 대상 명령어가 실제로 그대로인지 확인한다."""
-    import lz4.block
+    # 저장소의 순수 파이썬 구현을 쓴다. lz4 패키지를 따로 설치하지 않아도
+    # 빌드가 돌아가야 하기 때문이다.
+    from build_patched_main import lz4_decompress
 
     data = main_path.read_bytes()
     if data[:4] != b"NSO0":
@@ -39,7 +44,7 @@ def verify(main_path: Path) -> None:
     text_off, _, text_size = struct.unpack_from("<III", data, 0x10)
     text_csize = struct.unpack_from("<I", data, 0x60)[0]
     raw = data[text_off:text_off + (text_csize if flags & 1 else text_size)]
-    text = lz4.block.decompress(raw, uncompressed_size=text_size) if flags & 1 else raw
+    text = lz4_decompress(bytes(raw), text_size) if flags & 1 else raw
 
     found = text[TARGET:TARGET + 4]
     if found != ORIGINAL:

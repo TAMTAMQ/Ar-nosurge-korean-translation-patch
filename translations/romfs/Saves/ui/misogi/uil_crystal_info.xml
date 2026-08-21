@@ -65,7 +65,7 @@
 			</node>
 			<node name="page2">
 				<!-- テキスト -->
-				<text name="message" text="１２３４５６７８９０１２３４５６７８１２３４５６７８９０１２３４５６７８페이지 2" font_size="20" line_char_length="12" line_space="13" pos="25,66.667,0"/>
+				<text name="message" text="１２３４５６７８９０１２３４５６７８１２３４５６７８９０１２３４５６７８페이지 ２" font_size="20" line_char_length="12" line_space="13" pos="25,66.667,0"/>
 			</node>
 		</node>
 	</image>

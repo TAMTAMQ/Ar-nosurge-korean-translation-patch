@@ -84,7 +84,7 @@
 				<bind_node node="over_image" anim="anm_common_cursor_blink"/>
 			</anim_ctrl>
 		</node>
-		<text name="menu_text" text="사과와 꿀890" font_size="20" align="left" pos="30,12" drop_shadow="true"/>
+		<text name="menu_text" text="사과와 꿀８９０" font_size="20" align="left" pos="30,12" drop_shadow="true"/>
 		<text name="menu_need_dp" text="99" font_size="24" align="right" pos="475,16" drop_shadow="true" copy="NUMBER01_24PX"/>
 		<image name="need_dp_draw" pos="482,12" style="gen_bios01_dp01"/>
 		<!--DP選択肢開始用in-->

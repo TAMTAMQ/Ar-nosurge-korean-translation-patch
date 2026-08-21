@@ -20,7 +20,7 @@
 				<bind_node node="roll" anim="anm_common_rotate"/>
 			</anim_ctrl>
 		</node>
-		<text name="menu_text" text="사과와 꿀890" font_size="20" align="left" pos="30,12" drop_shadow="true"/>
+		<text name="menu_text" text="사과와 꿀８９０" font_size="20" align="left" pos="30,12" drop_shadow="true"/>
 		<text name="menu_need_dp" text="99" font_size="24" align="right" pos="475,16" drop_shadow="true" copy="NUMBER01_24PX"/>
 		<image pos="486,9" style="gen_bios01_dp02" color="255, 255, 255, 255"/>
 	</node>

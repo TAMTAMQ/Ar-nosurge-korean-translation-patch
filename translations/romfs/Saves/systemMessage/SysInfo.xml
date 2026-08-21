@@ -93,7 +93,7 @@
 	<SysInfo Text="조합 수량을 선택합니다" />
 	<SysInfo Text="조합 가능한 재료를 선택합니다" />
 	<SysInfo Text="조합 수량을 선택합니다" />
-	<SysInfo Text="BGM을 감상합니다" />
+	<SysInfo Text="ＢＧＭ을 감상합니다" />
 	<SysInfo Text="시곡을 감상합니다" />
 	<SysInfo Text="무비를 감상합니다" />
 	<SysInfo Text="스틸 감상" />
@@ -101,7 +101,7 @@
 	<SysInfo Text="조합 이벤트 리플레이" />
 	<SysInfo Text="모델 감상" />
 	<SysInfo Text="도감 감상" />
-	<SysInfo Text="감상할 BGM 선택" />
+	<SysInfo Text="감상할 ＢＧＭ 선택" />
 	<SysInfo Text="감상할 시곡 선택" />
 	<SysInfo Text="감상할 무비 선택" />
 	<SysInfo Text="감상할 모델 선택" />
@@ -129,7 +129,7 @@
 	<SysInfo Text="보충 정보를 선택합니다" />
 	<SysInfo Text="습득한 프렌드 기술을 확인합니다" />
 	<SysInfo Text="프렌드 기술을 선택합니다" />
-	<SysInfo Text="설치된 DLC를 확인합니다" />
-	<SysInfo Text="현재 설치되어 있는 DLC입니다" />
+	<SysInfo Text="설치된 ＤＬＣ를 확인합니다" />
+	<SysInfo Text="현재 설치되어 있는 ＤＬＣ입니다" />
 	<SysInfo Text="매뉴얼을 표시합니다" />
 </Root>

@@ -61,7 +61,7 @@
 	<ShopData ShopName="비스트로 『네이 아 프랑세』" ShopTag="SHOP_NAY" itemName="니쿠자가" ItemTag="ITEM_N_048" Flag="0" Cost="13740" EvStart="EVENT_IM21_480"/>
 	<ShopData ShopName="비스트로 『네이 아 프랑세』" ShopTag="SHOP_NAY" itemName="뉴로키" ItemTag="ITEM_N_021" Flag="0" Cost="720" EvStart="EVENT_ZZ01_010"/>
 	<ShopData ShopName="비스트로 『네이 아 프랑세』" ShopTag="SHOP_NAY" itemName="계약의 홍베코" ItemTag="ITEM_N_024" Flag="0" Cost="300" EvStart="EVENT_IM21_240"/>
-	<ShopData ShopName="비스트로 『네이 아 프랑세』" ShopTag="SHOP_NAY" itemName="카논 데 카논" ItemTag="ITEM_N_034" Flag="0" Cost="1140" EvStart="EVENT_IM21_340"/>
+	<ShopData ShopName="비스트로 『네이 아 프랑세』" ShopTag="SHOP_NAY" itemName="카논・데・카논" ItemTag="ITEM_N_034" Flag="0" Cost="1140" EvStart="EVENT_IM21_340"/>
 	<ShopData ShopName="비스트로 『네이 아 프랑세』" ShopTag="SHOP_NAY" itemName="천통희의 거울" ItemTag="ITEM_N_042" Flag="0" Cost="6060" EvStart="EVENT_IM21_420"/>
 	<ShopData ShopName="비스트로 『네이 아 프랑세』" ShopTag="SHOP_NAY" itemName="초합금 당신" ItemTag="ITEM_N_009" Flag="0" Cost="260" EvStart="EVENT_ZZ01_010"/>
 	<ShopData ShopName="비스트로 『네이 아 프랑세』" ShopTag="SHOP_NAY" itemName="루피아네스 결정" ItemTag="ITEM_N_037" Flag="0" Cost="1380" EvStart="EVENT_ZZ01_010"/>
@@ -72,50 +72,50 @@
 	<ShopData ShopName="비스트로 『네이 아 프랑세』" ShopTag="SHOP_NAY" itemName="트위스터 런치" ItemTag="ITEM_N_027" Flag="0" Cost="2540" EvStart="EVENT_ZZ01_010"/>
 	<ShopData ShopName="비스트로 『네이 아 프랑세』" ShopTag="SHOP_NAY" itemName="라젤라" ItemTag="ITEM_N_028" Flag="0" Cost="280" EvStart="EVENT_ZZ01_010"/>
 	<ShopData ShopName="비스트로 『네이 아 프랑세』" ShopTag="SHOP_NAY" itemName="프림노트론" ItemTag="ITEM_N_043" Flag="0" Cost="1880" EvStart="EVENT_IM21_430"/>
-	<ShopData ShopName="노에리아 연구소" ShopTag="SHOP_SARLY" itemName="TC21 58극관" ItemTag="ITEM_A_037" Flag="0" Cost="40"/>
-	<ShopData ShopName="노에리아 연구소" ShopTag="SHOP_SARLY" itemName="도계 스플리터" ItemTag="ITEM_A_038" Flag="0" Cost="50"/>
-	<ShopData ShopName="노에리아 연구소" ShopTag="SHOP_SARLY" itemName="플랫 보드 수지" ItemTag="ITEM_A_039" Flag="0" Cost="40"/>
-	<ShopData ShopName="노에리아 연구소" ShopTag="SHOP_SARLY" itemName="파워 소닉 100" ItemTag="ITEM_A_040" Flag="0" Cost="60"/>
-	<ShopData ShopName="노에리아 연구소" ShopTag="SHOP_SARLY" itemName="마루카메 인장 도력선" ItemTag="ITEM_A_048" Flag="0" Cost="50"/>
-	<ShopData ShopName="노에리아 연구소" ShopTag="SHOP_SARLY" itemName="디스크람" ItemTag="ITEM_A_043" Flag="0" Cost="60" EvStart="EVENT_XG01_040"/>
-	<ShopData ShopName="노에리아 연구소" ShopTag="SHOP_SARLY" itemName="버스트 경화 겔" ItemTag="ITEM_A_044" Flag="0" Cost="50" EvStart="EVENT_XG01_040"/>
-	<ShopData ShopName="노에리아 연구소" ShopTag="SHOP_SARLY" itemName="DDW 밀도 센서" ItemTag="ITEM_A_045" Flag="0" Cost="60" EvStart="EVENT_XG01_040"/>
-	<ShopData ShopName="노에리아 연구소" ShopTag="SHOP_SARLY" itemName="휴대용 사이클로트론" ItemTag="ITEM_A_047" Flag="0" Cost="60" EvStart="EVENT_XG01_040"/>
-	<ShopData ShopName="노에리아 연구소" ShopTag="SHOP_SARLY" itemName="파워 소닉 500" ItemTag="ITEM_A_041" Flag="0" Cost="100" EvStart="EVENT_XG01_050"/>
-	<ShopData ShopName="노에리아 연구소" ShopTag="SHOP_SARLY" itemName="안티 프릭션 기어" ItemTag="ITEM_A_042" Flag="0" Cost="80" EvStart="EVENT_XG01_050"/>
-	<ShopData ShopName="노에리아 연구소" ShopTag="SHOP_SARLY" itemName="우리의 미래 식사" ItemTag="ITEM_S_001" Flag="0" Cost="300" EvStart="EVENT_IM41_010"/>
-	<ShopData ShopName="노에리아 연구소" ShopTag="SHOP_SARLY" itemName="토리타마！" ItemTag="ITEM_S_004" Flag="0" Cost="600" EvStart="EVENT_IM41_040"/>
-	<ShopData ShopName="노에리아 연구소" ShopTag="SHOP_SARLY" itemName="복각 뉴로스틱" ItemTag="ITEM_S_024" Flag="0" Cost="600" EvStart="EVENT_IM41_240"/>
-	<ShopData ShopName="노에리아 연구소" ShopTag="SHOP_SARLY" itemName="푸츈 푸딩" ItemTag="ITEM_S_025" Flag="0" Cost="1280" EvStart="EVENT_ZZ01_010"/>
-	<ShopData ShopName="노에리아 연구소" ShopTag="SHOP_SARLY" itemName="각신락의 곡옥" ItemTag="ITEM_S_037" Flag="0" Cost="600" EvStart="EVENT_IM41_370"/>
-	<ShopData ShopName="노에리아 연구소" ShopTag="SHOP_SARLY" itemName="천재의 즙" ItemTag="ITEM_S_026" Flag="0" Cost="200" EvStart="EVENT_IM41_260"/>
-	<ShopData ShopName="노에리아 연구소" ShopTag="SHOP_SARLY" itemName="스텔스 발산 드링크" ItemTag="ITEM_S_015" Flag="0" Cost="880" EvStart="EVENT_IM41_150"/>
-	<ShopData ShopName="노에리아 연구소" ShopTag="SHOP_SARLY" itemName="수제 머플러" ItemTag="ITEM_S_034" Flag="0" Cost="2120" EvStart="EVENT_ZZ01_010"/>
-	<ShopData ShopName="노에리아 연구소" ShopTag="SHOP_SARLY" itemName="페펜 앳마크" ItemTag="ITEM_S_007" Flag="0" Cost="360" EvStart="EVENT_IM41_070"/>
-	<ShopData ShopName="노에리아 연구소" ShopTag="SHOP_SARLY" itemName="양자 위성 스피나" ItemTag="ITEM_S_016" Flag="0" Cost="1060" EvStart="EVENT_IM41_160"/>
-	<ShopData ShopName="노에리아 연구소" ShopTag="SHOP_SARLY" itemName="파동 차원 컨버터" ItemTag="ITEM_S_008" Flag="0" Cost="160" EvStart="EVENT_IM41_080"/>
-	<ShopData ShopName="노에리아 연구소" ShopTag="SHOP_SARLY" itemName="데코히어런스 뽑기" ItemTag="ITEM_S_028" Flag="0" Cost="680" EvStart="EVENT_ZZ01_010"/>
-	<ShopData ShopName="노에리아 연구소" ShopTag="SHOP_SARLY" itemName="IAQL 이온 우산" ItemTag="ITEM_S_035" Flag="0" Cost="2060" EvStart="EVENT_IM41_350"/>
-	<ShopData ShopName="노에리아 연구소" ShopTag="SHOP_SARLY" itemName="진성 튜닝관" ItemTag="ITEM_S_002" Flag="0" Cost="180" EvStart="EVENT_ZZ01_010"/>
-	<ShopData ShopName="노에리아 연구소" ShopTag="SHOP_SARLY" itemName="비가개성 뉴로 키" ItemTag="ITEM_S_017" Flag="0" Cost="380" EvStart="EVENT_IM41_170"/>
-	<ShopData ShopName="노에리아 연구소" ShopTag="SHOP_SARLY" itemName="제노 웨이브 기어" ItemTag="ITEM_S_019" Flag="0" Cost="360" EvStart="EVENT_IM41_190"/>
-	<ShopData ShopName="노에리아 연구소" ShopTag="SHOP_SARLY" itemName="정지 위성 궤도 사출 장치" ItemTag="ITEM_S_012" Flag="0" Cost="540" EvStart="EVENT_IM41_120"/>
-	<ShopData ShopName="노에리아 연구소" ShopTag="SHOP_SARLY" itemName="아이 짱 쇼 군 인연 예보" ItemTag="ITEM_S_020" Flag="0" Cost="1140" EvStart="EVENT_ZZ01_010"/>
-	<ShopData ShopName="노에리아 연구소" ShopTag="SHOP_SARLY" itemName="메모리안 로커" ItemTag="ITEM_S_010" Flag="0" Cost="320" EvStart="EVENT_IM41_100"/>
-	<ShopData ShopName="노에리아 연구소" ShopTag="SHOP_SARLY" itemName="미스터 레지스트라" ItemTag="ITEM_S_029" Flag="0" Cost="1880" EvStart="EVENT_ZZ01_010"/>
-	<ShopData ShopName="노에리아 연구소" ShopTag="SHOP_SARLY" itemName="헬리 퓨전" ItemTag="ITEM_S_031" Flag="0" Cost="1040" EvStart="EVENT_IM41_310"/>
-	<ShopData ShopName="노에리아 연구소" ShopTag="SHOP_SARLY" itemName="쇼킹 카트" ItemTag="ITEM_S_022" Flag="0" Cost="660" EvStart="EVENT_ZZ01_010"/>
-	<ShopData ShopName="노에리아 연구소" ShopTag="SHOP_SARLY" itemName="트리니티 버너" ItemTag="ITEM_S_013" Flag="0" Cost="720" EvStart="EVENT_IM41_130"/>
-	<ShopData ShopName="노에리아 연구소" ShopTag="SHOP_SARLY" itemName="미신 건" ItemTag="ITEM_S_005" Flag="0" Cost="440" EvStart="EVENT_ZZ01_010"/>
-	<ShopData ShopName="노에리아 연구소" ShopTag="SHOP_SARLY" itemName="리셋 스톤" ItemTag="ITEM_S_032" Flag="0" Cost="1020" EvStart="EVENT_IM41_320"/>
-	<ShopData ShopName="노에리아 연구소" ShopTag="SHOP_SARLY" itemName="HD 컴파일러" ItemTag="ITEM_S_042" Flag="0" Cost="3000" EvStart="EVENT_IM41_420"/>
-	<ShopData ShopName="노에리아 연구소" ShopTag="SHOP_SARLY" itemName="백만분의 일 소레일" ItemTag="ITEM_S_038" Flag="0" Cost="1800" EvStart="EVENT_ZZ01_010"/>
-	<ShopData ShopName="노에리아 연구소" ShopTag="SHOP_SARLY" itemName="루피아의 추" ItemTag="ITEM_S_040" Flag="0" Cost="2580" EvStart="EVENT_ZZ01_010"/>
-	<ShopData ShopName="노에리아 연구소" ShopTag="SHOP_SARLY" itemName="S2 미사일 불꽃놀이" ItemTag="ITEM_S_045" Flag="0" Cost="4820" EvStart="EVENT_IM41_450"/>
-	<ShopData ShopName="노에리아 연구소" ShopTag="SHOP_SARLY" itemName="중력파 진동 통신기" ItemTag="ITEM_S_043" Flag="0" Cost="4000" EvStart="EVENT_IM41_430"/>
-	<ShopData ShopName="노에리아 연구소" ShopTag="SHOP_SARLY" itemName="아르노사쥬 관 LE" ItemTag="ITEM_S_046" Flag="0" Cost="7580" EvStart="EVENT_ZZ01_010"/>
-	<ShopData ShopName="노에리아 연구소" ShopTag="SHOP_SARLY" itemName="라셸 팩터" ItemTag="ITEM_S_047" Flag="0" Cost="16180" EvStart="EVENT_ZZ01_010"/>
-	<ShopData ShopName="노에리아 연구소" ShopTag="SHOP_SARLY" itemName="리인카네이션" ItemTag="ITEM_S_048" Flag="0" Cost="0" EvStart="EVENT_ZZ01_010"/>
+	<ShopData ShopName="노에리아・연구소" ShopTag="SHOP_SARLY" itemName="ＴＣ２１ 58극관" ItemTag="ITEM_A_037" Flag="0" Cost="40"/>
+	<ShopData ShopName="노에리아・연구소" ShopTag="SHOP_SARLY" itemName="도계 스플리터" ItemTag="ITEM_A_038" Flag="0" Cost="50"/>
+	<ShopData ShopName="노에리아・연구소" ShopTag="SHOP_SARLY" itemName="플랫 보드 수지" ItemTag="ITEM_A_039" Flag="0" Cost="40"/>
+	<ShopData ShopName="노에리아・연구소" ShopTag="SHOP_SARLY" itemName="파워 소닉 １００" ItemTag="ITEM_A_040" Flag="0" Cost="60"/>
+	<ShopData ShopName="노에리아・연구소" ShopTag="SHOP_SARLY" itemName="마루카메 인장 도력선" ItemTag="ITEM_A_048" Flag="0" Cost="50"/>
+	<ShopData ShopName="노에리아・연구소" ShopTag="SHOP_SARLY" itemName="디스크람" ItemTag="ITEM_A_043" Flag="0" Cost="60" EvStart="EVENT_XG01_040"/>
+	<ShopData ShopName="노에리아・연구소" ShopTag="SHOP_SARLY" itemName="버스트 경화 겔" ItemTag="ITEM_A_044" Flag="0" Cost="50" EvStart="EVENT_XG01_040"/>
+	<ShopData ShopName="노에리아・연구소" ShopTag="SHOP_SARLY" itemName="ＤＤＷ 밀도 센서" ItemTag="ITEM_A_045" Flag="0" Cost="60" EvStart="EVENT_XG01_040"/>
+	<ShopData ShopName="노에리아・연구소" ShopTag="SHOP_SARLY" itemName="휴대용 사이클로트론" ItemTag="ITEM_A_047" Flag="0" Cost="60" EvStart="EVENT_XG01_040"/>
+	<ShopData ShopName="노에리아・연구소" ShopTag="SHOP_SARLY" itemName="파워 소닉 ５００" ItemTag="ITEM_A_041" Flag="0" Cost="100" EvStart="EVENT_XG01_050"/>
+	<ShopData ShopName="노에리아・연구소" ShopTag="SHOP_SARLY" itemName="안티 프릭션 기어" ItemTag="ITEM_A_042" Flag="0" Cost="80" EvStart="EVENT_XG01_050"/>
+	<ShopData ShopName="노에리아・연구소" ShopTag="SHOP_SARLY" itemName="우리의 미래 식사" ItemTag="ITEM_S_001" Flag="0" Cost="300" EvStart="EVENT_IM41_010"/>
+	<ShopData ShopName="노에리아・연구소" ShopTag="SHOP_SARLY" itemName="토리타마！" ItemTag="ITEM_S_004" Flag="0" Cost="600" EvStart="EVENT_IM41_040"/>
+	<ShopData ShopName="노에리아・연구소" ShopTag="SHOP_SARLY" itemName="복각 뉴로스틱" ItemTag="ITEM_S_024" Flag="0" Cost="600" EvStart="EVENT_IM41_240"/>
+	<ShopData ShopName="노에리아・연구소" ShopTag="SHOP_SARLY" itemName="푸츈 푸딩" ItemTag="ITEM_S_025" Flag="0" Cost="1280" EvStart="EVENT_ZZ01_010"/>
+	<ShopData ShopName="노에리아・연구소" ShopTag="SHOP_SARLY" itemName="각신락의 곡옥" ItemTag="ITEM_S_037" Flag="0" Cost="600" EvStart="EVENT_IM41_370"/>
+	<ShopData ShopName="노에리아・연구소" ShopTag="SHOP_SARLY" itemName="천재의 즙" ItemTag="ITEM_S_026" Flag="0" Cost="200" EvStart="EVENT_IM41_260"/>
+	<ShopData ShopName="노에리아・연구소" ShopTag="SHOP_SARLY" itemName="스텔스 발산 드링크" ItemTag="ITEM_S_015" Flag="0" Cost="880" EvStart="EVENT_IM41_150"/>
+	<ShopData ShopName="노에리아・연구소" ShopTag="SHOP_SARLY" itemName="수제 머플러" ItemTag="ITEM_S_034" Flag="0" Cost="2120" EvStart="EVENT_ZZ01_010"/>
+	<ShopData ShopName="노에리아・연구소" ShopTag="SHOP_SARLY" itemName="페펜 앳마크" ItemTag="ITEM_S_007" Flag="0" Cost="360" EvStart="EVENT_IM41_070"/>
+	<ShopData ShopName="노에리아・연구소" ShopTag="SHOP_SARLY" itemName="양자 위성 스피나" ItemTag="ITEM_S_016" Flag="0" Cost="1060" EvStart="EVENT_IM41_160"/>
+	<ShopData ShopName="노에리아・연구소" ShopTag="SHOP_SARLY" itemName="파동 차원 컨버터" ItemTag="ITEM_S_008" Flag="0" Cost="160" EvStart="EVENT_IM41_080"/>
+	<ShopData ShopName="노에리아・연구소" ShopTag="SHOP_SARLY" itemName="데코히어런스 뽑기" ItemTag="ITEM_S_028" Flag="0" Cost="680" EvStart="EVENT_ZZ01_010"/>
+	<ShopData ShopName="노에리아・연구소" ShopTag="SHOP_SARLY" itemName="ＩＡＱＬ 이온 우산" ItemTag="ITEM_S_035" Flag="0" Cost="2060" EvStart="EVENT_IM41_350"/>
+	<ShopData ShopName="노에리아・연구소" ShopTag="SHOP_SARLY" itemName="진성 튜닝관" ItemTag="ITEM_S_002" Flag="0" Cost="180" EvStart="EVENT_ZZ01_010"/>
+	<ShopData ShopName="노에리아・연구소" ShopTag="SHOP_SARLY" itemName="비가개성 뉴로 키" ItemTag="ITEM_S_017" Flag="0" Cost="380" EvStart="EVENT_IM41_170"/>
+	<ShopData ShopName="노에리아・연구소" ShopTag="SHOP_SARLY" itemName="제노 웨이브 기어" ItemTag="ITEM_S_019" Flag="0" Cost="360" EvStart="EVENT_IM41_190"/>
+	<ShopData ShopName="노에리아・연구소" ShopTag="SHOP_SARLY" itemName="정지 위성 궤도 사출 장치" ItemTag="ITEM_S_012" Flag="0" Cost="540" EvStart="EVENT_IM41_120"/>
+	<ShopData ShopName="노에리아・연구소" ShopTag="SHOP_SARLY" itemName="아이 짱 쇼 군 인연 예보" ItemTag="ITEM_S_020" Flag="0" Cost="1140" EvStart="EVENT_ZZ01_010"/>
+	<ShopData ShopName="노에리아・연구소" ShopTag="SHOP_SARLY" itemName="메모리안 로커" ItemTag="ITEM_S_010" Flag="0" Cost="320" EvStart="EVENT_IM41_100"/>
+	<ShopData ShopName="노에리아・연구소" ShopTag="SHOP_SARLY" itemName="미스터 레지스트라" ItemTag="ITEM_S_029" Flag="0" Cost="1880" EvStart="EVENT_ZZ01_010"/>
+	<ShopData ShopName="노에리아・연구소" ShopTag="SHOP_SARLY" itemName="헬리 퓨전" ItemTag="ITEM_S_031" Flag="0" Cost="1040" EvStart="EVENT_IM41_310"/>
+	<ShopData ShopName="노에리아・연구소" ShopTag="SHOP_SARLY" itemName="쇼킹 카트" ItemTag="ITEM_S_022" Flag="0" Cost="660" EvStart="EVENT_ZZ01_010"/>
+	<ShopData ShopName="노에리아・연구소" ShopTag="SHOP_SARLY" itemName="트리니티 버너" ItemTag="ITEM_S_013" Flag="0" Cost="720" EvStart="EVENT_IM41_130"/>
+	<ShopData ShopName="노에리아・연구소" ShopTag="SHOP_SARLY" itemName="미신 건" ItemTag="ITEM_S_005" Flag="0" Cost="440" EvStart="EVENT_ZZ01_010"/>
+	<ShopData ShopName="노에리아・연구소" ShopTag="SHOP_SARLY" itemName="리셋 스톤" ItemTag="ITEM_S_032" Flag="0" Cost="1020" EvStart="EVENT_IM41_320"/>
+	<ShopData ShopName="노에리아・연구소" ShopTag="SHOP_SARLY" itemName="ＨＤ 컴파일러" ItemTag="ITEM_S_042" Flag="0" Cost="3000" EvStart="EVENT_IM41_420"/>
+	<ShopData ShopName="노에리아・연구소" ShopTag="SHOP_SARLY" itemName="백만분의 일 소레일" ItemTag="ITEM_S_038" Flag="0" Cost="1800" EvStart="EVENT_ZZ01_010"/>
+	<ShopData ShopName="노에리아・연구소" ShopTag="SHOP_SARLY" itemName="루피아의 추" ItemTag="ITEM_S_040" Flag="0" Cost="2580" EvStart="EVENT_ZZ01_010"/>
+	<ShopData ShopName="노에리아・연구소" ShopTag="SHOP_SARLY" itemName="Ｓ２ 미사일 불꽃놀이" ItemTag="ITEM_S_045" Flag="0" Cost="4820" EvStart="EVENT_IM41_450"/>
+	<ShopData ShopName="노에리아・연구소" ShopTag="SHOP_SARLY" itemName="중력파 진동 통신기" ItemTag="ITEM_S_043" Flag="0" Cost="4000" EvStart="EVENT_IM41_430"/>
+	<ShopData ShopName="노에리아・연구소" ShopTag="SHOP_SARLY" itemName="아르노사쥬 관 ＬＥ" ItemTag="ITEM_S_046" Flag="0" Cost="7580" EvStart="EVENT_ZZ01_010"/>
+	<ShopData ShopName="노에리아・연구소" ShopTag="SHOP_SARLY" itemName="라셸 팩터" ItemTag="ITEM_S_047" Flag="0" Cost="16180" EvStart="EVENT_ZZ01_010"/>
+	<ShopData ShopName="노에리아・연구소" ShopTag="SHOP_SARLY" itemName="리인카네이션" ItemTag="ITEM_S_048" Flag="0" Cost="0" EvStart="EVENT_ZZ01_010"/>
 	<ShopData ShopName="약사암 『쿠린텐』" ShopTag="SHOP_TATTORIA" itemName="피타반" ItemTag="ITEM_A_031" Flag="0" Cost="160"/>
 	<ShopData ShopName="약사암 『쿠린텐』" ShopTag="SHOP_TATTORIA" itemName="달콤한 막대기" ItemTag="ITEM_A_005" Flag="0" Cost="40"/>
 	<ShopData ShopName="약사암 『쿠린텐』" ShopTag="SHOP_TATTORIA" itemName="마루카메 인장 도력선" ItemTag="ITEM_A_048" Flag="0" Cost="50"/>
@@ -125,24 +125,24 @@
 	<ShopData ShopName="약사암 『쿠린텐』" ShopTag="SHOP_TATTORIA" itemName="샤라노와르 티" ItemTag="ITEM_T_019" Flag="0" Cost="1400" EvStart="EVENT_IM32_190"/>
 	<ShopData ShopName="약사암 『쿠린텐』" ShopTag="SHOP_TATTORIA" itemName="명물 플라센타" ItemTag="ITEM_T_001" Flag="0" Cost="440" EvStart="EVENT_IM32_010"/>
 	<ShopData ShopName="약사암 『쿠린텐』" ShopTag="SHOP_TATTORIA" itemName="하이드로 플라스크 소자" ItemTag="ITEM_A_051" Flag="0" Cost="2900" EvStart="EVENT_XG01_040" secretFlag="1"/>
-	<ShopData ShopName="약사암 『쿠린텐』" ShopTag="SHOP_TATTORIA" itemName="반입자 버스트 RNA" ItemTag="ITEM_A_055" Flag="0" Cost="2400" EvStart="EVENT_XG01_040" secretFlag="1"/>
+	<ShopData ShopName="약사암 『쿠린텐』" ShopTag="SHOP_TATTORIA" itemName="반입자 버스트 ＲＮＡ" ItemTag="ITEM_A_055" Flag="0" Cost="2400" EvStart="EVENT_XG01_040" secretFlag="1"/>
 	<ShopData ShopName="약사암 『쿠린텐』" ShopTag="SHOP_TATTORIA" itemName="플라센타 클래스" ItemTag="ITEM_A_059" Flag="0" Cost="2500" EvStart="EVENT_XG01_040" secretFlag="1"/>
 	<ShopData ShopName="약사암 『쿠린텐』" ShopTag="SHOP_TATTORIA" itemName="사일런트 그린" ItemTag="ITEM_T_012" Flag="0" Cost="680" EvStart="EVENT_IM32_120"/>
 	<ShopData ShopName="약사암 『쿠린텐』" ShopTag="SHOP_TATTORIA" itemName="베젤레이션 소자" ItemTag="ITEM_A_052" Flag="0" Cost="10000" EvStart="EVENT_XG01_050" secretFlag="1"/>
-	<ShopData ShopName="약사암 『쿠린텐』" ShopTag="SHOP_TATTORIA" itemName="휴무네스 RNA" ItemTag="ITEM_A_056" Flag="0" Cost="9000" EvStart="EVENT_XG01_050" secretFlag="1"/>
+	<ShopData ShopName="약사암 『쿠린텐』" ShopTag="SHOP_TATTORIA" itemName="휴무네스 ＲＮＡ" ItemTag="ITEM_A_056" Flag="0" Cost="9000" EvStart="EVENT_XG01_050" secretFlag="1"/>
 	<ShopData ShopName="약사암 『쿠린텐』" ShopTag="SHOP_TATTORIA" itemName="호노카노 경단" ItemTag="ITEM_T_002" Flag="0" Cost="180" EvStart="EVENT_IM32_020"/>
 	<ShopData ShopName="약사암 『쿠린텐』" ShopTag="SHOP_TATTORIA" itemName="디스타린" ItemTag="ITEM_T_025" Flag="0" Cost="2340" EvStart="EVENT_IM32_250"/>
-	<ShopData ShopName="약사암 『쿠린텐』" ShopTag="SHOP_TATTORIA" itemName="타트리안Z" ItemTag="ITEM_T_003" Flag="0" Cost="300" EvStart="EVENT_IM32_030"/>
+	<ShopData ShopName="약사암 『쿠린텐』" ShopTag="SHOP_TATTORIA" itemName="타트리안Ｚ" ItemTag="ITEM_T_003" Flag="0" Cost="300" EvStart="EVENT_IM32_030"/>
 	<ShopData ShopName="약사암 『쿠린텐』" ShopTag="SHOP_TATTORIA" itemName="사쥬 링크 클래스" ItemTag="ITEM_A_060" Flag="0" Cost="10000" EvStart="EVENT_XG01_050" secretFlag="1"/>
 	<ShopData ShopName="약사암 『쿠린텐』" ShopTag="SHOP_TATTORIA" itemName="성상의 그리야" ItemTag="ITEM_T_016" Flag="0" Cost="840" EvStart="EVENT_IM32_160"/>
 	<ShopData ShopName="약사암 『쿠린텐』" ShopTag="SHOP_TATTORIA" itemName="레드 사프린" ItemTag="ITEM_A_034" Flag="0" Cost="5000" EvStart="EVENT_XG01_050" secretFlag="1"/>
-	<ShopData ShopName="약사암 『쿠린텐』" ShopTag="SHOP_TATTORIA" itemName="타트리아노ZZ" ItemTag="ITEM_T_026" Flag="0" Cost="680" EvStart="EVENT_IM32_260"/>
+	<ShopData ShopName="약사암 『쿠린텐』" ShopTag="SHOP_TATTORIA" itemName="타트리아노ＺＺ" ItemTag="ITEM_T_026" Flag="0" Cost="680" EvStart="EVENT_IM32_260"/>
 	<ShopData ShopName="약사암 『쿠린텐』" ShopTag="SHOP_TATTORIA" itemName="바스무지" ItemTag="ITEM_T_031" Flag="0" Cost="1540" EvStart="EVENT_ZZ01_020" secretFlag="1"/>
 	<ShopData ShopName="약사암 『쿠린텐』" ShopTag="SHOP_TATTORIA" itemName="포식전대 파지 씨" ItemTag="ITEM_T_022" Flag="0" Cost="1560" EvStart="EVENT_ZZ01_020" secretFlag="1"/>
 	<ShopData ShopName="약사암 『쿠린텐』" ShopTag="SHOP_TATTORIA" itemName="샤를리 빈즈" ItemTag="ITEM_T_013" Flag="0" Cost="500" EvStart="EVENT_IM32_130"/>
 	<ShopData ShopName="약사암 『쿠린텐』" ShopTag="SHOP_TATTORIA" itemName="기어가는 샴 가루" ItemTag="ITEM_T_017" Flag="0" Cost="860" EvStart="EVENT_IM32_170"/>
 	<ShopData ShopName="약사암 『쿠린텐』" ShopTag="SHOP_TATTORIA" itemName="하모니안 향" ItemTag="ITEM_T_034" Flag="0" Cost="940" EvStart="EVENT_IM32_340"/>
-	<ShopData ShopName="약사암 『쿠린텐』" ShopTag="SHOP_TATTORIA" itemName="HUG해줘 허니！" ItemTag="ITEM_T_044" Flag="0" Cost="2120" EvStart="EVENT_IM32_440"/>
+	<ShopData ShopName="약사암 『쿠린텐』" ShopTag="SHOP_TATTORIA" itemName="ＨＵＧ해줘 허니！" ItemTag="ITEM_T_044" Flag="0" Cost="2120" EvStart="EVENT_IM32_440"/>
 	<ShopData ShopName="약사암 『쿠린텐』" ShopTag="SHOP_TATTORIA" itemName="페리온의 화관" ItemTag="ITEM_T_028" Flag="0" Cost="3160" EvStart="EVENT_ZZ01_020" secretFlag="1"/>
 	<ShopData ShopName="약사암 『쿠린텐』" ShopTag="SHOP_TATTORIA" itemName="시냅스 풀 씨앗" ItemTag="ITEM_T_037" Flag="0" Cost="4160" EvStart="EVENT_ZZ01_020" secretFlag="1"/>
 	<ShopData ShopName="약사암 『쿠린텐』" ShopTag="SHOP_TATTORIA" itemName="페리에의 비약" ItemTag="ITEM_T_042" Flag="0" Cost="7760" EvStart="EVENT_IM32_420"/>
@@ -151,26 +151,26 @@
 	<ShopData ShopName="약사암 『쿠린텐』" ShopTag="SHOP_TATTORIA" itemName="자크텐 사인" ItemTag="ITEM_T_032" Flag="0" Cost="3100" EvStart="EVENT_ZZ01_020" secretFlag="1"/>
 	<ShopData ShopName="약사암 『쿠린텐』" ShopTag="SHOP_TATTORIA" itemName="리바이바이 마스크" ItemTag="ITEM_T_035" Flag="0" Cost="1000" EvStart="EVENT_IM32_350"/>
 	<ShopData ShopName="약사암 『쿠린텐』" ShopTag="SHOP_TATTORIA" itemName="유전자 변형 도력선" ItemTag="ITEM_T_023" Flag="0" Cost="1580" EvStart="EVENT_IM32_230"/>
-	<ShopData ShopName="플라즈마 잡화점" ShopTag="SHOP_GENERIC_00" itemName="TC21 58극관" ItemTag="ITEM_A_037" Flag="0" Cost="40"/>
+	<ShopData ShopName="플라즈마 잡화점" ShopTag="SHOP_GENERIC_00" itemName="ＴＣ２１ 58극관" ItemTag="ITEM_A_037" Flag="0" Cost="40"/>
 	<ShopData ShopName="플라즈마 잡화점" ShopTag="SHOP_GENERIC_00" itemName="도계 스플리터" ItemTag="ITEM_A_038" Flag="0" Cost="50"/>
 	<ShopData ShopName="플라즈마 잡화점" ShopTag="SHOP_GENERIC_00" itemName="플랫 보드 수지" ItemTag="ITEM_A_039" Flag="0" Cost="40"/>
-	<ShopData ShopName="플라즈마 잡화점" ShopTag="SHOP_GENERIC_00" itemName="파워 소닉 100" ItemTag="ITEM_A_040" Flag="0" Cost="60"/>
+	<ShopData ShopName="플라즈마 잡화점" ShopTag="SHOP_GENERIC_00" itemName="파워 소닉 １００" ItemTag="ITEM_A_040" Flag="0" Cost="60"/>
 	<ShopData ShopName="플라즈마 잡화점" ShopTag="SHOP_GENERIC_00" itemName="포르미움재" ItemTag="ITEM_A_017" Flag="0" Cost="40"/>
 	<ShopData ShopName="플라즈마 잡화점" ShopTag="SHOP_GENERIC_00" itemName="심플 캐소드" ItemTag="ITEM_A_049" Flag="0" Cost="300"/>
 	<ShopData ShopName="플라즈마 잡화점" ShopTag="SHOP_GENERIC_00" itemName="파워드 플러그 소자" ItemTag="ITEM_A_050" Flag="0" Cost="1600" EvStart="EVENT_XG01_040"/>
-	<ShopData ShopName="플라즈마 잡화점" ShopTag="SHOP_GENERIC_00" itemName="순정 하이테크 RNA" ItemTag="ITEM_A_053" Flag="0" Cost="200"/>
-	<ShopData ShopName="플라즈마 잡화점" ShopTag="SHOP_GENERIC_00" itemName="바이로이드 RNA" ItemTag="ITEM_A_054" Flag="0" Cost="1400" EvStart="EVENT_XG01_040"/>
+	<ShopData ShopName="플라즈마 잡화점" ShopTag="SHOP_GENERIC_00" itemName="순정 하이테크 ＲＮＡ" ItemTag="ITEM_A_053" Flag="0" Cost="200"/>
+	<ShopData ShopName="플라즈마 잡화점" ShopTag="SHOP_GENERIC_00" itemName="바이로이드 ＲＮＡ" ItemTag="ITEM_A_054" Flag="0" Cost="1400" EvStart="EVENT_XG01_040"/>
 	<ShopData ShopName="플라즈마 잡화점" ShopTag="SHOP_GENERIC_00" itemName="인셉션 클래스" ItemTag="ITEM_A_057" Flag="0" Cost="200"/>
 	<ShopData ShopName="플라즈마 잡화점" ShopTag="SHOP_GENERIC_00" itemName="어드밴스드 클래스" ItemTag="ITEM_A_058" Flag="0" Cost="1500" EvStart="EVENT_XG01_040"/>
-	<ShopData ShopName="플라즈마 잡화점 2" ShopTag="SHOP_GENERIC_01" itemName="렛츠 파이트 V" ItemTag="ITEM_A_035" Flag="0" Cost="60"/>
-	<ShopData ShopName="플라즈마 잡화점 2" ShopTag="SHOP_GENERIC_01" itemName="로키" ItemTag="ITEM_A_002" Flag="0" Cost="100"/>
-	<ShopData ShopName="플라즈마 잡화점 2" ShopTag="SHOP_GENERIC_01" itemName="달콤한 막대기" ItemTag="ITEM_A_005" Flag="0" Cost="40"/>
-	<ShopData ShopName="플라즈마 잡화점 2" ShopTag="SHOP_GENERIC_01" itemName="폰타칼리만탄" ItemTag="ITEM_A_004" Flag="0" Cost="80"/>
-	<ShopData ShopName="플라즈마 잡화점 2" ShopTag="SHOP_GENERIC_01" itemName="피타반" ItemTag="ITEM_A_031" Flag="0" Cost="160"/>
-	<ShopData ShopName="플라즈마 잡화점 2" ShopTag="SHOP_GENERIC_01" itemName="그린 사프린" ItemTag="ITEM_A_033" Flag="0" Cost="80" EvStart="EVENT_XG01_040"/>
-	<ShopData ShopName="플라즈마 잡화점 2" ShopTag="SHOP_GENERIC_01" itemName="레드 사프린" ItemTag="ITEM_A_034" Flag="0" Cost="5000" EvStart="EVENT_ZZ01_020"/>
-	<ShopData ShopName="플라즈마 잡화점 2" ShopTag="SHOP_GENERIC_01" itemName="젠프레 테레카" ItemTag="ITEM_A_022" Flag="0" Cost="300" EvStart="EVENT_XG01_040"/>
-	<ShopData ShopName="플라즈마 잡화점 2" ShopTag="SHOP_GENERIC_01" itemName="페리오 뉴로키" ItemTag="ITEM_A_013" Flag="0" Cost="200"/>
+	<ShopData ShopName="플라즈마 잡화점 ２" ShopTag="SHOP_GENERIC_01" itemName="렛츠 파이트 Ｖ" ItemTag="ITEM_A_035" Flag="0" Cost="60"/>
+	<ShopData ShopName="플라즈마 잡화점 ２" ShopTag="SHOP_GENERIC_01" itemName="로키" ItemTag="ITEM_A_002" Flag="0" Cost="100"/>
+	<ShopData ShopName="플라즈마 잡화점 ２" ShopTag="SHOP_GENERIC_01" itemName="달콤한 막대기" ItemTag="ITEM_A_005" Flag="0" Cost="40"/>
+	<ShopData ShopName="플라즈마 잡화점 ２" ShopTag="SHOP_GENERIC_01" itemName="폰타칼리만탄" ItemTag="ITEM_A_004" Flag="0" Cost="80"/>
+	<ShopData ShopName="플라즈마 잡화점 ２" ShopTag="SHOP_GENERIC_01" itemName="피타반" ItemTag="ITEM_A_031" Flag="0" Cost="160"/>
+	<ShopData ShopName="플라즈마 잡화점 ２" ShopTag="SHOP_GENERIC_01" itemName="그린 사프린" ItemTag="ITEM_A_033" Flag="0" Cost="80" EvStart="EVENT_XG01_040"/>
+	<ShopData ShopName="플라즈마 잡화점 ２" ShopTag="SHOP_GENERIC_01" itemName="레드 사프린" ItemTag="ITEM_A_034" Flag="0" Cost="5000" EvStart="EVENT_ZZ01_020"/>
+	<ShopData ShopName="플라즈마 잡화점 ２" ShopTag="SHOP_GENERIC_01" itemName="젠프레 테레카" ItemTag="ITEM_A_022" Flag="0" Cost="300" EvStart="EVENT_XG01_040"/>
+	<ShopData ShopName="플라즈마 잡화점 ２" ShopTag="SHOP_GENERIC_01" itemName="페리오 뉴로키" ItemTag="ITEM_A_013" Flag="0" Cost="200"/>
 	<ShopData ShopName="쿠온토브 잡화점" ShopTag="SHOP_GENERIC_02" itemName="마루카메 인장 도력선" ItemTag="ITEM_A_048" Flag="0" Cost="50"/>
 	<ShopData ShopName="쿠온토브 잡화점" ShopTag="SHOP_GENERIC_02" itemName="옐로우 사프린" ItemTag="ITEM_A_032" Flag="0" Cost="160"/>
 	<ShopData ShopName="쿠온토브 잡화점" ShopTag="SHOP_GENERIC_02" itemName="그린 사프린" ItemTag="ITEM_A_033" Flag="0" Cost="80" EvStart="EVENT_XG01_040"/>
@@ -183,7 +183,7 @@
 	<ShopData ShopName="쿠온토브 잡화점" ShopTag="SHOP_GENERIC_02" itemName="쿠온타 뉴로키" ItemTag="ITEM_A_014" Flag="0" Cost="300"/>
 	<ShopData ShopName="호노카노 레어 상점" ShopTag="SHOP_GENERIC_03" itemName="럭셔리 밤" ItemTag="ITEM_A_020" Flag="0" Cost="40"/>
 	<ShopData ShopName="호노카노 레어 상점" ShopTag="SHOP_GENERIC_03" itemName="옐로우 사프린" ItemTag="ITEM_A_032" Flag="0" Cost="160"/>
-	<ShopData ShopName="호노카노 레어 상점" ShopTag="SHOP_GENERIC_03" itemName="렛츠 파이트 V" ItemTag="ITEM_A_035" Flag="0" Cost="60"/>
+	<ShopData ShopName="호노카노 레어 상점" ShopTag="SHOP_GENERIC_03" itemName="렛츠 파이트 Ｖ" ItemTag="ITEM_A_035" Flag="0" Cost="60"/>
 	<ShopData ShopName="호노카노 잡화점" ShopTag="SHOP_GENERIC_04" itemName="독코이모" ItemTag="ITEM_A_001" Flag="0" Cost="120"/>
 	<ShopData ShopName="호노카노 잡화점" ShopTag="SHOP_GENERIC_04" itemName="샴가루" ItemTag="ITEM_A_003" Flag="0" Cost="40"/>
 	<ShopData ShopName="호노카노 잡화점" ShopTag="SHOP_GENERIC_04" itemName="월간 틴쥬얼" ItemTag="ITEM_A_023" Flag="0" Cost="80"/>
@@ -198,16 +198,16 @@
 	<ShopData ShopName="천령 잡화점" ShopTag="SHOP_GENERIC_05" itemName="로키" ItemTag="ITEM_A_002" Flag="0" Cost="100"/>
 	<ShopData ShopName="천령 잡화점" ShopTag="SHOP_GENERIC_05" itemName="폰타칼리만탄" ItemTag="ITEM_A_004" Flag="0" Cost="80"/>
 	<ShopData ShopName="천령 잡화점" ShopTag="SHOP_GENERIC_05" itemName="패션 퍼프" ItemTag="ITEM_A_024" Flag="0" Cost="80"/>
-	<ShopData ShopName="천령 잡화점" ShopTag="SHOP_GENERIC_05" itemName="TC21 58극관" ItemTag="ITEM_A_037" Flag="0" Cost="40"/>
+	<ShopData ShopName="천령 잡화점" ShopTag="SHOP_GENERIC_05" itemName="ＴＣ２１ 58극관" ItemTag="ITEM_A_037" Flag="0" Cost="40"/>
 	<ShopData ShopName="천령 잡화점" ShopTag="SHOP_GENERIC_05" itemName="도계 스플리터" ItemTag="ITEM_A_038" Flag="0" Cost="50"/>
 	<ShopData ShopName="천령 잡화점" ShopTag="SHOP_GENERIC_05" itemName="플랫 보드 수지" ItemTag="ITEM_A_039" Flag="0" Cost="40"/>
-	<ShopData ShopName="천령 잡화점" ShopTag="SHOP_GENERIC_05" itemName="파워 소닉 100" ItemTag="ITEM_A_040" Flag="0" Cost="60"/>
+	<ShopData ShopName="천령 잡화점" ShopTag="SHOP_GENERIC_05" itemName="파워 소닉 １００" ItemTag="ITEM_A_040" Flag="0" Cost="60"/>
 	<ShopData ShopName="천령 잡화점" ShopTag="SHOP_GENERIC_05" itemName="마루카메 인장 도력선" ItemTag="ITEM_A_048" Flag="0" Cost="50"/>
 	<ShopData ShopName="천령 잡화점" ShopTag="SHOP_GENERIC_05" itemName="디스크람" ItemTag="ITEM_A_043" Flag="0" Cost="60" EvStart="EVENT_XG01_040"/>
 	<ShopData ShopName="천령 잡화점" ShopTag="SHOP_GENERIC_05" itemName="버스트 경화 겔" ItemTag="ITEM_A_044" Flag="0" Cost="50" EvStart="EVENT_XG01_040"/>
-	<ShopData ShopName="천령 잡화점" ShopTag="SHOP_GENERIC_05" itemName="DDW 밀도 센서" ItemTag="ITEM_A_045" Flag="0" Cost="60" EvStart="EVENT_XG01_040"/>
+	<ShopData ShopName="천령 잡화점" ShopTag="SHOP_GENERIC_05" itemName="ＤＤＷ 밀도 센서" ItemTag="ITEM_A_045" Flag="0" Cost="60" EvStart="EVENT_XG01_040"/>
 	<ShopData ShopName="천령 잡화점" ShopTag="SHOP_GENERIC_05" itemName="휴대용 사이클로트론" ItemTag="ITEM_A_047" Flag="0" Cost="60" EvStart="EVENT_XG01_040"/>
-	<ShopData ShopName="천령 잡화점" ShopTag="SHOP_GENERIC_05" itemName="파워 소닉 500" ItemTag="ITEM_A_041" Flag="0" Cost="100" EvStart="EVENT_XG01_050"/>
+	<ShopData ShopName="천령 잡화점" ShopTag="SHOP_GENERIC_05" itemName="파워 소닉 ５００" ItemTag="ITEM_A_041" Flag="0" Cost="100" EvStart="EVENT_XG01_050"/>
 	<ShopData ShopName="천령 잡화점" ShopTag="SHOP_GENERIC_05" itemName="안티 프릭션 기어" ItemTag="ITEM_A_042" Flag="0" Cost="80" EvStart="EVENT_XG01_050"/>
 	<ShopData ShopName="쿠르트 잡화점" ShopTag="SHOP_GENERIC_06" itemName="명과 오본느" ItemTag="ITEM_A_009" Flag="0" Cost="600"/>
 	<ShopData ShopName="쿠르트 잡화점" ShopTag="SHOP_GENERIC_06" itemName="금후추" ItemTag="ITEM_A_012" Flag="0" Cost="300"/>

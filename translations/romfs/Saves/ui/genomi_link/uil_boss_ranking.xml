@@ -17,7 +17,7 @@
 	</node>
 	<node pos="0,100,0" visible="true">
 		<image style="gen_network01_bg" size_h="525" color="255,255,255,180"/>
-		<text name="name" text="■모태상관에 입힌 데미지 랭킹" pos="138,10,0" font_size="18.667"/>
+		<text name="name" text="■모태소칸에 입힌 데미지 랭킹" pos="138,10,0" font_size="18.667"/>
 		<!-- 左 -->
 		<node name="rank_data01" pos="42,49,0" clone_tree="rank_data"/>
 		<node name="rank_data02" pos="42,97,0" clone_tree="rank_data"/>
@@ -36,7 +36,7 @@
 			<!-- 用語名 -->
 			<node name="item_neme" pos="43,21">
 				<image style="gen_common01_name_bg01" size_wh="391,41" pos="-3,3,0"/>
-				<text name="name_text" text="모태상관 정보" align="center" font_size="18.667" pos="188,17,0"/>
+				<text name="name_text" text="모태소칸 정보" align="center" font_size="18.667" pos="188,17,0"/>
 			</node>
 			<node name="page2">
 				<!-- 背景画像 -->
@@ -50,7 +50,7 @@
 				</node>
 				<!-- テキスト -->
 				<node pos="30,98.667,0">
-					<text font_size="20" pos="0,0,0" text="모태상관의 현재 HP"/>
+					<text font_size="20" pos="0,0,0" text="모태소칸의 현재 HP"/>
 					<text font_size="20" pos="400,0,0" text="123456789012" align="right" name="text_boss_hp"/>
 				</node>
 				<node pos="30,129.667,0">

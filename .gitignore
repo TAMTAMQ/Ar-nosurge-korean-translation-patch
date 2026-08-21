@@ -5,6 +5,8 @@
 /release/
 /output/
 /backups/
+# 직접 번역한 UI 텍스처(약 59MB). 빌드에는 쓰이지만 저장소에는 넣지 않는다.
+/translateImage/
 
 # 정품 게임에서 사용자가 직접 추출해야 하는 파일
 /original/

@@ -20,8 +20,8 @@
 페리온으로 돌아갈 길을 찾자."/>
 	<imanani nameTag="NAME_DELTA" bDelta="1" evStart="EVENT_C11_2_190" evEnd="EVENT_C11_2_230" text="어떻게든 가디언을 격퇴하고
 페리온 마을로 돌아왔다.
-네이가 말한 대로, PLAS
-SMA 본부로 향하자."/>
+네이가 말한 대로, ＰＬＡＳ
+ＳＭＡ 본부로 향하자."/>
 	<imanani nameTag="NAME_DELTA" bDelta="1" evStart="EVENT_C11_2_230" evEnd="EVENT_C11_3_020" text="쉘른 프로텍터를 되찾기 위해, 다시 교단에 잠입하게 되었다. 퀀타브로 돌아가자."/>
 	<imanani nameTag="NAME_DELTA" bDelta="1" evStart="EVENT_C11_3_020" evEnd="EVENT_XF03_050" text="대성당 정면은 경비가 삼엄하다.
 프림이 말했던 대로,
@@ -47,7 +47,7 @@ SMA 본부로 향하자."/>
 출구를 찾기로 했다. 우선 네리코에게 정보를 물어보자."/>
 	<imanani nameTag="NAME_ION" bAvatar="1" evStart="EVENT_C12_1_040" evEnd="EVENT_C12_1_060" text="네리코를 만나러 갔더니, 『전설의 검은 전화기』를 찾아와 달라는 말을 들었다. 검은 전화기는 케모케모에 굴러다니고 있었을 거야."/>
 	<imanani nameTag="NAME_ION" bAvatar="1" evStart="EVENT_C12_1_060" evEnd="EVENT_C12_1_080" text="네리코에게 의미심장한 말을 들었지만, 결국 어떻게 해야 할지는 알 수 없게 되었다. 일단 수상하다고 생각되는 『세계의 벽』 부근으로 가보자."/>
-	<imanani nameTag="NAME_ION" bAvatar="1" evStart="EVENT_C12_1_080" evEnd="EVENT_C12_1_090" text="벽을 부술 폭탄을 만들기 위한 아이템 『포르미움재』, 『럭셔리 밤』, 『TC21 58극관』을 손에 넣자."/>
+	<imanani nameTag="NAME_ION" bAvatar="1" evStart="EVENT_C12_1_080" evEnd="EVENT_C12_1_090" text="벽을 부술 폭탄을 만들기 위한 아이템 『포르미움재』, 『럭셔리 밤』, 『ＴＣ２１ 58극관』을 손에 넣자."/>
 	<imanani nameTag="NAME_ION" bAvatar="1" evStart="EVENT_C12_1_090" evEnd="EVENT_C12_1_100" text="이온이 폭탄을 완성했다.
 당장 『세계의 벽』으로 향하자."/>
 	<imanani nameTag="NAME_ION" bAvatar="1" evStart="EVENT_C12_1_100" evEnd="EVENT_C12_1_130" text="드디어 세계의 벽에 커다란 구멍이！
@@ -74,7 +74,7 @@ SMA 본부로 향하자."/>
 	<imanani nameTag="NAME_DELTA" bDelta="1" evStart="EVENT_C21_1_100" evEnd="EVENT_C21_1_160" text="페리온을 습격하고 프림 일행을 데려간 정체불명의 괴물. 그것을 쫓기 위해, 재상의 단서를 의지해 『격리구』로 향하자."/>
 	<imanani nameTag="NAME_DELTA" bDelta="1" evStart="EVENT_C21_1_160" evEnd="EVENT_C21_1_200" text="ＰＬＡＳＭＡ의 모두가 괴물에게 삼켜지고 말았다. 네이에게 보고하기 위해 페리온으로 돌아가자."/>
 	<imanani nameTag="NAME_DELTA" bDelta="1" evStart="EVENT_C21_1_200" evEnd="EVENT_C21_2_010" text="제노메스는 괴멸하여 해산. 델타 일행은 프림을 쫓고 싶지만, 단서가 없다. 채널을 전환하며 힌트를 찾아내자！"/>
-	<imanani nameTag="NAME_DELTA" bDelta="1" evStart="EVENT_C21_2_010" evEnd="EVENT_C21_2_110" text="모태상관으로 변해버린 질의 폭주를 막지 못하고, 모두와 함께 대성당까지 퇴각. 우선은 모두와 한 명씩 이야기를 나눠보자."/>
+	<imanani nameTag="NAME_DELTA" bDelta="1" evStart="EVENT_C21_2_010" evEnd="EVENT_C21_2_110" text="모태소칸으로 변해버린 질의 폭주를 막지 못하고, 모두와 함께 대성당까지 퇴각. 우선은 모두와 한 명씩 이야기를 나눠보자."/>
 	<imanani nameTag="NAME_DELTA" bDelta="1" evStart="EVENT_C21_2_110" evEnd="EVENT_C21_2_210" text="교단 심부 어딘가에 숨어 있는 네로를 찾게 되었다. 장소를 알 수 없게 되면, 채널을 전환하며 힌트를 얻자."/>
 	<imanani nameTag="NAME_DELTA" bDelta="1" evStart="EVENT_C21_2_210" evEnd="EVENT_C21_3_010" text="교단 심부에 숨어 있던 네로를 발견했다. 재상이 할 말이 있는 듯하니, 일단 제노미라이 대성당으로 돌아가자."/>
 	<imanani nameTag="NAME_DELTA" bDelta="1" evStart="EVENT_C21_3_010" evEnd="EVENT_C21_3_050" text="오레이의 동력이 다해 가고 있다. 동력원을 전환한 질을 설득하기 위해, 재상과 함께 플라센타로 향하게 되었다."/>
@@ -90,7 +90,7 @@ SMA 본부로 향하자."/>
 	<imanani nameTag="NAME_DELTA" bDelta="1" evStart="EVENT_C21_5_010" evEnd="EVENT_C21_5_020" text="또 여러 가지 문제가 일어나고 있는 것 같다. 일단 샤르 일행을 돕기 위해 에어포트에서 스페이스 버스를 손에 넣자."/>
 	<imanani nameTag="NAME_DELTA" bDelta="1" evStart="EVENT_C21_5_020" evEnd="EVENT_C22_4_020" text="이온이 소레일의 동력을 전환하는 시마법을 부르려 하고 있다.
 그것을 서포트하기 위해 성영대로 가서, 배의 동력을 떨어뜨리자."/>
-	<imanani nameTag="NAME_DELTA" bDelta="1" evStart="EVENT_C22_4_020" evEnd="EVENT_C22_4_050" text="코잘이 모태상관을 억제해 주고 있는 동안에, 아르노사쥬 관까지 향하자."/>
+	<imanani nameTag="NAME_DELTA" bDelta="1" evStart="EVENT_C22_4_020" evEnd="EVENT_C22_4_050" text="코잘이 모태소칸을 억제해 주고 있는 동안에, 아르노사쥬 관까지 향하자."/>
 	<imanani nameTag="NAME_ION" bAvatar="1" evStart="EVENT_C12_4_080" evEnd="EVENT_C22_1_030" text="네이는 자신의 가게가 신경 쓰이는 모양이다. 그녀를 데리고 비스트로
 『네이 아 프랑세』로 가자."/>
 	<imanani nameTag="NAME_ION" bAvatar="1" evStart="EVENT_C22_1_030" evEnd="EVENT_C22_1_060" text="샤르 일행을 설득하기 위해 카논을 찾기로 했다. 하지만 카논은 어디에 있지？ 우선 천령사라 근처에 가보자."/>
@@ -98,8 +98,8 @@ SMA 본부로 향하자."/>
 	<imanani nameTag="NAME_ION" bAvatar="1" evStart="EVENT_C22_1_110" evEnd="EVENT_C22_1_150" text="카논과 결별한 코잘은 인간의 구제를 추진하려 하고 있다. 이 사실을 네이에게 전하는 편이 좋겠지."/>
 	<imanani nameTag="NAME_ION" bAvatar="1" evStart="EVENT_C22_1_150" evEnd="EVENT_C22_1_170" text="네로가 플라센타에서 이온을
 기다리고 있다고 한다. 플라스크의 바다를 지나, 플라센타로 서두르자."/>
-	<imanani nameTag="NAME_ION" bAvatar="1" evStart="EVENT_C22_1_170" evEnd="EVENT_C21_2_010" text="재상으로부터 『모태상관』에 대항하기 위한 시를 받았다. 네로가 기다리는 플라센타는 눈앞이다."/>
-	<imanani nameTag="NAME_ION" bAvatar="1" evStart="EVENT_C21_2_010" evEnd="EVENT_C22_2_130" text="모태상관으로 변해버린 질의 폭주를 막지 못하고, 모두와 함께 대성당까지 퇴각. 우선은 모두와 한 명씩 이야기를 나눠보자."/>
+	<imanani nameTag="NAME_ION" bAvatar="1" evStart="EVENT_C22_1_170" evEnd="EVENT_C21_2_010" text="재상으로부터 『모태소칸』에 대항하기 위한 시를 받았다. 네로가 기다리는 플라센타는 눈앞이다."/>
+	<imanani nameTag="NAME_ION" bAvatar="1" evStart="EVENT_C21_2_010" evEnd="EVENT_C22_2_130" text="모태소칸으로 변해버린 질의 폭주를 막지 못하고, 모두와 함께 대성당까지 퇴각. 우선은 모두와 한 명씩 이야기를 나눠보자."/>
 	<imanani nameTag="NAME_ION" bAvatar="1" evStart="EVENT_C22_2_130" evEnd="EVENT_C21_3_010" text="살리의 조사가 끝난 모양이다. 모두가 기다리고 있는 제노미라이 대성당으로 돌아가자."/>
 	<imanani nameTag="NAME_ION" bAvatar="1" evStart="EVENT_C21_3_010" evEnd="EVENT_C22_3_030" text="오레이의 동력을 전환하는 단말기가 있는 소라로 가기 위해, 에어포트를 찾자. 호노카 마을의 샤르에게 이야기를 듣는 것이 좋을 것 같다."/>
 	<imanani nameTag="NAME_ION" bAvatar="1" evStart="EVENT_C22_3_030" evEnd="EVENT_C22_3_050" text="타트리아로부터 에어포트로 보이는 장소의 정보를 입수.
@@ -112,11 +112,11 @@ SMA 본부로 향하자."/>
 델타 일행이 오레이의 동력을 셧다운하기를 기다리자."/>
 	<imanani nameTag="NAME_ION" bAvatar="1" evStart="EVENT_C22_4_010" evEnd="EVENT_C22_4_020" text="오레이의 동력이 떨어진 듯하다. 지금 바로 소라에서 시를 노래하여, 동력을 전환하자."/>
 	<imanani nameTag="NAME_DELTA" bDelta="1" evStart="EVENT_C22_4_020" evEnd="EVENT_C31_1_050" text="델타가 인터디멘드의 힘을 다시 얻었다. 재상의 적을 쓰러뜨리기 위해, 샤르로드에서 플라센타로 돌입하자."/>
-	<imanani nameTag="NAME_DELTA" bDelta="1" evStart="EVENT_C31_1_050" evEnd="EVENT_C31_2_010" text="『모태상관』은 만만하게 쓰러뜨릴 수 있는 상대가 아니다. 페리온으로 돌아가 대책을 검토하는 편이 좋을 것 같다."/>
-	<imanani nameTag="NAME_DELTA" bDelta="1" evStart="EVENT_C31_2_010" evEnd="EVENT_C31_2_030" text="레나루루의 시로 이세계로 향하는 문이 열릴지도 모른다. 우선은 휴무네스피아에 있는 시로타카 씨를 만나러 가자."/>
+	<imanani nameTag="NAME_DELTA" bDelta="1" evStart="EVENT_C31_1_050" evEnd="EVENT_C31_2_010" text="『모태소칸』은 만만하게 쓰러뜨릴 수 있는 상대가 아니다. 페리온으로 돌아가 대책을 검토하는 편이 좋을 것 같다."/>
+	<imanani nameTag="NAME_DELTA" bDelta="1" evStart="EVENT_C31_2_010" evEnd="EVENT_C31_2_030" text="레나루루의 시로 이세계로 향하는 문이 열릴지도 모른다. 우선은 휴무네스피아에 있는 시로타카를 만나러 가자."/>
 	<imanani nameTag="NAME_DELTA" bDelta="1" evStart="EVENT_C31_2_030" evEnd="EVENT_C31_3_010" text="이세계로 갈 준비는 끝났다. 센터 오브 더 라셸라에서 모두가 기다리고 있다."/>
 	<imanani nameTag="NAME_DELTA" bDelta="1" evStart="EVENT_C31_3_010" evEnd="EVENT_C31_3_040" text="네이의 시로 이세계에 도달했다. 그곳에서 만난 소녀 슈레리아에게 증폭탑 안을 안내받기로 하자."/>
-	<imanani nameTag="NAME_DELTA" bDelta="1" evStart="EVENT_C31_3_040" evEnd="EVENT_C31_3_060" text="쿠르트 페나에서 만난 아야타네가 별의 의지를 소개해 주겠다고 한다. 아야타네와 함께 셰스티네로 가자."/>
+	<imanani nameTag="NAME_DELTA" bDelta="1" evStart="EVENT_C31_3_040" evEnd="EVENT_C31_3_060" text="쿠르트・페나에서 만난 아야타네가 별의 의지를 소개해 주겠다고 한다. 아야타네와 함께 셰스티네로 가자."/>
 	<imanani nameTag="NAME_DELTA" bDelta="1" evStart="EVENT_C31_3_060" evEnd="EVENT_C31_4_030" text="손웨로부터 이 세계에 머무는 것을 거부당했다. 막막할 때는 채널을 바꿔 보는 것도 좋을지 모른다."/>
 	<imanani nameTag="NAME_DELTA" bDelta="1" evStart="EVENT_C31_4_030" evEnd="EVENT_C31_4_040" text="행성을 탄생시키는 방법을 찾을 수 있을지도 모른다. 우선은 원래의 세계로 돌아갈 방법을 찾아야 한다. 그러고 보니, 슈레리아는 어디에 있지？"/>
 	<imanani nameTag="NAME_DELTA" bDelta="1" evStart="EVENT_C31_4_040" evEnd="EVENT_C31_4_080" text="글라스노 결정을 손에 넣기 위해 실바플레이트에 있는 폭풍의 솔류스 씨를 만나러 가자."/>
@@ -128,24 +128,24 @@ SMA 본부로 향하자."/>
 	<imanani nameTag="NAME_DELTA" bDelta="1" evStart="EVENT_C31_7_010" evEnd="EVENT_C31_8_010" text="새로운 행성을 자아내기 위한 시를 모두 함께 노래한다. 노래하는 언덕에서 오레이
 사람들의 마음을 받자."/>
 	<imanani nameTag="NAME_ION" bAvatar="1" evStart="EVENT_C22_4_020" evEnd="EVENT_C32_1_020" text="네리코 씨가 「그리운 손님이 와 있다」라고 말했다. 이온의 집에 가보자."/>
-	<imanani nameTag="NAME_ION" bAvatar="1" evStart="EVENT_C32_1_020" evEnd="EVENT_C32_1_030" text="이온과 재회했다. 네리코 씨에게 인사를 해두는 게 좋겠지."/>
+	<imanani nameTag="NAME_ION" bAvatar="1" evStart="EVENT_C32_1_020" evEnd="EVENT_C32_1_030" text="이온과 재회했다. 네리코에게 인사를 해두는 게 좋겠지."/>
 	<imanani nameTag="NAME_ION" bAvatar="1" evStart="EVENT_C32_1_030" evEnd="EVENT_C32_1_060" text="현실 세계로 돌아가기 위해 세상의 끝으로 가자."/>
 	<imanani nameTag="NAME_ION" bAvatar="1" evStart="EVENT_C32_1_060" evEnd="EVENT_C32_1_070" text="살리와 함께 카논을 츄츄 가게까지 데려다주었다. 일단, 페리온으로 돌아가자."/>
 	<imanani nameTag="NAME_ION" bAvatar="1" evStart="EVENT_C32_1_070" evEnd="EVENT_C32_1_080" text="나가버린 델타와 캐스를 찾자. 페리온에서는 나가지 않았을 것이다."/>
 	<imanani nameTag="NAME_ION" bAvatar="1" evStart="EVENT_C32_1_080" evEnd="EVENT_C32_1_110" text="쿠온타브의 터빈 제어실에서 살리와 만나기로 약속했다."/>
-	<imanani nameTag="NAME_ION" bAvatar="1" evStart="EVENT_C32_1_110" evEnd="EVENT_C32_1_140" text="닥터 레올름의 상태가 이상하다. 만나러 가고 싶지만 장소를 모르겠다. 막막할 때 하는 일이라고 하면……？"/>
+	<imanani nameTag="NAME_ION" bAvatar="1" evStart="EVENT_C32_1_110" evEnd="EVENT_C32_1_140" text="닥터・레올름의 상태가 이상하다. 만나러 가고 싶지만 장소를 모르겠다. 막막할 때 하는 일이라고 하면……？"/>
 	<imanani nameTag="NAME_ION" bAvatar="1" evStart="EVENT_C32_1_140" evEnd="EVENT_C32_1_190" text="거주구 어딘가에 이 이민선 소레일의 현재 위치를 알 수 있는 곳이 있는 것 같다. 그곳을 찾자."/>
-	<imanani nameTag="NAME_ION" bAvatar="1" evStart="EVENT_C32_1_190" evEnd="EVENT_C32_1_270" text="닥터 레올름에게 위험이 닥치고 있다. 노래하는 언덕에 있다는 것을 알아낸 지금, 가지 않을 이유는 없다！"/>
+	<imanani nameTag="NAME_ION" bAvatar="1" evStart="EVENT_C32_1_190" evEnd="EVENT_C32_1_270" text="닥터・레올름에게 위험이 닥치고 있다. 노래하는 언덕에 있다는 것을 알아낸 지금, 가지 않을 이유는 없다！"/>
 	<imanani nameTag="NAME_ION" bAvatar="1" evStart="EVENT_C32_1_270" evEnd="EVENT_C32_2_010" text="채널을 전환해서,
 『&lt;IM24&gt;』와 『&lt;IM06&gt;』를
 동시에 입력하면 된다고 한다."/>
-	<imanani nameTag="NAME_ION" bAvatar="1" evStart="EVENT_C32_2_010" evEnd="EVENT_C32_2_020" text="7차원 접속 해제 저지에 성공！ 
+	<imanani nameTag="NAME_ION" bAvatar="1" evStart="EVENT_C32_2_010" evEnd="EVENT_C32_2_020" text="７차원 접속 해제 저지에 성공！ 
 휴무스피어로 아바타 코어를 가지러 가자！"/>
 	<imanani nameTag="NAME_ION" bAvatar="1" evStart="EVENT_C32_2_020" evEnd="EVENT_C32_2_050" text="살리가 프로그램을 개조하기 위한 도구를 가지러 페리온에 간다고 한다. 네이에게도 이 이야기를 해두자."/>
 	<imanani nameTag="NAME_ION" bAvatar="1" evStart="EVENT_C32_2_050" evEnd="EVENT_C32_2_070" text="플라스크의 바다 수위가 급격히 상승하고 있다고 한다. 원인이 무엇인지 확인하러 가자."/>
 	<imanani nameTag="NAME_ION" bAvatar="1" evStart="EVENT_C32_2_070" evEnd="EVENT_C32_2_100" text="델타 일행을 구해야 해. 플라센타에 들어가는 방법은 격벽을 통한 루트와, 아니면…… 위에서 뛰어내리는 루트가 있어！？"/>
 	<imanani nameTag="NAME_ION" bAvatar="1" evStart="EVENT_C32_2_100" evEnd="EVENT_C32_2_130" text="혼자 나가버린 델타를 캐스와 함께 뒤쫓자. 페리온 어딘가에 있을 거야."/>
-	<imanani nameTag="NAME_ION" bAvatar="1" evStart="EVENT_C32_2_130" evEnd="EVENT_C32_2_140" text="노 에리아 연구소에서 레나루루의 기억을 되찾기 위한 준비를 하자."/>
+	<imanani nameTag="NAME_ION" bAvatar="1" evStart="EVENT_C32_2_130" evEnd="EVENT_C32_2_140" text="노에리아・연구소에서 레나루루의 기억을 되찾기 위한 준비를 하자."/>
 	<imanani nameTag="NAME_ION" bAvatar="1" evStart="EVENT_C32_2_140" evEnd="EVENT_SWI06_040" text="레나루루의 제노메트릭스에 다이브해서, 기억을 수복하자."/>
 	<imanani nameTag="NAME_ION" bAvatar="1" evStart="EVENT_SWI06_040" evEnd="EVENT_SWI06_080" text="레나루루의 제노메트릭스에서는 수수께끼의 가디언이 수복을 방해한다. 손쓸 도리가 없는 지금으로서는, 다른
 채널에 의지할 수밖에 없을지도."/>
@@ -157,7 +157,7 @@ SMA 본부로 향하자."/>
 	<imanani nameTag="NAME_ION" bAvatar="1" evStart="EVENT_C32_3_020" evEnd="EVENT_C31_3_010" text="네이가 시공의 문을 열기 위한 시를 손에 넣었다. 델타와 캐스를 위해, 센터 오브 더 라셸라에서 노래하겠다고 한다."/>
 	<imanani nameTag="NAME_ION" bAvatar="1" evStart="EVENT_C31_3_010" evEnd="EVENT_C32_4_020" text="델타 일행도 걱정되지만, 지금은 페리온으로 돌아가 현 상황을 파악하는 게 좋을 것 같다."/>
 	<imanani nameTag="NAME_ION" bAvatar="1" evStart="EVENT_C32_4_020" evEnd="EVENT_C32_4_040" text="연설이 실패해 버린 네이는 꽤 괴로운 표정이었다. 네이 아 프랑세에 상태를 보러 가볼까?"/>
-	<imanani nameTag="NAME_ION" bAvatar="1" evStart="EVENT_C32_4_040" evEnd="EVENT_C32_4_050" text="카논이 대모태상관의 열쇠일지도 모른다. 네이와 함께, 천령사의 카논에게 가보자."/>
+	<imanani nameTag="NAME_ION" bAvatar="1" evStart="EVENT_C32_4_040" evEnd="EVENT_C32_4_050" text="카논이 대모태소칸의 열쇠일지도 모른다. 네이와 함께, 천령사의 카논에게 가보자."/>
 	<imanani nameTag="NAME_ION" bAvatar="1" evStart="EVENT_C32_4_050" evEnd="EVENT_C32_4_080" text="카논이 다시 노래하기로 결심한 모양이다. 천령가람의 코잘에게, 다시 동조해 줄 수 있는지 부탁해 보자."/>
 	<imanani nameTag="NAME_ION" bAvatar="1" evStart="EVENT_C32_4_080" evEnd="EVENT_C32_4_090" text="카논의 시를 성공시키려면 어떻게 해야 할까. 살리나 레날르라면 지혜를 빌려줄지도 모른다."/>
 	<imanani nameTag="NAME_ION" bAvatar="1" evStart="EVENT_C32_4_090" evEnd="EVENT_C31_4_040" text="델타 일행이 돌아오기 전까지, 할 수 있는 일을 하자. 우선 코잘에게 인사를 하러 가볼까."/>

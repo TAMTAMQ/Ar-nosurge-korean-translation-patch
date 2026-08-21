@@ -22,7 +22,7 @@
 	<item_book BookName="고대의 유행 연감" BookTag="RECIPE_KANON_01" ItemTag="ITEM_RECIPE_ITEM_K_003" ItemTag2="ITEM_RECIPE_ITEM_K_004" ItemTag3="ITEM_RECIPE_ITEM_K_005"/>
 	<item_book BookName="샤르들의 일상" BookTag="RECIPE_KANON_02" ItemTag="ITEM_RECIPE_ITEM_K_006" ItemTag2="ITEM_RECIPE_ITEM_K_007" ItemTag3="ITEM_RECIPE_ITEM_K_008"/>
 	<item_book BookName="제도 기념품 가이드" BookTag="RECIPE_KANON_03" ItemTag="ITEM_RECIPE_ITEM_K_009" ItemTag2="ITEM_RECIPE_ITEM_K_010" ItemTag3="ITEM_RECIPE_ITEM_K_011" ItemTag4="ITEM_RECIPE_ITEM_K_012"/>
-	<item_book BookName="IP 비즈니스 입문편" BookTag="RECIPE_KANON_04" ItemTag="ITEM_RECIPE_ITEM_K_013" ItemTag2="ITEM_RECIPE_ITEM_K_014" ItemTag3="ITEM_RECIPE_ITEM_K_015"/>
+	<item_book BookName="ＩＰ 비즈니스 입문편" BookTag="RECIPE_KANON_04" ItemTag="ITEM_RECIPE_ITEM_K_013" ItemTag2="ITEM_RECIPE_ITEM_K_014" ItemTag3="ITEM_RECIPE_ITEM_K_015"/>
 	<item_book BookName="라셸라의 생태" BookTag="RECIPE_KANON_05" ItemTag="ITEM_RECIPE_ITEM_K_016" ItemTag2="ITEM_RECIPE_ITEM_K_017" ItemTag3="ITEM_RECIPE_ITEM_K_018"/>
 	<item_book BookName="내세를 위해" BookTag="RECIPE_KANON_06" ItemTag="ITEM_RECIPE_ITEM_K_019" ItemTag2="ITEM_RECIPE_ITEM_K_020" ItemTag3="ITEM_RECIPE_ITEM_K_021"/>
 	<item_book BookName="유서 깊은 한방 조제" BookTag="RECIPE_KANON_07" ItemTag="ITEM_RECIPE_ITEM_K_022" ItemTag2="ITEM_RECIPE_ITEM_K_023" ItemTag3="ITEM_RECIPE_ITEM_K_024" ItemTag4="ITEM_RECIPE_ITEM_K_025"/>
@@ -32,7 +32,7 @@
 	<item_book BookName="편리한 굿즈" BookTag="RECIPE_KANON_11" ItemTag="ITEM_RECIPE_ITEM_K_035" ItemTag2="ITEM_RECIPE_ITEM_K_036" ItemTag3="ITEM_RECIPE_ITEM_K_037"/>
 	<item_book BookName="축제 하자" BookTag="RECIPE_KANON_12" ItemTag="ITEM_RECIPE_ITEM_K_038" ItemTag2="ITEM_RECIPE_ITEM_K_039" ItemTag3="ITEM_RECIPE_ITEM_K_040" ItemTag4="ITEM_RECIPE_ITEM_K_041"/>
 	<item_book BookName="새로운 시대를 향하여" BookTag="RECIPE_KANON_13" ItemTag="ITEM_RECIPE_ITEM_K_042" ItemTag2="ITEM_RECIPE_ITEM_K_044"/>
-	<item_book BookName="속·이온 강화 월간" BookTag="RECIPE_KANON_14" ItemTag="ITEM_RECIPE_ITEM_K_045" ItemTag2="ITEM_RECIPE_ITEM_K_046" ItemTag3="ITEM_RECIPE_ITEM_K_047"/>
+	<item_book BookName="속・이온 강화 월간" BookTag="RECIPE_KANON_14" ItemTag="ITEM_RECIPE_ITEM_K_045" ItemTag2="ITEM_RECIPE_ITEM_K_046" ItemTag3="ITEM_RECIPE_ITEM_K_047"/>
 	<item_book BookName="리인카네이션" BookTag="RECIPE_KANON_15" ItemTag="ITEM_RECIPE_ITEM_K_048"/>
 	<item_book BookName="이온에게 주는 선물" BookTag="RECIPE_KANON_16" ItemTag="ITEM_RECIPE_ITEM_K_043"/>
 	<item_book BookName="난파된 우주선에서 살아가기" BookTag="RECIPE_SARLY_00" ItemTag="ITEM_RECIPE_ITEM_S_001" ItemTag2="ITEM_RECIPE_ITEM_S_002" ItemTag3="ITEM_RECIPE_ITEM_S_003"/>
@@ -42,16 +42,16 @@
 	<item_book BookName="고서： 우주 개척으로 가는 길" BookTag="RECIPE_SARLY_04" ItemTag="ITEM_RECIPE_ITEM_S_012" ItemTag2="ITEM_RECIPE_ITEM_S_013" ItemTag3="ITEM_RECIPE_ITEM_S_014"/>
 	<item_book BookName="양자 최첨단을 향한 도전" BookTag="RECIPE_SARLY_05" ItemTag="ITEM_RECIPE_ITEM_S_015" ItemTag2="ITEM_RECIPE_ITEM_S_016" ItemTag3="ITEM_RECIPE_ITEM_S_017" ItemTag4="ITEM_RECIPE_ITEM_S_018"/>
 	<item_book BookName="뇌내 개발해 보자" BookTag="RECIPE_SARLY_06" ItemTag="ITEM_RECIPE_ITEM_S_019" ItemTag2="ITEM_RECIPE_ITEM_S_020" ItemTag3="ITEM_RECIPE_ITEM_S_021"/>
-	<item_book BookName="델타 대작전·2！" BookTag="RECIPE_SARLY_07" ItemTag="ITEM_RECIPE_ITEM_S_022" ItemTag2="ITEM_RECIPE_ITEM_S_023"/>
+	<item_book BookName="델타 대작전・2！" BookTag="RECIPE_SARLY_07" ItemTag="ITEM_RECIPE_ITEM_S_022" ItemTag2="ITEM_RECIPE_ITEM_S_023"/>
 	<item_book BookName="귀재가 좋아하는 과자" BookTag="RECIPE_SARLY_08" ItemTag="ITEM_RECIPE_ITEM_S_024" ItemTag2="ITEM_RECIPE_ITEM_S_025" ItemTag3="ITEM_RECIPE_ITEM_S_026" ItemTag4="ITEM_RECIPE_ITEM_S_027"/>
 	<item_book BookName="슈뢰딩거 이론" BookTag="RECIPE_SARLY_09" ItemTag="ITEM_RECIPE_ITEM_S_028" ItemTag2="ITEM_RECIPE_ITEM_S_029" ItemTag3="ITEM_RECIPE_ITEM_S_030"/>
-	<item_book BookName="델타 대작전·3！" BookTag="RECIPE_SARLY_10" ItemTag="ITEM_RECIPE_ITEM_S_031" ItemTag2="ITEM_RECIPE_ITEM_S_032" ItemTag3="ITEM_RECIPE_ITEM_S_033"/>
+	<item_book BookName="델타 대작전・3！" BookTag="RECIPE_SARLY_10" ItemTag="ITEM_RECIPE_ITEM_S_031" ItemTag2="ITEM_RECIPE_ITEM_S_032" ItemTag3="ITEM_RECIPE_ITEM_S_033"/>
 	<item_book BookName="대 시로타카 관계 향상 지침서" BookTag="RECIPE_SARLY_11" ItemTag="ITEM_RECIPE_ITEM_S_034" ItemTag2="ITEM_RECIPE_ITEM_S_035" ItemTag3="ITEM_RECIPE_ITEM_S_036" ItemTag4="ITEM_RECIPE_ITEM_S_011"/>
 	<item_book BookName="라셸라를 추억하며" BookTag="RECIPE_SARLY_12" ItemTag="ITEM_RECIPE_ITEM_S_038" ItemTag2="ITEM_RECIPE_ITEM_S_039"/>
-	<item_book BookName="델타 대작전·결！" BookTag="RECIPE_SARLY_13" ItemTag="ITEM_RECIPE_ITEM_S_040" ItemTag2="ITEM_RECIPE_ITEM_S_041"/>
+	<item_book BookName="델타 대작전・결！" BookTag="RECIPE_SARLY_13" ItemTag="ITEM_RECIPE_ITEM_S_040" ItemTag2="ITEM_RECIPE_ITEM_S_041"/>
 	<item_book BookName="엉망진창인 세계" BookTag="RECIPE_SARLY_14" ItemTag="ITEM_RECIPE_ITEM_S_042" ItemTag2="ITEM_RECIPE_ITEM_S_043" ItemTag3="ITEM_RECIPE_ITEM_S_044"/>
 	<item_book BookName="델타 대작전 감사" BookTag="RECIPE_SARLY_15" ItemTag="ITEM_RECIPE_ITEM_S_045"/>
-	<item_book BookName="6차원의 힘" BookTag="RECIPE_SARLY_16" ItemTag="ITEM_RECIPE_ITEM_S_046"/>
+	<item_book BookName="６차원의 힘" BookTag="RECIPE_SARLY_16" ItemTag="ITEM_RECIPE_ITEM_S_046"/>
 	<item_book BookName="리인카네이션" BookTag="RECIPE_SARLY_17" ItemTag="ITEM_RECIPE_ITEM_S_047" ItemTag2="ITEM_RECIPE_ITEM_S_048"/>
 	<item_book BookName="캐스에게 주는 선물" BookTag="RECIPE_SARLY_18" ItemTag="ITEM_RECIPE_ITEM_S_037"/>
 	<item_book BookName="일상 영양제 전집" BookTag="RECIPE_TATTOLIA_00" ItemTag="ITEM_RECIPE_ITEM_T_001" ItemTag2="ITEM_RECIPE_ITEM_T_002" ItemTag3="ITEM_RECIPE_ITEM_T_003" ItemTag4="ITEM_RECIPE_ITEM_T_004"/>

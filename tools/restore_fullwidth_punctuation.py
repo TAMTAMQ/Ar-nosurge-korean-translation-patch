@@ -29,9 +29,13 @@ REPO = Path(__file__).resolve().parents[1]
 RECORD_HEADER = 32
 ATTR = re.compile(r'''(?P<head>\s[\w:.-]+\s*=\s*)(?P<q>["'])(?P<value>.*?)(?P=q)''', re.DOTALL)
 
+# 왼쪽이 원본의 문자, 오른쪽이 번역이 대신 쓴 문자. 여러 글자여도 된다.
 PAIRS = [("！", "!"), ("？", "?"), ("（", "("), ("）", ")"),
          ("～", "~"), ("％", "%"), ("＆", "&"), ("＋", "+"),
-         ("：", ":"), ("．", "."), ("＝", "=")]
+         ("：", ":"), ("．", "."), ("＝", "="), ("－", "-"),
+         ("；", ";"), ("＊", "*"), ("＃", "#"), ("＠", "@"),
+         ("￥", "\\"), ("｜", "|"), ("＜", "<"), ("＞", ">"),
+         ("…", "..."), ("♪", "~"), ("“", "\""), ("”", "\"")]
 
 
 def restore(original, translated):
@@ -98,7 +102,13 @@ def main():
         new = restore(row["original"], row["translation"])
         if new == row["translation"]:
             continue
-        if byte_length(new) > int(row["capacity_bytes"]):
+        capacity = int(row["capacity_bytes"])
+        # 전각은 반각보다 두 바이트 크다. 원본 표기를 살리는 쪽을 우선해서,
+        # 넘치면 먼저 띄어쓰기를 뒤에서부터 줄여 슬롯에 맞춘다.
+        while byte_length(new) > capacity and " " in new:
+            cut = new.rfind(" ")
+            new = new[:cut] + new[cut + 1:]
+        if byte_length(new) > capacity:
             skipped += 1
             continue
         row["translation"] = new

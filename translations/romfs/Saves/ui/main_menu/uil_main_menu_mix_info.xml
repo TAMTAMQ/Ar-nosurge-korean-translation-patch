@@ -27,7 +27,7 @@
 						<text name="caption" text="조합 상점" font_size="13" align="center" pos="177,8,0"/>
 					</node>
 					<image style="gen_window03_bg02" pos="8,36,0" size_wh="348,32"/>
-					<text name="shop_name" pos="178,42,0" text="노에리아 연구소" align="center" font_size="20" drop_shadow="false"/>
+					<text name="shop_name" pos="178,42,0" text="노에리아・연구소" align="center" font_size="20" drop_shadow="false"/>
 					<image name="shop_npc" style="gen_menu02_shopnpc" pos="100,68,0"/>
 					<image style="gen_window03_bg02" pos="8,163,0" size_wh="348,41"/>
 					<node name="category_label" clone_child_tree="shop_label" pos="7,134,0"/>

@@ -8,10 +8,10 @@
 	<ShopCmd ShopName="비스트로 『네이 아 프랑세』" ShopTag="SHOP_NAY" CmdName="팔기" CmdTag="SHOP_CMD_SELL" EvStart="EVENT_C11_1_210"/>
 	<ShopCmd ShopName="비스트로 『네이 아 프랑세』" ShopTag="SHOP_NAY" CmdName="조합" CmdTag="SHOP_CMD_MIX"/>
 	<ShopCmd ShopName="비스트로 『네이 아 프랑세』" ShopTag="SHOP_NAY" CmdName="세상 이야기" CmdTag="SHOP_CMD_TALK"/>
-	<ShopCmd ShopName="노에리아 연구소" ShopTag="SHOP_SARLY" CmdName="구매" CmdTag="SHOP_CMD_BUY"/>
-	<ShopCmd ShopName="노에리아 연구소" ShopTag="SHOP_SARLY" CmdName="팔기" CmdTag="SHOP_CMD_SELL"/>
-	<ShopCmd ShopName="노에리아 연구소" ShopTag="SHOP_SARLY" CmdName="조합" CmdTag="SHOP_CMD_MIX" EvStart="EVENT_MS14_010"/>
-	<ShopCmd ShopName="노에리아 연구소" ShopTag="SHOP_SARLY" CmdName="세상 이야기" CmdTag="SHOP_CMD_TALK"/>
+	<ShopCmd ShopName="노에리아・연구소" ShopTag="SHOP_SARLY" CmdName="구매" CmdTag="SHOP_CMD_BUY"/>
+	<ShopCmd ShopName="노에리아・연구소" ShopTag="SHOP_SARLY" CmdName="팔기" CmdTag="SHOP_CMD_SELL"/>
+	<ShopCmd ShopName="노에리아・연구소" ShopTag="SHOP_SARLY" CmdName="조합" CmdTag="SHOP_CMD_MIX" EvStart="EVENT_MS14_010"/>
+	<ShopCmd ShopName="노에리아・연구소" ShopTag="SHOP_SARLY" CmdName="세상 이야기" CmdTag="SHOP_CMD_TALK"/>
 	<ShopCmd ShopName="약사암 『쿠린텐』" ShopTag="SHOP_TATTORIA" CmdName="구매" CmdTag="SHOP_CMD_BUY"/>
 	<ShopCmd ShopName="약사암 『쿠린텐』" ShopTag="SHOP_TATTORIA" CmdName="팔기" CmdTag="SHOP_CMD_SELL"/>
 	<ShopCmd ShopName="약사암 『쿠린텐』" ShopTag="SHOP_TATTORIA" CmdName="조합" CmdTag="SHOP_CMD_MIX" EvStart="EVENT_MS13_020"/>
@@ -19,8 +19,8 @@
 	<ShopCmd ShopName="약사암 『쿠린텐』" ShopTag="SHOP_TATTORIA" CmdName="세상 이야기" CmdTag="SHOP_CMD_TALK"/>
 	<ShopCmd ShopName="플라즈마 잡화점" ShopTag="SHOP_GENERIC_00" CmdName="구매" CmdTag="SHOP_CMD_BUY"/>
 	<ShopCmd ShopName="플라즈마 잡화점" ShopTag="SHOP_GENERIC_00" CmdName="팔기" CmdTag="SHOP_CMD_SELL" EvStart="EVENT_C11_1_195"/>
-	<ShopCmd ShopName="플라즈마 잡화점 2" ShopTag="SHOP_GENERIC_01" CmdName="구매" CmdTag="SHOP_CMD_BUY"/>
-	<ShopCmd ShopName="플라즈마 잡화점 2" ShopTag="SHOP_GENERIC_01" CmdName="팔기" CmdTag="SHOP_CMD_SELL" EvStart="EVENT_C11_1_195"/>
+	<ShopCmd ShopName="플라즈마 잡화점 ２" ShopTag="SHOP_GENERIC_01" CmdName="구매" CmdTag="SHOP_CMD_BUY"/>
+	<ShopCmd ShopName="플라즈마 잡화점 ２" ShopTag="SHOP_GENERIC_01" CmdName="팔기" CmdTag="SHOP_CMD_SELL" EvStart="EVENT_C11_1_195"/>
 	<ShopCmd ShopName="쿠온토브 잡화점" ShopTag="SHOP_GENERIC_02" CmdName="구매" CmdTag="SHOP_CMD_BUY"/>
 	<ShopCmd ShopName="쿠온토브 잡화점" ShopTag="SHOP_GENERIC_02" CmdName="팔기" CmdTag="SHOP_CMD_SELL"/>
 	<ShopCmd ShopName="호노카노 레어 상점" ShopTag="SHOP_GENERIC_03" CmdName="구매" CmdTag="SHOP_CMD_BUY"/>

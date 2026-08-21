@@ -122,7 +122,7 @@
 				<image name="big_chara" pos="580,0" style="style_big_chara"/>
 				<image name="status" pos="284,134" size_wh="365,355" style="gen_window01_02" color="255,255,255,255">
 					<image pos="40,7" size_w="288" style="gen_common01_name_bg01">
-						<text name="name" pos_ratio_x="0.5" pos="0,13" text="캐스티 리어노이트" font_size="18" align="center"/>
+						<text name="name" pos_ratio_x="0.5" pos="0,13" text="캐스티・리어노이트" font_size="18" align="center"/>
 					</image>
 					<node name="label" pos="7,50">
 						<image style="gen_common01_win_acce02_bg" size_w="350"/>

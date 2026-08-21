@@ -17,7 +17,7 @@
         <!-- 用語名 -->
         <node name="item_neme" pos="43.00,21.00">
             <image style="gen_common01_name_bg01" size_w="380.00" size_wh="341.00,41.00" pos="-3.00,3.00,0.00" />
-            <text name="name_text" text="아스트로사이트 모듈레이터 바이러스" align="center" font_size="16.00" pos="164.00,20.00,0.00" />
+            <text name="name_text" text="아스트로사이트・모듈레이터・바이러스" align="center" font_size="16.00" pos="164.00,20.00,0.00" />
         </node>
         <!-- 共通背景画像 -->
         <node name="bg_line" pos="20.00,60.00">
