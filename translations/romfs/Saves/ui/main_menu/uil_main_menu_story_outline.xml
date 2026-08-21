@@ -49,7 +49,7 @@
 										<image pos="0,80" copy="bg0"/>
 									</node>
 									<text name="title" pos="28,26,0" text="아이우에오카키쿠케코사시스세소타치츠테" font_size="18" line_space="14" color="255,255,255,255"/>
-									<text name="text" pos="28,50,0" text="아이우에오카키쿠케코사시스세소타치츠테토아이우에오카키쿠케코사시스세소타치츠테토아이우에오카키쿠케코사시스세소타치츠테토" line_char_length="25" font_size="18" line_space="1.9"/>
+									<text name="text" pos="28,50,0" text="아이우에오카키쿠케코사시스세소타치츠테토아이우에오카키쿠케코사시스세소타치츠테토아이우에오카키쿠케코사시스세소타치츠테토아이우에오카키쿠케코사시스세소타치츠테토아이우에오카키쿠케코사시스세소타치츠테토" line_char_length="25" font_size="18" line_space="1.9"/>
 									<image name="lock" visible="false" viewer_visible="true" style="gen_menu01_episodeicon" pos="145,69,0"/>
 								</image>
 								<image name="highlight" style="gen_window02_04_highlight" size_wh="516,169" pos="-2,0,0"/>

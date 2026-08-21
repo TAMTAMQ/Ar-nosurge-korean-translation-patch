@@ -36,7 +36,7 @@
 	<SysInfo Text="납품 항목을 선택해 주세요" />
 	<SysInfo Text="납품할 아이템을 선택해 주세요" />
 	<SysInfo Text="연구할 항목을 선택해 주세요" />
-	<SysInfo Text="확인할 연구(실행 완료)를 선택해 주세요" />
+	<SysInfo Text="확인할 연구（실행 완료）를 선택해 주세요" />
 	<SysInfo Text="확인할 달을 선택해 주세요" />
 	<SysInfo Text="현재 과제 진행 상황을 보고합니다" />
 	<SysInfo Text="현재 과제를 변경합니다" />

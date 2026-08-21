@@ -36,7 +36,7 @@
 				<image name="image_1" style="gen_DX_saveload_Data" rot="-0.00, -0.00, -0.00" scale="1.00, 1.00, 1.00" pos="-184.00, -44.00, -0.00"/>
 				<text name="data_1" rot="-0.00, -0.00, -0.00" scale="1.00, 1.00, 1.00" pos="249.00, 28.00, -0.00" text="2019/06/17 00:00:00" word_space="1.00" align="right" font_size="18.00" copy="TEXTCOLOR_BROWN"/>
 				<text text="Game Data 002" name="text_file_1" pos="-27.00, -30.00, -0.00" rot="-0.00, -0.00, -0.00" scale="1.00, 1.00, 1.00" align="left" word_space="1.00" line_char_length="20" line_space="8.00" font="" font_size="18.00" copy="TEXTCOLOR_BROWN"/>
-				<text text="Phase 0 이온 &amp; 아바타" name="text_story_1" pos="-20.00, -4.00, -0.00" rot="-0.00, -0.00, -0.00" scale="1.00, 1.00, 1.00" copy="TEXTCOLOR_BROWN" word_space="1.00" font_size="20.00" align="left"/>
+				<text text="Phase 0 이온 ＆ 아바타" name="text_story_1" pos="-20.00, -4.00, -0.00" rot="-0.00, -0.00, -0.00" scale="1.00, 1.00, 1.00" copy="TEXTCOLOR_BROWN" word_space="1.00" font_size="20.00" align="left"/>
 			</node>
 		</node>
 	</node>

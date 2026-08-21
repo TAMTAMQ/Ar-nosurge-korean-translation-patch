@@ -8,6 +8,11 @@ from pathlib import Path
 
 from text_layout import strip_wrap_boundary_breaks
 
+# Only these subfolders are genuinely plain XML in the game's romfs. Every
+# other Saves subfolder (item, misogi, tweet, achievement, ...) is scrambled
+# .xml.e and is built by build_saves_data.py instead.
+PLAIN_XML_DIRS = {"systemMessage", "ui"}
+
 
 def parse_args():
     repo = Path(__file__).resolve().parents[1]
@@ -36,9 +41,12 @@ def main():
 
     built = 0
     for source in sorted(args.input.rglob("*.xml")):
+        relative = source.relative_to(args.input)
+        if relative.parts[0] not in PLAIN_XML_DIRS:
+            continue
         root = ET.parse(source).getroot()
         for index, element in enumerate(root.iter()):
-            for attribute in ("Text", "text"):
+            for attribute in ("Text", "text", "set_text"):
                 if attribute not in element.attrib:
                     continue
                 text = element.attrib[attribute]

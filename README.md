@@ -135,9 +135,218 @@ IPS 파일 전체가 14바이트입니다.
 
 초기 조사에서는 긴 번역문을 별도의 빈 영역에 넣고 포인터를 바꾸는 방식도 시험했습니다. 포인터와 AArch64 참조 자체는 수정할 수 있었지만, 실행 파일의 0영역 일부가 실제 더미가 아니라 시스템 전환 시 사용하는 테이블이어서 시스템 메뉴에서 메인 메뉴로 돌아갈 때 게임이 멈췄습니다. 현재 배포본은 이 포인터 재배치 방식을 전혀 사용하지 않으며, 모든 `main` 번역문이 원래 슬롯 이내인지 빌드 시 검사합니다. 현재 결과는 **6,665개 적용, 길이 초과 0개, 제외 0개**입니다.
 
+### 전각 문장부호 복원 (`restore_fullwidth_punctuation.py`)
+
+번역 대상은 일본어뿐인데, 모델이 `！ ？ （） ～ ＆ ＋` 같은 **전각 문장부호까지
+ASCII로 바꿔 놓았습니다.** 원래 일본어가 아니었던 문자를 조용히 고친 것이라
+원본 유지 원칙에 어긋납니다. 규모는 다음과 같았습니다.
+
+| 대상 | 복원 |
+|---|---:|
+| 이벤트 대사 EBM | 20,238 |
+| Saves XML | 4,104 |
+| `main` | 1,547 |
+| 대화 선택지 | 637 |
+
+복원은 단위(CSV 한 행 / EBM 한 레코드 / XML 속성 하나 / 선택지 하나)별로 판단합니다.
+**원본이 그 전각 형태를 썼고 동시에 ASCII 형태를 쓰지 않은 경우에만** 되돌리므로,
+원본이 둘을 섞어 쓴 자리는 손대지 않습니다.
+
+EBM·Saves·선택지는 길이 접두사 방식이라 전부 복원됐습니다(잔여 위반 0).
+
+`main`은 고정 슬롯이라 285행이 남았습니다. 전각 부호는 3바이트, ASCII는 1바이트여서
+바꾸면 슬롯을 넘칩니다(부족분 중앙값 2바이트). 이 행들은 **띄어쓰기를 지우면 들어가지만,
+읽기 편한 띄어쓰기를 남기는 쪽을 택해 ASCII 부호를 그대로 두었습니다.** 원본 유지보다
+가독성을 우선한 의도적인 예외이며, 해당하는 곳은 285행뿐입니다.
+
+### 과하게 줄어든 번역 되돌리기 (`expand_main_compaction.py`)
+
+`compact_main_translations.py`는 슬롯을 넘긴 번역문의 띄어쓰기를 지우고 단어를
+줄입니다. 그런데 이 단계가 최종 글리프 매핑이 확정되기 전에 돌아서, 실제보다
+바이트를 크게 잡고 필요 이상으로 깎은 행이 많이 남았습니다. 예를 들어 6119행은
+242바이트 슬롯에 168바이트만 쓰면서 전보문처럼 붙어 있었습니다.
+
+압축 표시가 붙은 780행을 재측정한 결과는 다음과 같습니다.
+
+| 구분 | 행 수 |
+|---|---:|
+| 여유 0바이트 — 압축이 실제로 필요했던 행 | 489 |
+| 여유가 남은 행 — 불필요하게 줄인 행 | 291 |
+
+`tools/expand_main_compaction.py`는 여유가 남은 행만 원문에서 다시 번역하되
+바이트 예산을 함께 알려 주고, 아래 조건을 **모두** 통과할 때만 교체합니다.
+하나라도 걸리면 기존 번역을 그대로 두므로 후퇴하지 않습니다.
+
+- 슬롯 용량 이내
+- `<CR>`·`<CLEG>` 등 제어 토큰의 개수와 순서 일치
+- 원문의 「」 『』 개수 일치 (따옴표로 바꾸는 것 금지)
+- 원문에 존칭이 없으면 씨/님/짱/군을 새로 붙이지 않음
+- 고유명사가 저장소의 확정 표기와 일치 (`ジェノミライ`→제노미라이 등)
+- 공백을 뺀 실질 내용이 기존보다 5% 넘게 줄지 않음
+- 띄어쓰기가 기존보다 줄지 않음
+
+모델이 예산을 넘기면 실제 바이트 수를 되먹여 다시 줄이게 하고, 그래도 넘치면
+오른쪽부터 공백을 하나씩 지워 슬롯이 감당하는 만큼의 띄어쓰기를 남깁니다.
+
+### `.rodata`만 고쳐서는 안 되는 짧은 문자열 (`inline_tail_fix.py`)
+
+`main`의 고정 슬롯을 번역문으로 덮어썼는데도 `아이템 도감`, `용어집`처럼 **짧은 메뉴 항목의 끝부분만**
+빈 네모(두부 글자)로 표시되는 문제가 있었습니다. 원인은 폰트가 아니라 컴파일러 최적화입니다.
+
+`std::string`을 짧은 리터럴로 만들 때 clang은 문자열 전체를 `.rodata`에서 복사하지 않습니다.
+앞부분만 `ldr`(8바이트) 또는 `ldp`(16바이트)로 읽어오고, **남은 꼬리 바이트와 libc++ SSO 길이 필드
+(`바이트길이 << 1`)는 MOV/MOVK 즉시값으로 `.text`에 직접 박아 넣습니다.**
+
+```
+mov  w8,  #0x18              ; SSO 길이 필드 = 12바이트 << 1
+adrp x9,  #0x71d000
+add  x9,  x9, #0x429         ; -> .rodata의 "人物図鑑"
+ldr  x8,  [x9]               ; 앞 8바이트만 .rodata에서 복사
+mov  w10, #0xe9b3            ; 나머지 4바이트는 여기에 상수로 박혀 있음
+movk w10, #0x9191, lsl #16   ;   0x9191E9B3 -> B3 E9 91 91
+```
+
+따라서 `.rodata`만 패치하면 앞부분은 한글로 바뀌고 꼬리는 일본어 바이트가 그대로 남아, 둘이 섞인
+바이트열이 폰트에 없는 코드포인트로 디코드되어 네모로 그려집니다. 번역문이 원문보다 짧을 때는
+낡은 SSO 길이 필드 때문에 뒤쪽 잔여 바이트까지 함께 그려집니다.
+
+`tools/inline_tail_fix.py`는 각 문자열 주소를 만드는 ADRP+ADD 쌍을 찾고, 그 주변 명령
+(`-0x18`~`+0x48`) 에서 원문 꼬리 바이트·SSO 길이와 값이 일치하는 MOVZ/MOVK 즉시값을 찾아
+번역문 기준으로 다시 씁니다. 현재 빌드에서 **57개 명령**이 이렇게 수정됩니다.
+
+이 때문에 `translate_all.py`에는 원본 실행 파일 경로가 필요합니다.
+
+```powershell
+python translate_all.py --original-font <MainFont_nx_0.g1t> --original-main <원본 exefs\main> --original-balloonsel <원본 balloonseldata.bsb> --original-event <원본 romfs\Event>
+```
+
+`--original-main`을 생략하면 나머지는 정상 빌드되지만 짧은 메뉴 항목의 끝부분이 깨진 채로 남습니다.
+
+### 원본 폰트는 반드시 게임에서 갓 추출한 것이어야 한다
+
+`--original-font`에 **이미 한글로 패치된 폰트**를 넘기면 빌드는 성공하지만 게임에서
+글자가 깨집니다. 패치는 원본 아틀라스의 특정 한자 셀만 골라 한글로 덮어쓰는 방식이라,
+입력이 이미 패치된 폰트면 **예전 배정으로 그려진 한글이 그대로 남습니다.** 현재 배정이
+"이 셀에는 아직 일본어가 있다"고 가정하는 자리에 엉뚱한 한글이 들어 있으므로,
+메뉴 라벨·숫자(플레이 시간, 소지금, LV)·버튼 표시가 알 수 없는 음절로 나옵니다.
+
+증상만 보면 매핑 충돌이나 폰트 생성 버그처럼 보이지만 원인은 입력 파일 하나입니다.
+그래서 `build_final_korean_mod.py`가 원본 해시를 검증하고, 다르면 빌드를 중단합니다.
+
+```
+VERIFIED_ORIGINAL_SHA256 = 732f2aeb3860c76832dc18ae80de5a775addef561df41e2984d7ca2c64e810b4
+```
+
+해시가 다르면 추가로 "이미 패치된 폰트인가"를 구조적으로도 검사합니다(선택된 셀에
+현재 배정대로 한글이 이미 그려져 있는지). 게임 버전이 달라 해시가 다른 것이 확실할
+때만 `--allow-unverified-font`로 우회하세요.
+
+### 이벤트 스크립트가 직접 띄우는 시스템 메시지 (`.ebd`)
+
+`romfs/Event/**/*.ebd`는 이벤트 그래프 데이터입니다(2,748개). 안에 든 일본어
+문자열 15만 개는 거의 전부 편집기용 라벨이라 화면에 나오지 않습니다 —
+`説明`, `新規アクション`, `キャラ位置指定`, 그리고 EBM 대사를 그대로 딴
+`SEL／1／<대사>` 분기 이름 등입니다.
+
+예외가 하나 있습니다. **`SYS:MESS` 태그 바로 뒤의 문자열은 스크립트가 플레이어에게
+직접 띄우는 메시지입니다.** 전체를 훑은 결과 해당하는 것은 한 종류뿐이었습니다.
+
+```
+現在この扉はロック中です。暗証番号を入力してください。
+  -> 현재 이 문은 잠겨 있습니다. 비밀번호를 입력해 주세요.
+```
+
+`Event/event/C21_2/EVENT_C21_2_130~180.ebd` 6개 파일에 들어 있습니다.
+
+문자열은 `u32 길이(NUL 포함) + CP932 바이트 + NUL` 형식입니다. `tools/build_event_sysmess.py`는
+한글 대체 문자를 CP932로 인코딩해 **원문과 정확히 같은 바이트 길이로** 덮어씁니다
+(짧으면 공백으로 채움). 길이 필드와 뒤따르는 모든 오프셋이 그대로 유지되므로
+구조가 깨질 여지가 없습니다. 대체 문자는 전부 JIS 한자라 CP932로 인코딩됩니다.
+
+`translate_all.py`의 6단계(`6/6`)로 연결되어 있으며 `--original-event`가 필요합니다.
+
+### 대화 선택지 `balloonseldata.bsb`
+
+`romfs/Event/balloonsel/balloonseldata.bsb`에는 대화 중 표시되는 **선택지 1,790개**
+(`はい` / `いいえ` / `仲間にする` …)가 들어 있습니다. EBM도 XML도 아닌 독자 포맷이라
+오랫동안 파이프라인에 잡히지 않았고, 그 결과 선택지가 일본어로 남아 있었습니다.
+
+이게 단순한 미번역으로 끝나지 않는 이유가 있습니다. 한글 패치는 폰트 아틀라스에서
+게임이 쓰지 않는 한자 셀을 골라 한글 글리프로 덮어쓰는 방식입니다. 번역되지 않은
+일본어가 남아 있으면, 그 안의 한자가 마침 한글용으로 징발된 셀일 때 **엉뚱한 한글
+한 글자로 그려집니다.** 실제로 이 파일 안에 그런 문자가 504자 있었습니다
+(`座`→`멕`, `率`→`쉐`, `低`→`뽕` 등).
+
+포맷은 단순한 길이 접두사 구조입니다.
+
+```
+u32          그룹 수
+그룹마다:
+    u32      선택지 수
+    선택지마다:
+        u32  NUL 포함 바이트 길이
+        ...  UTF-8 본문 + NUL
+```
+
+각 선택지는 말풍선 여백용 전각 공백(U+3000)으로 끝나므로 번역기가 이를 그대로
+복원합니다. `tools/balloonsel.py`가 읽기/쓰기를, `tools/translate_balloonsel.py`가
+추출·번역을, `tools/build_balloonsel.py`가 대체 문자 치환 후 재작성을 담당합니다.
+고정 슬롯이 아니라 길이 접두사 방식이므로 `main`과 달리 길이 제약이 없습니다.
+
+```powershell
+python tools\translate_balloonsel.py --source <원본 balloonseldata.bsb>
+```
+
+`translate_all.py`의 5단계(`5/5`)로 연결되어 있으며 `--original-balloonsel`이 필요합니다.
+지정하지 않으면 선택지가 일본어로 남고 위와 같은 글자 깨짐이 다시 발생합니다.
+
+### `Saves/*.xml.e` 게임 데이터 디코더
+
+아이템명·업적·미소기(禊) 대화·SNS 패러디 대사 등 게임 데이터 상당수는 EBM·시스템 XML이 아니라
+`romfs/Saves/` 아래 `.xml.e`로 암호화(스크램블+압축)된 XML 192개에 들어 있습니다. 이 포맷은
+Koei Tecmo/Gust의 자체 포맷이며, 공개 도구인 [gust_tools](https://github.com/VitaSmith/gust_tools)의
+`gust_enc`는 스크램블링 "버전 2·3"만 지원합니다. 이 게임은 버전 2·3보다 오래된 **버전 1**을 사용해서
+공개 도구로는 열 수 없었고, gust_tools 관리자도 버전 1은 구현을 포기했다고 밝힌 상태였습니다.
+
+`tools/decode_saves_xml_e.py`는 Switch용 `main` 실행 파일의 리소스 로더를 디스어셈블해서 알아낸
+버전 1 전용 상수(`RANDOM_INCREMENT=0x2fa5`, 주 스크램블 상수 `0x3b9a728b` — gust_enc.c의 버전 2·3
+상수 `0x2f09`/`0x3b9a73c9`와 상위 16비트만 같고 하위 16비트가 다릅니다)와, gust_tools가 이미
+공개해 둔 "Ar nosurge Plus"(ANP) 시드 값을 조합해 버전 1 파일을 평문 XML로 복원합니다. 192개
+파일 전부 체크섬 검증을 통과하고 정상적인 Shift-JIS XML로 풀립니다. 자세한 라이선스 관련 사항은
+[`THIRD_PARTY_NOTICES.md`](THIRD_PARTY_NOTICES.md)를 참고하세요.
+
+```powershell
+# 디코딩: .xml.e -> 평문 XML
+python tools\decode_saves_xml_e.py <파일 또는 여러 파일.xml.e> --out-dir <출력 폴더>
+
+# 인코딩: 번역된 XML -> 게임이 읽는 .xml.e (디코더와 완전히 대칭인 역순 파이프라인)
+python tools\decode_saves_xml_e.py <파일.xml> --encode --out-dir <출력 폴더>
+```
+
+복원된 원문은 `originalText/romfs/Saves/`에 원래 폴더 구조 그대로 저장되어 있습니다
+(예: `originalText/romfs/Saves/item/itemData.xml`, `originalText/romfs/Saves/misogi/misogiKaiwa.xml`).
+인코더는 디코더와 동일한 시드·상수를 역순으로 적용하며, 192개 파일 전부 디코드→인코드→디코드
+왕복 시 원문과 바이트 단위로 일치함을 확인했습니다.
+
+번역 파이프라인도 연결되어 있습니다. `tools/translate_saves_with_ollama.py`는 `originalText/romfs/Saves`를
+재귀적으로 훑어 (속성 이름에 상관없이) 일본어가 포함된 모든 속성값을 찾아 로컬 모델로 번역하고
+`translations/romfs/Saves/<같은 경로>`에 평문 XML로 기록합니다. 그 뒤 `tools/build_saves_data.py`가
+`systemMessage`/`ui`를 제외한 나머지 폴더의 번역 XML을 한글 대체 문자로 치환하고 `.xml.e`로
+재인코딩해 설치 폴더에 넣습니다. `translate_all.py`의 4단계(`4/4`)로도 연결되어 있으며, 아직 번역이
+없는 폴더는 자동으로 건너뜁니다.
+
+파일마다 실제 바이트 인코딩이 다르다는 점도 확인했습니다 — 대부분(item, achievement, misogi, tweet 등)은
+CP932(Shift-JIS 상위 호환)이지만, `field/` 아래 파일들은 XML 선언이 `SHIFT_JIS`라고 되어 있음에도
+실제로는 UTF-8입니다. 두 도구 모두 선언을 믿지 않고 실제 바이트를 UTF-8로 먼저 시도한 뒤 실패하면
+CP932로 판정하는 방식으로 이 불일치를 자동 처리합니다.
+
 ### 아직 번역되지 않았거나 확인이 필요한 부분
 
-- 이번에 반영한 시스템 안내·시마법 선택 화면·일부 메뉴 설명·상점 대사 외의 아이템명, UI 및 이미지로 그려진 일본어는 아직 번역되지 않은 부분이 있습니다.
+- `Saves/*.xml.e`에 들어 있는 아이템명, 업적, 미소기 대화, SNS 패러디 대사 등은 추출·번역·재인코딩까지
+  모두 완료했습니다. 원문에 일본어가 있던 속성값 14,499개 중 미번역으로 남은 것은 UI 레이아웃
+  치수 측정용 더미 문자열(`あいうえお…`)과 아티스트 표기(`Origa・dottedline hiroko`)뿐입니다.
+  실제로 번역이 필요한 XML은 25개이며, 나머지 167개는 일본어 텍스트가 없어 저장소에서 제외했습니다.
+- 이번에 반영한 시스템 안내·시마법 선택 화면·일부 메뉴 설명·상점 대사 외의 UI 및 이미지로 그려진 일본어는 아직 번역되지 않은 부분이 있습니다.
 
   이미지(텍스처)에 일본어가 그려져 있어 텍스트 패치로는 해결되지 않는 항목은 다음과 같습니다.
   경로는 모두 `romfs/Data/NX/` 기준이며, 확인 시점 기준 존재하는 파일 수를 표시했습니다.
@@ -444,6 +653,7 @@ python translate_all.py --original-font "D:\game\extracted\romfs\Data\NX\Font\Ma
 - **실행 파일 문자열**: 번역문을 원래 슬롯 안에만 기록하고, 초과 문장은 공백 제거 후 의미 보존 축약을 적용합니다. 포인터 재배치나 임의 0영역 사용은 하지 않습니다.
 - **시스템 HELP 인코딩**: 편집 원본은 UTF-8로 유지하되, 설치용 `SysInfo.xml`만 원본 로더에 맞춰 Shift-JIS로 생성합니다.
 - **전수 검증**: 패치 EBM을 역치환해 번역 원본과 바이트 단위로 비교했습니다.
+- **`Saves/*.xml.e` 버전 1 디코더**: `main` 실행 파일 디스어셈블로 버전 1 전용 PRNG 상수를 알아내고, gust_tools가 공개한 ANP 시드와 조합해 192개 파일 전부 체크섬 검증 통과.
 
 ## 7. 저장소 구성
 
@@ -461,13 +671,24 @@ python translate_all.py --original-font "D:\game\extracted\romfs\Data\NX\Font\Ma
 | `docs/FONT_MAPPING.md` | 폰트 분석 기술 문서 |
 | `fonts/Pretendard-Bold.otf` | 한글 글리프 생성에 사용하는 Pretendard Bold |
 | `tools/build_final_korean_mod.py` | 최종 EBM·폰트 생성기 |
-| `tools/build_system_message.py` | 한국어 XML을 설치용 대체 문자 XML로 변환 |
+| `tools/build_system_message.py` | 한국어 systemMessage/ui XML을 설치용 대체 문자 XML(평문)로 변환 |
+| `tools/build_saves_data.py` | 한국어 Saves XML(item·misogi·tweet 등)을 대체 문자로 치환 후 `.xml.e`로 재인코딩 |
+| `tools/translate_saves_with_ollama.py` | `originalText/romfs/Saves`의 일본어 속성을 추출해 로컬 모델로 번역, `translations/romfs/Saves`에 기록 |
 | `tools/build_main_text_patch.py` | `main_1.0.1.csv`를 검증하고 고정 길이 IPS 생성 |
+| `tools/inline_tail_fix.py` | 컴파일러가 `.text`에 상수로 심어 둔 짧은 문자열의 꼬리 바이트와 SSO 길이 필드를 함께 패치 |
+| `tools/balloonsel.py` | 대화 선택지 `balloonseldata.bsb` 파서/작성기 |
+| `tools/translate_balloonsel.py` | 선택지 추출 후 로컬 모델로 번역 |
+| `tools/build_balloonsel.py` | 번역된 선택지를 대체 문자로 치환해 `.bsb`로 재작성 |
+| `tools/build_event_sysmess.py` | 이벤트 스크립트(`.ebd`)의 `SYS:MESS` 시스템 메시지를 같은 바이트 길이로 치환 |
+| `tools/expand_main_compaction.py` | 슬롯 여유가 남는데도 과하게 줄어든 `main` 번역을 자연스럽게 복원 |
+| `tools/restore_fullwidth_punctuation.py` | ASCII로 바뀐 전각 문장부호를 원본대로 되돌림 |
 | `tools/build_fps_unlock_patch.py` | 30FPS 제한 해제 IPS 생성(한국어 패치와 무관하게 단독 사용 가능) |
 | `tools/compact_main_translations.py` | 초과 문장의 공백 제거 및 로컬 모델 단어 축약 |
 | `tools/apply_main_compaction_overrides.py` | 검수된 수동 축약표 적용 및 바이트·제어문자 검증 |
 | `translate_all.py` | EBM·폰트·시스템 메시지·UI를 한 번에 생성하는 통합 실행 파일 |
 | `tools/decode_renderdoc_font_draw.py` | RenderDoc 정점 버퍼 해독기 |
+| `tools/decode_saves_xml_e.py` | `Saves/*.xml.e`(버전 1 Gust 스크램블) 디코더/인코더, 평문 XML과 상호 변환 |
+| `originalText/romfs/Saves/` | 위 도구로 복원한 `Saves/*.xml` 원문(일본어). 번역본은 `translations/romfs/Saves/` |
 
 저장소에 포함되지 않는 항목:
 

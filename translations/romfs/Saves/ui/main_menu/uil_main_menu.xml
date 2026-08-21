@@ -23,7 +23,7 @@
 							<node name="param_group" pos="5,20">
 								<image name="talk_icon" pos="323,25,0" visible="false" viewer_visible="true" style="gen_menu01_talkicon01"/>
 								<image name="face_image" pos="12,3,0" style="gen_menu01_character" image_no="0"/>
-								<text name="name" pos="155,28,0" text="캐스티 리아노이트" font_size="22" align="center"/>
+								<text name="name" pos="155,28,0" text="캐스티 리어노이트" font_size="22" align="center"/>
 								<!--LV-->
 								<text name="lv" pos="74,102.667,0" text="09" copy="NUMBER01_20PX"/>
 								<!--EXP-->

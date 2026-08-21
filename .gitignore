@@ -9,12 +9,25 @@
 # 정품 게임에서 사용자가 직접 추출해야 하는 파일
 /original/
 /originalText/
+/originalImage/
 /MainFont_nx_0.g1t
 *.rdc
 *.nsp
 *.xci
 *.nca
 *.g1t.orig
+# 폰트/텍스처 아틀라스와 실행 파일은 어떤 경로에 있어도 커밋하지 않는다.
+# 번역본 .ebm 은 저장소에 포함되지만 아래 형식은 전부 게임에서 추출한 원본이거나
+# 빌드 산출물이다.
+*.g1t
+*.nso
+*.xml.e
+*.bsb
+*.ebd
+# 타이틀 키/펌웨어 키
+*.keys
+prod.keys
+title.keys
 
 # 자동 생성 보고서와 로컬 캡처/시험 자료
 /data/final_mod_report.json
@@ -24,6 +37,8 @@
 *.log
 *.tmp
 *.bak
+*.orig
+*.rej
 
 # Python 캐시 및 가상 환경
 __pycache__/

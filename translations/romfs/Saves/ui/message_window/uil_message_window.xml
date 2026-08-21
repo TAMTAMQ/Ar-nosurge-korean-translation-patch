@@ -10,7 +10,7 @@
 		<!--パネル-->
 		<image name="panel" pos="24,-66.667" size_wh="746.667,226.667" style="gen_common02_messagewindow_bg01">
 			<!--メッセージ-->
-			<text name="msg_text" pos="78,40.333" drop_shadow="false" limit_width="616" font_size="28" text="아이우에오카키쿠케코아이우에오카키쿠케코\n아이우에오카키쿠케코아이우에오카키쿠케코\n아이우에오카키쿠케코아이우에오카"/>
+			<text name="msg_text" pos="78,40.333" drop_shadow="false" limit_width="616" font_size="28" text="아이우에오카키쿠케코아이우에오카키쿠케코\n아이우에오카키쿠케코아이우에오카키쿠케코\n아이우에오카키쿠케코아이우에오카키쿠케코"/>
 			<!--名前表示欄-->
 			<node name="name_base" pos="16,-18">
 				<image name="name_base_img" pos="0,-13.333" scale="1.7,1.7,0" style="gen_common02_acce02"/>

@@ -89,7 +89,7 @@
 						<image pos="0,145" size_wh="350,28" style="gen_window03_bg02"/>
 						<image pos="0,174" size_wh="350,28" style="gen_window03_bg02"/>
 					</node>
-					<text name="comment" pos="47,308" drop_shadow="false" line_char_length="15" font_size="18" line_space="14" text="아이우에오카키쿠케코사시스세소타치츠테토아이우에오카키쿠케코사시스세소타치츠테토아이우에오카키쿠케코사시스세소타치츠테토"/>
+					<text name="comment" pos="47,308" drop_shadow="false" line_char_length="15" font_size="18" line_space="14" text="아이우에오카키쿠케코사시스세소타치츠테토아이우에오카키쿠케코사시스세소타치츠테토아이우에오카키쿠케코사시스세소타치츠테토아이우에오카키쿠케코사시스세소타치츠테"/>
 				</image>
 			</node>
 		</node>

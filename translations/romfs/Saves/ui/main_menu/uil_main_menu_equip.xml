@@ -332,7 +332,7 @@
                     <image style="gen_window03_bg02" pos="0.00,281.00" copy="bg02_org" />
                     <image style="gen_window03_bg02" pos="0.00,312.00" copy="bg02_org" />
                     <image style="gen_window03_bg02" pos="0.00,343.00" copy="bg02_org" />
-                    <text name="costume_explain" pos="19.50,9.75" text="아이우에오카키쿠케코사시스세소타치츠테토아이우에오카키쿠케코사시스세소타치츠테토아이우에오카키쿠케코사시스세소토&lt;CR&gt;" drop_shadow="false" limit_width="300" font_size="19.00" line_space="14.2" />
+                    <text name="costume_explain" pos="19.50,9.75" text="아이우에오카키쿠케코사시스세소타치츠테토아이우에오카키쿠케코사시스세소타치츠테토아이우에오카키쿠케코사시스세소토&lt;CR&gt;아이우에오&lt;CR&gt;아이우에오&lt;CR&gt;아이우에오&lt;CR&gt;아이우에오&lt;CR&gt;아이우에오&lt;CR&gt;아이우에오&lt;CR&gt;아이우에오" drop_shadow="false" limit_width="300" font_size="19.00" line_space="14.2" />
                 </node>
             </node>
         </node>

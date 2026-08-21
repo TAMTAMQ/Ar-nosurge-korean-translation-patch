@@ -33,7 +33,7 @@
 			<node name="pivot2" pos="-1200" scale="0.98,0.98">
 				<image name="status" pos="429,125,0" size_wh="365,450" style="gen_window01_02" color="255,255,255,255">
 					<image pos="40,7" size_w="288" style="gen_common01_name_bg01">
-						<text name="name" pos_ratio_x="0.5" pos="0,13" text="캐스티 리아노이트" font_size="18" align="center"/>
+						<text name="name" pos_ratio_x="0.5" pos="0,13" text="캐스티 리어노이트" font_size="18" align="center"/>
 					</image>
 					<node name="label" pos="7,50">
 						<image style="gen_common01_win_acce02_bg" size_w="350"/>
@@ -94,7 +94,7 @@
 						<image pos="20,401" size_wh="370,33" style="gen_window03_bg02"/>
 						<image pos="20,435" size_wh="370,33" style="gen_window03_bg02"/>
 						<image pos="20,469" size_wh="370,33" style="gen_window03_bg02"/>
-						<text name="profile_explain" pos="60,101" text="아이우에오가 반복됩니다." drop_shadow="false" line_char_length="15" font_size="20" line_space="16.0"/>
+						<text name="profile_explain" pos="60,101" text="아이우에오아이우에오아이우에오아이우에오아이우에오아이우에오아이우에오아이우에오아이우에오아이우에오아이우에오아이우에오아이우에오아이우에오아이우에오아이우에오아이우에오아이우에오아이우에오아이우에오" drop_shadow="false" line_char_length="15" font_size="20" line_space="16.0"/>
 					</node>
 				</image>
 			</node>

@@ -14,7 +14,7 @@
 			<image name="hl1" size_wh="505,157" pos="-10,-20" style="gen_window02_04_highlight"/>
 			<image name="achl1" pos="-10,-35" style="gen_common02_acce03"/>
 			<image name="acce1" pos="-27,-30" style="gen_common02_acce04"/>
-			<text name="msg_text" pos="30,25" pos_ratio_x="0.2" drop_shadow="false" line_char_length="20" font_size="20" text="아이우에오카키쿠케코사사먹고있을때가아냐파피부로걷기, 아르노사쥬세르노사쥬파괴신공용어「」【】・?!123abcdef"/>
+			<text name="msg_text" pos="30,25" pos_ratio_x="0.2" drop_shadow="false" line_char_length="20" font_size="20" text="아이우에오카키쿠케코사사먹고있을때가아냐파피부로걷기, 아르노사쥬세르노사쥬파괴신공용어「」【】・?!123abcdefGHIJ"/>
 			<image name="name_base" pos="16,-16" style="gen_common02_acce02">
 				<text name="name_text" pos="15,11" drop_shadow="false" font_size="16" text="캐스캐스캐"/>
 			</image>
@@ -24,7 +24,7 @@
 			<image name="hl2" size_wh="505,157" pos="-10,-20" style="gen_window02_04_highlight"/>
 			<image name="ach2" pos="-10,-35" style="gen_common02_acce03"/>
 			<image name="acce2" pos="-27,-30" style="gen_common02_acce04"/>
-			<text name="msg_text" pos="30,25" pos_ratio_x="0.2" drop_shadow="false" line_char_length="20" font_size="20" text="아이우에오카키쿠케코사사먹고있을때가아냐파피부로걷기, 아르노사쥬세르노사쥬파괴신공용어「」【】・?!123abcdef"/>
+			<text name="msg_text" pos="30,25" pos_ratio_x="0.2" drop_shadow="false" line_char_length="20" font_size="20" text="아이우에오카키쿠케코사사먹고있을때가아냐파피부로걷기, 아르노사쥬세르노사쥬파괴신공용어「」【】・?!123abcdefGHIJ"/>
 			<image name="name_base" pos="16,-16" style="gen_common02_acce02">
 				<text name="name_text" pos="15,11" drop_shadow="false" font_size="16" text="캐스캐스캐"/>
 			</image>
@@ -34,7 +34,7 @@
 			<image name="hl3" size_wh="505,157" pos="-10,-20" style="gen_window02_04_highlight"/>
 			<image name="achl3" pos="-10,-35" style="gen_common02_acce03"/>
 			<image name="acce3" pos="-27,-30" style="gen_common02_acce04"/>
-			<text name="msg_text" pos="30,25" pos_ratio_x="0.2" drop_shadow="false" line_char_length="20" font_size="20" text="아이우에오카키쿠케코사사먹고있을때가아냐파피부로걷기, 아르노사쥬세르노사쥬파괴신공용어「」【】・?!123abcdef"/>
+			<text name="msg_text" pos="30,25" pos_ratio_x="0.2" drop_shadow="false" line_char_length="20" font_size="20" text="아이우에오카키쿠케코사사먹고있을때가아냐파피부로걷기, 아르노사쥬세르노사쥬파괴신공용어「」【】・?!123abcdefGHIJ"/>
 			<image name="name_base" pos="16,-16" style="gen_common02_acce02">
 				<text name="name_text" pos="15,11" drop_shadow="false" font_size="16" text="캐스캐스캐"/>
 			</image>

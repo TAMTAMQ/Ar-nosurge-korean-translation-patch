@@ -48,7 +48,7 @@
 							<image style="gen_window03_bg02" pos="0,146" copy="wnd_bg_black1"/>
 							<image style="gen_window03_bg02" pos="0,175" copy="wnd_bg_black1"/>
 							<node name="page_note" pos="-10,0">
-								<text limit_width="360" name="text_note" text="아이우에오카키쿠케코사시스세소타치츠테토나니누네노하히후헤호마미무메모야유요라리루레로와오응안이우이어가기구계기좌지촌세" line_char_length="15" font_size="18" pos="23,7.667,0" line_space="14.2" word_space="1.45"/>
+								<text limit_width="360" name="text_note" text="아이우에오카키쿠케코사시스세소타치츠테토나니누네노하히후헤호마미무메모야유요라리루레로와오응안이우이어가기구계기좌지촌세소태지천지나닌뉴네노파비부보말미무녀모야유여량리류례료화위혜원무아이우에오" line_char_length="15" font_size="18" pos="23,7.667,0" line_space="14.2" word_space="1.45"/>
 							</node>
 							<node name="page_status">
 								<text limit_width="320" text="" font_size="21" pos="8,3" line_space="9.8"/>

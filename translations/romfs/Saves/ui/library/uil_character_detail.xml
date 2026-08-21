@@ -50,7 +50,7 @@
 							<image style="gen_window03_bg02" pos="0,320" size_wh="330,25"/>
 							<image style="gen_window03_bg02" pos="0,349" size_wh="330,25"/>
 							<node name="page_note">
-								<text limit_width="426.66" name="text_note" text="아이우에오카키쿠케코사시스세소타치츠테토나니누네노하히후헤호마미무메모야유요라리루레로와온안이우이오가이쿠케이코사지춘세" line_char_length="15" font_size="20" pos="8,34.667" line_space="10.4"/>
+								<text limit_width="426.66" name="text_note" text="아이우에오카키쿠케코사시스세소타치츠테토나니누네노하히후헤호마미무메모야유요라리루레로와온안이우이오가이쿠케이코사지춘세소타치천천지나니누네노하히후헤호마미무메모야유료라리루레로와이에오니" line_char_length="15" font_size="20" pos="8,34.667" line_space="10.4"/>
 							</node>
 						</node>
 						<!-- ページ本体ぶら下げ用ノード -->

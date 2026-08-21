@@ -55,7 +55,7 @@
                 <image style="gen_window03_bg02" pos="0.00,186.00" size_wh="370.00,30.00" />
             </node>
             <!-- テキスト -->
-            <text name="page_message2" text="123456789012345678123456789012345678페이지2페이지" font_size="20.00" line_char_length="18" line_space="12.7" pos="25.00,69.33,0.00" />
+            <text name="page_message2" text="１２３４５６７８９０１２３４５６７８１２３４５６７８９０１２３４５６７８페이지２&lt;CR&gt;페이지２&lt;CR&gt;페이지２&lt;CR&gt;페이지２&lt;CR&gt;페이지２&lt;CR&gt;페이지２&lt;CR&gt;페이지２&lt;CR&gt;페이지２&lt;CR&gt;페이지２&lt;CR&gt;페이지２" font_size="20.00" line_char_length="18" line_space="12.7" pos="25.00,69.33,0.00" />
             <!-- 切り替え表示 -->
             <node name="page_tab2" pos="394.00,480.00">
                 <image style="gen_window04_page01" pos="-82.00,-44.00,0.00" />

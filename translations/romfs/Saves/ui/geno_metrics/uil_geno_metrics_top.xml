@@ -84,7 +84,7 @@
 		</image>
 		<!--星-->
 		<image pos="21,49" style="gen_window03_bg02"/>
-		<text pos="26,54.667" text="세계 수 :" font_size="22" align="left"/>
+		<text pos="26,54.667" text="세계 수 ：" font_size="22" align="left"/>
 		<image name="star_off_00" pos="131,45" style="gen_bios01_star_off"/>
 		<image name="star_off_01" pos="167,45" style="gen_bios01_star_off"/>
 		<image name="star_off_02" pos="203,45" style="gen_bios01_star_off"/>
@@ -103,7 +103,7 @@
 		<text name="ex_title01" pos="26,121.333" text="아이우에오카키쿠케코" font_size="22" align="left"/>
 		<!--小さいアイコン.-->
 		<image pos="21,148" size_w="256" size_h="43" style="gen_window03_bg02"/>
-		<text pos="26,159" text="시마법 :" font_size="22" align="left"/>
+		<text pos="26,159" text="시마법 ：" font_size="22" align="left"/>
 		<!--<image name="sub_chara00" pos="29,151" style="gen_bios02_healingicon"/>
 		<image name="sub_chara01" pos="74,151" style="gen_bios02_healingicon"/>
 		<image name="sub_chara02" pos="119,151" style="gen_bios02_healingicon"/>

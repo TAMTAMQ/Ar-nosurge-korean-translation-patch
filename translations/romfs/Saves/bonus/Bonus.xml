@@ -1,0 +1,911 @@
+<?xml version="1.0" encoding="SHIFT-JIS"?>
+<Root>
+	<Bonus Name="보스 정보 획득" BonusEntry1="BonusEntry_ConnectBossNetwork" BonusEntry2="BonusEntry_Chg_Achivement" Entry2Prm1="ACHIEVEMENT_CONNECT_BOSS_NETWORK_RESET" Entry2Prm2="0" Entry2Prm3="0"/>
+	<Bonus Name="보스 정보 획득 리셋" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_CONNECT_BOSS_NETWORK" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="카논_델타 미소기 대화 횟수" BonusEntry1="BonusEntry_Event_Flag_Add" Entry1Prm1="EVENT_FLAG_KANON_MISOGI_TALK_COUNT_DELTA" Entry1Prm2="1"/>
+	<Bonus Name="카논_아바타 미소기 대화 횟수" BonusEntry1="BonusEntry_Event_Flag_Add" Entry1Prm1="EVENT_FLAG_KANON_MISOGI_TALK_COUNT_AVATAR" Entry1Prm2="1"/>
+	<Bonus Name="네이_델타 미소기 대화 횟수" BonusEntry1="BonusEntry_Event_Flag_Add" Entry1Prm1="EVENT_FLAG_NAY_MISOGI_TALK_COUNT_DELTA" Entry1Prm2="1"/>
+	<Bonus Name="네이_아바타 미소기 대화 횟수" BonusEntry1="BonusEntry_Event_Flag_Add" Entry1Prm1="EVENT_FLAG_NAY_MISOGI_TALK_COUNT_AVATAR" Entry1Prm2="1"/>
+	<Bonus Name="맵 수치 플래그 리셋" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELDTALK_FIELD_ENTER_ADD" Entry1Prm2="0" Entry1Prm3="0" Text="전투 3회당 1회, 필드 대화를 발생시킨다"/>
+	<Bonus Name="맵 달성 리셋" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELDTALK_FIELD_ENTER_ADD_RESET" Entry1Prm2="0" Entry1Prm3="0" BonusEntry2="BonusEntry_Event_Flag_Add" Entry2Prm1="EVENT_FLAG_FIELD_TALK_FLAG_POINT" Entry2Prm2="1" Text="전투 3회당 1회, 필드 대화를 발생시킨다"/>
+	<Bonus Name="배틀 수치 플래그 리셋" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELDTALK_BATTLE_ADD" Entry1Prm2="0" Entry1Prm3="0" Text="전투 3회당 1회, 필드 대화를 발생시킨다"/>
+	<Bonus Name="배틀 달성 리셋" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELDTALK_BATTLE_ADD_RESET" Entry1Prm2="0" Entry1Prm3="0" BonusEntry2="BonusEntry_Event_Flag_Add" Entry2Prm1="EVENT_FLAG_FIELD_TALK_FLAG_POINT" Entry2Prm2="3" Text="전투 3회당 1회, 필드 대화를 발생시킨다"/>
+	<Bonus Name="채집 수치 플래그 리셋" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELDTALK_GATHER_ADD" Entry1Prm2="0" Entry1Prm3="0" Text="전투 3회당 1회, 필드 대화를 발생시킨다"/>
+	<Bonus Name="채집 달성 리셋" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELDTALK_GATHER_ADD_RESET" Entry1Prm2="0" Entry1Prm3="0" BonusEntry2="BonusEntry_Event_Flag_Add" Entry2Prm1="EVENT_FLAG_FIELD_TALK_FLAG_POINT" Entry2Prm2="2" Text="전투 3회당 1회, 필드 대화를 발생시킨다"/>
+	<Bonus Name="FT 플래그 수치 리셋" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_EXEC" Entry1Prm2="0" Entry1Prm3="0" BonusEntry2="BonusEntry_Event_Flag_On" Entry2Prm1="EVENT_FLAG_FIELD_TALK_FLAG_POINT" Entry2Prm2="0" Text="전투 3회당 1회, 필드 대화를 발생시킨다"/>
+	<Bonus Name="FT 달성 리셋" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_FLAG_POINT_RESET" Entry1Prm2="0" Entry1Prm3="0" Text="전투 3회당 1회, 필드 대화를 발생시킨다"/>
+	<Bonus Name="거주구 대화： 델타" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA02_DELTA_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="거주구 대화： 델타 R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA02_DELTA_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="동력구 대화： 델타" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA03_DELTA_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="동력구 대화： 델타 R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA03_DELTA_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="격리구 대화： 델타" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA04_DELTA_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="격리구 대화： 델타R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA04_DELTA_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="교단 대화： 델타" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA05_DELTA_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="교단 대화： 델타R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA05_DELTA_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="플라스크 대화： 델타" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA06_A_DELTA_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="플라스크 대화： 델타R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA06_A_DELTA_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="플라센타 대화： 델타" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA06_B_DELTA_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="플라센타 대화： 델타R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA06_B_DELTA_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="폐허 대화： 델타" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA06_C_DELTA_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="폐허 대화： 델타R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA06_C_DELTA_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="쿠르트 대화： 델타" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA07_DELTA_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="쿠르트 대화： 델타R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA07_DELTA_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="바다 언덕 대화： 델타" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA08_DELTA_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="바다 언덕 대화： 델타R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA08_DELTA_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="에어포트 대화： 델타" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA08_B_DELTA_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="에어포트 대화： 델타R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA08_B_DELTA_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="유아의 숲 대화： 델타" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA08_C_DELTA_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="유아의 숲 대화： 델타R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA08_C_DELTA_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="교코도리 대화： 델타" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA09_A_DELTA_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="교코도리 대화： 델타R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA09_A_DELTA_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="베제리에르 대화： 델타" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA09_B_DELTA_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="베제리에르 대화： 델타R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA09_B_DELTA_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="샤를로 대화： 델타" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA09_C_DELTA_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="샤를로 대화： 델타R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA09_C_DELTA_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="천령가람 대화： 델타" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA09_D_DELTA_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="천령가람 대화： 델타R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA09_D_DELTA_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="노이아 대화： 델타" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA11_A_DELTA_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="노이아 대화： 델타R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA11_A_DELTA_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="기둥 하부 대화： 델타" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA11_B_DELTA_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="기둥 하부 대화： 델타R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA11_B_DELTA_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="성영대 대화： 델타" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA11_C_DELTA_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="성영대 대화： 델타R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA11_C_DELTA_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="기둥 상부 대화： 델타" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA11_D_DELTA_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="기둥 상부 대화： 델타R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA11_D_DELTA_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="원초 대화： 델타" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA12_A_DELTA_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="원초 대화： 델타R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA12_A_DELTA_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="증폭탑 대화： 델타" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA12_B_DELTA_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="증폭탑 대화： 델타R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA12_B_DELTA_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="실바 대화： 델타" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA12_C_DELTA_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="실바 대화： 델타R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA12_C_DELTA_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="샤라노 대화： 델타" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA13_A_DELTA_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="샤라노 대화： 델타R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA13_A_DELTA_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="다이아 대화： 델타" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA13_B_DELTA_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="다이아 대화： 델타R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA13_B_DELTA_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="휴무네 대화： 델타" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA14_A_DELTA_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="휴무네 대화： 델타R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA14_A_DELTA_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="콘트라 대화： 델타" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA14_B_DELTA_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="콘트라 대화： 델타R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA14_B_DELTA_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="센터 대화： 델타" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA14_C_DELTA_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="센터 대화： 델타R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA14_C_DELTA_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="거주구 대화： 캐스" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA02_CASTY_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="거주구 대화： 캐스R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA02_CASTY_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="동력구 대화： 캐스" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA03_CASTY_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="동력구 대화： 캐스R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA03_CASTY_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="격리구 대화： 캐스" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA04_CASTY_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="격리구 대화： 캐스R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA04_CASTY_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="교단 대화： 캐스" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA05_CASTY_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="교단 대화： 캐스R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA05_CASTY_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="플라스크 대화： 캐스" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA06_A_CASTY_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="플라스크 대화： 캐스R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA06_A_CASTY_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="플라센타 대화： 캐스" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA06_B_CASTY_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="플라센타 대화： 캐스 R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA06_B_CASTY_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="폐허 대화： 캐스" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA06_C_CASTY_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="폐허 대화： 캐스 R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA06_C_CASTY_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="쿠르트 대화： 캐스" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA07_CASTY_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="쿠르트 대화： 캐스 R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA07_CASTY_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="바다 언덕 대화： 캐스" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA08_CASTY_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="바다 언덕 대화： 캐스 R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA08_CASTY_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="에어포트 대화： 캐스" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA08_B_CASTY_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="에어포트 대화： 캐스 R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA08_B_CASTY_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="유아의 숲 대화： 캐스" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA08_C_CASTY_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="유아의 숲 대화： 캐스 R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA08_C_CASTY_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="행행통 대화： 캐스" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA09_A_CASTY_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="행행통 대화： 캐스R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA09_A_CASTY_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="베제리에르 대화： 캐스" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA09_B_CASTY_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="베제리에르 대화： 캐스R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA09_B_CASTY_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="샤를로 대화： 캐스" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA09_C_CASTY_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="샤를로 대화： 캐스R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA09_C_CASTY_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="천령가람 대화： 캐스" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA09_D_CASTY_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="천령가람 대화： 캐스R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA09_D_CASTY_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="노이아 대화： 캐스" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA11_A_CASTY_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="노이아 대화： 캐스R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA11_A_CASTY_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="주부하부 대화： 캐스" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA11_B_CASTY_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="주부하부 대화： 캐스R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA11_B_CASTY_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="성영대 대화： 캐스" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA11_C_CASTY_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="성영대 대화： 캐스R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA11_C_CASTY_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="기둥 상부 대화： 캐스" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA11_D_CASTY_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="기둥 상부 대화： 캐스R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA11_D_CASTY_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="원초 대화： 캐스" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA12_A_CASTY_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="원초 대화： 캐스R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA12_A_CASTY_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="증폭탑 대화： 캐스" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA12_B_CASTY_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="증폭탑 대화： 캐스R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA12_B_CASTY_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="실바 대화： 캐스" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA12_C_CASTY_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="실바 대화： 캐스R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA12_C_CASTY_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="샤라노 대화： 캐스" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA13_A_CASTY_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="샤라노 대화： 캐스R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA13_A_CASTY_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="다이아 대화： 캐스" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA13_B_CASTY_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="다이아 대화： 캐스 R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA13_B_CASTY_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="휴무네 대화： 캐스" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA14_A_CASTY_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="휴무네 대화： 캐스 R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA14_A_CASTY_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="콘트라 대화： 캐스" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA14_B_CASTY_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="콘트라 대화： 캐스 R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA14_B_CASTY_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="센터 대화： 캐스" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA14_C_CASTY_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="센터 대화： 캐스 R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA14_C_CASTY_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="거주구 대화： 살리" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA02_SARLY_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="거주구 대화： 살리 R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA02_SARLY_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="동력구 대화： 살리" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA03_SARLY_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="동력구 대화： 살리 R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA03_SARLY_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="격리구 대화： 살리" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA04_SARLY_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="격리구 대화： 살리 R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA04_SARLY_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="교단 대화： 살리" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA05_SARLY_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="교단 대화： 살리 R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA05_SARLY_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="플라스크 대화： 살리" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA06_A_SARLY_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="플라스크 대화： 살리 R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA06_A_SARLY_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="플라센타 대화： 살리" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA06_B_SARLY_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="플라센타 대화： 살리 R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA06_B_SARLY_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="폐허 대화： 살리" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA06_C_SARLY_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="폐허 대화： 살리 R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA06_C_SARLY_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="쿠르트 대화： 살리" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA07_SARLY_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="쿠르트 대화： 살리 R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA07_SARLY_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="바다 언덕 대화： 살리" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA08_SARLY_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="바다 언덕 대화： 살리R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA08_SARLY_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="에어포트 대화： 살리" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA08_B_SARLY_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="에어포트 대화： 살리R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA08_B_SARLY_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="유아의 숲 대화： 살리" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA08_C_SARLY_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="유아의 숲 대화： 살리R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA08_C_SARLY_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="교코도리 대화： 살리" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA09_A_SARLY_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="교코도리 대화： 살리R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA09_A_SARLY_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="베제리에르 대화： 살리" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA09_B_SARLY_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="베제리에르 대화： 살리R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA09_B_SARLY_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="샤를로 대화： 살리" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA09_C_SARLY_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="샤를로 대화： 살리R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA09_C_SARLY_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="천령가람 대화： 살리" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA09_D_SARLY_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="천령가람 대화： 살리 R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA09_D_SARLY_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="소라 대화： 살리" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA10_SARLY_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="소라 대화： 살리 R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA10_SARLY_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="노이아 대화： 살리" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA11_A_SARLY_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="노이아 대화： 살리 R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA11_A_SARLY_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="기둥 하부 대화： 살리" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA11_B_SARLY_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="기둥 하부 대화： 살리 R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA11_B_SARLY_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="성영대 대화： 살리" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA11_C_SARLY_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="성영대 대화： 살리 R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA11_C_SARLY_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="기둥 상부 대화： 살리" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA11_D_SARLY_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="기둥 상부 대화： 살리 R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA11_D_SARLY_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="원초 대화： 살리" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA12_A_SARLY_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="원초 대화： 살리R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA12_A_SARLY_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="증폭탑 대화： 살리" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA12_B_SARLY_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="증폭탑 대화： 살리R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA12_B_SARLY_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="실바 대화： 살리" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA12_C_SARLY_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="실바 대화： 살리R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA12_C_SARLY_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="샤라노 대화： 살리" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA13_A_SARLY_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="샤라노 대화： 살리R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA13_A_SARLY_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="다이아 대화： 살리" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA13_B_SARLY_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="다이아 대화： 살리R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA13_B_SARLY_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="휴무네 대화： 살리" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA14_A_SARLY_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="휴무네 대화： 살리R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA14_A_SARLY_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="콘트라 대화： 살리" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA14_B_SARLY_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="콘트라 대화： 살리 R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA14_B_SARLY_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="센터 대화： 살리" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA14_C_SARLY_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="센터 대화： 살리 R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA14_C_SARLY_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="이온의 집 대화： 이온" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA01_A_ION_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="이온의 집 대화： 이온 R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA01_A_ION_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="케모케모 대화： 이온" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA01_B_ION_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="케모케모 대화： 이온 R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA01_B_ION_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="네리코 대화： 이온" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA01_C_ION_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="네리코 대화： 이온 R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA01_C_ION_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="세상의 끝 대화： 이온" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA01_D_ION_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="세상의 끝 대화： 이온 R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA01_D_ION_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="거주구 대화： 이온" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA02_ION_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="거주구 대화： 이온 R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA02_ION_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="동력구 대화： 이온" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA03_ION_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="동력구 대화： 이온 R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA03_ION_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="격리구 대화： 이온" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA04_ION_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="격리구 대화： 이온 R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA04_ION_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="교단 대화： 이온" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA05_ION_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="교단 대화： 이온 R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA05_ION_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="플라스크 대화： 이온" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA06_A_ION_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="플라스크 대화： 이온 R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA06_A_ION_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="플라센타 대화： 이온" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA06_B_ION_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="플라센타 대화： 이온 R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA06_B_ION_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="폐허 대화： 이온" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA06_C_ION_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="폐허 대화： 이온 R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA06_C_ION_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="쿠르트 대화： 이온" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA07_ION_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="쿠르트 대화： 이온 R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA07_ION_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="바다 언덕 대화： 이온" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA08_ION_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="바다 언덕 대화： 이온 R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA08_ION_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="에어포트 대화： 이온" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA08_B_ION_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="에어포트 대화： 이온 R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA08_B_ION_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="유아의 숲 대화： 이온" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA08_C_ION_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="유아의 숲 대화： 이온 R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA08_C_ION_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="교코도리 대화： 이온" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA09_A_ION_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="교코도리 대화： 이온 R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA09_A_ION_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="베제리에르 대화： 이온" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA09_B_ION_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="베제리에르 대화： 이온 R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA09_B_ION_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="샤를로 대화： 이온" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA09_C_ION_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="샤를로 대화： 이온 R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA09_C_ION_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="천령가람 대화： 이온" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA09_D_ION_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="천령가람 대화： 이온 R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA09_D_ION_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="소라 대화： 이온" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA10_ION_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="소라 대화： 이온 R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA10_ION_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="노아 대화： 이온" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA11_A_ION_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="노아 대화： 이온 R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA11_A_ION_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="주부카부 대화： 이온" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA11_B_ION_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="주부카부 대화： 이온 R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA11_B_ION_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="성영대 대화： 이온" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA11_C_ION_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="성영대 대화： 이온 R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA11_C_ION_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="기둥 상부 대화： 이온" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA11_D_ION_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="기둥 상부 대화： 이온 R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA11_D_ION_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="원초 대화： 이온" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA12_A_ION_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="원초 대화： 이온 R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA12_A_ION_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="증폭탑 대화： 이온" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA12_B_ION_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="증폭탑 대화： 이온 R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA12_B_ION_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="실바 대화： 이온" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA12_C_ION_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="실바 대화： 이온 R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA12_C_ION_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="샤라노 대화： 이온" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA13_A_ION_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="샤라노 대화： 이온 R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA13_A_ION_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="다이아 대화： 이온" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA13_B_ION_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="다이 대화： 이온 R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA13_B_ION_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="휴무네 대화： 이온" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA14_A_ION_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="휴무네 대화： 이온 R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA14_A_ION_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="콘트라 대화： 이온" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA14_B_ION_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="콘트라 대화： 이온 R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA14_B_ION_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="센터 대화： 이온" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA14_C_ION_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="센터 대화： 이온 R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA14_C_ION_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="거주구 대화： 프림" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA02_PLIM_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="거주구 대화： 프림 R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA02_PLIM_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="동력구 대화： 프림" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA03_PLIM_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="동력구 대화： 프림 R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA03_PLIM_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="격리구 대화： 프림" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA04_PLIM_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="격리구 대화： 프림R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA04_PLIM_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="교단 대화： 프림" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA05_PLIM_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="교단 대화： 프림R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA05_PLIM_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="플라스크 대화： 프림" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA06_A_PLIM_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="플라스크 대화： 프림R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA06_A_PLIM_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="플라센타 대화： 프림" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA06_B_PLIM_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="플라센타 대화： 프림R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA06_B_PLIM_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="폐허 대화： 프림" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA06_C_PLIM_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="폐허 대화： 프림R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA06_C_PLIM_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="쿠르트 대화： 프림" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA07_PLIM_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="쿠르트 대화： 프림R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA07_PLIM_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="바다 언덕 대화： 프림" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA08_PLIM_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="바다 언덕 대화： 프림R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA08_PLIM_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="에어포트 대화： 프림" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA08_B_PLIM_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="에어포트 대화： 프림R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA08_B_PLIM_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="유아의 숲 대화： 프림" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA08_C_PLIM_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="유아의 숲 대화： 프림R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA08_C_PLIM_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="교코도리 대화： 프림" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA09_A_PLIM_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="교코도리 대화： 프림R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA09_A_PLIM_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="베제리에르 대화： 프림" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA09_B_PLIM_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="베제리에르 대화： 프림R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA09_B_PLIM_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="샤를로 대화： 프림" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA09_C_PLIM_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="샤를로 대화： 프림R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA09_C_PLIM_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="천령가람 대화： 프림" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA09_D_PLIM_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="천령가람 대화： 프림R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA09_D_PLIM_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="소라 대화： 프림" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA10_PLIM_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="소라 대화： 프림R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA10_PLIM_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="노이아 대화： 프림" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA11_A_PLIM_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="노이아 대화： 프림R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA11_A_PLIM_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="기둥 하부 대화： 프림" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA11_B_PLIM_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="기둥 하부 대화： 프림R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA11_B_PLIM_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="성영대 대화： 프림" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA11_C_PLIM_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="성영대 대화： 프림R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA11_C_PLIM_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="기둥 상부 대화： 프림" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA11_D_PLIM_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="기둥 상부 대화： 프림R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA11_D_PLIM_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="원초 대화： 프림" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA12_A_PLIM_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="원초 대화： 프림 R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA12_A_PLIM_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="증폭탑 대화： 프림" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA12_B_PLIM_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="증폭탑 대화： 프림 R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA12_B_PLIM_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="실바 대화： 프림" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA12_C_PLIM_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="실바 대화： 프림 R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA12_C_PLIM_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="샤라노 대화： 프림" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA13_A_PLIM_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="샤라노 대화： 프림 R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA13_A_PLIM_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="다이아 대화： 프림" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA13_B_PLIM_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="다이아 대화： 프림 R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA13_B_PLIM_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="휴무네 대화： 프림" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA14_A_PLIM_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="휴무네 대화： 프림 R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA14_A_PLIM_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="콘트라 대화： 프림" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA14_B_PLIM_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="콘트라 대화： 프림 R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA14_B_PLIM_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="센터 대화： 프림" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA14_C_PLIM_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="센터 대화： 프림 R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA14_C_PLIM_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="거주구 대화： 타트리아" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA02_TATTORIA_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="거주구 대화： 타트리아 R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA02_TATTORIA_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="동력구 대화： 타트리아" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA03_TATTORIA_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="동력구 대화： 타트리아 R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA03_TATTORIA_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="격리구 대화： 타트리아" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA04_TATTORIA_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="격리구 대화： 타트리아 R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA04_TATTORIA_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="교단 대화： 타트리아" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA05_TATTORIA_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="교단 대화： 타트리아 R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA05_TATTORIA_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="플라스크 대화： 타트리아" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA06_A_TATTORIA_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="플라스크 대화： 타트리아 R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA06_A_TATTORIA_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="플라센타 대화： 타트리아" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA06_B_TATTORIA_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="플라센타 대화： 타트리아 R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA06_B_TATTORIA_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="폐허 대화： 타트리아" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA06_C_TATTORIA_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="폐허 대화： 타트리아 R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA06_C_TATTORIA_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="쿠르트 대화： 타트리아" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA07_TATTORIA_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="쿠르트 대화： 타트리아 R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA07_TATTORIA_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="바다 언덕 대화： 타트리아" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA08_TATTORIA_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="바다 언덕 대화： 타트리아 R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA08_TATTORIA_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="에어포트 대화： 타트리아" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA08_B_TATTORIA_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="에어포트 대화： 타트리아 R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA08_B_TATTORIA_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="유아의 숲 대화： 타트리아" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA08_C_TATTORIA_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="유아의 숲 대화： 타트리아 R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA08_C_TATTORIA_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="행행통 대화： 타트리아" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA09_A_TATTORIA_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="행행통 대화： 타트리아 R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA09_A_TATTORIA_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="베제리에르 대화： 타트리아" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA09_B_TATTORIA_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="베제리에르 대화： 타트리아 R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA09_B_TATTORIA_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="샤를로 대화： 타트리아" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA09_C_TATTORIA_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="샤를로 대화： 타트리아 R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA09_C_TATTORIA_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="천령가람 대화： 타트리아" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA09_D_TATTORIA_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="천령가람 대화： 타트리아 R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA09_D_TATTORIA_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="소라 대화： 타트리아" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA10_TATTORIA_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="소라 대화： 타트리아 R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA10_TATTORIA_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="노이아 대화： 타트리아" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA11_A_TATTORIA_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="노이아 대화： 타트리아 R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA11_A_TATTORIA_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="기둥 하부 대화： 타트리아" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA11_B_TATTORIA_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="기둥 하부 대화： 타트리아 R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA11_B_TATTORIA_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="성영대 대화： 타트리아" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA11_C_TATTORIA_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="성영대 대화： 타트리아 R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA11_C_TATTORIA_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="기둥 상부 대화： 타트리아" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA11_D_TATTORIA_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="기둥 상부 대화： 타트리아 R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA11_D_TATTORIA_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="원초 대화： 타트리아" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA12_A_TATTORIA_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="원초 대화： 타트리아 R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA12_A_TATTORIA_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="증폭탑 대화： 타트리아" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA12_B_TATTORIA_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="증폭탑 대화： 타트리아 R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA12_B_TATTORIA_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="실바 대화： 타트리아" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA12_C_TATTORIA_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="실바 대화： 타트리아 R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA12_C_TATTORIA_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="샤라노 대화： 타트리아" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA13_A_TATTORIA_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="샤라노 대화： 타트리아 R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA13_A_TATTORIA_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="다이아 대화： 타트리아" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA13_B_TATTORIA_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="다이아 대화： 타트리아 R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA13_B_TATTORIA_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="휴무네 대화： 타트리아" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA14_A_TATTORIA_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="휴무네 대화： 타트리아 R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA14_A_TATTORIA_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="콘트라 대화： 타트리아" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA14_B_TATTORIA_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="콘트라 대화： 타트리아 R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA14_B_TATTORIA_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="센터 대화： 타트리아" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA14_C_TATTORIA_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="센터 대화： 타트리아 R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA14_C_TATTORIA_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="거주구 대화： 네이" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA02_NAY_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="거주구 대화： 네이 R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA02_NAY_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="동력구 대화： 네이" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA03_NAY_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="동력구 대화： 네이 R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA03_NAY_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="격리구 대화： 네이" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA04_NAY_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="격리구 대화： 네이 R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA04_NAY_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="교단 대화： 네이" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA05_NAY_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="교단 대화： 네이 R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA05_NAY_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="플라스크 대화： 네이" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA06_A_NAY_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="플라스크 대화： 네이 R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA06_A_NAY_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="플라센타 대화： 네이" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA06_B_NAY_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="플라센타 대화： 네이 R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA06_B_NAY_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="폐허 대화： 네이" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA06_C_NAY_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="폐허 대화： 네이 R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA06_C_NAY_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="쿠르트 대화： 네이" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA07_NAY_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="쿠르트 대화： 네이 R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA07_NAY_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="바다 언덕 대화： 네이" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA08_NAY_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="바다 언덕 대화： 네이 R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA08_NAY_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="에어포트 대화： 네이" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA08_B_NAY_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="에어포트 대화： 네이 R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA08_B_NAY_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="유아의 숲 대화： 네이" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA08_C_NAY_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="유아의 숲 대화： 네이 R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA08_C_NAY_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="교코도리 대화： 네이" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA09_A_NAY_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="교코도리 대화： 네이 R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA09_A_NAY_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="베제리에르 대화： 네이" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA09_B_NAY_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="베제리에르 대화： 네이 R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA09_B_NAY_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="샤를로 대화： 네이" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA09_C_NAY_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="샤를로 대화： 네이 R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA09_C_NAY_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="천령가람 대화： 네이" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA09_D_NAY_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="천령가람 대화： 네이 R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA09_D_NAY_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="소라 대화： 네이" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA10_NAY_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="소라 대화： 네이 R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA10_NAY_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="노아 대화： 네이" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA11_A_NAY_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="노아 대화： 네이 R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA11_A_NAY_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="하시라 부하부 대화： 네이" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA11_B_NAY_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="하시라 부하부 대화： 네이 R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA11_B_NAY_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="성영대 대화： 네이" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA11_C_NAY_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="성영대 대화： 네이 R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA11_C_NAY_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="기둥 상부 대화： 네이" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA11_D_NAY_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="기둥 상부 대화： 네이 R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA11_D_NAY_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="원초 대화： 네이" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA12_A_NAY_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="원초 대화： 네이 R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA12_A_NAY_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="증폭탑 대화： 네이" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA12_B_NAY_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="증폭탑 대화： 네이 R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA12_B_NAY_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="실바 대화： 네이" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA12_C_NAY_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="실바 대화： 네이 R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA12_C_NAY_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="샤라노 대화： 네이" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA13_A_NAY_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="샤라노 대화： 네이 R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA13_A_NAY_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="다이아 대화： 네이" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA13_B_NAY_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="다이아 대화： 네이 R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA13_B_NAY_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="휴무네 대화： 네이" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA14_A_NAY_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="휴무네 대화： 네이 R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA14_A_NAY_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="콘트라 대화： 네이" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA14_B_NAY_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="콘트라 대화： 네이 R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA14_B_NAY_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="센터 대화： 네이" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA14_C_NAY_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="센터 대화： 네이 R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA14_C_NAY_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="거주구 대화： 네로" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA02_NERO_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="거주구 대화： 네로 R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA02_NERO_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="동력구 대화： 네로" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA03_NERO_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="동력구 대화： 네로 R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA03_NERO_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="격리구 대화： 네로" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA04_NERO_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="격리구 대화： 네로 R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA04_NERO_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="교단 대화： 네로" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA05_NERO_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="교단 대화： 네로 R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA05_NERO_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="플라스크 대화： 네로" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA06_A_NERO_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="플라스크 대화： 네로 R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA06_A_NERO_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="플라센타 대화： 네로" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA06_B_NERO_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="플라센타 대화： 네로 R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA06_B_NERO_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="폐허 대화： 네로" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA06_C_NERO_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="폐허 대화： 네로 R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA06_C_NERO_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="쿠르트 대화： 네로" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA07_NERO_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="쿠르트 대화： 네로 R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA07_NERO_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="바다 언덕 대화： 네로" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA08_NERO_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="바다 언덕 대화： 네로R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA08_NERO_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="에어포트 대화： 네로" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA08_B_NERO_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="에어포트 대화： 네로R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA08_B_NERO_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="유아의 숲 대화： 네로" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA08_C_NERO_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="유아의 숲 대화： 네로R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA08_C_NERO_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="교코도리 대화： 네로" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA09_A_NERO_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="교코도리 대화： 네로R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA09_A_NERO_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="베제리에르 대화： 네로" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA09_B_NERO_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="베제리에르 대화： 네로R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA09_B_NERO_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="샤를로 대화： 네로" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA09_C_NERO_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="샤를로 대화： 네로R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA09_C_NERO_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="천령가람 대화： 네로" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA09_D_NERO_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="천령가람 대화： 네로 R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA09_D_NERO_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="소라 대화： 네로" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA10_NERO_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="소라 대화： 네로 R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA10_NERO_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="노아 대화： 네로" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA11_A_NERO_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="노아 대화： 네로 R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA11_A_NERO_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="기둥 부하부 대화： 네로" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA11_B_NERO_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="기둥 부하부 대화： 네로 R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA11_B_NERO_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="성영대 대화： 네로" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA11_C_NERO_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="성영대 대화： 네로 R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA11_C_NERO_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="기둥 상부 대화： 네로" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA11_D_NERO_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="기둥 상부 대화： 네로 R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA11_D_NERO_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="원초 대화： 네로" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA12_A_NERO_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="원초 대화： 네로R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA12_A_NERO_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="증폭탑 대화： 네로" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA12_B_NERO_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="증폭탑 대화： 네로R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA12_B_NERO_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="실바 대화： 네로" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA12_C_NERO_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="실바 대화： 네로R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA12_C_NERO_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="샤라노 대화： 네로" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA13_A_NERO_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="샤라노 대화： 네로R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA13_A_NERO_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="다이아 대화： 네로" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA13_B_NERO_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="다이아 대화： 네로R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA13_B_NERO_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="휴무네 대화： 네로" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA14_A_NERO_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="휴무네 대화： 네로R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA14_A_NERO_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="콘트라 대화： 네로" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA14_B_NERO_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="콘트라 대화： 네로R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA14_B_NERO_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="센터 대화： 네로" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA14_C_NERO_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="센터 대화： 네로R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA14_C_NERO_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="거주구 대화： 슈레리아" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA02_SYURERIA_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="거주구 대화： 슈레리아R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA02_SYURERIA_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="동력구 대화： 슈레리아" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA03_SYURERIA_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="동력구 대화： 슈레리아R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA03_SYURERIA_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="격리구 대화： 슈레리아" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA04_SYURERIA_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="격리구 대화： 슈레리아R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA04_SYURERIA_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="교단 대화： 슈레리아" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA05_SYURERIA_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="교단 대화： 슈레리아R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA05_SYURERIA_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="플라스크 대화： 슈레리아" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA06_A_SYURERIA_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="플라스크 대화： 슈레리아 R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA06_A_SYURERIA_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="플라센타 대화： 슈레리아" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA06_B_SYURERIA_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="플라센타 대화： 슈레리아 R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA06_B_SYURERIA_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="폐허 대화： 슈레리아" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA06_C_SYURERIA_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="폐허 대화： 슈레리아 R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA06_C_SYURERIA_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="쿠르트 대화： 슈레리아" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA07_SYURERIA_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="쿠르트 대화： 슈레리아 R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA07_SYURERIA_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="바다 언덕 대화： 슈레리아" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA08_SYURERIA_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="바다 언덕 대화： 슈레리아 R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA08_SYURERIA_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="에어포트 대화： 슈레리아" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA08_B_SYURERIA_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="에어포트 대화： 슈레리아 R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA08_B_SYURERIA_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="유아의 숲 대화： 슈레리아" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA08_C_SYURERIA_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="유아의 숲 대화： 슈레리아 R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA08_C_SYURERIA_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="행행통 대화： 슈레리아" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA09_A_SYURERIA_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="행행통 대화： 슈레리아 R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA09_A_SYURERIA_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="베제리엘 대화： 슈레리아" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA09_B_SYURERIA_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="베제리엘 대화： 슈레리아 R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA09_B_SYURERIA_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="샤를로 대화： 슈레리아" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA09_C_SYURERIA_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="샤를로 대화： 슈레리아 R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA09_C_SYURERIA_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="천령가람 대화： 슈레리아" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA09_D_SYURERIA_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="천령가람 대화： 슈레리아 R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA09_D_SYURERIA_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="소라 대화： 슈레리아" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA10_SYURERIA_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="소라 대화： 슈레리아 R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA10_SYURERIA_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="노이아 대화： 슈레리아" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA11_A_SYURERIA_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="노이아 대화： 슈레리아R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA11_A_SYURERIA_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="기둥 하부 대화： 슈레리아" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA11_B_SYURERIA_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="기둥 하부 대화： 슈레리아R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA11_B_SYURERIA_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="성영대 대화： 슈레리아" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA11_C_SYURERIA_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="성영대 대화： 슈레리아R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA11_C_SYURERIA_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="기둥 상부 대화： 슈레리아" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA11_D_SYURERIA_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="기둥 상부 대화： 슈레리아R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA11_D_SYURERIA_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="원초 대화： 슈레리아" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA12_A_SYURERIA_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="원초 대화： 슈레리아R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA12_A_SYURERIA_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="증폭탑 대화： 슈레리아" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA12_B_SYURERIA_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="증폭탑 대화： 슈레리아R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA12_B_SYURERIA_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="실바 대화： 슈레리아" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA12_C_SYURERIA_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="실바 대화： 슈레리아 R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA12_C_SYURERIA_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="샤라노 대화： 슈레리아" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA13_A_SYURERIA_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="샤라노 대화： 슈레리아 R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA13_A_SYURERIA_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="다이아 대화： 슈레리아" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA13_B_SYURERIA_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="다이아 대화： 슈레리아 R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA13_B_SYURERIA_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="휴무네 대화： 슈레리아" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA14_A_SYURERIA_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="휴무네 대화： 슈레리아 R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA14_A_SYURERIA_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="콘트라 대화： 슈레리아" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA14_B_SYURERIA_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="콘트라 대화： 슈레리아 R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA14_B_SYURERIA_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="센터 대화： 슈레리아" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA14_C_SYURERIA_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="센터 대화： 슈레리아 R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA14_C_SYURERIA_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="거주구 대화： 아야타네" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA02_AYATANE_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="거주구 대화： 아야타네R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA02_AYATANE_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="동력구 대화： 아야타네" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA03_AYATANE_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="동력구 대화： 아야타네R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA03_AYATANE_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="격리구 대화： 아야타네" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA04_AYATANE_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="격리구 대화： 아야타네R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA04_AYATANE_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="교단 대화： 아야타네" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA05_AYATANE_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="교단 대화： 아야타네R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA05_AYATANE_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="플라스크 대화： 아야타네" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA06_A_AYATANE_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="플라스크 대화： 아야타네R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA06_A_AYATANE_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="플라센타 대화： 아야타네" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA06_B_AYATANE_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="플라센타 대화： 아야타네R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA06_B_AYATANE_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="폐허 대화： 아야타네" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA06_C_AYATANE_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="폐허 대화： 아야타네R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA06_C_AYATANE_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="쿠르트 대화： 아야타네" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA07_AYATANE_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="쿠르트 대화： 아야타네R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA07_AYATANE_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="바다 언덕 대화： 아야타네" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA08_AYATANE_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="바다 언덕 대화： 아야타네R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA08_AYATANE_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="에어포트 대화： 아야타네" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA08_B_AYATANE_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="에어포트 대화： 아야타네R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA08_B_AYATANE_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="유아의 숲 대화： 아야타네" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA08_C_AYATANE_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="유아의 숲 대화： 아야타네R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA08_C_AYATANE_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="교코도리 대화： 아야타네" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA09_A_AYATANE_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="교코도리 대화： 아야타네R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA09_A_AYATANE_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="베제리에르 대화： 아야타네" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA09_B_AYATANE_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="베제리에르 대화： 아야타네R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA09_B_AYATANE_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="샤를로 대화： 아야타네" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA09_C_AYATANE_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="샤를로 대화： 아야타네R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA09_C_AYATANE_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="천령가람 대화： 아야타네" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA09_D_AYATANE_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="천령가람 대화： 아야타네R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA09_D_AYATANE_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="소라 대화： 아야타네" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA10_AYATANE_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="소라 대화： 아야타네R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA10_AYATANE_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="노아 대화： 아야타네" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA11_A_AYATANE_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="노아 대화： 아야타네R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA11_A_AYATANE_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="주부하부 대화： 아야타네" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA11_B_AYATANE_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="주부하부 대화： 아야타네R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA11_B_AYATANE_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="성영대 대화： 아야타네" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA11_C_AYATANE_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="성영대 대화： 아야타네R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA11_C_AYATANE_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="기둥 상부 대화： 아야타네" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA11_D_AYATANE_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="기둥 상부 대화： 아야타네R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA11_D_AYATANE_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="원초 대화： 아야타네" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA12_A_AYATANE_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="원초 대화： 아야타네R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA12_A_AYATANE_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="증폭탑 대화： 아야타네" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA12_B_AYATANE_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="증폭탑 대화： 아야타네R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA12_B_AYATANE_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="실바 대화： 아야타네" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA12_C_AYATANE_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="실바 대화： 아야타네R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA12_C_AYATANE_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="샤라노 대화： 아야타네" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA13_A_AYATANE_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="샤라노 대화： 아야타네R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA13_A_AYATANE_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="다이아 대화： 아야타네" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA13_B_AYATANE_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="다이아 대화： 아야타네R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA13_B_AYATANE_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="휴무네 대화： 아야타네" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA14_A_AYATANE_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="휴무네 대화： 아야타네R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA14_A_AYATANE_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="콘트라 대화： 아야타네" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA14_B_AYATANE_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="콘트라 대화： 아야타네R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA14_B_AYATANE_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="센터 대화： 아야타네" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA14_C_AYATANE_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="센터 대화： 아야타네R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA14_C_AYATANE_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="네리코의 집 대화： 네리코" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA01_A_NELICO_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="네리코의 집 대화： 네리코R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA01_A_NELICO_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="케모케모 대화： 네리코" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA01_B_NELICO_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="케모케모 대화： 네리코R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA01_B_NELICO_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="네리코 대화： 네리코" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA01_C_NELICO_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="네리코 대화： 네리코R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA01_C_NELICO_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="세계의 끝 대화： 네리코" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA01_D_NELICO_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="세계의 끝 대화： 네리코R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA01_D_NELICO_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="거주구 대화： 레나루루" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA02_RENALL_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="거주구 대화： 레나루루R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA02_RENALL_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="동력구 대화： 레나루루" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA03_RENALL_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="동력구 대화： 레나루루R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA03_RENALL_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="격리구 대화： 레나루루" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA04_RENALL_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="격리구 대화： 레나루루R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA04_RENALL_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="교단 대화： 레나루루" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA05_RENALL_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="교단 대화： 레나루루R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA05_RENALL_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="플라스크 대화： 레나루루" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA06_A_RENALL_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="플라스크 대화： 레나루루 R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA06_A_RENALL_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="플라센타 대화： 레나루루" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA06_B_RENALL_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="플라센타 대화： 레나루루 R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA06_B_RENALL_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="폐허 대화： 레나루루" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA06_C_RENALL_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="폐허 대화： 레나루루 R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA06_C_RENALL_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="쿠르트 대화： 레나루루" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA07_RENALL_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="쿠르트 대화： 레나루루 R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA07_RENALL_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="바다 언덕 대화： 레나루루" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA08_RENALL_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="바다 언덕 대화： 레나루루 R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA08_RENALL_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="에어포트 대화： 레나루루" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA08_B_RENALL_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="에어포트 대화： 레나루루 R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA08_B_RENALL_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="유아의 숲 대화： 레나루루" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA08_C_RENALL_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="유아의 숲 대화： 레나루루 R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA08_C_RENALL_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="교코도리 대화： 레나루루" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA09_A_RENALL_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="교코도리 대화： 레나루루 R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA09_A_RENALL_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="베제리에르 대화： 레나루루" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA09_B_RENALL_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="베제리에르 대화： 레나루루 R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA09_B_RENALL_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="샤를로 대화： 레나루루" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA09_C_RENALL_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="샤를로 대화： 레나루루 R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA09_C_RENALL_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="천령가람 대화： 레나루루" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA09_D_RENALL_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="천령가람 대화： 레나루루 R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA09_D_RENALL_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="소라 대화： 레나루루" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA10_RENALL_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="소라 대화： 레나루루 R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA10_RENALL_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="노이아 대화： 레나루루" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA11_A_RENALL_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="노이야 대화： 레나루루 R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA11_A_RENALL_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="기둥 하부 대화： 레나루루" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA11_B_RENALL_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="기둥 하부 대화： 레나루루 R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA11_B_RENALL_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="성영대 대화： 레나루루" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA11_C_RENALL_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="성영대 대화： 레나루루 R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA11_C_RENALL_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="기둥 상부 대화： 레나루루" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA11_D_RENALL_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="기둥 상부 대화： 레나루루 R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA11_D_RENALL_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="원초 대화： 레나루루" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA12_A_RENALL_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="원초 대화： 레나루루 R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA12_A_RENALL_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="증폭탑 대화： 레나루루" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA12_B_RENALL_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="증폭탑 대화： 레나루루 R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA12_B_RENALL_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="실바 대화： 레나루루" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA12_C_RENALL_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="실바 대화： 레나루루 R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA12_C_RENALL_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="샤라노 대화： 레나루루" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA13_A_RENALL_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="샤라노 대화： 레나루루 R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA13_A_RENALL_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="다이아 대화： 레나루루" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA13_B_RENALL_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="다이아 대화： 레나루루 R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA13_B_RENALL_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="휴무네 대화： 레나루루" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA14_A_RENALL_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="휴무네 대화： 레나루루 R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA14_A_RENALL_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="콘트라 대화： 레나루루" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA14_B_RENALL_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="콘트라 대화： 레나루루 R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA14_B_RENALL_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="센터 대화： 레나루루" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA14_C_RENALL_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="센터 대화： 레나루루 R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA14_C_RENALL_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="거주구 대화： 코잘" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA02_COSAL_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="거주구 대화： 코잘 R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA02_COSAL_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="동력구 대화： 코잘" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA03_COSAL_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="동력구 대화： 코잘 R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA03_COSAL_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="격리구 대화： 코잘" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA04_COSAL_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="격리구 대화： 코잘 R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA04_COSAL_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="교단 대화： 코잘" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA05_COSAL_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="교단 대화： 코잘 R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA05_COSAL_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="플라스크 대화： 코잘" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA06_A_COSAL_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="플라스크 대화： 코잘 R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA06_A_COSAL_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="플라센타 대화： 코잘" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA06_B_COSAL_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="플라센타 대화： 코잘 R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA06_B_COSAL_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="폐허 대화： 코잘" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA06_C_COSAL_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="폐허 대화： 코잘 R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA06_C_COSAL_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="쿠르트 대화： 코잘" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA07_COSAL_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="쿠르트 대화： 코잘 R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA07_COSAL_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="바다 언덕 대화： 코잘" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA08_COSAL_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="바다 언덕 대화： 코잘 R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA08_COSAL_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="에어포트 대화： 코잘" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA08_B_COSAL_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="에어포트 대화： 코잘 R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA08_B_COSAL_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="유아의 숲 대화： 코잘" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA08_C_COSAL_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="유아의 숲 대화： 코잘 R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA08_C_COSAL_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="교행통 대화： 코잘" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA09_A_COSAL_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="교행통 대화： 코잘 R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA09_A_COSAL_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="베제리엘 대화： 코잘" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA09_B_COSAL_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="베제리에르 대화： 코잘 R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA09_B_COSAL_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="샤를로 대화： 코잘" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA09_C_COSAL_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="샤를로 대화： 코잘 R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA09_C_COSAL_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="천령가람 대화： 코잘" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA09_D_COSAL_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="천령가람 대화： 코잘 R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA09_D_COSAL_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="소라 대화： 코잘" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA10_COSAL_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="소라 대화： 코잘 R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA10_COSAL_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="노이아 대화： 코잘" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA11_A_COSAL_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="노이아 대화： 코잘 R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA11_A_COSAL_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="주부하부 대화： 코잘" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA11_B_COSAL_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="주부하부 대화： 코잘 R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA11_B_COSAL_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="성영대 대화： 코잘" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA11_C_COSAL_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="성영대 대화： 코잘 R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA11_C_COSAL_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="기둥 상부 대화： 코잘" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA11_D_COSAL_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="기둥 상부 대화： 코잘 R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA11_D_COSAL_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="원초 대화： 코잘" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA12_A_COSAL_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="원초 대화： 코잘 R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA12_A_COSAL_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="증폭탑 대화： 코잘" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA12_B_COSAL_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="증폭탑 대화： 코잘 R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA12_B_COSAL_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="실바 대화： 코잘" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA12_C_COSAL_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="실바 대화： 코잘 R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA12_C_COSAL_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="샤라노 대화： 코잘" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA13_A_COSAL_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="샤라노 대화： 코잘 R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA13_A_COSAL_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="다이아 대화： 코잘" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA13_B_COSAL_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="다이아 대화： 코잘 R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA13_B_COSAL_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="휴무네 대화： 코잘" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA14_A_COSAL_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="휴무네 대화： 코잘 R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA14_A_COSAL_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="콘트라 대화： 코잘" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA14_B_COSAL_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="콘트라 대화： 코잘 R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA14_B_COSAL_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="센터 대화： 코잘" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA14_C_COSAL_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="센터 대화： 코잘 R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA14_C_COSAL_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="거주구 대화： 카논" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA02_KANON_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="거주구 대화： 카논 R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA02_KANON_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="동력구 대화： 카논" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA03_KANON_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="동력구 대화： 카논 R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA03_KANON_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="격리구 대화： 카논" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA04_KANON_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="격리구 대화： 카논 R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA04_KANON_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="교단 대화： 카논" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA05_KANON_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="교단 대화： 카논 R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA05_KANON_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="플라스크 대화： 카논" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA06_A_KANON_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="플라스크 대화： 카논 R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA06_A_KANON_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="플라센타 대화： 카논" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA06_B_KANON_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="플라센타 대화： 카논 R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA06_B_KANON_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="폐허 대화： 카논" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA06_C_KANON_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="폐허 대화： 카논 R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA06_C_KANON_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="쿠르트 대화： 카논" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA07_KANON_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="쿠르트 대화： 카논 R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA07_KANON_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="바다 언덕 대화： 카논" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA08_KANON_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="바다 언덕 대화： 카논R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA08_KANON_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="에어포트 대화： 카논" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA08_B_KANON_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="에어포트 대화： 카논R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA08_B_KANON_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="유아의 숲 대화： 카논" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA08_C_KANON_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="유아의 숲 대화： 카논R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA08_C_KANON_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="교코도리 대화： 카논" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA09_A_KANON_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="교코도리 대화： 카논R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA09_A_KANON_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="베제리에르 대화： 카논" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA09_B_KANON_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="베제리에르 대화： 카논R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA09_B_KANON_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="샤를로 대화： 카논" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA09_C_KANON_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="샤를로 대화： 카논R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA09_C_KANON_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="천령가람 대화： 카논" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA09_D_KANON_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="천령가람 대화： 카논R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA09_D_KANON_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="소라 대화： 카논" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA10_KANON_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="소라 대화： 카논R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA10_KANON_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="노이아 대화： 카논" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA11_A_KANON_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="노이아 대화： 카논R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA11_A_KANON_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="기둥 하부 대화： 카논" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA11_B_KANON_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="기둥 하부 대화： 카논R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA11_B_KANON_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="성영대 대화： 카논" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA11_C_KANON_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="성영대 대화： 카논R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA11_C_KANON_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="기둥 상부 대화： 카논" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA11_D_KANON_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="기둥 상부 대화： 카논R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA11_D_KANON_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="원초 대화： 카논" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA12_A_KANON_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="원초 대화： 카논R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA12_A_KANON_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="증폭탑 대화： 카논" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA12_B_KANON_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="증폭탑 대화： 카논R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA12_B_KANON_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="실바 대화： 카논" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA12_C_KANON_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="실바 대화： 카논R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA12_C_KANON_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="샤라노 대화： 카논" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA13_A_KANON_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="샤라노 대화： 카논R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA13_A_KANON_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="다이아 대화： 카논" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA13_B_KANON_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="다이아 대화： 카논R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA13_B_KANON_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="휴무네 대화： 카논" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA14_A_KANON_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="휴무네 대화： 카논R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA14_A_KANON_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="콘트라 대화： 카논" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA14_B_KANON_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="컨트라 대화： 카논 R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA14_B_KANON_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="센터 대화： 카논" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA14_C_KANON_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="센터 대화： 카논 R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA14_C_KANON_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="거주구 대화： 시로타카" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA02_SHIROTAKA_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="거주구 대화： 시로타카 R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA02_SHIROTAKA_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="동력구 대화： 시로타카" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA03_SHIROTAKA_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="동력구 대화： 시로타카 R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA03_SHIROTAKA_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="격리구 대화： 시로타카" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA04_SHIROTAKA_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="격리구 대화： 시로타카 R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA04_SHIROTAKA_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="교단 대화： 시로타카" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA05_SHIROTAKA_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="교단 대화： 시로타카 R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA05_SHIROTAKA_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="플라스크 대화： 시로타카" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA06_A_SHIROTAKA_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="플라스크 대화： 시로타카 R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA06_A_SHIROTAKA_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="플라센타 대화： 시로타카" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA06_B_SHIROTAKA_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="플라센타 대화： 시로타카 R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA06_B_SHIROTAKA_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="폐허 대화： 시로타카" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA06_C_SHIROTAKA_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="폐허 대화： 시로타카 R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA06_C_SHIROTAKA_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="쿠르트 대화： 시로타카" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA07_SHIROTAKA_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="쿠르트 대화： 시로타카 R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA07_SHIROTAKA_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="바다 언덕 대화： 시로타카" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA08_SHIROTAKA_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="바다 언덕 대화： 시로타카 R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA08_SHIROTAKA_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="에어포트 대화： 시로타카" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA08_B_SHIROTAKA_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="에어포트 대화： 시로타카 R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA08_B_SHIROTAKA_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="유아의 숲 대화： 시로타카" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA08_C_SHIROTAKA_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="유아의 숲 대화： 시로타카 R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA08_C_SHIROTAKA_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="교코도리 대화： 시로타카" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA09_A_SHIROTAKA_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="교코도리 대화： 시로타카 R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA09_A_SHIROTAKA_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="베제리에르 대화： 시로타카" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA09_B_SHIROTAKA_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="베제리에르 대화： 시로타카 R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA09_B_SHIROTAKA_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="샤를로 대화： 시로타카" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA09_C_SHIROTAKA_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="샤를로 대화： 시로타카 R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA09_C_SHIROTAKA_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="천령가람 대화： 시로타카" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA09_D_SHIROTAKA_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="천령가람 대화： 시로타카 R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA09_D_SHIROTAKA_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="소라 대화： 시로타카" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA10_SHIROTAKA_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="소라 대화： 시로타카 R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA10_SHIROTAKA_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="노아 대화： 시로타카" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA11_A_SHIROTAKA_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="노이아 대화： 시로타카 R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA11_A_SHIROTAKA_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="기둥 하부 대화： 시로타카" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA11_B_SHIROTAKA_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="기둥 하부 대화： 시로타카 R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA11_B_SHIROTAKA_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="성영대 대화： 시로타카" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA11_C_SHIROTAKA_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="성영대 대화： 시로타카 R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA11_C_SHIROTAKA_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="기둥 상부 대화： 시로타카" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA11_D_SHIROTAKA_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="기둥 상부 대화： 시로타카 R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA11_D_SHIROTAKA_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="원초 대화： 시로타카" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA12_A_SHIROTAKA_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="원초 대화： 시로타카 R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA12_A_SHIROTAKA_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="증폭탑 대화： 시로타카" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA12_B_SHIROTAKA_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="증폭탑 대화： 시로타카 R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA12_B_SHIROTAKA_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="실바 대화： 시로타카" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA12_C_SHIROTAKA_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="실바 대화： 시로타카 R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA12_C_SHIROTAKA_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="샤라노 대화： 시로타카" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA13_A_SHIROTAKA_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="샤라노 대화： 시로타카 R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA13_A_SHIROTAKA_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="다이아 대화： 시로타카" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA13_B_SHIROTAKA_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="다이아 대화： 시로타카 R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA13_B_SHIROTAKA_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="휴무네 대화： 시로타카" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA14_A_SHIROTAKA_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="휴무네 대화： 시로타카 R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA14_A_SHIROTAKA_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="콘트라 대화： 시로타카" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA14_B_SHIROTAKA_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="콘트라 대화： 시로타카 R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA14_B_SHIROTAKA_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="센터 대화： 시로타카" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA14_C_SHIROTAKA_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="센터 대화： 시로타카 R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_FIELD_TALK_AREA14_C_SHIROTAKA_EXEC" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="비스트로 활성화 계획" BonusEntry1="BonusEntry_Event_Flag_Add" Entry1Prm1="EVENT_FLAG_RECIPE_NAY_01" Entry1Prm2="1"/>
+	<Bonus Name="더운 날의 냉량 기획" BonusEntry1="BonusEntry_Event_Flag_Add" Entry1Prm1="EVENT_FLAG_RECIPE_NAY_02" Entry1Prm2="1"/>
+	<Bonus Name="놀이 매너" BonusEntry1="BonusEntry_Event_Flag_Add" Entry1Prm1="EVENT_FLAG_RECIPE_NAY_03" Entry1Prm2="1"/>
+	<Bonus Name="고양이를 좋아해" BonusEntry1="BonusEntry_Event_Flag_Add" Entry1Prm1="EVENT_FLAG_RECIPE_NAY_04" Entry1Prm2="1"/>
+	<Bonus Name="제국 공인 과자" BonusEntry1="BonusEntry_Event_Flag_Add" Entry1Prm1="EVENT_FLAG_RECIPE_NAY_05" Entry1Prm2="1"/>
+	<Bonus Name="신부 수업 굿즈" BonusEntry1="BonusEntry_Event_Flag_Add" Entry1Prm1="EVENT_FLAG_RECIPE_NAY_06" Entry1Prm2="1"/>
+	<Bonus Name="제국 공인 캐릭터" BonusEntry1="BonusEntry_Event_Flag_Add" Entry1Prm1="EVENT_FLAG_RECIPE_NAY_07" Entry1Prm2="1"/>
+	<Bonus Name="연애란 어려운 것" BonusEntry1="BonusEntry_Event_Flag_Add" Entry1Prm1="EVENT_FLAG_RECIPE_NAY_08" Entry1Prm2="1"/>
+	<Bonus Name="파티 분위기 띄우기 계획" BonusEntry1="BonusEntry_Event_Flag_Add" Entry1Prm1="EVENT_FLAG_RECIPE_NAY_09" Entry1Prm2="1"/>
+	<Bonus Name="샤무 가루가 얼마나 위대한가" BonusEntry1="BonusEntry_Event_Flag_Add" Entry1Prm1="EVENT_FLAG_RECIPE_NAY_10" Entry1Prm2="1"/>
+	<Bonus Name="국교 정상화 기념 헌상품" BonusEntry1="BonusEntry_Event_Flag_Add" Entry1Prm1="EVENT_FLAG_RECIPE_NAY_11" Entry1Prm2="1"/>
+	<Bonus Name="멋쟁이 가게 대작전" BonusEntry1="BonusEntry_Event_Flag_Add" Entry1Prm1="EVENT_FLAG_RECIPE_NAY_12" Entry1Prm2="1"/>
+	<Bonus Name="지고의 요리점으로" BonusEntry1="BonusEntry_Event_Flag_Add" Entry1Prm1="EVENT_FLAG_RECIPE_NAY_13" Entry1Prm2="1"/>
+	<Bonus Name="소레일을 그리며" BonusEntry1="BonusEntry_Event_Flag_Add" Entry1Prm1="EVENT_FLAG_RECIPE_NAY_14" Entry1Prm2="1"/>
+	<Bonus Name="우정의 증표" BonusEntry1="BonusEntry_Event_Flag_Add" Entry1Prm1="EVENT_FLAG_RECIPE_NAY_15" Entry1Prm2="1"/>
+	<Bonus Name="리인카네이션" BonusEntry1="BonusEntry_Event_Flag_Add" Entry1Prm1="EVENT_FLAG_RECIPE_NAY_16" Entry1Prm2="1"/>
+	<Bonus Name="델타에게 주는 선물" BonusEntry1="BonusEntry_Event_Flag_Add" Entry1Prm1="EVENT_FLAG_RECIPE_NAY_17" Entry1Prm2="1"/>
+	<Bonus Name="귀여운 코토리" BonusEntry1="BonusEntry_Event_Flag_Add" Entry1Prm1="EVENT_FLAG_RECIPE_KANON_00" Entry1Prm2="1"/>
+	<Bonus Name="고대의 유행 연감" BonusEntry1="BonusEntry_Event_Flag_Add" Entry1Prm1="EVENT_FLAG_RECIPE_KANON_01" Entry1Prm2="1"/>
+	<Bonus Name="샤르들의 일상" BonusEntry1="BonusEntry_Event_Flag_Add" Entry1Prm1="EVENT_FLAG_RECIPE_KANON_02" Entry1Prm2="1"/>
+	<Bonus Name="제도 기념품 가이드" BonusEntry1="BonusEntry_Event_Flag_Add" Entry1Prm1="EVENT_FLAG_RECIPE_KANON_03" Entry1Prm2="1"/>
+	<Bonus Name="IP 비즈니스 입문편" BonusEntry1="BonusEntry_Event_Flag_Add" Entry1Prm1="EVENT_FLAG_RECIPE_KANON_04" Entry1Prm2="1"/>
+	<Bonus Name="라셸라의 생태" BonusEntry1="BonusEntry_Event_Flag_Add" Entry1Prm1="EVENT_FLAG_RECIPE_KANON_05" Entry1Prm2="1"/>
+	<Bonus Name="내세를 위해" BonusEntry1="BonusEntry_Event_Flag_Add" Entry1Prm1="EVENT_FLAG_RECIPE_KANON_06" Entry1Prm2="1"/>
+	<Bonus Name="유서 깊은 한방 조제" BonusEntry1="BonusEntry_Event_Flag_Add" Entry1Prm1="EVENT_FLAG_RECIPE_KANON_07" Entry1Prm2="1"/>
+	<Bonus Name="이온 강화 계획" BonusEntry1="BonusEntry_Event_Flag_Add" Entry1Prm1="EVENT_FLAG_RECIPE_KANON_08" Entry1Prm2="1"/>
+	<Bonus Name="콘테스트 작품집" BonusEntry1="BonusEntry_Event_Flag_Add" Entry1Prm1="EVENT_FLAG_RECIPE_KANON_09" Entry1Prm2="1"/>
+	<Bonus Name="더 질 높은 생활을 위해" BonusEntry1="BonusEntry_Event_Flag_Add" Entry1Prm1="EVENT_FLAG_RECIPE_KANON_10" Entry1Prm2="1"/>
+	<Bonus Name="편리한 굿즈" BonusEntry1="BonusEntry_Event_Flag_Add" Entry1Prm1="EVENT_FLAG_RECIPE_KANON_11" Entry1Prm2="1"/>
+	<Bonus Name="축제 하자" BonusEntry1="BonusEntry_Event_Flag_Add" Entry1Prm1="EVENT_FLAG_RECIPE_KANON_12" Entry1Prm2="1"/>
+	<Bonus Name="새로운 시대를 향하여" BonusEntry1="BonusEntry_Event_Flag_Add" Entry1Prm1="EVENT_FLAG_RECIPE_KANON_13" Entry1Prm2="1"/>
+	<Bonus Name="속·이온 강화 계획" BonusEntry1="BonusEntry_Event_Flag_Add" Entry1Prm1="EVENT_FLAG_RECIPE_KANON_14" Entry1Prm2="1"/>
+	<Bonus Name="리인카네이션" BonusEntry1="BonusEntry_Event_Flag_Add" Entry1Prm1="EVENT_FLAG_RECIPE_KANON_15" Entry1Prm2="1"/>
+	<Bonus Name="이온에게 주는 선물" BonusEntry1="BonusEntry_Event_Flag_Add" Entry1Prm1="EVENT_FLAG_RECIPE_KANON_16" Entry1Prm2="1"/>
+	<Bonus Name="난파된 우주선에서 살아가기" BonusEntry1="BonusEntry_Event_Flag_Add" Entry1Prm1="EVENT_FLAG_RECIPE_SARLY_00" Entry1Prm2="1"/>
+	<Bonus Name="선내 생활 향상 계획" BonusEntry1="BonusEntry_Event_Flag_Add" Entry1Prm1="EVENT_FLAG_RECIPE_SARLY_01" Entry1Prm2="1"/>
+	<Bonus Name="진정한 고대 문명은 이렇다" BonusEntry1="BonusEntry_Event_Flag_Add" Entry1Prm1="EVENT_FLAG_RECIPE_SARLY_02" Entry1Prm2="1"/>
+	<Bonus Name="델타 대작전" BonusEntry1="BonusEntry_Event_Flag_Add" Entry1Prm1="EVENT_FLAG_RECIPE_SARLY_03" Entry1Prm2="1"/>
+	<Bonus Name="고서： 우주 개척으로 가는 길" BonusEntry1="BonusEntry_Event_Flag_Add" Entry1Prm1="EVENT_FLAG_RECIPE_SARLY_04" Entry1Prm2="1"/>
+	<Bonus Name="양자 최첨단을 향한 도전" BonusEntry1="BonusEntry_Event_Flag_Add" Entry1Prm1="EVENT_FLAG_RECIPE_SARLY_05" Entry1Prm2="1"/>
+	<Bonus Name="뇌내 개발해 보자" BonusEntry1="BonusEntry_Event_Flag_Add" Entry1Prm1="EVENT_FLAG_RECIPE_SARLY_06" Entry1Prm2="1"/>
+	<Bonus Name="델타 대작전·2！" BonusEntry1="BonusEntry_Event_Flag_Add" Entry1Prm1="EVENT_FLAG_RECIPE_SARLY_07" Entry1Prm2="1"/>
+	<Bonus Name="귀재가 좋아하는 과자" BonusEntry1="BonusEntry_Event_Flag_Add" Entry1Prm1="EVENT_FLAG_RECIPE_SARLY_08" Entry1Prm2="1"/>
+	<Bonus Name="슈뢰딩거 이론" BonusEntry1="BonusEntry_Event_Flag_Add" Entry1Prm1="EVENT_FLAG_RECIPE_SARLY_09" Entry1Prm2="1"/>
+	<Bonus Name="델타 대작전·3！" BonusEntry1="BonusEntry_Event_Flag_Add" Entry1Prm1="EVENT_FLAG_RECIPE_SARLY_10" Entry1Prm2="1"/>
+	<Bonus Name="대 시로타카 관계 향상 지침서" BonusEntry1="BonusEntry_Event_Flag_Add" Entry1Prm1="EVENT_FLAG_RECIPE_SARLY_11" Entry1Prm2="1"/>
+	<Bonus Name="라셸라를 그리워하며" BonusEntry1="BonusEntry_Event_Flag_Add" Entry1Prm1="EVENT_FLAG_RECIPE_SARLY_12" Entry1Prm2="1"/>
+	<Bonus Name="델타 대작전·결！" BonusEntry1="BonusEntry_Event_Flag_Add" Entry1Prm1="EVENT_FLAG_RECIPE_SARLY_13" Entry1Prm2="1"/>
+	<Bonus Name="엉망진창인 세계" BonusEntry1="BonusEntry_Event_Flag_Add" Entry1Prm1="EVENT_FLAG_RECIPE_SARLY_14" Entry1Prm2="1"/>
+	<Bonus Name="델타 대작전 감사" BonusEntry1="BonusEntry_Event_Flag_Add" Entry1Prm1="EVENT_FLAG_RECIPE_SARLY_15" Entry1Prm2="1"/>
+	<Bonus Name="6차원의 힘" BonusEntry1="BonusEntry_Event_Flag_Add" Entry1Prm1="EVENT_FLAG_RECIPE_SARLY_16" Entry1Prm2="1"/>
+	<Bonus Name="리인카네이션" BonusEntry1="BonusEntry_Event_Flag_Add" Entry1Prm1="EVENT_FLAG_RECIPE_SARLY_17" Entry1Prm2="1"/>
+	<Bonus Name="캐스에게 주는 선물" BonusEntry1="BonusEntry_Event_Flag_Add" Entry1Prm1="EVENT_FLAG_RECIPE_SARLY_18" Entry1Prm2="1"/>
+	<Bonus Name="일상 영양제 전집" BonusEntry1="BonusEntry_Event_Flag_Add" Entry1Prm1="EVENT_FLAG_RECIPE_TATTOLIA_00" Entry1Prm2="1"/>
+	<Bonus Name="온천 마을 호노카노 명물" BonusEntry1="BonusEntry_Event_Flag_Add" Entry1Prm1="EVENT_FLAG_RECIPE_TATTOLIA_01" Entry1Prm2="1"/>
+	<Bonus Name="거칠게 달여 만든 약" BonusEntry1="BonusEntry_Event_Flag_Add" Entry1Prm1="EVENT_FLAG_RECIPE_TATTOLIA_02" Entry1Prm2="1"/>
+	<Bonus Name="맛있는 것인가 괴식인가！？" BonusEntry1="BonusEntry_Event_Flag_Add" Entry1Prm1="EVENT_FLAG_RECIPE_TATTOLIA_03" Entry1Prm2="1"/>
+	<Bonus Name="생물의 신비를 느끼다" BonusEntry1="BonusEntry_Event_Flag_Add" Entry1Prm1="EVENT_FLAG_RECIPE_TATTOLIA_04" Entry1Prm2="1"/>
+	<Bonus Name="자연의 보석 상자" BonusEntry1="BonusEntry_Event_Flag_Add" Entry1Prm1="EVENT_FLAG_RECIPE_TATTOLIA_05" Entry1Prm2="1"/>
+	<Bonus Name="뉴로에서 파지" BonusEntry1="BonusEntry_Event_Flag_Add" Entry1Prm1="EVENT_FLAG_RECIPE_TATTOLIA_06" Entry1Prm2="1"/>
+	<Bonus Name="여러 가지 강력 특효약" BonusEntry1="BonusEntry_Event_Flag_Add" Entry1Prm1="EVENT_FLAG_RECIPE_TATTOLIA_07" Entry1Prm2="1"/>
+	<Bonus Name="페리에를 위해서" BonusEntry1="BonusEntry_Event_Flag_Add" Entry1Prm1="EVENT_FLAG_RECIPE_TATTOLIA_08" Entry1Prm2="1"/>
+	<Bonus Name="매니아를 위한 일일 영양제" BonusEntry1="BonusEntry_Event_Flag_Add" Entry1Prm1="EVENT_FLAG_RECIPE_TATTOLIA_09" Entry1Prm2="1"/>
+	<Bonus Name="싸우면서 에스테틱" BonusEntry1="BonusEntry_Event_Flag_Add" Entry1Prm1="EVENT_FLAG_RECIPE_TATTOLIA_10" Entry1Prm2="1"/>
+	<Bonus Name="게다가 페리에를 위해" BonusEntry1="BonusEntry_Event_Flag_Add" Entry1Prm1="EVENT_FLAG_RECIPE_TATTOLIA_11" Entry1Prm2="1"/>
+	<Bonus Name="네크로의 세계" BonusEntry1="BonusEntry_Event_Flag_Add" Entry1Prm1="EVENT_FLAG_RECIPE_TATTOLIA_12" Entry1Prm2="1"/>
+	<Bonus Name="친애하는 페리에에게" BonusEntry1="BonusEntry_Event_Flag_Add" Entry1Prm1="EVENT_FLAG_RECIPE_TATTOLIA_13" Entry1Prm2="1"/>
+	<Bonus Name="제노메스 강화 지원" BonusEntry1="BonusEntry_Event_Flag_Add" Entry1Prm1="EVENT_FLAG_RECIPE_TATTOLIA_14" Entry1Prm2="1"/>
+	<Bonus Name="덧없는 추억의 추억" BonusEntry1="BonusEntry_Event_Flag_Add" Entry1Prm1="EVENT_FLAG_RECIPE_TATTOLIA_15" Entry1Prm2="1"/>
+	<Bonus Name="리인카네이션" BonusEntry1="BonusEntry_Event_Flag_Add" Entry1Prm1="EVENT_FLAG_RECIPE_TATTOLIA_16" Entry1Prm2="1"/>
+	<Bonus Name="상당히 많은 적을 쓰러뜨림 R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_BATTLE_C002_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="필드 보행 중 R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_BATTLE_C003_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="통쾌한 상쾌함 R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_BATTLE_C004_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="피해 입음 R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_BATTLE_C005_01_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="피해 입음 R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_BATTLE_C005_02_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="상당히 많은 적을 쓰러뜨림 R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_BATTLE_I002_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="필드 보행 중 R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_BATTLE_I003_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="통쾌한 상쾌함 R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_BATTLE_I004_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="피해 입음 R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_BATTLE_I005_01_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="피해 입음 R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_BATTLE_I005_02_RESET" Entry1Prm2="0" Entry1Prm3="0"/>
+	<Bonus Name="상당히 많은 적을 쓰러뜨림 R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_BATTLE_C002_P1" Entry1Prm2="0" Entry1Prm3="0" BonusEntry2="BonusEntry_Chg_Achivement" Entry2Prm1="ACHIEVEMENT_BATTLE_C002_P2" Entry2Prm2="0" Entry2Prm3="0" BonusEntry3="BonusEntry_Chg_Achivement" Entry3Prm1="ACHIEVEMENT_BATTLE_C002_P3" Entry3Prm2="0" Entry3Prm3="0" BonusEntry4="BonusEntry_Chg_Achivement" Entry4Prm1="ACHIEVEMENT_BATTLE_C000_RESET" Entry4Prm2="0" Entry4Prm3="0"/>
+	<Bonus Name="필드 보행 중 R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_BATTLE_C003_P1" Entry1Prm2="0" Entry1Prm3="0" BonusEntry2="BonusEntry_Chg_Achivement" Entry2Prm1="ACHIEVEMENT_BATTLE_C003_P2" Entry2Prm2="0" Entry2Prm3="0" BonusEntry3="BonusEntry_Chg_Achivement" Entry3Prm1="ACHIEVEMENT_BATTLE_C003_P3" Entry3Prm2="0" Entry3Prm3="0"/>
+	<Bonus Name="통쾌한 상쾌함 R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_BATTLE_C004_P1" Entry1Prm2="0" Entry1Prm3="0" BonusEntry2="BonusEntry_Chg_Achivement" Entry2Prm1="ACHIEVEMENT_BATTLE_C004_P2" Entry2Prm2="0" Entry2Prm3="0" BonusEntry3="BonusEntry_Chg_Achivement" Entry3Prm1="ACHIEVEMENT_BATTLE_C004_P3" Entry3Prm2="0" Entry3Prm3="0"/>
+	<Bonus Name="피해 입음 R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_BATTLE_C005_01_P1" Entry1Prm2="0" Entry1Prm3="0" BonusEntry2="BonusEntry_Chg_Achivement" Entry2Prm1="ACHIEVEMENT_BATTLE_C005_01_P2" Entry2Prm2="0" Entry2Prm3="0" BonusEntry3="BonusEntry_Chg_Achivement" Entry3Prm1="ACHIEVEMENT_BATTLE_C005_01_P3" Entry3Prm2="0" Entry3Prm3="0"/>
+	<Bonus Name="피해 입음 R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_BATTLE_C005_02" Entry1Prm2="0" Entry1Prm3="0" BonusEntry2="BonusEntry_Chg_Achivement" Entry2Prm1="ACHIEVEMENT_BATTLE_C005_03" Entry2Prm2="0" Entry2Prm3="0"/>
+	<Bonus Name="상당히 많은 적을 쓰러뜨림 R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_BATTLE_I002_P1" Entry1Prm2="0" Entry1Prm3="0" BonusEntry2="BonusEntry_Chg_Achivement" Entry2Prm1="ACHIEVEMENT_BATTLE_I002_P2" Entry2Prm2="0" Entry2Prm3="0" BonusEntry3="BonusEntry_Chg_Achivement" Entry3Prm1="ACHIEVEMENT_BATTLE_I002_P3" Entry3Prm2="0" Entry3Prm3="0" BonusEntry4="BonusEntry_Chg_Achivement" Entry4Prm1="ACHIEVEMENT_BATTLE_I000_RESET" Entry4Prm2="0" Entry4Prm3="0"/>
+	<Bonus Name="필드 보행 중 R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_BATTLE_I003_P1" Entry1Prm2="0" Entry1Prm3="0" BonusEntry2="BonusEntry_Chg_Achivement" Entry2Prm1="ACHIEVEMENT_BATTLE_I003_P2" Entry2Prm2="0" Entry2Prm3="0" BonusEntry3="BonusEntry_Chg_Achivement" Entry3Prm1="ACHIEVEMENT_BATTLE_I003_P3" Entry3Prm2="0" Entry3Prm3="0"/>
+	<Bonus Name="통쾌한 상쾌함 R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_BATTLE_I004_P1" Entry1Prm2="0" Entry1Prm3="0" BonusEntry2="BonusEntry_Chg_Achivement" Entry2Prm1="ACHIEVEMENT_BATTLE_I004_P2" Entry2Prm2="0" Entry2Prm3="0" BonusEntry3="BonusEntry_Chg_Achivement" Entry3Prm1="ACHIEVEMENT_BATTLE_I004_P3" Entry3Prm2="0" Entry3Prm3="0"/>
+	<Bonus Name="피해 입음 R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_BATTLE_I005_01_P1" Entry1Prm2="0" Entry1Prm3="0" BonusEntry2="BonusEntry_Chg_Achivement" Entry2Prm1="ACHIEVEMENT_BATTLE_I005_01_P2" Entry2Prm2="0" Entry2Prm3="0" BonusEntry3="BonusEntry_Chg_Achivement" Entry3Prm1="ACHIEVEMENT_BATTLE_I005_01_P3" Entry3Prm2="0" Entry3Prm3="0"/>
+	<Bonus Name="피해 입음 R" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_BATTLE_I005_02" Entry1Prm2="0" Entry1Prm3="0" BonusEntry2="BonusEntry_Chg_Achivement" Entry2Prm1="ACHIEVEMENT_BATTLE_I005_03" Entry2Prm2="0" Entry2Prm3="0"/>
+	<Bonus Name="적을 쓰러뜨림 CR" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_BATTLE_C002_RESET" Entry1Prm2="0" Entry1Prm3="0" BonusEntry2="BonusEntry_Chg_Achivement" Entry2Prm1="ACHIEVEMENT_BATTLE_C004_RESET" Entry2Prm2="0" Entry2Prm3="0" BonusEntry3="BonusEntry_Chg_Achivement" Entry3Prm1="ACHIEVEMENT_BATTLE_C005_01_RESET" Entry3Prm2="0" Entry3Prm3="0" BonusEntry4="BonusEntry_Chg_Achivement" Entry4Prm1="ACHIEVEMENT_BATTLE_C005_02_RESET" Entry4Prm2="0" Entry4Prm3="0"/>
+	<Bonus Name="적을 쓰러뜨림 IR" BonusEntry1="BonusEntry_Chg_Achivement" Entry1Prm1="ACHIEVEMENT_BATTLE_I002_RESET" Entry1Prm2="0" Entry1Prm3="0" BonusEntry2="BonusEntry_Chg_Achivement" Entry2Prm1="ACHIEVEMENT_BATTLE_I004_RESET" Entry2Prm2="0" Entry2Prm3="0" BonusEntry3="BonusEntry_Chg_Achivement" Entry3Prm1="ACHIEVEMENT_BATTLE_I005_01_RESET" Entry3Prm2="0" Entry3Prm3="0" BonusEntry4="BonusEntry_Chg_Achivement" Entry4Prm1="ACHIEVEMENT_BATTLE_I005_02_RESET" Entry4Prm2="0" Entry4Prm3="0"/>
+	<Bonus Name="살리_델타 미소기 대화 횟수" BonusEntry1="BonusEntry_Event_Flag_Add" Entry1Prm1="EVENT_FLAG_SARLY_MISOGI_TALK_COUNT_DELTA" Entry1Prm2="1"/>
+	<Bonus Name="살리_아바타 미소기 대화 횟수" BonusEntry1="BonusEntry_Event_Flag_Add" Entry1Prm1="EVENT_FLAG_SARLY_MISOGI_TALK_COUNT_AVATAR" Entry1Prm2="1"/>
+	<Bonus Name="네로_델타 미소기 대화 횟수" BonusEntry1="BonusEntry_Event_Flag_Add" Entry1Prm1="EVENT_FLAG_NERO_MISOGI_TALK_COUNT_DELTA" Entry1Prm2="1"/>
+	<Bonus Name="네로_아바타 미소기 대화 횟수" BonusEntry1="BonusEntry_Event_Flag_Add" Entry1Prm1="EVENT_FLAG_NERO_MISOGI_TALK_COUNT_AVATAR" Entry1Prm2="1"/>
+	<Bonus Name="슈레리아_델타 미소기 대화 횟수" BonusEntry1="BonusEntry_Event_Flag_Add" Entry1Prm1="EVENT_FLAG_SYURERIA_MISOGI_TALK_COUNT_DELTA" Entry1Prm2="1"/>
+	<Bonus Name="슈레리아_아바타 미소기 대화 횟수" BonusEntry1="BonusEntry_Event_Flag_Add" Entry1Prm1="EVENT_FLAG_SYURERIA_MISOGI_TALK_COUNT_AVATAR" Entry1Prm2="1"/>
+</Root>

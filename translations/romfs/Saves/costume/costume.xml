@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="SHIFT-JIS"?>
+<Root>
+	<costume name="와일드 웨어" tag="COSTUME_DELTA_00" evEnd="EVENT_C31_2_030" listUp="EVENT_C11_1_010" equipImageNo="0" charaTag="CHARA_DELTA" charaBaseTag="CHARA_BASE_PC02A" changeAfterEXBoss="1" misogiUse="0" text="소위 일반적인, 마을에 사는 사람들이 입는 옷. 단, 델타가 입고 있는 것은 마을 거주용 중에서도 견고하게 제작된, 격벽 밖으로 나가는 사람을 위한 것이다.
+이전에는 PLASMA 대원으로서 자주 마을 밖으로 나가곤 했던 탓인지, 델타는 이런 종류의 튼튼한 옷을 입으면 마음이 편안해진다고 한다."/>
+	<costume name="안티 마그네스타" tag="COSTUME_DELTA_01" evStart="EVENT_C31_2_030" listUp="EVENT_C31_2_030" equipImageNo="1" charaTag="CHARA_DELTA" charaBaseTag="CHARA_BASE_PC02B" changeAfterEXBoss="1" misogiUse="0" text="웜홀을 통과해 행성 아르시엘로 향하기 위해 장비한, 내충격 및 대파동 장갑이 충실한 우주 세대의 평상복.
+세라믹 같은 소재 덕분에 겉보기만큼 무겁지 않아 경쾌하게 행동할 수 있다. 귀에 착용한 헤드셋은 양자 텔레포트를 응용해 만든 통신기으로, 아무리 먼 곳에 있어도 살아만 있다면 간단한 마음을 서로 전할 수 있다. 델타가 좋아하는 문양이다."/>
+	<costume name="비바☆스포츠" tag="COSTUME_DELTA_07" listUp="EVENT_MS21_030" equipImageNo="2" charaTag="CHARA_DELTA" charaBaseTag="CHARA_BASE_PC02C" changeAfterEXBoss="1" misogiUse="1" text="매우 표준적인 스포츠웨어지만, 델타는 홈웨어로 애용하는 듯하다.
+메시 구조의 섬유로 통기성이 좋아 더운 날에도 답답하지 않아, 외출할 때를 제외하면 거의 이것만 입고 지내는 것 같다.
+하지만 스포츠웨어를 일 년 내내 입고 있는 것에 비해, 딱히 어떤 스포츠를 즐기는 것은 아니라는 점이 슬픈 부분이다."/>
+	<costume name="폰 판데모니온" tag="COSTUME_DELTA_10" listUp="EVENT_C11_1_010" equipImageNo="3" charaTag="CHARA_DELTA" charaBaseTag="CHARA_BASE_PC02D" misogiUse="0" text="참으로 클래식한 의상이다. 안대까지 쓰고 있는 탓에 중이병 요소가 만점이지만, 델타는 상당히 마음에 들어 하는 듯하다.
+자세히 생각해보면, 델타는 「멋짐」의 센스가 매우 독특하기 때문에, 이 의상을 입고 「멋진」 결정 대사를 내뱉는 모습은 쉽게 상상할 수 있다. 일본어로 바꾸면 「마계 남작」."/>
+	<costume name="라이너 Style" tag="COSTUME_DELTA_11" equipImageNo="4" charaTag="CHARA_DELTA" charaBaseTag="CHARA_BASE_PC02E" clearOpen="1" misogiUse="0" text="아르노사쥬를 한 번 클리어하면 얻을 수 있는 코스튬.
+아르토네리코 ～세계의 끝에서 계속 노래하는 소녀～의 주인공 라이너 발세르트의 의상을 라셸라 스타일로 어레인지한 것이다."/>
+	<costume name="델타 DLC_00" tag="COSTUME_DELTA_02" equipImageNo="0" charaTag="CHARA_DELTA" charaBaseTag="CHARA_BASE_PC02B" dlcTag="DLC_DUMMY" misogiUse="0" text="델타 DLC_00의 설명문"/>
+	<costume name="델타 DLC_01" tag="COSTUME_DELTA_03" equipImageNo="0" charaTag="CHARA_DELTA" charaBaseTag="CHARA_BASE_PC02B" dlcTag="DLC_DUMMY" misogiUse="0" text="델타 DLC_01의 설명문"/>
+	<costume name="델타 DLC_02" tag="COSTUME_DELTA_04" equipImageNo="0" charaTag="CHARA_DELTA" charaBaseTag="CHARA_BASE_PC02B" dlcTag="DLC_DUMMY" misogiUse="0" text="델타 DLC_02 설명문"/>
+	<costume name="델타 DLC_03" tag="COSTUME_DELTA_05" equipImageNo="0" charaTag="CHARA_DELTA" charaBaseTag="CHARA_BASE_PC02B" dlcTag="DLC_DUMMY" misogiUse="0" text="델타 DLC_03 설명문"/>
+	<costume name="델타 DLC_04" tag="COSTUME_DELTA_06" equipImageNo="0" charaTag="CHARA_DELTA" charaBaseTag="CHARA_BASE_PC02B" dlcTag="DLC_DUMMY" misogiUse="0" text="델타 DLC_04 설명문"/>
+	<costume name="델타 DLC_미소기 전용_01" tag="COSTUME_DELTA_08" equipImageNo="0" charaTag="CHARA_DELTA" charaBaseTag="CHARA_BASE_PC02C" dlcTag="DLC_DUMMY" misogiUse="1" text="델타 DLC_미소기 전용_01 설명문"/>
+	<costume name="델타 DLC_미소기 전용_02" tag="COSTUME_DELTA_09" equipImageNo="0" charaTag="CHARA_DELTA" charaBaseTag="CHARA_BASE_PC02C" dlcTag="DLC_DUMMY" misogiUse="1" text="델타 DLC_미소기 전용_02 설명문"/>
+	<costume name="네이블 드래곤" tag="COSTUME_CASTY_00" evEnd="EVENT_C31_2_030" listUp="EVENT_C11_1_010" equipImageNo="0" charaTag="CHARA_CASTY" charaBaseTag="CHARA_BASE_PC00A" changeAfterEXBoss="1" misogiUse="0" text="캐스가 아끼는 후드티.
+마을에서도 멋스럽게 입을 수 있을 뿐만 아니라, 격벽 밖에서 적의 공격을 받았을 때 충격 흡수성도 뛰어나다.
+캐스는 이 후드티 안에 거의 속옷과 다름없는 것만 착용하고 있지만, 오레이 안은 연중 쾌적한 기온으로 설정되어 있어 오히려 활동하기 편한 듯하다."/>
+	<costume name="스피어 디스크" tag="COSTUME_CASTY_01" evStart="EVENT_C31_2_030" listUp="EVENT_C31_2_030" equipImageNo="1" charaTag="CHARA_CASTY" charaBaseTag="CHARA_BASE_PC00B" changeAfterEXBoss="1" misogiUse="0" text="언뜻 무거워 보이지만, 실제로는 매우 가벼운 전투용 드레스. 캐스는 처음에는 그 외형 때문에 움직이기 불편할 것 같다며 멀리했으나, 막상 입어보니 착용감도 좋아 아주 마음에 들어 하는 듯하다.
+흉부 장갑은 대파동 소재로 되어 있어, 강렬한 에너지파를 받아도 신체에 영향을 주지 않도록 설계되어 있다. 아르시엘로 향하기 위해 통과했던 웜홀에서도 캐스의 몸을 완벽하게 지켜냈다."/>
+	<costume name="샤리 페이크" tag="COSTUME_CASTY_02" evStart="EVENT_C21_4_020" evEnd="EVENT_C21_4_080" listUp="EVENT_C21_4_020" lock="1" equipImageNo="2" charaTag="CHARA_CASTY" charaBaseTag="CHARA_BASE_PC00D" changeAfterEXBoss="1" misogiUse="0" text="타트리아가 만든 약 『샤르 니나레』를 마시고 변신한 모습. 엄밀히 말하면 코스튬은 아니지만, 굳이 따지지는 않기로 하자. 캐스는 노출도가 높은 탓에 매우 싫어했지만, 델타가 귀엽다고 말한 것이 이유인지 그 후로는 스스로 적극적으로 원래대로 돌아가려 하지 않았다.
+약으로 인해 변신한 것이긴 하지만, 모든 소재가 유기농으로 만들어진 환경 친화적인 옷이다."/>
+	<costume name="리플 쉘" tag="COSTUME_CASTY_07" listUp="EVENT_MS21_030" equipImageNo="3" charaTag="CHARA_CASTY" charaBaseTag="CHARA_BASE_PC00C" changeAfterEXBoss="1" misogiUse="1" text="이른바 수영복이지만, 천 부분과 필름 부분이 혼재된 이 세계에서도 미래적이라 할 수 있는 디자인이 특징이다.
+미소기를 각오하게 된 후 페리온에서 구입한 것이지만, 구매 당시 너무 부끄러운 나머지 점원이 권하는 대로 사버렸다고 한다. 구매의 결정적인 이유는 미소기를 최고 효율로 수행할 수 있는 전용 수영복이라는 문구 때문이었다고 하는데, 그 이유는 직접 보고 판단해야 할 것이다."/>
+	<costume name="플라우 홀" tag="COSTUME_CASTY_10" listUp="EVENT_C11_1_010" equipImageNo="4" charaTag="CHARA_CASTY" charaBaseTag="CHARA_BASE_PC00E" misogiUse="0" text="「지옥 부인」이라는 이름의 다크하고 세련된 코스튬. 그야말로 마계 귀족 델타 공과 그의 아내 캐스티 같은 느낌의, 배덕감이 넘치는 코스튬이다.
+델타와 둘이서 이 시리즈를 입고 임무를 수행하다 보면, 마치 자신들이 악의 끝을 달리고 있는 듯한 기분을 느낄 수 있다고 보장한다. 평소와는 색다른 다크 아르노사쥬를 꼭 만끽해 보길 바란다."/>
+	<costume name="오리카 Style" tag="COSTUME_CASTY_11" equipImageNo="5" charaTag="CHARA_CASTY" charaBaseTag="CHARA_BASE_PC00F" clearOpen="1" misogiUse="0" text="아르노사쥬를 한 번 클리어하면 얻을 수 있는 코스튬.
+아트네리코 ～세계의 끝에서 계속 노래하는 소녀～의 히로인 중 한 명인 오리카 네스트미르의 라셸라 어레인지 스타일이다.
+원작을 아는 사람이라면 가슴 부근이 조금 허전하다고 느낄지도 모른다. 하지만 그건 너의 마음속에만 간직해 주길 바란다. 그녀의 마음의 평온을 위해서라도."/>
+	<costume name="더미" tag="COSTUME_CASTY_12" equipImageNo="6" misogiUse="0"/>
+	<costume name="스포츠웨어" tag="COSTUME_CASTY_03" listUp="EVENT_C11_1_010" equipImageNo="8" charaTag="CHARA_CASTY" charaBaseTag="CHARA_BASE_PC00I" misogiUse="0" text="옛날 향수가 느껴지는 스포츠웨어 세트. 지금은 스패츠 형태가 되어버린 탓에 거의 도시 전설이 되어가는 코스튬이다.
+색상에 대해서는 남색이야말로 진리라고 말하는 사람도 많지만, 이번에는 자주색이다. 격렬한 전투가 많은 제노메스에게는 확실히 이 코스튬이 움직이기 편하고 쾌적할지도 모른다. 한 가지 확실한 것은 캐스에게 매우 잘 어울린다는 점이다."/>
+	<costume name="더미" tag="COSTUME_CASTY_04" equipImageNo="7" misogiUse="0"/>
+	<costume name="캐스 DLC_03" tag="COSTUME_CASTY_05" equipImageNo="0" charaTag="CHARA_CASTY" charaBaseTag="CHARA_BASE_PC00B" dlcTag="DLC_DUMMY" misogiUse="0" text="캐스 DLC_03의 설명문"/>
+	<costume name="캐스 DLC_04" tag="COSTUME_CASTY_06" equipImageNo="0" charaTag="CHARA_CASTY" charaBaseTag="CHARA_BASE_PC00B" dlcTag="DLC_DUMMY" misogiUse="0" text="캐스 DLC_04의 설명문"/>
+	<costume name="캐스 DLC_미소기 전용_06" tag="COSTUME_CASTY_08" equipImageNo="0" charaTag="CHARA_CASTY" charaBaseTag="CHARA_BASE_PC00C" dlcTag="DLC_DUMMY" misogiUse="1" text="캐스 DLC_미소기 전용_06의 설명문"/>
+	<costume name="캐스 DLC_미소기 전용_07" tag="COSTUME_CASTY_09" equipImageNo="0" charaTag="CHARA_CASTY" charaBaseTag="CHARA_BASE_PC00C" dlcTag="DLC_DUMMY" misogiUse="1" text="캐스 DLC_미소기 전용_07의 설명문"/>
+	<costume name="ES45 캐소드" tag="COSTUME_AVATAR_00" evEnd="EVENT_C32_1_050" listUp="EVENT_C12_1_010" equipImageNo="0" charaTag="CHARA_AVATAR" charaBaseTag="CHARA_BASE_PC03A" changeAfterEXBoss="1" misogiUse="0" text="엄밀히 말하면 이 개체의 품번.
+ES45 타입이라 불리는 형식으로 소위 가디언 로봇의 일종이지만, 오레이를 배회하는 메카 계열 가디언과는 달리 그들이 갖추지 못한 특별한 기능을 여러모로 서포트한다고 한다.
+그중에서도 가장 특징적인 것이 7차원 접속을 가능하게 하는 진공관, 아르노사쥬 관과의 직결 버스를 가지고 있다는 점이다. 그렇기에 외세계의 존재를 자유롭게 조종할 수 있는 것이다."/>
+	<costume name="XR77 프리미엄" tag="COSTUME_AVATAR_01" evStart="EVENT_C32_1_050" listUp="EVENT_C32_1_050" equipImageNo="1" charaTag="CHARA_AVATAR" charaBaseTag="CHARA_BASE_PC03B" changeAfterEXBoss="1" misogiUse="0" text="ES45 캐소드 타입이 프림이 조종하는 위성에 파괴된 후, 살리를 중심으로 이온, 카논, 타트리아 등이 총력을 결집해 만들어낸 새로운 7차원 단말.
+차세대라는 이름에 걸맞은 순백의 유선형 폼은 이미 다른 가디언 로봇이 도달할 수 없는 영역까지 성숙했음을 보여주는 상징이라 할 수 있다. 설계 단계에서 살리가 몰래 수수께끼의 기능을 잔뜩 넣어두었다느니 아니라느니 하는 소문이 있다."/>
+	<costume name="안티마터" tag="COSTUME_AVATAR_10" listUp="EVENT_C11_1_010" equipImageNo="2" charaTag="CHARA_AVATAR" charaBaseTag="CHARA_BASE_PC03C" misogiUse="0" text="평소의 황동 같은 광택을 자랑하는 바디를 양이라 한다면, 이것은 그야말로 음이라 부르기에 적합하다.
+과학적으로 비유하자면 물질에 대한 반물질. 그리고 이 바디의 이름도 「반입자」라는 의미다. 재질 불명의 질감은 그야말로 반입자라 부르기에 부족함이 없다. 스텔스 특성 같은 것이 더해졌다면 최고였겠지만, 그런 특수 장갑은 없으며 당연하게도 반물질조차 아닌 보통의 물질이다."/>
+	<costume name="슈레리아 Style" tag="COSTUME_AVATAR_11" equipImageNo="3" charaTag="CHARA_AVATAR" charaBaseTag="CHARA_BASE_PC03D" clearOpen="1" misogiUse="0" text="아르노사쥬를 한 번 클리어하면 얻을 수 있는 코스튬.
+아트라 노벨리～세계의 끝에서 계속 노래하는 소녀～의 히든 히로인 슈레리아의 장갑 형태 버전 라셸라 어레인지 스타일이다.
+같은 로봇 혹은 메카 계열이라는 이유만으로 성별 따위 아랑곳하지 않고, 아셰스의 샤시에 맞게 리디자인해 버린 폭거에는 그저 경의를 표할 뿐. 아셰스 이외에 이런 느낌은 표현 불가능할 것이다."/>
+	<costume name="아바타 DLC_00" tag="COSTUME_AVATAR_02" equipImageNo="0" charaTag="CHARA_AVATAR" charaBaseTag="CHARA_BASE_PC03B" dlcTag="DLC_DUMMY" misogiUse="0" text="아바타 DLC_00의 설명문"/>
+	<costume name="아바타 DLC_01" tag="COSTUME_AVATAR_03" equipImageNo="0" charaTag="CHARA_AVATAR" charaBaseTag="CHARA_BASE_PC03B" dlcTag="DLC_DUMMY" misogiUse="0" text="아바타 DLC_01의 설명문"/>
+	<costume name="아바타 DLC_02" tag="COSTUME_AVATAR_04" equipImageNo="0" charaTag="CHARA_AVATAR" charaBaseTag="CHARA_BASE_PC03B" dlcTag="DLC_DUMMY" misogiUse="0" text="아바타 DLC_02의 설명문"/>
+	<costume name="아바타 DLC_03" tag="COSTUME_AVATAR_05" equipImageNo="0" charaTag="CHARA_AVATAR" charaBaseTag="CHARA_BASE_PC03B" dlcTag="DLC_DUMMY" misogiUse="0" text="아바타 DLC_03의 설명문"/>
+	<costume name="아바타 DLC_04" tag="COSTUME_AVATAR_06" equipImageNo="0" charaTag="CHARA_AVATAR" charaBaseTag="CHARA_BASE_PC03B" dlcTag="DLC_DUMMY" misogiUse="0" text="아바타 DLC_04의 설명문"/>
+	<costume name="아바타 DLC_미소기 전용_05" tag="COSTUME_AVATAR_07" equipImageNo="0" charaTag="CHARA_AVATAR" charaBaseTag="CHARA_BASE_PC03A" dlcTag="DLC_DUMMY" misogiUse="0" text="아바타 DLC_미소기 전용_05의 설명문"/>
+	<costume name="아바타 DLC_미소기 전용_06" tag="COSTUME_AVATAR_08" equipImageNo="0" charaTag="CHARA_AVATAR" charaBaseTag="CHARA_BASE_PC03B" dlcTag="DLC_DUMMY" misogiUse="0" text="아바타 DLC_미소기 전용_06의 설명문"/>
+	<costume name="아바타 DLC_미소기 전용_07" tag="COSTUME_AVATAR_09" equipImageNo="0" charaTag="CHARA_AVATAR" charaBaseTag="CHARA_BASE_PC03B" dlcTag="DLC_DUMMY" misogiUse="0" text="아바타 DLC_미소기 전용_07의 설명문"/>
+	<costume name="폴라즈 메모리 III" tag="COSTUME_ION_00" evEnd="EVENT_C31_7_010" listUp="EVENT_C12_1_010" equipImageNo="0" charaTag="CHARA_ION" charaBaseTag="CHARA_BASE_PC01A" changeAfterEXBoss="1" misogiUse="0" text="이온이 직접 만든 옷. III라는 이름처럼 3대째 내려오는 폴라즈 메모리이다. 폴라즈 메모리는 이온이 이 세계에 온 지 얼마 되지 않았을 무렵, 신세를 졌던 아주머니가 만들어 준 옷의 이름으로, 이온이 처음으로 이 세계의 따스함을 알게 된 추억의 옷이기도 하다. 그래서 지금도 개량에 개량을 거듭하여 이미 원형을 찾아볼 수 없게 되었음에도 불구하고, 이름만은 끊이지 않고 이어져 내려오고 있다."/>
+	<costume name="라셸 퀸" tag="COSTUME_ION_01" evStart="EVENT_C31_7_010" listUp="EVENT_C31_7_010" equipImageNo="1" charaTag="CHARA_ION" charaBaseTag="CHARA_BASE_PC01B" changeAfterEXBoss="1" misogiUse="0" text="행성 창성의 시마법을 노래하기 위해 입게 된 옷. 이 세계 유일의 황제인 라셸라 황제의 전통 의상 중 하나로, 특히 중요한 시를 노래할 때는 반드시 입기로 되어 있는 것이다.
+이온은 현재 황제는 아니지만, 모든 생명의 운명을 건 시를 노래하게 되었기에 현 황제인 네이가 격려의 마음을 담아 이온에게 선물했다. 그야말로 우주 여왕의 풍모라고 할 수 있는 디자인이다."/>
+	<costume name="우메모모사쿠라" tag="COSTUME_ION_02" evStart="EVENT_C22_1_030" evEnd="EVENT_C22_1_030" listUp="EVENT_C22_1_030" equipImageNo="2" charaTag="CHARA_ION" charaBaseTag="CHARA_BASE_PC01D" changeAfterEXBoss="1" misogiUse="0" text="매화색, 복숭아색, 벚꽃색으로 구성된 매우 귀여운 옷. 우리 세계에서는 아주 일반적인 사복처럼 보이지만, 저쪽 세계에서는 그리 친숙하지 않은 디자인이다. 이온이 어스에 있던 시절에 아끼던 옷으로, 그것을 그리워하며 틈이 날 때마다 직접 만들곤 했다. 이질적이라는 것을 알고 있는지 남들 앞에서 입는 일은 별로 없는 듯하지만, 네이의 가게를 도울 때 딱 한 번 선보인 적이 있다."/>
+	<costume name="바다색의 유혹" tag="COSTUME_ION_07" listUp="EVENT_MS21_060" equipImageNo="3" charaTag="CHARA_ION" charaBaseTag="CHARA_BASE_PC01C" changeAfterEXBoss="1" misogiUse="1" text="바다의 파도를 연상시키는, 매우 상쾌하고 귀여운 수영복. 신축성이 높은 소재라 촉감이 매우 좋다. 분명 가슴이 큰 사람을 위한 수영복이지만, 평균적인 사이즈라고 할 수 있는 이온은 이 수영복을 즐겨 입는 듯하다. 오레이에는 당연히 바다는 없지만, 생산 구역에는 연못이 있어 그곳에서 물놀이를 하기 위한 수영복이 다수 판매되고 있다. 미소기용 고성능 수영복도 판매되고 있지만, 이온은 별로 좋아하지 않는 모양이다."/>
+	<costume name="다크니스 펄서" tag="COSTUME_ION_10" listUp="EVENT_C11_1_010" equipImageNo="4" charaTag="CHARA_ION" charaBaseTag="CHARA_BASE_PC01E" misogiUse="0" text="요염하면서도 매혹적인, 그리고 다크하고 아름다운 의상. 의상이 그 인격을 체현한다고 한다면 이 의상은 분명 이온의 일면을 표현하는 의상이라고 할 수 있을지도 모른다.
+코스튬을 일본어로 번역하면 「암흑 중성자별」. 그 이름처럼 아름다운 모습 속에 모든 것을 압도할 정도의 에너지를 가진 이온에게 어울리는 코스튬이라 할 수 있겠다."/>
+	<costume name="미샤 Style" tag="COSTUME_ION_11" equipImageNo="5" charaTag="CHARA_ION" charaBaseTag="CHARA_BASE_PC01F" clearOpen="1" misogiUse="0" text="아르노사쥬를 한 번 클리어하면 얻을 수 있는 코스튬.
+아르토네리코 ～세계의 끝에서 계속 노래하는 소녀～의 히로인, 미샤 알트셀크 류인의 코스튬 어레인지다.
+본래 화풍의 의상과 상성이 좋은 이온답게, 훌륭한 소화력을 보여준다."/>
+	<costume name="폴라즈 메모리 I" tag="COSTUME_ION_12" equipImageNo="6" charaTag="CHARA_ION" charaBaseTag="CHARA_BASE_PC01G" itemTag="ITEM_YOBI_001" misogiUse="0" text="이온의 기억 한구석에서 가져올 수 있었던 귀중한 코스튬 중 하나. 폴라즈 메모리 I은 이온에게 있어 이 세계의 따뜻함을 알게 해준, 매우 추억이 깊은 의상이다.
+그 때문에 이온은 잠들어 있는 동안에도 이 의상을 즐겨 입었다. 그녀에게 있어서 무엇보다 애착이 가는 의상일 것이다."/>
+	<costume name="아지사이사쿠카" tag="COSTUME_ION_13" equipImageNo="7" charaTag="CHARA_ION" charaBaseTag="CHARA_BASE_PC01H" itemTag="ITEM_YOBI_002" misogiUse="0" text="이온의 기억 한구석에서 가져올 수 있었던 귀중한 코스튬 중 하나. 원래 화풍 의상이 잘 어울리는 이온이지만, 잠들어 있는 동안의 세계에서조차 소장품이 적은 점이 조금 아쉬웠다. 하지만 그만큼 이 유카타의 파괴력은 강렬하다고 할 수 있다.
+이 유카타를 입고 전투에 임한다면, 어떤 싸움이라도 여름 축제 때와 같은 새콤달콤하고 애틋한 기분을 느낄 수 있을 것이 분명하다."/>
+	<costume name="블루밍 야드" tag="COSTUME_ION_14" equipImageNo="8" charaTag="CHARA_ION" charaBaseTag="CHARA_BASE_PC01I" itemTag="ITEM_YOBI_003" misogiUse="0" text="이온의 기억 한구석에서 가져올 수 있었던, 귀중한 코스튬 중 하나. 실로 일반적이고 어스적인 의상이다.
+너희가 사는 어스에서 입는다면 아무런 문제가 없겠지만, 이쪽 세계에서 입으면 역시 좋은 의미에서의 위화감을 느끼지 않을 수 없다. 이것을 입고 전투를 하거나, 이세계 느낌이 넘치는 대지를 방황한다면 말로 다 할 수 없는 독특한 분위기를 즐길 수 있을 것이다."/>
+	<costume name="아메노미라이의 법의" tag="COSTUME_ION_03" listUp="EVENT_C11_1_010" equipImageNo="9" charaTag="CHARA_ION" charaBaseTag="CHARA_BASE_PC01J" misogiUse="0" text="지금보다 수년 전, 지금은 폐허가 되어버린 거주구에 존재했던 대도시 「아메노미라이」. 그곳을 통치하는 무녀 일족이 몸에 걸쳤던 의상이 바로 이 「아메노미라이의 법의」이다. 아메노미라이에는 특별한 힘이 존재했고, 무녀는 그 힘을 다스릴 수 있었다. 그 도시와 무녀에게 무슨 일이 있었는지, 그것은 또 다른 이야기. 흥미가 있다면 「수요일의 시리우스」 연재본인 코믹판 아르노사쥬를 참고하시길 바란다."/>
+	<costume name="이온 DLC_02" tag="COSTUME_ION_04" equipImageNo="0" charaTag="CHARA_ION" charaBaseTag="CHARA_BASE_PC01B" dlcTag="DLC_DUMMY" misogiUse="0" text="이온 DLC_02의 설명문"/>
+	<costume name="이온 DLC_03" tag="COSTUME_ION_05" equipImageNo="0" charaTag="CHARA_ION" charaBaseTag="CHARA_BASE_PC01B" dlcTag="DLC_DUMMY" misogiUse="0" text="이온 DLC_03의 설명문"/>
+	<costume name="이온 DLC_04" tag="COSTUME_ION_06" equipImageNo="0" charaTag="CHARA_ION" charaBaseTag="CHARA_BASE_PC01B" dlcTag="DLC_DUMMY" misogiUse="0" text="이온 DLC_04의 설명문"/>
+	<costume name="이온 DLC_미소기 전용_06" tag="COSTUME_ION_08" equipImageNo="0" charaTag="CHARA_ION" charaBaseTag="CHARA_BASE_PC01B" dlcTag="DLC_DUMMY" misogiUse="1" text="이온 DLC_미소기 전용_06의 설명문"/>
+	<costume name="이온 DLC_미소기 전용_07" tag="COSTUME_ION_09" equipImageNo="0" charaTag="CHARA_ION" charaBaseTag="CHARA_BASE_PC01B" dlcTag="DLC_DUMMY" misogiUse="1" text="이온 DLC_미소기 전용_07의 설명문"/>
+	<costume name="천람법의" tag="COSTUME_KANON_00" equipImageNo="0" charaTag="CHARA_KANON" charaBaseTag="CHARA_BASE_PC04A" misogiUse="0" text="천람법의의 설명문"/>
+	<costume name="키즈나무스비" tag="COSTUME_KANON_01" equipImageNo="0" charaTag="CHARA_KANON" charaBaseTag="CHARA_BASE_PC04C" misogiUse="1" text="키즈나무스비의 설명문"/>
+	<costume name="천통희 이너" tag="COSTUME_NAY_00" equipImageNo="0" charaTag="CHARA_NAY" charaBaseTag="CHARA_BASE_PC05A" misogiUse="0" text="천통희 이너의 설명문"/>
+	<costume name="스쿠아쿠아" tag="COSTUME_NAY_01" equipImageNo="0" charaTag="CHARA_NAY" charaBaseTag="CHARA_BASE_PC05C" misogiUse="1" text="스쿠아쿠아의 설명문"/>
+	<costume name="블루 프랙탈" tag="COSTUME_SARLY_01" equipImageNo="0" charaTag="CHARA_SARLY" charaBaseTag="CHARA_BASE_PC15B" misogiUse="1" text="살리 미소기용의 설명문"/>
+	<costume name="토오키 소라노사쿠라" tag="COSTUME_NERO_01" equipImageNo="0" charaTag="CHARA_NERO" charaBaseTag="CHARA_BASE_PC08B" misogiUse="1" text="네로 미소기용 설명문"/>
+	<costume name="다보티즈" tag="COSTUME_SYURERIA_01" equipImageNo="0" charaTag="CHARA_SYURERIA" charaBaseTag="CHARA_BASE_PC17B" misogiUse="1" text="슈레리아 미소기용 설명문"/>
+</Root>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="SHIFT-JIS"?>
+<Root>
+	<cloudItem itemtag="ITEM_A_061" cotumeTag="COSTUME_NONE" idx="290"/>
+	<cloudItem itemtag="ITEM_A_071" cotumeTag="COSTUME_NONE" idx="291"/>
+	<cloudItem itemtag="ITEM_A_081" cotumeTag="COSTUME_NONE" idx="292"/>
+	<cloudItem itemtag="ITEM_A_062" cotumeTag="COSTUME_NONE" idx="293"/>
+	<cloudItem itemtag="ITEM_A_072" cotumeTag="COSTUME_NONE" idx="294"/>
+	<cloudItem itemtag="ITEM_A_082" cotumeTag="COSTUME_NONE" idx="295"/>
+	<cloudItem itemtag="ITEM_A_063" cotumeTag="COSTUME_NONE" idx="296"/>
+	<cloudItem itemtag="ITEM_A_073" cotumeTag="COSTUME_NONE" idx="297"/>
+	<cloudItem itemtag="ITEM_A_083" cotumeTag="COSTUME_NONE" idx="298"/>
+	<cloudItem itemtag="ITEM_A_064" cotumeTag="COSTUME_NONE" idx="299"/>
+	<cloudItem itemtag="ITEM_A_074" cotumeTag="COSTUME_NONE" idx="300"/>
+	<cloudItem itemtag="ITEM_A_084" cotumeTag="COSTUME_NONE" idx="301"/>
+	<cloudItem itemtag="ITEM_A_065" cotumeTag="COSTUME_NONE" idx="302"/>
+	<cloudItem itemtag="ITEM_A_075" cotumeTag="COSTUME_NONE" idx="303"/>
+	<cloudItem itemtag="ITEM_A_085" cotumeTag="COSTUME_NONE" idx="304"/>
+	<cloudItem itemtag="ITEM_A_066" cotumeTag="COSTUME_NONE" idx="305"/>
+	<cloudItem itemtag="ITEM_A_076" cotumeTag="COSTUME_NONE" idx="306"/>
+	<cloudItem itemtag="ITEM_A_086" cotumeTag="COSTUME_NONE" idx="307"/>
+	<cloudItem itemtag="ITEM_A_067" cotumeTag="COSTUME_NONE" idx="308"/>
+	<cloudItem itemtag="ITEM_A_077" cotumeTag="COSTUME_NONE" idx="309"/>
+	<cloudItem itemtag="ITEM_A_087" cotumeTag="COSTUME_NONE" idx="310"/>
+	<cloudItem itemtag="ITEM_A_068" cotumeTag="COSTUME_NONE" idx="311"/>
+	<cloudItem itemtag="ITEM_A_078" cotumeTag="COSTUME_NONE" idx="312"/>
+	<cloudItem itemtag="ITEM_A_088" cotumeTag="COSTUME_NONE" idx="313"/>
+	<cloudItem itemtag="ITEM_A_069" cotumeTag="COSTUME_NONE" idx="314"/>
+	<cloudItem itemtag="ITEM_A_079" cotumeTag="COSTUME_NONE" idx="315"/>
+	<cloudItem itemtag="ITEM_A_089" cotumeTag="COSTUME_NONE" idx="316"/>
+	<cloudItem itemtag="ITEM_A_070" cotumeTag="COSTUME_NONE" idx="317"/>
+	<cloudItem itemtag="ITEM_A_080" cotumeTag="COSTUME_NONE" idx="318"/>
+	<cloudItem itemtag="ITEM_A_090" cotumeTag="COSTUME_NONE" idx="319"/>
+	<cloudItem itemtag="ITEM_YOBI_001" cotumeTag="COSTUME_ION_12" idx="7" Comment="ArnoV 추가"/>
+	<cloudItem itemtag="ITEM_YOBI_002" cotumeTag="COSTUME_ION_13" idx="153" Comment="ArnoV 추가"/>
+	<cloudItem itemtag="ITEM_YOBI_003" cotumeTag="COSTUME_ION_14" idx="142" Comment="ArnoV 추가"/>
+</Root>

@@ -31,7 +31,7 @@
 					<bind_node node="light_base" anim="anm_common_rotateZ360" speed="0.03"/>
 				</anim_ctrl>
 			</node>
-			<text name="msg_text" pos="40,25" drop_shadow="false" line_char_length="20" font_size="20" text="아이우에오카키쿠케코사사먹고있을때가아냐파피부로걷기, 아르노사쥬세르노사쥬파괴신공용어「」【】・?!123abcdef"/>
+			<text name="msg_text" pos="40,25" drop_shadow="false" line_char_length="20" font_size="20" text="아이우에오카키쿠케코사사먹고있을때가아냐파피부로걷기, 아르노사쥬세르노사쥬파괴신공용어「」【】・?!123abcdefGHIJ"/>
 		</node>
 	</node>
 	<!--メッセージログ-->

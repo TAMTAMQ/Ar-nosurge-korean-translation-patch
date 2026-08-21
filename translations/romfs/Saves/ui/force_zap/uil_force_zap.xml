@@ -12,8 +12,8 @@
 		<image name="bg" style="white_image" pos="0,248,0" size_wh="1280,200" color="0,0,0,128"/>
 		<text name="head" drop_shadow="true" text="CAUTION" align="center" font_size="26" pos="649,272,0" color="255,255,0,255"/>
 		<node name="body">
-			<text visible="true" name="delta" drop_shadow="true" align="center" font_size="20" pos="653,321,0" line_space="5" text="&lt;#ff4632&gt;델타&lt;#ffffff&gt;의 인물 추적 디바이스 응답이 끊겼습니다.&lt;CR&gt;추적 대상을 &lt;#ffc000&gt;아셰스&lt;#ffffff&gt;로 전환합니다.&lt;CR&gt;&lt;CR&gt;잠시 기다려 주십시오"/>
-			<text visible="false" name="avatar" drop_shadow="true" align="center" font_size="20" pos="653,321,0" line_space="5" text="&lt;#ffc000&gt;아셰스&lt;#ffffff&gt;의 인물 추적 디바이스 응답이 끊겼습니다.&lt;CR&gt;추적 대상을 &lt;#ff4632&gt;델타&lt;#ffffff&gt;로 전환합니다.&lt;CR&gt;&lt;CR&gt;잠시 기다려 주십시오"/>
+			<text visible="true" name="delta" drop_shadow="true" align="center" font_size="20" pos="653,321,0" line_space="5" text="&lt;#ff4632&gt;델타&lt;#ffffff&gt;의 인물 추적 디바이스로부터 응답이 끊겼습니다. &lt;CR&gt;추적 대상을 &lt;#ffc000&gt;아셰스&lt;#ffffff&gt;로 전환합니다. &lt;CR&gt;&lt;CR&gt;잠시만 기다려 주십시오"/>
+			<text visible="false" name="avatar" drop_shadow="true" align="center" font_size="20" pos="653,321,0" line_space="5" text="&lt;#ffc000&gt;아셰스&lt;#ffffff&gt;의 인물 추적 디바이스로부터 응답이 끊겼습니다. &lt;CR&gt;추적 대상을 &lt;#ff4632&gt;델타&lt;#ffffff&gt;로 전환합니다. &lt;CR&gt;&lt;CR&gt;잠시만 기다려 주십시오"/>
 		</node>
 	</node>
 	<anim_ctrl name="ac_screen" play="true" loop="false">
