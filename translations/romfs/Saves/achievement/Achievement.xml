@@ -291,7 +291,7 @@
 	<Achievement Name="LV7-9 난 이제 필요 없어？" cntAvatar="1" startEv="EVENT_MS21_050" WorkCond="ACHIEVEMENT_WORK_COND_BTL_USE_SONG_CNT" Prm1="SONG_7TH_WORLDS_REVELATION" Prm2="1"/>
 	<Achievement Name="LV7-10 행성 부활 임박" cntAvatar="1" startEv="EVENT_MS21_050" WorkCond="ACHIEVEMENT_WORK_COND_EV_TAG_KIND" Prm1="EVENT_C32_5_070"/>
 	<Achievement Name="LV7-11 발신자는 누구？" cntAvatar="1" startEv="EVENT_MS21_050" WorkCond="ACHIEVEMENT_WORK_COND_EV_TAG_KIND" Prm1="EVENT_IM42_430"/>
-	<Achievement Name="LV7-12 이온 Lｖ7＿12" cntAvatar="1" startEv="EVENT_MS21_050" WorkCond="ACHIEVEMENT_WORK_COND_EV_TAG_KIND" Prm1="EVENT_IM12_230"/>
+	<Achievement Name="LV7-12 이온 LV7＿12" cntAvatar="1" startEv="EVENT_MS21_050" WorkCond="ACHIEVEMENT_WORK_COND_EV_TAG_KIND" Prm1="EVENT_IM12_230"/>
 	<Achievement Name="LV7-13 절친" cntAvatar="1" startEv="EVENT_MS21_050" WorkCond="ACHIEVEMENT_WORK_COND_EV_TAG_KIND" Prm1="EVENT_IM22_470"/>
 	<Achievement Name="이온 Ｌｖ７＿１４" cntAvatar="1" startEv="EVENT_MS21_050" WorkCond="ACHIEVEMENT_WORK_COND_EV_TAG_KIND" Prm1="EVENT_ZZ01_020"/>
 	<Achievement Name="이온 Ｌｖ７＿１５" cntAvatar="1" startEv="EVENT_MS21_050" WorkCond="ACHIEVEMENT_WORK_COND_EV_TAG_KIND" Prm1="EVENT_ZZ01_020"/>
@@ -929,8 +929,8 @@
 	<Achievement Name="▼22. MOB15 시희" cntDelta="1" WorkCond="ACHIEVEMENT_WORK_COND_BTL_ENEMY_SLAY_KIND_VANGUARD" Prm1="MONSTER_HUMAN_F_01"/>
 	<Achievement Name="▼22. 격리구 특수（격리구 첫 전투 후）" cntDelta="1" startEv="EVENT_ZZ01_020" WorkCond="ACHIEVEMENT_WORK_COND_BTL_ENEMY_SLAY_KIND_VANGUARD" Prm1="118"/>
 	<Achievement Name="▼24.25.26 적을 꽤 쓰러뜨림 2（Ｐ１）" cntDelta="1" WorkCond="ACHIEVEMENT_WORK_COND_BTL_WAVE_CNT_RATIO" Prm1="30"/>
-	<Achievement Name="▼27.28.29 적을 꽤 쓰러뜨림 2（Ｐ2）" cntDelta="1" WorkCond="ACHIEVEMENT_WORK_COND_BTL_WAVE_CNT_RATIO" Prm1="30"/>
-	<Achievement Name="▼30.31.32 적을 꽤 쓰러뜨림 2（Ｐ3）" cntDelta="1" WorkCond="ACHIEVEMENT_WORK_COND_BTL_WAVE_CNT_RATIO" Prm1="30"/>
+	<Achievement Name="▼27.28.29 적을 꽤 쓰러뜨림 2（Ｐ２）" cntDelta="1" WorkCond="ACHIEVEMENT_WORK_COND_BTL_WAVE_CNT_RATIO" Prm1="30"/>
+	<Achievement Name="▼30.31.32 적을 꽤 쓰러뜨림 2（Ｐ３）" cntDelta="1" WorkCond="ACHIEVEMENT_WORK_COND_BTL_WAVE_CNT_RATIO" Prm1="30"/>
 	<Achievement Name="▼76-79.필드 보행 중（Ｐ１）" cntDelta="1" Bonus="BONUS_BATTLE_C003" WorkCond="ACHIEVEMENT_WORK_COND_BTL_WIN_COUNT" Prm1="3"/>
 	<Achievement Name="▼80-83.필드 보행 중（Ｐ２）" cntDelta="1" Bonus="BONUS_BATTLE_C003" WorkCond="ACHIEVEMENT_WORK_COND_BTL_WIN_COUNT" Prm1="3"/>
 	<Achievement Name="▼84-87.필드 보행 중（Ｐ３）" cntDelta="1" Bonus="BONUS_BATTLE_C003" WorkCond="ACHIEVEMENT_WORK_COND_BTL_WIN_COUNT" Prm1="3"/>
@@ -991,8 +991,8 @@
 	<Achievement Name="▼22. MOB15 시희" cntAvatar="1" WorkCond="ACHIEVEMENT_WORK_COND_BTL_ENEMY_SLAY_KIND_VANGUARD" Prm1="MONSTER_HUMAN_F_01"/>
 	<Achievement Name="▼22. 격리구 특수（격리구 첫 전투 후）" cntAvatar="1" startEv="EVENT_ZZ01_020" WorkCond="ACHIEVEMENT_WORK_COND_BTL_ENEMY_SLAY_KIND_VANGUARD" Prm1="118"/>
 	<Achievement Name="▼23-26.꽤 적을 쓰러뜨린 2（Ｐ１）" cntAvatar="1" WorkCond="ACHIEVEMENT_WORK_COND_BTL_WAVE_CNT_RATIO" Prm1="30"/>
-	<Achievement Name="▼27.28.29 적을 꽤 쓰러뜨림 2（Ｐ2）" cntAvatar="1" WorkCond="ACHIEVEMENT_WORK_COND_BTL_WAVE_CNT_RATIO" Prm1="30"/>
-	<Achievement Name="▼30.31.32 적을 꽤 쓰러뜨림 2（Ｐ3）" cntAvatar="1" WorkCond="ACHIEVEMENT_WORK_COND_BTL_WAVE_CNT_RATIO" Prm1="30"/>
+	<Achievement Name="▼27.28.29 적을 꽤 쓰러뜨림 2（Ｐ２）" cntAvatar="1" WorkCond="ACHIEVEMENT_WORK_COND_BTL_WAVE_CNT_RATIO" Prm1="30"/>
+	<Achievement Name="▼30.31.32 적을 꽤 쓰러뜨림 2（Ｐ３）" cntAvatar="1" WorkCond="ACHIEVEMENT_WORK_COND_BTL_WAVE_CNT_RATIO" Prm1="30"/>
 	<Achievement Name="▼76-79.필드 보행 중（Ｐ１）" cntAvatar="1" Bonus="BONUS_BATTLE_I003" WorkCond="ACHIEVEMENT_WORK_COND_BTL_WIN_COUNT" Prm1="3"/>
 	<Achievement Name="▼80-83.필드 보행 중（Ｐ２）" cntAvatar="1" Bonus="BONUS_BATTLE_I003" WorkCond="ACHIEVEMENT_WORK_COND_BTL_WIN_COUNT" Prm1="3"/>
 	<Achievement Name="▼84-87.필드 보행 중（Ｐ３）" cntAvatar="1" Bonus="BONUS_BATTLE_I003" WorkCond="ACHIEVEMENT_WORK_COND_BTL_WIN_COUNT" Prm1="3"/>

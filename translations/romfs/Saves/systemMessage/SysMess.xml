@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Root>
-	<SysMess CharaTag="CHARA_NONE" NameTag="NAME_NONE" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SYSTEM" VoiceNo="-1" Text="로드한 세이브 데이터에 필요한 &lt;CR&gt;ＤＬC가 설치되어 있지 않습니다. &lt;CR&gt;로드를 취소했습니다."/>
+	<SysMess CharaTag="CHARA_NONE" NameTag="NAME_NONE" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SYSTEM" VoiceNo="-1" Text="로드한 세이브 데이터에 필요한 &lt;CR&gt;ＤＬＣ가 설치되어 있지 않습니다. &lt;CR&gt;로드를 취소했습니다."/>
 	<SysMess CharaTag="CHARA_NONE" NameTag="NAME_NONE" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SYSTEM" VoiceNo="-1" Text="로드한 세이브 데이터가 변조되었기 &lt;CR&gt; 때문에, 로드를 취소했습니다."/>
 	<SysMess CharaTag="CHARA_NONE" NameTag="NAME_NONE" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SYSTEM" VoiceNo="-1" Text="이 아이템의 조합 이벤트를 보시겠습니까？"/>
 	<SysMess CharaTag="CHARA_NONE" NameTag="NAME_NONE" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SYSTEM" VoiceNo="-1" Text="의상을 변경하시겠습니까？"/>
@@ -293,7 +293,7 @@
 	<SysMess CharaTag="CHARA_NONE" NameTag="NAME_NONE" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SYSTEM" VoiceNo="-1" Text="네트워크에 연결할 수 없습니다. &lt;CR&gt;다시 한 번 연결을 시도하시겠습니까？"/>
 	<SysMess CharaTag="CHARA_NONE" NameTag="NAME_NONE" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SYSTEM" VoiceNo="-1" Text="그럼, ７차원을 넘어선 세계로의 여행을 &lt;CR&gt;편안하게 즐겨 주십시오"/>
 	<SysMess CharaTag="CHARA_NONE" NameTag="NAME_NONE" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SYSTEM" Text="PlayStation&lt;RG&gt; Store에서 구매한 아이템을 받을 수 있습니다"/>
-	<SysMess CharaTag="CHARA_NONE" NameTag="NAME_NONE" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SYSTEM" VoiceNo="-1" Text="다른 세계에서 얻은 ＧＰ를 전투 보너스로 변환한다뉴！ &lt;CR&gt;ＥＸＰ, ＤＰ, CＴ에 할당한 수치만큼, 전투 시 받는 포인트가 ２배가 된다뉴！ &lt;CR&gt;정말 대단하다뉴！！"/>
+	<SysMess CharaTag="CHARA_NONE" NameTag="NAME_NONE" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SYSTEM" VoiceNo="-1" Text="다른 세계에서 얻은 ＧＰ를 전투 보너스로 변환한다뉴！ &lt;CR&gt;ＥＸＰ, ＤＰ, ＣＴ에 할당한 수치만큼, 전투 시 받는 포인트가 ２배가 된다뉴！ &lt;CR&gt;정말 대단하다뉴！！"/>
 	<SysMess CharaTag="CHARA_NONE" NameTag="NAME_NONE" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SYSTEM" VoiceNo="-1" Text="아르노사쥬 DX에서 만든 아이템을 받는다냥！ &lt;CR&gt;전송되는 아이템은 각 １개씩이다냥！"/>
 	<SysMess CharaTag="CHARA_NONE" NameTag="NAME_NONE" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SYSTEM" Text="가스트에서 제공하는 사쥬 콘체르토 관련 콘텐츠로부터 데이터를 수신합니다"/>
 	<SysMess CharaTag="CHARA_NONE" NameTag="NAME_NONE" BucTag="BUC_NONE" BalloonMode="BALLOON_MODE_SYSTEM" Text="아르노사쥬의 게임 진행 상황을 가스트 서버로 전송합니다. 전송 전에 시스템 데이터를 저장합니다."/>

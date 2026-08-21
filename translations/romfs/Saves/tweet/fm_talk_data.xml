@@ -473,9 +473,9 @@
 	<fm_talk_data No.="470" FM_TALK_DATA_TAG="FM_TALK_DATA_BATTLE_C007_026" CHARA_TAG="CHARA_DELTA" MOTION_TAG="MOTION_EV_ACT_1" VOICE_NO="29694" MESSAGE="오오！！ 이거 캐소드다！ &lt;CR&gt;게다가 뭔가 특수해서 멋있는데！"/>
 	<fm_talk_data No.="471" FM_TALK_DATA_TAG="FM_TALK_DATA_BATTLE_C007_027" CHARA_TAG="CHARA_DELTA" VOICE_NO="29695" MESSAGE="이 캐소드, 엄청난 레어 아이템 아니야？"/>
 	<fm_talk_data No.="472" FM_TALK_DATA_TAG="FM_TALK_DATA_BATTLE_C007_027" CHARA_TAG="CHARA_CASTY" MOTION_TAG="MOTION_EV_ACT_1" VOICE_NO="29696" MESSAGE="얼른 착용해 봐."/>
-	<fm_talk_data No.="473" FM_TALK_DATA_TAG="FM_TALK_DATA_BATTLE_C007_028" CHARA_TAG="CHARA_DELTA" VOICE_NO="29697" MESSAGE="왠지 평소와는 전혀 다른 분위기의 &lt;CR&gt;RＮＡ네. 인체에 영향은 없겠지?"/>
-	<fm_talk_data No.="474" FM_TALK_DATA_TAG="FM_TALK_DATA_BATTLE_C007_028" CHARA_TAG="CHARA_CASTY" MOTION_TAG="MOTION_EV_ACT_1" VOICE_NO="29698" MESSAGE="애초에 RＮＡ 방어 강화 자체가 ＤＮＡ를 &lt;CR&gt;변화시키니까, 영향이 아주 크지 않을까……？"/>
-	<fm_talk_data No.="475" FM_TALK_DATA_TAG="FM_TALK_DATA_BATTLE_C007_029" CHARA_TAG="CHARA_DELTA" MOTION_TAG="MOTION_EV_ACT_1" VOICE_NO="29699" MESSAGE="이거, 왠지 엄청 기분 좋아 보이는 RＮＡ&lt;CR&gt;네. 게다가 꽤 레어 아이템 같고."/>
+	<fm_talk_data No.="473" FM_TALK_DATA_TAG="FM_TALK_DATA_BATTLE_C007_028" CHARA_TAG="CHARA_DELTA" VOICE_NO="29697" MESSAGE="왠지 평소와는 전혀 다른 분위기의 &lt;CR&gt;ＲＮＡ네. 인체에 영향은 없겠지?"/>
+	<fm_talk_data No.="474" FM_TALK_DATA_TAG="FM_TALK_DATA_BATTLE_C007_028" CHARA_TAG="CHARA_CASTY" MOTION_TAG="MOTION_EV_ACT_1" VOICE_NO="29698" MESSAGE="애초에 ＲＮＡ 방어 강화 자체가 ＤＮＡ를 &lt;CR&gt;변화시키니까, 영향이 아주 크지 않을까……？"/>
+	<fm_talk_data No.="475" FM_TALK_DATA_TAG="FM_TALK_DATA_BATTLE_C007_029" CHARA_TAG="CHARA_DELTA" MOTION_TAG="MOTION_EV_ACT_1" VOICE_NO="29699" MESSAGE="이거, 왠지 엄청 기분 좋아 보이는 ＲＮＡ&lt;CR&gt;네. 게다가 꽤 레어 아이템 같고."/>
 	<fm_talk_data No.="476" FM_TALK_DATA_TAG="FM_TALK_DATA_BATTLE_C007_030" CHARA_TAG="CHARA_CASTY" VOICE_NO="29700" MESSAGE="있잖아, 이 TxBIOS, &lt;CR&gt;안에 마이크로 퀘이사 들어있어！ &lt;CR&gt;플라센타에 있는 거 말이야."/>
 	<fm_talk_data No.="477" FM_TALK_DATA_TAG="FM_TALK_DATA_BATTLE_C007_030" CHARA_TAG="CHARA_DELTA" MOTION_TAG="MOTION_EV_ACT_1" VOICE_NO="29701" MESSAGE="정말이다！ 이렇게 보니까 예쁘네."/>
 	<fm_talk_data No.="478" FM_TALK_DATA_TAG="FM_TALK_DATA_BATTLE_C007_031" CHARA_TAG="CHARA_CASTY" VOICE_NO="29702" MESSAGE="이거 딱 봐도 대단해 보이는데, &lt;CR&gt;역시 이걸로 쏘는 시마법도 엄청난 걸까！"/>
@@ -836,8 +836,8 @@
 	<fm_talk_data No.="833" FM_TALK_DATA_TAG="FM_TALK_DATA_BATTLE_I007_025" CHARA_TAG="CHARA_ION" MOTION_TAG="MOTION_EV_ACT_1" VOICE_NO="29841" MESSAGE="아앗, 마루카메 씨의 도력선이다！ &lt;CR&gt;예전에 신세를 많이 졌었지."/>
 	<fm_talk_data No.="834" FM_TALK_DATA_TAG="FM_TALK_DATA_BATTLE_I007_026" CHARA_TAG="CHARA_ION" MOTION_TAG="MOTION_EV_ACT_1" VOICE_NO="29842" MESSAGE="이건… 좀 특수한 캐소드일까？ &lt;CR&gt;너에게 장착할 수 있을 것 같아."/>
 	<fm_talk_data No.="835" FM_TALK_DATA_TAG="FM_TALK_DATA_BATTLE_I007_027" CHARA_TAG="CHARA_ION" MOTION_TAG="MOTION_EV_ACT_1" VOICE_NO="29843" MESSAGE="이건 좀 괜찮아 보이는 캐소드네. &lt;CR&gt;당장 장착해 보자."/>
-	<fm_talk_data No.="836" FM_TALK_DATA_TAG="FM_TALK_DATA_BATTLE_I007_028" CHARA_TAG="CHARA_ION" MOTION_TAG="MOTION_EV_ACT_1" VOICE_NO="29844" MESSAGE="이건 특이한 RＮＡ네. &lt;CR&gt;육체를 반입자화라니…… 잠깐, 좀 무섭지 않아？"/>
-	<fm_talk_data No.="837" FM_TALK_DATA_TAG="FM_TALK_DATA_BATTLE_I007_029" CHARA_TAG="CHARA_ION" MOTION_TAG="MOTION_EV_ACT_1" VOICE_NO="29845" MESSAGE="언뜻 보기엔 아무런 특징도 없는 RＮＡ 같지만…… &lt;CR&gt;이런 곳에 있는 거라면 분명 대단할 거야."/>
+	<fm_talk_data No.="836" FM_TALK_DATA_TAG="FM_TALK_DATA_BATTLE_I007_028" CHARA_TAG="CHARA_ION" MOTION_TAG="MOTION_EV_ACT_1" VOICE_NO="29844" MESSAGE="이건 특이한 ＲＮＡ네. &lt;CR&gt;육체를 반입자화라니…… 잠깐, 좀 무섭지 않아？"/>
+	<fm_talk_data No.="837" FM_TALK_DATA_TAG="FM_TALK_DATA_BATTLE_I007_029" CHARA_TAG="CHARA_ION" MOTION_TAG="MOTION_EV_ACT_1" VOICE_NO="29845" MESSAGE="언뜻 보기엔 아무런 특징도 없는 ＲＮＡ 같지만…… &lt;CR&gt;이런 곳에 있는 거라면 분명 대단할 거야."/>
 	<fm_talk_data No.="838" FM_TALK_DATA_TAG="FM_TALK_DATA_BATTLE_I007_030" CHARA_TAG="CHARA_ION" MOTION_TAG="MOTION_EV_ACT_1" VOICE_NO="29846" MESSAGE="우와아…… 안에 작은 빛의 소용돌이가…… &lt;CR&gt;퀘이사 같은 TxBIOS네. 예쁘다！"/>
 	<fm_talk_data No.="839" FM_TALK_DATA_TAG="FM_TALK_DATA_BATTLE_I007_031" CHARA_TAG="CHARA_ION" MOTION_TAG="MOTION_EV_ACT_1" VOICE_NO="29847" MESSAGE="이건… 엄청나게 복잡한 TxBIOS……. &lt;CR&gt;이걸 장착하면 뭐든 다 할 수 있을 것 같아."/>
 	<fm_talk_data No.="840" FM_TALK_DATA_TAG="FM_TALK_DATA_PHASE01_DELTA_AREA02_00" CHARA_TAG="CHARA_DELTA" VOICE_NO="30300" MESSAGE="자, 그럼 힘내 볼까."/>
