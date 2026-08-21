@@ -871,12 +871,12 @@
 	<Bonus Name="자연의 보석 상자" BonusEntry1="BonusEntry_Event_Flag_Add" Entry1Prm1="EVENT_FLAG_RECIPE_TATTOLIA_05" Entry1Prm2="1"/>
 	<Bonus Name="뉴로에서 파지" BonusEntry1="BonusEntry_Event_Flag_Add" Entry1Prm1="EVENT_FLAG_RECIPE_TATTOLIA_06" Entry1Prm2="1"/>
 	<Bonus Name="여러 가지 강력 특효약" BonusEntry1="BonusEntry_Event_Flag_Add" Entry1Prm1="EVENT_FLAG_RECIPE_TATTOLIA_07" Entry1Prm2="1"/>
-	<Bonus Name="페리에를 위해서" BonusEntry1="BonusEntry_Event_Flag_Add" Entry1Prm1="EVENT_FLAG_RECIPE_TATTOLIA_08" Entry1Prm2="1"/>
+	<Bonus Name="펠리에를 위해서" BonusEntry1="BonusEntry_Event_Flag_Add" Entry1Prm1="EVENT_FLAG_RECIPE_TATTOLIA_08" Entry1Prm2="1"/>
 	<Bonus Name="매니아를 위한 일일 영양제" BonusEntry1="BonusEntry_Event_Flag_Add" Entry1Prm1="EVENT_FLAG_RECIPE_TATTOLIA_09" Entry1Prm2="1"/>
 	<Bonus Name="싸우면서 에스테틱" BonusEntry1="BonusEntry_Event_Flag_Add" Entry1Prm1="EVENT_FLAG_RECIPE_TATTOLIA_10" Entry1Prm2="1"/>
-	<Bonus Name="게다가 페리에를 위해" BonusEntry1="BonusEntry_Event_Flag_Add" Entry1Prm1="EVENT_FLAG_RECIPE_TATTOLIA_11" Entry1Prm2="1"/>
+	<Bonus Name="게다가 펠리에를 위해" BonusEntry1="BonusEntry_Event_Flag_Add" Entry1Prm1="EVENT_FLAG_RECIPE_TATTOLIA_11" Entry1Prm2="1"/>
 	<Bonus Name="네크로의 세계" BonusEntry1="BonusEntry_Event_Flag_Add" Entry1Prm1="EVENT_FLAG_RECIPE_TATTOLIA_12" Entry1Prm2="1"/>
-	<Bonus Name="친애하는 페리에에게" BonusEntry1="BonusEntry_Event_Flag_Add" Entry1Prm1="EVENT_FLAG_RECIPE_TATTOLIA_13" Entry1Prm2="1"/>
+	<Bonus Name="친애하는 펠리에에게" BonusEntry1="BonusEntry_Event_Flag_Add" Entry1Prm1="EVENT_FLAG_RECIPE_TATTOLIA_13" Entry1Prm2="1"/>
 	<Bonus Name="제노메스 강화 지원" BonusEntry1="BonusEntry_Event_Flag_Add" Entry1Prm1="EVENT_FLAG_RECIPE_TATTOLIA_14" Entry1Prm2="1"/>
 	<Bonus Name="덧없는 추억의 추억" BonusEntry1="BonusEntry_Event_Flag_Add" Entry1Prm1="EVENT_FLAG_RECIPE_TATTOLIA_15" Entry1Prm2="1"/>
 	<Bonus Name="리인카네이션" BonusEntry1="BonusEntry_Event_Flag_Add" Entry1Prm1="EVENT_FLAG_RECIPE_TATTOLIA_16" Entry1Prm2="1"/>

@@ -47,7 +47,7 @@
 하는 자를 숙청하는 치안 유지용" PCTNO="0"/>
 	<crystalData NAME="불편의 정당화" TAG="CRYSTAL_DUMMY_23" IMAGE_NO="10" MACRO_ID="0" LEVEL="4" TYPE="0" NAME_TAG="NAME_KANON" CASTY="1" ITEM_EFF_TAG="ITEM_EFF_PERMANENT_STATUS_CAST_SPEED_LV2" TEXT="해악을 배우기 위해 해악에 몸을 담
 그는 것은 무리가 너무 심함" PCTNO="0"/>
-	<crystalData NAME="둘만의 비밀 기지" TAG="CRYSTAL_DUMMY_24" IMAGE_NO="2" MACRO_ID="1" LEVEL="4" TYPE="0" NAME_TAG="NAME_DELTA" DELTA="1" ITEM_EFF_TAG="ITEM_EFF_PROTECT_JAMMING_LV2" TEXT="보대명왕에게 감시받지 않고 공부만
+	<crystalData NAME="둘만의 비밀 기지" TAG="CRYSTAL_DUMMY_24" IMAGE_NO="2" MACRO_ID="1" LEVEL="4" TYPE="0" NAME_TAG="NAME_DELTA" DELTA="1" ITEM_EFF_TAG="ITEM_EFF_PROTECT_JAMMING_LV2" TEXT="보리명왕에게 감시받지 않고 공부만
 하지 않아도 되는 아름다운 휴식처" PCTNO="0"/>
 	<crystalData NAME="포기한 인생" TAG="CRYSTAL_DUMMY_25" IMAGE_NO="5" MACRO_ID="1" LEVEL="4" TYPE="0" NAME_TAG="NAME_CASTY" CASTY="1" ITEM_EFF_TAG="ITEM_EFF_PERMANENT_STATUS_CAST_SPEED_LV2" TEXT="모든 것을 받아들이고 부자유하게 살
 기는 싫지만 죽을 만큼 괴롭지도 않아" PCTNO="0"/>

@@ -242,7 +242,7 @@
 	<Chara Name="ＮＰＣ_C12_3_100" BaseTag="NPC07A" Foot="0" Body="0.7" Face="0.87" Head="1" Size="2,2,2" Color="256,256,256" Extra="0.5,0.8,1" bbScale="3" isShadowDisp="true" High="0" Height="136" Radius="29" CamH="160" CamR="50"/>
 	<Chara Name="샤르 피타고라리아 해금 ＮＰＣ_２" BaseTag="NPC09A" Foot="0" Body="0.7" Face="0.87" Head="1" Size="2,2,2" Color="256,256,256" Extra="0.5,0.8,1" bbScale="3" isShadowDisp="true" High="0" Height="136" Radius="29" CamH="160" CamR="50"/>
 	<Chara Name="폭풍의 소레일" BaseTag="NPC01F" Foot="0" Body="0.72" Face="0.9" Head="1" Size="1,1,1" Color="256,256,256" Extra="1,1,1" bbScale="1.5" isShadowDisp="true" High="0" Height="184" Radius="29" CamH="210" CamR="55"/>
-	<Chara Name="병약한 아이（페리에）" BaseTag="NPC03E" Foot="0" Body="0.72" Face="0.9" Head="1" Size="1,1,1" Color="256,256,256" Extra="1,1,1" bbScale="1.5" isShadowDisp="true" High="0" Height="184" Radius="29" CamH="210" CamR="55"/>
+	<Chara Name="병약한 아이（펠리에）" BaseTag="NPC03E" Foot="0" Body="0.72" Face="0.9" Head="1" Size="1,1,1" Color="256,256,256" Extra="1,1,1" bbScale="1.5" isShadowDisp="true" High="0" Height="184" Radius="29" CamH="210" CamR="55"/>
 	<Chara Name="손웨" BaseTag="NPC10F" Foot="0" Body="0.78" Face="0.92" Head="1" Size="1,1,1" Color="256,256,256" Extra="1,1,1" bbScale="1.5" isShadowDisp="true" High="0" Height="160" Radius="28" CamH="185" CamR="45"/>
 	<Chara Name="로리아" BaseTag="NPC00A" Foot="0" Body="0.72" Face="0.9" Head="1" Size="1,1,1" Color="256,256,256" Extra="1,1,1" bbScale="1.5" isShadowDisp="true" High="0" Height="184" Radius="29" CamH="210" CamR="55"/>
 	<Chara Name="페이론" BaseTag="NPC00A" Foot="0" Body="0.72" Face="0.9" Head="1" Size="1,1,1" Color="256,256,256" Extra="1,1,1" bbScale="1.5" isShadowDisp="true" High="0" Height="184" Radius="29" CamH="210" CamR="55"/>

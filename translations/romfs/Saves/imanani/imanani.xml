@@ -57,7 +57,7 @@
 	<imanani nameTag="NAME_ION" bAvatar="1" evStart="EVENT_C12_2_050" evEnd="EVENT_C12_2_060" text="천령 사라에는 인간이 많이 있다는 정보를 듣고, 그곳으로 향하기로 했다. 호노카 역에서 철도를 타자."/>
 	<imanani nameTag="NAME_ION" bAvatar="1" evStart="EVENT_C12_2_060" evEnd="EVENT_C12_2_140" text="『푸른 바다의 언덕』에서 천령 엽전을 떨어뜨렸다는 샤르가 있었다. 찾으러 가 주는 편이 좋을까……？"/>
 	<imanani nameTag="NAME_ION" bAvatar="1" evStart="EVENT_C12_2_140" evEnd="EVENT_C12_2_230" text="이온의 행방을 찾기 위해, 천령 사라를 산책한다. 여러 사람에게 말을 걸어 단서를 잡자."/>
-	<imanani nameTag="NAME_ION" bAvatar="1" evStart="EVENT_C12_2_230" evEnd="EVENT_C12_3_040" text="보대명왕이라는, 카논으로 보이는 인물의 소문을 알아내는 데 성공했다. 다양한 단서를 바탕으로 카논을 찾자."/>
+	<imanani nameTag="NAME_ION" bAvatar="1" evStart="EVENT_C12_2_230" evEnd="EVENT_C12_3_040" text="보리명왕이라는, 카논으로 보이는 인물의 소문을 알아내는 데 성공했다. 다양한 단서를 바탕으로 카논을 찾자."/>
 	<imanani nameTag="NAME_ION" bAvatar="1" evStart="EVENT_C12_3_040" evEnd="EVENT_C12_3_090" text="카논과 의견이 맞지 않아 싸움이 되고 말았다. 더 이상 싸우고 싶지 않으니, 천령 사라로 도망쳐 몸을 숨기기로 하자."/>
 	<imanani nameTag="NAME_ION" bAvatar="1" evStart="EVENT_C12_3_090" evEnd="EVENT_C12_3_140" text="운 좋게 타트리아와 만나 도움을 받게 되었다. 타트리아와
 함께 호노카 마을로 가자."/>

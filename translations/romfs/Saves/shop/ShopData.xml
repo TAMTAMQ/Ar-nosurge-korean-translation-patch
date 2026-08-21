@@ -145,7 +145,7 @@
 	<ShopData ShopName="약사암 『쿠린텐』" ShopTag="SHOP_TATTORIA" itemName="ＨＵＧ해줘 허니！" ItemTag="ITEM_T_044" Flag="0" Cost="2120" EvStart="EVENT_IM32_440"/>
 	<ShopData ShopName="약사암 『쿠린텐』" ShopTag="SHOP_TATTORIA" itemName="페리온의 화관" ItemTag="ITEM_T_028" Flag="0" Cost="3160" EvStart="EVENT_ZZ01_020" secretFlag="1"/>
 	<ShopData ShopName="약사암 『쿠린텐』" ShopTag="SHOP_TATTORIA" itemName="시냅스 풀 씨앗" ItemTag="ITEM_T_037" Flag="0" Cost="4160" EvStart="EVENT_ZZ01_020" secretFlag="1"/>
-	<ShopData ShopName="약사암 『쿠린텐』" ShopTag="SHOP_TATTORIA" itemName="페리에의 비약" ItemTag="ITEM_T_042" Flag="0" Cost="7760" EvStart="EVENT_IM32_420"/>
+	<ShopData ShopName="약사암 『쿠린텐』" ShopTag="SHOP_TATTORIA" itemName="펠리에의 비약" ItemTag="ITEM_T_042" Flag="0" Cost="7760" EvStart="EVENT_IM32_420"/>
 	<ShopData ShopName="약사암 『쿠린텐』" ShopTag="SHOP_TATTORIA" itemName="암네시아의 눈" ItemTag="ITEM_T_047" Flag="0" Cost="7500" EvStart="EVENT_ZZ01_020" secretFlag="1"/>
 	<ShopData ShopName="약사암 『쿠린텐』" ShopTag="SHOP_TATTORIA" itemName="앰버 인 프리즌" ItemTag="ITEM_T_045" Flag="0" Cost="2780" EvStart="EVENT_IM32_450"/>
 	<ShopData ShopName="약사암 『쿠린텐』" ShopTag="SHOP_TATTORIA" itemName="자크텐 사인" ItemTag="ITEM_T_032" Flag="0" Cost="3100" EvStart="EVENT_ZZ01_020" secretFlag="1"/>
@@ -213,5 +213,5 @@
 	<ShopData ShopName="쿠르트 잡화점" ShopTag="SHOP_GENERIC_06" itemName="금후추" ItemTag="ITEM_A_012" Flag="0" Cost="300"/>
 	<ShopData ShopName="쿠르트 잡화점" ShopTag="SHOP_GENERIC_06" itemName="페나 뉴로키" ItemTag="ITEM_A_015" Flag="0" Cost="600"/>
 	<ShopData ShopName="예비점" ShopTag="SHOP_GENERIC_07" itemName="시냅스 풀 씨앗" ItemTag="ITEM_T_037" Flag="0" Cost="67"/>
-	<ShopData ShopName="예비점" ShopTag="SHOP_GENERIC_07" itemName="페리에의 비약" ItemTag="ITEM_T_042" Flag="0" Cost="68"/>
+	<ShopData ShopName="예비점" ShopTag="SHOP_GENERIC_07" itemName="펠리에의 비약" ItemTag="ITEM_T_042" Flag="0" Cost="68"/>
 </Root>

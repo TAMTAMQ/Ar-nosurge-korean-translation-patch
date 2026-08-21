@@ -175,7 +175,7 @@
 	<Achievement Name="이온 Ｌ Ｌｖ１＿１９" cntAvatar="1" startEv="EVENT_MS21_050" WorkCond="ACHIEVEMENT_WORK_COND_EV_TAG_KIND" Prm1="EVENT_ZZ01_010"/>
 	<Achievement Name="이온 Ｌ Ｌｖ１＿２０" cntAvatar="1" startEv="EVENT_MS21_050" WorkCond="ACHIEVEMENT_WORK_COND_EV_TAG_KIND" Prm1="EVENT_ZZ01_010"/>
 	<Achievement Name="LV2-1 서민적이고 마음 편한 장소" cntAvatar="1" startEv="EVENT_MS21_050" map="FIELDMAP_TOWN02_05" WorkCond="ACHIEVEMENT_WORK_COND_FLD_ENTER"/>
-	<Achievement Name="LV2-2 페리에의 병에 대하여" cntAvatar="1" startEv="EVENT_MS21_050" WorkCond="ACHIEVEMENT_WORK_COND_EV_TAG_KIND" Prm1="EVENT_MS13_100"/>
+	<Achievement Name="LV2-2 펠리에의 병에 대하여" cntAvatar="1" startEv="EVENT_MS21_050" WorkCond="ACHIEVEMENT_WORK_COND_EV_TAG_KIND" Prm1="EVENT_MS13_100"/>
 	<Achievement Name="LV2-3 곤란한 고집" cntAvatar="1" startEv="EVENT_MS21_050" WorkCond="ACHIEVEMENT_WORK_COND_EV_TAG_KIND" Prm1="EVENT_IM32_220"/>
 	<Achievement Name="LV2-4 누구나 생각하는 것" cntAvatar="1" startEv="EVENT_MS21_050" map="FIELDMAP_TOWN02_01" WorkCond="ACHIEVEMENT_WORK_COND_FLD_ENTER"/>
 	<Achievement Name="LV2-5 떠올리는 것만으로도 떨려" cntAvatar="1" startEv="EVENT_MS21_050" WorkCond="ACHIEVEMENT_WORK_COND_EV_TAG_KIND" Prm1="EVENT_IM32_170"/>
@@ -505,7 +505,7 @@
 	<Achievement Name="LV6-3（델타） 아쉬웠어" cntDelta="1" startEv="EVENT_XX01_100" map="FIELDMAP_AREA12_03" WorkCond="ACHIEVEMENT_WORK_COND_FLD_ENTER"/>
 	<Achievement Name="LV6-4（아셰스） 알려줘" cntAvatar="1" startEv="EVENT_XX01_110" WorkCond="ACHIEVEMENT_WORK_COND_EV_TAG_KIND" Prm1="EVENT_SWC07_100"/>
 	<Achievement Name="LV6-5（아셰스） 살아있길 잘했어" cntAvatar="1" startEv="EVENT_XX01_110" WorkCond="ACHIEVEMENT_WORK_COND_EV_TAG_KIND" Prm1="EVENT_C32_2_150"/>
-	<Achievement Name="LV6-6（아셰스） 아르시엘 사람인가요？" cntAvatar="1" startEv="EVENT_XX01_110" map="FIELDMAP_TOWN05_03" WorkCond="ACHIEVEMENT_WORK_COND_FLD_ENTER"/>
+	<Achievement Name="LV6-6（아셰스） 아셰스 사람인가요？" cntAvatar="1" startEv="EVENT_XX01_110" map="FIELDMAP_TOWN05_03" WorkCond="ACHIEVEMENT_WORK_COND_FLD_ENTER"/>
 	<Achievement Name="LV6-7（아셰스） 어른이니까 적당히 즐기는 정도로" cntAvatar="1" startEv="EVENT_XX01_110" map="FIELDMAP_AREA11_05" WorkCond="ACHIEVEMENT_WORK_COND_FLD_ENTER"/>
 	<Achievement Name="살리 Ｌｖ６＿０８" startEv="EVENT_XX01_100" WorkCond="ACHIEVEMENT_WORK_COND_EV_TAG_KIND" Prm1="EVENT_ZZ01_020"/>
 	<Achievement Name="살리 Ｌｖ６＿０９" startEv="EVENT_XX01_100" WorkCond="ACHIEVEMENT_WORK_COND_EV_TAG_KIND" Prm1="EVENT_ZZ01_020"/>
@@ -596,7 +596,7 @@
 	<Achievement Name="LV6-4（델타）" cntDelta="1" startEv="EVENT_XX01_120" WorkCond="ACHIEVEMENT_WORK_COND_ACHIEVEMENT_CLEAR" Prm1="ACHIEVEMENT_MATTER_NERO_LV06_04_1" Prm2="ACHIEVEMENT_MATTER_NERO_LV06_04_2"/>
 	<Achievement Name="LV6-4（델타）" cntDelta="1" startEv="EVENT_XX01_120" WorkCond="ACHIEVEMENT_WORK_COND_EV_TAG_KIND" Prm1="EVENT_C31_5_010"/>
 	<Achievement Name="LV6-4（델타）" cntDelta="1" startEv="EVENT_XX01_120" map="FIELDMAP_AREA11_04" WorkCond="ACHIEVEMENT_WORK_COND_FLD_ENTER"/>
-	<Achievement Name="LV6-5（아셰스） 아르시엘을 알고 있어？" cntAvatar="1" startEv="EVENT_XX01_130" map="FIELDMAP_TOWN05_03" WorkCond="ACHIEVEMENT_WORK_COND_FLD_ENTER"/>
+	<Achievement Name="LV6-5（아셰스） 아셰스를 알고 있어？" cntAvatar="1" startEv="EVENT_XX01_130" map="FIELDMAP_TOWN05_03" WorkCond="ACHIEVEMENT_WORK_COND_FLD_ENTER"/>
 	<Achievement Name="LV6-6（아셰스） 당신 세계의 지도자는？" cntAvatar="1" startEv="EVENT_XX01_130" WorkCond="ACHIEVEMENT_WORK_COND_EV_TAG_KIND" Prm1="EVENT_C32_4_090"/>
 	<Achievement Name="LV6-7（아셰스） 아셰스란……" cntAvatar="1" startEv="EVENT_XX01_130" WorkCond="ACHIEVEMENT_WORK_COND_EV_TAG_KIND" Prm1="EVENT_IM42_110"/>
 	<Achievement Name="네로 Ｌｖ６＿０８" startEv="EVENT_XX01_120" WorkCond="ACHIEVEMENT_WORK_COND_EV_TAG_KIND" Prm1="EVENT_ZZ01_020"/>
@@ -637,7 +637,7 @@
 	<Achievement Name="LV2-3（델타） 신경 안 써！！" cntDelta="1" startEv="EVENT_XX01_140" WorkCond="ACHIEVEMENT_WORK_COND_EV_TAG_KIND" Prm1="EVENT_IM21_170"/>
 	<Achievement Name="LV2-4（아셰스） 코잘에 대하여" cntAvatar="1" startEv="EVENT_XX01_150" WorkCond="ACHIEVEMENT_WORK_COND_EV_TAG_KIND" Prm1="EVENT_MT52_020"/>
 	<Achievement Name="LV2-5（아셰스） 아셰스는 알고 있다・１" cntAvatar="1" startEv="EVENT_XX01_150" WorkCond="ACHIEVEMENT_WORK_COND_EV_TAG_KIND" Prm1="EVENT_IM42_200"/>
-	<Achievement Name="LV2-6（아셰스） 아르시엘의 유행" cntAvatar="1" startEv="EVENT_XX01_150" WorkCond="ACHIEVEMENT_WORK_COND_EV_TAG_KIND" Prm1="EVENT_IM12_450"/>
+	<Achievement Name="LV2-6（아셰스） 아셰스의 유행" cntAvatar="1" startEv="EVENT_XX01_150" WorkCond="ACHIEVEMENT_WORK_COND_EV_TAG_KIND" Prm1="EVENT_IM12_450"/>
 	<Achievement Name="LV2-7（아셰스） 길을 잃지는 않아？" cntAvatar="1" startEv="EVENT_XX01_150" map="FIELDMAP_AREA12_01" WorkCond="ACHIEVEMENT_WORK_COND_FLD_ENTER"/>
 	<Achievement Name="슈레리아Ｌ ｖ２＿０８" startEv="EVENT_XX01_140" WorkCond="ACHIEVEMENT_WORK_COND_EV_TAG_KIND" Prm1="EVENT_ZZ01_020"/>
 	<Achievement Name="슈레리아Ｌ ｖ２＿０９" startEv="EVENT_XX01_140" WorkCond="ACHIEVEMENT_WORK_COND_EV_TAG_KIND" Prm1="EVENT_ZZ01_020"/>
@@ -681,7 +681,7 @@
 	<Achievement Name="LV5-3（델타） 아주 맛있는 것도 있어" cntDelta="1" startEv="EVENT_XX01_140" WorkCond="ACHIEVEMENT_WORK_COND_EV_TAG_KIND" Prm1="EVENT_IM11_030"/>
 	<Achievement Name="LV5-4（델타） 전투 중에 벗습니까？" cntDelta="1" startEv="EVENT_XX01_140" WorkCond="ACHIEVEMENT_WORK_COND_EV_TAG_KIND" Prm1="EVENT_MT55_050"/>
 	<Achievement Name="LV5-5（아셰스） 자세한 내용은 델타에게" cntAvatar="1" startEv="EVENT_XX01_150" WorkCond="ACHIEVEMENT_WORK_COND_EV_TAG_KIND" Prm1="EVENT_MT16_060"/>
-	<Achievement Name="LV5-6（아셰스） 아르시엘 사람도 깜짝" cntAvatar="1" startEv="EVENT_XX01_150" WorkCond="ACHIEVEMENT_WORK_COND_ITEM_HAVE" Prm1="ITEM_T_042"/>
+	<Achievement Name="LV5-6（아셰스） 아셰스 사람도 깜짝" cntAvatar="1" startEv="EVENT_XX01_150" WorkCond="ACHIEVEMENT_WORK_COND_ITEM_HAVE" Prm1="ITEM_T_042"/>
 	<Achievement Name="LV5-7（아셰스） 이쪽에서도 미아・１" cntAvatar="1" startEv="EVENT_XX01_150" map="FIELDMAP_AREA10_01" WorkCond="ACHIEVEMENT_WORK_COND_FLD_ENTER"/>
 	<Achievement Name="슈레리아Ｌｖ５＿０８" startEv="EVENT_XX01_140" WorkCond="ACHIEVEMENT_WORK_COND_EV_TAG_KIND" Prm1="EVENT_ZZ01_020"/>
 	<Achievement Name="슈레리아Ｌｖ５＿０９" startEv="EVENT_XX01_140" WorkCond="ACHIEVEMENT_WORK_COND_EV_TAG_KIND" Prm1="EVENT_ZZ01_020"/>
@@ -1933,7 +1933,7 @@
 	<Achievement Name="ＨＵＧ해줘 허니！" cntAvatar="1" cntDelta="1" Bonus="BONUS_RECIPE_TATTOLIA_14" WorkCond="ACHIEVEMENT_WORK_COND_SHOP_MIX_ITEM" Prm1="SHOP_TATTORIA" Prm2="ITEM_T_044"/>
 	<Achievement Name="페리온의 화관" cntAvatar="1" cntDelta="1" Bonus="BONUS_RECIPE_TATTOLIA_08" WorkCond="ACHIEVEMENT_WORK_COND_SHOP_MIX_ITEM" Prm1="SHOP_TATTORIA" Prm2="ITEM_T_028"/>
 	<Achievement Name="시냅스 풀 씨앗" cntAvatar="1" cntDelta="1" Bonus="BONUS_RECIPE_TATTOLIA_11" WorkCond="ACHIEVEMENT_WORK_COND_SHOP_MIX_ITEM" Prm1="SHOP_TATTORIA" Prm2="ITEM_T_037"/>
-	<Achievement Name="페리에의 비약" cntAvatar="1" cntDelta="1" Bonus="BONUS_RECIPE_TATTOLIA_13" WorkCond="ACHIEVEMENT_WORK_COND_SHOP_MIX_ITEM" Prm1="SHOP_TATTORIA" Prm2="ITEM_T_042"/>
+	<Achievement Name="펠리에의 비약" cntAvatar="1" cntDelta="1" Bonus="BONUS_RECIPE_TATTOLIA_13" WorkCond="ACHIEVEMENT_WORK_COND_SHOP_MIX_ITEM" Prm1="SHOP_TATTORIA" Prm2="ITEM_T_042"/>
 	<Achievement Name="암네시아의 눈" cntAvatar="1" cntDelta="1" Bonus="BONUS_RECIPE_TATTOLIA_15" WorkCond="ACHIEVEMENT_WORK_COND_SHOP_MIX_ITEM" Prm1="SHOP_TATTORIA" Prm2="ITEM_T_047"/>
 	<Achievement Name="앰버 인 프리즌" cntAvatar="1" cntDelta="1" Bonus="BONUS_RECIPE_TATTOLIA_14" WorkCond="ACHIEVEMENT_WORK_COND_SHOP_MIX_ITEM" Prm1="SHOP_TATTORIA" Prm2="ITEM_T_045"/>
 	<Achievement Name="자크텐 사인" cntAvatar="1" cntDelta="1" Bonus="BONUS_RECIPE_TATTOLIA_09" WorkCond="ACHIEVEMENT_WORK_COND_SHOP_MIX_ITEM" Prm1="SHOP_TATTORIA" Prm2="ITEM_T_032"/>
@@ -2062,7 +2062,7 @@
 	<Achievement Name="대주교 연설해！" cntAvatar="1" cntDelta="1" WorkCond="ACHIEVEMENT_WORK_COND_EV_TAG_KIND" Prm1="EVENT_C11_1_270"/>
 	<Achievement Name="대주교 세례받아？" cntAvatar="1" cntDelta="1" WorkCond="ACHIEVEMENT_WORK_COND_EV_TAG_KIND" Prm1="EVENT_C11_1_280"/>
 	<Achievement Name="꿈과 같은 심처" cntAvatar="1" cntDelta="1" Bonus="BONUS_FIELDTALK_BATTLE_ADD" WorkCond="ACHIEVEMENT_WORK_COND_EV_TAG_KIND" Prm1="EVENT_C11_1_290"/>
-	<Achievement Name="살리・프랭크" cntAvatar="1" cntDelta="1" WorkCond="ACHIEVEMENT_WORK_COND_EV_TAG_KIND" Prm1="EVENT_C11_1_300"/>
+	<Achievement Name="살리・플랭크" cntAvatar="1" cntDelta="1" WorkCond="ACHIEVEMENT_WORK_COND_EV_TAG_KIND" Prm1="EVENT_C11_1_300"/>
 	<Achievement Name="↓ 퀀타브" cntAvatar="1" cntDelta="1" WorkCond="ACHIEVEMENT_WORK_COND_EV_TAG_KIND" Prm1="EVENT_C11_1_310"/>
 	<Achievement Name="↓ 퀀타브" cntAvatar="1" cntDelta="1" WorkCond="ACHIEVEMENT_WORK_COND_EV_TAG_KIND" Prm1="EVENT_C11_1_320"/>
 	<Achievement Name="이제 참을 수 없어！！" cntAvatar="1" cntDelta="1" WorkCond="ACHIEVEMENT_WORK_COND_EV_TAG_KIND" Prm1="EVENT_C11_1_330"/>
@@ -2536,7 +2536,7 @@
 	<Achievement Name="LV6-3（델타） 아쉬웠어" cntDelta="1" Bonus="BONUS_SARLY_MISOGI_TALK_COUNT_DELTA" WorkCond="ACHIEVEMENT_WORK_COND_MATTER_KIND" Prm1="TALK_MATTER_SARLY_LV06_03"/>
 	<Achievement Name="LV6-4（아셰스） 알려줘" cntAvatar="1" Bonus="BONUS_SARLY_MISOGI_TALK_COUNT_AVATAR" WorkCond="ACHIEVEMENT_WORK_COND_MATTER_KIND" Prm1="TALK_MATTER_SARLY_LV06_04"/>
 	<Achievement Name="LV6-5（아셰스） 살아있길 잘했어" cntAvatar="1" Bonus="BONUS_SARLY_MISOGI_TALK_COUNT_AVATAR" WorkCond="ACHIEVEMENT_WORK_COND_MATTER_KIND" Prm1="TALK_MATTER_SARLY_LV06_05"/>
-	<Achievement Name="LV6-6（아셰스） 아르시엘 사람인가요？" cntAvatar="1" Bonus="BONUS_SARLY_MISOGI_TALK_COUNT_AVATAR" WorkCond="ACHIEVEMENT_WORK_COND_MATTER_KIND" Prm1="TALK_MATTER_SARLY_LV06_06"/>
+	<Achievement Name="LV6-6（아셰스） 아셰스 사람인가요？" cntAvatar="1" Bonus="BONUS_SARLY_MISOGI_TALK_COUNT_AVATAR" WorkCond="ACHIEVEMENT_WORK_COND_MATTER_KIND" Prm1="TALK_MATTER_SARLY_LV06_06"/>
 	<Achievement Name="LV6-7（아셰스） 어른이니까 적당히 즐기는 정도로" cntAvatar="1" Bonus="BONUS_SARLY_MISOGI_TALK_COUNT_AVATAR" WorkCond="ACHIEVEMENT_WORK_COND_MATTER_KIND" Prm1="TALK_MATTER_SARLY_LV06_07"/>
 	<Achievement Name="LV7-1（델타） 조용히 하이텐션" cntDelta="1" Bonus="BONUS_SARLY_MISOGI_TALK_COUNT_DELTA" WorkCond="ACHIEVEMENT_WORK_COND_MATTER_KIND" Prm1="TALK_MATTER_SARLY_LV07_01"/>
 	<Achievement Name="LV7-2（델타） 앞으로는？" cntDelta="1" Bonus="BONUS_SARLY_MISOGI_TALK_COUNT_DELTA" WorkCond="ACHIEVEMENT_WORK_COND_MATTER_KIND" Prm1="TALK_MATTER_SARLY_LV07_02"/>
@@ -2584,7 +2584,7 @@
 	<Achievement Name="LV6-2（델타） 사이좋게 지내줘" cntDelta="1" Bonus="BONUS_NERO_MISOGI_TALK_COUNT_DELTA" WorkCond="ACHIEVEMENT_WORK_COND_MATTER_KIND" Prm1="TALK_MATTER_NERO_LV06_02"/>
 	<Achievement Name="LV6-3（델타） 사이즈가 말이야……" cntDelta="1" Bonus="BONUS_NERO_MISOGI_TALK_COUNT_DELTA" WorkCond="ACHIEVEMENT_WORK_COND_MATTER_KIND" Prm1="TALK_MATTER_NERO_LV06_03"/>
 	<Achievement Name="LV6-4（델타）" cntDelta="1" Bonus="BONUS_NERO_MISOGI_TALK_COUNT_DELTA" WorkCond="ACHIEVEMENT_WORK_COND_MATTER_KIND" Prm1="TALK_MATTER_NERO_LV06_04"/>
-	<Achievement Name="LV6-5（아셰스） 아르시엘을 알고 있어？" cntAvatar="1" Bonus="BONUS_NERO_MISOGI_TALK_COUNT_AVATAR" WorkCond="ACHIEVEMENT_WORK_COND_MATTER_KIND" Prm1="TALK_MATTER_NERO_LV06_05"/>
+	<Achievement Name="LV6-5（아셰스） 아셰스를 알고 있어？" cntAvatar="1" Bonus="BONUS_NERO_MISOGI_TALK_COUNT_AVATAR" WorkCond="ACHIEVEMENT_WORK_COND_MATTER_KIND" Prm1="TALK_MATTER_NERO_LV06_05"/>
 	<Achievement Name="LV6-6（아셰스） 당신 세계의 지도자는？" cntAvatar="1" Bonus="BONUS_NERO_MISOGI_TALK_COUNT_AVATAR" WorkCond="ACHIEVEMENT_WORK_COND_MATTER_KIND" Prm1="TALK_MATTER_NERO_LV06_06"/>
 	<Achievement Name="LV6-7（아셰스） 아셰스란……" cntAvatar="1" Bonus="BONUS_NERO_MISOGI_TALK_COUNT_AVATAR" WorkCond="ACHIEVEMENT_WORK_COND_MATTER_KIND" Prm1="TALK_MATTER_NERO_LV06_07"/>
 	<Achievement Name="LV7-1（델타） 미래의 즐거움" cntDelta="1" Bonus="BONUS_NERO_MISOGI_TALK_COUNT_DELTA" WorkCond="ACHIEVEMENT_WORK_COND_MATTER_KIND" Prm1="TALK_MATTER_NERO_LV07_01"/>
@@ -2606,7 +2606,7 @@
 	<Achievement Name="LV2-3（델타） 신경 안 써！！" cntDelta="1" Bonus="BONUS_SYURERIA_MISOGI_TALK_COUNT_DELTA" WorkCond="ACHIEVEMENT_WORK_COND_MATTER_KIND" Prm1="TALK_MATTER_SYURERIA_LV02_03"/>
 	<Achievement Name="LV2-4（아셰스） 코잘에 대하여" cntAvatar="1" Bonus="BONUS_SYURERIA_MISOGI_TALK_COUNT_AVATAR" WorkCond="ACHIEVEMENT_WORK_COND_MATTER_KIND" Prm1="TALK_MATTER_SYURERIA_LV02_04"/>
 	<Achievement Name="LV2-5（아셰스） 아셰스는 알고 있다・１" cntAvatar="1" Bonus="BONUS_SYURERIA_MISOGI_TALK_COUNT_AVATAR" WorkCond="ACHIEVEMENT_WORK_COND_MATTER_KIND" Prm1="TALK_MATTER_SYURERIA_LV02_05"/>
-	<Achievement Name="LV2-6（아셰스） 아르시엘의 유행" cntAvatar="1" Bonus="BONUS_SYURERIA_MISOGI_TALK_COUNT_AVATAR" WorkCond="ACHIEVEMENT_WORK_COND_MATTER_KIND" Prm1="TALK_MATTER_SYURERIA_LV02_06"/>
+	<Achievement Name="LV2-6（아셰스） 아셰스의 유행" cntAvatar="1" Bonus="BONUS_SYURERIA_MISOGI_TALK_COUNT_AVATAR" WorkCond="ACHIEVEMENT_WORK_COND_MATTER_KIND" Prm1="TALK_MATTER_SYURERIA_LV02_06"/>
 	<Achievement Name="LV2-7（아셰스） 길을 잃지는 않아？" cntAvatar="1" Bonus="BONUS_SYURERIA_MISOGI_TALK_COUNT_AVATAR" WorkCond="ACHIEVEMENT_WORK_COND_MATTER_KIND" Prm1="TALK_MATTER_SYURERIA_LV02_07"/>
 	<Achievement Name="LV3-1（델타） 안내해줬으면 해" cntDelta="1" Bonus="BONUS_SYURERIA_MISOGI_TALK_COUNT_DELTA" WorkCond="ACHIEVEMENT_WORK_COND_MATTER_KIND" Prm1="TALK_MATTER_SYURERIA_LV03_01"/>
 	<Achievement Name="LV3-2（델타） 누가 봐도 길을 잃었다" cntDelta="1" Bonus="BONUS_SYURERIA_MISOGI_TALK_COUNT_DELTA" WorkCond="ACHIEVEMENT_WORK_COND_MATTER_KIND" Prm1="TALK_MATTER_SYURERIA_LV03_02"/>
@@ -2627,7 +2627,7 @@
 	<Achievement Name="LV5-3（델타） 아주 맛있는 것도 있어" cntDelta="1" Bonus="BONUS_SYURERIA_MISOGI_TALK_COUNT_DELTA" WorkCond="ACHIEVEMENT_WORK_COND_MATTER_KIND" Prm1="TALK_MATTER_SYURERIA_LV05_03"/>
 	<Achievement Name="LV5-4（델타） 전투 중에 벗습니까？" cntDelta="1" Bonus="BONUS_SYURERIA_MISOGI_TALK_COUNT_DELTA" WorkCond="ACHIEVEMENT_WORK_COND_MATTER_KIND" Prm1="TALK_MATTER_SYURERIA_LV05_04"/>
 	<Achievement Name="LV5-5（아셰스） 자세한 내용은 델타에게" cntAvatar="1" Bonus="BONUS_SYURERIA_MISOGI_TALK_COUNT_AVATAR" WorkCond="ACHIEVEMENT_WORK_COND_MATTER_KIND" Prm1="TALK_MATTER_SYURERIA_LV05_05"/>
-	<Achievement Name="LV5-6（아셰스） 아르시엘 사람도 깜짝" cntAvatar="1" Bonus="BONUS_SYURERIA_MISOGI_TALK_COUNT_AVATAR" WorkCond="ACHIEVEMENT_WORK_COND_MATTER_KIND" Prm1="TALK_MATTER_SYURERIA_LV05_06"/>
+	<Achievement Name="LV5-6（아셰스） 아셰스 사람도 깜짝" cntAvatar="1" Bonus="BONUS_SYURERIA_MISOGI_TALK_COUNT_AVATAR" WorkCond="ACHIEVEMENT_WORK_COND_MATTER_KIND" Prm1="TALK_MATTER_SYURERIA_LV05_06"/>
 	<Achievement Name="LV5-7（아셰스） 이쪽에서도 미아・１" cntAvatar="1" Bonus="BONUS_SYURERIA_MISOGI_TALK_COUNT_AVATAR" WorkCond="ACHIEVEMENT_WORK_COND_MATTER_KIND" Prm1="TALK_MATTER_SYURERIA_LV05_07"/>
 	<Achievement Name="LV6-1（델타） 이쪽에서도 미아・２" cntDelta="1" Bonus="BONUS_SYURERIA_MISOGI_TALK_COUNT_DELTA" WorkCond="ACHIEVEMENT_WORK_COND_MATTER_KIND" Prm1="TALK_MATTER_SYURERIA_LV06_01"/>
 	<Achievement Name="LV6-2（델타） 모두의 동경, 옥좌！" cntDelta="1" Bonus="BONUS_SYURERIA_MISOGI_TALK_COUNT_DELTA" WorkCond="ACHIEVEMENT_WORK_COND_MATTER_KIND" Prm1="TALK_MATTER_SYURERIA_LV06_02"/>

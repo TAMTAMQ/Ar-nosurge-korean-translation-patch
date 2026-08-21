@@ -62,12 +62,12 @@
 	<item_book BookName="자연의 보석 상자" BookTag="RECIPE_TATTOLIA_05" ItemTag="ITEM_RECIPE_ITEM_T_019" ItemTag2="ITEM_RECIPE_ITEM_T_020" ItemTag3="ITEM_RECIPE_ITEM_T_021"/>
 	<item_book BookName="뉴로에서 파지" BookTag="RECIPE_TATTOLIA_06" ItemTag="ITEM_RECIPE_ITEM_T_022" ItemTag2="ITEM_RECIPE_ITEM_T_023" ItemTag3="ITEM_RECIPE_ITEM_T_024"/>
 	<item_book BookName="여러 가지 강력 특효약" BookTag="RECIPE_TATTOLIA_07" ItemTag="ITEM_RECIPE_ITEM_T_025" ItemTag2="ITEM_RECIPE_ITEM_T_026" ItemTag3="ITEM_RECIPE_ITEM_T_027"/>
-	<item_book BookName="페리에를 위해서" BookTag="RECIPE_TATTOLIA_08" ItemTag="ITEM_RECIPE_ITEM_T_028" ItemTag2="ITEM_RECIPE_ITEM_T_029"/>
+	<item_book BookName="펠리에를 위해서" BookTag="RECIPE_TATTOLIA_08" ItemTag="ITEM_RECIPE_ITEM_T_028" ItemTag2="ITEM_RECIPE_ITEM_T_029"/>
 	<item_book BookName="매니아를 위한 일일 영양제" BookTag="RECIPE_TATTOLIA_09" ItemTag="ITEM_RECIPE_ITEM_T_030" ItemTag2="ITEM_RECIPE_ITEM_T_031" ItemTag3="ITEM_RECIPE_ITEM_T_032" ItemTag4="ITEM_RECIPE_ITEM_T_033"/>
 	<item_book BookName="싸우면서 에스테틱" BookTag="RECIPE_TATTOLIA_10" ItemTag="ITEM_RECIPE_ITEM_T_034" ItemTag2="ITEM_RECIPE_ITEM_T_035" ItemTag3="ITEM_RECIPE_ITEM_T_036"/>
-	<item_book BookName="게다가 페리에를 위해" BookTag="RECIPE_TATTOLIA_11" ItemTag="ITEM_RECIPE_ITEM_T_037" ItemTag2="ITEM_RECIPE_ITEM_T_038"/>
+	<item_book BookName="게다가 펠리에를 위해" BookTag="RECIPE_TATTOLIA_11" ItemTag="ITEM_RECIPE_ITEM_T_037" ItemTag2="ITEM_RECIPE_ITEM_T_038"/>
 	<item_book BookName="네크로의 세계" BookTag="RECIPE_TATTOLIA_12" ItemTag="ITEM_RECIPE_ITEM_T_039" ItemTag2="ITEM_RECIPE_ITEM_T_040" ItemTag3="ITEM_RECIPE_ITEM_T_041"/>
-	<item_book BookName="친애하는 페리에에게" BookTag="RECIPE_TATTOLIA_13" ItemTag="ITEM_RECIPE_ITEM_T_042" ItemTag2="ITEM_RECIPE_ITEM_T_043"/>
+	<item_book BookName="친애하는 펠리에에게" BookTag="RECIPE_TATTOLIA_13" ItemTag="ITEM_RECIPE_ITEM_T_042" ItemTag2="ITEM_RECIPE_ITEM_T_043"/>
 	<item_book BookName="제노메스 강화 지원" BookTag="RECIPE_TATTOLIA_14" ItemTag="ITEM_RECIPE_ITEM_T_044" ItemTag2="ITEM_RECIPE_ITEM_T_045"/>
 	<item_book BookName="덧없는 추억의 추억" BookTag="RECIPE_TATTOLIA_15" ItemTag="ITEM_RECIPE_ITEM_T_047"/>
 	<item_book BookName="리인카네이션" BookTag="RECIPE_TATTOLIA_16" ItemTag="ITEM_RECIPE_ITEM_T_048"/>
