@@ -1325,7 +1325,7 @@
 1313,0x006726E9,0x0021D6E9,21,text,ジェノミリンク,제노미 링크,needs_review,
 1314,0x006726FF,0x0021D6FF,21,text,タイトルに戻る,타이틀로복귀,needs_review,compacted:word_abbreviation
 1315,0x006728BA,0x0021D8BA,21,text,アイテムの選択,아이템 선택,needs_review,
-1316,0x00672918,0x0021D918,18,text,タブ切り替え,～캐소드～,needs_review,
+1316,0x00672918,0x0021D918,18,text,タブ切り替え,분류 전환,needs_review,
 1317,0x00675BE9,0x00220BE9,18,text,～カソード～,페이지 전환,needs_review,
 1318,0x00675BFC,0x00220BFC,21,text,ページ切り替え,페이지 전환,needs_review,
 1319,0x00675C1F,0x00220C1F,14,text,～%sのRNA～,%s의 RNA,needs_review,
