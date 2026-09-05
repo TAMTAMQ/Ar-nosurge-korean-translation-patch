@@ -7,9 +7,13 @@ Windows 에서는 그 값이 932 라 문제가 없지만, 한글 Windows 에서�
 변환 과정에서 '?' 로 떨어지거나 엉뚱한 글리프가 되어 글자가 깨진다. 번역
 이전의 일본어 원문에서도 같은 이유로 깨진다.
 
-Windows 11 은 애플리케이션 매니페스트의 activeCodePage 로 프로세스 단위 ANSI
+Windows 는 애플리케이션 매니페스트의 activeCodePage 로 프로세스 단위 ANSI
 코드페이지를 정할 수 있다. 시스템 로케일을 바꾸거나 Locale Emulator 같은 외부
-도구를 쓰지 않아도 이 exe 만 CP932 로 돌게 된다.
+도구를 쓰지 않아도 된다.
+
+값은 932(ja-JP) 가 아니라 UTF-8 이어야 한다. 이 경로가 받는 바이트열이 원래
+UTF-8 이기 때문이다. 932 를 주면 UTF-8 을 CP932 로 읽어 "謗｡蛛ｶ" 같은 한자
+열로 깨진다 - 실제로 확인했다. 949 든 932 든 틀렸고 65001 이 맞다.
 
 매니페스트는 .rsrc 안에 있고 뒤에 정렬 패딩이 남아 있어 섹션을 옮기지 않고
 늘릴 수 있다. 리소스 데이터 엔트리의 크기와 .rsrc 의 VirtualSize 를 함께
@@ -80,8 +84,9 @@ def main():
                                  formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("--exe", required=True, type=pathlib.Path)
     ap.add_argument("--output", required=True, type=pathlib.Path)
-    ap.add_argument("--locale", default="ja-JP",
-                    help="activeCodePage 값. 기본 ja-JP (CP932).")
+    ap.add_argument("--locale", default="UTF-8",
+                    help="activeCodePage 값. 기본 UTF-8 (CP65001). 이 게임의 "
+                         "문자열은 UTF-8 이므로 ja-JP(932) 를 주면 오히려 깨진다.")
     args = ap.parse_args()
 
     data = bytearray(args.exe.read_bytes())
