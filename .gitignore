@@ -8,6 +8,10 @@
 # 직접 번역한 UI 텍스처(약 59MB). 빌드에는 쓰이지만 저장소에는 넣지 않는다.
 /translateImage/
 
+# PC(Steam)판 게임 폴더. 사용자가 정품에서 직접 가져오는 것이고 약 4GB 이다.
+# 저장소에 절대 들어가면 안 된다.
+/Ar.Nosurge.DX_PC/
+
 # 정품 게임에서 사용자가 직접 추출해야 하는 파일
 /original/
 /originalText/
@@ -23,6 +27,10 @@
 # 빌드 산출물이다.
 *.g1t
 *.nso
+*.pak
+*.PAK
+*.exe
+*.dll
 *.xml.e
 *.bsb
 *.ebd
