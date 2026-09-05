@@ -6,6 +6,7 @@ import json
 import xml.etree.ElementTree as ET
 from pathlib import Path
 
+from decode_saves_xml_e import detect_text_encoding
 from text_layout import strip_wrap_boundary_breaks
 
 # Only these subfolders are genuinely plain XML in the game's romfs. Every
@@ -25,6 +26,12 @@ def parse_args():
         default=repo / "translations" / "romfs" / "Saves",
     )
     parser.add_argument("--mapping", type=Path, default=repo / "build" / "final_mod_report.json")
+    parser.add_argument(
+        "--original",
+        type=Path,
+        default=repo / "originalText" / "romfs" / "Saves",
+        help="원본 Saves 폴더. 각 파일을 원본과 같은 인코딩으로 쓰기 위해 참조한다.",
+    )
     parser.add_argument(
         "--output",
         type=Path,
@@ -62,10 +69,19 @@ def main():
         ET.indent(tree, space="\t")
         destination = args.output / source.relative_to(args.input)
         destination.parent.mkdir(parents=True, exist_ok=True)
-        # SysInfo is loaded by a legacy path that treats the byte stream as
-        # Shift-JIS regardless of the XML declaration.  Writing it as UTF-8
-        # turns every three-byte stand-in character into mojibake in HELP.
-        output_encoding = "shift_jis" if source.name.casefold() == "sysinfo.xml" else "utf-8"
+        # 이 파일들은 XML 선언과 무관하게 바이트열을 그대로 해석하는 경로로
+        # 읽힌다. PC 판에서는 그 경로가 CP_ACP 를 쓰므로 원본과 다른 인코딩으로
+        # 쓰면 세 바이트짜리 대체문자가 통째로 깨진다. 스위치에는 ACP 개념이
+        # 없어 드러나지 않았고, 그래서 SysInfo 만 예외 처리되어 있었다.
+        # 파일명으로 예외를 두지 말고 원본과 같은 인코딩을 따라간다.
+        original_path = args.original / relative
+        if original_path.is_file():
+            output_encoding = detect_text_encoding(original_path.read_bytes())
+        else:
+            output_encoding = ("shift_jis"
+                               if source.name.casefold() == "sysinfo.xml" else "utf-8")
+        if output_encoding == "cp932":
+            output_encoding = "shift_jis"
         tree.write(
             destination,
             encoding=output_encoding,

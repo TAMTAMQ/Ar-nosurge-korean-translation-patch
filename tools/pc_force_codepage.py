@@ -11,9 +11,10 @@ Windows 는 애플리케이션 매니페스트의 activeCodePage 로 프로세�
 코드페이지를 정할 수 있다. 시스템 로케일을 바꾸거나 Locale Emulator 같은 외부
 도구를 쓰지 않아도 된다.
 
-값은 932(ja-JP) 가 아니라 UTF-8 이어야 한다. 이 경로가 받는 바이트열이 원래
-UTF-8 이기 때문이다. 932 를 주면 UTF-8 을 CP932 로 읽어 "謗｡蛛ｶ" 같은 한자
-열로 깨진다 - 실제로 확인했다. 949 든 932 든 틀렸고 65001 이 맞다.
+값은 932(ja-JP) 다. 게임 데이터는 일본어 Windows(ACP=932) 를 전제로 만들어졌고
+파일마다 CP932 와 UTF-8 이 섞여 있다. 어느 한쪽으로 통일할 수는 없으므로,
+빌드가 각 파일을 원본과 같은 인코딩으로 쓰고 ACP 를 932 로 두어 원본 환경을
+그대로 재현한다. 65001 을 주면 진짜 CP932 인 파일들이 대신 깨진다.
 
 매니페스트는 .rsrc 안에 있고 뒤에 정렬 패딩이 남아 있어 섹션을 옮기지 않고
 늘릴 수 있다. 리소스 데이터 엔트리의 크기와 .rsrc 의 VirtualSize 를 함께
@@ -84,9 +85,9 @@ def main():
                                  formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("--exe", required=True, type=pathlib.Path)
     ap.add_argument("--output", required=True, type=pathlib.Path)
-    ap.add_argument("--locale", default="UTF-8",
-                    help="activeCodePage 값. 기본 UTF-8 (CP65001). 이 게임의 "
-                         "문자열은 UTF-8 이므로 ja-JP(932) 를 주면 오히려 깨진다.")
+    ap.add_argument("--locale", default="ja-JP",
+                    help="activeCodePage 값. 기본 ja-JP (CP932). 게임 데이터가 "
+                         "전제하는 일본어 Windows 환경과 같은 값이다.")
     args = ap.parse_args()
 
     data = bytearray(args.exe.read_bytes())
