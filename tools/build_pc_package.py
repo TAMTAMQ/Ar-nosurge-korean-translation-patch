@@ -79,14 +79,21 @@ def read_entry(pak, offset, size):
         return handle.read(size)
 
 
-def write_entry(pak, offset, payload, expect_sha):
+def write_entry(pak, offset, payload, expect_magic=None):
+    """PAK 안의 한 항목을 제자리에서 덮어쓴다.
+
+    막고 싶은 사고는 '엉뚱한 오프셋에 쓰는 것'이다. 오프셋은 PAK 인덱스에서
+    받고 크기도 대조하므로, 그 자리에 같은 종류의 파일이 있는지만 확인하면
+    충분하다. 원본 해시와 같기를 요구하면 이미 설치된 게임에 다시 설치할 수
+    없게 되는데, 번역을 고치면 폰트 아틀라스가 바뀌므로 재설치는 정상이다.
+    """
     with open(pak, "r+b") as handle:
         handle.seek(offset)
         current = handle.read(len(payload))
         if len(current) != len(payload):
             sys.exit(f"오류: PAK 끝을 넘어섭니다. offset={offset:#x}")
-        if sha(current) != expect_sha and current != payload:
-            sys.exit(f"오류: {offset:#x} 의 내용이 원본도 교체본도 아닙니다.")
+        if expect_magic and current[:len(expect_magic)] != expect_magic:
+            sys.exit(f"오류: {offset:#x} 에 기대한 형식이 아닙니다. 오프셋을 확인하세요.")
         if current == payload:
             return False
         handle.seek(offset)
@@ -234,8 +241,7 @@ def install(args):
         payload = font.read_bytes()
         if len(payload) != size:
             sys.exit(f"오류: 폰트 크기가 다릅니다 {len(payload)} != {size}. 재포장이 필요합니다.")
-        changed = write_entry(pak, offset, payload,
-                              sha((originals / "mainfont_x64_0.g1t").read_bytes()))
+        changed = write_entry(pak, offset, payload, G1T_MAGIC)
         print(f"  폰트: {'교체' if changed else '이미 동일'}")
 
     ui_dir = romfs / "Data" / "NX" / "ui"
@@ -252,11 +258,7 @@ def install(args):
         payload[PLATFORM_OFFSET] = PC_PLATFORM
         if len(payload) != size:
             sys.exit(f"오류: {source.name} 크기가 다릅니다 {len(payload)} != {size}.")
-        reference = originals / "ui" / source.name.lower()
-        if not reference.is_file():
-            sys.exit(f"오류: 원본 텍스처가 없습니다: {reference}")
-        changed = write_entry(pak, offset, bytes(payload),
-                              sha(reference.read_bytes()))
+        changed = write_entry(pak, offset, bytes(payload), G1T_MAGIC)
         print(f"  UI {source.name}: {'교체' if changed else '이미 동일'}")
 
     print("\n[2/4] PACK01 재포장 (대사 / 선택지 / 이벤트 스크립트)")
