@@ -147,11 +147,22 @@ def choose_maps(hangul, protected, stable_mapping):
     return hangul_to_standin, hangul_to_cell, hangul_to_rect, by_cell
 
 
-# SHA-256 of the untouched MainFont_nx_0.g1t dumped from update 1.0.1. Building
+# SHA-256 of the untouched fonts dumped from each platform's retail data. Building
 # on top of an already patched font leaves stale Hangul from the older mapping
 # in cells the current mapping expects to still hold Japanese, which shows up
 # in game as scrambled syllables in menus, numbers and button prompts.
-VERIFIED_ORIGINAL_SHA256 = "732f2aeb3860c76832dc18ae80de5a775addef561df41e2984d7ca2c64e810b4"
+#
+# Switch and PC ship the same glyph cell layout, so the standin mapping carries
+# over untouched, but their texture blocks are re-encoded and the G1T platform
+# byte at 0x14 differs (0x10 vs 0x0a), so the hashes differ. Both are genuine
+# originals. A hash that is not listed here is treated as already patched and
+# stops the build.
+VERIFIED_ORIGINAL_SHA256 = {
+    "732f2aeb3860c76832dc18ae80de5a775addef561df41e2984d7ca2c64e810b4":
+        "Switch 1.0.1  MainFont_nx_0.g1t",
+    "dd4b0398621bf87c6ab93714a5f6df82891c65b4aaadba8d8d772fea9493badf":
+        "PC (Steam)    mainfont_x64_0.g1t",
+}
 ALREADY_PATCHED_TOLERANCE = 30.0
 
 
@@ -159,12 +170,16 @@ def verify_original_font(hangul_to_rect, allow_unverified=False):
     """Refuse to build on a font that already carries Hangul glyphs."""
     data = ORIGINAL_FONT.read_bytes()
     digest = hashlib.sha256(data).hexdigest()
-    if digest == VERIFIED_ORIGINAL_SHA256:
+    if digest in VERIFIED_ORIGINAL_SHA256:
+        print(f"원본 폰트 확인: {VERIFIED_ORIGINAL_SHA256[digest]}")
         return
+    expected = "".join(f"      기대값: {h}\n"
+                       f"              ({label})\n"
+                       for h, label in VERIFIED_ORIGINAL_SHA256.items())
     message = (f"원본 폰트 해시가 확인된 값과 다릅니다.\n"
                f"      지정한 파일: {ORIGINAL_FONT}\n"
                f"      해시:   {digest}\n"
-               f"      기대값: {VERIFIED_ORIGINAL_SHA256}\n"
+               f"{expected}"
                f"      게임에서 직접 추출한 원본이 아니라 이미 패치된 폰트일 수 있습니다.\n"
                f"      이미 패치된 폰트 위에 다시 빌드하면 예전 배정이 남아 메뉴·숫자·\n"
                f"      버튼 표시가 엉뚱한 한글로 깨집니다. 다른 게임 버전이라 해시가\n"
