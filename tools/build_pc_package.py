@@ -260,19 +260,22 @@ def install(args):
         print(f"  UI {source.name}: {'교체' if changed else '이미 동일'}")
 
     print("\n[2/4] PACK01 재포장 (대사 / 선택지 / 이벤트 스크립트)")
-    manifest = work / "extract" / "PACK01" / "PACK01.json"
-    if not manifest.is_file():
-        extract_pak(args.gust_pak, backup(game / "Data" / "PACK01.PAK", work),
-                    work / "extract" / "PACK01")
+    # 작업 트리는 매번 원본에서 새로 푼다. 한 번 풀어 두고 재사용하면 앞선
+    # 설치에서 덮어쓴 번역본이 남아, 다음에 그 트리를 원본으로 삼는 단계가
+    # 번역본 위에 다시 빌드하게 된다. 실제로 그렇게 오염된 적이 있다.
+    staging = work / "staging" / "PACK01"
+    if staging.exists():
+        shutil.rmtree(staging)
+    manifest = extract_pak(args.gust_pak, backup(game / "Data" / "PACK01.PAK", work), staging)
     overlay(romfs / "Event", manifest.parent / "event", "Event")
     shutil.copyfile(repack_pak(args.gust_pak, manifest), game / "Data" / "PACK01.PAK")
     print(f"  설치: {game / 'Data' / 'PACK01.PAK'}")
 
     print("\n[3/4] PACK02 재포장 (Saves)")
-    manifest = work / "extract" / "PACK02" / "PACK02.json"
-    if not manifest.is_file():
-        extract_pak(args.gust_pak, backup(game / "Data" / "PACK02.PAK", work),
-                    work / "extract" / "PACK02")
+    staging = work / "staging" / "PACK02"
+    if staging.exists():
+        shutil.rmtree(staging)
+    manifest = extract_pak(args.gust_pak, backup(game / "Data" / "PACK02.PAK", work), staging)
     overlay(romfs / "Saves", manifest.parent / "saves", "Saves")
     shutil.copyfile(repack_pak(args.gust_pak, manifest), game / "Data" / "PACK02.PAK")
     print(f"  설치: {game / 'Data' / 'PACK02.PAK'}")
