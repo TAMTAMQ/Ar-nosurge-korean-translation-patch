@@ -1,0 +1,36 @@
+[Script Info]
+Title: Ar nosurge DX Opening Japanese-Korean Subtitles
+ScriptType: v4.00+
+PlayResX: 1920
+PlayResY: 1080
+ScaledBorderAndShadow: yes
+WrapStyle: 0
+YCbCr Matrix: TV.709
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: LyricBottom,Pretendard,36,&H00FFFFFF,&H000000FF,&H00101010,&H00000000,-1,0,0,0,100,100,0,0,1,3.2,1.2,2,95,95,45,1
+Style: LyricTop,Pretendard,36,&H00FFFFFF,&H000000FF,&H00101010,&H00000000,-1,0,0,0,100,100,0,0,1,3.2,1.2,8,95,95,40,1
+Style: BackingBottom,Pretendard,25,&H00FFFFFF,&H000000FF,&H00101010,&H00000000,-1,0,0,0,100,100,0,0,1,2.7,1,2,65,65,185,1
+Style: BackingTop,Pretendard,25,&H00FFFFFF,&H000000FF,&H00101010,&H00000000,-1,0,0,0,100,100,0,0,1,2.7,1,8,65,65,185,1
+Style: ScreenKO,Pretendard,30,&H00B8FFB8,&H000000FF,&H00101010,&H00000000,-1,0,0,0,100,100,0,0,1,3,1,2,100,100,260,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Comment: 0,0:00:00.00,0:00:00.00,LyricBottom,Source,0,0,0,,Timing reference: https://www.youtube.com/watch?v=HzLUf_siFZo
+Comment: 0,0:00:00.00,0:00:00.00,LyricBottom,Source,0,0,0,,Lyrics/gloss reference supplied by user; wording lightly normalized for Korean readability.
+Dialogue: 3,0:00:19.40,0:00:25.20,ScreenKO,Screen,0,0,0,,머나먼 세계에 계신 신은 이 세계에 강림하여 이상향을 창조한다.
+Dialogue: 3,0:00:25.50,0:00:31.30,ScreenKO,Screen,0,0,0,,그 노래는 멸망한 세계에 파괴를 가져오지만, 동시에 축복도 가져온다.
+Dialogue: 3,0:00:32.30,0:00:37.20,ScreenKO,Screen,0,0,0,,그 신의 이름은, EARTHES――
+Dialogue: 2,0:01:06.81,0:01:13.95,LyricBottom,Main,0,0,0,,{\c&H0066D1FF&}捧げるこの想いの波は　ゆらりゆらり漂ひて{\rLyricBottom}\N{\c&H00FFFFFF&}당신에게 바치는 이 마음의 물결은 하늘하늘 떠돌며,
+Dialogue: 2,0:01:13.95,0:01:20.75,LyricBottom,Main,0,0,0,,{\c&H0066D1FF&}届くか　星となるか　空即是色の鳥のよう{\rLyricBottom}\N{\c&H00FFFFFF&}당신에게 닿을까, 별이 될까. 공즉시색의 새처럼.
+Dialogue: 2,0:01:20.75,0:01:27.55,LyricBottom,Main,0,0,0,,{\c&H0066D1FF&}重なり結ひ魂の音は　七つの刻空のエンタングル{\rLyricBottom}\N{\c&H00FFFFFF&}겹쳐 맺어진 영혼의 소리는 일곱 시공의 얽힘.
+Dialogue: 2,0:01:27.55,0:01:34.21,LyricBottom,Main,0,0,0,,{\c&H0066D1FF&}比翼の羽根はためかせ　阿僧祇の地へと奏で遂げる{\rLyricBottom}\N{\c&H00FFFFFF&}비익의 날개를 펄럭이며 아승기의 땅을 향해 끝까지 연주한다.
+Dialogue: 2,0:01:34.58,0:01:41.31,LyricBottom,Main,0,0,0,,{\c&H0066D1FF&}溢れるこの想いの波は　いろはにほへど　いずこへ{\rLyricBottom}\N{\c&H00FFFFFF&}넘치는 이 마음의 물결은 꽃향기 흩날리듯 어디로 가는가.
+Dialogue: 2,0:01:41.48,0:01:47.81,LyricBottom,Main,0,0,0,,{\c&H0066D1FF&}想ひ宇宙の俣繋ぎ　光の庭を駆けゆく　Ah-{\rLyricBottom}\N{\c&H00FFFFFF&}마음의 우주 갈래를 잇고 빛의 정원을 달려간다. Ah-
+Dialogue: 2,0:01:54.48,0:02:01.75,LyricBottom,Main,0,0,0,,{\c&H0066D1FF&}謳えや！　燃やせや！　命捧げや！{\rLyricBottom}\N{\c&H00FFFFFF&}노래하라! 불태워라! 생명을 바쳐라!
+Dialogue: 2,0:02:01.75,0:02:09.21,LyricBottom,Main,0,0,0,,{\c&H0066D1FF&}生々世々の路を　皆灯し紡げ！{\rLyricBottom}\N{\c&H00FFFFFF&}세세생생의 길을 모두 밝혀 이어 가라!
+Dialogue: 2,0:02:09.21,0:02:15.21,LyricBottom,Main,0,0,0,,{\c&H0066D1FF&}唯我の波　愛を永遠に伝ふ{\rLyricBottom}\N{\c&H00FFFFFF&}유일한 나의 물결, 사랑을 영원히 전하리.
+Dialogue: 2,0:02:15.21,0:02:23.01,LyricBottom,Main,0,0,0,,{\c&H0066D1FF&}セカイを越え　花ひらく　詩の奇跡よ{\rLyricBottom}\N{\c&H00FFFFFF&}세계를 넘어 꽃피는 노래의 기적이여.
+Dialogue: 2,0:02:23.01,0:02:29.78,LyricBottom,Main,0,0,0,,{\c&H0066D1FF&}七つの海越えて　御魂求めて{\rLyricBottom}\N{\c&H00FFFFFF&}일곱 바다를 넘어 영혼을 찾아,
+Dialogue: 2,0:02:29.78,0:02:42.31,LyricBottom,Main,0,0,0,,{\c&H0066D1FF&}今宵ふたつの星重なり　ソラに燦めく{\rLyricBottom}\N{\c&H00FFFFFF&}오늘 밤 두 별이 겹쳐 하늘에서 찬란히 빛난다.

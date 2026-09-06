@@ -73,7 +73,8 @@ def main():
         # newline="" preserves the game's literal \r\n line endings -- universal
         # newline translation on read would silently drop the \r and shift
         # every subsequent byte, breaking the game's fixed-format parser.
-        text = source.read_text(encoding="utf-8", newline="")
+        with source.open("r", encoding="utf-8", newline="") as handle:
+            text = handle.read()
         text = normalize_punctuation(text)
         text = substitute_hangul(text, mapping, str(relative))
 

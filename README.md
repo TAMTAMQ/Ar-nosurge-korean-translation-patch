@@ -6,7 +6,7 @@
 >
 > ⚠️ 화자 정보가 원문 텍스트만으로 명확하지 않은 장면은 같은 인물의 존댓말/반말이나 말투가 일관되지 않을 수 있습니다.
 
-Nintendo Switch판 『Ar nosurge: Ode to an Unborn Star DX』(アルノサージュ ～生まれいずる星へ祈る詩～ DX)의 비공식 한국어 번역 패치입니다.
+Nintendo Switch판 및 PC(Steam)판 『Ar nosurge: Ode to an Unborn Star DX』(アルノサージュ ～生まれいずる星へ祈る詩～ DX)의 비공식 한국어 번역 패치입니다.
 
 - 이벤트 대사 파일 2,239개를 번역합니다.
 - 시스템 메시지·메뉴·상점 등 Saves XML 135개를 번역합니다.
@@ -14,22 +14,26 @@ Nintendo Switch판 『Ar nosurge: Ode to an Unborn Star DX』(アルノサージ
 - 대화 선택지 1,790개(`balloonseldata.bsb`)를 번역합니다.
 - 업데이트 1.0.1 `main` 실행 파일에서 추출한 일본어 문자열 6,665개를 번역합니다.
 - 메뉴·시스템 화면의 UI 텍스처 4개(`common`/`mainmenu`/`system`/`window`)를 번역합니다.
+- 바이오스 설명 이미지 22개를 번역합니다.
+- `opening`, `prologue`, `seq02~05`, `tm_felion_D` 동영상에 한국어 자막을 넣습니다.
 - 게임 내장 폰트에 한글 1,427자를 넣어 한국어가 표시되게 했습니다.
-- 원본 NSP/XCI를 수정하지 않고 Atmosphère/Ryujinx의 LayeredFS 모드로 적용합니다.
+- 스위치판은 원본 NSP/XCI를 수정하지 않고 Atmosphère/Ryujinx의 LayeredFS 모드로 적용합니다.
+- PC판은 설치 스크립트가 변경 전 파일을 자동 백업한 뒤 게임 파일을 패치합니다.
 - 폰트 매핑 추출, 번역문 치환, 폰트 생성 과정을 Python 소스로 공개합니다.
 
 ### 알려진 제약
 
 번역 누락이 아니라 패치 성격상 그렇게 둔 부분입니다. 설치 전에 확인해 주세요.
 
-**1. 동영상은 일본어입니다**
+**1. 일부 동영상은 일본어입니다**
 
-오프닝·엔딩 등 동영상 속 자막과 문구는 번역되지 않았습니다.
+`opening`, `prologue`, `seq02~05`, `tm_felion_D`는 한국어 자막을 넣었습니다.
+그 밖의 동영상 속 일본어 음성·문구는 번역되지 않았습니다.
 
 **2. 이미지에 그려진 글자는 일부만 번역했습니다**
 
 메뉴·시스템 화면(`common` / `mainmenu` / `system` / `window`)은 한국어로 바꿨지만,
-튜토리얼 이미지 53장과 바이오스 설명 22장, 타이틀 화면, 맵 이동 화면 등은
+튜토리얼 이미지 53장, 타이틀 화면, 맵 이동 화면 등은
 일본어로 남아 있습니다. 자세한 목록은 아래 "번역되지 않은 부분"에 있습니다.
 
 **3. 설명창을 넘쳐 잘리는 문장이 있습니다**
@@ -58,7 +62,7 @@ Nintendo Switch판 『Ar nosurge: Ode to an Unborn Star DX』(アルノサージ
 
 ## 1. 원본 확인
 
-패치 대상은 일본판 Nintendo Switch용 『Ar nosurge DX』입니다.
+패치 대상은 일본판 Nintendo Switch 및 PC(Steam)용 『Ar nosurge DX』입니다.
 
 | 항목 | 값 |
 |---|---|
@@ -101,7 +105,16 @@ mods/contents/01003cf0128de000/korean_final/exefs/28F3C3965CEB60AC18A23E2B2C0C4B
 
 기존 대사·폰트 시험 모드가 함께 활성화되어 있으면 충돌할 수 있으므로 다른 모드는 비활성화해 주세요.
 
-### 2-3. 60FPS 프레임 제한 해제 (선택)
+### 2-3. PC(Steam)
+
+1. Releases에서 파일명에 `PC`가 붙은 ZIP을 받습니다.
+2. 압축을 `ArnosurgeDX.exe`가 있는 게임 폴더에 풉니다.
+3. `install.bat`를 실행합니다.
+
+설치 전 파일은 게임 폴더의 `KoreanPatchBackup-v0.2`에 자동으로 보관됩니다.
+패치를 제거하려면 같은 폴더에서 `uninstall.bat`를 실행하세요.
+
+### 2-4. 60FPS 프레임 제한 해제 (선택)
 
 원래 30FPS로 고정된 프레임 제한을 해제합니다. 한국어 패치와 **독립된 별도 패치**이므로
 원하지 않으면 넣지 않아도 되고, 넣은 뒤 마음에 들지 않으면 해당 폴더만 지우면 됩니다.
@@ -137,7 +150,7 @@ mods/contents/01003cf0128de000/fps_unlock/exefs/28F3C3965CEB60AC18A23E2B2C0C4BEE
 
   | 파일 | 내용 |
   |---|---|
-  | `acps3_bios_explanation*.g1t` (22개) | 바이오스 설명 |
+  | `acps3_bios_explanation*.g1t` (22개) | 바이오스 설명 — **번역 완료** |
   | `acps3_help*.g1t` (53개) | 튜토리얼 |
   | `system.g1t` | 시스템 메뉴 — **번역 완료** |
   | `title.g1t` | 타이틀 이미지 |

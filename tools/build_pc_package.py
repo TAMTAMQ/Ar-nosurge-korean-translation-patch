@@ -197,6 +197,58 @@ def extract_originals(args):
     print(f"  Event 원본: {into / 'event'}")
 
 
+def find_ci(root, relative):
+    """대소문자를 가리지 않고 찾는다. 스위치 romfs 는 대문자가 섞여 있다."""
+    want = relative.lower().replace("\\", "/")
+    for path in root.rglob("*"):
+        if path.is_file() and path.relative_to(root).as_posix().lower() == want:
+            return path
+    return None
+
+
+def apply_switch_g1t(args, pak, entries):
+    """스위치판 텍스처로 PC판 g1t 를 교체한다.
+
+    교체본이 PAK 슬롯보다 작으면 남는 자리를 0 으로 채워 제자리에 넣는다.
+    G1T 헤더 0x08 에 자기 전체 크기가 들어 있어 로더가 그 값을 쓰면 뒤쪽
+    패딩은 읽지 않는다. 슬롯보다 크면 제자리 교체가 불가능하므로 중단한다.
+    """
+    manifest = args.g1t_manifest
+    if not manifest.is_file():
+        return 0
+    if not args.switch_romfs:
+        print("  건너뜀: --switch-romfs 를 지정하지 않았습니다 "
+              f"({manifest.name} 의 교체가 적용되지 않습니다)")
+        return 0
+    if not args.switch_romfs.is_dir():
+        sys.exit(f"오류: 스위치 romfs 폴더가 없습니다: {args.switch_romfs}")
+
+    import json
+    rules = json.loads(manifest.read_text(encoding="utf-8"))["replacements"]
+    applied = 0
+    for rule in rules:
+        key = BS + rule["pak"].replace("/", BS)
+        if key not in entries:
+            sys.exit(f"오류: PAK 에 그 경로가 없습니다: {rule['pak']}")
+        offset, size = entries[key]
+        source = find_ci(args.switch_romfs, rule["switch"])
+        if source is None:
+            sys.exit(f"오류: 스위치 원본을 찾지 못했습니다: {rule['switch']}")
+        payload = bytearray(source.read_bytes())
+        if payload[:4] != G1T_MAGIC:
+            sys.exit(f"오류: G1T 매직이 아닙니다: {source}")
+        payload[PLATFORM_OFFSET] = PC_PLATFORM
+        if len(payload) > size:
+            sys.exit(f"오류: {rule['pak']} 교체본이 슬롯보다 큽니다 "
+                     f"({len(payload)} > {size}). PACK00_01 재포장이 필요합니다.")
+        padded = bytes(payload) + b"\0" * (size - len(payload))
+        changed = write_entry(pak, offset, padded, G1T_MAGIC)
+        applied += 1
+        print(f"  {rule['pak']}: {'교체' if changed else '이미 동일'}"
+              f" ({len(payload)} + 패딩 {size - len(payload)})")
+    return applied
+
+
 def overlay(source_root, target_root, label):
     """romfs 하위 트리를 추출된 PAK 트리에 소문자 경로로 덮어쓴다."""
     if not source_root.is_dir():
@@ -261,6 +313,8 @@ def install(args):
         changed = write_entry(pak, offset, bytes(payload), G1T_MAGIC)
         print(f"  UI {source.name}: {'교체' if changed else '이미 동일'}")
 
+    apply_switch_g1t(args, pak, entries)
+
     print("\n[2/4] PACK01 재포장 (대사 / 선택지 / 이벤트 스크립트)")
     # 작업 트리는 매번 원본에서 새로 푼다. 한 번 풀어 두고 재사용하면 앞선
     # 설치에서 덮어쓴 번역본이 남아, 다음에 그 트리를 원본으로 삼는 단계가
@@ -315,6 +369,11 @@ def main():
                     default=repo / "build" / "final_mod_report.json")
     ap.add_argument("--codepage", default="ja-JP",
                     help="매니페스트 activeCodePage. 기본 ja-JP (CP932).")
+    ap.add_argument("--switch-romfs", type=pathlib.Path,
+                    help="언팩된 스위치 romfs. 스위치 텍스처로 교체하는 단계에 쓴다.")
+    ap.add_argument("--g1t-manifest", type=pathlib.Path,
+                    default=repo / "translations" / "pc" / "g1t_from_switch.json",
+                    help="스위치 텍스처로 교체할 g1t 목록.")
     mode = ap.add_mutually_exclusive_group(required=True)
     mode.add_argument("--extract-originals", action="store_true")
     mode.add_argument("--install", action="store_true")

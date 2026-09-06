@@ -1,0 +1,32 @@
+[Script Info]
+Title: Ar nosurge DX Prologue Korean Subtitles
+ScriptType: v4.00+
+PlayResX: 1920
+PlayResY: 1080
+ScaledBorderAndShadow: yes
+WrapStyle: 0
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Korean,Pretendard,47,&H00FFFFFF,&H000000FF,&H00101010,&H80000000,-1,0,0,0,100,100,0,0,1,3,1,2,100,100,240,1
+Style: Panel,Arial,20,&H00000000,&H00000000,&H00000000,&H00000000,0,0,0,0,100,100,0,0,1,0,0,7,0,0,0,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 1,0:00:02.00,0:00:04.30,Korean,,0,0,0,,아르노사쥬의 세계에 오신 것을 환영합니다.
+Dialogue: 1,0:00:04.94,0:00:09.70,Korean,,0,0,0,,지금부터 당신이 간섭하게 될 세계는\N7차원 너머에 실재하는 세계입니다.
+Dialogue: 1,0:00:10.18,0:00:14.10,Korean,,0,0,0,,이제부터 당신에게는 이 세계에 대한\N간섭 특권이 주어집니다만,
+Dialogue: 1,0:00:14.10,0:00:18.95,Korean,,0,0,0,,그전에 먼저, 당신이 링크할 시간축의\N현재 상황을 알려드리겠습니다.
+Dialogue: 1,0:00:19.68,0:00:22.40,Korean,,0,0,0,,7D 스태빌라이저가 정상적으로 기동되었습니다.
+Dialogue: 1,0:00:23.05,0:00:24.27,Korean,,0,0,0,,세계를 링크합니다.
+Dialogue: 1,0:00:24.27,0:00:36.72,Korean,,0,0,0,,과거, 이 세계에는 위대한 여제가 군림하고 있었습니다.\N여제는 백성들의 두터운 신망을 받았으며, 막강한 노래의 힘도 지니고 있었습니다.
+Dialogue: 1,0:00:38.38,0:00:50.84,Korean,,0,0,0,,당시, 여제가 다스리던 세계는 붕괴의 위기에 처해 있었습니다.\N어머니인 태양 베젤의 팽창으로 행성 라셸라는 삼켜질 운명이었습니다.
+Dialogue: 1,0:00:52.50,0:00:59.58,Korean,,0,0,0,,여제는 이를 막고자, 죽어 가는 별을 제물로 삼아\N사람들을 안주의 땅으로 이끌겠다고 약속했습니다.
+Dialogue: 1,0:01:00.38,0:01:09.46,Korean,,0,0,0,,하지만 의식 도중 예상치 못한 사태가 벌어져,\N사람들은 별과 에너지를 모두 잃고 이상향으로 떠나지도 못했습니다.
+Dialogue: 1,0:01:11.52,0:01:20.96,Korean,,0,0,0,,사람들은 별과 함께 노래의 힘도 잃었습니다.\N노래로 기적을 일으키는 존재 ‘제놈’이 행성과 함께 멸종했기 때문입니다.
+Dialogue: 1,0:01:22.35,0:01:31.17,Korean,,0,0,0,,사람들은 삶의 터전인 별과 노래가 이루는 마법을 잃고,\N절망을 안은 채 표류하는 우주선에서 떠돌게 되었습니다.
+Dialogue: 1,0:01:32.55,0:01:43.82,Korean,,0,0,0,,그로부터 오랜 세월이 흐른 어느 날, 또 다른 재앙이 배를 덮쳤습니다.\N갑자기 사람들을 습격하는 수수께끼의 생명체 ‘샤르’가 나타난 것입니다.
+Dialogue: 1,0:01:45.32,0:01:59.86,Korean,,0,0,0,,그날을 기점으로 사람들은 두 조직으로 나뉘어 다투기 시작했습니다.\N하나는 샤르를 숭배하고 공존함으로써 재난을 피하려는 종교 조직,\N제노미라이 교단.
+Dialogue: 1,0:01:59.86,0:02:06.55,Korean,,0,0,0,,그리고 다른 하나는 샤르와 단호히 맞서 싸워\N과거의 평온을 되찾으려는 도시 국가, 페리온.
+Dialogue: 1,0:02:07.96,0:02:17.29,Korean,,0,0,0,,사람들은 진정한 평온을 바라며 지금도 계속 싸우고 있습니다.\N어디에 있는지도 모르는 이상향을 찾아서…….
+Dialogue: 1,0:02:26.54,0:02:33.76,Korean,,0,0,0,,당신에게 행운이 있기를…….
