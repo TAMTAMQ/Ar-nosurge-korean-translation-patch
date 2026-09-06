@@ -79,9 +79,12 @@ Nintendo Switch판 및 PC(Steam)판 『Ar nosurge: Ode to an Unborn Star DX』(�
 
 ### 2-1. Atmosphère
 
-1. 저장소 또는 [Releases](../../releases)에서 패치를 받습니다.
-2. `atmosphere` 폴더를 SD 카드 최상위에 복사합니다.
-3. 최종 경로가 아래와 같은지 확인합니다.
+1. Releases에서 `Switch-Patch` ZIP을 받습니다.
+2. 동영상 자막도 적용하려면 `Switch-Movies` ZIP을 추가로 받아 패치 ZIP과
+   같은 위치에 덮어 풉니다.
+3. `setup_switch.bat`을 실행하고 `Atmosphere` 및 60FPS 적용 여부를 선택합니다.
+4. 만들어진 `output/atmosphere` 폴더를 SD 카드 최상위에 복사합니다.
+5. 최종 경로가 아래와 같은지 확인합니다.
 
 ```text
 atmosphere/contents/01003CF0128DE000/romfs/Event/event/...
@@ -93,10 +96,11 @@ atmosphere/exefs_patches/ArNosurgeFpsUnlock/28F3C3965CEB60AC18A23E2B2C0C4BEEE3C8
 
 ### 2-2. Ryujinx
 
-1. 게임 목록에서 아르노사쥬/아르노서지를 우클릭하고 모드 폴더를 엽니다.
-2. `korean_final` 같은 임의의 폴더를 하나 만듭니다.
-3. 그 안에 저장소의 `atmosphere/contents/01003CF0128DE000/romfs` 폴더를 복사합니다.
-4. `atmosphere/exefs_patches/ArNosurgeKoreanUI/28F3C3965CEB60AC18A23E2B2C0C4BEEE3C81D8B.ips`를 `korean_final/exefs/` 아래에 복사합니다.
+1. Releases에서 `Switch-Patch` ZIP을 받습니다.
+2. 동영상 자막도 적용하려면 `Switch-Movies` ZIP을 추가로 받아 패치 ZIP과
+   같은 위치에 덮어 풉니다.
+3. `setup_switch.bat`을 실행하고 `Ryujinx` 및 60FPS 적용 여부를 선택합니다.
+4. 만들어진 `output/mods` 폴더를 Ryujinx 사용자 데이터 폴더에 합칩니다.
 
 ```text
 mods/contents/01003cf0128de000/korean_final/romfs/...
@@ -107,24 +111,27 @@ mods/contents/01003cf0128de000/korean_final/exefs/28F3C3965CEB60AC18A23E2B2C0C4B
 
 ### 2-3. PC(Steam)
 
-1. Releases에서 파일명에 `PC`가 붙은 ZIP을 받습니다.
-2. 압축을 `ArnosurgeDX.exe`가 있는 게임 폴더에 풉니다.
-3. `install.bat`를 실행합니다.
+1. Releases에서 `PC-Patch` ZIP을 받습니다.
+2. 동영상 자막도 적용하려면 `PC-Movies` ZIP을 추가로 받아 패치 ZIP과 같은 위치에
+   덮어 풉니다.
+3. `install.bat`를 실행하고 폴더 선택 창에서 `ArnosurgeDX.exe`가 있는 게임 폴더를
+   선택합니다.
 
 설치 전 파일은 게임 폴더의 `KoreanPatchBackup-v0.2`에 자동으로 보관됩니다.
-패치를 제거하려면 같은 폴더에서 `uninstall.bat`를 실행하세요.
+패치를 제거하려면 같은 폴더에서 `uninstall.bat`를 실행한 뒤 같은 게임 폴더를
+선택하세요.
 
-### 2-4. 60FPS 프레임 제한 해제 (선택)
+### 2-4. Nintendo Switch판 전용 60FPS 프레임 제한 해제 (선택)
 
-원래 30FPS로 고정된 프레임 제한을 해제합니다. 한국어 패치와 **독립된 별도 패치**이므로
-원하지 않으면 넣지 않아도 되고, 넣은 뒤 마음에 들지 않으면 해당 폴더만 지우면 됩니다.
+이 패치는 **Nintendo Switch판(Atmosphère/Ryujinx)에만 적용**되며 PC판에는 포함되지
+않습니다. 원래 30FPS로 고정된 프레임 제한을 해제하는 기능으로, 한국어 패치와
+**독립된 별도 패치**입니다. 원하지 않으면 적용하지 않아도 되고, 적용한 뒤 마음에 들지
+않으면 해당 폴더만 지우면 됩니다.
 
-Atmosphère는 `atmosphere` 폴더를 SD 카드에 복사할 때 함께 적용됩니다.
-
-Ryujinx에서는 한국어 패치와 **별개의 모드 폴더**로 만듭니다.
-
-1. 모드 폴더에 `fps_unlock` 같은 임의의 폴더를 하나 더 만듭니다.
-2. 그 안 `exefs/`에 `atmosphere/exefs_patches/ArNosurgeFpsUnlock/`의 IPS를 복사합니다.
+`setup_switch.bat` 실행 중 60FPS 패치 포함 여부를 선택할 수 있습니다. Atmosphère를
+선택하면 `ArNosurgeFpsUnlock` 패치 폴더가 추가되고, Ryujinx를 선택하면 한국어 패치와
+별개의 `fps_unlock` 모드 폴더가 생성됩니다. 선택을 바꾸려면 BAT 파일을 다시 실행하면
+기존 `output`을 지우고 새 설정으로 다시 만듭니다.
 
 ```text
 mods/contents/01003cf0128de000/korean_final/...   # 한국어 패치
@@ -135,6 +142,20 @@ mods/contents/01003cf0128de000/fps_unlock/exefs/28F3C3965CEB60AC18A23E2B2C0C4BEE
 
 > 프레임 해제는 게임 속도·물리·연출이 30FPS 기준으로 맞춰진 부분에 영향을 줄 수 있습니다.
 > 이상이 느껴지면 `fps_unlock` 폴더만 제거하세요.
+
+### 2-5. 분리된 동영상 팩
+
+기본 `Patch` ZIP에는 자막 합성 동영상이 포함되지 않습니다. `opening`, `prologue`,
+`seq02~05`, `tm_felion_D`의 한국어 자막 동영상이 필요하면 사용하는 플랫폼과 방식에
+맞는 `Movies` ZIP도 함께 받으세요. PC판은 `PC-Movies`, Switch판은 공용
+`Switch-Movies`를 사용합니다. 같은 종류의 `Patch`와 `Movies` ZIP은 최상위 폴더
+구조가 같으므로 같은 위치에 덮어 풀면 됩니다. Switch판은 `setup_switch.bat`에서
+Atmosphere/Ryujinx를 선택하면 동일한 파일을 각 환경에 맞는 경로로 배치합니다.
+Switch의 두 ZIP에는 각각 `setup_switch.bat`이 들어 있어 하나만 받은 경우에도 그 ZIP에
+포함된 본 패치 또는 동영상만 독립적으로 배치할 수 있습니다.
+PC의 두 ZIP에도 각각 `install.bat`과 `uninstall.bat`이 들어 있습니다. 하나만 받은 경우에는
+그 ZIP에 포함된 본 패치 또는 동영상만 설치·복원하며, 두 ZIP을 같은 위치에 합치면 한 번의
+실행으로 전부 처리합니다.
 
 
 ## 3. 번역되지 않은 부분
