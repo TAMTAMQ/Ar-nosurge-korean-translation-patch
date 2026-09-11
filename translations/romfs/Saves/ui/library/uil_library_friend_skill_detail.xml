@@ -72,7 +72,7 @@
 							<image pos="0,0" size_wh="350,28" style="gen_window03_bg02"/>
 							<image pos="0,29" size_wh="350,28" style="gen_window03_bg02"/>
 							<image pos="0,58" size_wh="350,28" style="gen_window03_bg02"/>
-							<text name="text_text2" pos="40,6" drop_shadow="false" line_char_length="15" font_size="18" line_space="14" text="아이우에오카키쿠케코사시스세소타치츠테토아이우에오카키쿠케코사시스세소타치츠테토아이우에오"/>
+							<text name="text_text2" pos="40,6" drop_shadow="false" line_char_length="17" font_size="18" line_space="14" text="아이우에오카키쿠케코사시스세소타치츠테토아이우에오카키쿠케코사시스세소타치츠테토아이우에오"/>
 						</node>
 					</node>
 				</image>

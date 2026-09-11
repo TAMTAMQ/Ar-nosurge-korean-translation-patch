@@ -8,7 +8,7 @@ import struct
 import sys
 from pathlib import Path
 
-from build_exefs_ui_patch import BUILD_ID, PATCHES
+from build_exefs_ui_patch import BUILD_ID, PATCHES, RAW_PATCHES
 from build_patched_main import lz4_decompress
 from inline_tail_fix import build_text_patches
 
@@ -90,6 +90,21 @@ def main():
     combined = {address: payload for address, payload in accepted.items()}
     for address, word in text_patches.items():
         combined[address] = struct.pack("<I", word)
+
+    if args.main:
+        text_base, text_data = segments["text"]
+        for address, original, payload in RAW_PATCHES:
+            start = address - text_base
+            current = text_data[start:start + len(original)]
+            if current != original:
+                raise SystemExit(
+                    f"이벤트 메시지 런타임 패치 원본 불일치: 0x{address:X} "
+                    f"({current.hex()} != {original.hex()})"
+                )
+            combined[address] = payload
+    else:
+        for address, _original, payload in RAW_PATCHES:
+            combined[address] = payload
     for address, payload in sorted(combined.items()):
         ips += (address + 0x100).to_bytes(3, "big")
         ips += len(payload).to_bytes(2, "big")
@@ -103,6 +118,7 @@ def main():
         "build_id": BUILD_ID,
         "patched_records": len(accepted),
         "inlined_tail_instructions_patched": len(text_patches),
+        "event_message_runtime_patches": len(RAW_PATCHES),
         "skipped_records": len(skipped),
         "skipped": skipped,
         "output": str(output),

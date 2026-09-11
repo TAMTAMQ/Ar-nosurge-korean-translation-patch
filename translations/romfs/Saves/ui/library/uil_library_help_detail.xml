@@ -30,7 +30,7 @@
 						<image style="gen_window03_bg02" pos="0,313,0" size_wh="387,30"/>
 						<image style="gen_window03_bg02" pos="0,344,0" size_wh="387,30"/>
 						<image style="gen_window03_bg02" pos="0,375,0" size_wh="387,30"/>
-						<text name="text_note" text="아이우에오카키쿠케코사시스세소타치츠테토" align="left" line_char_length="15" font_size="20" pos="30,226.667,0" word_space="2" line_space="13" limit_width="460"/>
+						<text name="text_note" text="아이우에오카키쿠케코사시스세소타치츠테토" align="left" line_char_length="17" font_size="20" pos="30,226.667,0" word_space="2" line_space="13" limit_width="460"/>
 					</node>
 					<image style="gen_window04_page01" pos="324,452,0">
 						<text name="text_page" text="1/1" align="left" font_size="20" pos="25,11,0" word_space="2" copy="NUMBER01_18PX"/>

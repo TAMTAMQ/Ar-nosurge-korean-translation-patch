@@ -61,7 +61,7 @@
 							<image style="gen_window03_bg02" pos="0,145" size_wh="305,28"/>
 							<image style="gen_window03_bg02" pos="0,174" size_wh="305,28"/>
 						</node>
-						<text name="song_text" pos="17,36" text="あいうえおかきくけこさしすせそたちつてとあいうえおかきくけこさしすせそたちつてとあいうえおかきくけこさしすせそたちつてと" drop_shadow="false" line_char_length="15" font_size="18" line_space="14"/>
+						<text name="song_text" pos="17,36" text="あいうえおかきくけこさしすせそたちつてとあいうえおかきくけこさしすせそたちつてとあいうえおかきくけこさしすせそたちつてと" drop_shadow="false" line_char_length="17" font_size="18" line_space="14"/>
 					</node>
 				</node>
 				<image name="burst_window" pos="790,65,0" style="etc_window02_04" image_no="1" size_wh="348,560">

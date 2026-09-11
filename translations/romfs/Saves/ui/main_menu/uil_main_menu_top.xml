@@ -153,7 +153,7 @@
 				<node name="episode_notice">
 					<image name="message_bg" style="gen_menu01_ep_textbg" pos="-16,121,0"/>
 					<image name="message_bg_add" style="gen_menu01_ep_textbg" pos="-16,121,0" visible="false" alpha_blend="add"/>
-					<text name="message" text="현재 시공간 진행은 정상적으로 이루어지고 있습니다. 자유롭게 세계를 이동하며 에피소드를 진행할 수 있습니다." font_size="16" line_char_length="15" pos="9,148,0"/>
+					<text name="message" text="현재 시공간 진행은 정상적으로 이루어지고 있습니다. 자유롭게 세계를 이동하며 에피소드를 진행할 수 있습니다." font_size="16" line_char_length="17" pos="9,148,0"/>
 					<image name="message_new_image" style="gen_common01_new01" pos="-20,114.333,0" scale="1.5,1.5,0" visible="false" viewer_visible="true"/>
 				</node>
 			</node>

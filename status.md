@@ -387,9 +387,26 @@ python tools/build_final_korean_mod.py `
 
 사람이 읽을 수 있는 한국어 시스템 메시지·UI XML을 현재 폰트 매핑에 맞는 게임용 대체 문자 XML로 재귀 변환합니다. 시스템 XML의 `Text`와 UI XML의 `text` 속성을 모두 처리합니다.
 
-게임의 텍스트 창은 표시 문자 20개마다 자체적으로 자동 줄바꿈합니다. `<CR>` 바로 앞 구간이 이미 20자 이상이면 자동 줄바꿈과 강제 줄바꿈이 겹칠 수 있습니다. 빌드 도구는 사쿠라대전4 한국어 패치와 같은 방식으로 해당 `<CR>`만 설치용 결과에서 제거하고 게임의 자동 줄바꿈에 맡깁니다. 이 규칙은 모든 이벤트 대사 EBM과 Saves XML의 `Text`·`text` 속성에 공통 적용되며 `translations/`의 편집용 파일은 변경하지 않습니다. 공백과 문장부호도 각각 한 칸이며 `<IMxx>` 같은 표시 제어 코드는 한 칸으로 계산합니다.
+텍스트 자동 줄바꿈 폭은 화면마다 다릅니다. 실게임에서 확인한 현재 기준은 **이벤트 EBM 24표시칸×최대 3줄(72칸)**, **필드 `fm_talk_data` 22표시칸×최대 3줄(66칸)**입니다. 그 외 기존 Saves `MESSAGE` 계열은 별도 확인 전까지 20표시칸×최대 3줄을 유지합니다. `<CR>`이 자동 줄바꿈과 겹치면 빌드 결과에서 불필요한 `<CR>`을 제거하고 게임의 자동 줄바꿈에 맡깁니다. `translations/`의 편집용 파일은 의미·제어코드 보존을 위해 원칙적으로 그대로 두고 설치용 결과에서 재배치합니다. 공백과 문장부호도 각각 한 칸이며 `<IMxx>` 같은 표시 제어 코드는 한 칸으로 계산합니다.
 
-텍스트 창에는 최대 3줄만 표시되므로 한국어 번역문은 제어 코드를 제외하고 최대 60표시칸이어야 합니다. `tools/shorten_three_lines.py`는 60칸을 넘는 EBM·XML 번역문을 로컬 OpenAI 호환 모델로 축약하고, 60칸 이하 및 비-CR 제어문자 보존을 통과한 결과만 `translations/`에 반영합니다. `<#RRGGBB>` 색상 코드는 0칸, `<IMxx>` 같은 표시 요소는 1칸으로 계산합니다.
+`fm_talk_data`의 실제 UI는 `Saves/ui/fieldmap/uil_fm_tweet.xml`의 `line_char_length="22"`와 맞춰 사용합니다. 이벤트 EBM은 `tools/build_final_korean_mod.py`가 24자×3줄 기준으로 재배치합니다. **이 UI/레이아웃 기준은 PC와 스위치에 동일하게 적용합니다.** 이벤트 메시지 실행 코드가 XML과 별개로 런타임 폭/줄당 글자 수를 20 기준으로 다시 설정하는 경우 두 플랫폼 모두 해당 이벤트 메시지 루틴만 **24 기준으로 패치**하며, 플랫폼별 표시 길이 예외를 두지 않습니다. PC는 `ArnosurgeDX.exe`의 이벤트 메시지 루틴을 `20.0/20→24.0/24`로 패치합니다. 스위치는 `tools/build_main_text_patch.py`와 `tools/build_exefs_ui_patch.py`가 1.0.1 NSO에서 같은 루틴의 폭 `640→768(20×32→24×32)`과 글자 수 `20→24`를 원시 패치 6개로 `ArNosurgeKoreanUI` IPS에 포함합니다. XML의 큰 이벤트 창도 두 플랫폼 모두 `line_char_length="24"`, `limit_width="740"`을 사용하되 패널 크기와 위치는 원본 그대로 유지하며, 작은 `uil_message_window_normal.xml`도 `line_char_length="24"`를 사용합니다. `<#RRGGBB>` 색상 코드는 0칸, `<IMxx>` 같은 표시 요소는 1칸으로 계산합니다.
+
+현재 실게임에서 확정한 기타 UI 레이아웃은 다음과 같습니다. **표의 모든 값은 PC/스위치 공통값**이며, `AGENTS.md`에도 같은 규칙으로 고정되어 있습니다. 플랫폼별 예외를 만들거나 별도 요청 없이 원래 값으로 되돌리지 않습니다.
+
+| 화면 | 파일 | 확정값 |
+|---|---|---|
+| 용어집 상세 | `Saves/ui/glossary/uil_glossary_info.xml` | X `748`, 패널 폭 `461`, 본문 배경 폭 `424`, `line_char_length=23`, 이름 바 `434/395`, 이름 X `180`, 페이지 탭 X `448` |
+| 미션/에피소드 안내 | `Saves/ui/main_menu/uil_main_menu_top.xml` | `line_char_length=17` |
+| 히스토리/스토리 개요 | `Saves/ui/main_menu/uil_main_menu_story_outline.xml` | `line_char_length=33` |
+| 아이템 설명 | `Saves/ui/item_info/uil_item_info_page_itemtext.xml` | `line_char_length=18` |
+| 캐릭터 도감 상세 | `Saves/ui/library/uil_character_detail.xml` | `line_char_length=19`, `limit_width=426.66` 유지 |
+| 몬스터 도감 상세 | `Saves/ui/library/uil_monster_detail.xml` | `line_char_length=17`, `limit_width=360` 유지 |
+| 라이브러리 헬프 | `Saves/ui/library/uil_library_help_detail.xml` | `line_char_length=17`, `limit_width=460` 유지 |
+| 프렌드 스킬 상세 | `Saves/ui/library/uil_library_friend_skill_detail.xml` | `line_char_length=17` |
+| 상태/프로필 설명 | `Saves/ui/main_menu/uil_main_menu_status.xml` | `line_char_length=19`, 본문 X `35` |
+| 송 설명 | `Saves/ui/main_menu/uil_main_menu_song.xml` | `line_char_length=17` |
+
+용어집 설명은 구조상 필요한 헤더 뒤 `<CR>`만 유지하고 설명 중간의 폭 맞춤용 강제 `<CR>`은 제거해 23자 자동 줄바꿈에 맡깁니다. 위 UI들은 PC/스위치에서 동일한 빈 공간을 활용해 텍스트 표시량을 늘리는 공통 변경이므로 **패널 자체 크기는 사용자가 별도로 요청하지 않는 한 어느 플랫폼에서도 늘리지 않습니다.**
 
 ```powershell
 python tools/build_system_message.py `
@@ -421,7 +438,7 @@ Get-Content "atmosphere\contents\01003CF0128DE000\romfs\Saves\systemMessage\SysI
 3. 생성 파일과 실제 SD 카드 또는 Ryujinx 모드 폴더의 파일 해시를 비교합니다.
 4. 게임과 Ryujinx를 완전히 종료한 상태에서 새 파일을 덮어쓴 뒤 다시 실행합니다.
 
-번역에 기존 매핑에 없는 한글 음절을 새로 사용했다면 이 도구만 실행하지 말고 `translate_all.py`를 실행하세요. 통합 도구가 EBM과 XML을 함께 조사해 필요한 글리프를 다시 만들기 때문입니다. `<IMxx>`, `<RG>` 같은 제어문자는 원문 위치를 유지해야 합니다. `<CR>`도 편집용 번역에는 보존하되, 위의 20자 자동 줄바꿈 조건에 해당하면 EBM과 XML의 설치용 결과에서만 제거됩니다.
+번역에 기존 매핑에 없는 한글 음절을 새로 사용했다면 이 도구만 실행하지 말고 `translate_all.py`를 실행하세요. 통합 도구가 EBM과 XML을 함께 조사해 필요한 글리프를 다시 만들기 때문입니다. `<IMxx>`, `<RG>` 같은 제어문자는 원문 위치를 유지해야 합니다. `<CR>`도 편집용 번역에는 보존하되, 화면별 확정 폭(이벤트 EBM 24자, `fm_talk_data` 22자, 기타 기존 Saves 20자)에서 자동 줄바꿈과 겹치면 설치용 결과에서만 제거됩니다.
 
 #### `tools/decode_renderdoc_font_draw.py` — RenderDoc 폰트 UV 해독
 
@@ -450,6 +467,11 @@ python tools/decode_renderdoc_font_draw.py `
 - 실행 파일 문자열은 `translations/exefs/main_1.0.1.csv`에서 수정하세요.
 - EBM의 바이너리 구조, 레코드 수, 32바이트 메타데이터와 NUL 종료 형식을 보존해야 합니다.
 - XML에서는 `Text` 외의 속성과 `<CR>`, `<IMxx>`, `<RG>` 같은 제어문자의 표기·순서·위치를 유지하세요.
+- 반말/존댓말과 인물 말투는 원문의 격식 수준을 유지하고, 원문에 없는 호칭을 임의로 추가하지 마세요.
+- 기존 호칭 규칙은 `さん→씨`, `ちゃん→쨩`, `君/くん→군`, `様/さま→님`이며 이름 뒤 접미 호칭은 붙여 씁니다.
+- `～`는 원문 전각 형태를 유지하고, 발화·감탄의 늘임 표시 `ー`는 `～`나 `~`로 바꾸지 마세요. 단, `シャール→샤르`처럼 어휘 내부 장음은 기존 용어집 독음을 우선합니다.
+- 원문의 주체·부정·조건·핵심 정보와 뉘앙스를 축약 과정에서 반대로 바꾸거나 누락하지 마세요.
+- 번역 전에 대상 파일의 원문 전체에서 `한 줄 최대 표시 길이`와 `한 텍스트 최대 행 수`를 계산하고, 그 파일의 번역은 두 상한을 넘지 않게 작성하세요. 별도의 엔진·화면 하드 제한이 더 작으면 더 엄격한 쪽을 적용합니다.
 - 새 한글 음절을 사용한 뒤에는 `translate_all.py`로 폰트까지 다시 생성하세요.
 - 빌드가 끝나면 `atmosphere/contents/01003CF0128DE000`을 SD 카드 또는 Ryujinx 모드 폴더에 복사합니다.
 
@@ -589,10 +611,7 @@ README 의 "알려진 제약"에 적은 것들이 왜 그렇게 됐는지에 대
 잘려 보이는 곳이 있습니다.** 상자 크기와 줄바꿈 폭이 게임 실행 파일에 박혀 있어
 번역문 쪽에서는 손쓸 방법이 마땅치 않습니다.
 
-게임은 대사창을 **20자에서 강제로 줄바꿈**하는데, 이때 폭이 아니라 글자 수로 셉니다.
-그래서 공백이 많은 줄은 오른쪽이 비어 보이고, 반대로 내용이 길면 3줄짜리 창을 넘겨
-뒷부분이 안 보입니다. 번역문에서 줄바꿈을 정리해 최대한 맞췄지만 완전히 없애지는
-못했습니다.
+대사창은 화면에 따라 글자 수 기준으로 자동 줄바꿈합니다. 현재 확인된 값은 **이벤트 대사 24자**, **필드 `fm_talk_data` 22자**이며 둘 다 최대 3줄입니다. 공백이 많은 줄은 오른쪽이 비어 보일 수 있으므로 설치용 빌드에서 강제 `<CR>`을 다시 정리해 자동 줄바꿈을 우선 사용합니다.
 
 **3. 실행 파일 안 문장은 일부 간소화되어 있습니다**
 

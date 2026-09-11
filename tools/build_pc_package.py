@@ -290,10 +290,16 @@ def install(args):
     font = romfs / "Data" / "NX" / "Font" / "MainFont_nx_0.g1t"
     if font.is_file():
         offset, size = entries[FONT_KEY]
-        payload = font.read_bytes()
+        payload = bytearray(font.read_bytes())
+        if payload[:4] != G1T_MAGIC:
+            sys.exit(f"오류: G1T 매직이 아닙니다: {font}")
+        # 공통 빌드의 폰트는 Switch G1T(0x10) 기준으로 생성된다.
+        # PC PAK에 그대로 넣으면 로더가 시작 단계에서 종료될 수 있으므로
+        # UI 텍스처와 동일하게 플랫폼 바이트를 PC(0x0A)로 맞춘다.
+        payload[PLATFORM_OFFSET] = PC_PLATFORM
         if len(payload) != size:
             sys.exit(f"오류: 폰트 크기가 다릅니다 {len(payload)} != {size}. 재포장이 필요합니다.")
-        changed = write_entry(pak, offset, payload, G1T_MAGIC)
+        changed = write_entry(pak, offset, bytes(payload), G1T_MAGIC)
         print(f"  폰트: {'교체' if changed else '이미 동일'}")
 
     ui_dir = romfs / "Data" / "NX" / "ui"
@@ -350,6 +356,8 @@ def install(args):
                     "--exe", str(staged),
                     "--output", str(exe),
                     "--locale", args.codepage], check=True)
+    subprocess.run([sys.executable, str(here / "patch_pc_event_message_width.py"),
+                    "--exe", str(exe)], check=True)
     print(f"  설치: {exe}")
 
 

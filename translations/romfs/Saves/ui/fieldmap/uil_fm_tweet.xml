@@ -15,7 +15,7 @@
 		<node name="fm_tweet_bg" pos="994,660">
 			<image pos="-550,-115" size_wh="558,113" style="gen_window03_npcmsg">
 				<!-- ツイートのテキスト -->
-				<text name="fm_tweet_text" pos="60,17" align="left" font_size="20" line_char_length="20" line_space="5" text="１２３４５６７８９０１２３４５６７８９０아이우에오카키쿠케코사시스세소타치츠테토아이우에오카키쿠케코사시스세소타치츠테토"/>
+				<text name="fm_tweet_text" pos="60,17" align="left" font_size="20" line_char_length="22" line_space="5" text="１２３４５６７８９０１２３４５６７８９０아이우에오카키쿠케코사시스세소타치츠테토아이우에오카키쿠케코사시스세소타치츠테토"/>
 				<image name="fm_tweet_btn" pos="508,61" style="gen_field01_button"/>
 			</image>
 		</node>

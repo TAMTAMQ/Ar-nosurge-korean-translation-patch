@@ -18,12 +18,24 @@ re-derives the same per-file target encoding by sniffing the matching file
 under originalText/, then re-encodes into the .xml.e format the game expects.
 """
 import argparse
+import html
 import json
+import re
 from pathlib import Path
 
 from decode_saves_xml_e import encode_file, detect_text_encoding
+from text_layout import (FM_TALK_LINE_WRAP_CHARS, LINE_WRAP_CHARS, MAX_LINES,
+                         reflow_dialogue_layout, rendered_line_count)
 
 SKIP_DIRS = {"systemMessage", "ui"}
+# 암호화 Saves 중 필드 대화 계열은 MESSAGE 속성이다. 기본은 기존 20자×3줄을
+# 유지하되, fm_talk_data는 실제 UI를 22자로 넓혔으므로 22자×3줄을 사용한다.
+# Text/text/set_text는 아이템·의상 설명 등 서로 다른 레이아웃도 섞여 있으므로
+# 여기서 대사창 규칙을 전역 적용하지 않는다.
+LAYOUT_ATTR_PATTERN = re.compile(
+    r'''(?P<head>\sMESSAGE\s*=\s*)(?P<q>["'])(?P<value>.*?)(?P=q)''',
+    re.DOTALL,
+)
 
 
 # The local model sometimes reaches for ASCII-adjacent punctuation instead of
@@ -41,6 +53,32 @@ def normalize_punctuation(text):
     for bad, good in CP932_PUNCTUATION_FIXUPS.items():
         text = text.replace(bad, good)
     return text
+
+
+def apply_text_layout(text, source_label, line_wrap_chars=LINE_WRAP_CHARS):
+    """암호화 Saves XML의 MESSAGE를 화면별 줄 폭에 맞게 정리한다."""
+    occurrence = 0
+
+    def repl(match):
+        nonlocal occurrence
+        index = occurrence
+        occurrence += 1
+        value = html.unescape(match.group("value"))
+        laid_out = reflow_dialogue_layout(value, line_wrap_chars=line_wrap_chars)
+        if rendered_line_count(laid_out, line_wrap_chars) > MAX_LINES:
+            raise SystemExit(
+                f"{source_label}: MESSAGE[{index}]가 {line_wrap_chars}자×{MAX_LINES}줄을 초과합니다: {value!r}"
+            )
+        if laid_out == value:
+            return match.group(0)
+        escaped = html.escape(laid_out, quote=True)
+        if match.group("q") == '"':
+            escaped = escaped.replace("&#x27;", "'")
+        else:
+            escaped = escaped.replace("&quot;", '"')
+        return match.group("head") + match.group("q") + escaped + match.group("q")
+
+    return LAYOUT_ATTR_PATTERN.sub(repl, text)
 
 
 def substitute_hangul(text, mapping, source_label):
@@ -76,6 +114,10 @@ def main():
         with source.open("r", encoding="utf-8", newline="") as handle:
             text = handle.read()
         text = normalize_punctuation(text)
+        line_wrap_chars = (FM_TALK_LINE_WRAP_CHARS
+                           if relative.as_posix().lower() == "tweet/fm_talk_data.xml"
+                           else LINE_WRAP_CHARS)
+        text = apply_text_layout(text, str(relative), line_wrap_chars)
         text = substitute_hangul(text, mapping, str(relative))
 
         original_path = args.original / relative

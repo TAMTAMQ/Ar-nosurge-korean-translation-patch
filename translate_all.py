@@ -76,14 +76,18 @@ def main():
         raise SystemExit(f"한국어 시스템 메시지 폴더가 없습니다: {SYSTEM_MESSAGES}")
 
     print("=== 1/8 이벤트 대사 EBM과 한글 폰트 생성 ===")
-    run([
+    command = [
         sys.executable, str(ROOT / "tools" / "build_final_korean_mod.py"),
         "--translated-mod", str(TRANSLATIONS),
         "--original-font", str(original_font),
         "--extra-text-dir", str(TRANSLATIONS),
         "--output", str(ATMOSPHERE),
         "--report", str(BUILD_REPORT),
-    ])
+    ]
+    fallback_event_root = ROOT / "build" / "mod" / "romfs" / "Event" / "event"
+    if fallback_event_root.is_dir():
+        command += ["--fallback-event-root", str(fallback_event_root)]
+    run(command)
 
     print("\n=== 2/8 시스템 메시지와 UI XML 생성 ===")
     run([

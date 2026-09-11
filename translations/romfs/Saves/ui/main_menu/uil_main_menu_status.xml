@@ -94,7 +94,7 @@
 						<image pos="20,401" size_wh="370,33" style="gen_window03_bg02"/>
 						<image pos="20,435" size_wh="370,33" style="gen_window03_bg02"/>
 						<image pos="20,469" size_wh="370,33" style="gen_window03_bg02"/>
-						<text name="profile_explain" pos="60,101" text="아이우에오아이우에오아이우에오아이우에오아이우에오아이우에오아이우에오아이우에오아이우에오아이우에오아이우에오아이우에오아이우에오아이우에오아이우에오아이우에오아이우에오아이우에오아이우에오아이우에오" drop_shadow="false" line_char_length="15" font_size="20" line_space="16.0"/>
+						<text name="profile_explain" pos="35,101" text="아이우에오아이우에오아이우에오아이우에오아이우에오아이우에오아이우에오아이우에오아이우에오아이우에오아이우에오아이우에오아이우에오아이우에오아이우에오아이우에오아이우에오아이우에오아이우에오아이우에오" drop_shadow="false" line_char_length="19" font_size="20" line_space="16.0"/>
 					</node>
 				</image>
 			</node>

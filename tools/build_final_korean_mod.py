@@ -16,7 +16,7 @@ import shutil
 import numpy as np
 from PIL import Image, ImageDraw, ImageFont
 
-from text_layout import strip_wrap_boundary_breaks
+from text_layout import reflow_event_dialogue_layout
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -57,7 +57,7 @@ def rebuild_ebm_with_layout(data, path):
         if end > len(data) or not payload.endswith(b"\x00"):
             raise RuntimeError(f"EBM text framing error: {path}:{index}")
         text = payload[:-1].decode("utf-8")
-        laid_out = strip_wrap_boundary_breaks(text)
+        laid_out = reflow_event_dialogue_layout(text)
         removed += text.count("<CR>") - laid_out.count("<CR>")
         encoded = laid_out.encode("utf-8") + b"\x00"
         output += header
@@ -271,6 +271,8 @@ def main():
                              "폰트를 다시 입력하면 글자가 깨지므로 주의할 것.")
     parser.add_argument("--extra-text-dir", type=Path,
                         help="폰트 매핑에 포함할 추가 UTF-8 텍스트/XML 폴더")
+    parser.add_argument("--fallback-event-root", type=Path,
+                        help="구조가 깨진 번역 EBM만 대신 사용할 정상 생성본 Event/event 루트")
     args = parser.parse_args()
     DIST, ORIGINAL_FONT = args.translated_mod, args.original_font
     MAPPING_JSON, PROBE_JSON, PROTECTED_JSON = args.mapping, args.probe, args.protected
@@ -309,9 +311,19 @@ def main():
     event_out = OUT / "romfs" / "Event" / "event"
     replaced_total = 0
     removed_wrap_breaks = 0
+    fallback_ebm_files = []
     for src in ebm_files:
         rel = src.relative_to(DIST / "romfs" / "Event" / "event")
-        data, removed = rebuild_ebm_with_layout(src.read_bytes(), src)
+        try:
+            data, removed = rebuild_ebm_with_layout(src.read_bytes(), src)
+        except RuntimeError:
+            if not args.fallback_event_root:
+                raise
+            fallback = args.fallback_event_root / rel
+            if not fallback.is_file():
+                raise RuntimeError(f"fallback EBM not found: {fallback}")
+            data, removed = rebuild_ebm_with_layout(fallback.read_bytes(), fallback)
+            fallback_ebm_files.append(str(rel))
         removed_wrap_breaks += removed
         for ko, ja in hangul_to_standin.items():
             old, new = ko.encode("utf-8"), ja.encode("utf-8")
@@ -345,6 +357,8 @@ def main():
         "wide_unique_candidate_cells": len({x["cell"] for x in hangul_to_rect.values()}),
         "font_alpha_blocks_rewritten": touched_blocks,
         "wrap_boundary_cr_removed": removed_wrap_breaks,
+        "fallback_ebm_files": len(fallback_ebm_files),
+        "fallback_ebm_paths": fallback_ebm_files,
         "hangul_to_standin": hangul_to_standin,
         "hangul_to_cell": hangul_to_cell,
     }

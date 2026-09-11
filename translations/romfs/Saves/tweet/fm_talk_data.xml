@@ -1473,7 +1473,7 @@
 	<fm_talk_data No.="1470" FM_TALK_DATA_TAG="FM_TALK_DATA_PHASE02_NERO_AREA09_07" CHARA_TAG="CHARA_NERO" VOICE_NO="30930" MESSAGE="아주 오래전, 여기서 뛰어내린 적이 있어. &lt;CR&gt;살리도 함께였지."/>
 	<fm_talk_data No.="1471" FM_TALK_DATA_TAG="FM_TALK_DATA_PHASE02_NERO_AREA09_08" CHARA_TAG="CHARA_NERO" VOICE_NO="30931" MESSAGE="공허…… 커다란 건물을 말해."/>
 	<fm_talk_data No.="1472" FM_TALK_DATA_TAG="FM_TALK_DATA_PHASE02_NERO_AREA09_09" CHARA_TAG="CHARA_NERO" VOICE_NO="30932" MESSAGE="샤르 일행에게 &lt;CR&gt;여기는 분명 가치 있는 장소겠지."/>
-	<fm_talk_data No.="1473" FM_TALK_DATA_TAG="FM_TALK_DATA_PHASE02_NERO_AREA09_10" CHARA_TAG="CHARA_NERO" VOICE_NO="30933" MESSAGE="내게 중요한 것이 당신들에게 &lt;CR&gt;중요하지 않은 것과 마찬가지예요. 그 반대도 그렇고요. &lt;CR&gt;결국, 자기 자신만 생각하는 거네요."/>
+	<fm_talk_data No.="1473" FM_TALK_DATA_TAG="FM_TALK_DATA_PHASE02_NERO_AREA09_10" CHARA_TAG="CHARA_NERO" VOICE_NO="30933" MESSAGE="내게 중요한 건 당신들에겐 &lt;CR&gt;중요하지 않아요. 반대도 같고요. &lt;CR&gt;결국 자기 생각뿐이네요."/>
 	<fm_talk_data No.="1474" FM_TALK_DATA_TAG="FM_TALK_DATA_PHASE03_SYURERIA_AREA02_00" CHARA_TAG="CHARA_SYURERIA" VOICE_NO="30934" MESSAGE="델타 일행은 이 근처에 살고 있나요？"/>
 	<fm_talk_data No.="1475" FM_TALK_DATA_TAG="FM_TALK_DATA_PHASE03_SYURERIA_AREA02_01" CHARA_TAG="CHARA_SYURERIA" VOICE_NO="30935" MESSAGE="이쪽 세계 사람들은 &lt;CR&gt;이런 곳에서 살고 있군요."/>
 	<fm_talk_data No.="1476" FM_TALK_DATA_TAG="FM_TALK_DATA_PHASE03_SYURERIA_AREA02_02" CHARA_TAG="CHARA_SYURERIA" VOICE_NO="30936" MESSAGE="아, 이 벽！ 어떻게 만들어진 건가요！？"/>
@@ -1586,7 +1586,7 @@
 	<fm_talk_data No.="1583" FM_TALK_DATA_TAG="FM_TALK_DATA_PHASE03_RENALL_AREA14_02" CHARA_TAG="CHARA_RENALL" VOICE_NO="31043" MESSAGE="라셸라…… 좋은 기억도, &lt;CR&gt; 나쁜 기억도, 많이 있어."/>
 	<fm_talk_data No.="1584" FM_TALK_DATA_TAG="FM_TALK_DATA_PHASE03_RENALL_AREA14_03" CHARA_TAG="CHARA_RENALL" VOICE_NO="31044" MESSAGE="어떤 의미에서는, &lt;CR&gt; 여기가 모든 시작의 장소야."/>
 	<fm_talk_data No.="1585" FM_TALK_DATA_TAG="FM_TALK_DATA_PHASE03_COSAL_AREA02_00" CHARA_TAG="CHARA_COSAL" VOICE_NO="31045" MESSAGE="호오…… 사람들은, &lt;CR&gt; 이런 곳에서 살고 있는 것입니까."/>
-	<fm_talk_data No.="1586" FM_TALK_DATA_TAG="FM_TALK_DATA_PHASE03_COSAL_AREA03_00" CHARA_TAG="CHARA_COSAL" VOICE_NO="31046" MESSAGE="기계 동력에 의존하는 것이 나쁘다고 &lt;CR&gt; 생각하지 않습니다. 이런 것을 만들어낼 수 있는 것도, &lt;CR&gt; 인간의 힘이겠지요."/>
+	<fm_talk_data No.="1586" FM_TALK_DATA_TAG="FM_TALK_DATA_PHASE03_COSAL_AREA03_00" CHARA_TAG="CHARA_COSAL" VOICE_NO="31046" MESSAGE="기계 동력에 의존하는 게 나쁘다고&lt;CR&gt;생각하지 않습니다. 이런 걸&lt;CR&gt;만드는 것도 인간의 힘이겠지요."/>
 	<fm_talk_data No.="1587" FM_TALK_DATA_TAG="FM_TALK_DATA_PHASE03_COSAL_AREA04_00" CHARA_TAG="CHARA_COSAL" VOICE_NO="31047" MESSAGE="모태소칸…… 그것은 위험한 존재입니다."/>
 	<fm_talk_data No.="1588" FM_TALK_DATA_TAG="FM_TALK_DATA_PHASE03_COSAL_AREA04_01" CHARA_TAG="CHARA_COSAL" VOICE_NO="31048" MESSAGE="목적지로 서두르는 편이 좋지 않겠습니까？"/>
 	<fm_talk_data No.="1589" FM_TALK_DATA_TAG="FM_TALK_DATA_PHASE03_COSAL_AREA05_00" CHARA_TAG="CHARA_COSAL" VOICE_NO="31049" MESSAGE="이런 장소를 너무나도 쉽게 만들어 버리다니. &lt;CR&gt; 인간의 창의적인 지혜에는, 나도 경복합니다."/>
@@ -1611,7 +1611,7 @@
 	<fm_talk_data No.="1608" FM_TALK_DATA_TAG="FM_TALK_DATA_PHASE03_COSAL_AREA09_07" CHARA_TAG="CHARA_COSAL" VOICE_NO="31068" MESSAGE="신앙에 필요한 것은 마음입니다. 이처럼 &lt;CR&gt;거대한 건물 같은 건, 사실 없어도 괜찮은 것입니다."/>
 	<fm_talk_data No.="1609" FM_TALK_DATA_TAG="FM_TALK_DATA_PHASE03_COSAL_AREA10_00" CHARA_TAG="CHARA_COSAL" VOICE_NO="31069" MESSAGE="여기도 대지가……."/>
 	<fm_talk_data No.="1610" FM_TALK_DATA_TAG="FM_TALK_DATA_PHASE03_COSAL_AREA10_01" CHARA_TAG="CHARA_COSAL" VOICE_NO="31070" MESSAGE="저것이…… 이세계와 이 세계를 &lt;CR&gt;잇는 시스템, 인가요."/>
-	<fm_talk_data No.="1611" FM_TALK_DATA_TAG="FM_TALK_DATA_PHASE03_COSAL_AREA11_00" CHARA_TAG="CHARA_COSAL" VOICE_NO="31071" MESSAGE="여기는 모든 것을 내려다보기 위해 만들어진 시설, &lt;CR&gt;인가요. 눈을 뜨고 있어도, &lt;CR&gt;보이지 않는 것도 있는데 말이죠."/>
+	<fm_talk_data No.="1611" FM_TALK_DATA_TAG="FM_TALK_DATA_PHASE03_COSAL_AREA11_00" CHARA_TAG="CHARA_COSAL" VOICE_NO="31071" MESSAGE="여긴 모든 걸 내려다보려고 만든&lt;CR&gt;시설인가요. 눈을 뜨고 있어도,&lt;CR&gt;보이지 않는 것도 있는데 말이죠."/>
 	<fm_talk_data No.="1612" FM_TALK_DATA_TAG="FM_TALK_DATA_PHASE03_COSAL_AREA11_01" CHARA_TAG="CHARA_COSAL" VOICE_NO="31072" MESSAGE="자신의 발로 걸을 수 있다니. &lt;CR&gt;이 체험은 정말 멋지군요."/>
 	<fm_talk_data No.="1613" FM_TALK_DATA_TAG="FM_TALK_DATA_PHASE03_COSAL_AREA11_02" CHARA_TAG="CHARA_COSAL" VOICE_NO="31073" MESSAGE="가도록 하죠. 우리가 가야 할 곳으로."/>
 	<fm_talk_data No.="1614" FM_TALK_DATA_TAG="FM_TALK_DATA_PHASE03_COSAL_AREA11_03" CHARA_TAG="CHARA_COSAL" VOICE_NO="31074" MESSAGE="육체는 정신의 그릇입니다. &lt;CR&gt;함부로 다뤄서는 안 됩니다."/>

@@ -7,7 +7,7 @@ import xml.etree.ElementTree as ET
 from pathlib import Path
 
 from decode_saves_xml_e import detect_text_encoding
-from text_layout import strip_wrap_boundary_breaks
+from text_layout import reflow_dialogue_layout
 
 # Only these subfolders are genuinely plain XML in the game's romfs. Every
 # other Saves subfolder (item, misogi, tweet, achievement, ...) is scrambled
@@ -57,7 +57,7 @@ def main():
                 if attribute not in element.attrib:
                     continue
                 text = element.attrib[attribute]
-                text = strip_wrap_boundary_breaks(text)
+                text = reflow_dialogue_layout(text)
                 missing = sorted({c for c in text if "가" <= c <= "힣" and c not in mapping})
                 if missing:
                     chars = "".join(missing)

@@ -8,7 +8,7 @@
 	<!--パネル-->
 	<image name="panel" pos="0,0" size_wh="450,90" style="gen_window03_npcmsg">
 		<!--メッセージ-->
-		<text name="msg_text" pos="5,25" pos_ratio_x="0.05" drop_shadow="false" line_char_length="20" font_size="20" text="아이우에오카키쿠케코사사먹고있을때가아냐피부로걷기아르노사쥬세르노사쥬파괴신공용어「」【】・?!123ab"/>
+		<text name="msg_text" pos="5,25" pos_ratio_x="0.05" drop_shadow="false" line_char_length="24" font_size="20" text="아이우에오카키쿠케코사사먹고있을때가아냐피부로걷기아르노사쥬세르노사쥬파괴신공용어「」【】・?!123ab"/>
 		<!--名前表示欄-->
 		<image name="name_base" pos="16,-14" style="gen_common02_acce02">
 			<text name="name_text" pos="15,11" drop_shadow="false" font_size="16" text="캐스캐스"/>

@@ -22,6 +22,26 @@ PATCHES = (
     (0x695897, 18, "보조영창강화"),
 )
 
+# PC판과 동일한 이벤트 메시지 24자 런타임 제한을 스위치에도 적용한다.
+# 1.0.1 NSO의 이벤트 메시지 루틴에는 line_char_length와 별개로
+#   - 폭 640.0 (= 20 * 32)
+#   - 줄당 글자 수 20
+# 을 직접 설정하는 코드가 두 경로에 존재한다.
+# 공유 640.0 상수는 다른 UI에서도 사용하므로 전역 상수는 수정하지 않고,
+# 해당 이벤트 루틴 안에서만 768.0 (= 24 * 32)을 즉석 생성한다.
+RAW_PATCHES = (
+    # adrp x8, 0x72d000 ; ldr s0, [x8,#0x59c]
+    # -> mov w8,#768 ; scvtf s0,w8
+    (0x133670, bytes.fromhex("c82f00d0"), bytes.fromhex("08608052")),
+    (0x133674, bytes.fromhex("009d45bd"), bytes.fromhex("0001221e")),
+    # mov w1,#20 -> mov w1,#24
+    (0x133694, bytes.fromhex("81028052"), bytes.fromhex("01038052")),
+    # 동일한 두 번째 경로
+    (0x133748, bytes.fromhex("c82f00d0"), bytes.fromhex("08608052")),
+    (0x13374C, bytes.fromhex("009d45bd"), bytes.fromhex("0001221e")),
+    (0x13376C, bytes.fromhex("81028052"), bytes.fromhex("01038052")),
+)
+
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
@@ -46,12 +66,18 @@ def main():
         records += len(payload).to_bytes(2, "big")
         records += payload
 
+    for offset, _original, payload in RAW_PATCHES:
+        records += (offset + 0x100).to_bytes(3, "big")
+        records += len(payload).to_bytes(2, "big")
+        records += payload
+
     records += b"EOF"
     output = args.output / "exefs_patches" / "ArNosurgeKoreanUI" / f"{BUILD_ID}.ips"
     output.parent.mkdir(parents=True, exist_ok=True)
     output.write_bytes(records)
     print(f"동적 UI IPS 생성: {output}")
     print(f"패치 문자열: {len(PATCHES)}개")
+    print(f"이벤트 메시지 24자 런타임 패치: {len(RAW_PATCHES)}개")
 
 
 if __name__ == "__main__":

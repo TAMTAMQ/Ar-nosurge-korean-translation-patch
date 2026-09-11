@@ -1,8 +1,8 @@
-"""게임의 20자 자동 줄바꿈과 겹치는 강제 <CR>을 정리한다.
+"""게임의 자동 줄바꿈과 겹치는 강제 <CR>을 정리한다.
 
-게임은 대사창을 20자에서 스스로 접는다(공백과 문장부호도 1자로 센다). 그래서
-20자를 이미 채운 조각 뒤의 <CR>은 중복이며, 그대로 두면 3줄짜리 창에 4줄이
-밀려 뒷부분이 잘린다.
+화면별 표시 폭이 서로 다르므로 줄당 표시 문자 수를 인자로 받는다. 기본값은
+기존 Saves 대화 계열의 20자이며, 이벤트 EBM은 24자, 필드 fm_talk는 22자를
+각 빌드 단계에서 명시해서 쓴다. 최대 행 수는 공통으로 3줄이다.
 
 <CR>을 지울 때는 그 자리를 공백으로 메운다. 일본어는 띄어쓰기가 없어 줄바꿈만
 지우면 되지만 한국어는 그 자리가 단어 경계라서, 그냥 이으면
@@ -17,9 +17,12 @@ import re
 
 
 LINE_WRAP_CHARS = 20
+EVENT_LINE_WRAP_CHARS = 24
+FM_TALK_LINE_WRAP_CHARS = 22
 MAX_LINES = 3
 CONTROL_CODE_PATTERN = re.compile(r"<[A-Za-z][A-Za-z0-9_]*>")
 COLOR_CODE_PATTERN = re.compile(r"<#[0-9A-Fa-f]+>")
+FORBIDDEN_LINE_START = frozenset(".,!?、。，．！？:;)]}」』】〉》〕］｝”’")
 
 
 def visible_units(text):
@@ -42,13 +45,8 @@ def tokenize(text):
             yield token, 1
 
 
-def drop_wrapped_leading_spaces(text):
-    """자동 개행 자리에 걸린 공백을 버린다.
-
-    게임은 20자를 채우면 그 자리에서 줄을 바꾼다. 그 경계에 공백이 오면 다음
-    줄 맨 앞에 공백 하나가 튀어나와 " 일로 시험받고 있는 거야."처럼 보인다.
-    줄이 이미 나뉘어 있으니 그 공백은 필요 없다.
-    """
+def drop_wrapped_leading_spaces(text, line_wrap_chars=LINE_WRAP_CHARS):
+    """자동 개행 자리에 걸린 공백을 버린다."""
     output = []
     column = 0
     at_wrap = False
@@ -58,11 +56,10 @@ def drop_wrapped_leading_spaces(text):
             column = 0
             at_wrap = False
             continue
-        if column >= LINE_WRAP_CHARS:
+        if column >= line_wrap_chars:
             column = 0
             at_wrap = True
         if at_wrap:
-            # 경계에 공백이 여러 개 몰려 있어도 전부 버린다.
             if token == " ":
                 continue
             at_wrap = False
@@ -84,39 +81,167 @@ def assemble(segments, spaced_joins):
     return text
 
 
-def strip_wrap_boundary_breaks(text):
-    """20자 이상인 조각 바로 뒤의 <CR>을 제거해 자동 줄바꿈에 맡긴다."""
+def _wrapped_line_starts(text, line_wrap_chars=LINE_WRAP_CHARS):
+    """게임의 자동 개행을 흉내 내 각 표시줄의 첫 토큰을 돌려준다."""
+    starts = []
+    for segment in text.split("<CR>"):
+        column = 0
+        at_line_start = True
+        for token, width in tokenize(segment):
+            if column >= line_wrap_chars:
+                column = 0
+                at_line_start = True
+            if token == " " and at_line_start:
+                continue
+            if at_line_start and width:
+                starts.append(token)
+                at_line_start = False
+            column += width
+    return starts
+
+
+def _needs_punctuation_reflow(text, line_wrap_chars=LINE_WRAP_CHARS):
+    starts = _wrapped_line_starts(text, line_wrap_chars)
+    return any(token in FORBIDDEN_LINE_START for token in starts[1:])
+
+
+def _rebalance_three_lines(text, line_wrap_chars=LINE_WRAP_CHARS, max_lines=MAX_LINES):
+    """CR을 다시 배치해 지정 폭 이내 최대 max_lines줄로 균형 있게 나눈다."""
+    segments = text.split("<CR>")
+    flat = assemble(segments, set(range(1, len(segments))))
+    tokens = list(tokenize(flat))
+    if not tokens:
+        return text
+
+    if sum(width for _, width in tokens) > line_wrap_chars * max_lines:
+        return text
+
+    from functools import lru_cache
+
+    def skip_spaces(index):
+        while index < len(tokens) and tokens[index][0] == " ":
+            index += 1
+        return index
+
+    def first_visible(index):
+        index = skip_spaces(index)
+        while index < len(tokens) and tokens[index][1] == 0:
+            index += 1
+            index = skip_spaces(index)
+        return tokens[index][0] if index < len(tokens) else ""
+
+    @lru_cache(maxsize=None)
+    def solve(start, lines_left):
+        start = skip_spaces(start)
+        if start >= len(tokens):
+            return (0, ())
+        if lines_left <= 0:
+            return None
+
+        width = 0
+        best = None
+        for end in range(start + 1, len(tokens) + 1):
+            width += tokens[end - 1][1]
+            if width > line_wrap_chars:
+                break
+
+            trimmed_end = end
+            while trimmed_end > start and tokens[trimmed_end - 1][0] == " ":
+                trimmed_end -= 1
+            if trimmed_end == start:
+                continue
+            line_width = sum(w for _, w in tokens[start:trimmed_end])
+            next_start = skip_spaces(end)
+            if next_start < len(tokens) and first_visible(next_start) in FORBIDDEN_LINE_START:
+                continue
+
+            line = "".join(token for token, _ in tokens[start:trimmed_end])
+            if next_start >= len(tokens):
+                candidate = ((line_wrap_chars - line_width) ** 2, (line,))
+            else:
+                tail = solve(next_start, lines_left - 1)
+                if tail is None:
+                    continue
+                broke_at_space = end < len(tokens) and tokens[end][0] == " "
+                ended_with_punctuation = bool(line) and line[-1] in ",.!?…。！？"
+                if ended_with_punctuation:
+                    break_penalty = -25
+                elif broke_at_space:
+                    break_penalty = 0
+                else:
+                    break_penalty = 1000
+                candidate = (
+                    tail[0] + (line_wrap_chars - line_width) ** 2 + break_penalty,
+                    (line,) + tail[1],
+                )
+            if best is None or candidate[0] < best[0]:
+                best = candidate
+        return best
+
+    solved = solve(0, max_lines)
+    if solved is None:
+        return text
+    return "<CR>".join(solved[1])
+
+
+def strip_wrap_boundary_breaks(text, line_wrap_chars=LINE_WRAP_CHARS, max_lines=MAX_LINES):
+    """자동 줄바꿈 경계와 겹치는 강제 <CR>을 제거한다."""
     if "<CR>" not in text:
-        return drop_wrapped_leading_spaces(text)
+        return drop_wrapped_leading_spaces(text, line_wrap_chars)
     segments = text.split("<CR>")
 
-    # 1단계: 이미 20자를 채운 조각 뒤의 <CR>만 없앤다.
     merged = [segments[0]]
-    merged_joins = []
     for index in range(1, len(segments)):
-        if visible_units(segments[index - 1]) >= LINE_WRAP_CHARS:
+        if visible_units(segments[index - 1]) >= line_wrap_chars:
             separator = " " if needs_space(merged[-1], segments[index]) else ""
             merged[-1] += separator + segments[index]
-            merged_joins.append(index)
         else:
             merged.append(segments[index])
     result = "<CR>".join(merged)
-    if rendered_line_count(result) <= MAX_LINES:
-        return drop_wrapped_leading_spaces(result)
+    if rendered_line_count(result, line_wrap_chars) <= max_lines:
+        return drop_wrapped_leading_spaces(result, line_wrap_chars)
 
-    # 2단계: 그래도 창을 넘기면 남은 <CR>까지 푼다. 공백을 넣은 상태로 먼저
-    # 시도하고, 넘칠 때만 뒤쪽 이음새부터 공백을 하나씩 뺀다.
-    budget = LINE_WRAP_CHARS * MAX_LINES
+    budget = line_wrap_chars * max_lines
     joins = list(range(1, len(segments)))
     for glued in range(len(joins) + 1):
         spaced = set(joins[:len(joins) - glued])
         candidate = assemble(segments, spaced)
         if visible_units(candidate) <= budget:
-            return drop_wrapped_leading_spaces(candidate)
-    return drop_wrapped_leading_spaces(result)
+            return drop_wrapped_leading_spaces(candidate, line_wrap_chars)
+    return drop_wrapped_leading_spaces(result, line_wrap_chars)
 
 
-def rendered_line_count(text):
-    """20자 자동 개행과 남은 CR을 함께 반영한 예상 줄 수."""
-    return sum(max(1, (visible_units(part) + LINE_WRAP_CHARS - 1) // LINE_WRAP_CHARS)
+def reflow_dialogue_layout(text, line_wrap_chars=LINE_WRAP_CHARS, max_lines=MAX_LINES):
+    """지정한 폭×행 수에 맞춰 강제 개행을 정리하고 문장부호 고립을 줄인다."""
+    result = strip_wrap_boundary_breaks(text, line_wrap_chars, max_lines)
+    if (rendered_line_count(result, line_wrap_chars) <= max_lines and
+            _needs_punctuation_reflow(result, line_wrap_chars)):
+        balanced = _rebalance_three_lines(result, line_wrap_chars, max_lines)
+        # 자동 줄바꿈으로 충분한데 강제 CR을 새로 늘리면 다음 실행에서 그 CR을
+        # 다시 제거하는 왕복이 생길 수 있다. 같은 수 이하의 CR로 재배치될 때만
+        # 채택하여 반복 빌드가 항상 같은 결과가 되게 한다.
+        if balanced.count("<CR>") <= result.count("<CR>"):
+            result = balanced
+    return drop_wrapped_leading_spaces(result, line_wrap_chars)
+
+
+def reflow_event_dialogue_layout(text):
+    """이벤트 EBM의 기존 강제 개행을 풀어 24자×3줄 자동 줄바꿈에 맡긴다.
+
+    이벤트 번역의 <CR>은 과거 20자 창에 맞춘 레이아웃용 개행이므로, 전체가
+    72표시칸 이내면 모두 제거한다. 72칸을 넘는 특수 문자열은 기존 개행을 보존한
+    채 일반 정리만 적용한다.
+    """
+    segments = text.split("<CR>")
+    flattened = assemble(segments, set(range(1, len(segments))))
+    if visible_units(flattened) <= EVENT_LINE_WRAP_CHARS * MAX_LINES:
+        # 이벤트 창은 픽셀 폭(limit_width)으로 실제 줄바꿈하므로 한국어 공백을
+        # 문자 수 경계라고 추정해 삭제하지 않는다. 기존 레이아웃용 CR만 제거한다.
+        return flattened
+    return reflow_dialogue_layout(text, EVENT_LINE_WRAP_CHARS, MAX_LINES)
+
+
+def rendered_line_count(text, line_wrap_chars=LINE_WRAP_CHARS):
+    """지정한 자동 개행 폭과 남은 CR을 함께 반영한 예상 줄 수."""
+    return sum(max(1, (visible_units(part) + line_wrap_chars - 1) // line_wrap_chars)
                for part in text.split("<CR>"))
