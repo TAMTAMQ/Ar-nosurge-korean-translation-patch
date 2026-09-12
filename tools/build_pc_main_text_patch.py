@@ -25,6 +25,17 @@ import sys
 from collections import defaultdict
 
 
+# PC판 .rdata에는 일부 표시 문자열이 앞 NUL 없이 구조체/테이블 데이터 바로 뒤에
+# 놓여 있다. 일반 검색의 앞 NUL 조건을 풀면 더 긴 문자열의 꼬리를 오인할 수 있으므로,
+# 실제 1.0.1 원본 EXE에서 확인한 세 항목만 파일 오프셋을 고정한다. 사용 시에는 아래
+# 오프셋의 원문 바이트와 뒤 NUL을 다시 검증하므로 다른 EXE에서는 조용히 잘못 쓰지 않는다.
+PACKED_STRING_OFFSETS = {
+    489: 0x46F8B0,   # いいよ！
+    2640: 0x56B920,  # ダミー
+    2777: 0x56EAE8,  # 結城　柑菜
+}
+
+
 def sections(data):
     pe = struct.unpack_from("<I", data, 0x3C)[0]
     nsec = struct.unpack_from("<H", data, pe + 6)[0]
@@ -121,8 +132,10 @@ def main():
     writes = {}            # 파일 오프셋 -> payload
     stats = defaultdict(int)
     overflow, notfound, unmapped = [], [], []
+    packed_slots_used = []
 
     for row in rows:
+        row_index = int(row["index"])
         original = row["original"]
         translation = row["translation"]
 
@@ -141,6 +154,22 @@ def main():
             if found:
                 hits, needle, chosen = found, probe, cand_translation
                 break
+
+        if not hits and row_index in PACKED_STRING_OFFSETS:
+            # 이 세 항목은 앞 NUL이 없는 테이블 항목이다. 정확한 원문과 뒤 NUL을
+            # 동시에 확인한 경우에만 예외 슬롯으로 인정한다.
+            manual = PACKED_STRING_OFFSETS[row_index]
+            probe = original.encode("utf-8")
+            end = manual + len(probe)
+            if (lo <= manual < hi and end < hi and
+                    data[manual:end] == probe and data[end] == 0):
+                hits, needle, chosen = [manual], probe, translation
+                packed_slots_used.append({
+                    "index": row_index,
+                    "offset": hex(manual),
+                    "original": original,
+                })
+                stats["packed_slot"] += 1
 
         if not hits:
             notfound.append({"index": row["index"], "original": original})
@@ -196,6 +225,7 @@ def main():
         "overflow_detail": overflow[:200],
         "not_found_detail": notfound[:200],
         "unmapped_detail": unmapped[:200],
+        "packed_string_slots_used": packed_slots_used,
     }
     args.report.parent.mkdir(parents=True, exist_ok=True)
     args.report.write_text(json.dumps(report, ensure_ascii=False, indent=2),
