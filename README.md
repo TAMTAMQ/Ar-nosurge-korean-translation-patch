@@ -117,7 +117,7 @@ mods/contents/01003cf0128de000/korean_final/exefs/28F3C3965CEB60AC18A23E2B2C0C4B
 3. `install.bat`를 실행하고 폴더 선택 창에서 `ArnosurgeDX.exe`가 있는 게임 폴더를
    선택합니다.
 
-설치 전 파일은 게임 폴더의 `KoreanPatchBackup-v0.2`에 자동으로 보관됩니다.
+설치 전 파일은 게임 폴더의 `KoreanPatchBackup-v0.3`에 자동으로 보관됩니다.
 패치를 제거하려면 같은 폴더에서 `uninstall.bat`를 실행한 뒤 같은 게임 폴더를
 선택하세요.
 

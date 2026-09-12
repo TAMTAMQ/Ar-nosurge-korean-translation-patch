@@ -61,7 +61,8 @@
 
 - 대상: `Saves/ui/main_menu/uil_main_menu_story_outline.xml`의 본문 `text`.
 - `line_char_length`는 **33**을 사용한다. 기존 25자로 되돌리지 않는다.
-- 제목, 패널, 하이라이트 크기는 별도 확인 없이 변경하지 않는다.
+- 확장된 카드 UI 폭을 유지한다: `flow_prev_line/flow_next_line` X=`299`, `window_bg` 폭=`562`, 외곽 `etc_window02_04` 폭=`599`, `title_bg`/본문 줄 배경 폭=`564`, `highlight` 폭=`604`.
+- 위 카드 폭은 실게임 테스트본에서 확인된 값이므로 별도 요청 없이 원래의 좁은 값(`253/474/511/476/516`)으로 되돌리지 않는다.
 
 ### 필드 `fm_talk_data`
 

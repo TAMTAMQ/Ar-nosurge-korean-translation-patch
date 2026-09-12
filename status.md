@@ -397,7 +397,7 @@ python tools/build_final_korean_mod.py `
 |---|---|---|
 | 용어집 상세 | `Saves/ui/glossary/uil_glossary_info.xml` | X `748`, 패널 폭 `461`, 본문 배경 폭 `424`, `line_char_length=23`, 이름 바 `434/395`, 이름 X `180`, 페이지 탭 X `448` |
 | 미션/에피소드 안내 | `Saves/ui/main_menu/uil_main_menu_top.xml` | `line_char_length=17` |
-| 히스토리/스토리 개요 | `Saves/ui/main_menu/uil_main_menu_story_outline.xml` | `line_char_length=33` |
+| 히스토리/스토리 개요 | `Saves/ui/main_menu/uil_main_menu_story_outline.xml` | `line_char_length=33`, 카드 폭 확장 유지 (`flow X=299`, `window_bg=562`, 외곽=599, 제목/줄 배경=564, highlight=604`) |
 | 아이템 설명 | `Saves/ui/item_info/uil_item_info_page_itemtext.xml` | `line_char_length=18` |
 | 캐릭터 도감 상세 | `Saves/ui/library/uil_character_detail.xml` | `line_char_length=19`, `limit_width=426.66` 유지 |
 | 몬스터 도감 상세 | `Saves/ui/library/uil_monster_detail.xml` | `line_char_length=17`, `limit_width=360` 유지 |

@@ -13,7 +13,11 @@ PC 판은 루즈 파일 오버라이드가 동작하지 않으므로 PAK 을 다
 
 PACK00_01 은 1.4GB 라 폰트와 텍스처 몇 개 때문에 통째로 재포장하는 것이 너무
 비싸다. 이 파일들은 교체본과 원본의 바이트 수가 같으므로 인덱스를 건드리지 않고
-제자리에서 덮어쓴다. PACK01 / PACK02 는 작아서 gust_pak 으로 재포장한다.
+제자리에서 덮어쓴다. 단 폰트/UI G1T는 Switch 기반 번역본 전체를 넣지 않는다.
+`<IMxx>` 인라인 버튼 아이콘은 MainFont의 플랫폼 전용 영역에 있고 UI에도 일부
+플랫폼 전용 픽셀이 있으므로, `pc_ui_texture_merge.py`로 한국어 수정이 실제로 일어난
+압축 블록만 PC 원본 G1T에 이식한다. PACK01 / PACK02는 작아서 gust_pak 으로
+재포장한다.
 
 두 가지 모드가 있다.
 
@@ -28,6 +32,8 @@ import re
 import shutil
 import subprocess
 import sys
+
+from pc_ui_texture_merge import merge_font_g1t, merge_ui_g1t
 
 PLATFORM_OFFSET = 0x14
 PC_PLATFORM = 0x0A
@@ -290,34 +296,82 @@ def install(args):
     font = romfs / "Data" / "NX" / "Font" / "MainFont_nx_0.g1t"
     if font.is_file():
         offset, size = entries[FONT_KEY]
-        payload = bytearray(font.read_bytes())
-        if payload[:4] != G1T_MAGIC:
-            sys.exit(f"오류: G1T 매직이 아닙니다: {font}")
-        # 공통 빌드의 폰트는 Switch G1T(0x10) 기준으로 생성된다.
-        # PC PAK에 그대로 넣으면 로더가 시작 단계에서 종료될 수 있으므로
-        # UI 텍스처와 동일하게 플랫폼 바이트를 PC(0x0A)로 맞춘다.
-        payload[PLATFORM_OFFSET] = PC_PLATFORM
-        if len(payload) != size:
-            sys.exit(f"오류: 폰트 크기가 다릅니다 {len(payload)} != {size}. 재포장이 필요합니다.")
-        changed = write_entry(pak, offset, bytes(payload), G1T_MAGIC)
-        print(f"  폰트: {'교체' if changed else '이미 동일'}")
+        pc_font = originals / "mainfont_x64_0.g1t"
+        if not pc_font.is_file():
+            sys.exit(f"오류: PC 원본 폰트가 없습니다: {pc_font}")
+        if not args.switch_romfs or not args.switch_romfs.is_dir():
+            sys.exit(
+                "오류: PC용 한글 폰트는 Switch 기반 폰트 전체를 넣으면 <IMxx> 버튼 "
+                "아이콘까지 Switch판으로 바뀝니다. PC 원본 인라인 아이콘을 보존해 "
+                "합성하려면 --switch-romfs 로 손대지 않은 Switch romfs를 지정하세요."
+            )
+        switch_font = find_ci(args.switch_romfs, "Data/NX/Font/MainFont_nx_0.g1t")
+        if switch_font is None:
+            sys.exit("오류: Switch 원본 MainFont_nx_0.g1t를 찾지 못했습니다")
+        try:
+            merged, font_report = merge_font_g1t(pc_font, switch_font, font)
+        except ValueError as exc:
+            sys.exit(f"오류: PC 폰트 합성 실패: {exc}")
+        if len(merged) != size:
+            sys.exit(f"오류: 폰트 크기가 다릅니다 {len(merged)} != {size}. 재포장이 필요합니다.")
+        changed = write_entry(pak, offset, merged, G1T_MAGIC)
+        print(f"  폰트: {'PC 원본+한글 블록 합성' if changed else '이미 동일'}")
+        print(
+            f"    한글 수정 {font_report['translated_blocks']}블록 / "
+            f"PC 전용 인라인 아이콘 보존 {font_report['platform_blocks_preserved']}블록 / "
+            "충돌 0"
+        )
+        print(
+            f"    한글 영역 {font_report['translated_bbox']} / "
+            f"PC 전용 영역 {font_report['platform_bbox']}"
+        )
 
     ui_dir = romfs / "Data" / "NX" / "ui"
-    for source in sorted(ui_dir.glob("*.g1t")) if ui_dir.is_dir() else []:
+    repo = pathlib.Path(__file__).resolve().parents[1]
+    # PC판 공통 UI로 실제 이식/검증한 네 컨테이너만 처리한다. Switch 빌드에는
+    # acps3_bios_explanation*.g1t 등 추가 번역 텍스처가 있지만, PC 원본 대조 없이
+    # 그 파일들을 그대로 넣으면 다시 플랫폼 전용 그래픽이 섞일 수 있다.
+    pc_ui_sources = [ui_dir / f"{name}.g1t" for name in UI_NAMES]
+    for source in [p for p in pc_ui_sources if p.is_file()]:
         key = ui_key(source.name.lower())
         if key not in entries:
             print(f"  건너뜀: {key} 없음")
             continue
         offset, size = entries[key]
-        payload = bytearray(source.read_bytes())
+        if not args.switch_romfs or not args.switch_romfs.is_dir():
+            sys.exit(
+                "오류: PC용 번역 UI는 Switch 기반 G1T 전체를 넣으면 패드 아이콘까지 "
+                "Switch판으로 바뀝니다. PC 원본 아이콘을 보존해 합성하려면 "
+                "--switch-romfs 로 손대지 않은 Switch romfs를 지정하세요."
+            )
+        pc_original = originals / "ui" / source.name.lower()
+        if not pc_original.is_file():
+            sys.exit(f"오류: PC 원본 UI G1T가 없습니다: {pc_original}")
+        switch_original = find_ci(args.switch_romfs, f"Data/NX/ui/{source.name}")
+        if switch_original is None:
+            sys.exit(f"오류: Switch 원본 UI G1T를 찾지 못했습니다: {source.name}")
+        try:
+            merged, merge_report = merge_ui_g1t(
+                pc_original,
+                switch_original,
+                source,
+                repo / "originalImage",
+                repo / "translateImage",
+            )
+        except ValueError as exc:
+            sys.exit(f"오류: {source.name} PC UI 합성 실패: {exc}")
+        payload = bytearray(merged)
         if payload[:4] != G1T_MAGIC:
-            sys.exit(f"오류: G1T 매직이 아닙니다: {source}")
-        # 번역 텍스처는 스위치 원본 위에서 만든 것이라 플랫폼 바이트가 0x10 이다.
-        payload[PLATFORM_OFFSET] = PC_PLATFORM
+            sys.exit(f"오류: 합성 결과가 G1T가 아닙니다: {source.name}")
         if len(payload) != size:
             sys.exit(f"오류: {source.name} 크기가 다릅니다 {len(payload)} != {size}.")
         changed = write_entry(pak, offset, bytes(payload), G1T_MAGIC)
-        print(f"  UI {source.name}: {'교체' if changed else '이미 동일'}")
+        print(f"  UI {source.name}: {'PC 원본+한국어 블록 합성' if changed else '이미 동일'}")
+        for item in merge_report:
+            print(
+                f"    {item['page']}: 한국어 {item['translated_blocks']}블록 / "
+                f"PC 전용 보존 {item['pc_switch_blocks_preserved']}블록 / 충돌 0"
+            )
 
     apply_switch_g1t(args, pak, entries)
 

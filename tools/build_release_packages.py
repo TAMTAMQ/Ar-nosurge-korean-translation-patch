@@ -1,0 +1,179 @@
+#!/usr/bin/env python3
+"""현재 빌드 결과와 이전 릴리스의 동영상/설치 스크립트를 조합해 배포 ZIP을 만든다."""
+from __future__ import annotations
+
+import argparse
+import hashlib
+import json
+import pathlib
+import zipfile
+
+TITLE_ID = "01003CF0128DE000"
+MOVIES = {"opening", "prologue", "seq02", "seq03", "seq04", "seq05", "tm_felion_D"}
+
+
+def sha(data: bytes) -> str:
+    return hashlib.sha256(data).hexdigest()
+
+
+def write_bytes(z: zipfile.ZipFile, name: str, data: bytes) -> None:
+    # 영상/PAK/G1T는 이미 압축된 데이터라 재압축 이득이 거의 없다.
+    z.writestr(name, data, compress_type=zipfile.ZIP_DEFLATED, compresslevel=6)
+
+
+def donor_root(z: zipfile.ZipFile) -> str:
+    roots = {n.split("/", 1)[0] for n in z.namelist() if "/" in n}
+    if len(roots) != 1:
+        raise SystemExit("donor ZIP 최상위 폴더를 하나로 확정할 수 없습니다")
+    return next(iter(roots))
+
+
+def unique_entry(z: zipfile.ZipFile, suffix: str) -> bytes:
+    hits = [n for n in z.namelist() if n.endswith(suffix)]
+    if len(hits) != 1:
+        raise SystemExit(f"ZIP 항목을 하나로 확정할 수 없습니다: {suffix}")
+    return z.read(hits[0])
+
+
+def update_version_text(data: bytes, old: str, new: str) -> bytes:
+    # PowerShell 스크립트는 UTF-8 BOM일 수 있다.
+    text = data.decode("utf-8-sig")
+    text = text.replace(f"KoreanPatchBackup-{old}", f"KoreanPatchBackup-{new}")
+    return ("\ufeff" + text).encode("utf-8")
+
+
+def pc_readme(version: str) -> bytes:
+    return ("\ufeff" + f"""Ar nosurge DX 한국어 패치 PC판 {version}\n\n1. PC-Patch ZIP을 원하는 폴더에 풉니다.\n2. 동영상 자막도 적용하려면 PC-Movies ZIP을 같은 폴더에 덮어 풉니다.\n3. install.bat를 실행하고 ArnosurgeDX.exe가 있는 게임 폴더를 선택합니다.\n\n제거할 때는 uninstall.bat를 실행하세요.\n""").encode("utf-8")
+
+
+def switch_readme(version: str) -> bytes:
+    return ("\ufeff" + f"""Ar nosurge DX 한국어 패치 Nintendo Switch판 {version}\n\n1. Switch-Patch ZIP을 풉니다.\n2. 동영상 자막도 적용하려면 Switch-Movies ZIP을 같은 위치에 덮어 풉니다.\n3. setup_switch.bat을 실행합니다.\n4. Atmosphere 또는 Ryujinx와 60FPS 패치 적용 여부를 선택합니다.\n""").encode("utf-8")
+
+
+def movie_readme(label: str, version: str) -> bytes:
+    return ("\ufeff" + f"Ar nosurge DX 한국어 패치 {label} 동영상 팩 {version}\n\n자막이 합성된 완성 동영상 7개입니다. 같은 버전의 Patch ZIP과 함께 사용하세요.\n").encode("utf-8")
+
+
+def build_pc(repo: pathlib.Path, donor: pathlib.Path, version: str, base_version: str) -> tuple[pathlib.Path, pathlib.Path]:
+    releases = repo / "releases"
+    releases.mkdir(exist_ok=True)
+    patch_out = releases / f"ArNosurgeDX-Korean-{version}-PC-Patch.zip"
+    movies_out = releases / f"ArNosurgeDX-Korean-{version}-PC-Movies.zip"
+    root = f"ArNosurgeDX-Korean-{version}-PC"
+    game = repo / "Ar.Nosurge.DX_PC"
+    pak00 = game / "Data" / "PACK00_01.PAK"
+
+    with zipfile.ZipFile(donor) as zin:
+        old_root = donor_root(zin)
+        pack_manifest = json.loads(zin.read(f"{old_root}/payload/pack00_manifest.json").decode("utf-8"))
+        files_manifest = json.loads(zin.read(f"{old_root}/payload/files_manifest.json").decode("utf-8"))
+
+        # 현재 PACK00_01에서 릴리스 대상 엔트리를 정확한 오프셋/크기로 다시 읽는다.
+        pak_blob = pak00.read_bytes()
+        pack_payloads: dict[str, bytes] = {}
+        for entry in pack_manifest["entries"]:
+            off, size = entry["offset"], entry["size"]
+            payload = pak_blob[off:off + size]
+            if len(payload) != size:
+                raise SystemExit(f"PACK00 readback 실패: {entry['name']}")
+            entry["sha256"] = sha(payload)
+            pack_payloads[entry["payload"]] = payload
+
+        patch_files = {
+            "ArnosurgeDX.exe": (game / "ArnosurgeDX.exe").read_bytes(),
+            "Data\\PACK01.PAK": (game / "Data" / "PACK01.PAK").read_bytes(),
+            "Data\\PACK02.PAK": (game / "Data" / "PACK02.PAK").read_bytes(),
+        }
+        movie_files = {f"Data\\x64\\Movie\\{name}.wmv": (game / "Data" / "x64" / "Movie" / f"{name}.wmv").read_bytes() for name in sorted(MOVIES)}
+        all_files = {**patch_files, **movie_files}
+        files_manifest["files"] = [
+            {"path": path, "size": len(data), "sha256": sha(data)} for path, data in all_files.items()
+        ]
+
+        install_bat = unique_entry(zin, "/install.bat")
+        uninstall_bat = unique_entry(zin, "/uninstall.bat")
+        installer = update_version_text(unique_entry(zin, "/install_pc_patch.ps1"), base_version, version)
+        uninstaller = update_version_text(unique_entry(zin, "/uninstall_pc_patch.ps1"), base_version, version)
+
+        with zipfile.ZipFile(patch_out, "w", allowZip64=True) as zout:
+            write_bytes(zout, f"{root}/install.bat", install_bat)
+            write_bytes(zout, f"{root}/uninstall.bat", uninstall_bat)
+            write_bytes(zout, f"{root}/install_pc_patch.ps1", installer)
+            write_bytes(zout, f"{root}/uninstall_pc_patch.ps1", uninstaller)
+            write_bytes(zout, f"{root}/README.txt", pc_readme(version))
+            for path, data in patch_files.items():
+                write_bytes(zout, f"{root}/payload/files/{path.replace(chr(92), '/')}", data)
+            write_bytes(zout, f"{root}/payload/files_manifest.json", json.dumps(files_manifest, ensure_ascii=False, indent=2).encode("utf-8"))
+            write_bytes(zout, f"{root}/payload/pack00_manifest.json", json.dumps(pack_manifest, ensure_ascii=False, indent=2).encode("utf-8"))
+            for name, data in pack_payloads.items():
+                write_bytes(zout, f"{root}/payload/pack00/{name}", data)
+
+        with zipfile.ZipFile(movies_out, "w", allowZip64=True) as zout:
+            write_bytes(zout, f"{root}/install.bat", install_bat)
+            write_bytes(zout, f"{root}/uninstall.bat", uninstall_bat)
+            write_bytes(zout, f"{root}/install_pc_patch.ps1", installer)
+            write_bytes(zout, f"{root}/uninstall_pc_patch.ps1", uninstaller)
+            write_bytes(zout, f"{root}/README-MOVIES.txt", movie_readme("PC", version))
+            write_bytes(zout, f"{root}/payload/files_manifest.json", json.dumps(files_manifest, ensure_ascii=False, indent=2).encode("utf-8"))
+            for path, data in movie_files.items():
+                write_bytes(zout, f"{root}/payload/files/{path.replace(chr(92), '/')}", data)
+    return patch_out, movies_out
+
+
+def build_switch(repo: pathlib.Path, donor: pathlib.Path, version: str) -> tuple[pathlib.Path, pathlib.Path]:
+    releases = repo / "releases"
+    patch_out = releases / f"ArNosurgeDX-Korean-{version}-Switch-Patch.zip"
+    movies_out = releases / f"ArNosurgeDX-Korean-{version}-Switch-Movies.zip"
+    root = f"ArNosurgeDX-Korean-{version}-Switch"
+    atmosphere = repo / "atmosphere"
+    templates = repo / "tools" / "release_templates"
+
+    with zipfile.ZipFile(patch_out, "w", allowZip64=True) as zout:
+        content_root = atmosphere / "contents" / TITLE_ID / "romfs"
+        for src in sorted(p for p in content_root.rglob("*") if p.is_file()):
+            rel = src.relative_to(content_root).as_posix()
+            write_bytes(zout, f"{root}/payload/romfs/{rel}", src.read_bytes())
+        for patch_name in ("ArNosurgeKoreanUI", "ArNosurgeFpsUnlock"):
+            src_root = atmosphere / "exefs_patches" / patch_name
+            if src_root.is_dir():
+                for src in sorted(p for p in src_root.rglob("*") if p.is_file()):
+                    rel = src.relative_to(src_root).as_posix()
+                    write_bytes(zout, f"{root}/payload/exefs/{patch_name}/{rel}", src.read_bytes())
+        write_bytes(zout, f"{root}/setup_switch.bat", (templates / "setup_switch.bat").read_bytes())
+        write_bytes(zout, f"{root}/build_switch_layout.ps1", (templates / "build_switch_layout.ps1").read_bytes())
+        write_bytes(zout, f"{root}/README.txt", switch_readme(version))
+
+    # Switch 동영상은 v0.2 검증본을 그대로 재사용한다.
+    with zipfile.ZipFile(donor) as zin, zipfile.ZipFile(movies_out, "w", allowZip64=True) as zout:
+        old_root = donor_root(zin)
+        for info in zin.infolist():
+            if info.is_dir():
+                continue
+            rel = info.filename[len(old_root) + 1:].replace("\\", "/")
+            stem = pathlib.PurePosixPath(rel).stem
+            if stem in MOVIES and rel.lower().endswith(".mp4"):
+                write_bytes(zout, f"{root}/payload/romfs/Data/NX/Movie/{pathlib.PurePosixPath(rel).name}", zin.read(info.filename))
+        write_bytes(zout, f"{root}/setup_switch.bat", (templates / "setup_switch.bat").read_bytes())
+        write_bytes(zout, f"{root}/build_switch_layout.ps1", (templates / "build_switch_layout.ps1").read_bytes())
+        write_bytes(zout, f"{root}/README-MOVIES.txt", movie_readme("Switch", version))
+    return patch_out, movies_out
+
+
+def main() -> None:
+    repo = pathlib.Path(__file__).resolve().parents[1]
+    ap = argparse.ArgumentParser(description=__doc__)
+    ap.add_argument("--version", default="v0.3")
+    ap.add_argument("--base-version", default="v0.2")
+    args = ap.parse_args()
+    sources = repo / "build" / "release_sources"
+    pc_donor = sources / f"ArNosurgeDX-Korean-{args.base_version}-PC.zip"
+    sw_donor = sources / f"ArNosurgeDX-Korean-{args.base_version}-Switch.zip"
+    if not pc_donor.is_file() or not sw_donor.is_file():
+        raise SystemExit("기존 전체 릴리스 ZIP을 build/release_sources에서 찾지 못했습니다")
+    outputs = [*build_pc(repo, pc_donor, args.version, args.base_version), *build_switch(repo, sw_donor, args.version)]
+    for p in outputs:
+        print(f"{p.name}: {p.stat().st_size:,} bytes sha256={sha(p.read_bytes())}")
+
+
+if __name__ == "__main__":
+    main()
