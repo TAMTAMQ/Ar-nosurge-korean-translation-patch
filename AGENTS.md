@@ -7,6 +7,7 @@
 - 번역 편집 권위본은 `translations/` 아래 파일이다. `atmosphere/`는 생성 결과물이므로 직접 수정하지 않는다.
 - 일본어 원문은 `originalText/`를 기준으로 대조하며 원문 데이터 자체를 번역 작업 때문에 수정하지 않는다.
 - 고유명사·세계관 용어는 `tools/translate_main_japanese.py`와 `tools/translate_saves_with_ollama.py`의 `GLOSSARY`, 그리고 기존 확정 번역을 우선한다. 임의로 다른 표기를 만들지 않는다.
+- `カソード`의 한국어 표기는 **`캐소드`**로 고정한다. `카소드`를 사용하지 않는다.
 
 ## 말투와 호칭
 
