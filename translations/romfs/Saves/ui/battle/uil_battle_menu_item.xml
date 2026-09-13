@@ -28,9 +28,9 @@
 				</anim_ctrl>
 			</node>
 			<node visible="true">
-				<text name="menu0" text="시마법 발동" font_size="26" pos="640,290,0" align="center"/>
+				<text name="menu0" text="시 발동" font_size="26" pos="640,290,0" align="center"/>
 				<text name="menu1" text="아이템" font_size="26" pos="640,328,0" align="center"/>
-				<text name="menu2" text="친구 기술" font_size="26" pos="640,366,0" align="center"/>
+				<text name="menu2" text="프렌드 기술" font_size="26" pos="640,366,0" align="center"/>
 				<text name="menu3" text="도망치기" font_size="26" pos="640,404,0" align="center"/>
 			</node>
 		</node>

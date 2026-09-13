@@ -7,6 +7,7 @@ import xml.etree.ElementTree as ET
 from pathlib import Path
 
 from decode_saves_xml_e import detect_text_encoding
+from rename_term import rename as normalize_terms
 from text_layout import reflow_dialogue_layout
 
 # Only these subfolders are genuinely plain XML in the game's romfs. Every
@@ -57,6 +58,7 @@ def main():
                 if attribute not in element.attrib:
                     continue
                 text = element.attrib[attribute]
+                text = normalize_terms(text)
                 text = reflow_dialogue_layout(text)
                 missing = sorted({c for c in text if "가" <= c <= "힣" and c not in mapping})
                 if missing:

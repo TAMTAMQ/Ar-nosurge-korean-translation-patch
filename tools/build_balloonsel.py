@@ -14,6 +14,7 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 
 from balloonsel import build, parse
+from rename_term import rename as normalize_terms
 
 REPO = Path(__file__).resolve().parents[1]
 
@@ -49,7 +50,8 @@ def main():
         if len(a) != len(b):
             raise SystemExit(f"그룹 {index} 선택지 수 불일치: {len(a)} != {len(b)}")
 
-    encoded = [[substitute(option, mapping) for option in group] for group in groups]
+    encoded = [[substitute(normalize_terms(option), mapping) for option in group]
+               for group in groups]
     args.output.parent.mkdir(parents=True, exist_ok=True)
     data = build(encoded)
     args.output.write_bytes(data)

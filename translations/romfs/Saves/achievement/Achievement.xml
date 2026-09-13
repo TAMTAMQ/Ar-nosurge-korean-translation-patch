@@ -34,7 +34,7 @@
 	<Achievement Name="LV2-8 이온은 어떤 사람？" cntDelta="1" startEv="EVENT_MS21_020" WorkCond="ACHIEVEMENT_WORK_COND_EV_TAG_KIND" Prm1="EVENT_C11_6_040"/>
 	<Achievement Name="LV2-9 네이에 대하여" cntDelta="1" startEv="EVENT_MS21_020" WorkCond="ACHIEVEMENT_WORK_COND_EV_TAG_KIND" Prm1="EVENT_SWC03_110"/>
 	<Achievement Name="LV2-10 왕도 만세！！" cntDelta="1" startEv="EVENT_MS21_020" map="FIELDMAP_TOWN02_05" WorkCond="ACHIEVEMENT_WORK_COND_FLD_ENTER"/>
-	<Achievement Name="LV2-11 만슈라의 추억" cntDelta="1" startEv="EVENT_C11_5_100" map="FIELDMAP_AREA09_01" WorkCond="ACHIEVEMENT_WORK_COND_FLD_ENTER"/>
+	<Achievement Name="LV2-11 만쥬사라의 추억" cntDelta="1" startEv="EVENT_C11_5_100" map="FIELDMAP_AREA09_01" WorkCond="ACHIEVEMENT_WORK_COND_FLD_ENTER"/>
 	<Achievement Name="LV2-12 네이의 미소기 장소에 대하여" cntDelta="1" startEv="EVENT_MS21_020" map="FIELDMAP_AREA02_07" WorkCond="ACHIEVEMENT_WORK_COND_FLD_ENTER"/>
 	<Achievement Name="LV2-13 진실인가 거짓인가？" cntDelta="1" startEv="EVENT_MS21_020" WorkCond="ACHIEVEMENT_WORK_COND_EV_TAG_KIND" Prm1="EVENT_IM21_140"/>
 	<Achievement Name="캐스 Ｌｖ２＿１４" cntDelta="1" startEv="EVENT_MS21_020" WorkCond="ACHIEVEMENT_WORK_COND_EV_TAG_KIND" Prm1="EVENT_ZZ01_010"/>
@@ -327,7 +327,7 @@
 	<Achievement Name="LV3-3 남자의 본능" cntDelta="1" startEv="EVENT_MS21_120" WorkCond="ACHIEVEMENT_WORK_COND_EV_FLAG_CNT" Prm1="EVENT_FLAG_KANON_MISOGI_TALK_COUNT_DELTA" Prm2="8"/>
 	<Achievement Name="LV3-4 샤르가 준 책" cntAvatar="1" startEv="EVENT_MS21_130" WorkCond="ACHIEVEMENT_WORK_COND_MATTER_KIND" Prm1="TALK_MATTER_NEI_LV03_01"/>
 	<Achievement Name="LV3-5 이상한 샤르" cntAvatar="1" startEv="EVENT_MS21_130" WorkCond="ACHIEVEMENT_WORK_COND_EV_TAG_KIND" Prm1="EVENT_C22_3_030"/>
-	<Achievement Name="LV3-6 샤르 일행에게 대인기" cntAvatar="1" startEv="EVENT_MS21_130" WorkCond="ACHIEVEMENT_WORK_COND_EV_TAG_KIND" Prm1="EVENT_IM22_210"/>
+	<Achievement Name="LV3-6 샤르들에게 대인기" cntAvatar="1" startEv="EVENT_MS21_130" WorkCond="ACHIEVEMENT_WORK_COND_EV_TAG_KIND" Prm1="EVENT_IM22_210"/>
 	<Achievement Name="LV3-7 샤르의 애칭 점술" cntAvatar="1" startEv="EVENT_MS21_130" WorkCond="ACHIEVEMENT_WORK_COND_EV_TAG_KIND" Prm1="EVENT_IM42_200"/>
 	<Achievement Name="카논 Ｌｖ３＿０７" startEv="EVENT_MS21_090" WorkCond="ACHIEVEMENT_WORK_COND_EV_TAG_KIND" Prm1="EVENT_ZZ01_020"/>
 	<Achievement Name="카논 Ｌｖ３＿０８" startEv="EVENT_MS21_090" WorkCond="ACHIEVEMENT_WORK_COND_EV_TAG_KIND" Prm1="EVENT_ZZ01_020"/>
@@ -505,7 +505,7 @@
 	<Achievement Name="LV6-3（델타） 아쉬웠어" cntDelta="1" startEv="EVENT_XX01_100" map="FIELDMAP_AREA12_03" WorkCond="ACHIEVEMENT_WORK_COND_FLD_ENTER"/>
 	<Achievement Name="LV6-4（아셰스） 알려줘" cntAvatar="1" startEv="EVENT_XX01_110" WorkCond="ACHIEVEMENT_WORK_COND_EV_TAG_KIND" Prm1="EVENT_SWC07_100"/>
 	<Achievement Name="LV6-5（아셰스） 살아있길 잘했어" cntAvatar="1" startEv="EVENT_XX01_110" WorkCond="ACHIEVEMENT_WORK_COND_EV_TAG_KIND" Prm1="EVENT_C32_2_150"/>
-	<Achievement Name="LV6-6（아셰스） 아셰스 사람인가요？" cntAvatar="1" startEv="EVENT_XX01_110" map="FIELDMAP_TOWN05_03" WorkCond="ACHIEVEMENT_WORK_COND_FLD_ENTER"/>
+	<Achievement Name="LV6-6（아셰스） 아르시엘 사람인가요？" cntAvatar="1" startEv="EVENT_XX01_110" map="FIELDMAP_TOWN05_03" WorkCond="ACHIEVEMENT_WORK_COND_FLD_ENTER"/>
 	<Achievement Name="LV6-7（아셰스） 어른이니까 적당히 즐기는 정도로" cntAvatar="1" startEv="EVENT_XX01_110" map="FIELDMAP_AREA11_05" WorkCond="ACHIEVEMENT_WORK_COND_FLD_ENTER"/>
 	<Achievement Name="살리 Ｌｖ６＿０８" startEv="EVENT_XX01_100" WorkCond="ACHIEVEMENT_WORK_COND_EV_TAG_KIND" Prm1="EVENT_ZZ01_020"/>
 	<Achievement Name="살리 Ｌｖ６＿０９" startEv="EVENT_XX01_100" WorkCond="ACHIEVEMENT_WORK_COND_EV_TAG_KIND" Prm1="EVENT_ZZ01_020"/>
@@ -596,7 +596,7 @@
 	<Achievement Name="LV6-4（델타）" cntDelta="1" startEv="EVENT_XX01_120" WorkCond="ACHIEVEMENT_WORK_COND_ACHIEVEMENT_CLEAR" Prm1="ACHIEVEMENT_MATTER_NERO_LV06_04_1" Prm2="ACHIEVEMENT_MATTER_NERO_LV06_04_2"/>
 	<Achievement Name="LV6-4（델타）" cntDelta="1" startEv="EVENT_XX01_120" WorkCond="ACHIEVEMENT_WORK_COND_EV_TAG_KIND" Prm1="EVENT_C31_5_010"/>
 	<Achievement Name="LV6-4（델타）" cntDelta="1" startEv="EVENT_XX01_120" map="FIELDMAP_AREA11_04" WorkCond="ACHIEVEMENT_WORK_COND_FLD_ENTER"/>
-	<Achievement Name="LV6-5（아셰스） 아셰스를 알고 있어？" cntAvatar="1" startEv="EVENT_XX01_130" map="FIELDMAP_TOWN05_03" WorkCond="ACHIEVEMENT_WORK_COND_FLD_ENTER"/>
+	<Achievement Name="LV6-5（아셰스） 아르시엘을 알고 있어？" cntAvatar="1" startEv="EVENT_XX01_130" map="FIELDMAP_TOWN05_03" WorkCond="ACHIEVEMENT_WORK_COND_FLD_ENTER"/>
 	<Achievement Name="LV6-6（아셰스） 당신 세계의 지도자는？" cntAvatar="1" startEv="EVENT_XX01_130" WorkCond="ACHIEVEMENT_WORK_COND_EV_TAG_KIND" Prm1="EVENT_C32_4_090"/>
 	<Achievement Name="LV6-7（아셰스） 아셰스란……" cntAvatar="1" startEv="EVENT_XX01_130" WorkCond="ACHIEVEMENT_WORK_COND_EV_TAG_KIND" Prm1="EVENT_IM42_110"/>
 	<Achievement Name="네로 Ｌｖ６＿０８" startEv="EVENT_XX01_120" WorkCond="ACHIEVEMENT_WORK_COND_EV_TAG_KIND" Prm1="EVENT_ZZ01_020"/>
@@ -637,7 +637,7 @@
 	<Achievement Name="LV2-3（델타） 신경 안 써！！" cntDelta="1" startEv="EVENT_XX01_140" WorkCond="ACHIEVEMENT_WORK_COND_EV_TAG_KIND" Prm1="EVENT_IM21_170"/>
 	<Achievement Name="LV2-4（아셰스） 코잘에 대하여" cntAvatar="1" startEv="EVENT_XX01_150" WorkCond="ACHIEVEMENT_WORK_COND_EV_TAG_KIND" Prm1="EVENT_MT52_020"/>
 	<Achievement Name="LV2-5（아셰스） 아셰스는 알고 있다・１" cntAvatar="1" startEv="EVENT_XX01_150" WorkCond="ACHIEVEMENT_WORK_COND_EV_TAG_KIND" Prm1="EVENT_IM42_200"/>
-	<Achievement Name="LV2-6（아셰스） 아셰스의 유행" cntAvatar="1" startEv="EVENT_XX01_150" WorkCond="ACHIEVEMENT_WORK_COND_EV_TAG_KIND" Prm1="EVENT_IM12_450"/>
+	<Achievement Name="LV2-6（아셰스） 아르시엘의 유행" cntAvatar="1" startEv="EVENT_XX01_150" WorkCond="ACHIEVEMENT_WORK_COND_EV_TAG_KIND" Prm1="EVENT_IM12_450"/>
 	<Achievement Name="LV2-7（아셰스） 길을 잃지는 않아？" cntAvatar="1" startEv="EVENT_XX01_150" map="FIELDMAP_AREA12_01" WorkCond="ACHIEVEMENT_WORK_COND_FLD_ENTER"/>
 	<Achievement Name="슈레리아Ｌ ｖ２＿０８" startEv="EVENT_XX01_140" WorkCond="ACHIEVEMENT_WORK_COND_EV_TAG_KIND" Prm1="EVENT_ZZ01_020"/>
 	<Achievement Name="슈레리아Ｌ ｖ２＿０９" startEv="EVENT_XX01_140" WorkCond="ACHIEVEMENT_WORK_COND_EV_TAG_KIND" Prm1="EVENT_ZZ01_020"/>
@@ -681,7 +681,7 @@
 	<Achievement Name="LV5-3（델타） 아주 맛있는 것도 있어" cntDelta="1" startEv="EVENT_XX01_140" WorkCond="ACHIEVEMENT_WORK_COND_EV_TAG_KIND" Prm1="EVENT_IM11_030"/>
 	<Achievement Name="LV5-4（델타） 전투 중에 벗습니까？" cntDelta="1" startEv="EVENT_XX01_140" WorkCond="ACHIEVEMENT_WORK_COND_EV_TAG_KIND" Prm1="EVENT_MT55_050"/>
 	<Achievement Name="LV5-5（아셰스） 자세한 내용은 델타에게" cntAvatar="1" startEv="EVENT_XX01_150" WorkCond="ACHIEVEMENT_WORK_COND_EV_TAG_KIND" Prm1="EVENT_MT16_060"/>
-	<Achievement Name="LV5-6（아셰스） 아셰스 사람도 깜짝" cntAvatar="1" startEv="EVENT_XX01_150" WorkCond="ACHIEVEMENT_WORK_COND_ITEM_HAVE" Prm1="ITEM_T_042"/>
+	<Achievement Name="LV5-6（아셰스） 아르시엘 사람도 깜짝" cntAvatar="1" startEv="EVENT_XX01_150" WorkCond="ACHIEVEMENT_WORK_COND_ITEM_HAVE" Prm1="ITEM_T_042"/>
 	<Achievement Name="LV5-7（아셰스） 이쪽에서도 미아・１" cntAvatar="1" startEv="EVENT_XX01_150" map="FIELDMAP_AREA10_01" WorkCond="ACHIEVEMENT_WORK_COND_FLD_ENTER"/>
 	<Achievement Name="슈레리아Ｌｖ５＿０８" startEv="EVENT_XX01_140" WorkCond="ACHIEVEMENT_WORK_COND_EV_TAG_KIND" Prm1="EVENT_ZZ01_020"/>
 	<Achievement Name="슈레리아Ｌｖ５＿０９" startEv="EVENT_XX01_140" WorkCond="ACHIEVEMENT_WORK_COND_EV_TAG_KIND" Prm1="EVENT_ZZ01_020"/>
@@ -731,7 +731,7 @@
 	<Achievement Name="LV3-3 남자의 본능" cntDelta="1" Bonus="BONUS_KANON_MISOGI_TALK_COUNT_DELTA" WorkCond="ACHIEVEMENT_WORK_COND_MATTER_KIND" Prm1="TALK_MATTER_KANON_LV03_03"/>
 	<Achievement Name="LV3-4 샤르가 준 책" cntAvatar="1" Bonus="BONUS_KANON_MISOGI_TALK_COUNT_AVATAR" WorkCond="ACHIEVEMENT_WORK_COND_MATTER_KIND" Prm1="TALK_MATTER_KANON_LV03_04"/>
 	<Achievement Name="LV3-5 이상한 샤르" cntAvatar="1" Bonus="BONUS_KANON_MISOGI_TALK_COUNT_AVATAR" WorkCond="ACHIEVEMENT_WORK_COND_MATTER_KIND" Prm1="TALK_MATTER_KANON_LV03_05"/>
-	<Achievement Name="LV3-6 샤르 일행에게 대인기" cntAvatar="1" Bonus="BONUS_KANON_MISOGI_TALK_COUNT_AVATAR" WorkCond="ACHIEVEMENT_WORK_COND_MATTER_KIND" Prm1="TALK_MATTER_KANON_LV03_06"/>
+	<Achievement Name="LV3-6 샤르들에게 대인기" cntAvatar="1" Bonus="BONUS_KANON_MISOGI_TALK_COUNT_AVATAR" WorkCond="ACHIEVEMENT_WORK_COND_MATTER_KIND" Prm1="TALK_MATTER_KANON_LV03_06"/>
 	<Achievement Name="LV3-7 샤르의 애칭 점술" cntAvatar="1" Bonus="BONUS_KANON_MISOGI_TALK_COUNT_AVATAR" WorkCond="ACHIEVEMENT_WORK_COND_MATTER_KIND" Prm1="TALK_MATTER_KANON_LV03_07"/>
 	<Achievement Name="LV4-1（델타） 진실" cntDelta="1" Bonus="BONUS_KANON_MISOGI_TALK_COUNT_DELTA" WorkCond="ACHIEVEMENT_WORK_COND_MATTER_KIND" Prm1="TALK_MATTER_KANON_LV04_01"/>
 	<Achievement Name="LV4-2（델타） 무엇이든 읽는 것이 카논 스타일" cntDelta="1" Bonus="BONUS_KANON_MISOGI_TALK_COUNT_DELTA" WorkCond="ACHIEVEMENT_WORK_COND_MATTER_KIND" Prm1="TALK_MATTER_KANON_LV04_02"/>
@@ -1847,7 +1847,7 @@
 	<Achievement Name="토리타마！" cntAvatar="1" cntDelta="1" Bonus="BONUS_RECIPE_SARLY_01" WorkCond="ACHIEVEMENT_WORK_COND_SHOP_MIX_ITEM" Prm1="SHOP_SARLY" Prm2="ITEM_S_004"/>
 	<Achievement Name="울컥하는 얼음" cntAvatar="1" cntDelta="1" Bonus="BONUS_RECIPE_NAY_02" WorkCond="ACHIEVEMENT_WORK_COND_SHOP_MIX_ITEM" Prm1="SHOP_NAY" Prm2="ITEM_N_005"/>
 	<Achievement Name="샤무코의 기적" cntAvatar="1" cntDelta="1" Bonus="BONUS_RECIPE_NAY_10" WorkCond="ACHIEVEMENT_WORK_COND_SHOP_MIX_ITEM" Prm1="SHOP_NAY" Prm2="ITEM_N_030"/>
-	<Achievement Name="일격필살 퍼레이드" cntAvatar="1" cntDelta="1" Bonus="BONUS_RECIPE_NAY_02" WorkCond="ACHIEVEMENT_WORK_COND_SHOP_MIX_ITEM" Prm1="SHOP_NAY" Prm2="ITEM_N_006"/>
+	<Achievement Name="일격필살 파르페" cntAvatar="1" cntDelta="1" Bonus="BONUS_RECIPE_NAY_02" WorkCond="ACHIEVEMENT_WORK_COND_SHOP_MIX_ITEM" Prm1="SHOP_NAY" Prm2="ITEM_N_006"/>
 	<Achievement Name="흔들흔들 글라세" cntAvatar="1" cntDelta="1" Bonus="BONUS_RECIPE_NAY_03" WorkCond="ACHIEVEMENT_WORK_COND_SHOP_MIX_ITEM" Prm1="SHOP_NAY" Prm2="ITEM_N_008"/>
 	<Achievement Name="사루미아키코 씨" cntAvatar="1" cntDelta="1" Bonus="BONUS_RECIPE_NAY_05" WorkCond="ACHIEVEMENT_WORK_COND_SHOP_MIX_ITEM" Prm1="SHOP_NAY" Prm2="ITEM_N_014"/>
 	<Achievement Name="후르츠 폰타" cntAvatar="1" cntDelta="1" Bonus="BONUS_RECIPE_NAY_01" WorkCond="ACHIEVEMENT_WORK_COND_SHOP_MIX_ITEM" Prm1="SHOP_NAY" Prm2="ITEM_N_002"/>
@@ -1866,7 +1866,7 @@
 	<Achievement Name="네이 아프랑세" cntAvatar="1" cntDelta="1" Bonus="BONUS_RECIPE_NAY_13" WorkCond="ACHIEVEMENT_WORK_COND_SHOP_MIX_ITEM" Prm1="SHOP_NAY" Prm2="ITEM_N_040"/>
 	<Achievement Name="바나밀" cntAvatar="1" cntDelta="1" Bonus="BONUS_RECIPE_KANON_01" WorkCond="ACHIEVEMENT_WORK_COND_SHOP_MIX_ITEM" Prm1="SHOP_KANON" Prm2="ITEM_K_003"/>
 	<Achievement Name="커피 오차즈케" cntAvatar="1" cntDelta="1" Bonus="BONUS_RECIPE_NAY_06" WorkCond="ACHIEVEMENT_WORK_COND_SHOP_MIX_ITEM" Prm1="SHOP_NAY" Prm2="ITEM_N_018"/>
-	<Achievement Name="이오나 샌드위치" cntAvatar="1" cntDelta="1" Bonus="BONUS_RECIPE_KANON_14" WorkCond="ACHIEVEMENT_WORK_COND_SHOP_MIX_ITEM" Prm1="SHOP_KANON" Prm2="ITEM_K_045"/>
+	<Achievement Name="이오나사브레" cntAvatar="1" cntDelta="1" Bonus="BONUS_RECIPE_KANON_14" WorkCond="ACHIEVEMENT_WORK_COND_SHOP_MIX_ITEM" Prm1="SHOP_KANON" Prm2="ITEM_K_045"/>
 	<Achievement Name="포쿠리 스웨트" cntAvatar="1" cntDelta="1" Bonus="BONUS_RECIPE_TATTOLIA_12" WorkCond="ACHIEVEMENT_WORK_COND_SHOP_MIX_ITEM" Prm1="SHOP_TATTORIA" Prm2="ITEM_T_039"/>
 	<Achievement Name="메이론 빵" cntAvatar="1" cntDelta="1" Bonus="BONUS_RECIPE_TATTOLIA_12" WorkCond="ACHIEVEMENT_WORK_COND_SHOP_MIX_ITEM" Prm1="SHOP_TATTORIA" Prm2="ITEM_T_040"/>
 	<Achievement Name="샤라노와르 티" cntAvatar="1" cntDelta="1" Bonus="BONUS_RECIPE_TATTOLIA_05" WorkCond="ACHIEVEMENT_WORK_COND_SHOP_MIX_ITEM" Prm1="SHOP_TATTORIA" Prm2="ITEM_T_019"/>
@@ -1899,7 +1899,7 @@
 	<Achievement Name="해머 차지" cntAvatar="1" cntDelta="1" Bonus="BONUS_RECIPE_KANON_11" WorkCond="ACHIEVEMENT_WORK_COND_SHOP_MIX_ITEM" Prm1="SHOP_KANON" Prm2="ITEM_K_036"/>
 	<Achievement Name="루피아네스 결정" cntAvatar="1" cntDelta="1" Bonus="BONUS_RECIPE_NAY_12" WorkCond="ACHIEVEMENT_WORK_COND_SHOP_MIX_ITEM" Prm1="SHOP_NAY" Prm2="ITEM_N_037"/>
 	<Achievement Name="스마트 벨트" cntAvatar="1" cntDelta="1" Bonus="BONUS_RECIPE_NAY_06" WorkCond="ACHIEVEMENT_WORK_COND_SHOP_MIX_ITEM" Prm1="SHOP_NAY" Prm2="ITEM_N_019"/>
-	<Achievement Name="인피니티 글래스" cntAvatar="1" cntDelta="1" Bonus="BONUS_RECIPE_NAY_09" WorkCond="ACHIEVEMENT_WORK_COND_SHOP_MIX_ITEM" Prm1="SHOP_NAY" Prm2="ITEM_N_026"/>
+	<Achievement Name="인피니티 글라스" cntAvatar="1" cntDelta="1" Bonus="BONUS_RECIPE_NAY_09" WorkCond="ACHIEVEMENT_WORK_COND_SHOP_MIX_ITEM" Prm1="SHOP_NAY" Prm2="ITEM_N_026"/>
 	<Achievement Name="다이안사스의 목걸이" cntAvatar="1" cntDelta="1" Bonus="BONUS_RECIPE_NAY_15" WorkCond="ACHIEVEMENT_WORK_COND_SHOP_MIX_ITEM" Prm1="SHOP_NAY" Prm2="ITEM_N_045"/>
 	<Achievement Name="게네로직 티켓" cntAvatar="1" cntDelta="1" Bonus="BONUS_RECIPE_NAY_15" WorkCond="ACHIEVEMENT_WORK_COND_SHOP_MIX_ITEM" Prm1="SHOP_NAY" Prm2="ITEM_N_046"/>
 	<Achievement Name="천령 뉴로키" cntAvatar="1" cntDelta="1" Bonus="BONUS_RECIPE_KANON_03" WorkCond="ACHIEVEMENT_WORK_COND_SHOP_MIX_ITEM" Prm1="SHOP_KANON" Prm2="ITEM_K_011"/>
@@ -1914,19 +1914,19 @@
 	<Achievement Name="베제리엘 결정" cntAvatar="1" cntDelta="1" Bonus="BONUS_RECIPE_TATTOLIA_05" WorkCond="ACHIEVEMENT_WORK_COND_SHOP_MIX_ITEM" Prm1="SHOP_TATTORIA" Prm2="ITEM_T_020"/>
 	<Achievement Name="호노카노 경단" cntAvatar="1" cntDelta="1" Bonus="BONUS_RECIPE_TATTOLIA_00" WorkCond="ACHIEVEMENT_WORK_COND_SHOP_MIX_ITEM" Prm1="SHOP_TATTORIA" Prm2="ITEM_T_002"/>
 	<Achievement Name="디스타린" cntAvatar="1" cntDelta="1" Bonus="BONUS_RECIPE_TATTOLIA_07" WorkCond="ACHIEVEMENT_WORK_COND_SHOP_MIX_ITEM" Prm1="SHOP_TATTORIA" Prm2="ITEM_T_025"/>
-	<Achievement Name="타트리안Ｚ" cntAvatar="1" cntDelta="1" Bonus="BONUS_RECIPE_TATTOLIA_00" WorkCond="ACHIEVEMENT_WORK_COND_SHOP_MIX_ITEM" Prm1="SHOP_TATTORIA" Prm2="ITEM_T_003"/>
+	<Achievement Name="타토리안 Ｚ" cntAvatar="1" cntDelta="1" Bonus="BONUS_RECIPE_TATTOLIA_00" WorkCond="ACHIEVEMENT_WORK_COND_SHOP_MIX_ITEM" Prm1="SHOP_TATTORIA" Prm2="ITEM_T_003"/>
 	<Achievement Name="걸쭉한 온천 가루" cntAvatar="1" cntDelta="1" Bonus="BONUS_RECIPE_TATTOLIA_01" WorkCond="ACHIEVEMENT_WORK_COND_SHOP_MIX_ITEM" Prm1="SHOP_TATTORIA" Prm2="ITEM_T_007"/>
 	<Achievement Name="성상의 그리야" cntAvatar="1" cntDelta="1" Bonus="BONUS_RECIPE_TATTOLIA_04" WorkCond="ACHIEVEMENT_WORK_COND_SHOP_MIX_ITEM" Prm1="SHOP_TATTORIA" Prm2="ITEM_T_016"/>
 	<Achievement Name="동결 건조 스프" cntAvatar="1" cntDelta="1" Bonus="BONUS_RECIPE_TATTOLIA_02" WorkCond="ACHIEVEMENT_WORK_COND_SHOP_MIX_ITEM" Prm1="SHOP_TATTORIA" Prm2="ITEM_T_010"/>
 	<Achievement Name="타트리아노ＺＺ" cntAvatar="1" cntDelta="1" Bonus="BONUS_RECIPE_TATTOLIA_07" WorkCond="ACHIEVEMENT_WORK_COND_SHOP_MIX_ITEM" Prm1="SHOP_TATTORIA" Prm2="ITEM_T_026"/>
 	<Achievement Name="바스무지" cntAvatar="1" cntDelta="1" Bonus="BONUS_RECIPE_TATTOLIA_09" WorkCond="ACHIEVEMENT_WORK_COND_SHOP_MIX_ITEM" Prm1="SHOP_TATTORIA" Prm2="ITEM_T_031"/>
 	<Achievement Name="포식전대 파지 씨" cntAvatar="1" cntDelta="1" Bonus="BONUS_RECIPE_TATTOLIA_06" WorkCond="ACHIEVEMENT_WORK_COND_SHOP_MIX_ITEM" Prm1="SHOP_TATTORIA" Prm2="ITEM_T_022"/>
-	<Achievement Name="샤를리 빈즈" cntAvatar="1" cntDelta="1" Bonus="BONUS_RECIPE_TATTOLIA_03" WorkCond="ACHIEVEMENT_WORK_COND_SHOP_MIX_ITEM" Prm1="SHOP_TATTORIA" Prm2="ITEM_T_013"/>
+	<Achievement Name="샤리 빈즈" cntAvatar="1" cntDelta="1" Bonus="BONUS_RECIPE_TATTOLIA_03" WorkCond="ACHIEVEMENT_WORK_COND_SHOP_MIX_ITEM" Prm1="SHOP_TATTORIA" Prm2="ITEM_T_013"/>
 	<Achievement Name="천재의 즙" cntAvatar="1" cntDelta="1" Bonus="BONUS_RECIPE_SARLY_08" WorkCond="ACHIEVEMENT_WORK_COND_SHOP_MIX_ITEM" Prm1="SHOP_SARLY" Prm2="ITEM_S_026"/>
 	<Achievement Name="스텔스 발산 드링크" cntAvatar="1" cntDelta="1" Bonus="BONUS_RECIPE_SARLY_05" WorkCond="ACHIEVEMENT_WORK_COND_SHOP_MIX_ITEM" Prm1="SHOP_SARLY" Prm2="ITEM_S_015"/>
 	<Achievement Name="트위스터 런치" cntAvatar="1" cntDelta="1" Bonus="BONUS_RECIPE_NAY_09" WorkCond="ACHIEVEMENT_WORK_COND_SHOP_MIX_ITEM" Prm1="SHOP_NAY" Prm2="ITEM_N_027"/>
 	<Achievement Name="만신창이와 대환희" cntAvatar="1" cntDelta="1" Bonus="BONUS_RECIPE_KANON_07" WorkCond="ACHIEVEMENT_WORK_COND_SHOP_MIX_ITEM" Prm1="SHOP_KANON" Prm2="ITEM_K_022"/>
-	<Achievement Name="시마법, 이 사랑의 기적이로다" cntAvatar="1" cntDelta="1" Bonus="BONUS_RECIPE_KANON_07" WorkCond="ACHIEVEMENT_WORK_COND_SHOP_MIX_ITEM" Prm1="SHOP_KANON" Prm2="ITEM_K_023"/>
+	<Achievement Name="시의 힘, 이 사랑의 기적이로다" cntAvatar="1" cntDelta="1" Bonus="BONUS_RECIPE_KANON_07" WorkCond="ACHIEVEMENT_WORK_COND_SHOP_MIX_ITEM" Prm1="SHOP_KANON" Prm2="ITEM_K_023"/>
 	<Achievement Name="정력지고 자식운의 근원" cntAvatar="1" cntDelta="1" Bonus="BONUS_RECIPE_KANON_07" WorkCond="ACHIEVEMENT_WORK_COND_SHOP_MIX_ITEM" Prm1="SHOP_KANON" Prm2="ITEM_K_024"/>
 	<Achievement Name="기어가는 샴 가루" cntAvatar="1" cntDelta="1" Bonus="BONUS_RECIPE_TATTOLIA_04" WorkCond="ACHIEVEMENT_WORK_COND_SHOP_MIX_ITEM" Prm1="SHOP_TATTORIA" Prm2="ITEM_T_017"/>
 	<Achievement Name="하모니안 향" cntAvatar="1" cntDelta="1" Bonus="BONUS_RECIPE_TATTOLIA_10" WorkCond="ACHIEVEMENT_WORK_COND_SHOP_MIX_ITEM" Prm1="SHOP_TATTORIA" Prm2="ITEM_T_034"/>
@@ -1936,7 +1936,7 @@
 	<Achievement Name="펠리에의 비약" cntAvatar="1" cntDelta="1" Bonus="BONUS_RECIPE_TATTOLIA_13" WorkCond="ACHIEVEMENT_WORK_COND_SHOP_MIX_ITEM" Prm1="SHOP_TATTORIA" Prm2="ITEM_T_042"/>
 	<Achievement Name="암네시아의 눈" cntAvatar="1" cntDelta="1" Bonus="BONUS_RECIPE_TATTOLIA_15" WorkCond="ACHIEVEMENT_WORK_COND_SHOP_MIX_ITEM" Prm1="SHOP_TATTORIA" Prm2="ITEM_T_047"/>
 	<Achievement Name="앰버 인 프리즌" cntAvatar="1" cntDelta="1" Bonus="BONUS_RECIPE_TATTOLIA_14" WorkCond="ACHIEVEMENT_WORK_COND_SHOP_MIX_ITEM" Prm1="SHOP_TATTORIA" Prm2="ITEM_T_045"/>
-	<Achievement Name="자크텐 사인" cntAvatar="1" cntDelta="1" Bonus="BONUS_RECIPE_TATTOLIA_09" WorkCond="ACHIEVEMENT_WORK_COND_SHOP_MIX_ITEM" Prm1="SHOP_TATTORIA" Prm2="ITEM_T_032"/>
+	<Achievement Name="자쿠텐 사인" cntAvatar="1" cntDelta="1" Bonus="BONUS_RECIPE_TATTOLIA_09" WorkCond="ACHIEVEMENT_WORK_COND_SHOP_MIX_ITEM" Prm1="SHOP_TATTORIA" Prm2="ITEM_T_032"/>
 	<Achievement Name="로타스티아" Bonus="BONUS_RECIPE_TATTOLIA_16" WorkCond="ACHIEVEMENT_WORK_COND_SHOP_MIX_ITEM" Prm1="SHOP_TATTORIA" Prm2="ITEM_T_048"/>
 	<Achievement Name="리바이바이 마스크" cntAvatar="1" cntDelta="1" Bonus="BONUS_RECIPE_TATTOLIA_10" WorkCond="ACHIEVEMENT_WORK_COND_SHOP_MIX_ITEM" Prm1="SHOP_TATTORIA" Prm2="ITEM_T_035"/>
 	<Achievement Name="수제 머플러" cntAvatar="1" cntDelta="1" Bonus="BONUS_RECIPE_SARLY_11" WorkCond="ACHIEVEMENT_WORK_COND_SHOP_MIX_ITEM" Prm1="SHOP_SARLY" Prm2="ITEM_S_034"/>
@@ -1945,7 +1945,7 @@
 	<Achievement Name="양자 위성 스피나" cntAvatar="1" cntDelta="1" Bonus="BONUS_RECIPE_SARLY_05" WorkCond="ACHIEVEMENT_WORK_COND_SHOP_MIX_ITEM" Prm1="SHOP_SARLY" Prm2="ITEM_S_016"/>
 	<Achievement Name="파동 차원 컨버터" cntAvatar="1" cntDelta="1" Bonus="BONUS_RECIPE_SARLY_02" WorkCond="ACHIEVEMENT_WORK_COND_SHOP_MIX_ITEM" Prm1="SHOP_SARLY" Prm2="ITEM_S_008"/>
 	<Achievement Name="데코히어런스 뽑기" cntAvatar="1" cntDelta="1" Bonus="BONUS_RECIPE_SARLY_09" WorkCond="ACHIEVEMENT_WORK_COND_SHOP_MIX_ITEM" Prm1="SHOP_SARLY" Prm2="ITEM_S_028"/>
-	<Achievement Name="ＩＡＱＬ 이온 우산" cntAvatar="1" cntDelta="1" Bonus="BONUS_RECIPE_SARLY_11" WorkCond="ACHIEVEMENT_WORK_COND_SHOP_MIX_ITEM" Prm1="SHOP_SARLY" Prm2="ITEM_S_035"/>
+	<Achievement Name="IAQL 전리 우산" cntAvatar="1" cntDelta="1" Bonus="BONUS_RECIPE_SARLY_11" WorkCond="ACHIEVEMENT_WORK_COND_SHOP_MIX_ITEM" Prm1="SHOP_SARLY" Prm2="ITEM_S_035"/>
 	<Achievement Name="초전도 덴드로비움" cntAvatar="1" cntDelta="1" Bonus="BONUS_RECIPE_KANON_05" WorkCond="ACHIEVEMENT_WORK_COND_SHOP_MIX_ITEM" Prm1="SHOP_KANON" Prm2="ITEM_K_016"/>
 	<Achievement Name="진성 튜닝관" cntAvatar="1" cntDelta="1" Bonus="BONUS_RECIPE_SARLY_00" WorkCond="ACHIEVEMENT_WORK_COND_SHOP_MIX_ITEM" Prm1="SHOP_SARLY" Prm2="ITEM_S_002"/>
 	<Achievement Name="비가개성 뉴로 키" cntAvatar="1" cntDelta="1" Bonus="BONUS_RECIPE_SARLY_05" WorkCond="ACHIEVEMENT_WORK_COND_SHOP_MIX_ITEM" Prm1="SHOP_SARLY" Prm2="ITEM_S_017"/>
@@ -1956,11 +1956,11 @@
 	<Achievement Name="메모리안 로커" cntAvatar="1" cntDelta="1" Bonus="BONUS_RECIPE_SARLY_03" WorkCond="ACHIEVEMENT_WORK_COND_SHOP_MIX_ITEM" Prm1="SHOP_SARLY" Prm2="ITEM_S_010"/>
 	<Achievement Name="유전자 변형 도력선" cntAvatar="1" cntDelta="1" Bonus="BONUS_RECIPE_TATTOLIA_06" WorkCond="ACHIEVEMENT_WORK_COND_SHOP_MIX_ITEM" Prm1="SHOP_TATTORIA" Prm2="ITEM_T_023"/>
 	<Achievement Name="미스터 레지스트라" cntAvatar="1" cntDelta="1" Bonus="BONUS_RECIPE_SARLY_09" WorkCond="ACHIEVEMENT_WORK_COND_SHOP_MIX_ITEM" Prm1="SHOP_SARLY" Prm2="ITEM_S_029"/>
-	<Achievement Name="헬리 퓨전" cntAvatar="1" cntDelta="1" Bonus="BONUS_RECIPE_SARLY_10" WorkCond="ACHIEVEMENT_WORK_COND_SHOP_MIX_ITEM" Prm1="SHOP_SARLY" Prm2="ITEM_S_031"/>
+	<Achievement Name="헬리컬루전" cntAvatar="1" cntDelta="1" Bonus="BONUS_RECIPE_SARLY_10" WorkCond="ACHIEVEMENT_WORK_COND_SHOP_MIX_ITEM" Prm1="SHOP_SARLY" Prm2="ITEM_S_031"/>
 	<Achievement Name="쇼킹 카트" cntAvatar="1" cntDelta="1" Bonus="BONUS_RECIPE_SARLY_07" WorkCond="ACHIEVEMENT_WORK_COND_SHOP_MIX_ITEM" Prm1="SHOP_SARLY" Prm2="ITEM_S_022"/>
 	<Achievement Name="트리니티 버너" cntAvatar="1" cntDelta="1" Bonus="BONUS_RECIPE_SARLY_04" WorkCond="ACHIEVEMENT_WORK_COND_SHOP_MIX_ITEM" Prm1="SHOP_SARLY" Prm2="ITEM_S_013"/>
 	<Achievement Name="미신 건" cntAvatar="1" cntDelta="1" Bonus="BONUS_RECIPE_SARLY_01" WorkCond="ACHIEVEMENT_WORK_COND_SHOP_MIX_ITEM" Prm1="SHOP_SARLY" Prm2="ITEM_S_005"/>
-	<Achievement Name="리셋 스톤" cntAvatar="1" cntDelta="1" Bonus="BONUS_RECIPE_SARLY_10" WorkCond="ACHIEVEMENT_WORK_COND_SHOP_MIX_ITEM" Prm1="SHOP_SARLY" Prm2="ITEM_S_032"/>
+	<Achievement Name="리세타 스톤" cntAvatar="1" cntDelta="1" Bonus="BONUS_RECIPE_SARLY_10" WorkCond="ACHIEVEMENT_WORK_COND_SHOP_MIX_ITEM" Prm1="SHOP_SARLY" Prm2="ITEM_S_032"/>
 	<Achievement Name="ＨＤ 컴파일러" cntAvatar="1" cntDelta="1" Bonus="BONUS_RECIPE_SARLY_14" WorkCond="ACHIEVEMENT_WORK_COND_SHOP_MIX_ITEM" Prm1="SHOP_SARLY" Prm2="ITEM_S_042"/>
 	<Achievement Name="백만분의 일 소레일" cntAvatar="1" cntDelta="1" Bonus="BONUS_RECIPE_SARLY_12" WorkCond="ACHIEVEMENT_WORK_COND_SHOP_MIX_ITEM" Prm1="SHOP_SARLY" Prm2="ITEM_S_038"/>
 	<Achievement Name="루피아의 추" cntAvatar="1" cntDelta="1" Bonus="BONUS_RECIPE_SARLY_13" WorkCond="ACHIEVEMENT_WORK_COND_SHOP_MIX_ITEM" Prm1="SHOP_SARLY" Prm2="ITEM_S_040"/>
@@ -1971,42 +1971,42 @@
 	<Achievement Name="우-군 퍼펫" cntAvatar="1" cntDelta="1" Bonus="BONUS_RECIPE_KANON_12" WorkCond="ACHIEVEMENT_WORK_COND_SHOP_MIX_ITEM" Prm1="SHOP_KANON" Prm2="ITEM_K_040"/>
 	<Achievement Name="라셸 팩터" cntAvatar="1" cntDelta="1" Bonus="BONUS_RECIPE_SARLY_17" WorkCond="ACHIEVEMENT_WORK_COND_SHOP_MIX_ITEM" Prm1="SHOP_SARLY" Prm2="ITEM_S_047"/>
 	<Achievement Name="리인카네이션" Bonus="BONUS_RECIPE_SARLY_17" WorkCond="ACHIEVEMENT_WORK_COND_SHOP_MIX_ITEM" Prm1="SHOP_SARLY" Prm2="ITEM_S_048"/>
-	<Achievement Name="크림 카소다" cntAvatar="1" cntDelta="1" Bonus="BONUS_RECIPE_NAY_01" WorkCond="ACHIEVEMENT_WORK_COND_SHOP_MIX_ITEM" Prm1="SHOP_NAY" Prm2="ITEM_N_004"/>
+	<Achievement Name="크림 캐소드" cntAvatar="1" cntDelta="1" Bonus="BONUS_RECIPE_NAY_01" WorkCond="ACHIEVEMENT_WORK_COND_SHOP_MIX_ITEM" Prm1="SHOP_NAY" Prm2="ITEM_N_004"/>
 	<Achievement Name="링클 황제통" cntAvatar="1" cntDelta="1" Bonus="BONUS_RECIPE_NAY_04" WorkCond="ACHIEVEMENT_WORK_COND_SHOP_MIX_ITEM" Prm1="SHOP_NAY" Prm2="ITEM_N_013"/>
 	<Achievement Name="리리컬 히트맨" cntAvatar="1" cntDelta="1" Bonus="BONUS_RECIPE_NAY_07" WorkCond="ACHIEVEMENT_WORK_COND_SHOP_MIX_ITEM" Prm1="SHOP_NAY" Prm2="ITEM_N_022"/>
-	<Achievement Name="샴 고로케 소시" cntAvatar="1" cntDelta="1" Bonus="BONUS_RECIPE_NAY_10" WorkCond="ACHIEVEMENT_WORK_COND_SHOP_MIX_ITEM" Prm1="SHOP_NAY" Prm2="ITEM_N_032"/>
+	<Achievement Name="샴 고로케 소자" cntAvatar="1" cntDelta="1" Bonus="BONUS_RECIPE_NAY_10" WorkCond="ACHIEVEMENT_WORK_COND_SHOP_MIX_ITEM" Prm1="SHOP_NAY" Prm2="ITEM_N_032"/>
 	<Achievement Name="아마노토리의 춤" cntAvatar="1" cntDelta="1" Bonus="BONUS_RECIPE_NAY_13" WorkCond="ACHIEVEMENT_WORK_COND_SHOP_MIX_ITEM" Prm1="SHOP_NAY" Prm2="ITEM_N_041"/>
 	<Achievement Name="츈피스" cntAvatar="1" cntDelta="1" Bonus="BONUS_RECIPE_KANON_00" WorkCond="ACHIEVEMENT_WORK_COND_SHOP_MIX_ITEM" Prm1="SHOP_KANON" Prm2="ITEM_K_002"/>
 	<Achievement Name="클래스 체인지 팩" cntAvatar="1" cntDelta="1" Bonus="BONUS_RECIPE_KANON_03" WorkCond="ACHIEVEMENT_WORK_COND_SHOP_MIX_ITEM" Prm1="SHOP_KANON" Prm2="ITEM_K_012"/>
 	<Achievement Name="키츠츠츈" cntAvatar="1" cntDelta="1" Bonus="BONUS_RECIPE_KANON_09" WorkCond="ACHIEVEMENT_WORK_COND_SHOP_MIX_ITEM" Prm1="SHOP_KANON" Prm2="ITEM_K_031"/>
-	<Achievement Name="셀러브리티 소시" cntAvatar="1" cntDelta="1" Bonus="BONUS_RECIPE_KANON_10" WorkCond="ACHIEVEMENT_WORK_COND_SHOP_MIX_ITEM" Prm1="SHOP_KANON" Prm2="ITEM_K_034"/>
-	<Achievement Name="파일 드라이브 소시" cntAvatar="1" cntDelta="1" Bonus="BONUS_RECIPE_KANON_11" WorkCond="ACHIEVEMENT_WORK_COND_SHOP_MIX_ITEM" Prm1="SHOP_KANON" Prm2="ITEM_K_037"/>
-	<Achievement Name="라듐 온천 소시" cntAvatar="1" cntDelta="1" Bonus="BONUS_RECIPE_TATTOLIA_01" WorkCond="ACHIEVEMENT_WORK_COND_SHOP_MIX_ITEM" Prm1="SHOP_TATTORIA" Prm2="ITEM_T_008"/>
-	<Achievement Name="시치미 고춧가루 소시" cntAvatar="1" cntDelta="1" Bonus="BONUS_RECIPE_TATTOLIA_03" WorkCond="ACHIEVEMENT_WORK_COND_SHOP_MIX_ITEM" Prm1="SHOP_TATTORIA" Prm2="ITEM_T_014"/>
-	<Achievement Name="니트로 부스터 소시" cntAvatar="1" cntDelta="1" Bonus="BONUS_RECIPE_TATTOLIA_07" WorkCond="ACHIEVEMENT_WORK_COND_SHOP_MIX_ITEM" Prm1="SHOP_TATTORIA" Prm2="ITEM_T_027"/>
-	<Achievement Name="엑스칼리버 소시" cntAvatar="1" cntDelta="1" Bonus="BONUS_RECIPE_TATTOLIA_11" WorkCond="ACHIEVEMENT_WORK_COND_SHOP_MIX_ITEM" Prm1="SHOP_TATTORIA" Prm2="ITEM_T_038"/>
+	<Achievement Name="셀러브리티 소자" cntAvatar="1" cntDelta="1" Bonus="BONUS_RECIPE_KANON_10" WorkCond="ACHIEVEMENT_WORK_COND_SHOP_MIX_ITEM" Prm1="SHOP_KANON" Prm2="ITEM_K_034"/>
+	<Achievement Name="파일 드라이브 소자" cntAvatar="1" cntDelta="1" Bonus="BONUS_RECIPE_KANON_11" WorkCond="ACHIEVEMENT_WORK_COND_SHOP_MIX_ITEM" Prm1="SHOP_KANON" Prm2="ITEM_K_037"/>
+	<Achievement Name="라듐 광천 소자" cntAvatar="1" cntDelta="1" Bonus="BONUS_RECIPE_TATTOLIA_01" WorkCond="ACHIEVEMENT_WORK_COND_SHOP_MIX_ITEM" Prm1="SHOP_TATTORIA" Prm2="ITEM_T_008"/>
+	<Achievement Name="시치미 고춧가루 소자" cntAvatar="1" cntDelta="1" Bonus="BONUS_RECIPE_TATTOLIA_03" WorkCond="ACHIEVEMENT_WORK_COND_SHOP_MIX_ITEM" Prm1="SHOP_TATTORIA" Prm2="ITEM_T_014"/>
+	<Achievement Name="니트로 부스터 소자" cntAvatar="1" cntDelta="1" Bonus="BONUS_RECIPE_TATTOLIA_07" WorkCond="ACHIEVEMENT_WORK_COND_SHOP_MIX_ITEM" Prm1="SHOP_TATTORIA" Prm2="ITEM_T_027"/>
+	<Achievement Name="엑스칼리버 소자" cntAvatar="1" cntDelta="1" Bonus="BONUS_RECIPE_TATTOLIA_11" WorkCond="ACHIEVEMENT_WORK_COND_SHOP_MIX_ITEM" Prm1="SHOP_TATTORIA" Prm2="ITEM_T_038"/>
 	<Achievement Name="아이노 모모코의 연애 필승학" cntAvatar="1" cntDelta="1" Bonus="BONUS_RECIPE_TATTOLIA_14" WorkCond="ACHIEVEMENT_WORK_COND_SHOP_MIX_ITEM" Prm1="SHOP_TATTORIA" Prm2="ITEM_T_046"/>
-	<Achievement Name="ＤＩＹ 모모코" cntAvatar="1" cntDelta="1" Bonus="BONUS_RECIPE_SARLY_00" WorkCond="ACHIEVEMENT_WORK_COND_SHOP_MIX_ITEM" Prm1="SHOP_SARLY" Prm2="ITEM_S_003"/>
+	<Achievement Name="DIY 소자" cntAvatar="1" cntDelta="1" Bonus="BONUS_RECIPE_SARLY_00" WorkCond="ACHIEVEMENT_WORK_COND_SHOP_MIX_ITEM" Prm1="SHOP_SARLY" Prm2="ITEM_S_003"/>
 	<Achievement Name="초고통스러운 캐소드" cntAvatar="1" cntDelta="1" Bonus="BONUS_RECIPE_SARLY_03" WorkCond="ACHIEVEMENT_WORK_COND_SHOP_MIX_ITEM" Prm1="SHOP_SARLY" Prm2="ITEM_S_011"/>
 	<Achievement Name="브레인 시냅시스" cntAvatar="1" cntDelta="1" Bonus="BONUS_RECIPE_SARLY_06" WorkCond="ACHIEVEMENT_WORK_COND_SHOP_MIX_ITEM" Prm1="SHOP_SARLY" Prm2="ITEM_S_021"/>
-	<Achievement Name="얽혀있는 소자" cntAvatar="1" cntDelta="1" Bonus="BONUS_RECIPE_SARLY_09" WorkCond="ACHIEVEMENT_WORK_COND_SHOP_MIX_ITEM" Prm1="SHOP_SARLY" Prm2="ITEM_S_030"/>
+	<Achievement Name="엔탱글 소자" cntAvatar="1" cntDelta="1" Bonus="BONUS_RECIPE_SARLY_09" WorkCond="ACHIEVEMENT_WORK_COND_SHOP_MIX_ITEM" Prm1="SHOP_SARLY" Prm2="ITEM_S_030"/>
 	<Achievement Name="콜로니아 캐소드" cntAvatar="1" cntDelta="1" Bonus="BONUS_RECIPE_SARLY_12" WorkCond="ACHIEVEMENT_WORK_COND_SHOP_MIX_ITEM" Prm1="SHOP_SARLY" Prm2="ITEM_S_039"/>
 	<Achievement Name="마초리노" cntAvatar="1" cntDelta="1" Bonus="BONUS_RECIPE_NAY_02" WorkCond="ACHIEVEMENT_WORK_COND_SHOP_MIX_ITEM" Prm1="SHOP_NAY" Prm2="ITEM_N_007"/>
 	<Achievement Name="연결된 수수께끼의 아이스크림" cntAvatar="1" cntDelta="1" Bonus="BONUS_RECIPE_NAY_05" WorkCond="ACHIEVEMENT_WORK_COND_SHOP_MIX_ITEM" Prm1="SHOP_NAY" Prm2="ITEM_N_016"/>
 	<Achievement Name="사랑하는 리포좀" cntAvatar="1" cntDelta="1" Bonus="BONUS_RECIPE_NAY_08" WorkCond="ACHIEVEMENT_WORK_COND_SHOP_MIX_ITEM" Prm1="SHOP_NAY" Prm2="ITEM_N_025"/>
 	<Achievement Name="제노뮤 만쥬" cntAvatar="1" cntDelta="1" Bonus="BONUS_RECIPE_NAY_11" WorkCond="ACHIEVEMENT_WORK_COND_SHOP_MIX_ITEM" Prm1="SHOP_NAY" Prm2="ITEM_N_035"/>
 	<Achievement Name="페리오니아 ＲＮＡ" cntAvatar="1" cntDelta="1" Bonus="BONUS_RECIPE_NAY_14" WorkCond="ACHIEVEMENT_WORK_COND_SHOP_MIX_ITEM" Prm1="SHOP_NAY" Prm2="ITEM_N_044"/>
-	<Achievement Name="쉘 노트로니카" cntAvatar="1" cntDelta="1" Bonus="BONUS_RECIPE_KANON_01" WorkCond="ACHIEVEMENT_WORK_COND_SHOP_MIX_ITEM" Prm1="SHOP_KANON" Prm2="ITEM_K_005"/>
+	<Achievement Name="셰르노트로니카" cntAvatar="1" cntDelta="1" Bonus="BONUS_RECIPE_KANON_01" WorkCond="ACHIEVEMENT_WORK_COND_SHOP_MIX_ITEM" Prm1="SHOP_KANON" Prm2="ITEM_K_005"/>
 	<Achievement Name="산달버드" cntAvatar="1" cntDelta="1" Bonus="BONUS_RECIPE_KANON_04" WorkCond="ACHIEVEMENT_WORK_COND_SHOP_MIX_ITEM" Prm1="SHOP_KANON" Prm2="ITEM_K_015"/>
 	<Achievement Name="모이스처라이징" cntAvatar="1" cntDelta="1" Bonus="BONUS_RECIPE_KANON_08" WorkCond="ACHIEVEMENT_WORK_COND_SHOP_MIX_ITEM" Prm1="SHOP_KANON" Prm2="ITEM_K_028"/>
-	<Achievement Name="메이저 RNA" cntAvatar="1" cntDelta="1" Bonus="BONUS_RECIPE_KANON_07" WorkCond="ACHIEVEMENT_WORK_COND_SHOP_MIX_ITEM" Prm1="SHOP_KANON" Prm2="ITEM_K_025"/>
+	<Achievement Name="메저 RNA" cntAvatar="1" cntDelta="1" Bonus="BONUS_RECIPE_KANON_07" WorkCond="ACHIEVEMENT_WORK_COND_SHOP_MIX_ITEM" Prm1="SHOP_KANON" Prm2="ITEM_K_025"/>
 	<Achievement Name="큐티 클리어" cntAvatar="1" cntDelta="1" Bonus="BONUS_RECIPE_KANON_14" WorkCond="ACHIEVEMENT_WORK_COND_SHOP_MIX_ITEM" Prm1="SHOP_KANON" Prm2="ITEM_K_047"/>
 	<Achievement Name="기가 프로틴" cntAvatar="1" cntDelta="1" Bonus="BONUS_RECIPE_TATTOLIA_00" WorkCond="ACHIEVEMENT_WORK_COND_SHOP_MIX_ITEM" Prm1="SHOP_TATTORIA" Prm2="ITEM_T_004"/>
 	<Achievement Name="셀 프로텍터" cntAvatar="1" cntDelta="1" Bonus="BONUS_RECIPE_TATTOLIA_05" WorkCond="ACHIEVEMENT_WORK_COND_SHOP_MIX_ITEM" Prm1="SHOP_TATTORIA" Prm2="ITEM_T_021"/>
 	<Achievement Name="네레이 그라코스의 비늘" cntAvatar="1" cntDelta="1" Bonus="BONUS_RECIPE_TATTOLIA_08" WorkCond="ACHIEVEMENT_WORK_COND_SHOP_MIX_ITEM" Prm1="SHOP_TATTORIA" Prm2="ITEM_T_029"/>
 	<Achievement Name="모라스쿠의 피부" cntAvatar="1" cntDelta="1" Bonus="BONUS_RECIPE_TATTOLIA_09" WorkCond="ACHIEVEMENT_WORK_COND_SHOP_MIX_ITEM" Prm1="SHOP_TATTORIA" Prm2="ITEM_T_033"/>
 	<Achievement Name="좀비 람스킨" cntAvatar="1" cntDelta="1" Bonus="BONUS_RECIPE_TATTOLIA_12" WorkCond="ACHIEVEMENT_WORK_COND_SHOP_MIX_ITEM" Prm1="SHOP_TATTORIA" Prm2="ITEM_T_041"/>
-	<Achievement Name="펠티에 쿨러" cntAvatar="1" cntDelta="1" Bonus="BONUS_RECIPE_SARLY_01" WorkCond="ACHIEVEMENT_WORK_COND_SHOP_MIX_ITEM" Prm1="SHOP_SARLY" Prm2="ITEM_S_006"/>
+	<Achievement Name="펠티어 쿨러" cntAvatar="1" cntDelta="1" Bonus="BONUS_RECIPE_SARLY_01" WorkCond="ACHIEVEMENT_WORK_COND_SHOP_MIX_ITEM" Prm1="SHOP_SARLY" Prm2="ITEM_S_006"/>
 	<Achievement Name="ＥＭＵＲＮＡ" cntAvatar="1" cntDelta="1" Bonus="BONUS_RECIPE_SARLY_04" WorkCond="ACHIEVEMENT_WORK_COND_SHOP_MIX_ITEM" Prm1="SHOP_SARLY" Prm2="ITEM_S_014"/>
 	<Achievement Name="철인 가면 초변화" cntAvatar="1" cntDelta="1" Bonus="BONUS_RECIPE_SARLY_07" WorkCond="ACHIEVEMENT_WORK_COND_SHOP_MIX_ITEM" Prm1="SHOP_SARLY" Prm2="ITEM_S_023"/>
 	<Achievement Name="아메바 ＲＮＡ" cntAvatar="1" cntDelta="1" Bonus="BONUS_RECIPE_SARLY_10" WorkCond="ACHIEVEMENT_WORK_COND_SHOP_MIX_ITEM" Prm1="SHOP_SARLY" Prm2="ITEM_S_033"/>
@@ -2015,17 +2015,17 @@
 	<Achievement Name="시즈고젠 에마키" cntAvatar="1" cntDelta="1" Bonus="BONUS_RECIPE_NAY_06" WorkCond="ACHIEVEMENT_WORK_COND_SHOP_MIX_ITEM" Prm1="SHOP_NAY" Prm2="ITEM_N_020"/>
 	<Achievement Name="수중 고리 던지기 게임 클래스" cntAvatar="1" cntDelta="1" Bonus="BONUS_RECIPE_NAY_09" WorkCond="ACHIEVEMENT_WORK_COND_SHOP_MIX_ITEM" Prm1="SHOP_NAY" Prm2="ITEM_N_029"/>
 	<Achievement Name="아쿠아리움 라이트" cntAvatar="1" cntDelta="1" Bonus="BONUS_RECIPE_NAY_12" WorkCond="ACHIEVEMENT_WORK_COND_SHOP_MIX_ITEM" Prm1="SHOP_NAY" Prm2="ITEM_N_038"/>
-	<Achievement Name="부적 네이 짱" cntAvatar="1" cntDelta="1" Bonus="BONUS_RECIPE_NAY_15" WorkCond="ACHIEVEMENT_WORK_COND_SHOP_MIX_ITEM" Prm1="SHOP_NAY" Prm2="ITEM_N_047"/>
+	<Achievement Name="부적 네이쨩" cntAvatar="1" cntDelta="1" Bonus="BONUS_RECIPE_NAY_15" WorkCond="ACHIEVEMENT_WORK_COND_SHOP_MIX_ITEM" Prm1="SHOP_NAY" Prm2="ITEM_N_047"/>
 	<Achievement Name="서두르지 말고 느긋하게 클래스" cntAvatar="1" cntDelta="1" Bonus="BONUS_RECIPE_KANON_02" WorkCond="ACHIEVEMENT_WORK_COND_SHOP_MIX_ITEM" Prm1="SHOP_KANON" Prm2="ITEM_K_008"/>
 	<Achievement Name="제놈 왕의 우울" cntAvatar="1" cntDelta="1" Bonus="BONUS_RECIPE_KANON_05" WorkCond="ACHIEVEMENT_WORK_COND_SHOP_MIX_ITEM" Prm1="SHOP_KANON" Prm2="ITEM_K_018"/>
 	<Achievement Name="조정원 경전 암기장" cntAvatar="1" cntDelta="1" Bonus="BONUS_RECIPE_KANON_06" WorkCond="ACHIEVEMENT_WORK_COND_SHOP_MIX_ITEM" Prm1="SHOP_KANON" Prm2="ITEM_K_021"/>
-	<Achievement Name="오징어 댄스 클래스" cntAvatar="1" cntDelta="1" Bonus="BONUS_RECIPE_KANON_12" WorkCond="ACHIEVEMENT_WORK_COND_SHOP_MIX_ITEM" Prm1="SHOP_KANON" Prm2="ITEM_K_041"/>
+	<Achievement Name="이카스 댄스 클래스" cntAvatar="1" cntDelta="1" Bonus="BONUS_RECIPE_KANON_12" WorkCond="ACHIEVEMENT_WORK_COND_SHOP_MIX_ITEM" Prm1="SHOP_KANON" Prm2="ITEM_K_041"/>
 	<Achievement Name="스피리얼 클래스" cntAvatar="1" cntDelta="1" Bonus="BONUS_RECIPE_KANON_13" WorkCond="ACHIEVEMENT_WORK_COND_SHOP_MIX_ITEM" Prm1="SHOP_KANON" Prm2="ITEM_K_044"/>
 	<Achievement Name="대자연의 허브 클래스" cntAvatar="1" cntDelta="1" Bonus="BONUS_RECIPE_TATTOLIA_02" WorkCond="ACHIEVEMENT_WORK_COND_SHOP_MIX_ITEM" Prm1="SHOP_TATTORIA" Prm2="ITEM_T_011"/>
 	<Achievement Name="오가닉 브레인" cntAvatar="1" cntDelta="1" Bonus="BONUS_RECIPE_TATTOLIA_04" WorkCond="ACHIEVEMENT_WORK_COND_SHOP_MIX_ITEM" Prm1="SHOP_TATTORIA" Prm2="ITEM_T_018"/>
 	<Achievement Name="기가 볼트 뉴런" cntAvatar="1" cntDelta="1" Bonus="BONUS_RECIPE_TATTOLIA_06" WorkCond="ACHIEVEMENT_WORK_COND_SHOP_MIX_ITEM" Prm1="SHOP_TATTORIA" Prm2="ITEM_T_024"/>
 	<Achievement Name="피스 마크 러스" cntAvatar="1" cntDelta="1" Bonus="BONUS_RECIPE_TATTOLIA_10" WorkCond="ACHIEVEMENT_WORK_COND_SHOP_MIX_ITEM" Prm1="SHOP_TATTORIA" Prm2="ITEM_T_036"/>
-	<Achievement Name="헤븐 센스 러스" cntAvatar="1" cntDelta="1" Bonus="BONUS_RECIPE_TATTOLIA_13" WorkCond="ACHIEVEMENT_WORK_COND_SHOP_MIX_ITEM" Prm1="SHOP_TATTORIA" Prm2="ITEM_T_043"/>
+	<Achievement Name="헤븐 센스 클래스" cntAvatar="1" cntDelta="1" Bonus="BONUS_RECIPE_TATTOLIA_13" WorkCond="ACHIEVEMENT_WORK_COND_SHOP_MIX_ITEM" Prm1="SHOP_TATTORIA" Prm2="ITEM_T_043"/>
 	<Achievement Name="오모리프" cntAvatar="1" cntDelta="1" Bonus="BONUS_RECIPE_SARLY_02" WorkCond="ACHIEVEMENT_WORK_COND_SHOP_MIX_ITEM" Prm1="SHOP_SARLY" Prm2="ITEM_S_009"/>
 	<Achievement Name="강한 상호작용이 있는 통" cntAvatar="1" cntDelta="1" Bonus="BONUS_RECIPE_SARLY_05" WorkCond="ACHIEVEMENT_WORK_COND_SHOP_MIX_ITEM" Prm1="SHOP_SARLY" Prm2="ITEM_S_018"/>
 	<Achievement Name="치키치키 퐁퐁" cntAvatar="1" cntDelta="1" Bonus="BONUS_RECIPE_SARLY_08" WorkCond="ACHIEVEMENT_WORK_COND_SHOP_MIX_ITEM" Prm1="SHOP_SARLY" Prm2="ITEM_S_027"/>
@@ -2045,7 +2045,7 @@
 	<Achievement Name="첫 외출" cntAvatar="1" cntDelta="1" Bonus="BONUS_FIELDTALK_BATTLE_ADD" WorkCond="ACHIEVEMENT_WORK_COND_EV_TAG_KIND" Prm1="EVENT_C11_1_120"/>
 	<Achievement Name="소레일～동란" cntAvatar="1" cntDelta="1" WorkCond="ACHIEVEMENT_WORK_COND_EV_TAG_KIND" Prm1="EVENT_C11_1_130"/>
 	<Achievement Name="동란" cntAvatar="1" cntDelta="1" WorkCond="ACHIEVEMENT_WORK_COND_EV_TAG_KIND" Prm1="EVENT_C11_1_135"/>
-	<Achievement Name="【전투 후】질풍의 오네이" cntAvatar="1" cntDelta="1" WorkCond="ACHIEVEMENT_WORK_COND_EV_TAG_KIND" Prm1="EVENT_C11_1_140"/>
+	<Achievement Name="【전투 후】질풍의 누님" cntAvatar="1" cntDelta="1" WorkCond="ACHIEVEMENT_WORK_COND_EV_TAG_KIND" Prm1="EVENT_C11_1_140"/>
 	<Achievement Name="↓페리온" cntAvatar="1" cntDelta="1" WorkCond="ACHIEVEMENT_WORK_COND_EV_TAG_KIND" Prm1="EVENT_C11_1_150"/>
 	<Achievement Name="↓페리온" cntAvatar="1" cntDelta="1" WorkCond="ACHIEVEMENT_WORK_COND_EV_TAG_KIND" Prm1="EVENT_C11_1_160"/>
 	<Achievement Name="↓페리온" cntAvatar="1" cntDelta="1" WorkCond="ACHIEVEMENT_WORK_COND_EV_TAG_KIND" Prm1="EVENT_C11_1_170"/>
@@ -2094,14 +2094,14 @@
 	<Achievement Name="↓페리온" cntAvatar="1" cntDelta="1" WorkCond="ACHIEVEMENT_WORK_COND_EV_TAG_KIND" Prm1="EVENT_C11_2_230"/>
 	<Achievement Name="【LOCK】그러고 보니 프림은？ １" cntAvatar="1" cntDelta="1" WorkCond="ACHIEVEMENT_WORK_COND_EV_TAG_KIND" Prm1="EVENT_C11_2_240"/>
 	<Achievement Name="【LOCK】그러고 보니 프림은？ ２" cntAvatar="1" cntDelta="1" WorkCond="ACHIEVEMENT_WORK_COND_EV_TAG_KIND" Prm1="EVENT_C11_2_250"/>
-	<Achievement Name="프림과 오네이" cntAvatar="1" cntDelta="1" WorkCond="ACHIEVEMENT_WORK_COND_EV_TAG_KIND" Prm1="EVENT_C11_2_260"/>
+	<Achievement Name="프림과 누님" cntAvatar="1" cntDelta="1" WorkCond="ACHIEVEMENT_WORK_COND_EV_TAG_KIND" Prm1="EVENT_C11_2_260"/>
 	<Achievement Name="자, 쿠온타브로！" cntAvatar="1" cntDelta="1" Bonus="BONUS_FIELDTALK_BATTLE_ADD" WorkCond="ACHIEVEMENT_WORK_COND_EV_TAG_KIND" Prm1="EVENT_C11_3_010"/>
 	<Achievement Name="질과 뒷문" cntAvatar="1" cntDelta="1" Bonus="BONUS_FIELDTALK_BATTLE_ADD" WorkCond="ACHIEVEMENT_WORK_COND_EV_TAG_KIND" Prm1="EVENT_C11_3_020"/>
 	<Achievement Name="【LOCK】대성당에는 가까이 오지 마라！" cntAvatar="1" cntDelta="1" WorkCond="ACHIEVEMENT_WORK_COND_EV_TAG_KIND" Prm1="EVENT_C11_3_030"/>
-	<Achievement Name="아샤루피나즈 샤루피네즈얀" cntAvatar="1" cntDelta="1" WorkCond="ACHIEVEMENT_WORK_COND_EV_TAG_KIND" Prm1="EVENT_C11_3_040"/>
+	<Achievement Name="아ー샤루피나즈ー샤루피네지ー얀" cntAvatar="1" cntDelta="1" WorkCond="ACHIEVEMENT_WORK_COND_EV_TAG_KIND" Prm1="EVENT_C11_3_040"/>
 	<Achievement Name="아샤루 약 ２（발목 잡기）" cntAvatar="1" cntDelta="1" Bonus="BONUS_FIELDTALK_BATTLE_ADD" WorkCond="ACHIEVEMENT_WORK_COND_EV_TAG_KIND" Prm1="EVENT_C11_3_045"/>
 	<Achievement Name="아샤루 약 ３（접속）" cntAvatar="1" cntDelta="1" WorkCond="ACHIEVEMENT_WORK_COND_EV_TAG_KIND" Prm1="EVENT_C11_3_046"/>
-	<Achievement Name="쉘른을 찾아라！" cntAvatar="1" cntDelta="1" Bonus="BONUS_FIELDTALK_BATTLE_ADD" WorkCond="ACHIEVEMENT_WORK_COND_EV_TAG_KIND" Prm1="EVENT_C11_3_050"/>
+	<Achievement Name="셰룬을 찾아라！" cntAvatar="1" cntDelta="1" Bonus="BONUS_FIELDTALK_BATTLE_ADD" WorkCond="ACHIEVEMENT_WORK_COND_EV_TAG_KIND" Prm1="EVENT_C11_3_050"/>
 	<Achievement Name="카노일" cntAvatar="1" cntDelta="1" WorkCond="ACHIEVEMENT_WORK_COND_EV_TAG_KIND" Prm1="EVENT_C11_3_060"/>
 	<Achievement Name="【전투 후】그리고 붙잡혀 실험쥐가 되어" cntAvatar="1" cntDelta="1" WorkCond="ACHIEVEMENT_WORK_COND_EV_TAG_KIND" Prm1="EVENT_C11_3_070"/>
 	<Achievement Name="↓교단 심처" cntAvatar="1" cntDelta="1" WorkCond="ACHIEVEMENT_WORK_COND_EV_TAG_KIND" Prm1="EVENT_C11_3_080"/>
@@ -2110,12 +2110,12 @@
 	<Achievement Name="【LOCK】밖은 위험하다니까" cntAvatar="1" cntDelta="1" WorkCond="ACHIEVEMENT_WORK_COND_EV_TAG_KIND" Prm1="EVENT_C11_3_110"/>
 	<Achievement Name="늠름하게 구하러 왔습니다" cntAvatar="1" cntDelta="1" Bonus="BONUS_FIELDTALK_BATTLE_ADD" WorkCond="ACHIEVEMENT_WORK_COND_EV_TAG_KIND" Prm1="EVENT_C11_3_120"/>
 	<Achievement Name="【LOCK】밖은 위험하다니까 ２" cntAvatar="1" cntDelta="1" WorkCond="ACHIEVEMENT_WORK_COND_EV_TAG_KIND" Prm1="EVENT_C11_3_130"/>
-	<Achievement Name="클래스・쉘른 프로텍터" cntAvatar="1" cntDelta="1" WorkCond="ACHIEVEMENT_WORK_COND_EV_TAG_KIND" Prm1="EVENT_C11_3_140"/>
+	<Achievement Name="클래스・셰룬 프로텍터" cntAvatar="1" cntDelta="1" WorkCond="ACHIEVEMENT_WORK_COND_EV_TAG_KIND" Prm1="EVENT_C11_3_140"/>
 	<Achievement Name="【전투 후】페리온 대승리！！" cntAvatar="1" cntDelta="1" WorkCond="ACHIEVEMENT_WORK_COND_EV_TAG_KIND" Prm1="EVENT_C11_3_150"/>
 	<Achievement Name="↓ 퀀타브" cntAvatar="1" cntDelta="1" WorkCond="ACHIEVEMENT_WORK_COND_EV_TAG_KIND" Prm1="EVENT_C11_3_160"/>
 	<Achievement Name="플라스크의 바다" cntAvatar="1" cntDelta="1" Bonus="BONUS_FIELDTALK_BATTLE_ADD" WorkCond="ACHIEVEMENT_WORK_COND_EV_TAG_KIND" Prm1="EVENT_C11_3_170"/>
 	<Achievement Name="샤르가 헤엄치고 있어！" cntAvatar="1" cntDelta="1" Bonus="BONUS_FIELDTALK_BATTLE_ADD" WorkCond="ACHIEVEMENT_WORK_COND_EV_TAG_KIND" Prm1="EVENT_C11_3_180"/>
-	<Achievement Name="쉘른 사쥬" cntAvatar="1" cntDelta="1" WorkCond="ACHIEVEMENT_WORK_COND_EV_TAG_KIND" Prm1="EVENT_C11_3_190"/>
+	<Achievement Name="셰르노사쥬" cntAvatar="1" cntDelta="1" WorkCond="ACHIEVEMENT_WORK_COND_EV_TAG_KIND" Prm1="EVENT_C11_3_190"/>
 	<Achievement Name="↓베제리에르트론　" cntAvatar="1" cntDelta="1" WorkCond="ACHIEVEMENT_WORK_COND_EV_TAG_KIND" Prm1="EVENT_C11_3_200"/>
 	<Achievement Name="↓플라센타　" cntAvatar="1" cntDelta="1" WorkCond="ACHIEVEMENT_WORK_COND_EV_TAG_KIND" Prm1="EVENT_C11_3_210"/>
 	<Achievement Name="【전투 후】플라스크 안으로" cntAvatar="1" cntDelta="1" WorkCond="ACHIEVEMENT_WORK_COND_EV_TAG_KIND" Prm1="EVENT_C11_3_220"/>
@@ -2178,12 +2178,12 @@
 	<Achievement Name="옷 갈아입기 세트！？" cntAvatar="1" cntDelta="1" Bonus="BONUS_FIELDTALK_BATTLE_ADD" WorkCond="ACHIEVEMENT_WORK_COND_EV_TAG_KIND" Prm1="EVENT_C12_2_030"/>
 	<Achievement Name="호노카 마을" cntAvatar="1" cntDelta="1" WorkCond="ACHIEVEMENT_WORK_COND_EV_TAG_KIND" Prm1="EVENT_C12_2_040"/>
 	<Achievement Name="쿠루린텐" cntAvatar="1" cntDelta="1" WorkCond="ACHIEVEMENT_WORK_COND_EV_TAG_KIND" Prm1="EVENT_C12_2_050"/>
-	<Achievement Name="와리후가 없어" cntAvatar="1" cntDelta="1" WorkCond="ACHIEVEMENT_WORK_COND_EV_TAG_KIND" Prm1="EVENT_C12_2_060"/>
-	<Achievement Name="와리후를 찾았다！" cntAvatar="1" cntDelta="1" Bonus="BONUS_FIELDTALK_BATTLE_ADD" WorkCond="ACHIEVEMENT_WORK_COND_EV_TAG_KIND" Prm1="EVENT_C12_2_070"/>
-	<Achievement Name="답례로 와리후를 드릴게요" cntAvatar="1" cntDelta="1" WorkCond="ACHIEVEMENT_WORK_COND_EV_TAG_KIND" Prm1="EVENT_C12_2_080"/>
+	<Achievement Name="증표가 없어" cntAvatar="1" cntDelta="1" WorkCond="ACHIEVEMENT_WORK_COND_EV_TAG_KIND" Prm1="EVENT_C12_2_060"/>
+	<Achievement Name="증표를 찾았다！" cntAvatar="1" cntDelta="1" Bonus="BONUS_FIELDTALK_BATTLE_ADD" WorkCond="ACHIEVEMENT_WORK_COND_EV_TAG_KIND" Prm1="EVENT_C12_2_070"/>
+	<Achievement Name="답례로 증표를 드릴게요" cntAvatar="1" cntDelta="1" WorkCond="ACHIEVEMENT_WORK_COND_EV_TAG_KIND" Prm1="EVENT_C12_2_080"/>
 	<Achievement Name="온천은 어떠신가요？" cntAvatar="1" cntDelta="1" WorkCond="ACHIEVEMENT_WORK_COND_EV_TAG_KIND" Prm1="EVENT_C12_2_090"/>
 	<Achievement Name="조금 빠를지도？" cntAvatar="1" cntDelta="1" WorkCond="ACHIEVEMENT_WORK_COND_EV_TAG_KIND" Prm1="EVENT_C12_2_100"/>
-	<Achievement Name="와리후가 뭐야？" cntAvatar="1" cntDelta="1" WorkCond="ACHIEVEMENT_WORK_COND_EV_TAG_KIND" Prm1="EVENT_C12_2_110"/>
+	<Achievement Name="증표가 뭐야？" cntAvatar="1" cntDelta="1" WorkCond="ACHIEVEMENT_WORK_COND_EV_TAG_KIND" Prm1="EVENT_C12_2_110"/>
 	<Achievement Name="전철을 타고" cntAvatar="1" cntDelta="1" WorkCond="ACHIEVEMENT_WORK_COND_EV_TAG_KIND" Prm1="EVENT_C12_2_120"/>
 	<Achievement Name="↓샤라노이아" cntAvatar="1" cntDelta="1" WorkCond="ACHIEVEMENT_WORK_COND_EV_TAG_KIND" Prm1="EVENT_C12_2_130"/>
 	<Achievement Name="↓천령 사라" cntAvatar="1" cntDelta="1" WorkCond="ACHIEVEMENT_WORK_COND_EV_TAG_KIND" Prm1="EVENT_C12_2_140"/>
@@ -2314,7 +2314,7 @@
 	<Achievement Name="빨리 피난해 ２" cntAvatar="1" cntDelta="1" Bonus="BONUS_FIELDTALK_BATTLE_ADD" WorkCond="ACHIEVEMENT_WORK_COND_EV_TAG_KIND" Prm1="EVENT_C21_5_080"/>
 	<Achievement Name="황제 폐하와 황제 폐하" cntAvatar="1" cntDelta="1" WorkCond="ACHIEVEMENT_WORK_COND_EV_TAG_KIND" Prm1="EVENT_C22_1_010"/>
 	<Achievement Name="【LOCK】나를 죽일 셈이야？" cntAvatar="1" cntDelta="1" WorkCond="ACHIEVEMENT_WORK_COND_EV_TAG_KIND" Prm1="EVENT_C22_1_020"/>
-	<Achievement Name="네이 짱의 본업？" cntAvatar="1" cntDelta="1" WorkCond="ACHIEVEMENT_WORK_COND_EV_TAG_KIND" Prm1="EVENT_C22_1_030"/>
+	<Achievement Name="네이쨩의 본업？" cntAvatar="1" cntDelta="1" WorkCond="ACHIEVEMENT_WORK_COND_EV_TAG_KIND" Prm1="EVENT_C22_1_030"/>
 	<Achievement Name="안녕 호노카" cntAvatar="1" cntDelta="1" WorkCond="ACHIEVEMENT_WORK_COND_EV_TAG_KIND" Prm1="EVENT_C22_1_040"/>
 	<Achievement Name="안녕 타토리아" cntAvatar="1" cntDelta="1" WorkCond="ACHIEVEMENT_WORK_COND_EV_TAG_KIND" Prm1="EVENT_C22_1_050"/>
 	<Achievement Name="안녕 텐료" cntAvatar="1" cntDelta="1" WorkCond="ACHIEVEMENT_WORK_COND_EV_TAG_KIND" Prm1="EVENT_C22_1_060"/>
@@ -2536,7 +2536,7 @@
 	<Achievement Name="LV6-3（델타） 아쉬웠어" cntDelta="1" Bonus="BONUS_SARLY_MISOGI_TALK_COUNT_DELTA" WorkCond="ACHIEVEMENT_WORK_COND_MATTER_KIND" Prm1="TALK_MATTER_SARLY_LV06_03"/>
 	<Achievement Name="LV6-4（아셰스） 알려줘" cntAvatar="1" Bonus="BONUS_SARLY_MISOGI_TALK_COUNT_AVATAR" WorkCond="ACHIEVEMENT_WORK_COND_MATTER_KIND" Prm1="TALK_MATTER_SARLY_LV06_04"/>
 	<Achievement Name="LV6-5（아셰스） 살아있길 잘했어" cntAvatar="1" Bonus="BONUS_SARLY_MISOGI_TALK_COUNT_AVATAR" WorkCond="ACHIEVEMENT_WORK_COND_MATTER_KIND" Prm1="TALK_MATTER_SARLY_LV06_05"/>
-	<Achievement Name="LV6-6（아셰스） 아셰스 사람인가요？" cntAvatar="1" Bonus="BONUS_SARLY_MISOGI_TALK_COUNT_AVATAR" WorkCond="ACHIEVEMENT_WORK_COND_MATTER_KIND" Prm1="TALK_MATTER_SARLY_LV06_06"/>
+	<Achievement Name="LV6-6（아셰스） 아르시엘 사람인가요？" cntAvatar="1" Bonus="BONUS_SARLY_MISOGI_TALK_COUNT_AVATAR" WorkCond="ACHIEVEMENT_WORK_COND_MATTER_KIND" Prm1="TALK_MATTER_SARLY_LV06_06"/>
 	<Achievement Name="LV6-7（아셰스） 어른이니까 적당히 즐기는 정도로" cntAvatar="1" Bonus="BONUS_SARLY_MISOGI_TALK_COUNT_AVATAR" WorkCond="ACHIEVEMENT_WORK_COND_MATTER_KIND" Prm1="TALK_MATTER_SARLY_LV06_07"/>
 	<Achievement Name="LV7-1（델타） 조용히 하이텐션" cntDelta="1" Bonus="BONUS_SARLY_MISOGI_TALK_COUNT_DELTA" WorkCond="ACHIEVEMENT_WORK_COND_MATTER_KIND" Prm1="TALK_MATTER_SARLY_LV07_01"/>
 	<Achievement Name="LV7-2（델타） 앞으로는？" cntDelta="1" Bonus="BONUS_SARLY_MISOGI_TALK_COUNT_DELTA" WorkCond="ACHIEVEMENT_WORK_COND_MATTER_KIND" Prm1="TALK_MATTER_SARLY_LV07_02"/>
@@ -2584,7 +2584,7 @@
 	<Achievement Name="LV6-2（델타） 사이좋게 지내줘" cntDelta="1" Bonus="BONUS_NERO_MISOGI_TALK_COUNT_DELTA" WorkCond="ACHIEVEMENT_WORK_COND_MATTER_KIND" Prm1="TALK_MATTER_NERO_LV06_02"/>
 	<Achievement Name="LV6-3（델타） 사이즈가 말이야……" cntDelta="1" Bonus="BONUS_NERO_MISOGI_TALK_COUNT_DELTA" WorkCond="ACHIEVEMENT_WORK_COND_MATTER_KIND" Prm1="TALK_MATTER_NERO_LV06_03"/>
 	<Achievement Name="LV6-4（델타）" cntDelta="1" Bonus="BONUS_NERO_MISOGI_TALK_COUNT_DELTA" WorkCond="ACHIEVEMENT_WORK_COND_MATTER_KIND" Prm1="TALK_MATTER_NERO_LV06_04"/>
-	<Achievement Name="LV6-5（아셰스） 아셰스를 알고 있어？" cntAvatar="1" Bonus="BONUS_NERO_MISOGI_TALK_COUNT_AVATAR" WorkCond="ACHIEVEMENT_WORK_COND_MATTER_KIND" Prm1="TALK_MATTER_NERO_LV06_05"/>
+	<Achievement Name="LV6-5（아셰스） 아르시엘을 알고 있어？" cntAvatar="1" Bonus="BONUS_NERO_MISOGI_TALK_COUNT_AVATAR" WorkCond="ACHIEVEMENT_WORK_COND_MATTER_KIND" Prm1="TALK_MATTER_NERO_LV06_05"/>
 	<Achievement Name="LV6-6（아셰스） 당신 세계의 지도자는？" cntAvatar="1" Bonus="BONUS_NERO_MISOGI_TALK_COUNT_AVATAR" WorkCond="ACHIEVEMENT_WORK_COND_MATTER_KIND" Prm1="TALK_MATTER_NERO_LV06_06"/>
 	<Achievement Name="LV6-7（아셰스） 아셰스란……" cntAvatar="1" Bonus="BONUS_NERO_MISOGI_TALK_COUNT_AVATAR" WorkCond="ACHIEVEMENT_WORK_COND_MATTER_KIND" Prm1="TALK_MATTER_NERO_LV06_07"/>
 	<Achievement Name="LV7-1（델타） 미래의 즐거움" cntDelta="1" Bonus="BONUS_NERO_MISOGI_TALK_COUNT_DELTA" WorkCond="ACHIEVEMENT_WORK_COND_MATTER_KIND" Prm1="TALK_MATTER_NERO_LV07_01"/>
@@ -2606,7 +2606,7 @@
 	<Achievement Name="LV2-3（델타） 신경 안 써！！" cntDelta="1" Bonus="BONUS_SYURERIA_MISOGI_TALK_COUNT_DELTA" WorkCond="ACHIEVEMENT_WORK_COND_MATTER_KIND" Prm1="TALK_MATTER_SYURERIA_LV02_03"/>
 	<Achievement Name="LV2-4（아셰스） 코잘에 대하여" cntAvatar="1" Bonus="BONUS_SYURERIA_MISOGI_TALK_COUNT_AVATAR" WorkCond="ACHIEVEMENT_WORK_COND_MATTER_KIND" Prm1="TALK_MATTER_SYURERIA_LV02_04"/>
 	<Achievement Name="LV2-5（아셰스） 아셰스는 알고 있다・１" cntAvatar="1" Bonus="BONUS_SYURERIA_MISOGI_TALK_COUNT_AVATAR" WorkCond="ACHIEVEMENT_WORK_COND_MATTER_KIND" Prm1="TALK_MATTER_SYURERIA_LV02_05"/>
-	<Achievement Name="LV2-6（아셰스） 아셰스의 유행" cntAvatar="1" Bonus="BONUS_SYURERIA_MISOGI_TALK_COUNT_AVATAR" WorkCond="ACHIEVEMENT_WORK_COND_MATTER_KIND" Prm1="TALK_MATTER_SYURERIA_LV02_06"/>
+	<Achievement Name="LV2-6（아셰스） 아르시엘의 유행" cntAvatar="1" Bonus="BONUS_SYURERIA_MISOGI_TALK_COUNT_AVATAR" WorkCond="ACHIEVEMENT_WORK_COND_MATTER_KIND" Prm1="TALK_MATTER_SYURERIA_LV02_06"/>
 	<Achievement Name="LV2-7（아셰스） 길을 잃지는 않아？" cntAvatar="1" Bonus="BONUS_SYURERIA_MISOGI_TALK_COUNT_AVATAR" WorkCond="ACHIEVEMENT_WORK_COND_MATTER_KIND" Prm1="TALK_MATTER_SYURERIA_LV02_07"/>
 	<Achievement Name="LV3-1（델타） 안내해줬으면 해" cntDelta="1" Bonus="BONUS_SYURERIA_MISOGI_TALK_COUNT_DELTA" WorkCond="ACHIEVEMENT_WORK_COND_MATTER_KIND" Prm1="TALK_MATTER_SYURERIA_LV03_01"/>
 	<Achievement Name="LV3-2（델타） 누가 봐도 길을 잃었다" cntDelta="1" Bonus="BONUS_SYURERIA_MISOGI_TALK_COUNT_DELTA" WorkCond="ACHIEVEMENT_WORK_COND_MATTER_KIND" Prm1="TALK_MATTER_SYURERIA_LV03_02"/>
@@ -2627,7 +2627,7 @@
 	<Achievement Name="LV5-3（델타） 아주 맛있는 것도 있어" cntDelta="1" Bonus="BONUS_SYURERIA_MISOGI_TALK_COUNT_DELTA" WorkCond="ACHIEVEMENT_WORK_COND_MATTER_KIND" Prm1="TALK_MATTER_SYURERIA_LV05_03"/>
 	<Achievement Name="LV5-4（델타） 전투 중에 벗습니까？" cntDelta="1" Bonus="BONUS_SYURERIA_MISOGI_TALK_COUNT_DELTA" WorkCond="ACHIEVEMENT_WORK_COND_MATTER_KIND" Prm1="TALK_MATTER_SYURERIA_LV05_04"/>
 	<Achievement Name="LV5-5（아셰스） 자세한 내용은 델타에게" cntAvatar="1" Bonus="BONUS_SYURERIA_MISOGI_TALK_COUNT_AVATAR" WorkCond="ACHIEVEMENT_WORK_COND_MATTER_KIND" Prm1="TALK_MATTER_SYURERIA_LV05_05"/>
-	<Achievement Name="LV5-6（아셰스） 아셰스 사람도 깜짝" cntAvatar="1" Bonus="BONUS_SYURERIA_MISOGI_TALK_COUNT_AVATAR" WorkCond="ACHIEVEMENT_WORK_COND_MATTER_KIND" Prm1="TALK_MATTER_SYURERIA_LV05_06"/>
+	<Achievement Name="LV5-6（아셰스） 아르시엘 사람도 깜짝" cntAvatar="1" Bonus="BONUS_SYURERIA_MISOGI_TALK_COUNT_AVATAR" WorkCond="ACHIEVEMENT_WORK_COND_MATTER_KIND" Prm1="TALK_MATTER_SYURERIA_LV05_06"/>
 	<Achievement Name="LV5-7（아셰스） 이쪽에서도 미아・１" cntAvatar="1" Bonus="BONUS_SYURERIA_MISOGI_TALK_COUNT_AVATAR" WorkCond="ACHIEVEMENT_WORK_COND_MATTER_KIND" Prm1="TALK_MATTER_SYURERIA_LV05_07"/>
 	<Achievement Name="LV6-1（델타） 이쪽에서도 미아・２" cntDelta="1" Bonus="BONUS_SYURERIA_MISOGI_TALK_COUNT_DELTA" WorkCond="ACHIEVEMENT_WORK_COND_MATTER_KIND" Prm1="TALK_MATTER_SYURERIA_LV06_01"/>
 	<Achievement Name="LV6-2（델타） 모두의 동경, 옥좌！" cntDelta="1" Bonus="BONUS_SYURERIA_MISOGI_TALK_COUNT_DELTA" WorkCond="ACHIEVEMENT_WORK_COND_MATTER_KIND" Prm1="TALK_MATTER_SYURERIA_LV06_02"/>

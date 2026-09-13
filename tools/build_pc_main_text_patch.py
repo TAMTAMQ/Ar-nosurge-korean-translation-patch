@@ -20,6 +20,8 @@ import argparse
 import csv
 import json
 import pathlib
+
+from rename_term import normalize_main_translation
 import struct
 import sys
 from collections import defaultdict
@@ -34,6 +36,11 @@ PACKED_STRING_OFFSETS = {
     2640: 0x56B920,  # ダミー
     2777: 0x56EAE8,  # 結城　柑菜
 }
+
+# PC 1.0.1 원본에서 해당 문자열 바로 뒤의 NUL 정렬 패딩을 실측해 안전하게
+# 사용할 수 있다고 확인한 항목. 전체 문자열에 --allow-padding을 켜지 않고 이 두
+# 항목만 필요한 만큼 확장해서, 인접 구조의 0 바이트를 잘못 먹는 위험을 피한다.
+SAFE_PADDING_INDICES = {3900, 6283}
 
 
 def sections(data):
@@ -130,14 +137,25 @@ def main():
     print(f"번역 대상 행: {len(rows)}")
 
     writes = {}            # 파일 오프셋 -> payload
+    # 정규화된 고유명사가 일본어 원문보다 길어지는 경우를 위해, 정상 배치된
+    # 문자열 슬롯의 남는 뒷부분을 relocation pool로 사용한다. 문자열 본문 뒤에
+    # NUL을 먼저 남기므로 원래 문자열을 읽는 경로에는 영향이 없다.
+    free_regions = []      # [host_off, relative_start, remaining]
+    relocation_requests = []
+    pointer_writes = {}
     stats = defaultdict(int)
     overflow, notfound, unmapped = [], [], []
+    relocated = []
     packed_slots_used = []
 
     for row in rows:
         row_index = int(row["index"])
         original = row["original"]
-        translation = row["translation"]
+        # PC판은 고정 슬롯을 넘는 정식 표기를 relocation할 수 있으므로 Switch용
+        # 축약 예외(예: 텐토키/시로)를 적용하지 않는다.
+        translation = normalize_main_translation(
+            row_index, row["translation"], original, compact=False
+        )
 
         # 추출 당시의 CSV 는 개행을 CRLF 로 담고 있는데 PE 안의 문자열은 LF 만
         # 쓴다. 원문 그대로는 찾지 못하므로 개행을 맞춰 한 번 더 본다. 이때
@@ -185,29 +203,102 @@ def main():
             continue
 
         placed = False
+        overflow_hits = []
         for h in hits:
             # 기본은 원문이 차지하던 바이트와 그 종단 NUL 만 쓴다. 뒤의 정렬
             # 패딩은 인접 구조의 0 바이트일 수도 있어 건드리지 않는다.
-            cap = (slot_capacity(data, h, len(needle)) if args.allow_padding
+            cap = (slot_capacity(data, h, len(needle))
+                   if args.allow_padding or row_index in SAFE_PADDING_INDICES
                    else len(needle) + 1)
             if len(payload) + 1 > cap:          # 종단 NUL 한 바이트는 남긴다
-                overflow.append({"index": row["index"], "original": original,
-                                 "translation": row["translation"],
-                                 "offset": hex(h), "capacity": cap,
-                                 "needed": len(payload) + 1})
-                stats["overflow"] += 1
+                overflow_hits.append((h, cap))
                 continue
             writes[h] = payload.ljust(cap, b"\0")
+            spare = cap - (len(payload) + 1)
+            if spare > 0:
+                free_regions.append([h, len(payload) + 1, spare])
             placed = True
         if placed:
             stats["placed"] += 1
             stats["slots"] += len([h for h in hits if h in writes])
+        if overflow_hits:
+            relocation_requests.append({
+                "index": row_index,
+                "original": original,
+                "translation": chosen,
+                "payload": payload,
+                "hits": overflow_hits,
+            })
+
+    # PC판은 문자열 포인터 테이블이 64비트 절대 VA를 보관한다. 고유명사 음역이
+    # 길어져 원래 슬롯에 안 들어가는 경우에는, 이미 번역한 긴 문자열 슬롯의 남는
+    # NUL 영역에 새 문자열을 두고 그 포인터들만 새 위치로 돌린다. 원문 문자열을
+    # 잘라 표기를 훼손하지 않기 위한 PC 전용 안전장치다.
+    for request in relocation_requests:
+        payload = request["payload"]
+        need = len(payload) + 1
+        region = next((r for r in free_regions if r[2] >= need), None)
+        if region is None:
+            for h, cap in request["hits"]:
+                overflow.append({
+                    "index": str(request["index"]), "original": request["original"],
+                    "translation": request["translation"], "offset": hex(h),
+                    "capacity": cap, "needed": need, "reason": "no relocation pool",
+                })
+                stats["overflow"] += 1
+            continue
+
+        host_off, rel_start, remaining = region
+        relocated_off = host_off + rel_start
+        host = bytearray(writes[host_off])
+        host[rel_start:rel_start + need] = payload + b"\0"
+        writes[host_off] = bytes(host)
+        region[1] += need
+        region[2] -= need
+        relocated_va = base + sec["vaddr"] + (relocated_off - sec["roff"])
+
+        pointer_hits = []
+        for h, _cap in request["hits"]:
+            target_va = base + sec["vaddr"] + (h - sec["roff"])
+            needle_ptr = struct.pack("<Q", target_va)
+            start = 0
+            while True:
+                ptr_off = data.find(needle_ptr, start)
+                if ptr_off < 0:
+                    break
+                pointer_hits.append(ptr_off)
+                pointer_writes[ptr_off] = struct.pack("<Q", relocated_va)
+                start = ptr_off + 1
+
+        if not pointer_hits:
+            # 참조 방식을 확인할 수 없는 문자열은 조용히 잘못 옮기지 않는다.
+            for h, cap in request["hits"]:
+                overflow.append({
+                    "index": str(request["index"]), "original": request["original"],
+                    "translation": request["translation"], "offset": hex(h),
+                    "capacity": cap, "needed": need, "reason": "no absolute pointer xref",
+                })
+                stats["overflow"] += 1
+            continue
+
+        relocated.append({
+            "index": request["index"],
+            "translation": request["translation"],
+            "relocated_offset": hex(relocated_off),
+            "relocated_va": hex(relocated_va),
+            "pointer_offsets": [hex(x) for x in sorted(set(pointer_hits))],
+        })
+        stats["relocated"] += 1
+        stats["placed"] += 1
+        stats["slots"] += len(request["hits"])
 
     print(json.dumps({k: v for k, v in sorted(stats.items())},
                      ensure_ascii=False, indent=2))
 
     if args.output:
         for off, payload in writes.items():
+            data[off:off + len(payload)] = payload
+        for off, payload in pointer_writes.items():
             data[off:off + len(payload)] = payload
         args.output.parent.mkdir(parents=True, exist_ok=True)
         args.output.write_bytes(bytes(data))
@@ -226,6 +317,7 @@ def main():
         "not_found_detail": notfound[:200],
         "unmapped_detail": unmapped[:200],
         "packed_string_slots_used": packed_slots_used,
+        "relocated": relocated,
     }
     args.report.parent.mkdir(parents=True, exist_ok=True)
     args.report.write_text(json.dumps(report, ensure_ascii=False, indent=2),

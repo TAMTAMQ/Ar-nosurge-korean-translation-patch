@@ -24,6 +24,7 @@ import re
 from pathlib import Path
 
 from decode_saves_xml_e import encode_file, detect_text_encoding
+from rename_term import rename as normalize_terms
 from text_layout import (FM_TALK_LINE_WRAP_CHARS, LINE_WRAP_CHARS, MAX_LINES,
                          reflow_dialogue_layout, rendered_line_count)
 
@@ -114,6 +115,7 @@ def main():
         with source.open("r", encoding="utf-8", newline="") as handle:
             text = handle.read()
         text = normalize_punctuation(text)
+        text = normalize_terms(text)
         line_wrap_chars = (FM_TALK_LINE_WRAP_CHARS
                            if relative.as_posix().lower() == "tweet/fm_talk_data.xml"
                            else LINE_WRAP_CHARS)

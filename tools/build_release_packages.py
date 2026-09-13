@@ -120,6 +120,98 @@ def build_pc(repo: pathlib.Path, donor: pathlib.Path, version: str, base_version
     return patch_out, movies_out
 
 
+def build_pc_staged_patch(repo: pathlib.Path, donor: pathlib.Path, version: str,
+                          base_version: str, stage: pathlib.Path,
+                          font: pathlib.Path) -> pathlib.Path:
+    """Build a PC patch ZIP from already-built payloads without touching the game."""
+    releases = repo / "releases"
+    releases.mkdir(exist_ok=True)
+    patch_out = releases / f"ArNosurgeDX-Korean-{version}-PC-Patch.zip"
+    root = f"ArNosurgeDX-Korean-{version}-PC"
+
+    required = {
+        "ArnosurgeDX.exe": stage / "ArnosurgeDX.exe",
+        "Data\\PACK01.PAK": stage / "Data" / "PACK01.PAK",
+        "Data\\PACK02.PAK": stage / "Data" / "PACK02.PAK",
+    }
+    missing = [str(path) for path in required.values() if not path.is_file()]
+    if missing:
+        raise SystemExit("staged PC payload가 없습니다: " + ", ".join(missing))
+    if not font.is_file():
+        raise SystemExit(f"staged PC font가 없습니다: {font}")
+
+    with zipfile.ZipFile(donor) as zin:
+        old_root = donor_root(zin)
+        pack_manifest = json.loads(
+            zin.read(f"{old_root}/payload/pack00_manifest.json").decode("utf-8")
+        )
+        pack_payloads: dict[str, bytes] = {}
+        font_replaced = 0
+        for entry in pack_manifest["entries"]:
+            payload_name = entry["payload"]
+            data = zin.read(f"{old_root}/payload/pack00/{payload_name}")
+            if entry["name"].replace("/", "\\").lower().endswith("\\mainfont_x64_0.g1t"):
+                data = font.read_bytes()
+                font_replaced += 1
+            if len(data) != entry["size"]:
+                raise SystemExit(
+                    f"PACK00 payload 크기 불일치: {entry['name']} {len(data)} != {entry['size']}"
+                )
+            entry["sha256"] = sha(data)
+            pack_payloads[payload_name] = data
+        if font_replaced != 1:
+            raise SystemExit(f"PC 폰트 payload 교체 건수 불일치: {font_replaced}")
+
+        patch_files = {name: path.read_bytes() for name, path in required.items()}
+        files_manifest = {
+            "files": [
+                {"path": path, "size": len(data), "sha256": sha(data)}
+                for path, data in patch_files.items()
+            ]
+        }
+        install_bat = unique_entry(zin, "/install.bat")
+        uninstall_bat = unique_entry(zin, "/uninstall.bat")
+        installer = update_version_text(
+            unique_entry(zin, "/install_pc_patch.ps1"), base_version, version
+        )
+        uninstaller = update_version_text(
+            unique_entry(zin, "/uninstall_pc_patch.ps1"), base_version, version
+        )
+
+        with zipfile.ZipFile(patch_out, "w", allowZip64=True) as zout:
+            write_bytes(zout, f"{root}/install.bat", install_bat)
+            write_bytes(zout, f"{root}/uninstall.bat", uninstall_bat)
+            write_bytes(zout, f"{root}/install_pc_patch.ps1", installer)
+            write_bytes(zout, f"{root}/uninstall_pc_patch.ps1", uninstaller)
+            write_bytes(zout, f"{root}/README.txt", pc_readme(version))
+            for path, data in patch_files.items():
+                write_bytes(zout, f"{root}/payload/files/{path.replace(chr(92), '/')}", data)
+            write_bytes(
+                zout,
+                f"{root}/payload/files_manifest.json",
+                json.dumps(files_manifest, ensure_ascii=False, indent=2).encode("utf-8"),
+            )
+            write_bytes(
+                zout,
+                f"{root}/payload/pack00_manifest.json",
+                json.dumps(pack_manifest, ensure_ascii=False, indent=2).encode("utf-8"),
+            )
+            for name, data in pack_payloads.items():
+                write_bytes(zout, f"{root}/payload/pack00/{name}", data)
+
+    # Final ZIP readback: every payload must match its manifest before handing it off.
+    with zipfile.ZipFile(patch_out) as zcheck:
+        for entry in files_manifest["files"]:
+            data = zcheck.read(f"{root}/payload/files/{entry['path'].replace(chr(92), '/')}")
+            if len(data) != entry["size"] or sha(data) != entry["sha256"]:
+                raise SystemExit(f"PC test ZIP files readback 실패: {entry['path']}")
+        for entry in pack_manifest["entries"]:
+            data = zcheck.read(f"{root}/payload/pack00/{entry['payload']}")
+            if len(data) != entry["size"] or sha(data) != entry["sha256"]:
+                raise SystemExit(f"PC test ZIP PACK00 readback 실패: {entry['name']}")
+    return patch_out
+
+
 def build_switch(repo: pathlib.Path, donor: pathlib.Path, version: str) -> tuple[pathlib.Path, pathlib.Path]:
     releases = repo / "releases"
     patch_out = releases / f"ArNosurgeDX-Korean-{version}-Switch-Patch.zip"
@@ -164,12 +256,29 @@ def main() -> None:
     ap = argparse.ArgumentParser(description=__doc__)
     ap.add_argument("--version", default="v0.3")
     ap.add_argument("--base-version", default="v0.2")
+    ap.add_argument("--pc-stage", type=pathlib.Path,
+                    help="게임을 수정하지 않고 이미 빌드한 PC EXE/PACK01/PACK02로 Patch ZIP 생성")
+    ap.add_argument("--pc-font", type=pathlib.Path,
+                    help="--pc-stage와 함께 넣을 PC 원본 기반 한글 mainfont_x64_0.g1t")
+    ap.add_argument("--pc-donor", type=pathlib.Path,
+                    help="PC 설치 스크립트/UI payload를 가져올 기존 Patch ZIP")
     args = ap.parse_args()
     sources = repo / "build" / "release_sources"
-    pc_donor = sources / f"ArNosurgeDX-Korean-{args.base_version}-PC.zip"
+    pc_donor = args.pc_donor or (sources / f"ArNosurgeDX-Korean-{args.base_version}-PC.zip")
+    if not pc_donor.is_file():
+        raise SystemExit(f"기존 PC 릴리스 ZIP이 없습니다: {pc_donor}")
+    if args.pc_stage:
+        if not args.pc_font:
+            raise SystemExit("--pc-stage 사용 시 --pc-font도 지정해야 합니다")
+        output = build_pc_staged_patch(
+            repo, pc_donor, args.version, args.base_version, args.pc_stage, args.pc_font
+        )
+        print(f"{output.name}: {output.stat().st_size:,} bytes sha256={sha(output.read_bytes())}")
+        return
+
     sw_donor = sources / f"ArNosurgeDX-Korean-{args.base_version}-Switch.zip"
-    if not pc_donor.is_file() or not sw_donor.is_file():
-        raise SystemExit("기존 전체 릴리스 ZIP을 build/release_sources에서 찾지 못했습니다")
+    if not sw_donor.is_file():
+        raise SystemExit("기존 Switch 전체 릴리스 ZIP을 build/release_sources에서 찾지 못했습니다")
     outputs = [*build_pc(repo, pc_donor, args.version, args.base_version), *build_switch(repo, sw_donor, args.version)]
     for p in outputs:
         print(f"{p.name}: {p.stat().st_size:,} bytes sha256={sha(p.read_bytes())}")

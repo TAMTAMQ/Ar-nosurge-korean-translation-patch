@@ -50,6 +50,61 @@ def _layout(data: bytes, label: str) -> tuple[int, int, list[int]]:
     return table, count, starts
 
 
+def merge_g1t_entries(
+    pc_original: Path,
+    translated: Path,
+    copy_entries: list[int] | tuple[int, ...],
+) -> tuple[bytes, dict]:
+    """PC 원본 G1T의 컨테이너/플랫폼 구조를 유지하고 지정 텍스처만 이식한다.
+
+    PC와 Switch가 같은 G1T 슬롯/크기를 공유하더라도 일부 텍스처는 플랫폼 전용일
+    수 있다. 예를 들어 타이틀의 0번 텍스처에는 PC에만 있는 EXIT 이미지가 있다.
+    이 경우 Switch 번역 G1T 전체를 복사하지 않고, 한국어가 필요한 공통 텍스처
+    엔트리만 PC 원본에 복사한다.
+    """
+    pc = pc_original.read_bytes()
+    kr = translated.read_bytes()
+    if len(pc) != len(kr):
+        raise ValueError(
+            f"{pc_original.name}: PC 원본/번역 G1T 크기가 다릅니다 ({len(pc)} / {len(kr)})"
+        )
+
+    pc_table, pc_count, pc_starts = _layout(pc, f"PC {pc_original.name}")
+    kr_table, kr_count, kr_starts = _layout(kr, f"번역 {translated.name}")
+    if (pc_table, pc_count, pc_starts) != (kr_table, kr_count, kr_starts):
+        raise ValueError(f"{pc_original.name}: PC와 번역 G1T 텍스처 구조가 다릅니다")
+
+    wanted = list(dict.fromkeys(int(index) for index in copy_entries))
+    if any(index < 0 or index >= pc_count for index in wanted):
+        raise ValueError(
+            f"{pc_original.name}: 이식 엔트리 범위가 잘못되었습니다: {wanted} / count={pc_count}"
+        )
+
+    out = bytearray(pc)
+    copied = []
+    for index in wanted:
+        start = pc_starts[index]
+        end = pc_starts[index + 1] if index + 1 < pc_count else len(pc)
+        before = pc[start:end]
+        after = kr[start:end]
+        out[start:end] = after
+        copied.append({
+            "index": index,
+            "bytes": end - start,
+            "changed": before != after,
+        })
+
+    # 전역 G1T 헤더는 PC 원본 것을 그대로 유지해야 한다.
+    if _u32(bytes(out), 0x14) != PC_PLATFORM:
+        raise ValueError(
+            f"{pc_original.name}: 합성 결과 플랫폼 값이 PC(0x{PC_PLATFORM:02x})가 아닙니다"
+        )
+    return bytes(out), {
+        "copied_entries": copied,
+        "preserved_entries": [i for i in range(pc_count) if i not in wanted],
+    }
+
+
 def _changed_visible_blocks(original_png: Path, translated_png: Path) -> tuple[set[int], int, int]:
     with Image.open(original_png) as src_im, Image.open(translated_png) as dst_im:
         src = src_im.convert("RGBA")

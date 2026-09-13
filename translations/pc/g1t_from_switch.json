@@ -22,6 +22,9 @@
     { "pak": "data/x64/ipu/still02.g1t",   "switch": "Data/NX/Ipu/still02.g1t" },
     { "pak": "data/x64/ipu/still06.g1t",   "switch": "Data/NX/Ipu/still06.g1t" },
     { "pak": "data/x64/ipu/still19_1.g1t", "switch": "Data/NX/Ipu/still19_1.g1t" },
-    { "pak": "data/x64/ipu/still19_2.g1t", "switch": "Data/NX/Ipu/still19_2.g1t" }
+    { "pak": "data/x64/ipu/still19_2.g1t", "switch": "Data/NX/Ipu/still19_2.g1t" },
+    { "pak": "data/x64/ipu/warning_text.g1t", "translated": "Data/NX/Ipu/warning_text.g1t" },
+    { "pak": "data/x64/ui/title.g1t", "translated": "Data/NX/ui/title.g1t", "copy_entries": [1, 2] },
+    { "pak": "data/x64/ui/title_x64.g1t", "pc_translated": "translateImage/pc/title_x64.g1t" }
   ]
 }

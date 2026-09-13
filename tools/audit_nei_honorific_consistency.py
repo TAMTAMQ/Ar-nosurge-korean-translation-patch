@@ -1,0 +1,102 @@
+#!/usr/bin/env python3
+"""Audit ordinary ネイさん / ネイちゃん honorific preservation.
+
+`おネイ` is an intentional ネイ + お姉 wordplay and is deliberately excluded
+from mechanical validation. Korean should preserve that joke as 누나/언니/누님
+according to context (for example 疾風のおネイ → 질풍의 누님). Only ordinary
+source suffixes are enforced here as さん→씨 and ちゃん→쨩.
+"""
+from __future__ import annotations
+
+import argparse
+from collections import Counter
+
+from audit_glossary_substring_collisions import aligned_units
+from event_translation_review_fixes import FIXES
+from source_honorifics import normalize_nei_honorifics
+
+
+FIX_BY_UID = {
+    f"ebm:romfs/Event/event/{fix.path}:{fix.index}": fix
+    for fix in FIXES
+}
+
+
+def built_translation(uid: str, jp: str, ko: str) -> str:
+    fix = FIX_BY_UID.get(uid)
+    if fix is not None:
+        if ko == fix.old or ko == fix.new:
+            ko = fix.new
+        else:
+            raise RuntimeError(f"review fix guard mismatch during audit: {uid}: {ko!r}")
+    return normalize_nei_honorifics(jp, ko)
+
+
+def requirements(jp: str) -> list[str]:
+    wanted: list[str] = []
+    if "疾風のおネイ" in jp:
+        wanted.append("질풍의 누님")
+    if "座長のおネイ" in jp:
+        wanted.append("좌장 누님")
+    if "おネイの新メニュー" in jp:
+        wanted.append("누님의 신메뉴")
+    remainder = jp
+    # Remove wordplay forms first so their embedded ネイさん/ちゃん substrings
+    # never get mistaken for ordinary honorific usage.
+    for form in ("おネイさん", "おネイちゃん", "おネイ"):
+        remainder = remainder.replace(form, "")
+    if "ネイちゃん" in remainder:
+        wanted.append("네이쨩")
+    if "ネイさん" in remainder:
+        wanted.append("네이씨")
+    return wanted
+
+
+def has_token(ko: str, token: str) -> bool:
+    """Treat an optional Korean spacing before 씨/쨩 as stylistic, not semantic."""
+    variants = {token}
+    for suffix in ("씨", "쨩"):
+        if token.endswith(suffix):
+            variants.add(token[:-len(suffix)] + " " + suffix)
+    return any(variant in ko for variant in variants)
+
+
+def main() -> None:
+    ap = argparse.ArgumentParser(description=__doc__)
+    ap.add_argument("--contexts", type=int, default=30,
+                    help="maximum number of failing contexts to print")
+    ap.add_argument("--surface", choices=("main", "ebm", "xml", "balloonsel"),
+                    help="only print failures from one aligned-text surface")
+    args = ap.parse_args()
+
+    checked = 0
+    failures: list[tuple[str, list[str], str, str]] = []
+    for uid, jp, ko in aligned_units():
+        wanted = requirements(jp)
+        if not wanted:
+            continue
+        checked += 1
+        ko = built_translation(uid, jp, ko)
+        missing = [token for token in wanted if not has_token(ko, token)]
+        if any(bad in ko for bad in ("질풍의 누님가", "질풍의 누님……가", "질풍의 누님로서")):
+            missing.append("질풍의 누님 + 올바른 조사")
+        if missing:
+            failures.append((uid, missing, jp, ko))
+
+    surfaces = Counter(uid.split(":", 1)[0] for uid, *_ in failures)
+    missing_kinds = Counter(tuple(missing) for _, missing, _, _ in failures)
+    print(f"checked={checked} failures={len(failures)} surfaces={dict(surfaces)}")
+    print("missing_kinds=" + repr(dict(missing_kinds.most_common(12))))
+    printable = [f for f in failures if not args.surface or f[0].startswith(args.surface + ":")]
+    for uid, missing, jp, ko in printable[:args.contexts]:
+        print(f"[{', '.join(missing)}] {uid}")
+        print(f"  JP: {jp}")
+        print(f"  KO: {ko}")
+    if len(printable) > args.contexts:
+        print(f"... {len(printable) - args.contexts} more")
+    if failures:
+        raise SystemExit(1)
+
+
+if __name__ == "__main__":
+    main()

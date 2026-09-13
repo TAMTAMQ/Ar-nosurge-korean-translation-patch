@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="SHIFT-JIS"?>
 <Root>
-	<item_book BookName="오네이의 신메뉴" BookTag="RECIPE_01" ItemTag="ITEM_RECIPE_ITEM_N_001"/>
+	<item_book BookName="누님의 신메뉴" BookTag="RECIPE_01" ItemTag="ITEM_RECIPE_ITEM_N_001"/>
 	<item_book BookName="비스트로 활성화 계획" BookTag="RECIPE_NAY_01" ItemTag="ITEM_RECIPE_ITEM_N_002" ItemTag2="ITEM_RECIPE_ITEM_N_003" ItemTag3="ITEM_RECIPE_ITEM_N_004"/>
 	<item_book BookName="더운 날의 냉량 기획" BookTag="RECIPE_NAY_02" ItemTag="ITEM_RECIPE_ITEM_N_005" ItemTag2="ITEM_RECIPE_ITEM_N_006" ItemTag3="ITEM_RECIPE_ITEM_N_007"/>
 	<item_book BookName="놀이 매너" BookTag="RECIPE_NAY_03" ItemTag="ITEM_RECIPE_ITEM_N_008" ItemTag2="ITEM_RECIPE_ITEM_N_010"/>

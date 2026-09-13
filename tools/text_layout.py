@@ -68,6 +68,40 @@ def drop_wrapped_leading_spaces(text, line_wrap_chars=LINE_WRAP_CHARS):
     return "".join(output)
 
 
+def wrap_words_at_spaces(text, line_wrap_chars=LINE_WRAP_CHARS):
+    """자동 개행 직전의 공백을 소비하고 다음 단어를 새 줄 0열로 보낸다."""
+    tokens = list(tokenize(text))
+    output = []
+    column = 0
+
+    def next_word_width(start):
+        width = 0
+        for token, token_width in tokens[start:]:
+            if token == "<CR>" or token == " ":
+                break
+            width += token_width
+        return width
+
+    for index, (token, width) in enumerate(tokens):
+        if token == "<CR>":
+            output.append(token)
+            column = 0
+            continue
+        if column >= line_wrap_chars:
+            column = 0
+        if token == " ":
+            if column == 0:
+                continue
+            word_width = next_word_width(index + 1)
+            if word_width and column + width + word_width > line_wrap_chars:
+                output.append("<CR>")
+                column = 0
+                continue
+        output.append(token)
+        column += width
+    return "".join(output)
+
+
 def needs_space(left, right):
     return bool(left) and bool(right) and not left[-1].isspace() and not right[0].isspace()
 
@@ -235,9 +269,12 @@ def reflow_event_dialogue_layout(text):
     segments = text.split("<CR>")
     flattened = assemble(segments, set(range(1, len(segments))))
     if visible_units(flattened) <= EVENT_LINE_WRAP_CHARS * MAX_LINES:
-        # 이벤트 창은 픽셀 폭(limit_width)으로 실제 줄바꿈하므로 한국어 공백을
-        # 문자 수 경계라고 추정해 삭제하지 않는다. 기존 레이아웃용 CR만 제거한다.
-        return flattened
+        # 기존 레이아웃용 CR은 먼저 풀고, 실제 24자 자동 개행 직전의 단어 경계는
+        # 공백 대신 CR로 바꿔 다음 단어가 들여쓰기 없이 0열부터 시작하게 한다.
+        wrapped = wrap_words_at_spaces(flattened, EVENT_LINE_WRAP_CHARS)
+        if rendered_line_count(wrapped, EVENT_LINE_WRAP_CHARS) <= MAX_LINES:
+            return wrapped
+        return drop_wrapped_leading_spaces(flattened, EVENT_LINE_WRAP_CHARS)
     return reflow_dialogue_layout(text, EVENT_LINE_WRAP_CHARS, MAX_LINES)
 
 

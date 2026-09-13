@@ -33,16 +33,22 @@ import shutil
 import subprocess
 import sys
 
-from pc_ui_texture_merge import merge_font_g1t, merge_ui_g1t
+from pc_ui_texture_merge import merge_font_g1t, merge_g1t_entries, merge_ui_g1t
 
 PLATFORM_OFFSET = 0x14
 PC_PLATFORM = 0x0A
 G1T_MAGIC = b"GT1G"
+FONT_HEADER_SIZE = 56
 BS = chr(92)
 LIST_RE = re.compile(r"^([0-9a-f]+)\s+([0-9a-f]+)\s+(" + BS + BS + r"\S.*?)\s*$")
 
 FONT_KEY = BS.join(["", "data", "x64", "font", "mainfont_x64_0.g1t"])
 UI_NAMES = ("common", "mainmenu", "system", "window")
+PC_ORIGINAL_UI_NAMES = UI_NAMES + ("title", "title_x64")
+KNOWN_PC_UI_SHA256 = {
+    "title.g1t": "3e14b937e0d828ea93d123878e58b64bc22db9d652293642f104d7b0b5b3674b",
+    "title_x64.g1t": "464a9dda2db64bf3185ef8216152cc79009a68451ac17352e3628a2345f2ec53",
+}
 
 
 def ui_key(name):
@@ -183,18 +189,48 @@ def extract_originals(args):
         font_out.write_bytes(blob)
         print(f"  폰트: {len(blob)} 바이트  sha {sha(blob)[:16]}")
 
-    for name in UI_NAMES:
+    for name in PC_ORIGINAL_UI_NAMES:
         key = ui_key(f"{name}.g1t")
         if key not in entries:
             print(f"  건너뜀: {key} 없음")
             continue
-        target = out / "ui" / f"{name}.g1t"
+        filename = f"{name}.g1t"
+        target = out / "ui" / filename
+        expected_hash = KNOWN_PC_UI_SHA256.get(filename)
         if target.exists():
-            print(f"  UI {name}.g1t: 이미 있음, 유지")
+            actual_hash = sha(target.read_bytes())
+            if expected_hash and actual_hash != expected_hash:
+                sys.exit(
+                    f"오류: 보관된 PC 원본 UI 해시가 다릅니다: {target}\n"
+                    f"      실제 {actual_hash}\n      기대 {expected_hash}"
+                )
+            print(f"  UI {filename}: 이미 있음, 유지")
             continue
         offset, size = entries[key]
-        target.write_bytes(read_entry(pak, offset, size))
-        print(f"  UI {name}.g1t: {size} 바이트")
+        blob = read_entry(pak, offset, size)
+        if expected_hash:
+            compare_copy = game / "Data" / "data_비교용" / "x64" / "ui" / filename
+            if compare_copy.is_file():
+                compare_blob = compare_copy.read_bytes()
+                compare_hash = sha(compare_blob)
+                if compare_hash != expected_hash:
+                    sys.exit(
+                        f"오류: PC 비교용 원본 UI 해시가 다릅니다: {compare_copy}\n"
+                        f"      실제 {compare_hash}\n      기대 {expected_hash}"
+                    )
+                if len(compare_blob) != size:
+                    sys.exit(
+                        f"오류: PC 비교용 원본 UI 크기가 PAK 슬롯과 다릅니다: "
+                        f"{filename} ({len(compare_blob)} != {size})"
+                    )
+                blob = compare_blob
+            elif sha(blob) != expected_hash:
+                sys.exit(
+                    f"오류: PACK00_01의 {filename}이 등록된 PC 원본과 다릅니다.\n"
+                    "      이미 패치된 게임에서 원본을 캡처하려 한 것으로 보입니다."
+                )
+        target.write_bytes(blob)
+        print(f"  UI {filename}: {len(blob)} 바이트  sha {sha(blob)[:16]}")
 
     # Event 원본(.ebd / .bsb)은 PACK01 을 풀어야 얻는다.
     into = work / "extract" / "PACK01"
@@ -213,7 +249,7 @@ def find_ci(root, relative):
 
 
 def apply_switch_g1t(args, pak, entries):
-    """스위치판 텍스처로 PC판 g1t 를 교체한다.
+    """스위치/번역 텍스처로 PC판 g1t 를 교체한다.
 
     교체본이 PAK 슬롯보다 작으면 남는 자리를 0 으로 채워 제자리에 넣는다.
     G1T 헤더 0x08 에 자기 전체 크기가 들어 있어 로더가 그 값을 쓰면 뒤쪽
@@ -222,28 +258,70 @@ def apply_switch_g1t(args, pak, entries):
     manifest = args.g1t_manifest
     if not manifest.is_file():
         return 0
-    if not args.switch_romfs:
-        print("  건너뜀: --switch-romfs 를 지정하지 않았습니다 "
-              f"({manifest.name} 의 교체가 적용되지 않습니다)")
-        return 0
-    if not args.switch_romfs.is_dir():
-        sys.exit(f"오류: 스위치 romfs 폴더가 없습니다: {args.switch_romfs}")
-
     import json
     rules = json.loads(manifest.read_text(encoding="utf-8"))["replacements"]
+    if getattr(args, "g1t_translated_only", False):
+        rules = [rule for rule in rules if "translated" in rule or "pc_translated" in rule]
+    needs_switch_romfs = any("translated" not in rule and "pc_translated" not in rule for rule in rules)
+    if needs_switch_romfs and not args.switch_romfs:
+        print("  건너뜀: --switch-romfs 를 지정하지 않았습니다 "
+              f"({manifest.name} 의 Switch 원본 교체가 적용되지 않습니다)")
+        return 0
+    if needs_switch_romfs and not args.switch_romfs.is_dir():
+        sys.exit(f"오류: 스위치 romfs 폴더가 없습니다: {args.switch_romfs}")
     applied = 0
     for rule in rules:
         key = BS + rule["pak"].replace("/", BS)
         if key not in entries:
             sys.exit(f"오류: PAK 에 그 경로가 없습니다: {rule['pak']}")
         offset, size = entries[key]
-        source = find_ci(args.switch_romfs, rule["switch"])
-        if source is None:
-            sys.exit(f"오류: 스위치 원본을 찾지 못했습니다: {rule['switch']}")
-        payload = bytearray(source.read_bytes())
+        if "pc_translated" in rule:
+            source = pathlib.Path(__file__).resolve().parents[1] / rule["pc_translated"]
+            if not source.is_file():
+                sys.exit(f"오류: PC 번역 텍스처를 찾지 못했습니다: {source}")
+        elif "translated" in rule:
+            source = args.romfs / pathlib.Path(rule["translated"])
+            if not source.is_file():
+                sys.exit(f"오류: 번역 텍스처를 찾지 못했습니다: {source}")
+        else:
+            source = find_ci(args.switch_romfs, rule["switch"])
+            if source is None:
+                sys.exit(f"오류: 스위치 원본을 찾지 못했습니다: {rule['switch']}")
+        if "copy_entries" in rule:
+            pc_original = args.work / "originals" / "ui" / pathlib.Path(rule["pak"]).name
+            if not pc_original.is_file():
+                # 현재 작업용 게임 폴더에는 PC 원본 비교본을 별도로 보관해 둔 경우가 있다.
+                # 새 환경에서는 --extract-originals가 정식 경로이며, 이 fallback은 이미
+                # 패치된 PACK00에서 잘못된 원본을 다시 캡처하지 않기 위한 복구용이다.
+                compare_copy = (
+                    args.game_dir / "Data" / "data_비교용" / "x64" / "ui" /
+                    pathlib.Path(rule["pak"]).name
+                )
+                if compare_copy.is_file():
+                    pc_original = compare_copy
+                else:
+                    sys.exit(
+                        f"오류: 플랫폼 전용 텍스처를 보존할 PC 원본이 없습니다: {pc_original}\n"
+                        "      정품 PC 데이터에서 --extract-originals 를 먼저 실행하세요."
+                    )
+            try:
+                merged, entry_report = merge_g1t_entries(
+                    pc_original, source, rule["copy_entries"]
+                )
+            except ValueError as exc:
+                sys.exit(f"오류: {rule['pak']} PC 전용 엔트리 보존 실패: {exc}")
+            payload = bytearray(merged)
+            print(
+                f"    PC 원본 유지 엔트리 {entry_report['preserved_entries']} / "
+                f"번역 이식 엔트리 {[x['index'] for x in entry_report['copied_entries']]}"
+            )
+        else:
+            payload = bytearray(source.read_bytes())
+            if payload[:4] != G1T_MAGIC:
+                sys.exit(f"오류: G1T 매직이 아닙니다: {source}")
+            payload[PLATFORM_OFFSET] = PC_PLATFORM
         if payload[:4] != G1T_MAGIC:
             sys.exit(f"오류: G1T 매직이 아닙니다: {source}")
-        payload[PLATFORM_OFFSET] = PC_PLATFORM
         if len(payload) > size:
             sys.exit(f"오류: {rule['pak']} 교체본이 슬롯보다 큽니다 "
                      f"({len(payload)} > {size}). PACK00_01 재포장이 필요합니다.")
@@ -280,6 +358,13 @@ def overlay(source_root, target_root, label):
         sys.exit(f"오류: {label} 에 PAK 안에 없는 파일이 있습니다. 경로 대응을 확인하세요.")
 
 
+def install_g1t_manifest(args):
+    pak = args.game_dir / "Data" / "PACK00_01.PAK"
+    entries = pak_list(args.gust_pak, pak)
+    applied = apply_switch_g1t(args, pak, entries)
+    print(f"  G1T manifest 적용: {applied}개")
+
+
 def install(args):
     game, work, romfs = args.game_dir, args.work, args.romfs
 
@@ -299,32 +384,48 @@ def install(args):
         pc_font = originals / "mainfont_x64_0.g1t"
         if not pc_font.is_file():
             sys.exit(f"오류: PC 원본 폰트가 없습니다: {pc_font}")
-        if not args.switch_romfs or not args.switch_romfs.is_dir():
+        pc_original = pc_font.read_bytes()
+        translated_font = font.read_bytes()
+        if translated_font[:4] != G1T_MAGIC:
+            sys.exit(f"오류: 번역 폰트가 G1T가 아닙니다: {font}")
+        if len(translated_font) != size:
             sys.exit(
-                "오류: PC용 한글 폰트는 Switch 기반 폰트 전체를 넣으면 <IMxx> 버튼 "
-                "아이콘까지 Switch판으로 바뀝니다. PC 원본 인라인 아이콘을 보존해 "
-                "합성하려면 --switch-romfs 로 손대지 않은 Switch romfs를 지정하세요."
+                f"오류: 폰트 크기가 다릅니다 {len(translated_font)} != {size}. 재포장이 필요합니다."
             )
-        switch_font = find_ci(args.switch_romfs, "Data/NX/Font/MainFont_nx_0.g1t")
-        if switch_font is None:
-            sys.exit("오류: Switch 원본 MainFont_nx_0.g1t를 찾지 못했습니다")
-        try:
-            merged, font_report = merge_font_g1t(pc_font, switch_font, font)
-        except ValueError as exc:
-            sys.exit(f"오류: PC 폰트 합성 실패: {exc}")
-        if len(merged) != size:
-            sys.exit(f"오류: 폰트 크기가 다릅니다 {len(merged)} != {size}. 재포장이 필요합니다.")
-        changed = write_entry(pak, offset, merged, G1T_MAGIC)
-        print(f"  폰트: {'PC 원본+한글 블록 합성' if changed else '이미 동일'}")
-        print(
-            f"    한글 수정 {font_report['translated_blocks']}블록 / "
-            f"PC 전용 인라인 아이콘 보존 {font_report['platform_blocks_preserved']}블록 / "
-            "충돌 0"
-        )
-        print(
-            f"    한글 영역 {font_report['translated_bbox']} / "
-            f"PC 전용 영역 {font_report['platform_bbox']}"
-        )
+        if translated_font[PLATFORM_OFFSET] == PC_PLATFORM:
+            if sha(pc_original) not in known_original_font_hashes():
+                sys.exit(f"오류: 보관된 PC 원본 폰트 해시가 확인되지 않았습니다: {pc_font}")
+            if translated_font[:FONT_HEADER_SIZE] != pc_original[:FONT_HEADER_SIZE]:
+                sys.exit("오류: PC 원본 기반 번역 폰트의 헤더가 정품 PC 폰트와 다릅니다")
+            changed = write_entry(pak, offset, translated_font, G1T_MAGIC)
+            print(f"  폰트: {'PC 원본 기반 한글 폰트 직접 설치' if changed else '이미 동일'}")
+        else:
+            if not args.switch_romfs or not args.switch_romfs.is_dir():
+                sys.exit(
+                    "오류: Switch 기반 한글 폰트 전체를 PC판에 넣으면 <IMxx> 버튼 "
+                    "아이콘까지 Switch판으로 바뀝니다. PC 원본 인라인 아이콘을 보존해 "
+                    "합성하려면 --switch-romfs 로 손대지 않은 Switch romfs를 지정하세요."
+                )
+            switch_font = find_ci(args.switch_romfs, "Data/NX/Font/MainFont_nx_0.g1t")
+            if switch_font is None:
+                sys.exit("오류: Switch 원본 MainFont_nx_0.g1t를 찾지 못했습니다")
+            try:
+                merged, font_report = merge_font_g1t(pc_font, switch_font, font)
+            except ValueError as exc:
+                sys.exit(f"오류: PC 폰트 합성 실패: {exc}")
+            if len(merged) != size:
+                sys.exit(f"오류: 폰트 크기가 다릅니다 {len(merged)} != {size}. 재포장이 필요합니다.")
+            changed = write_entry(pak, offset, merged, G1T_MAGIC)
+            print(f"  폰트: {'PC 원본+한글 블록 합성' if changed else '이미 동일'}")
+            print(
+                f"    한글 수정 {font_report['translated_blocks']}블록 / "
+                f"PC 전용 인라인 아이콘 보존 {font_report['platform_blocks_preserved']}블록 / "
+                "충돌 0"
+            )
+            print(
+                f"    한글 영역 {font_report['translated_bbox']} / "
+                f"PC 전용 영역 {font_report['platform_bbox']}"
+            )
 
     ui_dir = romfs / "Data" / "NX" / "ui"
     repo = pathlib.Path(__file__).resolve().parents[1]
@@ -439,6 +540,10 @@ def main():
     mode = ap.add_mutually_exclusive_group(required=True)
     mode.add_argument("--extract-originals", action="store_true")
     mode.add_argument("--install", action="store_true")
+    mode.add_argument("--install-g1t-only", action="store_true",
+                      help="PACK00_01의 G1T manifest 교체만 수행")
+    ap.add_argument("--g1t-translated-only", action="store_true",
+                    help="G1T manifest에서 translated 항목만 적용")
     args = ap.parse_args()
 
     if not args.game_dir.is_dir():
@@ -450,6 +555,11 @@ def main():
     if args.extract_originals:
         print("PC 원본 추출")
         extract_originals(args)
+    elif args.install_g1t_only:
+        if not args.romfs or not args.romfs.is_dir():
+            sys.exit("오류: --romfs 로 빌드한 romfs 트리를 지정하세요.")
+        print("PC PACK00_01 G1T 전용 설치")
+        install_g1t_manifest(args)
     else:
         if not args.romfs or not args.romfs.is_dir():
             sys.exit("오류: --romfs 로 빌드한 romfs 트리를 지정하세요.")

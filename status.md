@@ -134,7 +134,12 @@ python translate_all.py --original-font <MainFont_nx_0.g1t> --original-main <원
 1. 정품에서 추출한 원본 `.g1t`를 이미지 편집 도구로 열어 일본어를 한국어로 고칩니다.
    자리를 그대로 두고 픽셀만 바꾸므로 **파일 크기가 원본과 같아야 합니다.**
 2. 고친 `.g1t`를 저장소 루트의 `translateImage/`에 그대로 둡니다. 하위 폴더는 필요 없습니다.
-3. `translate_all.py`가 7단계에서 `romfs/Data/NX/ui/`로 넣습니다.
+3. `translate_all.py`가 7단계에서 원래의 `romfs/Data/NX/ui/`로 넣습니다.
+   `warning_text.g1t`만 경고 화면의 실제 경로인 `romfs/Data/NX/Ipu/`로 넣고,
+   PC 패키징 시에도 번역본을 `data/x64/ipu/warning_text.g1t`에 적용합니다.
+   번역한 `title.g1t`의 01·02 로고도 `romfs/Data/NX/ui/`로 넣고,
+   PC 패키징 시 `data/x64/ui/title.g1t`에 적용하고, 로고 좌표가 다른
+   `data/x64/ui/title_x64.g1t`에는 PC 원본 기반의 `translateImage/pc/title_x64.g1t`를 적용합니다.
 
 ```powershell
 python translate_all.py ... --original-ui-images <언팩 romfs>\Data\NX\ui

@@ -79,6 +79,8 @@ def main():
     csv.field_size_limit(1 << 30)
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--dry-run", action="store_true")
+    parser.add_argument("--report", action="store_true",
+                        help="dry-run 시 main 복원/용량 부족 후보를 행별로 출력")
     args = parser.parse_args()
 
     mapping = json.loads((REPO / "build" / "final_mod_report.json")
@@ -110,7 +112,11 @@ def main():
             new = new[:cut] + new[cut + 1:]
         if byte_length(new) > capacity:
             skipped += 1
+            if args.report:
+                print(f"  [main:{row['index']}] SKIP {row['translation']!r} -> {new!r} ({byte_length(new)}/{capacity})")
             continue
+        if args.report:
+            print(f"  [main:{row['index']}] {row['translation']!r} -> {new!r} ({byte_length(new)}/{capacity})")
         row["translation"] = new
         changed += 1
     totals["main"] = (changed, skipped)

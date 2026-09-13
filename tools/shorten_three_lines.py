@@ -61,8 +61,8 @@ def main():
     ids={t:'sha256:'+hashlib.sha256(t.encode('utf-8')).hexdigest() for t in unique}
     cache_path=a.repo/'build/three_line_shortening_cache.json';cache=json.loads(cache_path.read_text(encoding='utf-8')) if cache_path.exists() else {}
     reviewed = {
-        "PlayStation<RG>Vita 소프트웨어, 세르노사쥬에서 만든 아이템을 아르노사쥬로 전송합니다. 전송할 수 있는 것은 각종 아이템 각 1개뿐입니다.":
-        "PlayStation<RG>Vita판 세르노사쥬 아이템을 아르노사쥬로 전송합니다. 아이템별 1개만 가능합니다.",
+        "PlayStation<RG>Vita 소프트웨어, 셰르노사쥬에서 만든 아이템을 아르노사쥬로 전송합니다. 전송할 수 있는 것은 각종 아이템 각 1개뿐입니다.":
+        "PlayStation<RG>Vita판 셰르노사쥬 아이템을 아르노사쥬로 전송합니다. 아이템별 1개만 가능합니다.",
     }
     for source, shortened in reviewed.items():
         if source in ids:

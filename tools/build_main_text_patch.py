@@ -11,6 +11,7 @@ from pathlib import Path
 from build_exefs_ui_patch import BUILD_ID, PATCHES, RAW_PATCHES
 from build_patched_main import lz4_decompress
 from inline_tail_fix import build_text_patches
+from rename_term import normalize_main_translation
 
 
 def encode(text, mapping):
@@ -44,8 +45,11 @@ def main():
                 continue
             address = int(row["memory_address"], 16)
             capacity = int(row["capacity_bytes"])
+            translation = normalize_main_translation(
+                int(row["index"]), row["translation"], row["original"]
+            )
             try:
-                payload = encode(row["translation"], mapping)
+                payload = encode(translation, mapping)
             except ValueError as exc:
                 skipped.append({"index": int(row["index"]), "address": row["memory_address"],
                                 "reason": str(exc)})

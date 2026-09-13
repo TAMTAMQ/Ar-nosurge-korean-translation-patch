@@ -17,6 +17,10 @@ import numpy as np
 from PIL import Image, ImageDraw, ImageFont
 
 from text_layout import reflow_event_dialogue_layout
+from fix_glossary_false_links import FIXES as GLOSSARY_FALSE_LINK_FIXES
+from event_translation_review_fixes import FIXES as TRANSLATION_REVIEW_FIXES
+from rename_term import rename as normalize_terms
+from source_honorifics import normalize_nei_honorifics, normalize_source_terms
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -38,14 +42,52 @@ INSET_L, INSET_R, INSET_T, INSET_B = 2, 2, 2, 2
 RECORD_HEADER = 32
 
 
-def rebuild_ebm_with_layout(data, path):
-    """EBM 메타데이터를 보존하며 각 UTF-8 레코드의 CR 경계를 정리한다."""
+GLOSSARY_FIX_BY_RECORD = {(fix.path, fix.index): fix for fix in GLOSSARY_FALSE_LINK_FIXES}
+TRANSLATION_FIX_BY_RECORD = {(fix.path, fix.index): fix for fix in TRANSLATION_REVIEW_FIXES}
+
+
+def original_event_texts(relative_path):
+    """Load Japanese strings aligned with one translated Event EBM."""
+    source = ROOT / "originalText" / "romfs" / "EVENT" / "event" / relative_path
+    if not source.is_file():
+        raise RuntimeError(f"original Event EBM not found: {source}")
+    data = source.read_bytes()
+    if len(data) < 4:
+        raise RuntimeError(f"original EBM too short: {source}")
+    count = int.from_bytes(data[:4], "little")
+    pos = 4
+    texts = []
+    for index in range(count):
+        if pos + RECORD_HEADER + 4 > len(data):
+            raise RuntimeError(f"original EBM header truncated: {source}:{index}")
+        length = int.from_bytes(data[pos + RECORD_HEADER:pos + RECORD_HEADER + 4], "little")
+        start = pos + RECORD_HEADER + 4
+        end = start + length
+        payload = data[start:end]
+        if end > len(data) or not payload.endswith(b"\x00"):
+            raise RuntimeError(f"original EBM text framing error: {source}:{index}")
+        texts.append(payload[:-1].decode("utf-8"))
+        pos = end
+    if pos != len(data):
+        raise RuntimeError(f"original EBM trailing bytes: {source}:{len(data) - pos}")
+    return texts
+
+
+def rebuild_ebm_with_layout(data, path, relative_path=None):
+    """EBM 메타데이터를 보존하며 확정 텍스트 수정과 CR 경계를 정리한다."""
     if len(data) < 4:
         raise RuntimeError(f"EBM too short: {path}")
     count = int.from_bytes(data[:4], "little")
     pos = 4
     output = bytearray(data[:4])
     removed = 0
+    glossary_verified = 0
+    japanese_records = original_event_texts(relative_path) if relative_path is not None else None
+    if japanese_records is not None and len(japanese_records) != count:
+        raise RuntimeError(
+            f"original/translated EBM record count mismatch: {relative_path}: "
+            f"{len(japanese_records)} != {count}"
+        )
     for index in range(count):
         if pos + RECORD_HEADER + 4 > len(data):
             raise RuntimeError(f"EBM header truncated: {path}:{index}")
@@ -57,6 +99,36 @@ def rebuild_ebm_with_layout(data, path):
         if end > len(data) or not payload.endswith(b"\x00"):
             raise RuntimeError(f"EBM text framing error: {path}:{index}")
         text = payload[:-1].decode("utf-8")
+        if relative_path is not None:
+            fix = GLOSSARY_FIX_BY_RECORD.get((relative_path, index))
+            if fix is not None:
+                if text == fix.new:
+                    glossary_verified += 1
+                elif text == fix.old:
+                    text = fix.new
+                    glossary_verified += 1
+                else:
+                    raise RuntimeError(
+                        f"glossary fix guard mismatch: {relative_path}:{index}: {text!r}"
+                    )
+            review_fix = TRANSLATION_FIX_BY_RECORD.get((relative_path, index))
+            if review_fix is not None:
+                if text == review_fix.new:
+                    pass
+                elif text == review_fix.old:
+                    text = review_fix.new
+                else:
+                    raise RuntimeError(
+                        f"translation review fix guard mismatch: {relative_path}:{index}: {text!r}"
+                    )
+            text = normalize_nei_honorifics(japanese_records[index], text)
+            # Canonicalize legacy name aliases before source-driven honorifics.
+            # e.g. 天統姫さま + 천통희씨 must become 텐토우키님, not
+            # 텐토우키씨 after the honorific pass has already missed it.
+            text = normalize_terms(text)
+            text = normalize_source_terms(japanese_records[index], text)
+        else:
+            text = normalize_terms(text)
         laid_out = reflow_event_dialogue_layout(text)
         removed += text.count("<CR>") - laid_out.count("<CR>")
         encoded = laid_out.encode("utf-8") + b"\x00"
@@ -66,7 +138,7 @@ def rebuild_ebm_with_layout(data, path):
         pos = end
     if pos != len(data):
         raise RuntimeError(f"EBM trailing bytes: {path}:{len(data) - pos}")
-    return bytes(output), removed
+    return bytes(output), removed, glossary_verified
 
 
 def decode_bc4(payload):
@@ -288,6 +360,10 @@ def main():
             raise RuntimeError(f"extra text directory not found: {args.extra_text_dir}")
         extra_files = sorted(p for p in args.extra_text_dir.rglob("*") if p.is_file())
         corpus += "".join(p.read_text(encoding="utf-8", errors="ignore") for p in extra_files)
+    # Record-guarded fixes are applied only while rebuilding EBM payloads, so
+    # syllables introduced exclusively by fix.new must also be part of the font corpus.
+    corpus += "".join(fix.new for fix in GLOSSARY_FALSE_LINK_FIXES)
+    corpus += "".join(fix.new for fix in TRANSLATION_REVIEW_FIXES)
     counts = Counter(ch for ch in corpus if "\uac00" <= ch <= "\ud7a3")
     # Stable, human-readable ordering; frequency does not affect correctness.
     hangul = sorted(counts)
@@ -311,20 +387,25 @@ def main():
     event_out = OUT / "romfs" / "Event" / "event"
     replaced_total = 0
     removed_wrap_breaks = 0
+    glossary_false_links_verified = 0
     fallback_ebm_files = []
     for src in ebm_files:
         rel = src.relative_to(DIST / "romfs" / "Event" / "event")
+        relative_path = rel.as_posix()
         try:
-            data, removed = rebuild_ebm_with_layout(src.read_bytes(), src)
+            data, removed, fixed = rebuild_ebm_with_layout(src.read_bytes(), src, relative_path)
         except RuntimeError:
             if not args.fallback_event_root:
                 raise
             fallback = args.fallback_event_root / rel
             if not fallback.is_file():
                 raise RuntimeError(f"fallback EBM not found: {fallback}")
-            data, removed = rebuild_ebm_with_layout(fallback.read_bytes(), fallback)
+            data, removed, fixed = rebuild_ebm_with_layout(
+                fallback.read_bytes(), fallback, relative_path
+            )
             fallback_ebm_files.append(str(rel))
         removed_wrap_breaks += removed
+        glossary_false_links_verified += fixed
         for ko, ja in hangul_to_standin.items():
             old, new = ko.encode("utf-8"), ja.encode("utf-8")
             n = data.count(old)
@@ -335,13 +416,26 @@ def main():
         dst.parent.mkdir(parents=True, exist_ok=True)
         dst.write_bytes(data)
 
+    expected_glossary_fixes = len(GLOSSARY_FALSE_LINK_FIXES)
+    if glossary_false_links_verified != expected_glossary_fixes:
+        raise RuntimeError(
+            "용어집 오탐 수정 적용 건수 불일치: "
+            f"{glossary_false_links_verified} != {expected_glossary_fixes}"
+        )
+
     font_out = OUT / "romfs" / "Data" / "NX" / "Font" / "MainFont_nx_0.g1t"
     touched_blocks = patch_font(hangul_to_rect, font_out)
 
-    remaining_hangul = 0
+    remaining_hangul_chars = Counter()
     for p in event_out.rglob("*.ebm"):
         text = p.read_bytes().decode("utf-8", "ignore")
-        remaining_hangul += sum("\uac00" <= ch <= "\ud7a3" for ch in text)
+        remaining_hangul_chars.update(ch for ch in text if "\uac00" <= ch <= "\ud7a3")
+    remaining_hangul = sum(remaining_hangul_chars.values())
+    if remaining_hangul:
+        detail = ", ".join(f"{ch}:{count}" for ch, count in sorted(remaining_hangul_chars.items()))
+        raise RuntimeError(
+            f"game-ready Event EBM에 매핑되지 않은 한글이 {remaining_hangul}자 남았습니다: {detail}"
+        )
     report = {
         "source_ebm_files": len(ebm_files),
         "unique_hangul": len(hangul),
@@ -357,6 +451,7 @@ def main():
         "wide_unique_candidate_cells": len({x["cell"] for x in hangul_to_rect.values()}),
         "font_alpha_blocks_rewritten": touched_blocks,
         "wrap_boundary_cr_removed": removed_wrap_breaks,
+        "glossary_false_links_verified": glossary_false_links_verified,
         "fallback_ebm_files": len(fallback_ebm_files),
         "fallback_ebm_paths": fallback_ebm_files,
         "hangul_to_standin": hangul_to_standin,

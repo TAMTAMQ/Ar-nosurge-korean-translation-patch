@@ -20,7 +20,7 @@
 	<!-- メニュー -->
 	<node pos="100,125">
 		<menu name="ui_menu" style="style_menu_column1"/>
-		<text name="menu_title" text="친구 기술" font_size="16" align="center" pos="150,15"/>
+		<text name="menu_title" text="프렌드 기술" font_size="16" align="center" pos="150,15"/>
 		<command target_node="ui_menu/__uimenu_window" set_image_no="1"/>
 	</node>
 	<!-- 情報WINDOW -->
@@ -28,7 +28,7 @@
 		<node pos="122,120,0" rot="0,-5,0" visible="false">
 			<menu name="skill_menu" style="style_menu_column1" disp_scroll_bar="true" size_w="337" disp_lines="8"/>
 			<command target_node="skill_menu/__uimenu_window" set_image_no="1"/>
-			<text name="page_title" text="친구 기술명" font_size="16" align="center" pos="168,17,0"/>
+			<text name="page_title" text="프렌드 기술명" font_size="16" align="center" pos="168,17,0"/>
 		</node>
 		<node name="pivot1" pos="1200,0" rot="0,5,0">
 			<node name="pivot2" pos="-1200,0">
