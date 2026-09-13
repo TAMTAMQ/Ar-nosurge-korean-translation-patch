@@ -105,6 +105,16 @@
 - 패널 크기·위치·장식 위치는 텍스트 공간이 남아 있는 한 변경하지 않는다. 텍스트 표시 폭/글자 수만 우선 조정한다.
 - 테스트 수정은 소스/중간 빌드에만 남기지 않는다. PC는 사용자가 실제 실행하는 `Ar.Nosurge.DX_PC`까지, 스위치는 실제 배포/테스트용 Atmosphère·romfs·exefs 패치까지 같은 값으로 반영한 뒤 readback으로 확인한다.
 
+## 릴리스 패키징 규칙
+
+- PC/Switch 설치기는 **항상 v0.2 Patch ZIP에 들어 있던 검증본을 바이트 단위로 그대로 재사용**한다. 내부 버전 문자열, 백업 폴더명, 문구를 새 버전에 맞춘다는 이유로 수정하지 않는다.
+  - PC: `install.bat`, `uninstall.bat`, `install_pc_patch.ps1`, `uninstall_pc_patch.ps1`
+  - Switch: `setup_switch.bat`, `build_switch_layout.ps1`
+- 새 Patch ZIP을 만든 뒤 위 설치 파일들을 v0.2 Patch ZIP과 SHA-256으로 비교해 전부 동일한지 확인한다.
+- 동영상 내용이 바뀌지 않은 릴리스에서는 **새 PC/Switch Movies ZIP을 만들거나 업로드하지 않는다.** 릴리스 본문에는 기존 v0.2 Movies ZIP 링크를 안내한다.
+- 동영상 자체가 실제로 변경된 경우에만 새 Movies ZIP을 생성한다. `tools/build_release_packages.py`의 동영상 생성은 명시적 `--include-movies` 옵션을 쓴 경우에만 수행한다.
+- GitHub Release 자산을 교체했으면 릴리스 본문의 Patch SHA-256도 실제 업로드된 최신 자산과 다시 맞춘다.
+
 ## 작업 순서
 
 - 번역 데이터를 대량 수정하기 전에 기존 규칙과 현재 작업 트리를 확인한다.
