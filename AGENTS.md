@@ -119,6 +119,7 @@
 - 동영상 내용이 바뀌지 않은 릴리스에서는 **새 PC/Switch Movies ZIP을 만들거나 업로드하지 않는다.** 릴리스 본문에는 기존 v0.2 Movies ZIP 링크를 안내한다.
 - 동영상 자체가 실제로 변경된 경우에만 새 Movies ZIP을 생성한다. `tools/build_release_packages.py`의 동영상 생성은 명시적 `--include-movies` 옵션을 쓴 경우에만 수행한다.
 - GitHub Release 자산을 교체했으면 릴리스 본문의 Patch SHA-256도 실제 업로드된 최신 자산과 다시 맞춘다.
+- PC 릴리스 생성 전에는 **정품 PC 원본 폰트 + 현재 권위 번역 + 현재 stable mapping**으로 `mainfont_x64_0.g1t`를 새로 재생성한다. `tools/build_release_packages.py`에는 이 freshly rebuilt 폰트를 `--pc-font`로 반드시 넘기며, 실제 `PACK00_01.PAK` 안의 폰트와 바이트가 다르면 릴리스를 중단한다. `PACK01/02 + EXE`만 최신화하고 PACK00 폰트를 빼먹는 상태를 허용하지 않는다.
 
 ## 작업 순서
 

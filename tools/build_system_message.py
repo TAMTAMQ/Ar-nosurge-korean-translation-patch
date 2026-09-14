@@ -9,8 +9,16 @@ from pathlib import Path
 
 from decode_saves_xml_e import detect_text_encoding
 from rename_term import rename as normalize_terms
-from text_layout import (LINE_WRAP_CHARS, normalize_wrapped_line_starts,
-                         reflow_dialogue_layout)
+from text_layout import (EVENT_LINE_WRAP_CHARS, LINE_WRAP_CHARS,
+                         normalize_wrapped_line_starts, reflow_dialogue_layout,
+                         wrap_words_with_explicit_breaks)
+
+
+# SysMess.xml의 300~338번은 전투 중 표시되는 튜토리얼 안내 묶음이다.
+# 과거 번역본에는 20자 창에 맞춘 강제 <CR>이 들어가 있었지만, 현재 전투
+# 튜토리얼 창은 일반 대화창과 동일한 24자 기준으로 사용한다.
+BATTLE_TUTORIAL_FIRST_INDEX = 300
+BATTLE_TUTORIAL_LAST_INDEX = 338
 
 # Only these subfolders are genuinely plain XML in the game's romfs. Every
 # other Saves subfolder (item, misogi, tweet, achievement, ...) is scrambled
@@ -38,7 +46,7 @@ def parse_args():
     parser.add_argument(
         "--output",
         type=Path,
-        default=repo / "atmosphere" / "contents" / "01003CF0128DE000" / "romfs" / "Saves" / "systemMessage",
+        default=repo / "atmosphere" / "contents" / "01003CF0128DE000" / "romfs" / "Saves",
     )
     return parser.parse_args()
 
@@ -78,7 +86,17 @@ def main():
                 if relative.parts[0] == "ui":
                     text = normalize_wrapped_line_starts(text, line_wrap_chars)
                 else:
-                    text = reflow_dialogue_layout(text, line_wrap_chars=line_wrap_chars)
+                    child_index = index - 1  # root.iter()의 0번은 <Root> 자체다.
+                    if (relative.as_posix().casefold() == "systemmessage/sysmess.xml" and
+                            BATTLE_TUTORIAL_FIRST_INDEX <= child_index <= BATTLE_TUTORIAL_LAST_INDEX):
+                        # 권위본에서는 옛 20자용 CR을 제거해 둔다. 여기서 일반
+                        # reflow를 먼저 거치면 20/24 경계에서 지운 공백과 새 CR의
+                        # 위치가 어긋나 `수 있습니다→수있습니다`처럼 붙을 수 있다.
+                        # 깨끗한 원문을 바로 24자 단어 경계로 감싸면 줄 시작 공백만
+                        # 소비하면서 문장 내부의 정상 띄어쓰기는 보존된다.
+                        text = wrap_words_with_explicit_breaks(text, EVENT_LINE_WRAP_CHARS)
+                    else:
+                        text = reflow_dialogue_layout(text, line_wrap_chars=line_wrap_chars)
                 missing = sorted({c for c in text if "가" <= c <= "힣" and c not in mapping})
                 if missing:
                     chars = "".join(missing)

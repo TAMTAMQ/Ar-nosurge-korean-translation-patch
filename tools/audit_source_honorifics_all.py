@@ -47,8 +47,17 @@ def main() -> None:
     examples: dict[str, tuple[str, str, str]] = {}
     all_examples: dict[str, list[tuple[str, str, str]]] = {}
 
+    planned_event_fixes: dict[str, str] = {}
+    if args.simulate:
+        from event_translation_review_fixes import FIXES as EVENT_REVIEW_FIXES
+        planned_event_fixes = {
+            f"ebm:romfs/Event/event/{fix.path}:{fix.index}": fix.new
+            for fix in EVENT_REVIEW_FIXES
+        }
+
     for uid, japanese, korean in aligned_units():
         if args.simulate:
+            korean = planned_event_fixes.get(uid, korean)
             korean = normalize_nei_honorifics(japanese, korean)
             korean = rename(korean)
             korean = normalize_source_terms(japanese, korean)

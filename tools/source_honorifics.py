@@ -59,15 +59,20 @@ def normalize_nei_honorifics(japanese: str, korean: str) -> str:
         for variant in (
             "질풍의 네이 언니", "질풍의 네이 누나", "질풍의 네이 누님",
             "질풍의 네이 씨", "질풍의 네이씨", "질풍의 누님",
-            "질풍의 오네이", "시푸노 네이 언니",
+            "시푸노 네이 언니",
         ):
             text = text.replace(variant, "질풍의 오네이씨")
+        # Canonical `질풍의 오네이씨` already contains `질풍의 오네이` as a
+        # prefix.  A plain str.replace() would therefore turn a correct rebuild
+        # into `오네이씨씨`.  Only suffix a genuinely bare 오네이 form.
+        text = re.sub(r"질풍의 오네이(?!씨|쨩)", "질풍의 오네이씨", text)
     elif "疾風のおネイちゃん" in japanese:
         for variant in (
             "질풍의 네이쨩", "질풍의 네이 쨩", "질풍의 네이 누나",
-            "질풍의 네이 언니", "질풍의 네이 누님", "질풍의 오네이",
+            "질풍의 네이 언니", "질풍의 네이 누님",
         ):
             text = text.replace(variant, "질풍의 오네이쨩")
+        text = re.sub(r"질풍의 오네이(?!씨|쨩)", "질풍의 오네이쨩", text)
     elif "疾風のおネイ" in japanese:
         for variant in (
             "질풍의 네이 언니", "질풍의 네이 누나", "질풍의 네이 누님",
@@ -76,11 +81,13 @@ def normalize_nei_honorifics(japanese: str, korean: str) -> str:
         ):
             text = text.replace(variant, "질풍의 오네이")
     if "座長のおネイさん" in japanese:
-        for variant in ("좌장의 네이 언니", "좌장의 네이 누님", "좌장 누님", "좌장 오네이"):
+        for variant in ("좌장의 네이 언니", "좌장의 네이 누님", "좌장 누님"):
             text = text.replace(variant, "좌장 오네이씨")
+        text = re.sub(r"좌장 오네이(?!씨|쨩)", "좌장 오네이씨", text)
     elif "座長のおネイちゃん" in japanese:
-        for variant in ("좌장의 네이 언니", "좌장의 네이 누님", "좌장 누님", "좌장 오네이"):
+        for variant in ("좌장의 네이 언니", "좌장의 네이 누님", "좌장 누님"):
             text = text.replace(variant, "좌장 오네이쨩")
+        text = re.sub(r"좌장 오네이(?!씨|쨩)", "좌장 오네이쨩", text)
     elif "座長のおネイ" in japanese:
         for variant in ("좌장의 네이 언니", "좌장의 네이 누님", "좌장 누님"):
             text = text.replace(variant, "좌장 오네이")
@@ -88,6 +95,11 @@ def normalize_nei_honorifics(japanese: str, korean: str) -> str:
     if "おネイの新メニュー" in japanese:
         for variant in ("네이 언니의 신메뉴", "네이 누님의 신메뉴", "누님의 신메뉴"):
             text = text.replace(variant, "오네이의 신메뉴")
+
+    # Normalize stale outputs from the buggy prefix replacement above as well.
+    # This keeps the transform idempotent for already-generated intermediate
+    # files without masking unrelated honorific text.
+    text = text.replace("오네이씨씨", "오네이씨").replace("오네이쨩쨩", "오네이쨩")
 
     onei_san_count = japanese.count("おネイさん")
     missing_onei_san = max(0, onei_san_count - text.count("오네이씨"))

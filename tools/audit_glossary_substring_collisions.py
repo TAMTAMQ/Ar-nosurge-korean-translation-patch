@@ -50,6 +50,23 @@ def japanese_term_count(text: str, term: str) -> int:
     return normalize_japanese(text).count(normalize_japanese(term))
 
 
+def intentional_alias_count(text: str, jp_term: str, ko_term: str) -> int:
+    """Count source occurrences that intentionally share a Korean glossary word.
+
+    `禊` has to use the short UI translation `정화` in several fixed-width
+    surfaces.  The script also sees phonetic katakana spellings of registered
+    glossary terms; those are genuine source-side occurrences, not Korean-only
+    substring collisions.
+    """
+    normalized = normalize_japanese(text)
+    aliases = {
+        ("浄化", "정화"): ("禊", "ジョウカ"),
+        ("救済", "구제"): ("キュウサイ",),
+        ("審判", "심판"): ("シンパン",),
+    }
+    return sum(normalized.count(normalize_japanese(alias)) for alias in aliases.get((jp_term, ko_term), ()))
+
+
 def parse_ebm(data: bytes) -> list[str]:
     count = int.from_bytes(data[:4], "little")
     pos = 4
@@ -209,10 +226,11 @@ def main() -> None:
             normalized_units.append((uid, jp, ko))
         units = normalized_units
     if args.simulate_fixes:
-        from fix_glossary_false_links import FIXES
+        from event_translation_review_fixes import FIXES as EVENT_REVIEW_FIXES
+        from fix_glossary_false_links import FIXES as GLOSSARY_FIXES
         planned = {
             f"ebm:romfs/Event/event/{fix.path}:{fix.index}": fix.new
-            for fix in FIXES
+            for fix in [*EVENT_REVIEW_FIXES, *GLOSSARY_FIXES]
         }
         units = [(uid, jp, planned.get(uid, ko)) for uid, jp, ko in units]
     print(f"glossary terms: {len(terms)} / aligned units: {len(units)}")
@@ -231,7 +249,12 @@ def main() -> None:
             # SONG_TOYINSTALLER even though the value is never display text.
             if jp == ko and ASCII_IDENTIFIER.fullmatch(jp):
                 continue
-            extra = max(0, k - japanese_term_count(jp, jp_term))
+            extra = max(
+                0,
+                k
+                - japanese_term_count(jp, jp_term)
+                - intentional_alias_count(jp, jp_term, ko_term),
+            )
             if not extra:
                 continue
             total += extra

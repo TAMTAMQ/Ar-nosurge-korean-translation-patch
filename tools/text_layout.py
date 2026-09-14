@@ -102,6 +102,50 @@ def wrap_words_at_spaces(text, line_wrap_chars=LINE_WRAP_CHARS):
     return "".join(output)
 
 
+def wrap_words_with_explicit_breaks(text, line_wrap_chars=LINE_WRAP_CHARS):
+    """단어 경계를 우선해 모든 자동 개행 지점을 명시적 ``<CR>``로 만든다.
+
+    ``wrap_words_at_spaces``는 게임의 자동 개행을 전제로 줄 경계의 공백을
+    제거한다. 이후 다른 위치에 강제 CR이 추가되면 그 공백이 더 이상 줄 경계가
+    아니게 되어 단어가 붙을 수 있다. 고정 폭으로 완전히 재배치해야 하는 텍스트는
+    이 함수를 사용해 공백은 CR로 *대체*하고, 문장 내부 공백은 그대로 보존한다.
+    """
+    tokens = list(tokenize(text))
+    output = []
+    column = 0
+
+    def next_word_width(start):
+        width = 0
+        for token, token_width in tokens[start:]:
+            if token == "<CR>" or token == " ":
+                break
+            width += token_width
+        return width
+
+    for index, (token, width) in enumerate(tokens):
+        if token == "<CR>":
+            output.append(token)
+            column = 0
+            continue
+        if token == " ":
+            if column == 0:
+                continue
+            word_width = next_word_width(index + 1)
+            if word_width and column + 1 + word_width > line_wrap_chars:
+                output.append("<CR>")
+                column = 0
+                continue
+            output.append(token)
+            column += 1
+            continue
+        if width and column + width > line_wrap_chars:
+            output.append("<CR>")
+            column = 0
+        output.append(token)
+        column += width
+    return "".join(output)
+
+
 def normalize_wrapped_line_starts(text, line_wrap_chars=LINE_WRAP_CHARS):
     """기존 CR 구조는 보존하고 자동/강제 개행 뒤 선행 공백만 없앤다.
 

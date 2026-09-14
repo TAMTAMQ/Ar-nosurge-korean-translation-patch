@@ -96,6 +96,9 @@ def main() -> None:
         checked += 1
         ko = built_translation(uid, jp, ko)
         missing = [token for token in wanted if not has_token(ko, token)]
+        for duplicated in ("오네이씨씨", "오네이쨩쨩", "오네이씨쨩", "오네이쨩씨"):
+            if duplicated in ko:
+                missing.append(f"중복호칭:{duplicated}")
         if any(bad in ko for bad in ("질풍의 오네이가", "질풍의 오네이……가", "질풍의 오네이로서")):
             # 오네이는 모음으로 끝나므로 가/로서가 정상이다. 이 분기는
             # 과거 누님 전용 조사 보정의 회귀만 잡기 위해 남겨둔다.

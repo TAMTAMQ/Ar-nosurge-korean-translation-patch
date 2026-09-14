@@ -124,6 +124,41 @@ FIXES = [
         "증표가 뭘까……<CR>근처에 있는 샤르에게 물어볼까？"),
     Fix("C12_2/EVENT_MESSAGE_C12_2_120.ebm", 0,
         "와리후를 제출해 주세용ー", "증표를 제출해 주세용ー"),
+
+    # 浄化 => 정화 is a registered glossary title.  Ordinary 清め／清める
+    # should keep their literal ritual/cleansing meaning without accidentally
+    # linking to that glossary entry.  禊ぎ→정화 is a separate, intentional
+    # short UI translation and is handled as an audit exception instead.
+    Fix("C12_3/EVENT_MESSAGE_C12_3_040.ebm", 78,
+        "이 이상의 문답은 불필요합니다.<CR>다시 한번 저 탑에서, 스스로를 정화하세요.<CR>이오나사르.",
+        "이 이상의 문답은 불필요합니다.<CR>다시 저 탑에서 스스로를 정결히 하세요.<CR>이오나사르."),
+    Fix("MT13/EVENT_MESSAGE_MT13_050.ebm", 2,
+        "나도 왠지 마음이 정화되는 느낌이랄까,<CR>뭐라고 해야 할까？",
+        "나도 왠지 마음이 맑아지는 느낌이랄까,<CR>뭐라고 해야 할까？"),
+    Fix("MT13/EVENT_MESSAGE_MT13_050.ebm", 11,
+        "헤～ 그렇구나……<CR>그렇다는 건, 이 정화되는 느낌은<CR>성수의 효과라는 거네.",
+        "헤～ 그렇구나……<CR>그렇다는 건, 이 맑아지는 느낌은<CR>성수의 효과라는 거네."),
+    Fix("MT13/EVENT_MESSAGE_MT13_050.ebm", 15,
+        "아, 아마 교체하는 거 아닐까？<CR>아무리 성수로 정화한다고 해도,<CR>에티켓 문제가 있잖아.",
+        "아, 아마 교체하는 거 아닐까？<CR>아무리 성수로 몸을 씻는다고 해도,<CR>에티켓 문제가 있잖아."),
+    Fix("MT25/EVENT_MESSAGE_MT25_120.ebm", 8,
+        "물 쪽이 몸을 정화하며 수행하는 신성한 <CR>분위기를 낼 수 있어서일지도 모르겠네.",
+        "물 쪽이 몸을 씻으며 수행하는 신성한<CR>분위기를 낼 수 있어서일지도 모르겠네."),
+    Fix("SWI01/EVENT_MESSAGE_SWI01_020.ebm", 1,
+        "……구원하소서… 정화하소서……",
+        "……구원하소서… 정결케 하소서……"),
+    Fix("SWI01/EVENT_MESSAGE_SWI01_020.ebm", 6,
+        "……구원하소서… 정화하소서……",
+        "……구원하소서… 정결케 하소서……"),
+    Fix("SWI01/EVENT_MESSAGE_SWI01_050.ebm", 8,
+        "흠. 뭐, 됐다.<CR>그럼, 그 바위를 신사 앞에 두거라.<CR>오오카미 님께 정화받아야 할 것이니라.",
+        "흠. 뭐, 됐다.<CR>그럼, 그 바위를 신사 앞에 두거라.<CR>오오카미 님께 정결 의식을 받거라."),
+    Fix("SWI01/EVENT_MESSAGE_SWI01_050.ebm", 12,
+        "음.<CR>그럼, 정화 의식을 시작하자꾸나！",
+        "음.<CR>그럼, 정결 의식을 시작하자꾸나！"),
+    Fix("SWI01/EVENT_MESSAGE_SWI01_050.ebm", 19,
+        "정화가 필요한 바위는 이것입니까？",
+        "정결 의식이 필요한 바위는 이것입니까？"),
 ]
 
 

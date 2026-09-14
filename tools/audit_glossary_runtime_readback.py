@@ -23,6 +23,7 @@ from audit_glossary_substring_collisions import (
     ASCII_IDENTIFIER,
     TAG,
     glossary_terms,
+    intentional_alias_count,
     japanese_term_count,
     parse_ebm,
     read_text,
@@ -150,7 +151,12 @@ def audit(units, terms, contexts: int):
                 continue
             if jp == ko and ASCII_IDENTIFIER.fullmatch(jp):
                 continue
-            extra = max(0, k - japanese_term_count(jp, jp_term))
+            extra = max(
+                0,
+                k
+                - japanese_term_count(jp, jp_term)
+                - intentional_alias_count(jp, jp_term, ko_term),
+            )
             if extra:
                 total += extra
                 rows.append((uid, jp, ko, extra))

@@ -1033,11 +1033,43 @@ FIXES.extend([
         "진, 진정해 네이 언니.<CR>그래도, 대단한 거라고 생각한 건 사실이야.",
         "진, 진정해 네이 언니.<CR>그래도 진수성찬이라 생각한 건 사실이야.",
     ),
-    # ママさん電子工作会 is a mothers' electronics club, not mother's club.
+    # Preserve explicit source honorifics even on generic/nickname-like nouns.
+    # ママさん is the fixed club label here, so keep さん as 씨 rather than
+    # flattening it to a generic plural "엄마들".
     Fix(
         "SWI03/EVENT_MESSAGE_SWI03_040.ebm", 27,
         "그래서 엄마의 전자공작회에 가져가면,<CR>항상 이상한 눈초리로 쳐다봐. 참으면서<CR>모두와 똑같이 연결하는 게 좋을까……",
-        "그래서 엄마들 전자공작회에 가져가면,<CR>항상 이상한 눈초리로 쳐다봐. 참으면서<CR>모두와 똑같이 연결하는 게 좋을까……",
+        "그래서 마마씨 전자공작회에 가져가면,<CR>항상 이상한 눈초리로 쳐다봐. 참으면서<CR>모두와 똑같이 연결하는 게 좋을까……",
+    ),
+    Fix(
+        "SWI03/EVENT_MESSAGE_SWI03_040.ebm", 29,
+        "그렇긴 해도, 지금도 엄마들 전자공작회에서<CR>나만 무시당하고 있어서, 이미<CR>있을 곳도 없어졌고……",
+        "그렇긴 해도, 지금도 마마씨 전자공작회에서<CR>나만 무시당하고 있어서, 이미<CR>있을 곳도 없어졌고……",
+    ),
+    Fix(
+        "SWI03/EVENT_MESSAGE_SWI03_040.ebm", 40,
+        "하지만… 이대로라면 나 자신을 잃어버릴 것<CR>같아서 무서워. 차라리 엄마들<CR>전자공작회에 안 가는 게 나을지도 몰라……",
+        "하지만… 이대로라면 나 자신을 잃어버릴 것<CR>같아서 무서워. 차라리 마마씨<CR>전자공작회에 안 가는 게 나을지도 몰라……",
+    ),
+    Fix(
+        "C22_1/EVENT_MESSAGE_C22_1_030.ebm", 54,
+        "있잖아, 웨이트리스 양.<CR>지켜줄 거라면 샤르를 쓰러뜨려<CR>줬으면 됐을 텐데 말이야.",
+        "있잖아, 웨이트리스쨩.<CR>지켜줄 거라면 샤르를 쓰러뜨려<CR>줬으면 됐을 텐데 말이야.",
+    ),
+    Fix(
+        "IM22/EVENT_MESSAGE_IM22_120.ebm", 3,
+        "앗, 그렇구나！<CR>그래서 치킨 라이스가 고양이 얼굴 모양이<CR>되어 있는 거구나？",
+        "앗, 그렇구나！<CR>그래서 치킨 라이스가 고양이씨 얼굴 모양이<CR>되어 있는 거구나？",
+    ),
+    Fix(
+        "MS14/EVENT_MESSAGE_MS14_060.ebm", 24,
+        "지독한 아줌마 같은 향수라면<CR>모르겠지만, 이 정도면 의외로 잘 어울린다고<CR>생각해.",
+        "지독한 아줌마쨩 같은 향수라면<CR>모르겠지만, 이 정도면 의외로 잘 어울린다고<CR>생각해.",
+    ),
+    Fix(
+        "SWC02/EVENT_MESSAGE_SWC02_040.ebm", 67,
+        "그쪽 뾰족이 녀석이 필요 없다면,<CR>내가 가져가 버릴까.",
+        "그쪽 뾰족이쨩이 필요 없다면,<CR>내가 가져가 버릴까.",
     ),
     # Confirmed Korean case and grammar errors.
     Fix(
@@ -3619,7 +3651,7 @@ FIXES.extend([
     Fix(
         "C11_1/EVENT_MESSAGE_C11_1_220.ebm", 6,
         "어…… 어서 빨리, 얇은 옷차림으로,<CR>서로의 몸을 정화하면서, 서로 맞닿은 채로<CR>결정을 몸에 가라앉히는 거야！",
-        "어…… 되도록 얇은 옷차림으로,<CR>서로의 몸을 정화하면서, 서로 맞닿은 채로<CR>결정을 몸에 가라앉히는 거야！",
+        "어…… 되도록 얇은 옷차림으로,<CR>서로의 몸을 깨끗이 하면서, 서로 맞닿은 채로<CR>결정을 몸에 가라앉히는 거야！",
     ),
     # 入信 is joining a religion/cult; keep the established 입교 terminology.
     Fix(
@@ -4002,7 +4034,7 @@ FIXES.extend([
     Fix(
         "C11_5/EVENT_MESSAGE_C11_5_080.ebm", 22,
         "제노메스가 되면,<CR>자수성가하는 팬티를 마음껏 얻을 텐데……",
-        "제노메스가 되면,<CR>시마법사의 팬티를 마음껏 얻을 텐데……",
+        "제노메스가 되면,<CR>직조자의 팬티를 마음껏 얻을 텐데……",
     ),
     # The same village elder is consistently 장로, not 촌장.
     Fix(
@@ -4196,7 +4228,7 @@ FIXES.extend([
     Fix(
         "C12_2/EVENT_MESSAGE_C12_2_180.ebm", 0,
         "아셰스, 제노메트릭스는 어땠어？<CR>나는 들어가는 쪽이라, 의식이 없어.<CR>괜찮다면 감상을 들려줄래？",
-        "아셰스, 제노메트릭스는 어땠어？<CR>나는 다이브를 받는 쪽이라, 의식이 없어.<CR>괜찮다면 감상을 들려줄래？",
+        "아셰스, 제노메트릭스는 어땠어？<CR>나는 상대가 들어오는 쪽이라, 의식이 없어.<CR>괜찮다면 감상을 들려줄래？",
     ),
     # 鍵がかかる means the door is locked; the key itself is not "locked".
     Fix(

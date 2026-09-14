@@ -97,6 +97,7 @@ def movie_readme(label: str, version: str) -> bytes:
 
 
 def build_pc(repo: pathlib.Path, donor: pathlib.Path, version: str,
+             expected_font: pathlib.Path,
              include_movies: bool = False,
              exe_override: pathlib.Path | None = None) -> list[pathlib.Path]:
     releases = repo / "releases"
@@ -113,15 +114,29 @@ def build_pc(repo: pathlib.Path, donor: pathlib.Path, version: str,
         files_manifest = json.loads(zin.read(f"{old_root}/payload/files_manifest.json").decode("utf-8"))
 
         # 현재 PACK00_01에서 릴리스 대상 엔트리를 정확한 오프셋/크기로 다시 읽는다.
+        # 폰트는 별도로 권위본에서 재생성한 expected_font와 바이트 동일해야 한다.
+        # 테스트 설치에서 PACK00만 갱신하지 않은 채 릴리스하면 문자열은 최신인데
+        # `킵→튄`처럼 이전 글리프 배정이 섞일 수 있으므로 여기서 강제로 막는다.
         pak_blob = pak00.read_bytes()
+        expected_font_blob = expected_font.read_bytes()
         pack_payloads: dict[str, bytes] = {}
+        font_verified = 0
         for entry in pack_manifest["entries"]:
             off, size = entry["offset"], entry["size"]
             payload = pak_blob[off:off + size]
             if len(payload) != size:
                 raise SystemExit(f"PACK00 readback 실패: {entry['name']}")
+            if entry["name"].replace("/", "\\").lower().endswith("\\mainfont_x64_0.g1t"):
+                if payload != expected_font_blob:
+                    raise SystemExit(
+                        "PC PACK00 폰트가 권위본 재생성 폰트와 다릅니다. "
+                        "PACK00_01에 최신 폰트를 설치한 뒤 다시 릴리스하세요."
+                    )
+                font_verified += 1
             entry["sha256"] = sha(payload)
             pack_payloads[entry["payload"]] = payload
+        if font_verified != 1:
+            raise SystemExit(f"PC PACK00 폰트 검증 엔트리 수 불일치: {font_verified}")
 
         exe_source = exe_override or (game / "ArnosurgeDX.exe")
         if not exe_source.is_file():
@@ -331,15 +346,15 @@ def main() -> None:
     ap.add_argument("--pc-exe", type=pathlib.Path,
                     help="실행 중인 게임 EXE가 잠겨 있을 때 릴리스에 넣을 별도 빌드 EXE")
     ap.add_argument("--pc-font", type=pathlib.Path,
-                    help="--pc-stage와 함께 넣을 PC 원본 기반 한글 mainfont_x64_0.g1t")
+                    help="권위본에서 정품 PC 원본으로 재생성한 mainfont_x64_0.g1t. PC 릴리스에 필수")
     args = ap.parse_args()
     releases = repo / "releases"
     pc_donor = releases / f"ArNosurgeDX-Korean-{INSTALLER_VERSION}-PC-Patch.zip"
     if not pc_donor.is_file():
         raise SystemExit(f"기존 PC 릴리스 ZIP이 없습니다: {pc_donor}")
+    if not args.pc_font or not args.pc_font.is_file():
+        raise SystemExit("PC 릴리스에는 freshly rebuilt --pc-font 지정이 필수입니다")
     if args.pc_stage:
-        if not args.pc_font:
-            raise SystemExit("--pc-stage 사용 시 --pc-font도 지정해야 합니다")
         output = build_pc_staged_patch(
             repo, pc_donor, args.version, args.pc_stage, args.pc_font
         )
@@ -350,7 +365,7 @@ def main() -> None:
     if not sw_installer_donor.is_file():
         raise SystemExit(f"기존 Switch Patch ZIP이 없습니다: {sw_installer_donor}")
     outputs = [
-        *build_pc(repo, pc_donor, args.version, args.include_movies, args.pc_exe),
+        *build_pc(repo, pc_donor, args.version, args.pc_font, args.include_movies, args.pc_exe),
         *build_switch(repo, sw_installer_donor, args.version, args.include_movies),
     ]
     for p in outputs:

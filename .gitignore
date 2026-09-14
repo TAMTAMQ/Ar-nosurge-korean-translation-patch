@@ -41,6 +41,7 @@ prod.keys
 title.keys
 
 # 자동 생성 보고서와 로컬 캡처/시험 자료
+/.webjjongku-trash/
 /data/final_mod_report.json
 /translation_review_remaining.txt
 /captures/
