@@ -139,7 +139,7 @@ python translate_all.py --original-font <MainFont_nx_0.g1t> --original-main <원
    PC 패키징 시에도 번역본을 `data/x64/ipu/warning_text.g1t`에 적용합니다.
    번역한 `title.g1t`의 01·02 로고도 `romfs/Data/NX/ui/`로 넣고,
    PC 패키징 시 `data/x64/ui/title.g1t`에 적용하고, 로고 좌표가 다른
-   `data/x64/ui/title_x64.g1t`에는 PC 원본 기반의 `translateImage/pc/title_x64.g1t`를 적용합니다.
+   `data/x64/ui/title_x64.g1t`에는 PC 원본 기반의 `translateImage/pc/title_x64_02_fixed.g1t`를 적용합니다.
 
 ```powershell
 python translate_all.py ... --original-ui-images <언팩 romfs>\Data\NX\ui
@@ -394,7 +394,7 @@ python tools/build_final_korean_mod.py `
 
 텍스트 자동 줄바꿈 폭은 화면마다 다릅니다. 실게임에서 확인한 현재 기준은 **이벤트 EBM 24표시칸×최대 3줄(72칸)**, **필드 `fm_talk_data` 22표시칸×최대 3줄(66칸)**입니다. 그 외 기존 Saves `MESSAGE` 계열은 별도 확인 전까지 20표시칸×최대 3줄을 유지합니다. `<CR>`이 자동 줄바꿈과 겹치면 빌드 결과에서 불필요한 `<CR>`을 제거하고 게임의 자동 줄바꿈에 맡깁니다. `translations/`의 편집용 파일은 의미·제어코드 보존을 위해 원칙적으로 그대로 두고 설치용 결과에서 재배치합니다. 공백과 문장부호도 각각 한 칸이며 `<IMxx>` 같은 표시 제어 코드는 한 칸으로 계산합니다.
 
-`fm_talk_data`의 실제 UI는 `Saves/ui/fieldmap/uil_fm_tweet.xml`의 `line_char_length="22"`와 맞춰 사용합니다. 이벤트 EBM은 `tools/build_final_korean_mod.py`가 24자×3줄 기준으로 재배치합니다. **이 UI/레이아웃 기준은 PC와 스위치에 동일하게 적용합니다.** 이벤트 메시지 실행 코드가 XML과 별개로 런타임 폭/줄당 글자 수를 20 기준으로 다시 설정하는 경우 두 플랫폼 모두 해당 이벤트 메시지 루틴만 **24 기준으로 패치**하며, 플랫폼별 표시 길이 예외를 두지 않습니다. PC는 `ArnosurgeDX.exe`의 이벤트 메시지 루틴을 `20.0/20→24.0/24`로 패치합니다. 스위치는 `tools/build_main_text_patch.py`와 `tools/build_exefs_ui_patch.py`가 1.0.1 NSO에서 같은 루틴의 폭 `640→768(20×32→24×32)`과 글자 수 `20→24`를 원시 패치 6개로 `ArNosurgeKoreanUI` IPS에 포함합니다. XML의 큰 이벤트 창도 두 플랫폼 모두 `line_char_length="24"`, `limit_width="740"`을 사용하되 패널 크기와 위치는 원본 그대로 유지하며, 작은 `uil_message_window_normal.xml`도 `line_char_length="24"`를 사용합니다. `<#RRGGBB>` 색상 코드는 0칸, `<IMxx>` 같은 표시 요소는 1칸으로 계산합니다.
+`fm_talk_data`의 실제 UI는 `Saves/ui/fieldmap/uil_fm_tweet.xml`의 `line_char_length="22"`와 맞춰 사용합니다. 이벤트 EBM은 `tools/build_final_korean_mod.py`가 24자×3줄 기준으로 재배치합니다. **이 UI/레이아웃 기준은 PC와 스위치에 동일하게 적용합니다.** 이벤트 메시지와 메시지 로그 실행 코드는 XML과 별개로 런타임 폭/줄당 글자 수를 20 기준으로 다시 설정하므로 두 플랫폼 모두 **24 기준으로 패치**하며, 플랫폼별 표시 길이 예외를 두지 않습니다. PC는 `tools/patch_pc_event_message_width.py`가 `ArnosurgeDX.exe`의 일반 이벤트 경로와 로그용 텍스트 폭 헬퍼 두 곳을 각각 `20.0/20→24.0/24`로 패치합니다. 스위치는 `tools/build_main_text_patch.py`와 `tools/build_exefs_ui_patch.py`가 1.0.1 NSO의 동일한 두 경로에서 폭 `640→768(20×32→24×32)`과 글자 수 `20→24`를 원시 패치 6개로 `ArNosurgeKoreanUI` IPS에 포함합니다. XML의 큰 이벤트 창과 `uil_message_log*.xml`도 `line_char_length="24"`를 사용하며, 큰 이벤트 창은 `limit_width="740"`을 유지합니다. `<#RRGGBB>` 색상 코드는 0칸, `<IMxx>` 같은 표시 요소는 1칸으로 계산합니다.
 
 현재 실게임에서 확정한 기타 UI 레이아웃은 다음과 같습니다. **표의 모든 값은 PC/스위치 공통값**이며, `AGENTS.md`에도 같은 규칙으로 고정되어 있습니다. 플랫폼별 예외를 만들거나 별도 요청 없이 원래 값으로 되돌리지 않습니다.
 

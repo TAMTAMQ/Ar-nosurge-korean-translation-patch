@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""main 번역을 고정 슬롯에 맞게 공백 제거 후 의미 보존 축약한다."""
+"""main 번역을 고정 슬롯에 맞게 정상 띄어쓰기를 유지하며 의미 보존 축약한다."""
 
 import argparse
 import csv
@@ -26,14 +26,15 @@ def call_model(args, rows, reasons):
     system = f"""일본어 게임 문구를 매우 짧고 자연스러운 한국어로 축약한다.
 반드시 {{"translations":[{{"id":"id","translation":"결과"}}]}} JSON만 출력한다.
 모든 id를 정확히 한 번 반환한다. 번역은 UTF-8 capacity_bytes 이하여야 한다.
-한국어 음절은 3바이트, ASCII 문자는 1바이트다. 띄어쓰기는 사용하지 않는다.
-조사·주어·종결어미를 생략하고 짧은 동의어를 사용하되 핵심 의미와 인물 말투·격식 수준은 보존한다.
+한국어 음절은 3바이트, ASCII 문자는 1바이트다. 한국어 표준 띄어쓰기를 유지한다.
+용량이 부족하면 조사·주어·종결어미를 줄이거나 짧은 동의어를 사용하되, 공백을 지워서 맞추지 않는다.
+핵심 의미와 인물 말투·격식 수준은 보존한다.
 원문에 없는 호칭을 새로 붙이지 않으며 기존 호칭은 임의로 삭제·변경하지 않는다.
 단어 중간을 자르거나 불완전한 문장을 만들지 않는다.
 <CR>, <IM00>, printf 형식 등 원문의 제어 토큰은 철자·개수·순서를 그대로 유지한다.
 원문의 ～는 ～로 유지하고 ~로 바꾸지 않는다. 발화 늘임의 ー도 ー로 유지하며 ～나 ~로 바꾸지 않는다.
 일본어 문자를 남기지 않는다. maximum_korean_syllables를 절대로 넘지 않는다.
-예: 선택 시작→선택개시, 내가 싸우겠다!→내가싸운다!, 아무것도 하지 않는다→대기.
+예: 선택 시작→선택 개시, 내가 싸우겠다!→내가 싸워!, 아무것도 하지 않는다→대기.
 용어집: {GLOSSARY}"""
     body = {"model": args.model, "temperature": 0.1, "max_tokens": 4096,
             "messages": [{"role": "system", "content": system},
@@ -100,13 +101,10 @@ def main():
         if row["status"] == "needs_review" and row["translation"] and (
                 byte_len(row["translation"]) <= int(row["capacity_bytes"])):
             continue
-        compact = re.sub(r"[ \u3000]+", "", row["translation"] or "")
-        if compact and not valid(row, compact):
-            row["translation"] = compact
-            row["notes"] = "compacted:spaces_removed"
-            removed_spaces += 1
-        else:
-            pending.append(row)
+        # 과거에는 용량을 맞추기 위해 먼저 모든 공백을 삭제했지만,
+        # 그 결과 정상 한국어 문장까지 붙여 쓰는 회귀가 생겼다.
+        # 이제 초과 행은 공백을 보존한 채 의미 보존 축약 단계로 넘긴다.
+        pending.append(row)
     save(args.input, rows, fields)
     print(f"spaces_removed={removed_spaces}; needs_word_compaction={len(pending)}", flush=True)
 
@@ -127,7 +125,7 @@ def main():
             reasons = {}
             for row in unresolved:
                 rid = row["index"]
-                text = re.sub(r"[ \u3000]+", "", results.get(rid, "").strip())
+                text = re.sub(r"[ \u3000]+", " ", results.get(rid, "").strip())
                 errors = valid(row, text)
                 if errors:
                     reasons[rid] = ",".join(errors)

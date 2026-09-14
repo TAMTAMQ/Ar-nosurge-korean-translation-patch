@@ -1,8 +1,10 @@
 #!/usr/bin/env python3
 """현재 빌드 결과로 배포 ZIP을 만든다.
 
-설치 스크립트는 PC/Switch 모두 v0.2 Patch ZIP의 검증본을 바이트 단위로 그대로
-재사용한다. 동영상 ZIP은 영상 자체가 변경된 릴리스에서만 --include-movies로 만든다.
+설치 로직은 PC/Switch 모두 v0.2 Patch ZIP의 검증본을 기준으로 재사용한다.
+단, 설치/제거 상태에 포함되는 버전 값(완료 문구, PC 백업 폴더명)은 현재
+--version 값으로 주입한다. 동영상 ZIP은 영상 자체가 변경된 릴리스에서만
+--include-movies로 만든다.
 """
 from __future__ import annotations
 
@@ -40,6 +42,48 @@ def unique_entry(z: zipfile.ZipFile, suffix: str) -> bytes:
     return z.read(hits[0])
 
 
+def replace_utf8_script_text(data: bytes, old: str, new: str, label: str) -> bytes:
+    """v0.2 검증 스크립트에서 허용된 표시 문구 한 곳만 바꾼다."""
+    bom = b"\xef\xbb\xbf" if data.startswith(b"\xef\xbb\xbf") else b""
+    text = data[len(bom):].decode("utf-8")
+    if text.count(old) != 1:
+        raise SystemExit(f"{label}: 버전 표시 문구를 정확히 1개 찾지 못했습니다")
+    return bom + text.replace(old, new, 1).encode("utf-8")
+
+
+def pc_installer_for_version(data: bytes, version: str) -> bytes:
+    data = replace_utf8_script_text(
+        data,
+        f"KoreanPatchBackup-{INSTALLER_VERSION}",
+        f"KoreanPatchBackup-{version}",
+        "PC installer backup version",
+    )
+    return replace_utf8_script_text(
+        data,
+        "Write-Host 'PC 한국어 패치 설치가 완료되었습니다.'",
+        f"Write-Host 'PC 한국어 패치 {version} 설치가 완료되었습니다.'",
+        "PC installer completion version",
+    )
+
+
+def pc_uninstaller_for_version(data: bytes, version: str) -> bytes:
+    return replace_utf8_script_text(
+        data,
+        f"KoreanPatchBackup-{INSTALLER_VERSION}",
+        f"KoreanPatchBackup-{version}",
+        "PC uninstaller backup version",
+    )
+
+
+def switch_installer_for_version(data: bytes, version: str) -> bytes:
+    return replace_utf8_script_text(
+        data,
+        '"${Target}용 패치 폴더를 만들었습니다.`n$output"',
+        f'"${{Target}}용 한국어 패치 {version} 폴더를 만들었습니다.`n$output"',
+        "Switch installer",
+    )
+
+
 def pc_readme(version: str) -> bytes:
     return ("\ufeff" + f"""Ar nosurge DX 한국어 패치 PC판 {version}\n\n1. PC-Patch ZIP을 원하는 폴더에 풉니다.\n2. 동영상 자막도 적용하려면 PC-Movies ZIP을 같은 폴더에 덮어 풉니다.\n3. install.bat를 실행하고 ArnosurgeDX.exe가 있는 게임 폴더를 선택합니다.\n\n제거할 때는 uninstall.bat를 실행하세요.\n""").encode("utf-8")
 
@@ -53,7 +97,8 @@ def movie_readme(label: str, version: str) -> bytes:
 
 
 def build_pc(repo: pathlib.Path, donor: pathlib.Path, version: str,
-             include_movies: bool = False) -> list[pathlib.Path]:
+             include_movies: bool = False,
+             exe_override: pathlib.Path | None = None) -> list[pathlib.Path]:
     releases = repo / "releases"
     releases.mkdir(exist_ok=True)
     patch_out = releases / f"ArNosurgeDX-Korean-{version}-PC-Patch.zip"
@@ -78,8 +123,11 @@ def build_pc(repo: pathlib.Path, donor: pathlib.Path, version: str,
             entry["sha256"] = sha(payload)
             pack_payloads[entry["payload"]] = payload
 
+        exe_source = exe_override or (game / "ArnosurgeDX.exe")
+        if not exe_source.is_file():
+            raise SystemExit(f"PC 실행 파일이 없습니다: {exe_source}")
         patch_files = {
-            "ArnosurgeDX.exe": (game / "ArnosurgeDX.exe").read_bytes(),
+            "ArnosurgeDX.exe": exe_source.read_bytes(),
             "Data\\PACK01.PAK": (game / "Data" / "PACK01.PAK").read_bytes(),
             "Data\\PACK02.PAK": (game / "Data" / "PACK02.PAK").read_bytes(),
         }
@@ -90,8 +138,8 @@ def build_pc(repo: pathlib.Path, donor: pathlib.Path, version: str,
 
         install_bat = unique_entry(zin, "/install.bat")
         uninstall_bat = unique_entry(zin, "/uninstall.bat")
-        installer = unique_entry(zin, "/install_pc_patch.ps1")
-        uninstaller = unique_entry(zin, "/uninstall_pc_patch.ps1")
+        installer = pc_installer_for_version(unique_entry(zin, "/install_pc_patch.ps1"), version)
+        uninstaller = pc_uninstaller_for_version(unique_entry(zin, "/uninstall_pc_patch.ps1"), version)
 
         with zipfile.ZipFile(patch_out, "w", allowZip64=True) as zout:
             write_bytes(zout, f"{root}/install.bat", install_bat)
@@ -186,8 +234,8 @@ def build_pc_staged_patch(repo: pathlib.Path, donor: pathlib.Path, version: str,
         }
         install_bat = unique_entry(zin, "/install.bat")
         uninstall_bat = unique_entry(zin, "/uninstall.bat")
-        installer = unique_entry(zin, "/install_pc_patch.ps1")
-        uninstaller = unique_entry(zin, "/uninstall_pc_patch.ps1")
+        installer = pc_installer_for_version(unique_entry(zin, "/install_pc_patch.ps1"), version)
+        uninstaller = pc_uninstaller_for_version(unique_entry(zin, "/uninstall_pc_patch.ps1"), version)
 
         with zipfile.ZipFile(patch_out, "w", allowZip64=True) as zout:
             write_bytes(zout, f"{root}/install.bat", install_bat)
@@ -243,7 +291,11 @@ def build_switch(repo: pathlib.Path, installer_donor: pathlib.Path,
                     rel = src.relative_to(src_root).as_posix()
                     write_bytes(zout, f"{root}/payload/exefs/{patch_name}/{rel}", src.read_bytes())
         write_bytes(zout, f"{root}/setup_switch.bat", unique_entry(zinstaller, "/setup_switch.bat"))
-        write_bytes(zout, f"{root}/build_switch_layout.ps1", unique_entry(zinstaller, "/build_switch_layout.ps1"))
+        write_bytes(
+            zout,
+            f"{root}/build_switch_layout.ps1",
+            switch_installer_for_version(unique_entry(zinstaller, "/build_switch_layout.ps1"), version),
+        )
         write_bytes(zout, f"{root}/README.txt", switch_readme(version))
 
     outputs = [patch_out]
@@ -255,7 +307,11 @@ def build_switch(repo: pathlib.Path, installer_donor: pathlib.Path,
                     raise SystemExit(f"Switch 동영상이 없습니다: {source}")
                 write_bytes(zout, f"{root}/payload/romfs/Data/NX/Movie/{source.name}", source.read_bytes())
             write_bytes(zout, f"{root}/setup_switch.bat", unique_entry(zinstaller, "/setup_switch.bat"))
-            write_bytes(zout, f"{root}/build_switch_layout.ps1", unique_entry(zinstaller, "/build_switch_layout.ps1"))
+            write_bytes(
+                zout,
+                f"{root}/build_switch_layout.ps1",
+                switch_installer_for_version(unique_entry(zinstaller, "/build_switch_layout.ps1"), version),
+            )
             write_bytes(zout, f"{root}/README-MOVIES.txt", movie_readme("Switch", version))
         outputs.append(movies_out)
     return outputs
@@ -264,7 +320,7 @@ def build_switch(repo: pathlib.Path, installer_donor: pathlib.Path,
 def main() -> None:
     repo = pathlib.Path(__file__).resolve().parents[1]
     ap = argparse.ArgumentParser(description=__doc__)
-    ap.add_argument("--version", default="v0.3")
+    ap.add_argument("--version", default="v0.4")
     ap.add_argument(
         "--include-movies",
         action="store_true",
@@ -272,6 +328,8 @@ def main() -> None:
     )
     ap.add_argument("--pc-stage", type=pathlib.Path,
                     help="게임을 수정하지 않고 이미 빌드한 PC EXE/PACK01/PACK02로 Patch ZIP 생성")
+    ap.add_argument("--pc-exe", type=pathlib.Path,
+                    help="실행 중인 게임 EXE가 잠겨 있을 때 릴리스에 넣을 별도 빌드 EXE")
     ap.add_argument("--pc-font", type=pathlib.Path,
                     help="--pc-stage와 함께 넣을 PC 원본 기반 한글 mainfont_x64_0.g1t")
     args = ap.parse_args()
@@ -292,7 +350,7 @@ def main() -> None:
     if not sw_installer_donor.is_file():
         raise SystemExit(f"기존 Switch Patch ZIP이 없습니다: {sw_installer_donor}")
     outputs = [
-        *build_pc(repo, pc_donor, args.version, args.include_movies),
+        *build_pc(repo, pc_donor, args.version, args.include_movies, args.pc_exe),
         *build_switch(repo, sw_installer_donor, args.version, args.include_movies),
     ]
     for p in outputs:

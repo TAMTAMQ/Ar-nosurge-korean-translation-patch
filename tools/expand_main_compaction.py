@@ -149,7 +149,7 @@ def main():
                 {"id": "_rules", "source":
                  "아래 한국어 문장을 예산 이내로 줄여라. 뜻은 유지한다.\n"
                  "한글 1글자=3바이트, 공백/숫자/영문=1바이트.\n"
-                 "먼저 군더더기 어미와 조사를 줄이고, 그래도 넘치면 띄어쓰기를 지운다.\n"
+                 "먼저 군더더기 어미와 조사, 장황한 표현을 줄이되 정상 띄어쓰기는 유지한다.\n"
                  "[[CTRL_n]] 토큰은 개수와 순서를 그대로 둔다.\n"
                  "출력은 줄인 한국어 문장만."},
                 {"id": row["index"], "source": locked,
@@ -162,11 +162,8 @@ def main():
             if row["index"] not in answer:
                 return text
             text = unlock_tokens(answer[row["index"]].strip(), toks)
-        # Last resort: drop spaces from the right until it fits, so the row
-        # keeps as much normal spacing as the slot can pay for.
-        while byte_length(text, mapping) > capacity and " " in text:
-            cut = text.rfind(" ")
-            text = text[:cut] + text[cut + 1:]
+        # 정상 띄어쓰기를 지워서 슬롯에 맞추는 방식은 사용하지 않는다.
+        # 끝까지 초과하면 후보를 그대로 반환해 아래 용량 검사에서 기각한다.
         return text
 
     for row, capacity, used in targets:

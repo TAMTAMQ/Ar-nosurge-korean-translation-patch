@@ -54,7 +54,7 @@
 53,0x0061676B,0x001C176B,36,text,サーリとキャスに加勢する,살리와 캐스를 돕는다,needs_review,
 54,0x00616790,0x001C1790,21,text,見捨てるのか？,버려두는건가？,needs_review,
 55,0x006167A6,0x001C17A6,36,text,確かに、放っておけばいい,"확실히, 내버려 두면 돼",needs_review,
-56,0x006167CB,0x001C17CB,18,text,キャスを護る,캐스를지킨다,needs_review,compacted:spaces_removed
+56,0x006167CB,0x001C17CB,18,text,キャスを護る,캐스 지킨다,needs_review,expanded:spacing_restored
 57,0x006167DE,0x001C17DE,33,text,キャスが心配だったから,캐스가 걱정돼서,needs_review,
 58,0x00616800,0x001C1800,27,text,面白そうだったから,재밌어 보여서,needs_review,
 59,0x0061681C,0x001C181C,6,text,ご飯,밥,needs_review,
@@ -65,11 +65,11 @@
 64,0x00616890,0x001C1890,9,text,５リヴ,５리브,needs_review,
 65,0x0061689A,0x001C189A,9,text,３リヴ,리브(3),needs_review,
 66,0x006168A4,0x001C18A4,18,text,キャスを叱る,캐스 꾸짖기,needs_review,expanded:refit_to_capacity
-67,0x006168B7,0x001C18B7,18,text,キャスを叩く,캐스를때린다,needs_review,compacted:spaces_removed
+67,0x006168B7,0x001C18B7,18,text,キャスを叩く,캐스 때린다,needs_review,expanded:spacing_restored
 68,0x006168CA,0x001C18CA,15,text,何もしない,방관,needs_review,compacted:word_abbreviation
 69,0x006168DA,0x001C18DA,24,text,ネイをなぐさめる,네이를 위로한다,needs_review,
 70,0x006168F3,0x001C18F3,39,text,俺が代わりに臓器を提供する,내가 대신 장기를 제공한다,needs_review,
-71,0x0061691B,0x001C191B,30,text,キャスを連れて逃げる,캐스를데리고도망친다,needs_review,compacted:spaces_removed
+71,0x0061691B,0x001C191B,30,text,キャスを連れて逃げる,캐스와 도망친다,needs_review,expanded:spacing_restored
 72,0x0061693A,0x001C193A,36,text,ネイに止めるよう説得する,네이를 말리도록 설득한다,needs_review,
 73,0x0061695F,0x001C195F,33,text,自分でロケットを動かす,직접 로켓을 움직인다,needs_review,
 74,0x00616981,0x001C1981,39,text,キャスを賤しいとか言うな！,캐스를 천하다고 말하지 마！,needs_review,
@@ -120,18 +120,18 @@
 119,0x00616DE3,0x001C1DE3,30,text,抱きしめて呼吸を護る,껴안아 호흡을 지킨다,needs_review,
 120,0x00616E02,0x001C1E02,27,text,ネイと一緒に逃げる,네이와 함께 도망침,needs_review,
 121,0x00616E1E,0x001C1E1E,27,text,ネイと離れて逃げる,네이와 도망친다,needs_review,
-122,0x00616E3A,0x001C1E3A,18,text,ネイを助ける,네이를돕는다,needs_review,compacted:spaces_removed
+122,0x00616E3A,0x001C1E3A,18,text,ネイを助ける,네이 돕기,needs_review,expanded:spacing_restored
 123,0x00616E4D,0x001C1E4D,21,text,キャスを助ける,캐스를 돕는다,needs_review,
 124,0x00616E63,0x001C1E63,24,text,プライムを信じる,프라임을 믿는다,needs_review,
 125,0x00616E7C,0x001C1E7C,27,text,プライムを信じない,프라임을 안 믿는다,needs_review,
 126,0x00616E98,0x001C1E98,24,text,キャスが志願する,캐스가 자원한다,needs_review,
 127,0x00616EB1,0x001C1EB1,33,text,サーリが使うのを見守る,살리가 쓰는 걸 지켜본다,needs_review,
 128,0x00616ED3,0x001C1ED3,24,text,サーリを許さない,살리를 용서 못 해,needs_review,
-129,0x00616EEC,0x001C1EEC,18,text,サーリを許す,살리를용서함,needs_review,expanded:refit_to_capacity
-130,0x00616EFF,0x001C1EFF,18,text,何を勝手に！,뭐라는거야！,needs_review,expanded:refit_to_capacity
+129,0x00616EEC,0x001C1EEC,18,text,サーリを許す,살리 용서함,needs_review,expanded:spacing_restored
+130,0x00616EFF,0x001C1EFF,18,text,何を勝手に！,뭔 소리야！,needs_review,expanded:spacing_restored
 131,0x00616F12,0x001C1F12,30,text,俺も変身できるのか？,나도 변신할 수 있나？,needs_review,
 132,0x00616F31,0x001C1F31,18,text,キャスを怒る,캐스 꾸짖기,needs_review,compacted:word_abbreviation
-133,0x00616F44,0x001C1F44,21,text,キャスを慰める,캐스를위로한다,needs_review,compacted:spaces_removed
+133,0x00616F44,0x001C1F44,21,text,キャスを慰める,캐스 위로하기,needs_review,expanded:spacing_restored
 134,0x00616F5A,0x001C1F5A,12,text,攻撃する,공격한다,needs_review,
 135,0x00616F67,0x001C1F67,24,text,話で間を持たせる,말로 시간을 번다,needs_review,
 136,0x00616F80,0x001C1F80,24,text,サーリを支援する,살리를 지원한다,needs_review,
@@ -143,7 +143,7 @@
 142,0x0061701F,0x001C201F,24,text,二人とも結婚する,둘 다와 결혼한다,needs_review,
 143,0x00617038,0x001C2038,27,text,二人とも結婚しない,둘 다 결혼 안 해,needs_review,
 144,0x00617054,0x001C2054,21,text,ここはどこだ？,여긴 어디지？,needs_review,
-145,0x0061706A,0x001C206A,18,text,おまえを倒す,널쓰러뜨린다,needs_review,expanded:refit_to_capacity
+145,0x0061706A,0x001C206A,18,text,おまえを倒す,널 쓰러뜨려,needs_review,expanded:spacing_restored
 146,0x0061707D,0x001C207D,21,text,何をやってる？,뭐 하는 거야？,needs_review,
 147,0x00617093,0x001C2093,36,text,どうして俺はここにいる？,왜 내가 여기에 있지？,needs_review,
 148,0x006170B8,0x001C20B8,21,text,どんなテスト？,어떤 테스트？,needs_review,
@@ -194,9 +194,9 @@
 193,0x006175DF,0x001C25DF,51,text,君達の始祖たるとうだいもり様なるぞ,너희의 시조인 토다이모리 님이시다,needs_review,
 194,0x00617613,0x001C2613,24,text,殴って逃げようぜ,패고 도망치자!,needs_review,
 195,0x0061762C,0x001C262C,33,text,仕方ない、ついていこう,"어쩔 수 없지, 따라가자.",needs_review,
-196,0x0061764E,0x001C264E,24,text,砂から岩を作ろう,모래로바위만들기,needs_review,expanded:refit_to_capacity
+196,0x0061764E,0x001C264E,24,text,砂から岩を作ろう,모래 바위 만들기,needs_review,expanded:spacing_restored
 197,0x00617667,0x001C2667,27,text,黄鬼から話を聞こう,황귀에게 물어보자,needs_review,
-198,0x00617683,0x001C2683,18,text,イオンを護る,이온을지킨다,needs_review,compacted:spaces_removed
+198,0x00617683,0x001C2683,18,text,イオンを護る,이온 지킨다,needs_review,expanded:spacing_restored
 199,0x00617696,0x001C2696,27,text,イオンに手を出すな,이온에게 손대지 마!,needs_review,
 200,0x006176B2,0x001C26B2,42,text,イオンを踏んでいいのは俺だけ,이온은 나만 밟을 수 있어,needs_review,
 201,0x006176DD,0x001C26DD,15,text,だが断る！,거절한다！,needs_review,
@@ -204,7 +204,7 @@
 203,0x00617700,0x001C2700,9,text,楽しい,즐거워,needs_review,
 204,0x0061770A,0x001C270A,24,text,意味が分からない,무슨 소리야,needs_review,
 205,0x00617723,0x001C2723,21,text,ネイがおかしい,네이가 이상해,needs_review,
-206,0x00617739,0x001C2739,24,text,随分辛い世界だな,참가혹한세상이군,needs_review,compacted:spaces_removed
+206,0x00617739,0x001C2739,24,text,随分辛い世界だな,가혹한 세상이군,needs_review,expanded:spacing_restored
 207,0x00617752,0x001C2752,33,text,カノンは大丈夫なのか？,카논은 괜찮은 거야？,needs_review,
 208,0x00617774,0x001C2774,30,text,仕方ない、立ち去ろう,"어쩔 수 없지, 떠나자",needs_review,
 209,0x00617793,0x001C2793,27,text,やってみてもいい？,해봐도 돼？,needs_review,
@@ -232,7 +232,7 @@
 231,0x00617AA3,0x001C2AA3,39,text,イオンを信じてやってくれ！,이온을 믿어줘！,needs_review,
 232,0x00617ACB,0x001C2ACB,27,text,裏切られてもいい！,배신당해도 좋아！,needs_review,
 233,0x00617AE7,0x001C2AE7,18,text,自信あるの？,자신 있어？,needs_review,
-234,0x00617AFA,0x001C2AFA,21,text,確かに興味ある,확실히흥미있어,needs_review,compacted:spaces_removed
+234,0x00617AFA,0x001C2AFA,21,text,確かに興味ある,흥미는 있어,needs_review,expanded:spacing_restored
 235,0x00617B10,0x001C2B10,36,text,ありったけの想いを込める,모든 마음을 담아서,needs_review,
 236,0x00617B35,0x001C2B35,21,text,イオンに任せる,이온에게 맡겨,needs_review,
 237,0x00617B4B,0x001C2B4B,12,text,当然です,당연하죠,needs_review,
@@ -261,14 +261,14 @@
 260,0x00617E5C,0x001C2E5C,15,kanji_only,銃乱射！！,총기 난사!!,needs_review,
 261,0x00617E6C,0x001C2E6C,54,text,ネイはシャールであることを悩んでる？,네이는 샤르라는 사실에 고민 중？,needs_review,
 262,0x00617EA3,0x001C2EA3,39,text,なぜ触手を使わないのかな？,왜 촉수를 안 쓰는 걸까？,needs_review,
-263,0x00617ECB,0x001C2ECB,15,text,ネイはドＭ,네이는도Ｍ,needs_review,expanded:refit_to_capacity
+263,0x00617ECB,0x001C2ECB,15,text,ネイはドＭ,네이 도Ｍ,needs_review,expanded:spacing_restored
 264,0x00617EDB,0x001C2EDB,45,text,ロッククライミング用の突起かも,암벽 등반용 돌기일지도,needs_review,
 265,0x00617F09,0x001C2F09,30,text,どうしたの？　イオン,왜 그래？ 이온,needs_review,
 266,0x00617F28,0x001C2F28,27,text,なんか声が聞こえる,목소리가 들려,needs_review,
 267,0x00617F44,0x001C2F44,27,text,壁をノックしてみる,벽을 두드려 본다,needs_review,
 268,0x00617F60,0x001C2F60,27,text,壁をぶん殴ってみる,벽을 주먹으로 친다,needs_review,
 269,0x00617F83,0x001C2F83,18,text,出ていかない,안 나오네,needs_review,
-270,0x00617F96,0x001C2F96,18,text,それは辛いね,그건괴롭겠네,needs_review,compacted:spaces_removed
+270,0x00617F96,0x001C2F96,18,text,それは辛いね,그건 괴롭네,needs_review,expanded:spacing_restored
 271,0x00617FA9,0x001C2FA9,21,text,それは保身だね,자기보호네,needs_review,
 272,0x00617FBF,0x001C2FBF,36,text,ネイを信じてやって欲しい,네이를 믿고 해줘,needs_review,
 273,0x00617FE4,0x001C2FE4,39,text,触手ッ子には俺も萌えている,촉수녀라니 나도 취향이야,needs_review,
@@ -321,7 +321,7 @@
 320,0x006184F9,0x001C34F9,18,text,初めて知った,처음 알았어,needs_review,
 321,0x0061850C,0x001C350C,12,text,興味ない,관심없어,needs_review,compacted:spaces_removed
 322,0x00618519,0x001C3519,15,text,わかった！,알았어！,needs_review,
-323,0x00618529,0x001C3529,18,text,全然わからん,전혀모르겠어,needs_review,compacted:spaces_removed
+323,0x00618529,0x001C3529,18,text,全然わからん,전혀 모르네,needs_review,expanded:spacing_restored
 324,0x0061853C,0x001C353C,21,text,いいね、それ！,그거 좋다！,needs_review,
 325,0x00618552,0x001C3552,39,text,それより、けもけもって何？,"그보다, 케모케모가 뭐야？",needs_review,
 326,0x0061857A,0x001C357A,15,text,萌える！！,심쿵해！！,needs_review,
@@ -382,12 +382,12 @@
 381,0x00618BD8,0x001C3BD8,39,text,イオンの世界ってどこなの？,이온의 세계는 어디야？,needs_review,
 382,0x00618C00,0x001C3C00,39,text,学校の記憶はラシェーラの？,학교 기억은 라셸라 거야？,needs_review,
 383,0x00618C28,0x001C3C28,42,text,なんか共通の思い出が多いよね,왠지 공통된 추억이 많네,needs_review,
-384,0x00618C53,0x001C3C53,24,text,端末を触ってみる,단말기를만져본다,needs_review,compacted:spaces_removed
+384,0x00618C53,0x001C3C53,24,text,端末を触ってみる,단말기 만져 본다,needs_review,expanded:spacing_restored
 385,0x00618C6C,0x001C3C6C,21,text,イオンが来ない,이온이 안 와,needs_review,
 386,0x00618C82,0x001C3C82,18,text,キミはだれ？,넌 누구야？,needs_review,
 387,0x00618C95,0x001C3C95,18,text,ここはどこ？,여긴어디지？,needs_review,
 388,0x00618CA8,0x001C3CA8,15,text,ありがとう,고마워,needs_review,
-389,0x00618CB8,0x001C3CB8,18,text,イオンが心配,이온이걱정돼,needs_review,compacted:spaces_removed
+389,0x00618CB8,0x001C3CB8,18,text,イオンが心配,이온 걱정돼,needs_review,expanded:spacing_restored
 390,0x00618CCB,0x001C3CCB,36,text,イオンは見捨てたりしない,이온은 버리지 않아,needs_review,
 391,0x00618CF0,0x001C3CF0,39,text,とにかく、このままじゃ困る,어쨌든 이대로는 곤란해,needs_review,
 392,0x00618D18,0x001C3D18,27,text,この扉に入りたい！,이문에들어가고싶다,needs_review,compacted:word_abbreviation
@@ -412,7 +412,7 @@
 411,0x00618F0E,0x001C3F0E,24,text,じゃあそうしよう,그럼 그렇게 하자,needs_review,
 412,0x00618F27,0x001C3F27,45,text,きっとイオンが幸せになれるから,분명 이온이 행복해질 테니까,needs_review,
 413,0x00618F55,0x001C3F55,36,text,イオンのこと愛してるから,이온을 사랑하니까,needs_review,
-414,0x00618F7A,0x001C3F7A,15,text,なら大丈夫,그럼괜찮아,needs_review,compacted:spaces_removed
+414,0x00618F7A,0x001C3F7A,15,text,なら大丈夫,그럼 됐어,needs_review,expanded:spacing_restored
 415,0x00618F8A,0x001C3F8A,21,text,怖くなってきた,무서워졌어,needs_review,
 416,0x00618FA0,0x001C3FA0,18,text,まかせとけ！,맡겨만 둬！,needs_review,
 417,0x00618FB3,0x001C3FB3,36,text,レナルルはもう手遅れかも,레나루루는이미늦었을지도,needs_review,
@@ -510,9 +510,9 @@
 509,0x006199B4,0x001C49B4,27,text,別れたいと思ってる,헤어지고 싶어,needs_review,
 510,0x006199D0,0x001C49D0,39,text,深入りしたくないと思ってる,깊이 엮이고 싶지 않음,needs_review,
 511,0x006199F8,0x001C49F8,27,text,イッパツで正解した,한 번에 정답을 맞힘,needs_review,
-512,0x00619A14,0x001C4A14,24,text,何度かやり直した,몇번이고다시했다,needs_review,compacted:spaces_removed
+512,0x00619A14,0x001C4A14,24,text,何度かやり直した,몇 번 다시 했다,needs_review,expanded:spacing_restored
 513,0x00619A2D,0x001C4A2D,42,text,数え切れないくらいやり直した,셀 수 없을 만큼 반복했어,needs_review,
-514,0x00619A58,0x001C4A58,12,text,信じてる,믿고있어,needs_review,compacted:spaces_removed
+514,0x00619A58,0x001C4A58,12,text,信じてる,믿어,needs_review,expanded:spacing_restored
 515,0x00619A65,0x001C4A65,21,text,ねりこさん！？,네리코 씨！？,needs_review,
 516,0x00619A7B,0x001C4A7B,18,text,もうやめよう,이제 그만해,needs_review,
 517,0x00619A8E,0x001C4A8E,27,text,イオン、もうやめろ,"이온, 이제 그만해",needs_review,
@@ -561,7 +561,7 @@
 560,0x00619FDE,0x001C4FDE,36,text,カノンこそ、何故ここに？,카논이야말로 왜 여기에？,needs_review,
 561,0x0061A003,0x001C5003,27,text,ネイを助けたいんだ,네이를 구하고 싶어,needs_review,
 562,0x0061A01F,0x001C501F,24,text,イオンがおかしい,이온이 이상해,needs_review,
-563,0x0061A038,0x001C5038,36,text,カノンが常識者で良かった,카논이상식인이라다행이야,needs_review,compacted:spaces_removed
+563,0x0061A038,0x001C5038,36,text,カノンが常識者で良かった,카논이 상식적이라 다행,needs_review,expanded:spacing_restored
 564,0x0061A05D,0x001C505D,21,text,万力を広げたい,만력 늘리고파,needs_review,compacted:word_abbreviation
 565,0x0061A073,0x001C5073,12,text,ぶち破る,부수자,needs_review,
 566,0x0061A080,0x001C5080,30,text,ネイなら知ってるかも,네이라면 알지도 몰라,needs_review,
@@ -599,7 +599,7 @@
 598,0x0061A48A,0x001C548A,9,text,さあ？,글쎄？,needs_review,
 599,0x0061A494,0x001C5494,21,text,自己責任の放棄,자기책임 회피,needs_review,
 600,0x0061A4AA,0x001C54AA,42,text,イオンダメだ、利用されてるよ,"이온, 안 돼. 이용당하고 있어",needs_review,
-601,0x0061A4D5,0x001C54D5,21,text,みんな幸せそう,다들행복해보여,needs_review,compacted:spaces_removed
+601,0x0061A4D5,0x001C54D5,21,text,みんな幸せそう,다들 행복해,needs_review,expanded:spacing_restored
 602,0x0061A4EB,0x001C54EB,21,text,なんかおかしい,뭔가 이상해,needs_review,
 603,0x0061A501,0x001C5501,24,text,何をすればいい？,어떻게 하면 돼？,needs_review,
 604,0x0061A51A,0x001C551A,12,text,喜んで！,기꺼이！,needs_review,
@@ -682,7 +682,7 @@
 681,0x0061AD81,0x001C5D81,21,text,楽しみにしてる,기대할게,needs_review,
 682,0x0061AD97,0x001C5D97,21,text,今日は遅くなる,오늘은 늦어,needs_review,
 683,0x0061ADAD,0x001C5DAD,36,text,一緒に電車に乗ってあげる,같이 전철 타고 가줄게,needs_review,
-684,0x0061ADD2,0x001C5DD2,18,text,励まして帰る,격려하며복귀,needs_review,expanded:refit_to_capacity
+684,0x0061ADD2,0x001C5DD2,18,text,励まして帰る,격려 후 복귀,needs_review,expanded:spacing_restored
 685,0x0061ADE5,0x001C5DE5,30,text,玲音が可愛かったから,레이나가 귀여워서,needs_review,
 686,0x0061AE04,0x001C5E04,30,text,玲音が心配だったから,레이가 걱정돼서,needs_review,
 687,0x0061AE23,0x001C5E23,36,text,あるけど、少しくらい平気,"있지만, 조금은 괜찮아",needs_review,
@@ -690,7 +690,7 @@
 689,0x0061AE64,0x001C5E64,27,text,それなら家に来いよ,그럼 우리 집에 와,needs_review,
 690,0x0061AE80,0x001C5E80,39,text,そんなこと言うもんじゃない,그렇게 말하는 거 아냐,needs_review,
 691,0x0061AEA8,0x001C5EA8,33,text,おなかが空きました……,배가 고파요……,needs_review,
-692,0x0061AECA,0x001C5ECA,24,text,大地が大好きです,대지가정말좋아요,needs_review,compacted:spaces_removed
+692,0x0061AECA,0x001C5ECA,24,text,大地が大好きです,대지 정말 좋아요,needs_review,expanded:spacing_restored
 693,0x0061AEE3,0x001C5EE3,21,text,一緒に暮らそう,같이 살자,needs_review,
 694,0x0061AEF9,0x001C5EF9,39,text,ごめん、それは面白くないわ,"미안, 그건 재미없어",needs_review,
 695,0x0061AF21,0x001C5F21,24,text,いや、面白い！！,"아니, 재밌어！！",needs_review,
@@ -766,7 +766,7 @@
 765,0x0061B6C9,0x001C66C9,36,text,夢なんて持たない方が幸せ,꿈 같은 건 없는 게 행복해,needs_review,
 766,0x0061B6EE,0x001C66EE,54,text,気分転換にピクニックでもした方が……,기분 전환으로 소풍이라도 가는 게……,needs_review,
 767,0x0061B725,0x001C6725,63,text,寧をモデルに成人向け漫画を描けばきっと……,네이 모델로 성인 만화를 그리면 분명……,needs_review,
-768,0x0061B765,0x001C6765,33,text,寧は結婚に興味あるの？,네이는결혼에관심있어？,needs_review,compacted:spaces_removed
+768,0x0061B765,0x001C6765,33,text,寧は結婚に興味あるの？,네이 결혼에 관심 있어？,needs_review,expanded:spacing_restored
 769,0x0061B787,0x001C6787,24,text,僕と結婚しよう！,나랑 결혼하자！,needs_review,
 770,0x0061B7A0,0x001C67A0,33,text,どうして怜央を白鷹と？,왜레오를시로타카라고？,needs_review,
 771,0x0061B7C2,0x001C67C2,24,text,来るんじゃない？,오는 거 아냐？,needs_review,
@@ -777,7 +777,7 @@
 776,0x0061B854,0x001C6854,21,text,トルコ料理だよ,터키 요리야,needs_review,
 777,0x0061B86A,0x001C686A,21,text,ガッテン承知！,완벽하게접수！,needs_review,
 778,0x0061B880,0x001C6880,27,text,面倒くさいなぁ……,귀찮네……,needs_review,
-779,0x0061B89C,0x001C689C,15,text,仕方ないな,어쩔수없네,needs_review,compacted:spaces_removed
+779,0x0061B89C,0x001C689C,15,text,仕方ないな,방법 없네,needs_review,expanded:spacing_restored
 780,0x0061B8AC,0x001C68AC,33,text,漫画はもう解決したの？,만화는 이제 해결됐어？,needs_review,
 781,0x0061B8CE,0x001C68CE,30,text,僕が描いてあげるよ！,내가 그려줄게！,needs_review,
 782,0x0061B8ED,0x001C68ED,39,text,どうして入賞しないと思う？,왜 입상하지 못할 것 같아？,needs_review,
@@ -803,7 +803,7 @@
 802,0x0061BBC8,0x001C6BC8,24,text,単なる誤差では？,단순한오차아냐？,needs_review,
 803,0x0061BBE1,0x001C6BE1,27,text,やったね寧ちゃん！,"해냈어, 네이쨩！",needs_review,
 804,0x0061BBFD,0x001C6BFD,30,text,今日はもう上がろうよ,오늘은 이만 가자,needs_review,
-805,0x0061BC1C,0x001C6C1C,24,text,諦めるの早ッ！！,포기가 너무빨라!!,needs_review,expanded:refit_to_capacity
+805,0x0061BC1C,0x001C6C1C,24,text,諦めるの早ッ！！,포기 너무 빨라!!,needs_review,expanded:spacing_restored
 806,0x0061BC35,0x001C6C35,48,text,魔法巨女ピコ！？どうしてここに？,마법 거녀 피코！？ 왜 여기에？,needs_review,
 807,0x0061BC66,0x001C6C66,39,text,仕方ない、才能が無いんだよ,"어쩔 수 없어, 재능이 없는걸",needs_review,
 808,0x0061BC8E,0x001C6C8E,45,text,頑張って欲しいけどもう限界だよ,응원하고 싶지만 이제 한계야,needs_review,
@@ -831,13 +831,13 @@
 830,0x0061BF77,0x001C6F77,36,text,落第は無いから安心して！,낙제는 없으니까 안심해！,needs_review,
 831,0x0061BF9C,0x001C6F9C,51,text,大丈夫。ずっと頑張ってきたんだから,괜찮아. 계속 노력해 왔으니까,needs_review,
 832,0x0061BFD0,0x001C6FD0,42,text,落ち着いて！僕がついてるから,진정해！ 내가 곁에 있을게,needs_review,
-833,0x0061BFFB,0x001C6FFB,30,text,水の中に入って助ける,물속에들어가서구한다,needs_review,compacted:spaces_removed
+833,0x0061BFFB,0x001C6FFB,30,text,水の中に入って助ける,물에 들어가 구한다,needs_review,expanded:spacing_restored
 834,0x0061C01A,0x001C701A,36,text,……ネイ、リッパダヨ……,"……네이, 살아있어……",needs_review,
 835,0x0061C03F,0x001C703F,24,text,ネイ、オメデトウ,"네이, 축하해",needs_review,
 836,0x0061C058,0x001C7058,30,text,シアワセニナッテ……,행복해지렴……,needs_review,
 837,0x0061C0A9,0x001C70A9,15,text,戻りたい！,돌아갈래！,needs_review,compacted:manual_override
 838,0x0061C0B9,0x001C70B9,21,text,いや、別に……,"아니, 딱히……",needs_review,
-839,0x0061C0CF,0x001C70CF,21,text,状況に甘んじる,상황에안주하다,needs_review,compacted:spaces_removed
+839,0x0061C0CF,0x001C70CF,21,text,状況に甘んじる,상황에 안주,needs_review,expanded:spacing_restored
 840,0x0061C0E5,0x001C70E5,33,text,全て知ってるので飛ばす,다 알고 있으니 건너뛰기,needs_review,
 841,0x0061C1DD,0x001C71DD,30,text,キャス【始まりの国】,캐스【시작의 나라】,needs_review,
 842,0x0061C1FC,0x001C71FC,30,text,人物メモ：パートナー,인물 메모： 파트너,needs_review,
@@ -1178,7 +1178,7 @@
 1177,0x0061E3E7,0x001C93E7,27,text,中にはいりますか？,안으로들어갈거야？,needs_review,
 1178,0x0061E403,0x001C9403,70,text,以前観たことがありますが、<CR>中にはいりますか？,"전에 본 적이 있는데, <CR>안으로 들어갈 거야？",needs_review,
 1179,0x0061E44A,0x001C944A,24,text,外に出るッスか？,밖으로나가나요？,needs_review,expanded:refit_to_capacity
-1180,0x0061E463,0x001C9463,24,text,中に入るッスか？,안으로들어갈래？,needs_review,expanded:refit_to_capacity
+1180,0x0061E463,0x001C9463,24,text,中に入るッスか？,안에 들어갈래？,needs_review,expanded:spacing_restored
 1181,0x0061E47C,0x001C947C,79,text,以前観たことがある場所ッス。<CR>本当に中に入るッスか？,전에 본 적 있는 곳이야. <CR>정말 안으로 들어갈 거야？,needs_review,
 1182,0x0061E4CC,0x001C94CC,27,text,そろそろ外に出る？,슬슬 나갈까？,needs_review,
 1183,0x0061E4E8,0x001C94E8,21,text,この中に入る？,안에들어갈래？,needs_review,compacted:word_abbreviation
@@ -1194,7 +1194,7 @@
 1193,0x0061E68A,0x001C968A,25,text,ダイブを行うには ,다이브를 하려면 ,needs_review,
 1194,0x0061E6A4,0x001C96A4,27,text,ＣＴ必要になります,ＣＴ가 필요합니다,needs_review,
 1195,0x0061E6C0,0x001C96C0,26,text,CTが不足しています,CT가 부족합니다,needs_review,
-1196,0x0061E6DB,0x001C96DB,27,text,ダイブを開始します,다이브를시작합니다,needs_review,compacted:spaces_removed
+1196,0x0061E6DB,0x001C96DB,27,text,ダイブを開始します,다이브 시작합니다,needs_review,expanded:spacing_restored
 1197,0x0061E6F7,0x001C96F7,21,text,お疲れ様でした,수고하셨습니다,needs_review,
 1198,0x0061E70D,0x001C970D,24,text,気をつけて下さい,조심하세요,needs_review,
 1199,0x0061E726,0x001C9726,24,text,またきてくれよ！,또 놀러 와！,needs_review,
@@ -1225,7 +1225,7 @@
 1224,0x0061EE21,0x001C9E21,122,text,あらら、大丈夫ですかー？<CR>心の中は危険がいっぱいですから<CR>気をつけてくださいねー,"어머나, 괜찮으신가요？<CR>마음속은 위험이 가득하니까<CR>조심하세요～",needs_review,
 1225,0x0061EE9C,0x001C9E9C,70,text,お疲れ様でした。<CR>想いの結晶を見つけたんですね,수고하셨습니다.<CR>마음의 결정체를 찾으셨군요,needs_review,
 1226,0x0061EEE3,0x001C9EE3,88,text,はい、結晶のお土産です<CR>ぜひ禊ぎで取り込んでみてくださいー,"네, 결정체 기념품입니다<CR>꼭 미소기에서 흡수해 보세요～",needs_review,
-1227,0x0061EF3C,0x001C9F3C,79,text,仲良きことは美しきかな。<CR>魂の修練所、楽庵へようこそ,친밀함은아름다움<CR>영혼수련장락안에오신것을환영합니다,needs_review,compacted:word_abbreviation
+1227,0x0061EF3C,0x001C9F3C,79,text,仲良きことは美しきかな。<CR>魂の修練所、楽庵へようこそ,사이좋음은 아름답다.<CR>영혼 수련장 라쿠안에 어서 오세요,needs_review,expanded:spacing_restored
 1228,0x0061EF8C,0x001C9F8C,112,text,どうぞ、ジェノメトリカ結晶です。<CR>結晶を取り込むのは、禊ぎ場でお願いします,여기 제노메트리카 결정입니다.<CR>결정체 흡수는 미소기장에서 부탁드립니다,needs_review,
 1229,0x0061EFFD,0x001C9FFD,64,text,いらっしゃいませ。<CR>ダイブをご希望ですか？,어서 오세요.<CR>다이브를 원하시나요？,needs_review,
 1230,0x0061F03E,0x001CA03E,29,text,ダイブを行う前に <CR>,다이브 전 <CR>,needs_review,
@@ -1297,7 +1297,7 @@
 1285,0x0066FF21,0x0021AF21,57,text,セカイリンクデータをセーブしています...,세카이 링크 데이터를 저장 중...,needs_review,
 1286,0x0066FF5B,0x0021AF5B,57,text,セカイリンクデータをロードしています...,세카이 링크 데이터를 불러오는 중...,needs_review,
 1287,0x0066FF95,0x0021AF95,36,text,しばらくお待ちください...,잠시만 기다려 주십시오...,needs_review,
-1288,0x0066FFBA,0x0021AFBA,51,text,このセーブデータを上書きしますか？,이세이브데이터를덮어쓰시겠습니까？,needs_review,expanded:refit_to_capacity
+1288,0x0066FFBA,0x0021AFBA,51,text,このセーブデータを上書きしますか？,이 세이브 데이터를 덮어쓸까요？,needs_review,expanded:spacing_restored
 1289,0x0066FFEE,0x0021AFEE,24,text,セーブしますか？,저장할까요？,needs_review,
 1290,0x00670007,0x0021B007,24,text,ロードしますか？,불러올까요？,needs_review,
 1291,0x00670020,0x0021B020,21,text,削除しますか？,삭제할까요？,needs_review,
@@ -1661,7 +1661,7 @@
 1649,0x00682FD6,0x0022DFD6,45,text,ブレイク値が非常に高い単体攻撃,브레이크수치가매우높은단일공격,needs_review,compacted:spaces_removed
 1650,0x00683004,0x0022E004,24,text,ディレイバースト,딜레이 버스트,needs_review,
 1651,0x0068301D,0x0022E01D,24,text,デルタＳスキルＲ,델타 Ｓ 스킬 Ｒ,needs_review,
-1652,0x00683036,0x0022E036,51,text,Hit数に応じて威力が上がる時間差攻撃,Hit수에따라위력이상승하는시간차공격,needs_review,expanded:refit_to_capacity
+1652,0x00683036,0x0022E036,51,text,Hit数に応じて威力が上がる時間差攻撃,Hit수 따라 위력이 오르는 시간차 공격,needs_review,expanded:spacing_restored
 1653,0x0068306A,0x0022E06A,17,text,δストライク,δ스트라이크,needs_review,
 1654,0x0068307C,0x0022E07C,24,text,デルタＰスキルＬ,델타 Ｐ 스킬 Ｌ,needs_review,
 1655,0x00683095,0x0022E095,21,text,強力な単体攻撃,강력한단일공격,needs_review,compacted:spaces_removed
@@ -1670,7 +1670,7 @@
 1658,0x006830DA,0x0022E0DA,45,text,全体にダメージを与える範囲攻撃,적 전체에 피해를 주는 범위 공격,needs_review,
 1659,0x00683108,0x0022E108,21,text,グランドスラム,그랜드 슬램,needs_review,
 1660,0x0068311E,0x0022E11E,24,text,デルタＰスキルＤ,델타 Ｐ 스킬 Ｄ,needs_review,
-1661,0x00683137,0x0022E137,36,text,ブレイク値が高い単体攻撃,브레이크수치높은단일공격,needs_review,expanded:refit_to_capacity
+1661,0x00683137,0x0022E137,36,text,ブレイク値が高い単体攻撃,브레이크 높은 단일 공격,needs_review,expanded:spacing_restored
 1662,0x0068315C,0x0022E15C,21,text,ラストスタンド,라스트 스탠드,needs_review,
 1663,0x00683172,0x0022E172,24,text,デルタＰスキルＲ,델타 Ｐ 스킬 Ｒ,needs_review,
 1664,0x0068318B,0x0022E18B,54,text,条件を満たすと使用可能になる連続攻撃,조건 충족 시 사용 가능한 연속 공격,needs_review,
@@ -1952,7 +1952,7 @@
 1940,0x006852D9,0x002302D9,48,text,竜脈が眷属に大いなる力を与える！,용맥이 권속에게 큰 힘을부여한다！,needs_review,
 1941,0x0068530A,0x0023030A,88,text,敵のＨＰが行動時に大きく回復する<CR>竜王の攻撃力が大幅に増す,적 ＨＰ가 행동 시 크게 회복<CR>용왕의 공격력이 대폭 상승,needs_review,
 1942,0x00685363,0x00230363,15,text,地脈の胎動,지맥의태동,needs_review,compacted:spaces_removed
-1943,0x00685373,0x00230373,45,text,大地から無限の癒しが注がれる！,대지에서무한한치유가쏟아진다！,needs_review,expanded:refit_to_capacity
+1943,0x00685373,0x00230373,45,text,大地から無限の癒しが注がれる！,대지에서 무한 치유가 쏟아진다！,needs_review,expanded:spacing_restored
 1944,0x006853A1,0x002303A1,88,text,敵のＨＰが行動時に大幅に回復する。<CR>回復量は時間で増加する,적 ＨＰ가 행동 시 대폭 회복.<CR>회복량은 시간에 따라 증가함,needs_review,
 1945,0x006853FA,0x002303FA,15,text,死神の祝福,사신의축복,needs_review,compacted:spaces_removed
 1946,0x0068540A,0x0023040A,33,text,死神は魔物に微笑んだ！,사신이 마물에게 미소！,needs_review,compacted:word_abbreviation
@@ -1997,7 +1997,7 @@
 1985,0x00685AB8,0x00230AB8,48,text,力が満ちていく…終わりが始まる！,힘이 차오른다… 종말이 시작된다！,needs_review,
 1986,0x00685AE9,0x00230AE9,94,text,敵の全ての能力が大幅に上昇する<CR>味方の行動後の待機時間が延びる,적의 모든 능력 대폭 상승<CR>아군 행동 후 대기 시간 연장,needs_review,
 1987,0x00685B48,0x00230B48,48,text,戦いが終焉を迎えようとしている！,전투가 종언을 맞이하려 한다！,needs_review,
-1988,0x00685B79,0x00230B79,96,text,敵の全ての能力が絶望的に上昇し、味方の全ての能力が徐々に減少する,"적의 모든 능력은절망적으로상승하고,아군의모든능력은서서히감소한다",needs_review,expanded:refit_to_capacity
+1988,0x00685B79,0x00230B79,96,text,敵の全ての能力が絶望的に上昇し、味方の全ての能力が徐々に減少する,"적의 모든 능력은 크게 상승하고, 아군의 모든 능력은 서서히 감소한다",needs_review,expanded:spacing_restored
 1989,0x00685BDA,0x00230BDA,18,text,魔神の遊戯場,마신의유희장,needs_review,compacted:spaces_removed
 1990,0x00685BED,0x00230BED,48,text,魔神のいたずらが戦局を揺るがす！,마신의 장난이 전황을 뒤흔든다！,needs_review,
 1991,0x00685C1E,0x00230C1E,85,text,行動時にＨＰが減少する<CR>減少するＨＰの値は大きく変動する,행동 시 ＨＰ가 감소한다<CR>감소하는 ＨＰ 수치는 크게변동한다,needs_review,
@@ -2017,7 +2017,7 @@
 2005,0x00685EC0,0x00230EC0,54,text,神の祝福に包まれた！強敵を撃破せよ！,신의 축복을 받았다！ 강적을격파하라！,needs_review,
 2006,0x00685EF7,0x00230EF7,60,text,最大ＨＰ、攻撃力、防御力、速度が上昇する,"최대 ＨＰ, 공격력, 방어력, 속도가 상승한다",needs_review,
 2007,0x00685F34,0x00230F34,21,text,忌者のまなざし,기자의 눈길,needs_review,
-2008,0x00685F4A,0x00230F4A,42,text,強烈な視線が集中力を妨げる！,강렬한시선이집중을방해한다！,needs_review,expanded:refit_to_capacity
+2008,0x00685F4A,0x00230F4A,42,text,強烈な視線が集中力を妨げる！,시선이 집중을 방해한다！,needs_review,expanded:spacing_restored
 2009,0x00685F75,0x00230F75,45,text,サポートゲージが次第に減少する,서포트 게이지가 서서히 감소한다,needs_review,
 2010,0x00685FA3,0x00230FA3,15,text,テスト用１,테스트용１,needs_review,
 2011,0x00685FB3,0x00230FB3,30,text,戦場を病魔が蝕む！！,전장을좀먹는병마！！,needs_review,
@@ -2402,7 +2402,7 @@
 2390,0x00693481,0x0023E481,39,text,イヤ……戦いたくない……！,싫어… 싸우고 싶지 않아…！,needs_review,
 2391,0x006934A9,0x0023E4A9,30,text,デルタ、気をつけて！,"델타, 조심해！",needs_review,
 2392,0x006934C8,0x0023E4C8,27,text,無茶はしないでね。,무리하지는 마.,needs_review,
-2393,0x006934E4,0x0023E4E4,27,text,攻め過ぎちゃだめ！,너무몰아붙이지마！,needs_review,expanded:refit_to_capacity
+2393,0x006934E4,0x0023E4E4,27,text,攻め過ぎちゃだめ！,너무 몰아붙이지 마,needs_review,expanded:spacing_restored
 2394,0x00693500,0x0023E500,24,text,これを使います！,이걸 쓸게요！,needs_review,
 2395,0x00693519,0x0023E519,18,text,その調子よ！,그 기세야！,needs_review,
 2396,0x0069352C,0x0023E52C,30,text,まだ続けられそうね。,더 할 수 있겠어.,needs_review,
@@ -2455,7 +2455,7 @@
 2443,0x00693AC2,0x0023EAC2,36,text,これを使ったらどうかな？,이걸 써보는 건 어때？,needs_review,
 2444,0x00693AE7,0x0023EAE7,27,text,アイテム、使うね！,"아이템, 사용！",needs_review,
 2445,0x00693B03,0x0023EB03,48,text,変な効果じゃ……ないといいけど。,이상한 효과가… 아니어야 할 텐데.,needs_review,
-2446,0x00693B34,0x0023EB34,21,text,いい感じ……。,좋은느낌이야…,needs_review,compacted:spaces_removed
+2446,0x00693B34,0x0023EB34,21,text,いい感じ……。,느낌 좋아…,needs_review,expanded:spacing_restored
 2447,0x00693B4A,0x0023EB4A,24,text,わわっ、すごい！,"와아, 대단해！",needs_review,
 2448,0x00693B63,0x0023EB63,18,text,絶好調だね。,최상이야.,needs_review,
 2449,0x00693B76,0x0023EB76,15,text,あと一息！,조금만더！,needs_review,
@@ -2466,7 +2466,7 @@
 2454,0x00693BF9,0x0023EBF9,21,text,うん、いいね。,"응, 좋아.",needs_review,
 2455,0x00693C0F,0x0023EC0F,21,text,その調子だよ。,그 기세야.,needs_review,
 2456,0x00693C25,0x0023EC25,21,text,いい感じだよ！,좋은느낌이야！,needs_review,
-2457,0x00693C3B,0x0023EC3B,27,text,もっといけるかも！,더할수있을것같아！,needs_review,compacted:spaces_removed
+2457,0x00693C3B,0x0023EC3B,27,text,もっといけるかも！,더 할 수 있겠어！,needs_review,expanded:spacing_restored
 2458,0x00693C57,0x0023EC57,27,text,いい感じいい感じ！,좋아 좋아！,needs_review,
 2459,0x00693C73,0x0023EC73,15,text,やったあ！,해냈다！,needs_review,
 2460,0x00693C83,0x0023EC83,18,text,いけいけー！,"가자, 가자！",needs_review,
@@ -2629,7 +2629,7 @@
 2617,0x00694EA7,0x0023FEA7,21,text,謳います……！,노래할게요…！,needs_review,
 2618,0x00694EBD,0x0023FEBD,45,text,まだ、謳わなくちゃいけないの？,아직도 노래해야 하는 거야？,needs_review,
 2619,0x00694EEB,0x0023FEEB,12,text,はい！！,네！！,needs_review,
-2620,0x00694EF8,0x0023FEF8,30,text,こ、これで倒せれば！,이걸로쓰러뜨린다면！,needs_review,expanded:refit_to_capacity
+2620,0x00694EF8,0x0023FEF8,30,text,こ、これで倒せれば！,이걸로 쓰러뜨리면！,needs_review,expanded:spacing_restored
 2621,0x00694F17,0x0023FF17,36,text,い、いきます。えーい！！,"가, 갑니다！ 에잇！！",needs_review,
 2622,0x00694F3C,0x0023FF3C,18,text,温かい……！,따뜻해……！,needs_review,
 2623,0x00694F4F,0x0023FF4F,33,text,あなたが、近くにいる！,당신이 곁에 있어！,needs_review,
@@ -3374,7 +3374,7 @@
 3362,0x006C041C,0x0026B41C,232,text,初代アルトネリコで使用された中<CR>河健さんの名曲「新緑の大地」の<CR>アレンジです！果たしてどんな場<CR>面で、どんな意味を込めて使われ<CR>るのか楽しみ！（あちわ）,"초대 알토네리코에서 사용된 나카<CR>가 켄 씨의 명곡 「신록의 대지」를 <CR>편곡했습니다！ 과연 어떤 장<CR>면에서, 어떤 의미를 담아 쓰이<CR>게 될지기대되네요！（아치와）",needs_review,
 3363,0x006C0505,0x0026B505,27,text,遠いようで近い場所,먼 듯 가까운 곳,needs_review,
 3364,0x006C0521,0x0026B521,208,text,「殆どパッド（という音色）で」<CR>という指定だったので、もやもや<CR>した感じに。宇宙です。最後の盛<CR>り上がりへ向けた前座みたいな。<CR>（柳川）,"「거의 패드（음색）로」 <CR>라는 지시가 있어서, 몽롱<CR>한 느낌으로. 우주입니다. 마지막 고조<CR>를 향한 전주 같은 느낌.<CR> （야나가와）",needs_review,
-3365,0x006C05F2,0x0026B5F2,27,text,人が人であるために,사람이사람이기위해,needs_review,compacted:spaces_removed
+3365,0x006C05F2,0x0026B5F2,27,text,人が人であるために,사람답게 살기 위해,needs_review,expanded:spacing_restored
 3366,0x006C060E,0x0026B60E,284,text,最初の街なんだから、もっとイン<CR>パクトが欲しい！とリテイクが来<CR>たので、街の曲にしては音数も多<CR>くなっています。情報過多気味で<CR>すが、このごちゃごちゃした感じ<CR>も味ということで。（柳川）,"첫 마을이니까 더 임팩<CR>트가 필요하다！라는 재작업 요청<CR>이 있어서, 마을 곡치고는 음수가 많<CR>습니다. 정보 과다 기분<CR>이지만, 이 북적거리는 느낌<CR>도 맛이라고 생각하며. （야나가와）",needs_review,
 3367,0x006C072B,0x0026B72B,12,text,緑陰の蛍,녹빛불,needs_review,compacted:manual_override
 3368,0x006C0738,0x0026B738,284,text,廃墟とかにロマンを感じるのは、<CR>かつてそれがにぎわっていた時代<CR>を否応なく思い起こさせるからで<CR>しょうか。その寂寥感と、もう役<CR>目から解放されたんだ、という安<CR>堵感もあるかも。（あちわ）,"폐허에서 로망을 느끼는 건, <CR>한때 그곳이 북적였던 시대<CR>를 어쩔 수 없이 떠올리게 하기 때문일까<CR>요. 그 적막함과, 이제 역할<CR>에서 해방되었다는 안도감<CR>도 있을지도. （아치와）",needs_review,
@@ -3395,7 +3395,7 @@
 3383,0x006C0F65,0x0026BF65,27,text,列車の中は走らずに,열차안은달리지않고,needs_review,compacted:spaces_removed
 3384,0x006C0F81,0x0026BF81,199,text,列車の曲です。バイオリンは壷<CR>井彰久さん、ギター＆ベースはＤ<CR>ａｎｉさんです。生演奏が入ると<CR>曲が生き生きとしますね～。<CR>（柳川）,"열차 곡입니다. 바이올린은츠보이<CR>아키히사씨,기타＆베이스는Ｄ<CR>ａｎｉ씨입니다.생연주가들어가니<CR>곡이생동감이넘치네요～.<CR>（야나가와）",needs_review,
 3385,0x006C1049,0x0026C049,3,single_kanji,凪,정,needs_review,compacted:manual_override
-3386,0x006C104D,0x0026C04D,260,text,半分宇宙入ってる感じ、という指<CR>定でした。宇宙過ぎず、地上過ぎ<CR>ず……になったと思いたい。<CR>ふわふわ漂う感じが眠気を誘いま<CR>す。作りながら何度も寝落ちしま<CR>した。（柳川）,"절반은 우주에 있는느낌의<CR>설정이었어요.너무우주적이지도,지상에만머물지도<CR>않기를……바랐습니다.<CR>둥실떠다니는느낌이졸음을유발하<CR>네요.만들며몇번이나잠들었습<CR>니다.(야나가와)",needs_review,expanded:refit_to_capacity
+3386,0x006C104D,0x0026C04D,260,text,半分宇宙入ってる感じ、という指<CR>定でした。宇宙過ぎず、地上過ぎ<CR>ず……になったと思いたい。<CR>ふわふわ漂う感じが眠気を誘いま<CR>す。作りながら何度も寝落ちしま<CR>した。（柳川）,"절반은 우주 느낌의<CR>설정이었어요. 너무 우주적이지도, 지상에만 있지도<CR>않기를…… 바랐습니다.<CR>둥실 떠다니는 느낌에 졸리네요. 만들며 몇 번이나 잠들었습니다.<CR>(야나가와)",needs_review,expanded:spacing_restored
 3387,0x006C1152,0x0026C152,12,text,テオレマ,테오레마,needs_review,
 3388,0x006C115F,0x0026C15F,177,text,幾何学的というんでしょうか。全<CR>てがデジタルで構成された電気回<CR>路のような世界をイメージして作<CR>りました。（あちわ）,기하학적이라고 할까요. 모든<CR>것이 디지털로 구성된 전기 회<CR>로 같은 세계를 이미지하여 만드<CR>었습니다. （아치와）,needs_review,
 3389,0x006C1211,0x0026C211,35,kanji_only,AT Inside～異変～ for Arnosurge,AT Inside～이변～ for Arnosurge,needs_review,
@@ -3437,7 +3437,7 @@
 3425,0x006C2727,0x0026D727,12,text,淡く滲む,희미번짐,needs_review,compacted:manual_override
 3426,0x006C2734,0x0026D734,192,text,ピアノのみの曲などを避ける方針<CR>だったので、悲しい系の曲ですが<CR>それなりに厚くアレンジしていま<CR>す。意外と難しかった…（柳川）,"피아노만 있는 곡은 피하는 방침<CR>이었기에, 슬픈 분위기의 곡이지만 <CR>나름대로 풍성하게 편곡했습니<CR>다.의외로어려웠네요…（야나가와）",needs_review,
 3427,0x006C27F5,0x0026D7F5,15,text,遡り、辿る,거슬러추적,needs_review,compacted:word_abbreviation
-3428,0x006C2805,0x0026D805,143,text,過去回想曲です。バックログ機能<CR>が人生にも欲しいです。もちろん<CR>音声再生もできるやつ。（柳川）,과거 회상곡입니다. 인생에도 백로그기능<CR>이있으면좋겠어요.물론<CR>음성재생도되게말이죠.（야나가와）,needs_review,expanded:refit_to_capacity
+3428,0x006C2805,0x0026D805,143,text,過去回想曲です。バックログ機能<CR>が人生にも欲しいです。もちろん<CR>音声再生もできるやつ。（柳川）,과거 회상곡입니다. 인생에도 백로그가<CR>있으면 좋겠어요. 물론<CR>음성 재생도 되게요.（야나가와）,needs_review,expanded:spacing_restored
 3429,0x006C2895,0x0026D895,24,text,俺たちのターン！,우리들의 차례！,needs_review,
 3430,0x006C28AE,0x0026D8AE,134,text,いけいけゴーゴー！な曲。<CR>飛び跳ねてブイブイできる人とは<CR>良い酒が飲めそうです。（柳川）,신나는 곡입니다. <CR>함께 뛰어놀 수 있는 분과는 <CR>좋은 술을 마실 수 있을 것 같네요.（야나가와）,needs_review,
 3431,0x006C2935,0x0026D935,15,text,決断のとき,결단의 때,needs_review,
@@ -3447,8 +3447,8 @@
 3435,0x006C2A85,0x0026DA85,15,text,常に備えよ,항시대비,needs_review,compacted:word_abbreviation
 3436,0x006C2A95,0x0026DA95,300,text,危機的状況な曲。<CR>展開していく部分は「あれ？もし<CR>かしたら意外と平気かも？ちょっ<CR>と気を緩めても良いかな……って<CR>やっぱりダメだったー！？」<CR>というイメージです。開発室で良<CR>く見かけます。（柳川）,위기 상황인 곡. <CR>전개되는 부분은 「어라？ 혹시<CR>하면 의외로 괜찮을지도？ 좀<CR>만 방심해도 될까…… 하고<CR>역시 안 됐어！？」<CR>라는 이미지입니다. 개발실에서 자주<CR>보곤 합니다. （야나가와）,needs_review,
 3437,0x006C2BCB,0x0026DBCB,297,text,Ｏｎｏｇｏｒｏと共通の冒頭から<CR>始まりますが、後半でシンプルな<CR>がらメロディが展開します。お風<CR>呂で浮かんだメロディをシンプル<CR>なアレンジでパパッと仕上げた、<CR>お刺身のような曲です。<CR>（あちわ）,"Ｏｎｏｇｏｒｏ와 공통된 도입부로<CR>시작하지만, 후반부에서는 심플한<CR>하면서도 멜로디가 전개됩니다. 문득<CR>떠오른 멜로디를 심플하게<CR>편곡하여 빠르게 완성한,<CR>회 한 점 같은 곡입니다.<CR> （아치와）",needs_review,
-3438,0x006C2CF5,0x0026DCF5,24,text,説明は君に任せた,설명은네게맡긴다,needs_review,compacted:spaces_removed
-3439,0x006C2D0E,0x0026DD0E,150,text,サイバーです。説明台詞を聞くた<CR>びに声優さんってすごいんだなー<CR>と思います。サーリとか。<CR>（柳川）,사이퍼입니다. 설명 들을 때마다<CR> 성우분들 정말 대단하시구나<CR>싶어요.살리같은분들말이죠.<CR>（야나가와）,needs_review,expanded:refit_to_capacity
+3438,0x006C2CF5,0x0026DCF5,24,text,説明は君に任せた,설명은 네게 맡겨,needs_review,expanded:spacing_restored
+3439,0x006C2D0E,0x0026DD0E,150,text,サイバーです。説明台詞を聞くた<CR>びに声優さんってすごいんだなー<CR>と思います。サーリとか。<CR>（柳川）,사이퍼입니다. 설명 들을 때마다<CR>성우분들 대단하시구나<CR>싶어요. 살리 같은 분들 말이죠.<CR>（야나가와）,needs_review,expanded:spacing_restored
 3440,0x006C2DA5,0x0026DDA5,9,kanji_only,鎮魂詩,진혼시,needs_review,
 3441,0x006C2DAF,0x0026DDAF,196,text,レクイエム。コーラスは柳麻美さ<CR>んです。<CR>歌詞はきちんと意味があるので、<CR>興味がある方は是非聞き取ってみ<CR>てくださいね！（柳川）,"레퀴엠. 코러스는 야나기 아사미 씨<CR>입니다. <CR>가사는 제대로 의미가 있으니, <CR>관심 있는 분들은 꼭 들어보시길<CR> 바랍니다！ （야나가와）",needs_review,
 3442,0x006C2E74,0x0026DE74,9,text,語り部,해설자,needs_review,
@@ -3520,7 +3520,7 @@
 3508,0x006C4D25,0x0026FD25,24,text,くすりすく CDN ver.,쿠스리스쿠 CDN ver.,needs_review,
 3509,0x006C4D3E,0x0026FD3E,108,text,薬調合中の歌です。<CR>歌っているのは、<CR>キャス、デルタ、ネイ。<CR>（柳川）,"약 조합 중의 노래입니다. <CR>노래하는 이는, <CR>캐스, 델타,네이.<CR>（야나가와）",needs_review,
 3510,0x006C4DAB,0x0026FDAB,23,text,くすりすく IN ver.,쿠스리스쿠 IN ver.,needs_review,
-3511,0x006C4DC3,0x0026FDC3,96,text,薬調合中の歌です。<CR>歌っているのは、<CR>イオン、ネイ。<CR>（柳川）,"약 조제 중의노래입니다.<CR>노래하는것은,<CR>이온,네이.<CR>（야나가와）",needs_review,expanded:refit_to_capacity
+3511,0x006C4DC3,0x0026FDC3,96,text,薬調合中の歌です。<CR>歌っているのは、<CR>イオン、ネイ。<CR>（柳川）,"약 조제 노래입니다.<CR>노래하는 이는,<CR>이온, 네이.<CR>（야나가와）",needs_review,expanded:spacing_restored
 3512,0x006C4E24,0x0026FE24,24,text,くすりすく CDS ver.,쿠스리스쿠 CDS ver.,needs_review,
 3513,0x006C4E3D,0x0026FE3D,111,text,薬調合中の歌です。<CR>歌っているのは、<CR>キャス、デルタ、サーリ。<CR>（柳川）,"약 조합 중의 노래입니다. <CR>노래하는 이는, <CR>캐스, 델타, 살리. <CR>（야나가와）",needs_review,
 3514,0x006C4EAD,0x0026FEAD,23,text,くすりすく IS ver.,쿠스리스쿠 IS ver.,needs_review,
@@ -3608,7 +3608,7 @@
 3596,0x006C8195,0x00273195,404,text,イオンが行使する最強の詩魔法な<CR>ので、それにふさわしい圧倒的な<CR>パワーを持つ曲にしたいと思いま<CR>した。エレキギターの攻撃的な演<CR>奏を軸に、コーラスもややエキゾ<CR>チックで怪しげなフレーズをなぞ<CR>りつつ、基本は重厚かつ不穏なイ<CR>メージを表現すべく歌いました。<CR>（志方）,"이온이 사용하는 최강의 시마법이라<CR>그에 걸맞은 압도적인 힘을 지닌 곡으로<CR>만들고 싶었습니다. 일렉 기타의 공격적인<CR>연주를 중심으로, 코러스도 다소 이국적이고<CR>수상한 프레이즈를 따라가면서 기본적으로는<CR>중후하고 불온한 이미지를 표현하도록<CR>노래했습니다.<CR><CR>（시카타）",needs_review,
 3597,0x006C832A,0x0027332A,187,text,恥じらいのないツンデレなんて、<CR>そんなのツンデレじゃないよ！ツ<CR>ンの時点で好感度がある程度必要<CR>なんですってば！<CR>（柳川）,"부끄러움 없는 츤데레라니, <CR>그건 츤데레가 아니야！ 츤<CR>데레라면 어느 정도 호감도가 필요<CR>하다니까！ <CR>（야나가와）",needs_review,
 3598,0x006C83E6,0x002733E6,214,text,演出の方向性で曲調がほぼ決まっ<CR>てしまう楽曲の一例ですね（笑）<CR>南條愛乃さんのこんな歌が聴ける<CR>のはアルノサージュだけ！<CR>たぶん！（あちわ）,연출 방향에 따라 곡조가 거의 결정되<CR>는 곡의 한 예입니다（웃음）. <CR>난죠 아이노 씨의 이런 노래를 들을수있는건아르노사쥬뿐！<CR><CR>아마도！（아치와）,needs_review,
-3599,0x006C84BD,0x002734BD,302,text,資料の、どんな時にこの詩魔法を<CR>使うか？という欄に「教師に踏ま<CR>れたい時」と書いてありました。<CR>実現すべく曲中にヒールの音を入<CR>れていたのですが、全然聞こえな<CR>かったので泣く泣く切りました。<CR>(柳川),"자료의 이 시마법을 언제<CR>사용하는가？라는 항목에「교사에게 밟히고 싶을 때」라고적혀있었습니다.<CR><CR>이를구현하고자곡중에힐소리를넣었<CR>으나,전혀들리지않아서눈물을머금고삭제했습니다.<CR><CR>(야나가와)",needs_review,compacted:spaces_removed
+3599,0x006C84BD,0x002734BD,302,text,資料の、どんな時にこの詩魔法を<CR>使うか？という欄に「教師に踏ま<CR>れたい時」と書いてありました。<CR>実現すべく曲中にヒールの音を入<CR>れていたのですが、全然聞こえな<CR>かったので泣く泣く切りました。<CR>(柳川),"자료의 이 시마법을 언제<CR>사용하는가？라는 항목에「교사에게 밟히고 싶을 때」라고 적혀 있었습니다.<CR><CR>이를 구현하고자 곡 중에 힐 소리를 넣었으나, 전혀 들리지 않아서 눈물을 머금고 삭제했습니다.<CR><CR>(야나가와)",needs_review,expanded:spacing_restored
 3600,0x006C85EC,0x002735EC,241,text,おもちゃっぽい音色を散りばめつ<CR>つ、微妙にダークっぽく。この曲<CR>に限らず歌うのが難しいものばか<CR>りで収録時には南條さんにゴメン<CR>ナサイしまくりました。（柳川）,"장난감 같은 음색을 흩뿌리듯 <CR>하면서, 미묘하게 다크한 느낌으로. 이 곡<CR>뿐만 아니라 부르기 어려운 곡들<CR>뿐이라 녹음할 때 난죠 씨께 정말 죄송<CR>했습니다. （야나가와）",needs_review,
 3601,0x006C86DE,0x002736DE,248,text,演出の内容を見て、メタルだな、<CR>と（笑）というわけでギターは平<CR>松俊紀さんにお願いしました！お<CR>嫁さんは大変なんですよ。いろい<CR>ろあんですよ。本当に。<CR>（あちわ）,"연출을 보고 메탈이네, <CR>라고 （웃음） 생각해서 기타는 히라<CR>마츠 토시노리 씨께 부탁드렸습니다！ 아내분은 정말 고생이 많으세요. 여러모로 말이죠. 정말로요.<CR><CR><CR>（아치와）",needs_review,
 3602,0x006C87D7,0x002737D7,260,text,地の底からズゴゴゴとわきあがっ<CR>てくるようなイメージの多重コー<CR>ラスです。地底怪獣が木とかなぎ<CR>倒して地上に出現するときの映像<CR>は何度見てもわくわくしますな。<CR>（あちわ）,땅속에서 우르릉거릴 듯이 솟아오르는<CR> 느낌의 다중 코러<CR>스입니다. 지저 괴수가 나무 등을 쓰러뜨리며 <CR>지상에 나타날 때의 영상은 <CR>몇 번을 봐도 설레는군요. <CR>（아치와）,needs_review,
@@ -4271,7 +4271,7 @@
 4259,0x006CDEE3,0x00278EE3,30,text,やっさばへようこそー,얏사바에 어서와ー,needs_review,compacted:word_abbreviation
 4260,0x006CDF02,0x00278F02,85,text,ＰＬＡＳＭＡがいつまで<CR>シャールの攻撃に堪えられるか……,ＰＬＡＳＭＡ가 언제까지 <CR>샤르의 공격을버텨낼수있을지……,needs_review,
 4261,0x006CDF58,0x00278F58,76,text,一刻も早くマスターシャールを<CR>確保してくれたまえ！,한시라도 빨리 마스터 샤르를 <CR>확보해 주게！,needs_review,
-4262,0x006CDFA5,0x00278FA5,61,text,残念だが、この人数では<CR>何も出来ん……。,유감이지만 이 인원으론<CR>아무것도못해…….,needs_review,expanded:refit_to_capacity
+4262,0x006CDFA5,0x00278FA5,61,text,残念だが、この人数では<CR>何も出来ん……。,유감이나 이 인원으론<CR>아무것도 못 해…….,needs_review,expanded:spacing_restored
 4263,0x006CDFE3,0x00278FE3,70,text,私が至らないばかりに、<CR>本当に申し訳ない……。,"내 부족함 때문에, <CR>정말 미안하네…….",needs_review,
 4264,0x006CE02A,0x0027902A,61,text,人が求める音楽は<CR>すがりたいものによる。,사람이 원하는 음악은 <CR>에 따라 달라진다.,needs_review,
 4265,0x006CE068,0x00279068,76,text,癒やし、愛、荘厳さ。<CR>だから時おり、無音を求める。,"치유, 사랑, 숭고함. <CR>그래서 때로는 무음을 갈구하지.",needs_review,
@@ -4286,7 +4286,7 @@
 4274,0x006CE2A2,0x002792A2,88,text,キミ達を巻き込んでしまって、<CR>本当にすまないと思っている。,너희까지 휘말리게 해서 <CR>정말 미안하게 생각한다.,needs_review,
 4275,0x006CE2FB,0x002792FB,92,text,だが世界のため……<CR>教団を解体するために<CR>力を貸してほしい。,하지만 세계를 위해……<CR>교단을 해체하기 위해 <CR>힘을 빌려주게.,needs_review,
 4276,0x006CE358,0x00279358,86,text,そろそろ休もう。<CR>明け方まで、少しは<CR>落ち着けるはずだ。,슬슬 쉬자. <CR>새벽까지는 <CR>좀 진정될 거야.,needs_review,
-4277,0x006CE3AF,0x002793AF,58,text,ジルとネロ達の計画を<CR>阻止する詩を……,질과 네로 일행의 계획을<CR>저지할시를……,needs_review,expanded:refit_to_capacity
+4277,0x006CE3AF,0x002793AF,58,text,ジルとネロ達の計画を<CR>阻止する詩を……,질과 네로 계획을<CR>저지할 시를……,needs_review,expanded:spacing_restored
 4278,0x006CE3EA,0x002793EA,42,text,ＥＸＰＡＪＡを紡がなくては。,ＥＸＰＡＪＡ를 자아내야 해.,needs_review,
 4279,0x006CE415,0x00279415,113,text,当初予定していたよりも、<CR>全エネルギーが枯渇するまでの<CR>時間は短いだろう。,당초 예정보다 <CR>모든 에너지가 고갈될 때까지의 <CR>시간이 짧을 거다.,needs_review,
 4280,0x006CE487,0x00279487,116,text,せめて、エネルギー源の切替が<CR>成功するまで時間稼ぎが<CR>できればいいのだが……,적어도 에너지원 전환이 <CR> 성공할 때까지 시간을 <CR> 벌 수 있다면 좋으련만……,needs_review,
@@ -4332,7 +4332,7 @@
 4320,0x006CEF2A,0x00279F2A,88,text,おっさんになると若い頃のように<CR>ガツガツ食べられなくてね。,나이 먹으니 젊었을 때처럼 <CR>게걸스럽게 못 먹어서 말이지.,needs_review,
 4321,0x006CEF83,0x00279F83,119,text,おネイちゃんはそのへん考えて<CR>ライトなメニューを用意して<CR>くれるのが嬉しいよ。,누나가 그런 걸 생각해서 <CR>가벼운 메뉴를 준비해 <CR>주는 게 참 고마워.,needs_review,
 4322,0x006CEFFB,0x00279FFB,104,text,このお店が出来てから<CR>すっかりうちでごはん作らなく<CR>なっちゃったわ。,이 가게가 생긴 뒤로 <CR>집에서 밥을 아예 <CR>안 하게 됐어.,needs_review,
-4323,0x006CF064,0x0027A064,61,text,ほんと手抜き主婦の味方よね。<CR>アハハハ！,진짜 대충 하는주부용이라니까.<CR>아하하하！,needs_review,expanded:refit_to_capacity
+4323,0x006CF064,0x0027A064,61,text,ほんと手抜き主婦の味方よね。<CR>アハハハ！,진짜 대충 하는 주부 편이지.<CR>아하하하！,needs_review,expanded:spacing_restored
 4324,0x006CF0A2,0x0027A0A2,116,text,デルタはずるいよな。<CR>いつもおネイさんと仲良くて。<CR>不愉快だから帰ろうかな。,델타는 치사해.<CR>항상 네이 누나랑 사이가 좋고 말이야. <CR>불쾌하니까 그냥 돌아갈까.,needs_review,
 4325,0x006CF117,0x0027A117,61,text,…と思ってみても<CR>絶対に帰らないけどな。,…라고 생각해도 <CR>절대 안 돌아가겠지만.,needs_review,
 4326,0x006CF155,0x0027A155,82,text,フルーツは健康そうでいて<CR>おっさんの隠れた敵なんだよ。,과일은 건강해 보여도 <CR>아저씨들의 숨겨진 적이라고.,needs_review,
@@ -4486,7 +4486,7 @@
 4474,0x006D1CD9,0x0027CCD9,88,text,何なの？　あの８次元人って。<CR>私達、もう助からないのかな？,"저 ８차원인은 대체 뭐야？ <CR>우리, 이제 못 사는 걸까？",needs_review,
 4475,0x006D1D32,0x0027CD32,64,text,……余計なこと考えてちゃ<CR>いけないわよね。,……쓸데없는 생각만 하고 있으면<CR>안 되겠네.,needs_review,
 4476,0x006D1D73,0x0027CD73,94,text,機械兵器も相当なモンだったけど<CR>８次元人はその上の上の上だな。,기계 병기도 엄청났지만<CR>８차원인은 그보다 훨씬 위야.,needs_review,
-4477,0x006D1DD2,0x0027CDD2,64,text,どうあがいても<CR>倒せる気がしないんだ……。,아무리 발버둥 쳐도 <CR> 못 쓰러뜨릴것같아…….,needs_review,expanded:refit_to_capacity
+4477,0x006D1DD2,0x0027CDD2,64,text,どうあがいても<CR>倒せる気がしないんだ……。,아무리 발버둥 쳐도<CR>못 쓰러뜨릴 것 같아…….,needs_review,expanded:spacing_restored
 4478,0x006D1E13,0x0027CE13,79,text,俺は……手も足も出ずに<CR>８次元人から逃げて来たんだ。,난…… 속수무책으로<CR>８차원인에게서 도망쳐 왔어.,needs_review,
 4479,0x006D1E63,0x0027CE63,94,text,これじゃ何年経っても俺なんて<CR>守護者にはなれっこないよな……。,이래선 몇 년이 지나도 난<CR>수호자가 될 수 없겠지…….,needs_review,
 4480,0x006D1EC2,0x0027CEC2,82,text,隔離区はかなりやべーことに<CR>なってたらしいじゃないか。,격리 구역은 꽤 위험한 상황에<CR>처해 있었다던데 말이야.,needs_review,
@@ -4513,7 +4513,7 @@
 4501,0x006D2628,0x0027D628,128,text,何もかも任せきりでごめんなさい。<CR>今さら遅いかもしれないけど<CR>また一緒に働かせてね！,"모든 걸 맡겨서 미안해. <CR>이제 와서 늦었을지도 모르지만, <CR>다시 같이 일하자！",needs_review,
 4502,0x006D26A9,0x0027D6A9,58,text,俺、守護者になることが<CR>決まりました！,"저, 수호자가 되기로 <CR> 결정됐어요！",needs_review,
 4503,0x006D26E4,0x0027D6E4,55,text,今後とも、<CR>よろしくご指導願います！,앞으로도 <CR> 잘 부탁드립니다！,needs_review,
-4504,0x006D271C,0x0027D71C,39,text,新たな時代が幕を開ける……,새로운시대가막을올린다……,needs_review,compacted:spaces_removed
+4504,0x006D271C,0x0027D71C,39,text,新たな時代が幕を開ける……,새 시대가 막을 올린다……,needs_review,expanded:spacing_restored
 4505,0x006D2744,0x0027D744,107,text,この瞬間にＰＬＡＳＭＡの<CR>一員として働けるのは<CR>本当に嬉しいことだよ。,이 순간에 ＰＬＡＳＭＡ의 <CR> 일원으로 일할 수 있어서 <CR> 정말 기뻐.,needs_review,
 4506,0x006D27B0,0x0027D7B0,131,text,デルタの店なんてクソ面白くも<CR>なかったけどさ、ネイさんの店は<CR>なんつーか華があるよな！,"델타네 가게는 더럽게 재미도 없고 <CR> 않았지만, 네이씨의 가게는 <CR> 뭐랄까 화려함이 있어！",needs_review,
 4507,0x006D2834,0x0027D834,91,text,味なんてどーでもいいんだよ。<CR>腹ん中に入ればおんなじだって！,맛 따위 아무래도 상관없어. <CR>뱃속에 들어가면 다 똑같다고！,needs_review,
@@ -4606,7 +4606,7 @@
 4594,0x006D47A6,0x0027F7A6,82,text,でも、こういう庶民的な風景、<CR>わたくし嫌いでなくてよ。,"하지만 이런 서민적인 풍경,<CR>전 싫지 않아요.",needs_review,
 4595,0x006D47F9,0x0027F7F9,79,text,ここんとこいい商売が出来てて<CR>毎日がハッピーなんだ。,요즘 장사가 잘돼서<CR>매일이 행복해.,needs_review,
 4596,0x006D4849,0x0027F849,82,text,まさかこんな時に隔壁が破られる<CR>なんてこと、ないよね？,설마 이런 때에 격벽이 <CR>뚫리는 일은 없겠지？,needs_review,
-4597,0x006D489C,0x0027F89C,85,text,愛ゆえに～♪　愛ゆえに～♪<CR>隔壁は誰にも破れないぃぃ～♪,사랑하니까～♪사랑하니까～♪<CR>격벽은누구도못깨어어어～♪,needs_review,expanded:refit_to_capacity
+4597,0x006D489C,0x0027F89C,85,text,愛ゆえに～♪　愛ゆえに～♪<CR>隔壁は誰にも破れないぃぃ～♪,사랑하니까～♪ 사랑하니까～♪<CR>격벽은 누구도 못 깨～♪,needs_review,expanded:spacing_restored
 4598,0x006D48F2,0x0027F8F2,107,text,あんた知ってるかい？<CR>なんでも機械が暴れて<CR>壁を壊そうとしてんだョ……,"있잖아, <CR>기계가 날뛰면서<CR>벽을 부수려 한다고……",needs_review,
 4599,0x006D495E,0x0027F95E,85,text,あの丈夫な壁が壊された日にゃ<CR>フェリオンは壊滅だわねぇ。,그 튼튼한 벽이 무너지는 날엔<CR>페리온은 끝장이야.,needs_review,
 4600,0x006D49B4,0x0027F9B4,64,text,ねえねえ、あんた<CR>守護者の知り合い、いる？,"저기 저기, <CR>수호자 아는 사람 있어？",needs_review,
@@ -4622,7 +4622,7 @@
 4610,0x006D4CB3,0x0027FCB3,116,text,隔壁が破られるなんてことが<CR>本当に起きたら、返済も猶予<CR>してもらえるかな～？,"격벽이 파괴되는 일이 <CR>정말로 생기면, 상환도 유예<CR>해 줄 수 있으려나～？",needs_review,
 4611,0x006D4D28,0x0027FD28,116,text,みなさん、ジェノミライ教団に<CR>気をつけてください。<CR>彼らは人々を拉致します！,"여러분, 제노미라이 교단을 <CR>조심하세요. <CR>그들은 사람들을 납치합니다！",needs_review,
 4612,0x006D4D9D,0x0027FD9D,70,text,拉致られる前に拉致れ！<CR>これが大事ですからね！,납치되기 전에 먼저 납치해！<CR>이게 핵심이에요！,needs_review,compacted:spaces_removed
-4613,0x006D4DE4,0x0027FDE4,98,text,壁が壊され何かが起きたとき<CR>時代が新たな局面に入ると<CR>思うんだ。,벽이무너지고<CR>새로운시대가<CR>열릴것이다.,needs_review,compacted:word_abbreviation
+4613,0x006D4DE4,0x0027FDE4,98,text,壁が壊され何かが起きたとき<CR>時代が新たな局面に入ると<CR>思うんだ。,벽이 무너져 무슨 일이 생기면<CR>시대가 새 국면에<CR>들어설 것 같아.,needs_review,expanded:spacing_restored
 4614,0x006D4E47,0x0027FE47,82,text,だからってフェリオンの不幸は<CR>勘弁願いたいんだけどね。,그렇다고 페리온의 불행은 <CR>사양하고 싶지만 말이야.,needs_review,
 4615,0x006D4E9A,0x0027FE9A,91,text,ここってみんな楽しそうだけど<CR>騒がしくてクラクラしそう……。,여긴 다들 즐거워 보이지만 <CR>너무 소란스러워서 어질어질해…….,needs_review,
 4616,0x006D4EF6,0x0027FEF6,88,text,でも、こういう雑多な風景、<CR>わたくし楽しめなくもなくてよ。,"하지만 이런 북적이는 풍경, <CR>나쁘지 않네요.",needs_review,
@@ -4659,7 +4659,7 @@
 4647,0x006D5A84,0x00280A84,76,text,シャールなんてろくでもないもの、<CR>俺は認めないよ！,"샤르 같은 건 별 볼 일 없는 존재야, <CR>난 인정 못 해！",needs_review,
 4648,0x006D5AD1,0x00280AD1,119,text,この世界には人間がいて、<CR>それを治める天統姫さまがいる。<CR>それで充分なんだよ！,"이 세계에는 인간이 있고, <CR>그들을 다스리는 천통공주님이 계셔. <CR>그거면 충분해！",needs_review,
 4649,0x006D5B49,0x00280B49,125,text,俺、店を畳もうかと思ってるんだ。<CR>街に不安が渦巻いてて、<CR>とても商売にならないよ。,"나, 가게 접을까 봐. <CR>거리에 불안이 소용돌이쳐서, <CR>도저히 장사가 안 돼.",needs_review,expanded:refit_to_capacity
-4650,0x006D5BC7,0x00280BC7,91,text,……いや、そんな弱気じゃダメだ。<CR>やれるだけ頑張んなきゃな！,"……아니, 그 정도로 약한 마음으론안돼.<CR>할수있는만큼힘내야지！",needs_review,expanded:refit_to_capacity
+4650,0x006D5BC7,0x00280BC7,91,text,……いや、そんな弱気じゃダメだ。<CR>やれるだけ頑張んなきゃな！,"……아니, 그렇게 약해선 안 돼.<CR>할 수 있는 만큼 힘내야지！",needs_review,expanded:spacing_restored
 4651,0x006D5C23,0x00280C23,79,text,なんかスカッとするようなこと<CR>起きないかなぁ～……。,뭔가 속 시원한 일이 <CR> 생기지 않을까～…….,needs_review,
 4652,0x006D5C73,0x00280C73,97,text,フェリオンは悪いこと続きだし、<CR>このままで大丈夫なのかなぁ……。,"페리온은 나쁜 일만 계속되는데, <CR> 이대로 괜찮을까…….",needs_review,
 4653,0x006D5CD5,0x00280CD5,128,text,シャールが攻めてきて借金取りを<CR>さらっていくみたいなミラクル<CR>起きてくれないかな～？,샤르가 쳐들어와서 사채업자를 <CR> 채가는 것 같은 기적이 <CR> 일어나지 않을까～？,needs_review,
@@ -4721,7 +4721,7 @@
 4709,0x006D73F3,0x002823F3,48,text,そーなの！　ほんと良かったよー！,맞아！ 정말 다행이야！,needs_review,
 4710,0x006D7424,0x00282424,131,text,またこうしてのんびり出来る日が<CR>来るとは思ってなかったねぇ。<CR>まったく嬉しい誤算だよ。,이렇게 느긋하게 지낼 날이 <CR>올 줄은 몰랐네. <CR>정말 기분 좋은 오산이야.,needs_review,
 4711,0x006D74A8,0x002824A8,125,text,なんだかんだできっと最後に<CR>天統姫さまがおっぱずすとばかり<CR>思っていたんだよねぇ。,결국 마지막엔 <CR>천통공주님이 사고를 칠 줄로만 <CR>알았거든.,needs_review,
-4712,0x006D7526,0x00282526,113,text,俺、またここで頑張るよ！<CR>裸一貫で出直すって、<CR>おネイさんと約束したんだ！,"난다시여기서힘낼거야!<CR>맨몸으로다시시작하겠다고,<CR>네이누나랑약속했단말이야!",needs_review,compacted:spaces_removed
+4712,0x006D7526,0x00282526,113,text,俺、またここで頑張るよ！<CR>裸一貫で出直すって、<CR>おネイさんと約束したんだ！,"난 다시 여기서 힘낼 거야！<CR>맨몸으로 다시 시작한다고,<CR>네이씨와 약속했어！",needs_review,expanded:spacing_restored
 4713,0x006D7598,0x00282598,116,text,おネイさんも一肌脱ぐって<CR>言ってくれたけど、<CR>本当に脱いでくれるかなぁ……。,"누님도 한 팔 걷어붙이겠댔는데,<CR>진짜 옷도 벗어줄까…….",needs_review,
 4714,0x006D760D,0x0028260D,85,text,世界の危機だったのに、<CR>結局何の役にも立てなかったなぁ。,"세계의 위기였는데, <CR>결국 아무런 도움도 안 됐네.",needs_review,
 4715,0x006D7663,0x00282663,85,text,そろそろ働きたい気もするけど<CR>守護者になればモテるかな？,슬슬 일하고 싶기도 한데<CR>수호자가 되면 인기 좀 있을까？,needs_review,
@@ -4765,7 +4765,7 @@
 4753,0x006D84A1,0x002834A1,116,text,クオンターヴが制圧されたのは<CR>私の修業が足りないせいですね。<CR>わかります……,쿠온타브가 제압당한 건 <CR>제 수행이 부족한 탓이에요. <CR>잘 알고 있어요……,needs_review,
 4754,0x006D8516,0x00283516,116,text,でもフェリオンのやり方は<CR>間違っています！<CR>天統姫の野望は世界を滅ぼします！,하지만 펠리온의 방식은<CR>틀렸어요！<CR>텐토우키의 야망은 세계를 멸망시킬 겁니다！,needs_review,compacted:slot_exception
 4755,0x006D858B,0x0028358B,137,text,まったく、この街の住人ときたら<CR>本気でシャールが人間を救うと<CR>信じてるから始末が悪い……。,"정말이지, 이 마을 사람들은 <CR>샤르가 인간을 구원할 거라 <CR>진심으로 믿으니 답이 없군…….",needs_review,
-4756,0x006D8615,0x00283615,91,text,人心を惑わすジェノミライ教団を<CR>この際、徹底的に潰さないと！,민심을현혹하는제노미라이교단을<CR>철저히소탕한다！,needs_review,compacted:word_abbreviation
+4756,0x006D8615,0x00283615,91,text,人心を惑わすジェノミライ教団を<CR>この際、徹底的に潰さないと！,민심을 현혹하는 제노미라이 교단을<CR>이번에 철저히 쳐부숴야 해！,needs_review,expanded:spacing_restored
 4757,0x006D8671,0x00283671,122,text,せっかくフェリオンから亡命して<CR>充実した日々を過ごしていたのに<CR>これは悪夢だ……,모처럼 페리온에서 망명해 <CR>충실한 나날을 보내고 있었는데 <CR>이건 악몽이야……,needs_review,
 4758,0x006D86EC,0x002836EC,110,text,目が覚めたらきっと<CR>人間はシャールに救われている。<CR>私は信じています……,눈을 뜨면 분명 <CR>인간은 샤르에게 구원받아 있을 거예요. <CR>전 믿고 있어요……,needs_review,
 4759,0x006D875B,0x0028375B,70,text,シャールをヒャッハーしちゃ<CR>いけないんだよー！,샤르를 엉망진창으로 만들면 <CR>안 된다고요！,needs_review,
@@ -4866,10 +4866,10 @@
 4854,0x006DAABC,0x00285ABC,64,text,慌てなくても順番は必ず<CR>回ってくるからね。,서두르지 않아도 차례는 반드시 <CR>올 테니까요.,needs_review,
 4855,0x006DAAFD,0x00285AFD,119,text,大司教様に見とれる気持ちは<CR>わからなくもないが、<CR>あまりジロジロ見ないように。,"대주교님께 매료된 마음은 <CR>이해 못 하는 건 아니지만, <CR>너무 빤히 보지는 마세요.",needs_review,
 4856,0x006DAB75,0x00285B75,101,text,しつこく見続ける者は<CR>退場してもらうことになるから<CR>注意しなさい。,계속해서 쳐다보는 자는 <CR>퇴장시켜야 하니 <CR>주의하세요.,needs_review,
-4857,0x006DABDB,0x00285BDB,137,text,フェリオンの民はシャール様や<CR>ジル様の存在と言動を否定し<CR>強攻策を取る動きもあるようです。,페리온 백성은 샤르님이나<CR>질님의존재와언행을부정하며<CR>강경책을취하려는움직임도있는듯합니다.,needs_review,expanded:refit_to_capacity
+4857,0x006DABDB,0x00285BDB,137,text,フェリオンの民はシャール様や<CR>ジル様の存在と言動を否定し<CR>強攻策を取る動きもあるようです。,페리온 백성은 샤르님이나<CR>질님의 존재와 언행을 부정하며<CR>강경책 움직임도 있는 듯합니다.,needs_review,expanded:spacing_restored
 4858,0x006DAC65,0x00285C65,134,text,フェリオンの天統姫はいかなる<CR>根拠によってそのような蛮行に<CR>踏み切ろうというのでしょう？,페리온의 천통공주는 어떤 <CR>근거로 그런 만행을 <CR>저지르려는 것입니까？,needs_review,
 4859,0x006DACEC,0x00285CEC,125,text,所詮はシャール様が愛らしく<CR>ジル様が妖艶なるがゆえの<CR>嫉妬がすべてかと思うのです。,결국 샤르님이 사랑스럽고<CR>질님이 요염하시기에 생기는<CR>질투가 전부인 듯싶습니다.,needs_review,
-4860,0x006DAD6A,0x00285D6A,67,text,なんと鋭く的確な洞察……<CR>まったく同感です。,예리한통찰이군요……<CR>전적으로동감입니다.,needs_review,compacted:word_abbreviation
+4860,0x006DAD6A,0x00285D6A,67,text,なんと鋭く的確な洞察……<CR>まったく同感です。,예리한 통찰이군요……<CR>전적으로 동감입니다.,needs_review,expanded:spacing_restored
 4861,0x006DADAE,0x00285DAE,85,text,昨今のフェリオンの横暴には<CR>看過しがたいものがあります。,요즘 페리온의 횡포는<CR>그냥 보고만 있을 수 없는 수준입니다.,needs_review,
 4862,0x006DAE04,0x00285E04,122,text,ジェノミライ大聖堂……<CR>審判の刻が不安で不安で<CR>つい何度も足を運んでしまいます。,제노미라이 대성당……<CR>심판의 시간이 불안해서<CR>자꾸 발길이 향하네요.,needs_review,
 4863,0x006DAE7F,0x00285E7F,98,text,どうかフェリオンの人達が<CR>邪魔に入らないことを<CR>願いたいですね。,부디 페리온 사람들이<CR>방해하지 않기를<CR>바랄 뿐입니다.,needs_review,
@@ -4889,7 +4889,7 @@
 4877,0x006DB3EF,0x002863EF,12,kanji_only,審判乙！,심판끝！,needs_review,
 4878,0x006DB3FC,0x002863FC,137,text,あ、今のはあなたが乙という意味<CR>じゃなくて、おつかれさまの<CR>つもりで言っただけだからねー。,"아, 방금 건 네가 낙제라는 뜻이 <CR>아니라, 수고했다는 <CR>의 의미로 말한 거야.",needs_review,
 4879,0x006DB486,0x00286486,110,text,ジェノミライの子として<CR>シャール様を敬い<CR>ジル様をお慕い申してきました。,제노미라이의 아이로서 <CR>샤르님을 경외하며 <CR>질님을 연모해 왔습니다.,needs_review,
-4880,0x006DB4F5,0x002864F5,101,text,私もです。<CR>日々の礼拝を欠かさず、<CR>ジル様の尊影も携行しています。,"저도그렇습니다.<CR>매일예배를거르지않고,<CR>질님의성영을지니고있습니다.",needs_review,compacted:spaces_removed
+4880,0x006DB4F5,0x002864F5,101,text,私もです。<CR>日々の礼拝を欠かさず、<CR>ジル様の尊影も携行しています。,"저도 그렇습니다.<CR>매일 예배하고,<CR>질님의 성영도 지니고 있습니다.",needs_review,expanded:spacing_restored
 4881,0x006DB55B,0x0028655B,91,text,そんな我々が乙の審判を受ける<CR>ことなどあり得るのでしょうか？,그런 저희가 낙제의 심판을 <CR>받는다는 게 가능할까요？,needs_review,
 4882,0x006DB5B7,0x002865B7,116,text,過ぎたるは及ばざるがごとし<CR>という言葉もあります。<CR>注意してかかりましょう。,과유불급이라는 <CR>말도 있지요. <CR>주의해서 임합시다.,needs_review,
 4883,0x006DB62C,0x0028662C,125,text,それでも必ず審判において<CR>甲判定を約束されるものではない<CR>と聞いて愕然としました。,그래도 반드시 심판에서 <CR>갑 판정을 받는 건 아니라는 <CR>말에 경악했습니다.,needs_review,
@@ -4991,7 +4991,7 @@
 4979,0x006DD894,0x00288894,61,text,いつまでも子どもじゃ<CR>いられないよねー。,언제까지나 어린애로<CR>있을 수는 없겠지～.,needs_review,
 4980,0x006DD8D2,0x002888D2,110,text,ここはいいところだけど、<CR>そろそろ賑やかな街が<CR>恋しくなってきたわ……。,"여기도 좋지만, <CR>슬슬 북적이는 마을이<CR>그리워지네……。",needs_review,
 4981,0x006DD941,0x00288941,36,text,やっぱり故郷が一番よね！,역시 고향이 최고야！,needs_review,
-4982,0x006DD966,0x00288966,67,text,彼氏が待ってるクオンターヴへ<CR>帰るべきか……,남자친구가기다리는퀀타브로<CR>돌아가야할까……,needs_review,compacted:spaces_removed
+4982,0x006DD966,0x00288966,67,text,彼氏が待ってるクオンターヴへ<CR>帰るべきか……,애인이 기다리는 퀀타브로<CR>돌아가야 할까……,needs_review,expanded:spacing_restored
 4983,0x006DD9AA,0x002889AA,110,text,シャールの彼女が待ってる<CR>天領沙羅へ戻るべきか……<CR>あー、悩むわぁ……。,샤르의 애인이 기다리는 <CR>천령사라로 돌아갈까……<CR>아～ 고민되네…….,needs_review,
 4984,0x006DDA19,0x00288A19,79,text,人間さん達はコーザルさまに<CR>みとめられたんだよねー？,인간들은 코잘님께<CR>인정받은 거지～？,needs_review,
 4985,0x006DDA69,0x00288A69,88,text,シャールでもなかなかみとめて<CR>もらえないのに、すごいねー。,"샤르도 좀처럼 인정받기<CR>힘든데, 대단하네～.",needs_review,
@@ -5064,7 +5064,7 @@
 5052,0x006DEE8E,0x00289E8E,82,text,でも順調に進んでるから<CR>今日はお休みをもらえたんだー。,그래도 순조롭게 진행 중이라<CR>오늘은 휴가를 받았어～。,needs_review,
 5053,0x006DEEE1,0x00289EE1,73,text,人間の救済はとっても<CR>やりがいのある仕事だよー。,인간 구제는 정말 <CR>보람 있는 일이야～。,needs_review,
 5054,0x006DEF2B,0x00289F2B,70,text,終わって帰って来たんだけど<CR>また行きたいなー。,끝나고 돌아왔지만<CR>다시 가고 싶네～。,needs_review,
-5055,0x006DEF72,0x00289F72,67,text,選ばれた人間達と<CR>平和な社会をつくるんだー。,선택받은 이들과 <CR>평화로운사회를만드는거야～.,needs_review,expanded:refit_to_capacity
+5055,0x006DEF72,0x00289F72,67,text,選ばれた人間達と<CR>平和な社会をつくるんだー。,선택받은 이들과<CR>평화 사회를 만드는 거야ー.,needs_review,expanded:spacing_restored
 5056,0x006DEFB6,0x00289FB6,79,text,この瞬間に立ち会うことができて<CR>本当によかったよー。,이 순간을 함께할 수 있어서<CR>정말 다행이야～。,needs_review,
 5057,0x006DF006,0x0028A006,67,text,この移民船は意志を持つ惑星に<CR>なったんだー。,이 이민선은 의지를 가진 행성이<CR>되었어～。,needs_review,
 5058,0x006DF04A,0x0028A04A,82,text,惑星シャラノイアばんざーい！<CR>これからが楽しみだよー。,행성 샤라노이아 만세！<CR>앞으로가 기대돼～。,needs_review,
@@ -5112,7 +5112,7 @@
 5100,0x006DFD4E,0x0028AD4E,76,text,あの巨大な塔からは<CR>不吉なものしか感じられません。,저 거대한 탑에서는 <CR>불길한 기운만 느껴집니다.,needs_review,
 5101,0x006DFD9B,0x0028AD9B,137,text,なんでも今起こっている極西戦線で<CR>ソルクラスタが増幅塔を無効化する<CR>作戦に出るって噂だよ。,듣기로는 지금의 극서 전선에서 <CR>솔클러스터가 증폭탑을 무력화하는 <CR>작전을 펼친다는 소문이야.,needs_review,
 5102,0x006DFE25,0x0028AE25,100,text,早く和解して戦争を終わらせないと<CR>大変なことになる気がするけどね。,빨리 화해해서 전쟁을 끝내지 않으면 <CR>큰일이 날 것 같은 기분이 들어.,needs_review,
-5103,0x006DFE8A,0x0028AE8A,104,text,ここだけの話、絢胤妖家が<CR>近い未来に世界が滅びると<CR>予知したらしい。,비밀인데아야타나요카가<CR>미래에세계멸망을<CR>예지했대,needs_review,compacted:word_abbreviation
+5103,0x006DFE8A,0x0028AE8A,104,text,ここだけの話、絢胤妖家が<CR>近い未来に世界が滅びると<CR>予知したらしい。,비밀인데 아야타나요카가<CR>곧 세계가 멸망한다고<CR>예지했대.,needs_review,expanded:spacing_restored
 5104,0x006DFEF3,0x0028AEF3,137,text,香陵さん、それもあってか最近は<CR>裏で色々暗躍してるって話だ。<CR>表では涼しい顔してるけどね。,"코료 씨, 그래서인지 요즘 <CR> 뒤에서 암약한다는 소문이 있어. <CR> 겉으로는 태연한 척하지만 말이야.",needs_review,
 5105,0x006DFF7D,0x0028AF7D,64,text,あなたたちは<CR>シュレリア様のご友人ですね？,당신들은 <CR>슈레리아님의 친구인가요？,needs_review,
 5106,0x006DFFBE,0x0028AFBE,137,text,シュレリア様はレーヴァテイル<CR>という人工生命体なんですよ。<CR>テル族も開発に関わったんです。,슈레리아님은 레이바테일이라는 <CR>인공 생명체예요. <CR>텔족도 개발에 관여했죠.,needs_review,
@@ -5229,7 +5229,7 @@
 5217,0x006E2A2F,0x0028DA2F,67,text,そういえばこのところ<CR>停電がなくなったわね。,그러고 보니 요즘 <CR>정전이 없어졌네.,needs_review,
 5218,0x006E2A73,0x0028DA73,82,text,フェリオンはどうなのかしら？<CR>復旧しているといいけど。,페리온은 어떨까？ <CR>복구되었으면 좋겠는데.,needs_review,
 5219,0x006E2AC6,0x0028DAC6,27,text,甲だった乙だったー,누구였더라～,needs_review,
-5220,0x006E2AE2,0x0028DAE2,110,text,シャール様を倒すなんて……。<CR>心ある人間のすることとは<CR>到底思えません！,샤르님을쓰러뜨리다니……!<CR>심성있는인간이할짓이라곤<CR>도저히생각안됩니다!,needs_review,expanded:refit_to_capacity
+5220,0x006E2AE2,0x0028DAE2,110,text,シャール様を倒すなんて……。<CR>心ある人間のすることとは<CR>到底思えません！,샤르님을 쓰러뜨리다니……！<CR>양심 있는 인간의 짓이라곤<CR>생각 못 합니다！,needs_review,expanded:spacing_restored
 5221,0x006E2B51,0x0028DB51,101,text,同感です。<CR>実は私、倒れたシャールを<CR>密かに匿って保護しています。,동감입니다. <CR>사실 저는 쓰러진 샤르를<CR>몰래 숨겨 보호하고 있습니다.,needs_review,
 5222,0x006E2BB7,0x0028DBB7,67,text,なんと徳の高い……！<CR>私も大いに見習います。,이 얼마나 고결한……！ <CR>저도 본받아야겠어요.,needs_review,
 5223,0x006E2BFB,0x0028DBFB,85,text,現状に悲観することなく<CR>やれることをやっていきましょう！,현실을 비관하지 말고 <CR>할 수 있는 일을 해 나갑시다！,needs_review,
@@ -5244,7 +5244,7 @@
 5232,0x006E2FFA,0x0028DFFA,73,text,シャールが全滅しようと<CR>ジェノミライ教団は不滅！,샤르가 전멸한다 해도 <CR>제노미라이교단은불멸이다！,needs_review,
 5233,0x006E3044,0x0028E044,70,text,どうか落ち着いて心穏やかに<CR>復活を祈りなさい。,부디 진정하고 평온하게 <CR>부활을 기도하렴.,needs_review,
 5234,0x006E308B,0x0028E08B,61,text,シャールとジェノミライ教団は<CR>一心同体！,샤르와 제노미라이 교단은 <CR>일심동체！,needs_review,
-5235,0x006E30C9,0x0028E0C9,125,text,だから教団が滅びるのでなく<CR>教団と大司教様がおわす限り、<CR>シャールは必ず復活する！,"그러니 교단이 멸망하는 게 아냐<CR>교단과 대주교님이 계시는 한,<CR>샤르는 반드시부활한다！",needs_review,compacted:spaces_removed
+5235,0x006E30C9,0x0028E0C9,125,text,だから教団が滅びるのでなく<CR>教団と大司教様がおわす限り、<CR>シャールは必ず復活する！,"그러니 교단이 멸망하는 게 아냐<CR>교단과 대주교님이 계시는 한<CR>샤르는 반드시 부활한다！",needs_review,expanded:spacing_restored
 5236,0x006E3147,0x0028E147,101,text,シャールがいれば<CR>ジェノミライ教団は安泰！<CR>世界の平和も保たれる！,샤르가 있다면 <CR>제노미라이 교단은 안태！ <CR>세계의 평화도 유지된다！,needs_review,expanded:refit_to_capacity
 5237,0x006E31AD,0x0028E1AD,70,text,ジル様が審判の再開を<CR>宣告される時は近かろう。,질님이 심판 재개를 <CR>선포하실 날이 머지않았다.,needs_review,
 5238,0x006E31F4,0x0028E1F4,101,text,シャールがいれば<CR>ジェノミライ教団は安泰！<CR>悪のフェリオンは滅ぶ！,샤르가 있다면 <CR>제노미라이 교단은 안태！ <CR>악의 페리온은 멸망한다！,needs_review,expanded:refit_to_capacity
@@ -5343,7 +5343,7 @@
 5331,0x006E50A8,0x002900A8,91,text,我々も忙しくなるだろうから<CR>今のうちにゆっくり休んでおこう。,우리도 바빠질 테니 <CR>지금 푹 쉬어 두자.,needs_review,
 5332,0x006E5104,0x00290104,94,text,菩提命王様に謁見しちゃったー！<CR>もう天にも昇る気分だったよー！,보리명왕님을 알현했어！ <CR>정말 날아갈 것 같은 기분이었어！,needs_review,
 5333,0x006E5163,0x00290163,88,text,シャール高官になって良かったと<CR>心から思える瞬間だったね。,샤르 고관이 되길 잘했다고 <CR>진심으로 느낀 순간이었지.,needs_review,
-5334,0x006E51BC,0x002901BC,76,text,いやー、まいったね。<CR>ここじゃ人間は鬼扱いっすよ。,"이런,큰일이네요.<CR>여기선인간은도깨니취급이라니까요.",needs_review,compacted:spaces_removed
+5334,0x006E51BC,0x002901BC,76,text,いやー、まいったね。<CR>ここじゃ人間は鬼扱いっすよ。,"아, 곤란하네요.<CR>여기선 인간을 도깨비 취급해요.",needs_review,expanded:spacing_restored
 5335,0x006E5209,0x00290209,122,text,でも俺は鬼が取れたってことで<CR>ここで商売させてもらってて<CR>だいぶ馴染んできたよ。,그래도 난 귀신을 얻어서 <CR>여기서 장사하며 <CR>꽤 적응했어.,needs_review,
 5336,0x006E5284,0x00290284,36,text,ニンゲンさん来ないねー。,인간 손님은 안 오네～.,needs_review,
 5337,0x006E52A9,0x002902A9,18,text,来ないよー。,안 와～.,needs_review,
@@ -5555,7 +5555,7 @@
 5543,0x006F3057,0x0029E057,297,text,植物の蔓を利用した導力線。一般に９９．９９９９１％とされる純度を遺伝子組み換えにより９９．９９９９６％までアップし、エネルギー効率を向上させたが、感覚的にどうすごいのかは数字を見て理解するしかない。,식물 덩굴을 이용한 도력선． 일반적인 순도인 ９９．９９９９１％를 유전자 조작으로 ９９．９９９９６％까지 높여 에너지 효율을 개선했다． 얼마나 대단한지는 숫자를 보고 직접 체감해야 한다．,needs_review,
 5544,0x006F3181,0x0029E181,300,text,あらゆる情報を検索可能な情報衛星「マスターレジストラ」をベースにサーリが改良した。とても紳士的で、いかがわしい情報は余さず遮断する。回線混雑時にはレディー・ファーストの気配りもあり、特に女性には人気。,모든 정보를 검색할 수 있는 정보 위성 「마스터 레지스트라」를 기반으로 살리가 개량했다. 매우 신사적이며 부적절한 정보는 철저히 차단한다. 회선 혼잡 시에는 레이디・퍼스트의 배려도 있어 특히 여성에게 인기가 많다.,needs_review,
 5545,0x006F32AE,0x0029E2AE,288,text,サーリが設計、製作した核融合電池。カタツムリのオブジェのような外観からは想像もつかない１億４０００万℃の超高温で、ソレイル１０機を消滅させてなおお釣りがくるエネルギーを内包。取り扱い超要注意。,"살리가 설계・제작한 핵융합 전지. 달팽이 오브제 같은 외관에선 상상도 못 할 １억 ４천만℃의 초고온으로, 소레일 １０기를 소멸시키고도 남을 에너지를 품고 있다. 취급 시 극도로 주의할 것.",needs_review,
-5546,0x006F33CF,0x0029E3CF,303,text,サーリがデルタの記憶を取り戻すべく設計、製作したショック療法機。ジェットエンジン搭載であらゆるコースを高速安定走行・飛行する。使用者に与えるショックは壮絶で、単に恐怖と受け止め記憶は戻らない可能性が大。,"살리가델타의기억을되찾아주기위해설계,제작한충격요법기구.제트엔진이탑재되어어떤코스든고속으로안정적인주행과비행이가능하다.사용자에게가해지는충격은엄청나서,단순한공포로끝나면기억이돌아오지않을가능성이크다.",needs_review,compacted:spaces_removed
+5546,0x006F33CF,0x0029E3CF,303,text,サーリがデルタの記憶を取り戻すべく設計、製作したショック療法機。ジェットエンジン搭載であらゆるコースを高速安定走行・飛行する。使用者に与えるショックは壮絶で、単に恐怖と受け止め記憶は戻らない可能性が大。,"살리가 델타의 기억을 되찾기 위해 설계, 제작한 충격 요법기. 제트 엔진을 탑재해 어떤 코스든 고속으로 안정 주행・비행한다. 사용자에게 주는 충격은 엄청나서, 단순한 공포로 받아들이면 기억이 돌아오지 않을 가능성이 크다.",needs_review,expanded:spacing_restored
 5547,0x006F34FF,0x0029E4FF,297,text,飛空挺のバーニアを転用したコンロ。２０００度を超える超強力火力で調理を一瞬で完了させることが可能。ただし食材と調理具の耐用温度の限界から一瞬たりとも遅れは許されず、使用者も命がけの調理を強いられる。,"비공정 버너를 전용한 가스레인지. ２０００도가 넘는 초강력 화력으로 조리를 순식간에 끝낸다. 다만 식재료와 조리도구의 내열 한계 때문에 단 한 순간의 지체도 허용되지 않으며, 사용자 또한 목숨을 건 요리를 해야 한다.",needs_review,
 5548,0x006F3629,0x0029E629,288,text,マシンガンの威力を転用した何でも縫えるミシン。新方式のオートボビンカートリッジ内蔵で下糸いらず。直線に縫うには針の命中精度を持続させねばならず、反動の強さもあいまって射撃上級者にしか扱えない。,"머신건의 위력을 전용한 만능 재봉틀. 신방식 오토 보빈 카트리지를 내장해 밑실이 필요 없다. 직선으로 박으려면 바늘의 명중 정밀도를 유지해야 하며, 반동도 강해 사격 숙련자만이 다룰 수 있다.",needs_review,
 5549,0x006F374A,0x0029E74A,294,text,サーリがデルタの記憶を取り戻すべく設計、製作した記憶傍受機。世界中のジェノムの記憶を映像化し同時に脳内へ直接流し込む。しかし情報量が膨大すぎて一般的な脳ではその負荷に耐えきれず爆発する危険性が大。,"살리가 델타의 기억을 되찾기 위해 설계, 제작한 기억 수신기. 전 세계 제놈의 기억을 영상화하여 뇌에 직접 흘려보낸다. 하지만 정보량이 너무 방대해 일반적인 뇌로는 과부하로 폭발할 위험이 크다.",needs_review,
@@ -6421,7 +6421,7 @@
 6409,0x0071DB67,0x002C8B67,39,text,かわいいシャールになーれ！,귀여운 샤르가 되어라！,needs_review,
 6410,0x0071DB99,0x002C8B99,39,text,シャール襲来（プラセンタ）,샤르 습격（플라센타）,needs_review,
 6411,0x0071DBCB,0x002C8BCB,24,text,スペースバス発進,스페이스버스발진,needs_review,compacted:spaces_removed
-6412,0x0071DBF8,0x002C8BF8,21,text,大地が消滅する,대지가소멸한다,needs_review,compacted:spaces_removed
+6412,0x0071DBF8,0x002C8BF8,21,text,大地が消滅する,대지 소멸,needs_review,expanded:spacing_restored
 6413,0x0071DC18,0x002C8C18,42,text,シップが宇宙へ飛び出していく,함선이 우주로 날아오른다,needs_review,
 6414,0x0071DC4D,0x002C8C4D,33,text,スフィリアルリング始動,스피리얼 링 가동,needs_review,
 6415,0x0071DC79,0x002C8C79,33,text,惑星中心に７次元ゲート,행성중심의７차원게이트,needs_review,expanded:refit_to_capacity
@@ -6486,7 +6486,7 @@
 6474,0x0071F036,0x002CA036,33,text,▲ワールドマップに戻る,▲ 월드 맵으로 돌아가기,needs_review,
 6475,0x0071F058,0x002CA058,27,text,バイオス屋『五天』,바이오스점『오천』,needs_review,compacted:word_abbreviation
 6476,0x0071F074,0x002CA074,36,text,ノエリア・ラボラトリーズ,노에리아・연구소,needs_review,
-6477,0x0071F099,0x002CA099,30,text,▲ワールドマップに戻,▲월드맵으로돌아가기,needs_review,compacted:spaces_removed
+6477,0x0071F099,0x002CA099,30,text,▲ワールドマップに戻,▲월드맵 돌아가기,needs_review,expanded:spacing_restored
 6478,0x0071F0B8,0x002CA0B8,33,text,薬師庵『くるりんてん』,약사 암자 『쿠루린텐』,needs_review,
 6479,0x0071F0DA,0x002CA0DA,33,text,バイオス屋『はもにや』,바이오스점『하모니야』,needs_review,compacted:word_abbreviation
 6480,0x0071F0FC,0x002CA0FC,27,text,バイオス屋『楽庵』,바이오스『라쿠안』,needs_review,compacted:word_abbreviation

@@ -102,7 +102,7 @@ def main():
             current = text_data[start:start + len(original)]
             if current != original:
                 raise SystemExit(
-                    f"이벤트 메시지 런타임 패치 원본 불일치: 0x{address:X} "
+                    f"이벤트 메시지/로그 런타임 패치 원본 불일치: 0x{address:X} "
                     f"({current.hex()} != {original.hex()})"
                 )
             combined[address] = payload
@@ -122,7 +122,7 @@ def main():
         "build_id": BUILD_ID,
         "patched_records": len(accepted),
         "inlined_tail_instructions_patched": len(text_patches),
-        "event_message_runtime_patches": len(RAW_PATCHES),
+        "event_message_log_runtime_patches": len(RAW_PATCHES),
         "skipped_records": len(skipped),
         "skipped": skipped,
         "output": str(output),

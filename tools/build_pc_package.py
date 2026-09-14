@@ -370,16 +370,20 @@ def install(args):
 
     print("\n[1/4] PACK00_01 제자리 교체 (폰트 / UI 텍스처)")
     pak = game / "Data" / "PACK00_01.PAK"
-    # PACK00_01 은 1.4GB 라 통째로 백업하지 않는다. --extract-originals 로 꺼내 둔
-    # 파일이 원본 기준이자 복원본이다.
     originals = work / "originals"
-    if not (originals / "mainfont_x64_0.g1t").is_file():
-        sys.exit(f"오류: 원본이 없습니다: {originals}\n"
-                 "      먼저 --extract-originals 를 실행하세요.")
-    entries = pak_list(args.gust_pak, pak)
+    if args.skip_pack00:
+        print("  건너뜀: --skip-pack00 (기존 검증된 폰트/UI 유지)")
+        entries = {}
+    else:
+        # PACK00_01 은 1.4GB 라 통째로 백업하지 않는다. --extract-originals 로 꺼내 둔
+        # 파일이 원본 기준이자 복원본이다.
+        if not (originals / "mainfont_x64_0.g1t").is_file():
+            sys.exit(f"오류: 원본이 없습니다: {originals}\n"
+                     "      먼저 --extract-originals 를 실행하세요.")
+        entries = pak_list(args.gust_pak, pak)
 
     font = romfs / "Data" / "NX" / "Font" / "MainFont_nx_0.g1t"
-    if font.is_file():
+    if not args.skip_pack00 and font.is_file():
         offset, size = entries[FONT_KEY]
         pc_font = originals / "mainfont_x64_0.g1t"
         if not pc_font.is_file():
@@ -432,7 +436,7 @@ def install(args):
     # PC판 공통 UI로 실제 이식/검증한 네 컨테이너만 처리한다. Switch 빌드에는
     # acps3_bios_explanation*.g1t 등 추가 번역 텍스처가 있지만, PC 원본 대조 없이
     # 그 파일들을 그대로 넣으면 다시 플랫폼 전용 그래픽이 섞일 수 있다.
-    pc_ui_sources = [ui_dir / f"{name}.g1t" for name in UI_NAMES]
+    pc_ui_sources = ([] if args.skip_pack00 else [ui_dir / f"{name}.g1t" for name in UI_NAMES])
     for source in [p for p in pc_ui_sources if p.is_file()]:
         key = ui_key(source.name.lower())
         if key not in entries:
@@ -474,7 +478,8 @@ def install(args):
                 f"PC 전용 보존 {item['pc_switch_blocks_preserved']}블록 / 충돌 0"
             )
 
-    apply_switch_g1t(args, pak, entries)
+    if not args.skip_pack00:
+        apply_switch_g1t(args, pak, entries)
 
     print("\n[2/4] PACK01 재포장 (대사 / 선택지 / 이벤트 스크립트)")
     # 작업 트리는 매번 원본에서 새로 푼다. 한 번 풀어 두고 재사용하면 앞선
@@ -544,6 +549,8 @@ def main():
                       help="PACK00_01의 G1T manifest 교체만 수행")
     ap.add_argument("--g1t-translated-only", action="store_true",
                     help="G1T manifest에서 translated 항목만 적용")
+    ap.add_argument("--skip-pack00", action="store_true",
+                    help="폰트/UI PACK00_01은 그대로 두고 PACK01/PACK02/EXE만 다시 빌드")
     args = ap.parse_args()
 
     if not args.game_dir.is_dir():

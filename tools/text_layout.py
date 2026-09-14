@@ -46,15 +46,15 @@ def tokenize(text):
 
 
 def drop_wrapped_leading_spaces(text, line_wrap_chars=LINE_WRAP_CHARS):
-    """자동 개행 자리에 걸린 공백을 버린다."""
+    """자동/강제 개행 뒤 첫 표시 문자 앞의 공백을 버린다."""
     output = []
     column = 0
-    at_wrap = False
+    at_wrap = True
     for token, width in tokenize(text):
         if token == "<CR>":
             output.append(token)
             column = 0
-            at_wrap = False
+            at_wrap = True
             continue
         if column >= line_wrap_chars:
             column = 0
@@ -100,6 +100,18 @@ def wrap_words_at_spaces(text, line_wrap_chars=LINE_WRAP_CHARS):
         output.append(token)
         column += width
     return "".join(output)
+
+
+def normalize_wrapped_line_starts(text, line_wrap_chars=LINE_WRAP_CHARS):
+    """기존 CR 구조는 보존하고 자동/강제 개행 뒤 선행 공백만 없앤다.
+
+    대화창처럼 최대 행 수를 재배치하면 안 되는 일반 UI/설명 텍스트용이다.
+    단어가 현재 줄에 들어가지 않으면 그 앞 공백을 CR로 소비하여 다음 단어가
+    새 줄의 0열부터 시작하게 한다.
+    """
+    return drop_wrapped_leading_spaces(
+        wrap_words_at_spaces(text, line_wrap_chars), line_wrap_chars
+    )
 
 
 def needs_space(left, right):
@@ -246,8 +258,12 @@ def strip_wrap_boundary_breaks(text, line_wrap_chars=LINE_WRAP_CHARS, max_lines=
 
 
 def reflow_dialogue_layout(text, line_wrap_chars=LINE_WRAP_CHARS, max_lines=MAX_LINES):
-    """지정한 폭×행 수에 맞춰 강제 개행을 정리하고 문장부호 고립을 줄인다."""
+    """지정한 폭×행 수에 맞춰 개행을 정리하고 새 줄의 선행 공백을 없앤다."""
     result = strip_wrap_boundary_breaks(text, line_wrap_chars, max_lines)
+    # 이벤트 대사뿐 아니라 MESSAGE/UI/시스템 텍스트도 단어 경계 공백 때문에
+    # 자동 줄바꿈된 다음 줄이 한 칸 들여써지는 문제가 생긴다. 폭을 아는 모든
+    # 텍스트에서 그 공백을 개행으로 소비해 다음 단어를 0열부터 시작시킨다.
+    result = wrap_words_at_spaces(result, line_wrap_chars)
     if (rendered_line_count(result, line_wrap_chars) <= max_lines and
             _needs_punctuation_reflow(result, line_wrap_chars)):
         balanced = _rebalance_three_lines(result, line_wrap_chars, max_lines)

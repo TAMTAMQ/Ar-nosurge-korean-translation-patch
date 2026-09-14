@@ -100,17 +100,21 @@
 
 ### UI 변경 검증 원칙
 
+- 자동 줄바꿈 뒤 다음 줄 첫 표시 문자는 항상 0열에서 시작한다. 대화 EBM에만 한정하지 않고 `MESSAGE`, 시스템 메시지, UI `Text/text/set_text`, `fm_talk_data`, 설명문 등 폭을 아는 모든 텍스트에 동일하게 적용한다. 단어 경계 공백 때문에 다음 단어가 현재 줄에 들어가지 않으면 그 공백을 개행으로 소비하고, 강제 `<CR>` 직후의 반각/전각 공백도 제거한다.
+- 일반 UI/설명 텍스트는 대화창의 3줄 재배치 규칙을 강제로 적용하지 않는다. 기존 `<CR>` 구조는 보존하고 해당 요소의 실제 `line_char_length`를 기준으로 줄 시작 공백만 정리한다.
 - 줄당 글자 수를 늘릴 때는 `line_char_length`뿐 아니라 `limit_width`, 런타임 하드코딩, 데이터의 강제 `<CR>`이 서로 독립적으로 상한을 만들 수 있음을 항상 확인한다.
+- 일반 대화창과 메시지 로그는 둘 다 24자 기준이다. `uil_message_log*.xml`의 `line_char_length="24"`만으로는 충분하지 않으며, PC EXE에서는 이벤트 경로와 로그용 텍스트 폭 헬퍼가 각각 20을 다시 주입하므로 `tools/patch_pc_event_message_width.py`로 두 경로를 모두 20→24 패치한다. Switch의 `build_exefs_ui_patch.py` RAW 패치 2세트도 같은 두 경로를 함께 유지한다.
 - 화면에서 여백이 남는데 줄바꿈이 그대로면 XML 값을 추측해서 반복 변경하지 말고, 실제 설치본 PAK readback → EBM/XML 숨은 개행 확인 → EXE 런타임 덮어쓰기 순서로 원인을 좁힌다.
 - 패널 크기·위치·장식 위치는 텍스트 공간이 남아 있는 한 변경하지 않는다. 텍스트 표시 폭/글자 수만 우선 조정한다.
 - 테스트 수정은 소스/중간 빌드에만 남기지 않는다. PC는 사용자가 실제 실행하는 `Ar.Nosurge.DX_PC`까지, 스위치는 실제 배포/테스트용 Atmosphère·romfs·exefs 패치까지 같은 값으로 반영한 뒤 readback으로 확인한다.
 
 ## 릴리스 패키징 규칙
 
-- PC/Switch 설치기는 **항상 v0.2 Patch ZIP에 들어 있던 검증본을 바이트 단위로 그대로 재사용**한다. 내부 버전 문자열, 백업 폴더명, 문구를 새 버전에 맞춘다는 이유로 수정하지 않는다.
+- PC/Switch 설치 로직은 **항상 v0.2 Patch ZIP의 검증본을 기준으로 재사용**한다. 설치/제거 동작, 백업 방식, 파일 복사 로직은 임의로 바꾸지 않는다.
   - PC: `install.bat`, `uninstall.bat`, `install_pc_patch.ps1`, `uninstall_pc_patch.ps1`
   - Switch: `setup_switch.bat`, `build_switch_layout.ps1`
-- 새 Patch ZIP을 만든 뒤 위 설치 파일들을 v0.2 Patch ZIP과 SHA-256으로 비교해 전부 동일한지 확인한다.
+- v0.2에서 재사용하는 것은 **설치/제거 기능과 흐름**이다. 릴리스 버전에 속하는 문자열은 반드시 현재 버전으로 갱신한다. PC의 백업 폴더는 `KoreanPatchBackup-<현재버전>`을 사용하고 설치기와 제거기가 같은 폴더를 참조해야 한다. 설치 완료 문구와 Switch 완료 창에도 현재 버전을 표시한다.
+- 새 Patch ZIP 검증 시 `install.bat`, `uninstall.bat`, `setup_switch.bat`은 v0.2와 바이트 동일성을 확인한다. `install_pc_patch.ps1`, `uninstall_pc_patch.ps1`, `build_switch_layout.ps1`은 **버전 문자열만 현재 릴리스 값으로 달라지고 설치/제거 로직은 v0.2와 동일한지** 비교 검증한다.
 - 동영상 내용이 바뀌지 않은 릴리스에서는 **새 PC/Switch Movies ZIP을 만들거나 업로드하지 않는다.** 릴리스 본문에는 기존 v0.2 Movies ZIP 링크를 안내한다.
 - 동영상 자체가 실제로 변경된 경우에만 새 Movies ZIP을 생성한다. `tools/build_release_packages.py`의 동영상 생성은 명시적 `--include-movies` 옵션을 쓴 경우에만 수행한다.
 - GitHub Release 자산을 교체했으면 릴리스 본문의 Patch SHA-256도 실제 업로드된 최신 자산과 다시 맞춘다.

@@ -345,6 +345,10 @@ def main():
                         help="폰트 매핑에 포함할 추가 UTF-8 텍스트/XML 폴더")
     parser.add_argument("--fallback-event-root", type=Path,
                         help="구조가 깨진 번역 EBM만 대신 사용할 정상 생성본 Event/event 루트")
+    parser.add_argument("--preserve-output", action="store_true",
+                        help="출력 루트의 기존 다른 산출물을 지우지 않고 Event/event만 갱신")
+    parser.add_argument("--skip-font-output", action="store_true",
+                        help="폰트 매핑/검증은 수행하되 MainFont G1T 파일은 덮어쓰지 않음")
     args = parser.parse_args()
     DIST, ORIGINAL_FONT = args.translated_mod, args.original_font
     MAPPING_JSON, PROBE_JSON, PROTECTED_JSON = args.mapping, args.probe, args.protected
@@ -382,7 +386,7 @@ def main():
     )
     verify_original_font(hangul_to_rect, args.allow_unverified_font)
 
-    if OUT.exists():
+    if OUT.exists() and not args.preserve_output:
         shutil.rmtree(OUT)
     event_out = OUT / "romfs" / "Event" / "event"
     replaced_total = 0
@@ -424,7 +428,7 @@ def main():
         )
 
     font_out = OUT / "romfs" / "Data" / "NX" / "Font" / "MainFont_nx_0.g1t"
-    touched_blocks = patch_font(hangul_to_rect, font_out)
+    touched_blocks = 0 if args.skip_font_output else patch_font(hangul_to_rect, font_out)
 
     remaining_hangul_chars = Counter()
     for p in event_out.rglob("*.ebm"):

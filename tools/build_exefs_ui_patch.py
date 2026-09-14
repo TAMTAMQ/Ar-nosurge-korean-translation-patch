@@ -22,8 +22,8 @@ PATCHES = (
     (0x695897, 18, "보조영창강화"),
 )
 
-# PC판과 동일한 이벤트 메시지 24자 런타임 제한을 스위치에도 적용한다.
-# 1.0.1 NSO의 이벤트 메시지 루틴에는 line_char_length와 별개로
+# PC판과 동일한 이벤트 메시지/메시지 로그 24자 런타임 제한을 스위치에도 적용한다.
+# 1.0.1 NSO에는 line_char_length와 별개로 이벤트/로그 텍스트 경로에서
 #   - 폭 640.0 (= 20 * 32)
 #   - 줄당 글자 수 20
 # 을 직접 설정하는 코드가 두 경로에 존재한다.
@@ -36,7 +36,7 @@ RAW_PATCHES = (
     (0x133674, bytes.fromhex("009d45bd"), bytes.fromhex("0001221e")),
     # mov w1,#20 -> mov w1,#24
     (0x133694, bytes.fromhex("81028052"), bytes.fromhex("01038052")),
-    # 동일한 두 번째 경로
+    # 메시지 로그에서도 사용하는 동일 구조의 텍스트 폭 헬퍼
     (0x133748, bytes.fromhex("c82f00d0"), bytes.fromhex("08608052")),
     (0x13374C, bytes.fromhex("009d45bd"), bytes.fromhex("0001221e")),
     (0x13376C, bytes.fromhex("81028052"), bytes.fromhex("01038052")),
@@ -77,7 +77,7 @@ def main():
     output.write_bytes(records)
     print(f"동적 UI IPS 생성: {output}")
     print(f"패치 문자열: {len(PATCHES)}개")
-    print(f"이벤트 메시지 24자 런타임 패치: {len(RAW_PATCHES)}개")
+    print(f"이벤트 메시지/로그 24자 런타임 패치: {len(RAW_PATCHES)}개")
 
 
 if __name__ == "__main__":

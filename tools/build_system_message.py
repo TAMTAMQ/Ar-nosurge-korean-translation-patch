@@ -3,12 +3,14 @@
 
 import argparse
 import json
+import shutil
 import xml.etree.ElementTree as ET
 from pathlib import Path
 
 from decode_saves_xml_e import detect_text_encoding
 from rename_term import rename as normalize_terms
-from text_layout import reflow_dialogue_layout
+from text_layout import (LINE_WRAP_CHARS, normalize_wrapped_line_starts,
+                         reflow_dialogue_layout)
 
 # Only these subfolders are genuinely plain XML in the game's romfs. Every
 # other Saves subfolder (item, misogi, tweet, achievement, ...) is scrambled
@@ -46,6 +48,15 @@ def main():
     report = json.loads(args.mapping.read_text(encoding="utf-8"))
     mapping = report["hangul_to_standin"]
     args.output.mkdir(parents=True, exist_ok=True)
+    # 과거 출력 경로 버그로 Saves/systemMessage 아래에 다시 systemMessage/ui가
+    # 중첩된 빌드 부산물이 남은 적이 있다. 현재 권위 경로와 충돌하므로 매 빌드
+    # 시작 시 해당 레거시 중복 디렉터리만 제거한다.
+    for stale in (
+        args.output / "systemMessage" / "systemMessage",
+        args.output / "systemMessage" / "ui",
+    ):
+        if stale.is_dir():
+            shutil.rmtree(stale)
 
     built = 0
     for source in sorted(args.input.rglob("*.xml")):
@@ -59,7 +70,15 @@ def main():
                     continue
                 text = element.attrib[attribute]
                 text = normalize_terms(text)
-                text = reflow_dialogue_layout(text)
+                raw_width = element.attrib.get("line_char_length")
+                try:
+                    line_wrap_chars = int(float(raw_width)) if raw_width else LINE_WRAP_CHARS
+                except ValueError:
+                    line_wrap_chars = LINE_WRAP_CHARS
+                if relative.parts[0] == "ui":
+                    text = normalize_wrapped_line_starts(text, line_wrap_chars)
+                else:
+                    text = reflow_dialogue_layout(text, line_wrap_chars=line_wrap_chars)
                 missing = sorted({c for c in text if "가" <= c <= "힣" and c not in mapping})
                 if missing:
                     chars = "".join(missing)

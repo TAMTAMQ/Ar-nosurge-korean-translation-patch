@@ -37,6 +37,10 @@ LAYOUT_ATTR_PATTERN = re.compile(
     r'''(?P<head>\sMESSAGE\s*=\s*)(?P<q>["'])(?P<value>.*?)(?P=q)''',
     re.DOTALL,
 )
+TEXT_ATTR_PATTERN = re.compile(
+    r'''(?P<head>\s(?:MESSAGE|Text|text|set_text)\s*=\s*)(?P<q>["'])(?P<value>.*?)(?P=q)''',
+    re.DOTALL,
+)
 
 
 # The local model sometimes reaches for ASCII-adjacent punctuation instead of
@@ -54,6 +58,23 @@ def normalize_punctuation(text):
     for bad, good in CP932_PUNCTUATION_FIXUPS.items():
         text = text.replace(bad, good)
     return text
+
+
+def cleanup_forced_line_start_spaces(text):
+    """암호화 Saves의 모든 표시 문자열에서 <CR> 직후 선행 공백을 제거한다."""
+    def repl(match):
+        value = html.unescape(match.group("value"))
+        cleaned = re.sub(r"(<CR>)[ \u3000]+", r"\1", value)
+        if cleaned == value:
+            return match.group(0)
+        escaped = html.escape(cleaned, quote=True)
+        if match.group("q") == '"':
+            escaped = escaped.replace("&#x27;", "'")
+        else:
+            escaped = escaped.replace("&quot;", '"')
+        return match.group("head") + match.group("q") + escaped + match.group("q")
+
+    return TEXT_ATTR_PATTERN.sub(repl, text)
 
 
 def apply_text_layout(text, source_label, line_wrap_chars=LINE_WRAP_CHARS):
@@ -116,6 +137,7 @@ def main():
             text = handle.read()
         text = normalize_punctuation(text)
         text = normalize_terms(text)
+        text = cleanup_forced_line_start_spaces(text)
         line_wrap_chars = (FM_TALK_LINE_WRAP_CHARS
                            if relative.as_posix().lower() == "tweet/fm_talk_data.xml"
                            else LINE_WRAP_CHARS)
