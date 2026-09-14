@@ -2,10 +2,9 @@ from __future__ import annotations
 
 import re
 
-# おネイ is an intentional pun on ネイ and お姉 (older sister).  It must not be
-# normalized mechanically: Korean should preserve the joke as 누나/언니/누님
-# according to context (e.g. 疾風のおネイ -> 질풍의 누님).  Only ordinary
-# ネイさん / ネイちゃん are safe source-driven honorific fixes.
+# おネイ is intentionally transliterated as 오네이 rather than localized as
+# 누나/언니/누님.  Preserve ordinary suffixes on top of that spelling:
+# おネイさん -> 오네이씨, おネイちゃん -> 오네이쨩.
 PLAIN_SOURCE_FORMS = (
     ("ネイちゃん", "네이쨩"),
     ("ネイさん", "네이씨"),
@@ -24,7 +23,7 @@ BAD_PLAIN_FORMS = (
 
 def source_targets(japanese: str) -> list[str]:
     # Remove every おネイ form first because ネイさん is a substring of
-    # おネイさん.  Those pun forms are intentionally outside automation.
+    # おネイさん.  They are normalized separately as 오네이 variants.
     remainder = japanese
     for form in ("おネイさん", "おネイちゃん", "おネイ"):
         remainder = remainder.replace(form, "")
@@ -53,29 +52,79 @@ def _repair_particles(text: str, target: str) -> str:
 def normalize_nei_honorifics(japanese: str, korean: str) -> str:
     text = korean
 
-    # おネイ is a ネイ + お姉 wordplay.  When the source itself forms a fixed
-    # wordplay phrase, preserve the joke in Korean instead of treating おネイ
-    # as a proper name.  Generic おネイさん/ちゃん remains contextual and is
-    # deliberately left to the existing human translation.
-    if "疾風のおネイ" in japanese:
+    # おネイ is always kept as 오네이.  Normalize the fixed compounds first,
+    # then generic さん/ちゃん variants so old 누나/언니/누님 translations
+    # cannot reappear during a rebuild.
+    if "疾風のおネイさん" in japanese:
         for variant in (
             "질풍의 네이 언니", "질풍의 네이 누나", "질풍의 네이 누님",
-            "질풍의 네이 씨", "질풍의 네이씨", "질풍의 오네이",
+            "질풍의 네이 씨", "질풍의 네이씨", "질풍의 누님",
+            "질풍의 오네이", "시푸노 네이 언니",
+        ):
+            text = text.replace(variant, "질풍의 오네이씨")
+    elif "疾風のおネイちゃん" in japanese:
+        for variant in (
+            "질풍의 네이쨩", "질풍의 네이 쨩", "질풍의 네이 누나",
+            "질풍의 네이 언니", "질풍의 네이 누님", "질풍의 오네이",
+        ):
+            text = text.replace(variant, "질풍의 오네이쨩")
+    elif "疾風のおネイ" in japanese:
+        for variant in (
+            "질풍의 네이 언니", "질풍의 네이 누나", "질풍의 네이 누님",
+            "질풍의 네이 씨", "질풍의 네이씨", "질풍의 누님",
             "시푸노 네이 언니",
         ):
-            text = text.replace(variant, "질풍의 누님")
-        # Replacing the noun phrase can leave the old vowel-final particle
-        # behind (네이 언니가 -> 누님가). Repair the two observed shapes.
-        text = text.replace("질풍의 누님가", "질풍의 누님이")
-        text = text.replace("질풍의 누님……가", "질풍의 누님……이")
-        text = text.replace("질풍의 누님로서", "질풍의 누님으로서")
-    if "座長のおネイ" in japanese:
-        for variant in ("좌장의 네이 언니", "좌장의 네이 누님", "좌장 오네이"):
-            text = text.replace(variant, "좌장 누님")
-        text = text.replace("인기 만점인 네이 언니랑", "인기 만점인 좌장 누님이랑")
+            text = text.replace(variant, "질풍의 오네이")
+    if "座長のおネイさん" in japanese:
+        for variant in ("좌장의 네이 언니", "좌장의 네이 누님", "좌장 누님", "좌장 오네이"):
+            text = text.replace(variant, "좌장 오네이씨")
+    elif "座長のおネイちゃん" in japanese:
+        for variant in ("좌장의 네이 언니", "좌장의 네이 누님", "좌장 누님", "좌장 오네이"):
+            text = text.replace(variant, "좌장 오네이쨩")
+    elif "座長のおネイ" in japanese:
+        for variant in ("좌장의 네이 언니", "좌장의 네이 누님", "좌장 누님"):
+            text = text.replace(variant, "좌장 오네이")
+        text = text.replace("인기 만점인 네이 언니랑", "인기 만점인 좌장 오네이랑")
     if "おネイの新メニュー" in japanese:
-        for variant in ("네이 언니의 신메뉴", "네이 누님의 신메뉴", "오네이의 신메뉴"):
-            text = text.replace(variant, "누님의 신메뉴")
+        for variant in ("네이 언니의 신메뉴", "네이 누님의 신메뉴", "누님의 신메뉴"):
+            text = text.replace(variant, "오네이의 신메뉴")
+
+    onei_san_count = japanese.count("おネイさん")
+    missing_onei_san = max(0, onei_san_count - text.count("오네이씨"))
+    for variant in (
+        "네이씨", "네이 씨", "네이 누나", "네이 언니", "네이 누님",
+        "누나", "언니", "누님", "오네이 씨",
+    ):
+        while missing_onei_san and variant in text:
+            text = text.replace(variant, "오네이씨", 1)
+            missing_onei_san -= 1
+
+    onei_chan_count = japanese.count("おネイちゃん")
+    missing_onei_chan = max(0, onei_chan_count - text.count("오네이쨩"))
+    for variant in (
+        "네이쨩", "네이 쨩", "네이짱", "네이 짱", "네이 누나",
+        "네이 언니", "네이 누님", "누나", "언니", "누님",
+    ):
+        while missing_onei_chan and variant in text:
+            text = text.replace(variant, "오네이쨩", 1)
+            missing_onei_chan -= 1
+
+    # Plain おネイ can also appear without さん/ちゃん or inside ad-hoc
+    # compounds such as 涼風のおネイ / 黒こげのおネイ.  Count only the
+    # occurrences not already consumed by the fixed/suffixed forms above and
+    # repair exactly that many legacy localized forms.
+    onei_remainder = japanese
+    for form in ("疾風のおネイ", "座長のおネイ", "おネイの新メニュー",
+                 "おネイさん", "おネイちゃん"):
+        onei_remainder = onei_remainder.replace(form, "")
+    missing_plain_onei = max(0, onei_remainder.count("おネイ") - text.count("오네이"))
+    for variant in (
+        "네이 누나", "네이 언니", "네이 누님", "네이누나", "네이언니", "네이누님",
+        "누나", "언니", "누님",
+    ):
+        while missing_plain_onei and variant in text:
+            text = text.replace(variant, "오네이", 1)
+            missing_plain_onei -= 1
 
     targets = source_targets(japanese)
     if not targets or len(set(targets)) != 1:
@@ -84,7 +133,9 @@ def normalize_nei_honorifics(japanese: str, korean: str) -> str:
     target = targets[0]
     for bad in BAD_PLAIN_FORMS:
         if bad != target:
-            text = text.replace(bad, target)
+            # Do not let the plain ネイ repair rewrite the ネイ substring
+            # inside the deliberately distinct 오네이 spelling.
+            text = re.sub(rf"(?<!오){re.escape(bad)}", target, text)
 
     # A few translations dropped the suffix while keeping the name.  Because
     # this function only runs when the Japanese record contains exactly one
@@ -369,6 +420,21 @@ def normalize_source_terms(japanese: str, korean: str) -> str:
             ("뉴로론 행성", "뉴론 행성"),
             ("뉴로온 성", "뉴론 행성"),
             ("뉴론 성", "뉴론 행성"),
+        ):
+            text = text.replace(before, after)
+
+    # 禊 / 禊ぎ is the series-specific ritual "미소기", not the glossary term
+    # 浄化(정화).  Leaving old `정화` translations here makes the game's raw
+    # substring glossary matcher link ordinary Misogi UI/dialogue to the
+    # unrelated 浄化 glossary entry.  Keep this source-gated so genuine 浄化
+    # text remains `정화`.
+    if "禊" in japanese and "浄化" not in japanese:
+        for before, after in (
+            ("정화의 장소", "미소기 장소"),
+            ("정화의 장", "미소기장"),
+            ("정화 의식", "미소기"),
+            ("정화처", "미소기장"),
+            ("정화", "미소기"),
         ):
             text = text.replace(before, after)
 

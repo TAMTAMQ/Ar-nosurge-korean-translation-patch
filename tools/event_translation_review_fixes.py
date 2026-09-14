@@ -13270,7 +13270,7 @@ FIXES.extend([
     Fix(
         "SWC08/EVENT_MESSAGE_SWC08_120.ebm", 51,
         "하모버스트로 공격하면 <IM21> 스킬이 발동합니다.",
-        "하모버스트로 공격하다 보면<CR><IM21> 스킬이 점등될 때가 있습니다.",
+        "하모 버스트로 공격하다 보면<CR><IM21> 스킬이 점등될 때가 있습니다.",
     ),
     Fix(
         "SWC08/EVENT_MESSAGE_SWC08_120.ebm", 59,
@@ -14298,7 +14298,7 @@ FIXES.extend([
     Fix(
         "SWI08/EVENT_MESSAGE_SWI08_080.ebm", 84,
         "이 상태에서는 하모버스트 게이지가 <CR>줄어들지만, 이것이 ０이 될 때까지 <CR>어떤 공격이라도 내지를 수 있습니다.",
-        "이 상태에서는 하모버스트 게이지가<CR>줄어들지만, 이것이 ０이 될 때까지<CR>어떤 공격이든 사용할 수 있습니다.",
+        "이 상태에서는 하모 버스트 게이지가<CR>줄어들지만, 이것이 ０이 될 때까지<CR>어떤 공격이든 사용할 수 있습니다.",
     ),
     Fix(
         "SWI08/EVENT_MESSAGE_SWI08_080.ebm", 86,
@@ -14940,6 +14940,17 @@ FIXES.extend([
         "C11_1/EVENT_MESSAGE_C11_1_190.ebm", 0,
         "어서 오세요, 본쥬！",
         "어서 오세요, 봉쥬르！",
+    ),
+])
+
+# おネイ is intentionally transliterated as 오네이, while plain ネイ keeps
+# the normal character-name honorific.  This mixed sentence needs an explicit
+# guarded repair because both source forms were mistranslated identically.
+FIXES.extend([
+    Fix(
+        "MT22/EVENT_MESSAGE_MT22_070.ebm", 17,
+        "게다가, 네이 언니는 천통희로서도,<CR>네이 언니로서도 펠리온 사람들을<CR>지켜왔는걸.",
+        "게다가, 네이쨩은 텐토우키로서도,<CR>오네이씨로서도 펠리온 사람들을<CR>지켜왔는걸.",
     ),
 ])
 

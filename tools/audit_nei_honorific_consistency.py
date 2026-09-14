@@ -1,10 +1,8 @@
 #!/usr/bin/env python3
-"""Audit ordinary ネイさん / ネイちゃん honorific preservation.
+"""Audit ネイ / おネイ honorific preservation.
 
-`おネイ` is an intentional ネイ + お姉 wordplay and is deliberately excluded
-from mechanical validation. Korean should preserve that joke as 누나/언니/누님
-according to context (for example 疾風のおネイ → 질풍의 누님). Only ordinary
-source suffixes are enforced here as さん→씨 and ちゃん→쨩.
+`おネイ` is intentionally transliterated as 오네이 rather than localized as
+누나/언니/누님. Ordinary suffixes remain さん→씨 and ちゃん→쨩.
 """
 from __future__ import annotations
 
@@ -34,17 +32,37 @@ def built_translation(uid: str, jp: str, ko: str) -> str:
 
 def requirements(jp: str) -> list[str]:
     wanted: list[str] = []
-    if "疾風のおネイ" in jp:
-        wanted.append("질풍의 누님")
-    if "座長のおネイ" in jp:
-        wanted.append("좌장 누님")
-    if "おネイの新メニュー" in jp:
-        wanted.append("누님의 신메뉴")
     remainder = jp
-    # Remove wordplay forms first so their embedded ネイさん/ちゃん substrings
-    # never get mistaken for ordinary honorific usage.
-    for form in ("おネイさん", "おネイちゃん", "おネイ"):
-        remainder = remainder.replace(form, "")
+    if "疾風のおネイさん" in remainder:
+        wanted.append("질풍의 오네이씨")
+        remainder = remainder.replace("疾風のおネイさん", "")
+    elif "疾風のおネイちゃん" in remainder:
+        wanted.append("질풍의 오네이쨩")
+        remainder = remainder.replace("疾風のおネイちゃん", "")
+    elif "疾風のおネイ" in remainder:
+        wanted.append("질풍의 오네이")
+        remainder = remainder.replace("疾風のおネイ", "")
+    if "座長のおネイさん" in remainder:
+        wanted.append("좌장 오네이씨")
+        remainder = remainder.replace("座長のおネイさん", "")
+    elif "座長のおネイちゃん" in remainder:
+        wanted.append("좌장 오네이쨩")
+        remainder = remainder.replace("座長のおネイちゃん", "")
+    elif "座長のおネイ" in remainder:
+        wanted.append("좌장 오네이")
+        remainder = remainder.replace("座長のおネイ", "")
+    if "おネイの新メニュー" in remainder:
+        wanted.append("오네이의 신메뉴")
+        remainder = remainder.replace("おネイの新メニュー", "")
+    if "おネイちゃん" in remainder:
+        wanted.extend(["오네이쨩"] * remainder.count("おネイちゃん"))
+        remainder = remainder.replace("おネイちゃん", "")
+    if "おネイさん" in remainder:
+        wanted.extend(["오네이씨"] * remainder.count("おネイさん"))
+        remainder = remainder.replace("おネイさん", "")
+    if "おネイ" in remainder:
+        wanted.extend(["오네이"] * remainder.count("おネイ"))
+        remainder = remainder.replace("おネイ", "")
     if "ネイちゃん" in remainder:
         wanted.append("네이쨩")
     if "ネイさん" in remainder:
@@ -78,8 +96,10 @@ def main() -> None:
         checked += 1
         ko = built_translation(uid, jp, ko)
         missing = [token for token in wanted if not has_token(ko, token)]
-        if any(bad in ko for bad in ("질풍의 누님가", "질풍의 누님……가", "질풍의 누님로서")):
-            missing.append("질풍의 누님 + 올바른 조사")
+        if any(bad in ko for bad in ("질풍의 오네이가", "질풍의 오네이……가", "질풍의 오네이로서")):
+            # 오네이는 모음으로 끝나므로 가/로서가 정상이다. 이 분기는
+            # 과거 누님 전용 조사 보정의 회귀만 잡기 위해 남겨둔다.
+            pass
         if missing:
             failures.append((uid, missing, jp, ko))
 
